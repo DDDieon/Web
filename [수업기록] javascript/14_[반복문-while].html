@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>http://cafe.daum.net/knyatom/Ob8k/6</title>
+    <script>
+        var num = 1;
+        while (num < 8) {
+            document.write(`반복${num}</br>`);
+            num++;
+        }
+        //현재 cpu속도를 알아보자
+        var value = 0;
+        var 시작시간 = new Date().getTime();
+        while (new Date().getTime() < 시작시간 + 1000) {
+            // 1000ms이 1초이니까 1 초동안 실행하는 것
+            value++;
+        }
+        document.write(`<h1>1 초당 CPU 연산 ${value}회</h1>`);
+        // 2의 배수, 3의 배수 구하기
+        var i = 30;
+        while (i >= 1) {
+            // i == 1로 넣어버리면 30인 i와 대립해버려서 걍 인식안해줌...
+            if (i % 2 == 0) {
+                document.write(`<font color=red>${i} </font>`);
+            } else if (i % 3 == 0) {
+                document.write(`${i} `);
+            }
+            i--;
+        }
+        //------------------- break | http://cafe.daum.net/knyatom/Ob8k/61---------------------  //
+        // let i = 0;
+        // let array = [1, 31, 273, 57, 8, 11, 32];
+        // let output;
+        // while (true) {
+        //     if (array[i] % 2 == 0) {
+        //         output = array[i];
+        //         break;
+        //     }
+        //     i = i + 1;
+        // }
+        // console.log(`처음 발견한 짝수는 ${output}입니다.`)
+        //----------------------- 홀수표기 --------------//
+        var sum = 0;
+        for (let i = 1; i < 10; i++) {
+            if (i % 2 == 0) {
+                continue;
+            }
+            sum = sum + i;
+        }
+        console.log(`홀수의 합은 ${sum}`);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

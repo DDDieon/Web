@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>http://cafe.daum.net/knyatom/Ob8k/7</title>
+</head>
+
+<body>
+    <h4>익명함수</h4>
+    <script>
+        var add = function(x, y) {
+                var sum = x + y;
+                document.write(`${x}+${y}=${sum}</br>`);
+                //return 값이 있어야 ()함수 호출할 때 document.write에서 나와
+                return sum;
+            }
+            //x,y는 매개변수. 매개변수를 받아서 처리함.
+        add(3, 5);
+        add(8, 12);
+        document.write(`add는 ${add}`);
+        document.write(`add는 ${add(3,8)}`);
+    </script>
+    <h4>익명함수 - 선언과 동시에 실행</h4>
+    <script>
+        var add = function(x, y) {
+            var sum = x + y;
+            document.write(`${x}+${y}=${sum}</br>`);
+            //return 값이 있어야 ()함수 호출할 때 document.write에서 나와
+            return sum;
+        }(3, 5);
+        //x,y는 매개변수. 매개변수를 받아서 처리함.
+        document.write(`add는 ${add}`);
+    </script>
+    <h4>선언함수</h4>
+    <script>
+        function mul(x, y) {
+            var mul_in = x * y;
+            document.write(`${x}*${y}=${mul_in}</br>`);
+            return mul_in;
+        }
+        var result = mul(5, 8);
+        document.write("결과값" + result);
+    </script>
+    <h4>중복이름시에 예제</h4>
+    <script>
+        var 함수 = function() {
+            document.write("함수A");
+        }
+
+        function 함수() {
+            document.write("함수B");
+        }
+        // 익명함수와 선언함수가 이름이 같으면 호출시 익명함수가 나옴
+        함수();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var array1 = Array(); //배열생성자 함수
+        // var array2 = Array(10);
+        // var array3 = Array(10, 20, 30, 40);
+        // document.write(array1, array2, array3);
+        // document.write('<hr>');
+        var aaa = [];
+
+        function sumAll() {
+            var output = 0;
+            for (var i = 0; i < arguments.length; i++) {
+                output += arguments[i];
+                // 인자들을 배열로 생각해서 첫번째부터 마지막까지 output이라는 저장소에 더한다
+            }
+            document.write(arguments.length + '<br>');
+            document.write(arguments[2]);
+            return output;
+        };
+        sumAll(10, 20, 30, 40, 50);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+
+/* ul {
+    overflow: hidden;
+} */
+
+ul::after {
+    content: '';
+    clear: both;
+}
+
+ul>li {
+    display: inline-block;
+    width: 100px;
+}
+
+ul>li>a {
+    display: block;
+    padding: 10px;
+    background: pink;
+    border-radius: 0 10px 0 0;
+    text-indent: -999px;
+}
+
+
+/* text-indent로 글자를 왼쪽으로 뺀다 */
+
+ul>li:active {
+    box-shadow: 3px 3px rgba(105, 105, 105, 0.336);
+    border-radius: 5px;
+}
+
+ul>li>a:link,
+ul>li>a:visited {
+    color: navy;
+}
+
+ul>li:hover>a {
+    background: navy;
+    color: white;
+}
+
+ul>li {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+ul>li:nth-of-type(1)>a {
+    background: url('daum.png');
+    background-size: 100% 100%;
+}
+
+ul>li:nth-of-type(2)>a {
+    background: url('naver.png');
+    background-size: 100% 100%;
+}
+
+ul>li:nth-of-type(3)>a {
+    background: url('nate.png');
+    background-size: 100% 100%;
+}
+
+ul>li:nth-of-type(4)>a {
+    background: url('google.png');
+    background-size: 100% 100%;
+}
+
+ul>li:nth-of-type(5)>a {
+    background: url('youtube.png');
+    background-size: 100% 100%;
+}
+
+
+/*  */
+
+ul>li:nth-of-type(1):hover>a {
+    background: url('naver.png');
+    background-size: 100% 100%;
+}
+
+ul>li:nth-of-type(2):hover>a {
+    background: url('nate.png');
+    background-size: 100% 100%;
+}
+
+ul>li:nth-of-type(3):hover>a {
+    background: url('google.png');
+    background-size: 100% 100%;
+}
+
+ul>li:nth-of-type(4):hover>a {
+    background: url('youtube.png');
+    background-size: 100% 100%;
+}
+
+ul>li:nth-of-type(5):hover>a {
+    background: url('daum.png');
+    background-size: 100% 100%;
+}
+
+ul>li>a {
+    position: relative;
+}
+
+ul>li>a::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 5px;
+    background: red;
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    transition: 0.5s ease-in-out;
+}
+
+ul>li:hover>a::after {
+    content: '';
+    width: 100%;
+    left: 0%;
+    /* width: 0%;
+    left: 0%; */
+}
+
+
+/* -------------*/
+
+
+/* ol {
+    overflow: hidden;
+} */
+
+ol>li {
+    float: left;
+    overflow: hidden;
+    border: 1px solid navy;
+}
+
+ol>li>a {
+    display: block;
+    padding: 10px;
+}
+
+ol>li>a span {
+    display: block;
+}
+
+ol>li:first-of-type {
+    border-radius: 8px 0 0 8px;
+}
+
+ol>li:last-of-type {
+    border-radius: 0 8px 8px 0;
+}
+
+ol>li {
+    position: relative;
+}
+
+ol>li>span {
+    position: absolute;
+    width: 0;
+    height: 5px;
+    background: navy;
+    left: 50%;
+    top: 0;
+}
+
+ol>li:hover>span {
+    width: 100%;
+    transition: 0.5s;
+    left: 0%;
+    top: 0;
+}
+
+.nav::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+a:visited {
+    color: black;
+    font-weight: bold;
+}

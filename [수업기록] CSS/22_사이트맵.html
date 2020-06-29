@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+        
+        ul,
+        li {
+            list-style: none;
+        }
+        
+        p {
+            font-size: 30px;
+            text-shadow: 2px 2px 3px red
+        }
+        
+        p:hover {
+            text-shadow: 2px 2px 3px red, -2px 2px 2px blue;
+            /* 중첩그림자를 css로 가능 */
+        }
+        
+        p:active {
+            text-stroke: 1px gray;
+            -webkit-text-stroke: 1px gray;
+        }
+        /*글자에 테두리넣기*/
+        
+        p {
+            letter-spacing: 5px;
+            word-spacing: 100px;
+        }
+        
+        h2+p {
+            width: 200px;
+            border: 1px solid black;
+            /* 기본적으로 공백이 없으면 줄안바뀜 */
+        }
+        
+        h2~p
+        /* h2이후에나오는p 전부다 선택 - 단어에 공백있으면 줄바뀐다*/
+        
+        {
+            width: 200px;
+            border: 1px solid black;
+        }
+        
+        h3~p {
+            width: 200px;
+            border: 1px solid black;
+            /*공백이 있어도 줄 무조건 안바뀌게 할거임*/
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <p>welcome to my world</p>
+    <h2>white-space에 대해</h2>
+    <p>aaaaaaaaaaaaaaaaaaa</p>
+    <p>aaaaaaaaaa aaaaaaㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁaaa</p>
+    <h3>white-space nowrap에 대해서</h3>
+    <p>ㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷㄷ</p>
+    <p>공백이 있어도 줄이 안 바뀔거고오오오오오옹</p>
+</body>
+
+</html>

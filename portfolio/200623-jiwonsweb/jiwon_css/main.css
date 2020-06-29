@@ -1,0 +1,239 @@
+@charset "UTF-8";
+/*변수값*/
+body {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4) url("/img/marble.jpg") no-repeat center center fixed;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: soft-light;
+}
+body p {
+  font-family: "Noto Sans KR", sans-serif;
+  cursor: default;
+  font-weight: 300;
+  line-height: 1.24;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 175px;
+}
+nav .logobox a {
+  font-family: "Russo One", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 51px;
+  /* identical to box height */
+  color: #000000;
+}
+nav .nav_list ul {
+  margin-left: 346px;
+  display: flex;
+}
+nav .nav_list ul li a {
+  font-family: "Noto Sans KR", sans-serif;
+  display: block;
+  padding: 15px;
+  font-weight: 900;
+}
+nav .nav_list ul li:hover {
+  color: #ffa4b1;
+}
+
+section #introduce_top {
+  margin-bottom: 130px;
+}
+section #introduce_top p.minibold {
+  font-family: Russo One;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 220px;
+  text-decoration: underline;
+}
+section #introduce_top p.caption_l {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  letter-spacing: 16px;
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+section #introduce_top b {
+  font-weight: bold;
+}
+section #introduce_top .myself {
+  font-family: "Noto Sans KR", sans-serif !important;
+  font-weight: 300;
+  text-align: center;
+  font-style: 12px;
+  margin-bottom: 36px;
+}
+section #introduce_top .gols_img {
+  margin: auto;
+  width: 820px;
+  height: 255px;
+  background: #2c2929;
+  margin-bottom: 17px;
+}
+section #introduce_top .gols_words {
+  position: relative;
+  width: 820px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+section #introduce_top .gols_words .gols_words_in {
+  width: 33.3%;
+}
+section #introduce_top .gols_words .gols_words_in p:nth-of-type(1) {
+  font-family: Russo One;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 220px;
+  margin: 0px;
+}
+section #introduce_top .gols_words .gols_words_in p:nth-of-type(2) {
+  font-family: "Noto Sans KR", sans-serif !important;
+  font-weight: 300;
+  text-align: center;
+  font-style: 12px;
+  margin: 0px;
+  padding: 4px;
+}
+section #introduce_top .gols_words .gols_words_in:nth-of-type(1)::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 90px;
+  height: 10px;
+  background: #ffa4b1;
+  z-index: -9999;
+  border-radius: 2px;
+  left: 90px;
+  top: 11px;
+}
+section #introduce_top .gols_words .gols_words_in:nth-of-type(2)::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 90px;
+  height: 10px;
+  background: #ffa4b1;
+  z-index: -9999;
+  border-radius: 2px;
+  left: 363px;
+  top: 11px;
+}
+section #introduce_top .gols_words .gols_words_in:nth-of-type(3)::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 90px;
+  height: 10px;
+  background: #ffa4b1;
+  z-index: -9999;
+  border-radius: 2px;
+  left: 622px;
+  width: 120px;
+  top: 11px;
+}
+section #introduce_bottom {
+  margin-bottom: 130px;
+}
+section #introduce_bottom #profile {
+  width: 820px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+section #introduce_bottom #profile .profile-img {
+  width: 100%;
+  height: 280px;
+  background: url("/img/person.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+section #introduce_bottom #profile .profile-img:hover ~ .profile-words {
+  opacity: 0;
+}
+section #introduce_bottom #profile .profile-words {
+  position: absolute;
+  left: 0vw;
+  opacity: 1;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 280px;
+  background: rgba(255, 255, 255, 0.8);
+  transition: 0.2s;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+section #introduce_bottom #profile .profile-words p:nth-of-type(1) {
+  font-weight: 500;
+}
+section #introduce_bottom #profile .profile-words p:nth-of-type(2) {
+  font-family: Russo One;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 220px;
+  margin: 0;
+  text-align: justify;
+}
+section #introduce_bottom #profile .profile-words p:nth-of-type(3) {
+  font-family: Russo One;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 220px;
+  margin-top: 22px;
+  text-align: justify;
+  font-size: 14;
+}
+section #introduce_bottom #profile .profile-words p:nth-of-type(4) {
+  margin-top: 12px;
+}
+section #introduce_bottom #profile .profile-words p:nth-of-type(5) {
+  margin-top: 12px;
+  font-weight: 500;
+}
+section #introduce_bottom .resume ul {
+  display: flex;
+  justify-content: center;
+  width: 820px;
+  padding: 30px;
+  margin: auto;
+  flex-direction: column;
+  background: #2c2929;
+}
+section #introduce_bottom .resume ul .resume-sub {
+  color: white;
+  flex: 1;
+  font-family: Russo One;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 220px;
+  margin-top: 0px;
+  text-align: justify;
+}
+section #introduce_bottom .resume ul .resume-sub ol {
+  padding: 20px;
+}
+section #introduce_bottom .resume ul .resume-sub ol li {
+  color: #929292;
+  font-family: "Noto Sans KR", sans-serif;
+  cursor: default;
+  font-weight: 300;
+  font-size: 12.2px;
+  margin: 0 auto;
+  text-indent: 5px;
+}

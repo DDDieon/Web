@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <button id="a">빨강</button>
+    <button id="b">파랑</button>
+    <button id="c">노랑</button>
+    <button id="d">핑크</button>
+    <h1 id="h1">welcome to my world !!!</h1>
+</body>
+<script>
+    var a = document.getElementById('a');
+    var b = document.getElementById('b');
+    var c = document.getElementById('c');
+    var d = document.getElementById('d');
+    var h1 = document.getElementById('h1');
+    a.onclick = function() {
+        alert('ddd');
+        h1.style.background = 'red';
+    }
+    b.onclick = function() {
+        h1.style.background = 'blue';
+    }
+    c.onclick = function() {
+        h1.style.background = 'yello';
+    }
+    d.onclick = function() {
+        h1.style.background = 'pink';
+    }
+</script>
+
+</html>

@@ -1,0 +1,9 @@
+.item>.container h1 {
+    color: rgb(255, 21, 204);
+}
+
+.hero-unit {
+    background: rgb(255, 240, 243);
+    padding: 30px;
+    margin-bottom: 50px;
+}

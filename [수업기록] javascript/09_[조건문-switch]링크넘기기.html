@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var site = prompt("naver,daum.nate.google", "");
+        var url;
+        var url2 = "http://" + site + ".com";
+        switch (site) {
+            case "naver":
+                url = "www.naver.com";
+                break;
+            case "daum":
+                url = "www.daum.net";
+                break;
+            case "nate":
+                url = "www.nate.com";
+                break;
+            case "google":
+                url = "www.google.com";
+                break;
+            default:
+                alert("not allowed");
+                location.reload();
+                //경고창을 닫으면 새로고침 효과
+        }
+        // if (url) location.href = "http://" + url;
+        if (url2) document.write(url2);
+        //url이라는 변수가 있으면 실행해라. 중괄호 없는 if문.
+    </script>
+</body>
+
+</html>

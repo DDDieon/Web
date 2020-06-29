@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>리턴</h1>
+    <script>
+        function test(name1, name2) {
+            document.write(name1 + "Hello", '<br>');
+            document.write(name2 + "반갑습니다", '<br>');
+        }
+        test('원빈', '장동건');
+        document.write('<hr>');
+
+        function test2(a, b) {
+            return a + b;
+            document.write('welcome');
+        }
+
+        var num = test2(100, 200);
+        document.write(num);
+        document.write(test2(100, 200));
+
+        // 화살표 함수
+        var add5 = (x, y) => {
+                return x + y;
+            }
+            // 화살표 함수가 아니라 기본형일 때
+            // function (x, y) {
+            //     return x + y;
+            // }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 배열을 생성합니다.
+
+        let array = [52, 273, '아침밥', '점심밥', true, false]
+
+        // 배열의 요소를 변경합니다.
+
+        array[3] = '멍청이'
+        array[0] = '몽똥이'
+
+        // 요소를 출력합니다.
+
+        console.log(array[0]);
+
+        console.log(array[1]);
+
+        console.log(array[2]);
+
+        console.log(array[3]);
+
+        console.log(array[4]);
+        var i = 0
+        while (i < array.length) {
+            document.write(array[i]);
+            document.write(`</br>`);
+            i++
+        }
+        //------------------------------------------------------------------------- 카페 61번게시판 --------//
+        let output = 1;
+
+        // 반복을 수행합니다.
+
+        for (let i = 1; i <= 20; i++) {
+            output *= i;
+        }
+        document.write(output);
+
+        // ----------------- 시간을 사용한 반복문 이탈  loopExitByTime.js
+
+
+        // 변수를 선언합니다.
+
+        let start = new Date().getTime();
+
+        let count = 0;
+
+        // 반복을 수행합니다: 1000밀리초 * 3 = 3초
+
+        while (start + (1000 * 3) > new Date().getTime()) {
+
+            count++;
+
+        }
+
+        // 출력합니다.
+
+        console.log(count + "만큼 반복했습니다.");
+
+        // ----------------------------역 for 반복문. 배열을 생성합니다.
+
+        let array2 = [1, 2, 3, 4, 5, 6];
+
+        // 요소의 길이를 출력합니다.
+
+        for (let i = array2.length - 1; i >= 0; i--) {
+
+            console.log(array2[i]);
+
+        }
+        document.write('<hr>');
+        //------------------------------ for in 반복문.
+
+        let 과일 = ['사과', '배', '포도', '바나나', '딸기'];
+        for (let a in 과일) {
+            document.write(과일[a] + '<hr>');
+        }
+
+        //----------------------------- for of 반복문. 요소가 of앞에 온다.
+
+        let 과일2 = ['사과', '배', '포도', '바나나', '딸기'];
+        for (let yoso of 과일) {
+            document.write(yoso + '<hr>');
+        }
+    </script>
+</body>
+
+</html>

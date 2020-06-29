@@ -1,0 +1,80 @@
+/*탭메뉴 디자인*/
+
+.buttons {
+    overflow: hidden;
+}
+
+.buttons>label {
+    display: block;
+    float: left;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+#first:checked~.buttons>label:nth-of-type(1) {
+    background: black;
+    color: white;
+}
+
+#second:checked~.buttons>label:nth-of-type(2) {
+    background: black;
+    color: white;
+}
+
+#first,
+#second {
+    display: none;
+}
+
+.tab_item {
+    display: none;
+}
+
+#first:checked~.tab_item:nth-of-type(1) {
+    display: block;
+}
+
+#second:checked~.tab_item:nth-of-type(2) {
+    display: block;
+}
+
+div.tab_item img {
+    width: 45px;
+    height: 45px;
+}
+
+div.thum,
+div.desc {
+    float: left;
+}
+
+div.tab_item li {
+    overflow: hidden;
+    border: 1px solid black;
+    border-top: none;
+    padding: 10px;
+}
+
+#main_aside {
+    width: 200px;
+}
+
+
+/* float에 따라서 글자가 내려가지 않게 하기. 글자초과시에 "..."으로 표기된다 */
+
+.desc b {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 120px;
+    text-overflow: ellipsis;
+}
+
+div.desc {
+    margin-left: 10px;
+    text-transform: uppercase;
+}

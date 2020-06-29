@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/*design*/
+
+#box1 {
+    background: red;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+#box1:hover {
+    width: 200px;
+    transition-duration: 1s;
+    background: blue;
+    transition-delay: 0.5s;
+}
+
+#box1:active {
+    height: 150px;
+    background: gold;
+    background: color;
+    transition-property: all;
+    transition: 1.5s;
+    transition-timing-function: ease-out;
+}
+
+#graph {
+    width: 600px;
+    border: 3px solid black;
+}
+
+.bar {
+    width: 10%;
+    height: 50px;
+    background: orange;
+    margin: 5px;
+    transition-duration: 5s;
+    ;
+}
+
+#graph:hover>.bar {
+    width: 600px;
+}
+
+div.bar:nth-child(1) {
+    transition-delay: 0s;
+    background: red;
+}
+
+div.bar:nth-child(2) {
+    transition-delay: 0.5s;
+    background: blue;
+}
+
+div.bar:nth-child(3) {
+    transition-delay: 1s;
+    background: gold;
+}
+
+div.bar:nth-child(4) {
+    transition-delay: 1.5s;
+    background: pink;
+}
+
+div.bar:nth-child(5) {
+    transition-delay: 2s;
+    background: lime;
+}
+
+.container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.product {
+    width: 200px;
+    height: 250px;
+    border: 2px solid black;
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+
+.product img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.product p.caption {
+    background: pink;
+    border: 1px solid black;
+    position: absolute;
+    /* left: 50%; */
+    top: 250px;
+    /* width: 0;
+    height: 0; */
+    opacity: 0;
+}
+
+.product:hover p.caption {
+    top: 0px;
+    transition: 0.2s;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2;
+    left: 0;
+    top: 50%;
+}
+
+
+}

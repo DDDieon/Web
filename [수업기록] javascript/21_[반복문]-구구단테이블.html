@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <script>
+        for (var i = 2; i <= 9; i++) {
+            document.write(`-------${i}단 시작------<br>`);
+            for (var j = 1; j <= 9; j++) {
+                var sum = i * j;
+                var gugu = `${i}*${j}=${sum}<br>`;
+                document.write(gugu);
+            }
+            document.write('<hr>');
+        }
+        document.write('<h1>구구단표</h1>');
+        document.write("<table border=1 width=50%>");
+        //테이블시작
+        for (var i = 1; i <= 9; i++) {
+            document.write("<tr>");
+            document.write(`<td>${i}단</td>`);
+            for (var j = 1; j <= 9; j++) {
+                var gob = i * j;
+                document.write(`<td>${i}x${j}=${gob}</td>`)
+            }
+        }
+        //테이블 끝
+        document.write("</table>")
+    </script>
+    <button type="button" onclick="alert('helloworld')">버튼을 누르세요</button>
+    <button type="button" onclick="test()">버튼을 누르세요2</button>
+    <script>
+        function test() {
+            alert("helloworld2!!!!!!!!!!!!!!!!!!!!! ");
+        }
+    </script>
+</body>
+
+</html>
