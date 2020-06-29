@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var 학생명단 = [{
+            이름: "김연아",
+            나이: 20,
+            특기: '스케이팅' //배열요소 1
+        }, {
+            이름: '김연경',
+            나이: 24,
+            특기: '배구' //배열요소 2
+        }]
+        학생명단.push({
+            이름: '김소향',
+            나이: 40,
+            특기: '가수'
+        })
+
+
+        //-------------------------------------- pop과 push 매소드
+        학생명단.push(); //push : 속성데이터 넣는 매소드
+        for (var key in 학생명단) {
+            document.write(학생명단[key].이름 + "<br>");
+        }; //명단출력
+
+        document.write('---------<br>');
+        학생명단.pop(); //pop : 요소 데이터 하나 빼기 
+        for (var key in 학생명단) {
+            document.write(학생명단[key].이름 + "<br>");
+        }; //명단출력
+        document.write('---------<br>');
+        학생명단.pop();
+        for (var key in 학생명단) {
+            document.write(학생명단[key].이름 + "<br>");
+        }; //명단출력
+    </script>
+
+</html>

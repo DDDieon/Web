@@ -19,6 +19,7 @@
             회사: "삼성",
             원산지: "개성공단",
             전원: function(스위치) {
+                document.write(this.제품명 + '을 ' + this.원산지 + '에서 작동하다<hr>');
                 return 스위치;
             }
         };
@@ -32,7 +33,13 @@
         } else {
             document.write("TV전원을 OFF");
         }
-        var power = tv.전원(1);
+        document.write(tv.전원(1));
+        //------------------------------매소드는 빼고 출력하기
+        for (var key in tv) {
+            if (key != '전원') {
+                document.write(key + "=>" + tv[key] + '<br>');
+            }
+        }
     </script>
 </body>
 

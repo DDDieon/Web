@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 변수를 선언합니다.
+        var output = '';
+        var student = {
+            이름: '연하진',
+            국어: 92,
+            수학: 98,
+            영어: 96,
+            과학: 98
+        };
+        // in 키워드를 사용합니다.
+        output += "'이름' in student: " + ('이름' in student) + '\n';
+        output += "'성별' in student: " + ('성별' in student);
+        // 출력합니다.
+        output = output.replace('\n', '</br>')
+        document.write(output);
+        // 변수를 선언합니다.
+        var student = {
+            이름: '연하진',
+            국어: 92,
+            수학: 98,
+            영어: 96,
+            과학: 98
+        };
+        // 출력합니다.
+        var output = '';
+        with(student) {
+            output += '이름: ' + 이름 + '\n';
+            output += '국어: ' + 국어 + '\n';
+            output += '수학: ' + 수학 + '\n';
+            output += '영어: ' + 영어 + '\n';
+            output += '과학: ' + 과학 + '\n';
+            output += '총점: ' + (국어 + 수학 + 영어 + 과학);
+        }
+        output = output.replace('\n', '</br>')
+        document.write(output);
+
+        //--------------------- 메서드 지정해서 출력하기
+        // 변수를 선언합니다.
+
+        var student = {};
+        // 객체에 속성을 추가합니다.
+        student.이름 = '윤인성';
+        student.취미 = '악기';
+        student.특기 = '프로그래밍';
+        student.장래희망 = '생명공학자';
+        // toString() 메서드를 만듭니다.
+        student.toString = function() {
+            var output = '';
+            for (var key in this) {
+                // toString() 메서드는 출력하지 않게 합니다.
+                if (key != 'toString') {
+                    output += '<br>' + key + '=' + this[key] + '\n';
+                }
+            }
+            return output;
+
+        };
+
+        // 출력합니다.
+        document.write(student.toString());
+    </script>
+</body>
+
+</html>
