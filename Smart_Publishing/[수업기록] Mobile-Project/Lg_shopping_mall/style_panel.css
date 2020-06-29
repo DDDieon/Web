@@ -1,0 +1,88 @@
+/* * {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style:
+} */
+
+#wrap {
+    box-sizing: border-box;
+    font-size: 2.286vw;
+    width: 100%;
+    height: 100%;
+    background: rgba(37, 37, 37, 0.781);
+}
+
+p.user_id {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 0 1px 2px black;
+}
+
+p.user_id .xi-close label {
+    display: block;
+}
+
+
+/*컨텐츠박스 세팅시작*/
+
+div#content_box {
+    box-sizing: border-box;
+    width: 80%;
+    height: 100%;
+    box-shadow: 1px 1px 1px black;
+    background: white;
+}
+
+.list01 {
+    display: flex;
+}
+
+.list01 li {
+    flex: 1;
+}
+
+.list01 li a {
+    display: block;
+    box-shadow: inset 1px 1px 2px gray, 1px 1px 2px gray;
+    text-align: center;
+}
+
+ul.list02 li {
+    padding: 10px;
+    position: relative;
+    border-bottom: 1px solid gray;
+}
+
+ul.list02 ol {
+    margin-left: 10px;
+    display: none;
+}
+
+ul.list02 li a {
+    display: block;
+}
+
+ol#target01,
+ol#target02 {
+    display: none;
+}
+
+ul.list02 i {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+ol#target01:target,
+ol#target02:target {
+    display: block;
+}

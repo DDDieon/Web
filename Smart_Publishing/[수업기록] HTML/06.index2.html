@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h2>멀티미디어 관련태그 실습</h2>
+    <h3>HTML5에 새로 추가된 멀티미디어 관련태그</h3>
+    <audio src="/multimedia/Kalimba.mp3" controls autoplay></audio>
+    <hr>
+    <audio controls autoplay>
+        <source src="multimedia/Kalimba.mp3" type="audio/mp3">
+        <source src="multimedia/Kalimba.ogg" type="audio/ogg ">
+    </audio>
+    <audio controls>
+        <source src="multimedia/Kalimba.mp3" type="audio/mp3">
+        <source src="multimedia/Kalimba.ogg" type="audio/mp3 ">
+    </audio>
+    <video src="./multimedia/Fireworks.mp4" controls autoplay muted></video>
+    <video controls loop poster="./img/card1.jpg">
+        <source src="multimedia/Fireworks.mp4" type="video/mp4">
+        <source src="multimedia/Fireworks.ogv" type="video/ogv">
+    </video>
+    <hr>
+    <video poster="http://placehold.it/640x360" width="640" height="360" controls="controls">
+        <source src="Wildlife.mp4" type="video/mp4" />
+        <source src="Wildlife.webm" type="video/webm" />
+    </video>
+    <hr>
+    <video width="640" height="360" controls="controls">
+        <source src="./multimedia/Wildlife.mp4" type="video/mp4" />
+        <source src="./multimedia/Wildlife.webm" type="video/webm" />
+        <track kind="subtitles" src="track.srt" srclang="ko" label="Korean" />
+        <track kind="subtitles" src="track.srt" srclang="en" label="English" />
+        <track kind="subtitles" src="track.srt" srclang="jp" label="Japanese" />
+        <track kind="subtitles" src="track.srt" srclang="ch" label="Chinese" />
+    </video>
+
+
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 패딩이 바깥이 아니라 border안으로 들어간다 */
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+#main_menu {
+    background: rgb(255, 255, 132);
+    width: 100%;
+    border-bottom: 1px solid gray;
+}
+
+#main_menu li {
+    float: left;
+    width: calc(100% /6);
+}
+
+#main_menu::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+#main_menu li a {
+    display: block;
+    padding: 20px;
+    text-align: center;
+    white-space: nowrap;
+    color: black;
+}
+
+#main_menu li a:hover {
+    font-weight: bold;
+}
+
+
+/* 서브메뉴 구현하기 */
+
+.submenu {
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 3px;
+}
+
+.submenu ol {
+    float: left;
+    width: calc(100% /6);
+    border-right: 1px solid lightgray;
+}
+
+.submenu ol li {
+    width: auto;
+    white-space: nowrap;
+    /* 화면을 최소크기로 했을때 글자가 두줄이 되지 않는다 */
+}
+
+.submenu ol li a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* 동적인 효과주기 : 동위선택자 + */
+
+#main_menu+.submenu {
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+#main_menu:hover+.submenu {
+    height: 260px;
+    opacity: 1;
+}
+
+
+/* 앞에 있는 #main_menu+.submenu에서의 ★높이와 투명도를 이겨야  hover 유지가 됨 */
+
+.submenu:hover {
+    height: 260px !important;
+    opacity: 1 !important;
+}
+
+#main_menu:hover {
+    background: rgb(177, 247, 13);
+}
+
+
+/*메뉴에 동적인 효과주기*/
+
+#main_menu li {
+    position: relative;
+}
+
+#main_menu li:after {
+    content: '';
+    display: block;
+    width: 0%;
+    background: rgb(0, 255, 21);
+    height: 5px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+}
+
+#main_menu li:hover:after {
+    width: 100%;
+    transition: 1s;
+    left: 0;
+    background: rgb(177, 247, 13)
+}
+
+.submenu>ol {
+    overflow: hidden;
+    position: relative;
+}
+
+.submenu>ol:before {
+    content: '';
+    display: block;
+    clear: both;
+    background: yellow;
+    height: 5px;
+    position: absolute;
+    width: 0%;
+    top: 0;
+    left: 0%;
+    bottom: 0;
+    transition: 0.5s;
+}
+
+.submenu>ol:hover:before {
+    width: 100%;
+    left: 100%;
+    background: yellow;
+}
+
+
+/* 아이콘사진 넣기 */
+
+.wrap {
+    position: relative;
+}
+
+.left {
+    left: 0px;
+    top: 0px;
+}
+
+.right {
+    right: 0px;
+    top: 0px;
+}
+
+#panel {
+    z-index: 111;
+    width: 300px;
+    height: 500px;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px gray;
+    position: absolute;
+    left: -500px;
+    transition: 0.5s;
+    top: 50px;
+    z-index: 1111;
+}
+
+#panel:target {
+    left: 0px;
+    transition: 0.5s;
+}
+
+#wrap>a.right {
+    position: absolute;
+    display: block;
+    border: 1px solid red;
+    z-index: 11;
+    top: 0;
+    right: 0;
+    z-index: 111111;
+}

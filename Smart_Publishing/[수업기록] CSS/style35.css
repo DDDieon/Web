@@ -1,0 +1,65 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    /* 패딩이 바깥이 아니라 border안으로 들어간다 */
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#pizza li span:first-child {
+    display: block;
+    text-indent: 0px;
+}
+
+#pizza li span:last-child {
+    display: block;
+    text-indent: -3000px;
+    /* 포지션에서 top: -20px을 안주면 박스처리가 되어서 다음줄로 밀려난다 */
+    position: relative;
+    top: -20px;
+}
+
+#pizza a {
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+#pizza li:hover span:first-child {
+    /* display: none; */
+    display: block;
+    text-indent: -1000px;
+    transition: 0.5s;
+}
+
+#pizza li:hover span:last-child {
+    /* display: inline; */
+    display: block;
+    text-indent: 0px;
+    transition: 0.5s;
+}
+
+#pizza {
+    overflow: hidden;
+    background: ivory;
+}
+
+#pizza li {
+    border-right: 1px solid rgb(201, 191, 191);
+    overflow: hidden;
+    /* text-indent가 왼쪽으로 움직이면서 해당 li태그의 바깥으로 나가면 안보인다 */
+    float: left;
+    width: calc(100% / 5);
+    padding: 5px;
+}

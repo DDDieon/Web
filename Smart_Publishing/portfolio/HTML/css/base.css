@@ -1,0 +1,37 @@
+/* 바디의 글자 색깔이랑 사이즈는 컨셉따라 */
+
+html,
+body {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: black;
+    font-size: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+/* a태그 */
+
+a {
+    color: inherit;
+}
+
+a,
+a:link {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:hover,
+a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ----------------------글꼴 및 배경 등 커스텀설정 관련---------------------- */

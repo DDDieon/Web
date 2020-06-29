@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var 과일 = ['사과', '바나나', '포도', '딸기', '옥수수'];
+
+        function 장바구니0(배열) {
+            for (var i = 0; i < 배열.length; i++) {
+                document.write(배열[i]);
+            };
+        }
+        장바구니0(과일);
+        document.write('<hr>');
+
+        function 장바구니3(배열) {
+            for (var i in 배열) {
+                document.write('<hr>' + 배열[i] + '<hr>');
+            }
+        }
+
+        장바구니3(과일);
+
+        function 장바구니2(...배열) { //배열이 몇개인지 모르면 ...
+            for (var i = 0; i < 배열.length; i++) {
+                document.write(배열[i]);
+            }
+        }
+        장바구니2("아보카도", "김밥", "수박<hr>");
+
+        //---------- for each api문-------------
+        과일.forEach(function(현재값, 인덱스, c) {
+            document.write('a= ' + 현재값 + '<br>');
+            document.write('b= ' + 인덱스 + '<br>');
+            document.write('c= ' + c + '<br>');
+        })
+    </script>
+</body>
+
+</html>

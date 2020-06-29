@@ -1,0 +1,58 @@
+/* section {
+    border: 1px solid black;
+}
+
+nav {
+    border: 1px solid black;
+}
+
+aside {
+    border: 1px solid black;
+}
+
+section {
+    width: 80%;
+    overflow: hidden;
+    min-width: 1200px;
+}
+
+nav {
+    width: 200px;
+    float: left;
+    height: 200px;
+}
+
+aside {
+    width: 100%;
+    float: left;
+    height: 200px;
+    margin-right: -205px;
+}
+
+aside p {
+    padding-right: 210px;
+    background: pink;
+} */
+
+div,
+p {
+    border: 1px solid black;
+}
+
+div {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+
+p:nth-of-type(1) {
+    width: 200px;
+    height: 200px;
+}
+
+p:nth-of-type(2) {
+    flex: 1;
+    /* 남은공간을 공동분배하는 명령인데 하나가 고정이라서 남는공간을 차지하는 자식이 1개뿐이라
+    유동적으로 남은공간 혼자 독차지 */
+    height: 200px;
+}

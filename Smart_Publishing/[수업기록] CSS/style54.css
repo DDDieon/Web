@@ -1,0 +1,78 @@
+section {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+section div {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 1;
+}
+
+
+/* section:nth-child(1) {
+background: red;
+transform: rotateY(0deg) translate3d(0, 0, 100px);
+} */
+
+div:nth-child(1) {
+    background: red;
+    transform: rotateY(0deg) translate3d(0, 0, 100px);
+}
+
+div:nth-child(2) {
+    background: blue;
+    transform: rotateY(90deg) translate3d(0, 0, 100px);
+}
+
+div:nth-child(3) {
+    background: green;
+    transform: rotateY(180deg) translate3d(0, 0, 100px);
+}
+
+div:nth-child(4) {
+    background: pink;
+    transform: rotateY(270deg) translate3d(0, 0, 100px);
+}
+
+div:nth-child(5) {
+    background: purple;
+    transform: rotateX(90deg) translate3d(0, 0, 100px);
+}
+
+div:nth-child(6) {
+    background: purple;
+    transform: rotateX(270deg) translate3d(0, 0, 100px);
+}
+
+body {
+    /* perspective: 400px; */
+    margin: 50px;
+}
+
+section div {
+    font-size: 50px;
+    text-align: center;
+    line-height: 200px;
+}
+
+@keyframes cubic {
+    from {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+    }
+    to {
+        transform: rotateX(100deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+
+section {
+    animation: cubic;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform-style: preserve-3d;
+    animation-direction: alternate;
+}

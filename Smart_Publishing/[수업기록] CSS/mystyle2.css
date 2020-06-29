@@ -1,0 +1,59 @@
+* {
+    margin: auto;
+}
+
+
+/* 기본속성 선택자 */
+
+input[type=text] {
+    background: pink;
+}
+
+
+/* 문자열선택자! ~= : 특정단어와 공백이 있는 것 */
+
+p[class~=news] {
+    background: red;
+}
+
+
+/* 단어에 |= 하이픈포함 */
+
+p[class|=news] {
+    background: cyan;
+}
+
+
+/* 꺾쇠^=는 시작단어 */
+
+p[class^=newp] {
+    background-color: gold;
+}
+
+
+/* 달러$는 끝나는 단어 */
+
+
+/* p[class$=paper] {
+    border: 3px double blue;
+}
+
+#box1,
+div {
+    display: none;
+}
+
+#box1 {
+    display: none;
+}
+
+#box1:hover,
+div {
+    display: block;
+    background: black;
+}
+
+#box2:hover,
+div {
+    backgorund: red;
+} */

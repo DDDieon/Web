@@ -1,0 +1,96 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    #box1 {
+        width: 300px;
+        height: 150px;
+        border: 1px solid black;
+    }
+    
+    #box1 p {
+        width: 100px;
+        height: 100px;
+        background: pink;
+        text-align: center;
+        line-height: 100px;
+        /*부모박스에서 자식가운데정렬은 마진오토*/
+        /* margin: auto; */
+        /*근데 세로정렬은 마진오토로 안된다*/
+    }
+    
+    #box1 {
+        width: 500px;
+        height: 250px;
+        display: flex;
+        /*마진오토 주면 자동으로 가운데정렬이 됨. 없으면 float처럼 왼쪽으로 붙음*/
+        align-items: center;
+        /*세로정렬법 : 위아래가 같다*/
+        justify-content: space-between;
+        /*모바일용 사용많이함*/
+        justify-content: space-around;
+        justify-content: space-evenly;
+        /*가로정렬: 점점 폭이 줄어듬*/
+    }
+    
+    #box2 {
+        width: 500px;
+        height: 250px;
+        border: 1px solid black;
+    }
+    
+    #box2 p {
+        width: 100px;
+        height: 100px;
+        background: pink;
+        text-align: center;
+        line-height: 100px;
+        float: left;
+        margin: 26px;
+        margin-left: 35px;
+    }
+    
+    #box3 {
+        width: 500px;
+        height: 250px;
+        border: 1px solid black;
+        position: relative;
+    }
+    
+    #box3 p {
+        width: 100px;
+        height: 100px;
+        background: pink;
+        position: absolute;
+    }
+    
+    #box3 p:nth-last-of-type(1) {
+        left: 20px;
+        top: 40px;
+    }
+    
+    #box3 p:nth-of-type(2) {
+        left: 160px;
+        top: 40px;
+    }
+    
+    #box3 p:nth-child(1) {
+        left: 300px;
+        top: 40px;
+    }
+    /*인라인으로 배치하기 - float처리하면 박스가 됨*/
+    
+    #box4 {
+        width: 500px;
+        height: 250px;
+        border: 1px solid black;
+    }
+    
+    #box4 p {
+        width: 100px;
+        height: 100px;
+        background: pink;
+        display: inline-block;
+        /* float: left; */
+    }

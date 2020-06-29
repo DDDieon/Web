@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹표준의 장점</title>
+    <style>
+        .list {
+            color: darkcyan;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="context">
+        <div class="list"><span>(1) 호환성확보</span></div>
+        <div class="list"><span>(2) 호환성확보</span></div>
+        <div class="list"><span>(3) 호환성확보</span></div>
+    </div>
+    <hr>
+    <ul>
+        <li class="list"><span>(1)</span>호환성 확보</li>
+        <li class="list"><span>(2)</span>호환성 확보</li>
+        <li class="list"><span>(3)</span>호환성 확보</li>
+    </ul>
+    <div id="sementic_web">
+        <header>
+            <nav>네비게이션바</nav>
+            <ul>
+                <li><a href="#">menu-1</a></li>
+                <li><a href="#">menu-2</a></li>
+                <li><a href="#">menu-3</a></li>
+                <li><a href="#">menu-4</a></li>
+                <li><a href="#">menu-5</a></li>
+            </ul>
+        </header>
+        <section>
+            <h2>유튜버 1</h2>
+            <article>
+                <h3>웹표준 강의</h3>
+                <div>내용(본문)이 들어간다</div>
+            </article>
+            <aside>사이드 메뉴가 aside</aside>
+        </section>
+        <footer>
+            <address>주소</address>
+            <!-- <p>
+                <span>참고) 네이버에서 웹표준을 지키고 있을까?</span>
+                <a href="http://validator.kldp.org/check?uri=http://www.naver.com" onclick="this.href=this.href.replace(/http://www.naver.com/,encodeURIComponent(document.URL))"><img src="//validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15" width="80"></a>
+            </p> -->
+            <!-- <script>
+                var predate = new Date();
+                alert(predate);
+                document.write.predate.getDate();
+            </script> -->
+            <time datetime="2020-05-01">현재시간</time>
+            <p><time datetime="09:00">아침 9시</time></p>
+            <figure>
+                <img src="img/card1.jpg" width="150" height="150">
+                <img src="img/card2.jpg" width="150" height="150">
+                <img src="img/card3.jpg" width="150" height="150">
+            </figure>
+
+        </footer>
+    </div>
+</body>
+
+</html>

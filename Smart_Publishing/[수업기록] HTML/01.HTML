@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--유니코드 8비트-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--홈페이지의 가로길이는 장치의 폭에 맞추겠다-->
+    <title>문서 제목</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        
+        body {
+            background-color: #ccc;
+        }
+        
+        .header {
+            display: block;
+            position: fixed;
+            left: -1100px;
+            height: 3rem;
+            padding: 0 45%;
+            font-size: 2rem;
+            background: #222;
+            color: orange;
+            top: 0px;
+        }
+        
+        .header:hover {
+            transform: translate(1100px, 0);
+            transition: ease-in 0.5s;
+        }
+        
+        .main {
+            margin-top: 10rem;
+        }
+        
+        .header_back {
+            color: white;
+            margin: 0 auto;
+            display: block;
+            height: 3rem;
+            background-color: #333;
+        }
+        
+        .header_back:hover {
+            text-align: center;
+        }
+        
+        .image {
+            display: flex;
+            flex-wrap: nowrap;
+            border: solid 4px white;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        HEADER
+    </div>
+    <div class="header_back"><span>메뉴1</span><span>메뉴2</span></div>
+    <div class="main">
+        <marquee behavior="altermate"><a href="#gotobottom">아래로갑시다</a></marquee>
+        <p>대한민국 우리나라 <strong>무궁화</strong> 꽃이 피었습니다람쥐새끼</p>
+        <p>우리나라 <i>만세</i> 냥냥이</p>
+        <p>우리나라<small>만세</small> 냥냥이</p>
+        <p>우리나라 <del>만세</del> 냥냥이</p>
+        <p>우리나라 <u>만세</u> 냥냥이</p>
+        <p>우리나라 <s>만세</s> 냥냥이</p>
+        <p>우리나라 <ins>만세</ins> 냥냥이</p>
+        <p>우리나라 <ins>만세</ins> 냥냥이</p>
+        <p>우리나라 만세 냥냥이</p>
+        p>우리나라 <ins>만세</ins> 냥냥이</p>
+        <hr>
+        <p>H<sub>2</sub>O</p>
+        <P>3평은 3.3<sup>2</sup>입니다</P>
+        <span>往來</span>
+        <rp>(</rp>
+        <blockquote>들여쓰기</blockquote>
+        <rt>왕래</rt>
+        <rp>)</rp>
+        <ruby><rb>漢字</rb><rp>(</rp><rt>かんじ</rt><rp>)</rp></ruby>
+        <address>서울시 구로구 구로동
+            <p>welcome</p>
+            <p><q>html</q>은 웹페이지 제작언어</p>
+        </address>
+        <div id="gotobottom">아래로 왔다</div>
+        <blockquote><a href="#">위로갑시다</a></blockquote>
+        <hr>
+        <xmp>
+            <pre>
+            입력한
+            그대로
+            나오는
+            태그가
+            PRE태그입니당~
+        </pre>
+        </xmp>
+        오케이
+        <hr>
+        <div class="image">
+            <figure>
+                <figurecaption>아</figurecaption>
+                <img src="https://shopping-phinf.pstatic.net/main_6806489/6806489220.20191115115341.jpg?type=f300" title="내가 직업학교에서 쓰고 있는 키보드" alt="엑박">
+                <img src="./img/card1.jpg"><img src="./img/card2.jpg"><img src="./img/card3.jpg"><img src="./img/card4.jpg"><img src="./img/card5.jpg" width="300px">
+            </figure>
+            <figurecaption>아</figurecaption>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,346 @@
+@charset "utf-8";
+
+/**
+* 	step-1
+*/
+
+
+/** 헤더바에 대한 처리
+----------------------------------- */
+
+header {
+    height: 45px;
+    background-image: -webkit-linear-gradient(top, #dcd6c5 8%, #8e7a45 74%);
+    border-bottom: 1px solid #555;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+    justify-content: space-between;
+    position: relative;
+}
+
+
+/** 헤더바 > 로고
+----------------------------------- */
+
+header>h1 {
+    background: url('/img/sub_logo.png');
+    width: 64px;
+    height: 27px;
+    text-indent: -999px;
+    position: absolute;
+    left: 15px;
+    top: 10px;
+}
+
+
+/**
+* 	step-3
+*/
+
+
+/** 헤더바 > 로고 > 링크
+----------------------------------- */
+
+header>h1>a {
+    display: block;
+}
+
+
+/**
+* 	step-4
+*/
+
+
+/** 헤더바 > 홈/메뉴 버튼 영역
+----------------------------------- */
+
+header aside#button {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    width: 94px;
+    height: 27px;
+    overflow: hidden;
+}
+
+
+/**
+* 	step-5
+*/
+
+
+/** 헤더바 > 홈/메뉴 버튼 영역 > 각 항목 박스
+----------------------------------- */
+
+header>aside#button>ul>li {
+    width: 47px;
+    height: 27px;
+    background: url(/img/aside_btns.png) no-repeat;
+    float: left;
+    text-indent: -999px;
+}
+
+header>aside#button>ul>li:nth-child(2) {
+    background-position: -47px 0;
+}
+
+header>aside#button>ul>li>a {
+    display: block;
+}
+
+header>aside#button>ul>li>label {
+    display: block;
+}
+
+header>input:checked~nav {
+    display: block !important;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+
+/** 헤더바 > 홈/메뉴 버튼 영역 > 각 항목 박스 > 링크
+----------------------------------- */
+
+
+/**
+* 	step-6
+*/
+
+
+/** 헤더바 > 홈/메뉴 버튼 영역 > 각 항목 박스중 마지막 요소의 위치
+----------------------------------- */
+
+
+/**
+* 	step-7
+*/
+
+
+/** 헤더바 > 메뉴 영역
+----------------------------------- */
+
+
+/**
+* 	step-8
+*/
+
+
+/** 헤더바 > 메뉴 영역 > 1depth메뉴 박스
+----------------------------------- */
+
+
+/** 헤더바 > 메뉴 영역 > 1depth메뉴의 각 항목
+----------------------------------- */
+
+
+/**
+* 	step-9
+*/
+
+
+/** 헤더바 > 메뉴 영역 > 1depth메뉴의 각 항목 > 링크
+----------------------------------- */
+
+
+/** 헤더바 > 메뉴 영역 > 1depth메뉴의 각 항목 > 링크 배경이미지 클립핑
+----------------------------------- */
+
+
+/**
+* 	step-10
+*/
+
+
+/** 헤더바 > 메뉴 영역 > 링크 (close 버튼)
+----------------------------------- */
+
+
+/**
+* 	step-11
+*/
+
+
+/** 헤더바 > 메뉴 영역의 애니메이션 적용
+----------------------------------- */
+
+
+/**
+* 	step-12
+*/
+
+
+/** 헤더바 > 메뉴 영역이 열릴 경우
+----------------------------------- */
+
+
+/**
+* 	step-13
+*/
+
+
+/** 내용영역 > 서브타이틀 박스 및 이미지
+----------------------------------- */
+
+section>h2 {
+    width: 100%;
+    height: 62px;
+    background: url(/img/bg_visual.jpg) left top no-repeat, url(/img/bg_title.png) repeat-x;
+    position: relative;
+    text-indent: -999px;
+}
+
+
+/**
+* 	step-14
+*/
+
+
+/** 내용영역 > 메뉴영역 > 1depth 메뉴 박스
+----------------------------------- */
+
+section>nav {
+    width: 100%;
+}
+
+section>nav>ul>li {
+    height: 49px;
+    background: url(/img/bg_snb.gif) repeat-x;
+}
+
+section>nav>ul>li>a {
+    display: block;
+    width: auto;
+    height: 49px;
+    text-indent: -999px;
+    background: url('/img/snb_item.png') no-repeat;
+    border-bottom: 1px solid #dcd6c2;
+}
+
+section>nav>ul>li:nth-child(2)>a {
+    background-position: 0 -49px;
+}
+
+section>nav>ul>li:nth-child(3)>a {
+    background-position: 0 calc(-49px * 2);
+}
+
+section>nav>ul>li:nth-child(4)>a {
+    background-position: 0 calc(-49px * 3);
+}
+
+
+/** 내용영역 > 메뉴영역 > 1depth 메뉴 박스 > 링크
+----------------------------------- */
+
+
+/**
+* 	step-16
+*/
+
+
+/** 내용영역 > 메뉴영역 > 1depth 메뉴 박스별 링크의 이미지 클립핑
+----------------------------------- */
+
+header>nav {
+    display: none;
+    position: absolute;
+    top: 46px;
+    z-index: 100;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+header nav label.close-botton {
+    display: block;
+    float: right;
+    margin: 10px 30px;
+}
+
+header>nav>ul {
+    max-width: 320px;
+    /* 인라인블럭 줄바꿈의 포인트=max-width */
+    margin: 0 auto;
+    padding: 15px 15px 5px 15px;
+}
+
+header>nav>ul>li {
+    display: inline-block;
+}
+
+header>nav>ul>li>a {
+    border-radius: 16px;
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    margin: 5px 7px;
+    display: block;
+    background: url(/img/main_btns.png) no-repeat;
+}
+
+header>nav>ul>li:nth-child(2)>a {
+    background-position: -130px 0;
+}
+
+header>nav>ul>li:nth-child(3)>a {
+    background-position: calc(-130px * 2) 0;
+}
+
+header>nav>ul>li:nth-child(4)>a {
+    background-position: calc(-130px * 3) 0;
+}
+
+header>nav>ul>li:nth-child(5)>a {
+    background-position: calc(-130px * 4) 0;
+}
+
+header>nav>ul>li:nth-child(6)>a {
+    background-position: calc(-130px * 5) 0;
+}
+
+
+/**
+* 	step-17
+*/
+
+
+/** 내용영역 > 메뉴영역 > 1depth메뉴 박스 > 2depth메뉴 박스의 숨김처리 
+----------------------------------- */
+
+section nav ul li {
+    display: block;
+}
+
+section>nav>ul>li>ol {
+    display: none;
+    background: #fff;
+}
+
+
+/** 내용영역 > 메뉴영역 > 1depth메뉴 박스 > 2depth메뉴 박스 > 링크
+----------------------------------- */
+
+section>nav>ul>li>ol>li>a {
+    z-index: 1;
+    color: #555500;
+    width: auto;
+    text-indent: 55px;
+    height: 40px;
+    font: 0.9em/40px "Helvetica";
+    border-bottom: 1px solid #dcd6c2;
+    text-shadow: 0 1px 1px #fff;
+    white-space: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/** 내용영역 > 메뉴영역 > 1depth메뉴 박스 > 2depth메뉴가 열릴 경우의 처리
+----------------------------------- */
+
+section>nav>ul>li:active>ol {
+    display: block !important;
+}

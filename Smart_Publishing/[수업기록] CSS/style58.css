@@ -1,0 +1,88 @@
+/* target속성 */
+
+html,
+body {
+    height: 100%;
+}
+
+#wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+div#main {
+    width: 100%;
+    height: 100%;
+    float: left;
+    margin-right: -400px;
+    background: gold;
+}
+
+
+/* margin-right와 left에 마이너스를 준다면 : 오른쪽과 왼쪽으로 해당 픽셀만큼 절단선을 주는 효과 */
+
+#panel {
+    width: 400px;
+    margin-left: -400px;
+    background: lime;
+    transition: 1s;
+    float: left;
+    height: 50%;
+}
+
+#panel:target {
+    margin-left: 0px;
+}
+
+
+/* 중첩방식 */
+
+#panel {
+    position: absolute;
+    left: -400px;
+    top: 50px;
+}
+
+#wrap {
+    position: relative;
+}
+
+#panel:target {
+    left: 0;
+    transition: 1s;
+}
+
+
+/* 좌우이동방식 */
+
+#right {
+    display: none;
+}
+
+#right_panel {
+    width: 300px;
+    background: pink;
+    transition: 1s;
+    height: 60%;
+    position: absolute;
+    right: -300px;
+}
+
+input#right:checked~#wrap>#right_panel {
+    right: 0;
+    bordeR: 3px solid red;
+}
+
+#main {
+    right: 0px;
+    /* 포지션 relative에 트랜지션을 주기 위해서는 고정점을 줘야한다 */
+}
+
+input:checked~#wrap>#main {
+    /* transform: translateX(-300px); */
+    transition: 1s;
+    position: relative;
+    right: 300px;
+}

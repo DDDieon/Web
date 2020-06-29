@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function abc(aaa) {
+            for (var i = 0; i < 5; i++)
+                aaa(i);
+            document.write('<br>');
+        }
+        var aaa = function(i) {
+                document.write('welcome' + i);
+            }
+            //호출하기
+        abc(aaa);
+        // 매개변수로 전달하는 함수;
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

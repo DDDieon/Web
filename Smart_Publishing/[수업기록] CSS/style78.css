@@ -1,0 +1,86 @@
+#borderimg {
+    border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(img/border.png) 30 round;
+    /* Safari 3.1-5 */
+    -o-border-image: url(img/border.png) 30 round;
+    /* Opera 11-12.1 */
+    border-image: url(img/border.png) 30 round;
+}
+
+#borderimg:hover {
+    border-image: url(img/border.png) 30 stretch;
+}
+
+
+/* round stretch repeat space 속성이 보더이미지에 들어갈 수 있다*/
+
+#borderimg1 {
+    border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(img/border.png) 50 round;
+    /* Safari 3.1-5 */
+    -o-border-image: url(img/border.png) 50 round;
+    /* Opera 11-12.1 */
+    border-image: url(img/border.png) 50 round;
+}
+
+#borderimg2 {
+    border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(img/border.png) 20% round;
+    /* Safari 3.1-5 */
+    -o-border-image: url(img/border.png) 20% round;
+    /* Opera 11-12.1 */
+    border-image: url(img/border.png) 20% round;
+}
+
+#borderimg3 {
+    border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(img/border.png) 30% round;
+    /* Safari 3.1-5 */
+    -o-border-image: url(img/border.png) 30% round;
+    /* Opera 11-12.1 */
+    border-image: url(img/border.png) 30% round;
+}
+
+div.border {
+    width: 300px;
+    height: 300px;
+    border: calc(158px / 3) solid red;
+    /* 두께를 먼저 지정해줘야 한다 */
+    border-image: url(img/border3.png) calc(158 / 3) space;
+}
+
+div.border:hover {
+    border-image-repeat: round;
+}
+
+div.border:active {
+    border-image-repeat: stretch
+}
+
+.btn1 {
+    width: 200px;
+    padding: 10px;
+    /* border: 10px solid white; */
+    /* border-width: 5px 12px 5px 12px; */
+    /* border-image: url(img/whiteButton.png) 10 stretch; */
+}
+
+.btn2 {
+    width: 200px;
+    border: solid red;
+    border-width: 10px;
+    border-image: url(img/btn_red.png) 23 stretch;
+}
+
+.btn2 {
+    border-style: solid;
+    border-width: 20px 20px 20px 20px;
+    -moz-border-image: url(img/whiteButton.png) 5 5 5 5 stretch stretch;
+    -webkit-border-image: url(img/whiteButton.png) 5 5 5 5 stretch stretch;
+    -o-border-image: url(img/whiteButton.png) 5 5 5 5 stretch stretch;
+    border-image: url(img/whiteButton.png) 5 5 5 5 stretch stretch;
+}

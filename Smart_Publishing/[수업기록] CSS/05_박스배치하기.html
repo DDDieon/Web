@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            float: left;
+            width: 100px;
+            height: 80px;
+            border: 2px solid red;
+            font-size: 24px;
+            text-align: center;
+            line-height: 80px;
+        }
+        
+        h1 {
+            clear: both;
+        }
+        
+        nav {
+            width: 550px;
+            border: 5px solid blue;
+            overflow: hidden;
+            margin: auto;
+        }
+        
+        div:hover {
+            transform: rotate(360deg);
+            transition: 1s;
+        }
+        
+        p {
+            /* left: 0; */
+            color: firebrick;
+            font-size: 2rem;
+            text-align: center;
+            -webkit-text-stroke: darkorange;
+            line-height: 100px;
+            width: 100px;
+            height: 100px;
+            background: orange;
+            border: 5px outset darkorange
+        }
+        
+        p:active {
+            border: 5px inset silver;
+            border-radius: 50%;
+        }
+        
+        p {
+            position: relative;
+            left: 0px;
+        }
+        
+        p:active {
+            left: 100px;
+            transition: 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>박스 배치하기</h1>
+    <nav>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </nav>
+    <h1>박스 배치하기</h1>
+    <p>box1</p>
+    <p>box2</p>
+    <p>box3</p>
+</body>
+
+</html>

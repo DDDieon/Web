@@ -1,0 +1,125 @@
+#canvas {
+    width: 600px;
+    height: 500px;
+    position: relative;
+    border: 2px solid black;
+    background: black;
+    background-size: cover;
+    overflow: visible;
+}
+
+#panel img {
+    position: absolute;
+    left: 500px;
+    top: 0;
+    width: 600px;
+    height: 400px;
+    transition: 1s;
+    z-index: 111;
+    opacity: 0;
+}
+
+
+/* div.control a {
+    display: inline-block;
+    padding: 5px;
+} */
+
+
+/* #panel>img:target a태그로
+{
+    left: 0 ;
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+} */
+
+input[type=radio] {
+    display: none;
+}
+
+input[type=radio]#a:checked~#panel>#a {
+    z-index: 1;
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+input[type=radio]#a:checked~div.control .la1 {
+    background: rgb(151, 40, 255);
+}
+
+input[type=radio]#b:checked~#panel>#b {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+input[type=radio]#b:checked~div.control .la2 {
+    background: rgb(151, 40, 255);
+}
+
+input[type=radio]#c:checked~#panel>#c {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+input[type=radio]#c:checked~div.control .la3 {
+    background: rgb(151, 40, 255);
+}
+
+input[type=radio]#d:checked~#panel>#d {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+input[type=radio]#d:checked~div.control .la4 {
+    background: rgb(151, 40, 255);
+}
+
+input[type=radio]#e:checked~#panel>#e {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+input[type=radio]#e:checked~div.control .la5 {
+    background: rgb(151, 40, 255);
+}
+
+#panel {
+    width: 500px;
+    left: 0;
+    top: 0;
+    height: 450px;
+}
+
+div.control {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.control>div {
+    width: 16px;
+    height: 16px;
+    margin-right: 15px;
+}
+
+.control label {
+    display: inline-block;
+    background: rgba(151, 40, 255, 0.4);
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    text-indent: -999px;
+    transition: 0.3s;
+}
+
+.control label:hover {
+    transform: scale(1.5);
+    transform-origin: center;
+}

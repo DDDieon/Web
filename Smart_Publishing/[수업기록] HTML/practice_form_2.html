@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        
+        td {
+            background-color: #c5fcf78f
+        }
+        
+        #bg {
+            text-align: right;
+            background-color: skyblue;
+        }
+        
+        #main {
+            background-color: #ccc;
+        }
+        
+        table {
+            display: block;
+        }
+        
+         ::-webkit-scrollbar {
+            width: 16px;
+        }
+        
+         ::-webkit-scrollbar-track {
+            background-color: #f1f1f1;
+        }
+        
+         ::-webkit-scrollbar-thumb {
+            background-color: skyblue;
+            border-radius: 2px;
+        }
+        
+         ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        
+         ::-webkit-scrollbar-button:start:decrement,
+         ::-webkit-scrollbar-button:end:increment {
+            width: 16px;
+            height: 16px;
+            background: #3c8aff;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="" enctype="">
+        <table border="0" cellpadding="5" width="100%">
+            <tr>
+                <td colspan="5">* 회원가입을 하기에 앞서 회원약관을 읽어보기 바랍니다</td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <textarea cols="100%" rows="10" readonly>
+회원약관
+
+회원가입에 관한 계약조항이 명시된 문서
+            
+                    
+회원약관이란 다수의 고객을 대상으로 상품 또는 용역을 제공하는 금융 및 보험, 통신 등의 사업자가 정한 표준화된 계약조항을 말한다. 회원약관의 작성목적은 복잡한 계약절차로 인해 거래가 지연되는 것을 방지하는 데 있다.
+                    
+회원약관에는 계약의 성립 내용을 정확히 기재하고, 회사 및 회원의 의무와 서비스 이용 범위 등을 구체적으로 명시해야 한다.
+                    
+또 계약해지 및 손해배상 등에 대해 기재하고, 관할법원에 관련된 조항을 명시하여 향후 발생할 수 있는 분쟁을 방지하도록 한다.</textarea></td>
+            </tr>
+            <tr id="">
+                <td id="bg" bgcolor="lime">위의 약관에*</td>
+                <td><label><input type="checkbox"> [동의합니다] </label></td>
+                <td colspan="3"><a href="#">[취소합니다]</a></td>
+                <!-- <td></td>
+                <td></td> -->
+            </tr>
+            <tr>
+                <td colspan="5">* 회원정보를 입력하신 후 <strong>가입하기</strong>를 눌러주십시오. *표시는 필수입력입니다.</td>
+            </tr>
+            <tr>
+                <td id="bg" bgcolor="lime">이름*</td>
+                <td colspan="4"><input type="text" size="15"></td>
+            </tr>
+            <tr>
+                <td id="bg" bgcolor="lime">아이디*</td>
+                <td><input type="text" size="15" pattern="^[a-zA-Z0-9]*$"></td>
+                <td colspan="3"><a href="#">[중복확인]</a> (문자와 숫자 4~10자리) </td>
+            </tr>
+            <tr>
+                <td id="bg" bgcolor="lime">비밀번호*</td>
+                <td><input type="password"></td>
+                <td colspan="3">비밀번호 확인 <input type="password"> (문자와 숫자 4~10자리)</td>
+            </tr>
+            <tr>
+                <td id="bg" bgcolor="lime">주민등록번호*</td>
+                <td td colspan="4"><input type="password" size="6" pattern="^[0-9]*$">-<input type="password" size="7" pattern="^[0-9]*$"></td>
+            </tr>
+            <tr>
+                <td id="bg" bgcolor="lime">E-mail*</td>
+                <td><input type="E-mail" pattern=" ^[a-zA-Z0-9]+@[a-zA-Z0-9]+$"></td>
+                <td colspan="3"><input type="checkbox">정보메일을 수신함</td>
+            </tr>
+            <tr>
+                <td colspan="5">* 자택, 회사주소를 입력하면 상품구매시 자동으로 입력됩니다</td>
+            </tr>
+            <tr>
+                <td id="bg" bgcolor="lime">자택전화</td>
+                <td><input type="text" size="20" pattern="^\d{2,3}-\d{3,4}-\d{4}$"></td>
+                <td colspan="3">(***-****-***형식으로 작성)</td>
+            </tr>
+            <tr>
+                <td id="bg" bgcolor="lime">자택주소*</td>
+                <td td colspan="4"><input type="text" size="5">-<input type="text" size="5"></td>
+            </tr>
+            <tr>
+                <td id="bg" bgcolor="lime">나머지*</td>
+                <td td colspan="4"><input type="text" size="40"></td>
+            </tr>
+            <tr>
+                <td id="bg" bgcolor="lime">비상전화*</td>
+                <td td colspan="4"><input type="text" size="20"> (배송시 참조합니다)</td>
+            </tr>
+            <tr>
+                <td colspan="5">* 회사주소는 옵션입니다</td>
+            </tr>
+            <tr>
+                <td id="bg" bgcolor="lime">회사전화</td>
+                <td colspan="4"><input type="text" size="20"></td>
+            </tr>
+            <tr>
+                <td id="bg" bgcolor="lime">회사주소*</td>
+                <td td colspan="4"><input type="text" size="5">-<input type="text" size="5"></td>
+            </tr>
+            <tr>
+                <td id="bg" bgcolor="lime">나머지*</td>
+                <td td colspan="4"><input type="text" size="40"></td>
+            </tr>
+        </table>
+        <input type="submit" value="가입하기">
+        <input type="button" value="뒤로가기" onclick="history.back();">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+#wrap ul {
+    width: 280px;
+    height: 390px;
+    border: 2px solid black;
+    position: relative;
+    overflow: hidden;
+}
+
+#wrap2 ul {
+    width: 280px;
+    height: 390px;
+    border: 2px solid black;
+    position: relative;
+    overflow: hidden;
+}
+
+#wrap ul li {
+    width: 200px;
+    height: 250px;
+    position: absolute;
+    top: 100%;
+}
+
+#wrap2 ul li {
+    width: 200px;
+    height: 250px;
+    position: absolute;
+}
+
+@keyframes img1 {
+    from {
+        top: 0;
+    }
+    50% {
+        top: -100%;
+    }
+    to {
+        top: -200%;
+    }
+}
+
+@keyframes img2 {
+    from {
+        top: 100%;
+    }
+    50% {
+        top: 0
+    }
+    to {
+        top: -100%;
+    }
+}
+
+@keyframes img3 {
+    from {
+        top: 200%;
+    }
+    50% {
+        top: 100%;
+    }
+    to {
+        top: 0;
+    }
+}
+
+#wrap ul li.img1 {
+    animation-name: img1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#wrap ul li.img2 {
+    animation-name: img2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#wrap ul li.img3 {
+    animation-name: img3;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes rowmove1 {
+    from {
+        left: 0%;
+    }
+    50% {
+        left: 100%;
+    }
+    to {
+        left: 200%;
+    }
+}
+
+@keyframes rowmove2 {
+    from {
+        left: -100%;
+    }
+    50% {
+        left: 0%;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes rowmove3 {
+    from {
+        left: -200%;
+    }
+    50% {
+        left: -100%;
+    }
+    to {
+        left: 0%;
+    }
+}
+
+#wrap2 ul li.img1 {
+    z-index: 1;
+}
+
+#wrap2 ul:hover li.img1 {
+    animation-name: rowmove1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#wrap2 ul:hover li.img2 {
+    animation-name: rowmove2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#wrap2 ul:hover li.img3 {
+    animation-name: rowmove3;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        a:link {
+            text-decoration: none;
+            color: white;
+        }
+        
+        a:visited {
+            color: white;
+            font-weight: bolder;
+        }
+        
+        ul,
+        li {
+            list-style: none;
+        }
+        /* css초기화 */
+        
+        #nav:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        #nav>li {
+            float: left;
+            padding: 20px;
+            width: 7%;
+        }
+        
+        #nav>li>ul {
+            display: none;
+        }
+        
+        #nav>li:hover>ul {
+            display: block;
+        }
+        
+        #nav {
+            background: #424242;
+            border-radius: 100px 0 0 100px;
+            text-align: center;
+        }
+        
+        #nav>li {
+            position: relative;
+        }
+        
+        #nav>li>ul {
+            position: absolute;
+            top: 61px;
+            width: 100%;
+            background: #ddd;
+        }
+        
+        #nav>li>ul>li>a {
+            color: black;
+        }
+        
+        #nav>li>#nav>li:hover>a {
+            border-radius: 500px;
+            background: rgb(169, 247, 169);
+            color: black;
+            padding: 5px;
+        }
+        
+        #nav>li:hover>ul {
+            background: rgb(226, 220, 220);
+            border-radius: 8px;
+            display: block;
+            line-height: 3;
+            box-shadow: 0 2px 5px rgb(90, 87, 87);
+            color: black;
+        }
+        
+        #nav>li:hover>ul>li>a:hover {
+            display: block;
+            background: rgb(107, 146, 255);
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <div cloass="wrap">
+            <ul id="nav">
+                <li><a href="#"> 처음으로 </a></li>
+                <li><a href="#"> 요안도라 안내 </a>
+                    <ul>
+                        <li><a href="#">소개합니다.</a></li>
+                        <li><a href="#">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"> 이용 방법</a>
+                    <ul>
+                        <li><a href="#"> 객실 둘러보기</a></li>
+                        <li><a href="#"> 요금 안내 </a></li>
+                        <li><a href="#"> 예약 방법 </a></li>
+                        <li><a href="#"> 예약 게시판</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"> 게시판 </a>
+                    <ul>
+                        <li><a href="#"> 공지사항 </a></li>
+                        <li><a href="#"> 묻고 답하고</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"> 프로필</a></li>
+            </ul>
+        </div>
+
+    </body>
+
+    <h1>떠다니느지 봐야함</h1>
+</body>
+
+</body>
+
+</html>

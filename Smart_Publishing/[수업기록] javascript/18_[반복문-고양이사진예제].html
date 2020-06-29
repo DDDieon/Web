@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="/img/cat.jpg" alt="" id="img">
+    <h1 id="h1">당신은 누구신가요?</h1>
+    <script>
+        var cat = {
+            name: "happy ",
+            age: 3,
+            color: "white",
+            eat: function(food) {
+                return `${this.name}이(가) ${food}을(를) 먹었다.</br>`;
+            },
+            cry: function() {
+                return `${this.name}이(가) 울었다</br>`;
+            }
+        }
+        var apple = cat.eat('사과');
+        //document.wirte(apple); 왜 안되지
+        document.write(cat.eat('사과'));
+        document.write(cat.cry());
+
+        /*이미지 넣기*/
+        var img = document.getElementById('img');
+        var h1 = document.getElementById('h1');
+        img.onmouseover = function() {
+            h1.innerHTML = cat.name + "는" + cat.age + "살입니다";
+        }
+        img.onmouseout = function() {
+            h1.innerHTML = "당신은 누구신가요?";
+        }
+    </script>
+
+</body>
+
+</html>
