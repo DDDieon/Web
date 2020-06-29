@@ -1,16 +1,34 @@
 $gray: rgb(44, 41, 41);
 $red: #ffa4b1;
-#gallery-body {
-    z-index: 1;
-    position: absolute;
+.galleryIsBody {
+    display: block !important;
+    position: fixed;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
-    background: $gray;
-    left: 100%;
     top: 0;
+    bottom: 0;
+    right: 0;
+    backdrop-filter: blur(10px);
+    opacity: 0.95;
+    z-index: 1;
+}
+
+#gallery-body {
+    display: none;
+    background: $gray;
     transition: 1s;
     #gallery {
+        @keyframes gallery_animation {
+            from {
+                opacity: 0;
+                left: 100%;
+            }
+            to {
+                opacity: 1;
+                left: 0;
+            }
+        }
+        animation: gallery_animation 0.5s ease-out;
         position: relative;
         margin: 0 auto;
         padding: 60px 0;

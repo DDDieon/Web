@@ -35,11 +35,17 @@ nav .nav_list ul {
   margin-left: 346px;
   display: flex;
 }
-nav .nav_list ul li a {
+nav .nav_list ul li button {
   font-family: "Noto Sans KR", sans-serif;
   display: block;
   padding: 15px;
   font-weight: 900;
+  cursor: pointer;
+}
+nav .nav_list ul li .xi-ellipsis-h:before {
+  content: "";
+  font-size: 30px;
+  line-height: 0.7;
 }
 nav .nav_list ul li:hover {
   color: #ffa4b1;
@@ -236,4 +242,55 @@ section #introduce_bottom .resume ul .resume-sub ol li {
   font-size: 12.2px;
   margin: 0 auto;
   text-indent: 5px;
+}
+
+footer {
+  font-family: Russo One;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 220px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  opacity: 0.7;
+  height: 70px;
+  z-index: 2;
+  color: black;
+  font-size: 16px;
+}
+footer .footer-assets-left {
+  display: flex;
+  margin-left: 50px;
+  align-items: center;
+  cursor: default;
+}
+footer .footer-assets-left .footer-content {
+  margin-left: 16px;
+}
+footer .footer-assets-right {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+footer .footer-assets-right .contect-me {
+  display: block;
+  height: 60%;
+  padding: 0 30px;
+  border: 2px #2c2929 solid;
+  border-radius: 16px;
+  margin-right: 16px;
+  cursor: pointer;
+}
+footer .footer-assets-right .footer-close i {
+  display: block;
+  font-size: 28px;
+}
+footer .footer-assets-right .footerIsClosed {
+  display: none;
 }

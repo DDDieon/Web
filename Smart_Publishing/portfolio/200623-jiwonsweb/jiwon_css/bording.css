@@ -6,6 +6,12 @@
 }
 
 .container {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   font-family: "MuseoModerno", cursive;
   display: flex;
   align-items: center;

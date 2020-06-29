@@ -18,37 +18,16 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <!--challenge 1:  SCSS 로 스타일 설정하기 -->
     <!--challenge 2: REM으로 글꼴 크기 조절하기 -->
-    <script>
-        // 2초동안 보더페이지
-        function hideDiv() {
-            document.getElementById("border").style.display = "none";
-        }
-        self.setTimeout("hideDiv()", 2000); // 초 지정
-
-        // gallery누르면 갤러리 나오기
-        function openGallery() {
-            var galleryBody = document.getElementById('gallery-body');
-            // galleryBody.style.position = 'fixed';
-            // galleryBody.style.width = '100%';
-            // galleryBody.style.height = '100%';
-            galleryBody.style.left = 0;
-            galleryBody.style.top = '-51px';
-        }
-
-        function close2() {
-            var galleryBody = document.getElementById('gallery-body');
-            galleryBody.style.left = '100%';
-            galleryBody.style.top = 0;
-        }
-    </script>
 </head>
+
+
 
 <body>
     <div id="gallery-body">
         <div id="gallery">
             <div class="gallery_header">
                 <p><i class="xi-bookmark"></i></p>
-                <button class="gallery__close" onclick="close2()"><i class="xi-close-circle-o"></i></button>
+                <button class="gallery__close" onclick="closeGallery()"><i class="xi-close-circle-o"></i></button>
             </div>
             <div class="gallery_header-in">
                 <p>(6) Internal Works<br>©2020 <small>c/o</small> BASIC®</p>
@@ -122,22 +101,22 @@
             </div>
         </div>
     </div>
-    <div id="border" class="container">
+    <!-- <div id="bording" class="container">
         <div class="title-container">
             <h1>JEON JIWON</h1>
         </div>
-    </div>
+    </div> -->
     <nav>
         <div class="logobox">
             <a href="#">PORTFOLIO</a>
         </div>
         <div class="nav_list">
             <ul>
-                <li><a href="#">Introduce</a></li>
-                <li><a href="#">Project</a></li>
-                <li><a href="#">Ability</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a onclick="openGallery()">Gallery</a></li>
+                <li><button href="#">Introduce</button></li>
+                <li><button href="#">Project</button></li>
+                <li><button href="#">Ability</button></li>
+                <li><button href="#">Contact</button></li>
+                <li><button class="openGallery" onclick="openGallery()"><i class="xi-ellipsis-h"></i></button></li>
             </ul>
         </div>
     </nav>
@@ -215,6 +194,38 @@
         <div id="Gallery"></div>
         <div id="Contact"></div>
     </section>
+    <footer>
+        <div class="footer-assets-left">
+            <div class="footer-icon"><i class="xi-tag"></i></div>
+            <div class="footer-content">I’m really looking forward to meeting you in person</div>
+        </div>
+        <div class="footer-assets-right">
+            <button type="button" class="contect-me">CONTACT</button>
+            <button type="button" class="footer-close" onclick="footerClose()"><i class="xi-close-circle-o"></i></button>
+        </div>
+    </footer>
+    <script>
+        // 2초동안 보딩페이지
+        function hideDiv() {
+            document.getElementById("bording").style.display = "none";
+        }
+        self.setTimeout("hideDiv()", 2000); // 초 지정
+
+        // ------------ gallery open, close-------------
+        var galleryIsBody = document.getElementById('gallery-body');
+        function openGallery(){
+            galleryIsBody.classList.add('galleryIsBody');
+        }
+        function closeGallery(){
+            galleryIsBody.classList.remove('galleryIsBody');
+        }
+
+        // footer close
+        var footerIsClosed = document.getElementsByClassName('footer-close');
+        function footerClose(){
+            footerIsClosed.classList.add('footerIsClosed');
+        }
+    </script>
 </body>
 
 </html>
