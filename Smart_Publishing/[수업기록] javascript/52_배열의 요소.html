@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var 방송국 = ['kbs', 'sbs', 'mbc', 'ytn', 'jtbc'];
+        //요소값 출력하기 1 
+        document.write(방송국 + '<br>');
+        //요소값 출력하기 2 - 기본 for
+        for (var i = 0; i < 방송국.length; i++) {
+            document.write(방송국[i] + " ");
+        }
+        //요소값 출력하기 3 - i는 인덱스
+        for (var j in 방송국) {
+            document.write('<br>' + 방송국[j] + " ");
+        }
+        //요소값 출력하기 4 - i는 키값. 요소
+        for (var i of 방송국) {
+            document.write('<hr>' + i);
+        }
+        //-----------인덱스와 요소 함께 출력--------------
+        방송국.forEach(function(element, index, array) {
+            document.write(`${element}는 요소, ${index}는 키값이다. <br>`)
+        })
+    </script>
+    <h3>객체의 키와 value 출력하기</h3>
+    <script>
+        //------------객체의 키와 value 출력하기---------------
+        var 과일 = ['사과', '바나나', '포도', '딸기', '망고'];
+        var 사과 = {
+                이름: 'apple',
+                원산지: '대구',
+                가격: 1000,
+                print: function() {
+                    return this.이름 + '은(는)' + this.원산지 + '에서 수확했다';
+                }
+            }
+            //사과이름     과일[0]
+        for (var key in 사과) {
+            document.write(key + '은(는) ' + 사과[key] + '이다. <br>');
+        }
+        // -------출력하기 ---------
+        document.write(사과.print());
+    </script>
+    <h3>itCOOK 6장 객체</h3>
+    <script>
+        var products = [{
+            name: '바나나',
+            price: 1200,
+            print: function() {
+                return this.name + "의 가격은" + this.price + "입니다";
+            }
+        }, {
+            name: '사과',
+            price: 2000,
+            print: function() {
+                return this.name + "의 가격은" + this.price + "입니다";
+            }
+        }, {
+            name: '배',
+            price: 3000,
+            print: function() {
+                return this.name + "의 가격은" + this.price + "입니다";
+            }
+        }, {
+            name: '고구마',
+            price: 700,
+            print: function() {
+                return this.name + "의 가격은" + this.price + "입니다";
+            }
+        }, {
+            name: '감자',
+            price: 600,
+            print: function() {
+                return this.name + "의 가격은" + this.price + "입니다";
+            }
+        }, {
+            name: '수박',
+            price: 5000,
+            print: function() {
+                return this.name + "의 가격은" + this.price + "입니다";
+            }
+        }];
+
+        for (var key in products) {
+            document.write(products[key].print() + '<br>');
+        }
+        document.write('<hr>');
+        for (let i of products) {
+            document.write(i.print() + '<br>');
+        }
+    </script>
+    <h3>전체를 출력하는 함수</h3>
+    <script>
+        //---------- 전체를 출력하는 함수 생성하기-----------
+        function printAll(obj) {
+            document.write(obj.name + '의 가격은' + obj.price + '원이다.<br>');
+        }
+        printAll(products[0]); //배열의 인덱스를 지정해야 함
+        printAll(products[1]);
+        printAll(products[2]);
+        printAll(products[3]);
+        //---------- 인덱스를 지정할 때 뺑뺑이로
+        for (var i in products) {
+            printAll(products[i]);
+        }
+    </script>
+</body>
+
+</html>

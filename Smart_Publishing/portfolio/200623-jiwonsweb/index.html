@@ -101,11 +101,11 @@
             </div>
         </div>
     </div>
-    <!-- <div id="bording" class="container">
+    <div id="bording" class="container">
         <div class="title-container">
             <h1>JEON JIWON</h1>
         </div>
-    </div> -->
+    </div>
     <nav>
         <div class="logobox">
             <a href="#">PORTFOLIO</a>
@@ -187,21 +187,21 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="image_resume">ff</div>
                 </div>
         </div>
         <div id="Project"></div>
         <div id="Gallery"></div>
         <div id="Contact"></div>
     </section>
-    <footer>
+    <footer id="footer">
         <div class="footer-assets-left">
             <div class="footer-icon"><i class="xi-tag"></i></div>
-            <div class="footer-content">I’m really looking forward to meeting you in person</div>
+            <div class="footer-content"><p>I’m really looking forward to meeting you in person</p>
+            <b>저에게 관심을 가져주세요 엉엉</b></div>
         </div>
         <div class="footer-assets-right">
             <button type="button" class="contect-me">CONTACT</button>
-            <button type="button" class="footer-close" onclick="footerClose()"><i class="xi-close-circle-o"></i></button>
+            <button type="button" class="footer-close" id="footerClose"><i class="xi-close-circle-o"></i></button>
         </div>
     </footer>
     <script>
@@ -221,9 +221,10 @@
         }
 
         // footer close
-        var footerIsClosed = document.getElementsByClassName('footer-close');
-        function footerClose(){
-            footerIsClosed.classList.add('footerIsClosed');
+        var footerClose = document.getElementById('footerClose');
+        var footer = document.getElementById('footer');
+        footerClose.onclick = function() {
+            footer.style.display = 'none';
         }
     </script>
 </body>

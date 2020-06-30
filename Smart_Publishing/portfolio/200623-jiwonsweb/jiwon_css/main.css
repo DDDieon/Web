@@ -3,11 +3,12 @@
 body {
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.4) url("/img/marble.jpg") no-repeat center center fixed;
+  background: rgba(255, 255, 255, 0.7) url("/img/marble.jpg") no-repeat center center fixed;
   min-height: 100%;
   background-position: center;
   background-size: cover;
   background-blend-mode: soft-light;
+  font-family: "Noto Sans KR", sans-serif;
 }
 body p {
   font-family: "Noto Sans KR", sans-serif;
@@ -55,14 +56,14 @@ section #introduce_top {
   margin-bottom: 130px;
 }
 section #introduce_top p.minibold {
-  font-family: Russo One;
+  font-family: Russo One !important;
   font-size: 18px;
   text-align: center;
   margin-top: 220px;
   text-decoration: underline;
 }
 section #introduce_top p.caption_l {
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif !important;
   text-align: center;
   letter-spacing: 16px;
   font-size: 40px;
@@ -96,7 +97,7 @@ section #introduce_top .gols_words .gols_words_in {
   width: 33.3%;
 }
 section #introduce_top .gols_words .gols_words_in p:nth-of-type(1) {
-  font-family: Russo One;
+  font-family: Russo One !important;
   font-size: 18px;
   text-align: center;
   margin-top: 220px;
@@ -109,43 +110,6 @@ section #introduce_top .gols_words .gols_words_in p:nth-of-type(2) {
   font-style: 12px;
   margin: 0px;
   padding: 4px;
-}
-section #introduce_top .gols_words .gols_words_in:nth-of-type(1)::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 90px;
-  height: 10px;
-  background: #ffa4b1;
-  z-index: -9999;
-  border-radius: 2px;
-  left: 90px;
-  top: 11px;
-}
-section #introduce_top .gols_words .gols_words_in:nth-of-type(2)::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 90px;
-  height: 10px;
-  background: #ffa4b1;
-  z-index: -9999;
-  border-radius: 2px;
-  left: 363px;
-  top: 11px;
-}
-section #introduce_top .gols_words .gols_words_in:nth-of-type(3)::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 90px;
-  height: 10px;
-  background: #ffa4b1;
-  z-index: -9999;
-  border-radius: 2px;
-  left: 622px;
-  width: 120px;
-  top: 11px;
 }
 section #introduce_bottom {
   margin-bottom: 130px;
@@ -161,10 +125,10 @@ section #introduce_bottom #profile {
 section #introduce_bottom #profile .profile-img {
   width: 100%;
   height: 280px;
-  background: url("/img/person.jpg");
+  background: url("/img/port1.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: 130%;
 }
 section #introduce_bottom #profile .profile-img:hover ~ .profile-words {
   opacity: 0;
@@ -189,7 +153,7 @@ section #introduce_bottom #profile .profile-words p:nth-of-type(1) {
   font-weight: 500;
 }
 section #introduce_bottom #profile .profile-words p:nth-of-type(2) {
-  font-family: Russo One;
+  font-family: Russo One !important;
   font-size: 18px;
   text-align: center;
   margin-top: 220px;
@@ -197,7 +161,7 @@ section #introduce_bottom #profile .profile-words p:nth-of-type(2) {
   text-align: justify;
 }
 section #introduce_bottom #profile .profile-words p:nth-of-type(3) {
-  font-family: Russo One;
+  font-family: Russo One !important;
   font-size: 18px;
   text-align: center;
   margin-top: 220px;
@@ -224,7 +188,7 @@ section #introduce_bottom .resume ul {
 section #introduce_bottom .resume ul .resume-sub {
   color: white;
   flex: 1;
-  font-family: Russo One;
+  font-family: Russo One !important;
   font-size: 18px;
   text-align: center;
   margin-top: 220px;
@@ -239,16 +203,12 @@ section #introduce_bottom .resume ul .resume-sub ol li {
   font-family: "Noto Sans KR", sans-serif;
   cursor: default;
   font-weight: 300;
-  font-size: 12.2px;
+  font-size: 14px;
   margin: 0 auto;
   text-indent: 5px;
 }
 
 footer {
-  font-family: Russo One;
-  font-size: 18px;
-  text-align: center;
-  margin-top: 220px;
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -256,13 +216,12 @@ footer {
   left: 0;
   right: 0;
   background: white;
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
   opacity: 0.7;
   height: 70px;
   z-index: 2;
   color: black;
-  font-size: 16px;
 }
 footer .footer-assets-left {
   display: flex;
@@ -272,6 +231,10 @@ footer .footer-assets-left {
 }
 footer .footer-assets-left .footer-content {
   margin-left: 16px;
+  text-align: left;
+}
+footer .footer-assets-left .footer-content b {
+  font-weight: bold;
 }
 footer .footer-assets-right {
   display: flex;
@@ -286,11 +249,11 @@ footer .footer-assets-right .contect-me {
   border-radius: 16px;
   margin-right: 16px;
   cursor: pointer;
+  font-weight: 700;
+}
+footer .footer-assets-right .footer-close {
+  cursor: pointer;
 }
 footer .footer-assets-right .footer-close i {
-  display: block;
   font-size: 28px;
-}
-footer .footer-assets-right .footerIsClosed {
-  display: none;
 }

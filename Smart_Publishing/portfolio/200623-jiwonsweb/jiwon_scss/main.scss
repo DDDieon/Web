@@ -13,7 +13,7 @@ $gray: rgb(44, 41, 41);
     content: '';
     position: absolute;
     display: block;
-    width: 90px;
+    width: 80px;
     height: 10px;
     background: $red;
     z-index: -9999;
@@ -21,14 +21,14 @@ $gray: rgb(44, 41, 41);
 }
 
 @mixin minibold {
-    font-family: Russo One;
+    font-family: Russo One !important;
     font-size: 18px;
     text-align: center;
     margin-top: 220px;
 }
 
 @mixin caption_l {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif !important;
     text-align: center;
     letter-spacing: 16px;
     font-size: 40px;
@@ -45,11 +45,12 @@ $gray: rgb(44, 41, 41);
 body {
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.4)url('/img/marble.jpg') no-repeat center center fixed;
+    background: rgba(255, 255, 255, 0.7)url('/img/marble.jpg') no-repeat center center fixed;
     min-height: 100%;
     background-position: center;
     background-size: cover;
     background-blend-mode: soft-light;
+    font-family: 'Noto Sans KR', sans-serif;
     p {
         font-family: 'Noto Sans KR', sans-serif;
         cursor: default;
@@ -71,13 +72,6 @@ nav {
         line-height: 51px;
         /* identical to box height */
         color: #000000;
-        // &::after {
-        //     @include red_box();
-        //     position: absolute;
-        //     bottom: 7px;
-        //     width: 248px;
-        //     height: 11px;
-        // }
     }
     .nav_list ul {
         margin-left: 346px;
@@ -144,22 +138,6 @@ section {
                     }
                 }
             }
-            .gols_words_in:nth-of-type(1)::after {
-                @include red_box();
-                left: 90px;
-                top: 11px;
-            }
-            .gols_words_in:nth-of-type(2)::after {
-                @include red_box();
-                left: 363px;
-                top: 11px;
-            }
-            .gols_words_in:nth-of-type(3)::after {
-                @include red_box();
-                left: 622px;
-                width: 120px;
-                top: 11px;
-            }
         }
     }
     #introduce_bottom {
@@ -174,10 +152,10 @@ section {
             .profile-img {
                 width: 100%;
                 height: 280px;
-                background: url('/img/person.jpg');
+                background: url('/img/port1.jpg');
                 background-repeat: no-repeat;
                 background-position: center;
-                background-size: 100%;
+                background-size: 130%;
             }
             .profile-img:hover~.profile-words {
                 opacity: 0;
@@ -242,7 +220,7 @@ section {
                             font-family: 'Noto Sans KR', sans-serif;
                             cursor: default;
                             font-weight: 300;
-                            font-size: 12.2px;
+                            font-size: 14px;
                             margin: 0 auto;
                             text-indent: 5px;
                         }
@@ -254,7 +232,6 @@ section {
 }
 
 footer {
-    @include minibold();
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -262,12 +239,11 @@ footer {
     left: 0;
     right: 0;
     background: white;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(30px);
     opacity: 0.7;
     height: 70px;
     z-index: 2;
     color: black;
-    font-size: 16px;
     .footer-assets-left {
         display: flex;
         margin-left: 50px;
@@ -275,6 +251,10 @@ footer {
         cursor: default;
         .footer-content {
             margin-left: 16px;
+            text-align: left;
+            b {
+                font-weight: bold;
+            }
         }
     }
     .footer-assets-right {
@@ -289,15 +269,13 @@ footer {
             border-radius: 16px;
             margin-right: 16px;
             cursor: pointer;
+            font-weight: 700;
         }
         .footer-close {
+            cursor: pointer;
             i {
-                display: block;
                 font-size: 28px;
             }
-        }
-        .footerIsClosed {
-            display: none;
         }
     }
 }
