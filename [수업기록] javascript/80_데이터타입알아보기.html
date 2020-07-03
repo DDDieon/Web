@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 기본 자료형
+        let number = 273;
+        let string = '안녕하세요';
+        let boolean = true;
+        // 자료형을 출력합니다.
+        console.log(typeof number);
+        console.log(typeof string);
+        console.log(typeof boolean);
+        //--------------------------
+        var str1 = '과자|1500원|빙그레';
+        var str2 = str1.split('|'); //split 하면 배열이 된다
+        document.write(str2[0]);
+        document.write(str2[1]);
+        document.write(str2[2]);
+        document.write('<hr>');
+        for (var i = 0; i < 3; i++) {
+            document.write(str2[i] + ' ');
+        }
+        for (var i in str2) {
+            document.write(str2[i] + ' ');
+        }
+        for (var i of str2) {
+            document.write(i + ' ');
+        }
+        //-------------------------
+        let numberA = Number.MAX_VALUE;
+        let numberB = Number.MAX_VALUE + 1;
+        document.write(numberA + '<br>' + numberB);
+    </script>
+</body>
+
+</html>

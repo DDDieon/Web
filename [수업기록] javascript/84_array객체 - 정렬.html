@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let 과일 = [{
+            name: '고구마',
+            price: 1000
+        }, {
+            name: '감자',
+            price: 500
+        }, {
+            name: '향나무',
+            price: 1500
+
+        }];
+        과일.push({
+            name: '사과',
+            price: 3000
+        });
+        document.write(과일 + '<br>');
+        과일.sort(function(a, b) {
+            return a.name - b.name; //01-----------가격으로 오름차순. 숫자아이템에서 function(왼,오른){return 왼-오른} : 오름차순은 공식
+        });
+
+        과일.sort(function(a, b) { //02------------이름으로 오름차순
+            if (a.name < b.name) {
+                return -1; // a가 b보다 작으니까 왼쪽으로 가
+            } else if (a.name > b.name) {
+                return 1; // a가 b보다 크니까 오른칸으로 가
+            } else {
+                return 0;
+            }
+        })
+
+        function print() {
+            for (var i in 과일) {
+                for (var j in 과일[i]) {
+                    document.write(과일[i][j] + '<br>');
+                }
+            }
+        }
+        print();
+    </script>
+</body>
+
+</html>

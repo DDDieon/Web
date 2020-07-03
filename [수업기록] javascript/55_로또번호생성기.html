@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>랜덤 메소드를 이용한 로또생성기</h3>
+    <script>
+        var random = Math.random() * 46;
+        //0~46사이의 소수점 랜덤하게 나옴
+        document.write('<br>' + random);
+        var rotto = Math.floor(random);
+        //정수로 바꾸기 (parseInt 또는 Math.floor로 가능)
+        document.write('<br>' + rotto);
+    </script>
+    <h3 style="color:red">이번 주 로또 당첨번호</h3>
+    <script>
+        var 로또배열 = [];
+        for (var i = 0; i < 6; i++) {
+            var random = Math.random() * 45 + 1;
+            //0~46사이의 소수점 랜덤하게 나옴
+            var rotto = Math.floor(random);
+            //정수로 바꾸기 (parseInt 또는 Math.floor로 가능)
+            로또배열.push(rotto);
+            //로또배열에 랜덤한 숫자 요소로 넣기
+
+            //--------- 배열 중복검사 필요 ----------
+        }
+        for (var i in 로또배열) {
+            document.write(로또배열[i] + '<br>');
+        }
+    </script>
+    <h3>더 나아가기</h3>
+    <script>
+        var random = Math.random() * 45 + 1;
+        var rotto = Math.floor(random);
+        var 로또 = [];
+        for (var i = 1; i <= 45; i++) {
+            로또.push(i);
+        }
+        document.write(로또);
+        for (var i = 0; i < 6; i++) {
+            var random = Math.random() * 45;
+            var rotto = Math.floor(random);
+            document.write("<br>" + 로또[rotto])
+        }
+    </script>
+</body>
+
+</html>

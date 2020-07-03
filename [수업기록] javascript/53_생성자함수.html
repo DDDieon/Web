@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>생성자 함수</h3>
+    <script>
+        function Product(name, price) {
+            this.name = name;
+            this.price = price;
+        }
+        var 제품1 = new Product('바나나', 5000); //리턴 없이 객체의 내부로 접근하는 것
+        document.write(제품1 + '<br>');
+        document.write(제품1.name + '<br>');
+        document.write(typeof(제품1) + ' ');
+        document.write(typeof(제품1.name));
+
+        // var 제품2 = Product('사과', 1000); //리턴값을 받아야 함
+        // document.write(제품2.name);
+    </script>
+    <h3>연습하기</h3>
+    <script>
+        function Student(name, age, sex, tel) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+            this.tel = tel;
+        }
+        var 학생1 = new Student('전지원', '25살', '여성', '010...');
+        for (var i in 학생1) {
+            document.write(학생1[i] + '+');
+        }
+        //-----프로토타입 매소드
+        Student.prototype.print = function() {
+            document.write('<br>' + this.name + ' ' + this.age + " " + this.sex + "이다.");
+        }
+        var 학생3 = new Student('박지성', 30, '남자', 333777);
+        학생3.print();
+    </script>
+    <h3>객체지향</h3>
+    <script>
+        // objectOriented.js
+        // 생성자 함수
+        function Product(name, price) {
+            this.name = name;
+            this.price = price;
+        }
+        // 프로토타입에 메소드를 선언합니다.
+        Product.prototype.print = function() {
+            console.log(`${this.name}의 가격은 ${this.price}원입니다.`);
+        };
+        // 상품 목록을 선언합니다.
+        let products = [
+            new Product('바나나', 1200),
+            new Product('사과', 2000),
+            new Product('배', 3000),
+            new Product('고구마', 700),
+            new Product('감자', 600),
+            new Product('수박', 5000)
+        ];
+        // 반복해서 출력합니다.
+        for (let product of products) {
+            product.print();
+        }
+    </script>
+</body>
+
+</html>

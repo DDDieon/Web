@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>http://cafe.daum.net/knyatom/Obky/37</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        
+        body {
+            width: 100%;
+            height: 100%;
+        }
+        
+        a {
+            all: unset;
+            text-decoration: none;
+            cursor: pointer;
+            color: rgb(185, 185, 185);
+        }
+        
+        ul,
+        li {
+            list-style: none;
+        }
+        
+        #bannerWrap {
+            width: 420px;
+            height: 100px;
+            position: relative;
+        }
+        
+        div.frame {
+            position: relative;
+        }
+        
+        #bannerList {
+            width: 5000px;
+            position: relative;
+            left: 0;
+            transform: 0.5s;
+        }
+        
+        #bannerList li {
+            float: left;
+            width: 300px;
+        }
+        
+        img {
+            display: block;
+            margin: 0;
+        }
+        
+        #bannerList:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        .leftBtn {
+            position: absolute;
+            left: 48vw;
+            bottom: 20px;
+            font-size: 30px;
+        }
+        
+        .rightBtn {
+            position: absolute;
+            left: 52vw;
+            bottom: 20px;
+            font-size: 30px;
+        }
+        
+        .clickbox {
+            position: relative;
+            display: block;
+            background: #333;
+            width: 100vw;
+            height: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bannerWrap">
+        <div class="frame">
+            <ul id="bannerList">
+                <li>
+                    <a href="#"><img src="/img/img5.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="/img/img2.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="/img/img3.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="/img/img4.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="/img/img5.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="/img/img2.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="/img/img3.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="/img/img4.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="/img/img5.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="/img/img2.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="/img/img3.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="/img/img4.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="/img/img4.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="/img/img4.jpg" alt=""></a>
+                </li>
+            </ul>
+            <div class="clickbox">
+                <a href="#" class="leftBtn" onclick="move('left')">◀</a>
+                <a href="#" class="rightBtn" onclick="move('right')">▶</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var num = 0;
+        const WIDTH = -400;
+
+        function move(Btn) {
+            var bannerList = document.getElementById('bannerList');
+            var last = bannerList.children.length;
+            if (Btn == 'left') {
+                num--;
+                console.log(num);
+                if (num < 0) num = last / 2;
+                var pos = num * WIDTH;
+                bannerList.style.left = pos + 'px';
+            } else {
+                num++;
+                console.log(num);
+                if (num > last / 2) num = 0;
+                var pos = num * WIDTH;
+                bannerList.style.left = pos + 'px';
+            }
+            event.preventDefault();
+        }
+    </script>
+</body>
+
+</html>

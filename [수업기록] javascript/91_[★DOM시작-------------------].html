@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>http://cafe.daum.net/knyatom/Ob8k/14</title>
+</head>
+
+<body>
+    <h1 id="header">welcome</h1>
+    <ul class="menu">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+    </ul>
+    <h1 id="h1_2">welcome<span>to my wrold</span>happy</h1>
+    <script>
+        var h1 = document.querySelector('h1');
+        var h1_2 = document.getElementById('h1_2');
+        var h1tag = document.getElementsByTagName('h1');
+        h1.style.color = 'blue';
+        var output = '';
+        output += 'innerHTML : ' + h1.innerHTML;
+        h1.innerHTML + '<br>';
+        document.write(output);
+        output += 'innerHTML : ' + h1_2.innerHTML + '<hr>';
+        document.write(output);
+        output += 'h1tag.length: ' + h1tag.length + '<hr>';
+        document.write(output);
+        var nodes = '';
+        nodes += 'h1ChildNodes: ' + h1.childNodes + '<hr>';
+        document.write(nodes);
+        var nodeName = '';
+        nodeName += 'h1-childnodes-nodename: ' + h1.childNodes.nodeName + '<hr>';
+        document.write(nodeName);
+    </script>
+    <script>
+        //.childNodes와 .nodeValue는 무엇?
+        var ul = document.querySelector('.menu');
+        var ulnode = '';
+        ulnode += ul.childNodes[1].nodeName;
+        document.write(ulnode + '<br>');
+    </script>
+</body>
+
+</html>

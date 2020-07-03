@@ -1,0 +1,21 @@
+.teamWrapper {
+    display: flex;
+}
+
+.blue {
+    background: #1fabe2 !important;
+}
+
+.red {
+    background: rgb(252, 52, 52) !important;
+}
+
+.list-box h2 {
+    color: white;
+    text-align: center;
+}
+
+.list-box ul,
+.list-box li {
+    color: white;
+}

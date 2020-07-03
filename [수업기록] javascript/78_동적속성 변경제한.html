@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>http://cafe.daum.net/knyatom/Ob8k/12</title>
+</head>
+
+<body>
+    <h3>preventExtensions : 속성값 바뀌는 것을 제한한다</h3>
+    <script>
+        var object = {};
+        // 간단한 객체 속성 추가 방법
+        object.region = '서울특별시';
+        // 복잡한 객체 속성 추가 방법
+        Object.defineProperty(object, 'name', {
+            value: '윤인성',
+            writable: false
+        });
+        document.write(Object.isExtensible(object));
+        //Object.preventExtensions(object); // 여기서 확장하는 것을 막음
+        document.write(Object.isExtensible(object));
+        // 간단한 객체 속성 추가 방법
+        object.dream = '생명공학자';
+        // 복잡한 객체 속성 추가 방법
+        Object.defineProperty(object, 'showMeTheMoney', {
+            value: '쇼미더머니라는 속성이 추가 됨'
+        });
+        document.write(object.dream + object.showMeTheMoney);
+    </script>
+    <h3>Object.seal(객체명) : 속성삭제 제한</h3>
+    <script>
+        var person = {
+            name: '윤인성',
+            region: '서울특별시',
+            hobby: '기타'
+        };
+        Object.seal(person); // 여기서 삭제를 막음
+        delete person.name;
+        // 출력합니다.
+        document.write(person.name); // 삭제가 안됨
+    </script>
+</body>
+
+</html>
