@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>http://cafe.daum.net/knyatom/Ob8k/14</title>
+</head>
+<script type="text/javascript">
+    window.onload = function() {
+            var s = document.getElementById('food');
+            var child = s.firstChild; //공백
+            var child2 = s.lastChild; //공백
+            while (child) {
+                if (child.nodeType == 1 && child2.nodeType == 1) {
+                    child.style.background = 'red';
+                }
+                child = child.nextSibling;
+                child2 = child2.previousSibling;
+                child2.style.background = 'pink';
+            }
+        } //end
+</script>
+</head>
+
+<body>
+    <form name="fm" 온submit="return show()">
+        <label for="food">가장 좋아하는 음식은?</label>
+        <select name="food" id="food">
+                <option value="라면" selected="selected">라면</option>    
+                <option value="만두">만두</option>
+                <option value="불고기">불고기</option>
+        </select>
+        <input type="submit" value="송신" />
+    </form>
+</body>
+
+</html>

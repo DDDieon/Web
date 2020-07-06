@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var num = [];
+        for (var i = 0; i <= 10; i++) {
+            num.push(i);
+        }
+        document.write(num + '<hr>');
+        var output1 = num.forEach(function(item, index) {
+            document.write(`${item}은 ${index}번째`);
+        });
+        var output2 = num.filter(function(item, index) {
+            return item % 2 == 0;
+        })
+        document.write(output2 + '<br>');
+        var output3 = num.map(function(item, index) {
+            return item * item;
+        })
+        document.write(output3 + '<br>');
+    </script>
+</body>
+
+</html>
