@@ -1,4 +1,6 @@
 @charset 'utf-8';
+$headerColor: #2d3e46;
+$sectionHeaderColor: rgba(84, 100, 108, 0.7);
 .main {
     &_image_slide {
         width: 100%;
@@ -8,6 +10,13 @@
     &_top_wrap {
         width: 90%;
         margin: -60px auto;
+        margin-bottom: 0;
+        @mixin headerWhite {
+            color: white !important;
+            h2 {
+                color: white !important;
+            }
+        }
         .item1 {
             background: #f6f6f6;
         }
@@ -19,12 +28,15 @@
         }
         .item4 {
             background: #768392;
+            @include headerWhite;
         }
         .item5 {
             background: #1d83d0;
+            @include headerWhite;
         }
         .item6 {
             background: #0761a7;
+            @include headerWhite;
         }
         .sub_image {
             box-sizing: border-box;
@@ -54,9 +66,85 @@
             font-size: 17px;
             font-weight: bold;
             margin-bottom: 5px;
+            color: $headerColor;
         }
         p {
             margin-bottom: 20px;
+        }
+    }
+    .main_bottom_wrap {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 30px 20px;
+        background: #f6f6f6;
+        section {
+            border: 1px solid #e4e4e4;
+            padding: 25px;
+            width: 50%;
+            height: 216px;
+            position: relative;
+            background: white;
+            h3 {
+                color: $sectionHeaderColor;
+            }
+            img {
+                display: block;
+                width: 100%;
+                height: inherit;
+            }
+            p {
+                margin-bottom: 10px;
+            }
+            i {
+                color: $sectionHeaderColor;
+                position: absolute;
+                top: 15px;
+                right: 15px;
+            }
+            span {
+                position: relative;
+                bottom: 0px;
+                left: 0px;
+            }
+        }
+    }
+    .subitem3,
+    .subitem5 {
+        padding: 0 !important;
+    }
+}
+
+.footer {
+    &_layout {
+        font-size: 14px;
+        background: #455464;
+        color: white;
+        p,
+        address {
+            color: rgba(255, 255, 255, 0.6);
+            text-align: center;
+            font-size: 12px;
+            padding: 0 10px;
+            &:nth-child(4) {
+                padding-bottom: 35px;
+            }
+        }
+    }
+    &_linkbox_wrap {
+        ul {
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: content-box;
+            padding: 15px;
+            li {
+                width: 50%;
+                padding: 15px 25px;
+                border: 1px solid #5e6c7a;
+                ol {
+                    display: none;
+                }
+            }
         }
     }
 }

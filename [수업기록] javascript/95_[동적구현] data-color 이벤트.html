@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 data-color='red'>header1</h2>
+    <h2 data-color='blue'>2</h2>
+    <h2 data-color='green'>3</h2>
+    <script>
+        //--- set attribute로도 속성 변경
+        var h2 = document.querySelectorAll('h2');
+        for (var i = 0; i < h2.length; i++) {
+            h2[i].onclick = function() {
+                this.style.background = this.getAttribute('data-color');
+            }
+        }
+    </script>
+</body>
+
+</html>

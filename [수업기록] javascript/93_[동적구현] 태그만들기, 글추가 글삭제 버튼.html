@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="add">글 추가</button>
+    <button id="del">글 삭제</button>
+    <script>
+        // var header = document.createElement('h1');
+        // var text = document.createTextNode('안녕하세요');
+        // header.appendChild(text);
+        // document.body.appendChild(header);
+
+
+        //--추가이벤트 넣기
+        var add = document.getElementById('add');
+        var i = 0;
+        add.onclick = function() {
+            i++;
+            var h1 = document.createElement('h1');
+            var text = document.createTextNode('안녕하세요' + i);
+            h1.appendChild(text);
+            document.body.appendChild(h1);
+        }
+        del.onclick = function() {
+            var h1 = document.getElementsByTagName('h1');
+            var i = h1.length - 1;
+            if (i < 0) {
+                return false;
+            } else {
+                document.body.removeChild(h1[i]);
+            }
+        }
+    </script>
+</body>
+
+</html>
