@@ -37,6 +37,19 @@
             }
         }
     </script>
+
+    <!-- 07/07 연습해보기 -->
+    <button id="plus">글추가</button>
+    <h1>welcome</h1>
+    <script>
+        var button = document.querySelector('#plus');
+        button.onclick = function() {
+            var h3 = document.createElement('h3');
+            var text = document.createTextNode('대한민국');
+            h3.appendChild(text);
+            document.body.appendChild(h3);
+        }
+    </script>
 </body>
 
 </html>

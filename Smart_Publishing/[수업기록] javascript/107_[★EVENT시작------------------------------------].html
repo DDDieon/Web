@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    </script>
+</head>
+
+<body>
+    <button onclick="inline()">버튼</button>
+    <p>welcome</p>
+    <h1 id='header'>header</h1>
+    <h2 id='abc'>표준이벤트모델</h2>
+    <h3>이벤트 제거</h3>
+    <h4></h4>
+    <button>이벤트 제거된 버튼</button>
+    <script>
+        //인라인 이벤트모델
+        var p = document.getElementsByTagName('p')[0];
+
+        inline = () => {
+            p.innerHTML = '나왔다';
+        }
+
+        click = () => {
+            document.body.append('welcome to my world');
+        }
+        header.onclick = click;
+    </script>
+    <script>
+        //표준 이벤트모델
+        let abc = document.getElementById('abc');
+        abc.addEventListener('click', play1);
+        abc.addEventListener('click', play2);
+
+        function play1() {
+            abc.style.background = 'red';
+        }
+
+        function play2() {
+            abc.style.border = '5px solid black';
+        }
+    </script>
+    <script>
+        //이벤트 제거
+        let btn = document.getElementsByTagName('button')[1];
+        let h3 = document.querySelector('h3');
+        let h4 = document.querySelector('h4');
+        var i = 12;
+        btn.onclick = () => {
+            i++;
+            h3.style.fontSize = i + 'px';
+            if (i > 30) {
+                btn.onclick = null;
+                h4.innerHTML = '30px 이상이니까 onclik은 null시킬 것이다';
+            }
+        }
+    </script>
+</body>
+
+</html>
