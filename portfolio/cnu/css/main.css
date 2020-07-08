@@ -64,6 +64,7 @@
 }
 .main .container_top h2 {
   font-size: 17px;
+  font-size: 1.404rem;
   font-weight: bold;
   margin-bottom: 5px;
   color: #2d3e46;
@@ -84,14 +85,14 @@
   height: 216px;
   position: relative;
   background: white;
+  overflow: hidden;
 }
 .main .main_bottom_wrap section h3 {
   color: rgba(84, 100, 108, 0.7);
 }
 .main .main_bottom_wrap section img {
-  display: block;
-  width: 100%;
-  height: inherit;
+  height: 100%;
+  vertical-align: top;
 }
 .main .main_bottom_wrap section p {
   margin-bottom: 10px;
@@ -102,44 +103,63 @@
   top: 15px;
   right: 15px;
 }
-.main .main_bottom_wrap section span {
+.main .main_bottom_wrap section span.days {
   position: relative;
   bottom: 0px;
   left: 0px;
+}
+.main .main_bottom_wrap section span.imgBlock {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2000px;
+  height: 100%;
+  margin-left: -1000px;
+  text-align: center;
 }
 .main .subitem3,
 .main .subitem5 {
   padding: 0 !important;
 }
 
-.footer_layout {
-  font-size: 14px;
-  background: #455464;
-  color: white;
+@media screen and (min-width: 400px) {
+  .main .main_top_wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main .container_top {
+    width: 50%;
+  }
+  .main .container_top.item7 {
+    width: 100%;
+  }
 }
-.footer_layout p,
-.footer_layout address {
-  color: rgba(255, 255, 255, 0.6);
-  text-align: center;
-  font-size: 12px;
-  padding: 0 10px;
+@media screen and (min-width: 640px) {
+  .main .container_top {
+    width: 33%;
+  }
+
+  .main .main_bottom_wrap section {
+    width: 25%;
+  }
 }
-.footer_layout p:nth-child(4),
-.footer_layout address:nth-child(4) {
-  padding-bottom: 35px;
+@media screen and (min-width: 800px) {
+  .main .container_top {
+    width: 25%;
+  }
+
+  .main .container_top.item7 {
+    width: 50% !important;
+  }
 }
-.footer_linkbox_wrap ul {
-  color: white;
-  display: flex;
-  flex-wrap: wrap;
-  box-sizing: content-box;
-  padding: 15px;
-}
-.footer_linkbox_wrap ul li {
-  width: 50%;
-  padding: 15px 25px;
-  border: 1px solid #5e6c7a;
-}
-.footer_linkbox_wrap ul li ol {
-  display: none;
+@media screen and (min-width: 1280px) {
+  .main .main_top_wrap {
+    max-width: 1280px;
+  }
+
+  .main .main_bottom_wrap {
+    max-width: 1280px;
+    margin: auto;
+  }
 }

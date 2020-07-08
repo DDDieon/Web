@@ -4,98 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>To Do List</title>
-    <link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        html,
-        body,
-        input {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Gamja Flower', cursive;
-        }
-        
-        button {
-            font-family: 'Gamja Flower', cursive;
-            background: #a369af;
-            color: #fff;
-            font-size: 18px;
-            cursor: pointer;
-        }
-        
-        .list-box {
-            width: 500px;
-            margin: 100px auto;
-            border: 1px solid #eee;
-            padding: 20px 30px 50px;
-            background: #333;
-        }
-        
-        .list-box h1 {
-            padding-bottom: 10px;
-            text-align: center;
-            color: #9fd6c2;
-            border-bottom: 1px solid #87898f;
-        }
-        
-        .write-box {
-            width: 100%;
-            height: 35px;
-            font-size: 0;
-        }
-        
-        .write-box input {
-            width: 400px;
-            font-size: 20px;
-            border: none;
-            padding: 0 10px;
-            height: 100%;
-        }
-        
-        .write-box button {
-            width: 100px;
-            border: none;
-            height: 100%;
-        }
-        
-        .list-table {
-            border-spacing: 0px;
-            border-collapse: collapse;
-            width: 100%;
-            margin: 20px 0;
-        }
-        
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 10px 20px;
-            font-size: 20px;
-        }
-        
-        th {
-            background: #9fd6c2;
-        }
-        
-        td {
-            color: #fff;
-        }
-        
-        tbody td:first-child {
-            text-align: center;
-        }
-        
-        .btn-area {
-            text-align: center;
-        }
-        
-        .btn-area button {
-            height: 35px;
-            padding: 0 10px;
-            border: none;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -103,35 +15,36 @@
         <h1>이름을 입력하세요</h1>
         <div class="write-box">
             <input type="text" class="text-basic">
-            <button type="button" id="btnAdd">추가</button>
+            <button type="button" id="btnAdd" class="btnAdd">추가</button>
         </div>
-        <table class="list-table">
-            <colgroup>
-                <col width="10%">
-                <col width="90%">
-            </colgroup>
-            <thead>
-                <tr>
-                    <th>check</th>
-                    <th>리스트</th>
-                </tr>
-            </thead>
-            <tbody id="listBody">
-                <tr>
-                    <td>
+        <div class="list-table">
+            <div id="listBody" class="listBody">
+                <ul class="lists">
+                    <li>
                         <input type="checkbox" class="btn-chk">
-                    </td>
-                    <td>
-                        입력하세요
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                    </li>
+                    <li class="lists_sub">기본값1</li>
+                </ul>
+            </div>
+        </div>
         <div class="btn-area">
             <button type="button" id="DeleteSel">선택 삭제</button>
-            <button type="button" onclick="matching()">매칭 시작</button>
+            <button type="button" id="goMatching">시작</button>
         </div>
-
+    </div>
+    <div class="teamWrapper">
+        <div class="blue">
+            <h2 id="blueteam">Blue</h2>
+            <ul>
+                <li>1</li>
+            </ul>
+        </div>
+        <div class="red">
+            <h2 id="redteam">Red</h2>
+            <ul>
+                <li>2</li>
+            </ul>
+        </div>
     </div>
     <script>
         //----------- btnAdd버튼을 누르면 addList가 실행
@@ -143,20 +56,24 @@
                 alert('내용을 입력해주세요.');
                 contents.focus();
                 return false;
+            } else {
+                var ul = document.createElement('ul');
+                ul.setAttribute('class', 'lists');
+                var input = document.createElement('input');
+                input.setAttribute('type', 'checkbox');
+                input.setAttribute('class', 'btn-chk');
+                var li01 = document.createElement('li');
+                li01.appendChild(input);
+                ul.appendChild(li01);
+                var li02 = document.createElement('li');
+                li02.innerText = contents.value;
+                li02.setAttribute('class', 'lists_sub');
+                ul.appendChild(li02);
+                document.getElementById('listBody').appendChild(ul);
+                contents.value = '';
+                contents.focus();
             }
-            var tr = document.createElement('tr');
-            var input = document.createElement('input');
-            input.setAttribute('type', 'checkbox');
-            input.setAttribute('class', 'btn-chk');
-            var td01 = document.createElement('td');
-            td01.appendChild(input);
-            tr.appendChild(td01);
-            var td02 = document.createElement('td');
-            td02.innerHTML = contents.value;
-            tr.appendChild(td02);
-            document.getElementById('listBody').appendChild(tr);
-            contents.value = '';
-            contents.focus();
+
         }
 
         //--------체크박스 선택시 삭제
@@ -171,39 +88,33 @@
                 }
             }
         }
-    </script>
+        //------------------ 매칭
 
-    <div class="teamWrapper">
-        <div class="list-box blue">
-            <h2 id="blueteam">Blue</h2>
-            <ul>
-                <li></li>
-            </ul>
-        </div>
-        <div class="list-box red">
-            <h2 id="redteam">Red</h2>
-            <ul>
-                <li></li>
-            </ul>
-        </div>
-    </div>
-    <script>
-        var body = document.getElementById('listBody');
-        var lists = document.querySelector('#listBody tr');
 
-        var 조원 = [];
+        // let 조원 = [];
+        // let listBody = document.querySelector('.listBody'); //div
+        // let lists = document.querySelectorAll('.lists'); // ul에 lists클래스 붙음
+        // let listsSub = document.querySelectorAll('.lists_sub'); // li에 lists_sub클래스 붙음
+
+        // 질문 : 전역변수인데 왜 함수안에서 실행이 안되는가?
+
+        document.addEventListener('click', matching);
 
         function matching() {
-            for (var i = 0; i < body.childNodes.length - 2; i++) {
-                조원.push(body.children[i].innerText);
-            }
-            //parseInt(조원.length/4)개 뽑기
-            Array.prototype.random = function() {
-                var index = Math.random() * parseInt(조원.length / 4);
-                return index;
-            }
+            if (event.target == document.getElementById('goMatching')) {
+                let 조원 = [];
+                let listBody = document.querySelector('.listBody'); //div
+                let lists = document.querySelectorAll('.lists'); // ul에 lists클래스 붙음
+                let listsSub = document.querySelectorAll('.lists_sub'); // li에 lists_sub클래스 붙음
+                if (event.target == document.getElementsByTagName('button')[2]) {
+                    for (var i = 0; i < listBody.childElementCount; i++) {
+                        조원.push(lists[i].innerText);
+                        //  조원.push('aaa');
+                    }
+                }
+                console.log(조원.length / 2);
 
-            console.log(parseInt(조원.random()));
+            }
         }
     </script>
 </body>

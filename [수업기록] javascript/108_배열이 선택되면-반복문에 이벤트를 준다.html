@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Welcome</h1>
+    <h1>Welcome</h1>
+    <h1>Welcome</h1>
+    <h2>이벤트객체 확인</h2>
+    <ul>
+        <li class="menu1">menu1</li>
+        <li id="menu2">menu2</li>
+        <li>menu3</li>
+    </ul>
+    <h4>이벤트 객체는?</h4>
+    <script>
+        //--------- 클릭시에 별이 증가함
+        var h1 = document.querySelectorAll('h1');
+
+        // h1.forEach(function(i) {
+        //     i.onclick = function() {
+        //         this.innerHTML += '★';
+        //     }
+        // })
+
+        for (var j of h1) {
+            j.onclick = function() {
+                this.innerHTML += '★';
+            }
+        }
+    </script>
+    <script>
+        //----------- 이벤트 객체 확인 e || window.event(익스용)
+        var h2 = document.querySelector('h2');
+        h2.onclick = function(e) {
+            var event = e || window.event;
+            for (var key in event) {
+                document.body.innerHTML += '<p>' + key + '.' + event[key] + '</p>'
+            }
+        }
+    </script>
+    <script>
+        //------------ 이벤트 객체는?
+        let li = document.querySelectorAll('ul li');
+        let h4 = document.querySelector('h4');
+        li.forEach(function(j) {
+            j.onclick = function(event) {
+                h4.innerHTML += event.target.nodeName + ' ' + event.target.className;
+                h4.innerHTML += event.currentTarget.id;
+            }
+        })
+    </script>
+</body>
+
+</html>

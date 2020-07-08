@@ -12,9 +12,18 @@
     <input type="text" maxlength="6" id="input1" size="6"><span>-</span><input type="text" maxlength="7" id="input2" size="7">
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // var input1 = document.getElementById('input1');
+            // var input2 = document.getElementById('input2');
+            // var inputs = [input1, input2];
+            // input1.defaultValue = '******';
+            // input2.defaultValue = '*******';
+            // inputs.prototype.me = function() {
+            //     addEventListener('focus', function() {
+            //         this.defaultValue = '';
+            //     })
+            // };
+            // input.me(); ???????????????????????????????????? -----------07/07
 
-            var input1 = document.getElementById('input1');
-            var input2 = document.getElementById('input2');
             input1.addEventListener('keydown', function() {
                 this.style.background = '#ccccfc';
                 if (input1.value.length >= 6) {
