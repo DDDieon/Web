@@ -91,29 +91,28 @@
         //------------------ 매칭
 
 
-        // let 조원 = [];
-        // let listBody = document.querySelector('.listBody'); //div
-        // let lists = document.querySelectorAll('.lists'); // ul에 lists클래스 붙음
-        // let listsSub = document.querySelectorAll('.lists_sub'); // li에 lists_sub클래스 붙음
+        let 조원 = [];
+        let listBody = document.querySelector('.listBody'); //div
+        let lists = document.querySelectorAll('.lists'); // ul에 lists클래스 붙음
+        let listsSub = document.querySelectorAll('.lists_sub'); // li에 lists_sub클래스 붙음
 
-        // 질문 : 전역변수인데 왜 함수안에서 실행이 안되는가?
+        //질문: 전역변수인데 왜 함수안에서 실행이 안되는가 ?
 
         document.addEventListener('click', matching);
 
         function matching() {
             if (event.target == document.getElementById('goMatching')) {
-                let 조원 = [];
-                let listBody = document.querySelector('.listBody'); //div
-                let lists = document.querySelectorAll('.lists'); // ul에 lists클래스 붙음
-                let listsSub = document.querySelectorAll('.lists_sub'); // li에 lists_sub클래스 붙음
+                조원 = [];
+                listBody = document.querySelector('.listBody'); //div
+                lists = document.querySelectorAll('.lists'); // ul에 lists클래스 붙음
+                listsSub = document.querySelectorAll('.lists_sub'); // li에 lists_sub클래스 붙음
                 if (event.target == document.getElementsByTagName('button')[2]) {
                     for (var i = 0; i < listBody.childElementCount; i++) {
                         조원.push(lists[i].innerText);
                         //  조원.push('aaa');
                     }
                 }
-                console.log(조원.length / 2);
-
+                console.log(조원);
             }
         }
     </script>
