@@ -19,12 +19,12 @@
         </div>
         <div class="list-table">
             <div id="listBody" class="listBody">
-                <ul class="lists">
+                <!-- <ul class="lists">
                     <li>
                         <input type="checkbox" class="btn-chk">
                     </li>
                     <li class="lists_sub">기본값1</li>
-                </ul>
+                </ul> -->
             </div>
         </div>
         <div class="btn-area">
@@ -92,9 +92,13 @@
 
 
         let 조원 = [];
+        let 레드팀 = [];
+        let 블루팀 = [];
         let listBody = document.querySelector('.listBody'); //div
         let lists = document.querySelectorAll('.lists'); // ul에 lists클래스 붙음
         let listsSub = document.querySelectorAll('.lists_sub'); // li에 lists_sub클래스 붙음
+        let liCount = listBody.childElementCount
+
 
         //질문: 전역변수인데 왜 함수안에서 실행이 안되는가 ?
 
@@ -102,17 +106,37 @@
 
         function matching() {
             if (event.target == document.getElementById('goMatching')) {
+                //----- 변수 다시 로드하기. 동적으로 추가되었으니까
                 조원 = [];
+                레드팀 = [];
+                블루팀 = [];
                 listBody = document.querySelector('.listBody'); //div
                 lists = document.querySelectorAll('.lists'); // ul에 lists클래스 붙음
                 listsSub = document.querySelectorAll('.lists_sub'); // li에 lists_sub클래스 붙음
+                liCount = listBody.childElementCount // li의 개수
+                liHalf = liCount / 2;
+
+                //----- 조원 넣기
                 if (event.target == document.getElementsByTagName('button')[2]) {
-                    for (var i = 0; i < listBody.childElementCount; i++) {
+                    for (var i = 0; i < liCount; i++) {
                         조원.push(lists[i].innerText);
-                        //  조원.push('aaa');
                     }
                 }
-                console.log(조원);
+                //-------- 레드팀 넣기. 중복제거는 배열에 includes매소드로 확인
+                let j = 0;
+                while (j < liHalf) {
+                    let p = Math.floor(Math.random() * liCount);
+                    if (!레드팀.includes(조원[p])) {
+                        레드팀.push(조원[p]);
+                        j++
+                    }
+                }
+                //--------- 블루팀 넣기. 조원배열에서 레드팀과 중복되면 제거하기
+
+
+                console.log(레드팀);
+                console.log(블루팀);
+                //-------- 버튼눌렀을때 이벤트는 여기까지
             }
         }
     </script>
