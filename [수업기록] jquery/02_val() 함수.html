@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body>
+    <input type="text" class="newspaper">
+    <input type="text" class="news-paper">
+    <input type="text" class="news paper">
+    <input type="text" class="newspapers">
+    <input type="text" class="news">
+    <input type="text">
+</body>
+<script>
+    $("input[type = 'text']").css('background', 'gold').val('Hello World'); //속성을 선택
+    $("input[class = 'news']").css('background', 'gray').val('news');
+    $("input[class|='news']").css('background', 'pink').val('news'); // |= 해당글자 포함과 하이픈 포함된거
+</script>
+
+</html>
