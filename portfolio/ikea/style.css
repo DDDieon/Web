@@ -142,20 +142,20 @@ width: 100%;
 
 /*banner*/
 
-#banner {
+.banner {
     margin-bottom: 50px;
 }
 
-#banner_name {
+.banner_title {
     margin-bottom: 40px;
 }
 
-#banner_name>* {
+.banner_title>* {
     line-height: 1.5;
     font-weight: bold;
 }
 
-#banner_name>p {
+#contents .banner_title>p {
     font-size: 2.5vw;
     margin: 3px auto;
     width: 10vw;
@@ -167,11 +167,11 @@ width: 100%;
     bottom: 0;
 }
 
-#banner_name>p:active {
+.banner_title>p:active {
     bottom: -3px;
 }
 
-#banner_name>p>a {
+.banner_title>p>a {
     display: block;
 }
 
@@ -190,7 +190,7 @@ div.banner_0 img {
 
 /*recomend items*/
 
-.recomend_name {
+#contents .banner_title {
     text-align: center;
     margin-bottom: 20px;
 }
@@ -244,7 +244,7 @@ div.banner_1 ul li:hover a {
 
 /*------ news modul -------*/
 
-#banner {
+.banner {
     position: relative;
 }
 
@@ -260,25 +260,27 @@ div.banner_1 ul li:hover a {
 div.news_modul {
     display: none;
     width: 100%;
-    height: 26%;
+    height: 24%;
     border-radius: 14px;
 }
 
-.news_modul label {
+div.news_modul p {
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: flex-end;
-    padding: 20px;
-    color: #ffdb00;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.news_modul a {
+div.news_modul a {
     display: block;
-    margin: auto;
     width: 80%;
-    height: 80px;
+    margin-bottom: 35px;
 }
 
-.news_modul a>p {
+.news_modul a span {
+    display: block;
     text-align: center;
     padding: 12px;
     font-weight: bold;
@@ -286,10 +288,11 @@ div.news_modul {
     border-radius: 14px;
 }
 
-.news_modul>video {
+.news_modul video {
     display: block;
     margin: auto;
     width: 80%;
+    margin-top: 30px;
 }
 
 .news_box01 {
@@ -311,22 +314,22 @@ div.news_modul {
     display: none;
 }
 
-#news {
+.news {
     text-align: center;
     margin-bottom: 37px;
 }
 
-.news_name {
+#contents .banner_title {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.banner_02 {
+.banner_2 {
     padding: 22px;
     /* padding: 5.314vw; */
 }
 
-.banner_02 img {
+.banner_2 img {
     width: 100%;
     border-radius: 2.899vw;
     margin-bottom: 7px;
@@ -334,18 +337,18 @@ div.news_modul {
     transition: 0.25s;
 }
 
-.banner_02 h1 {
+.banner_2 h1 {
     text-align: center;
     font-size: 4.3vw;
     font-weight: bold;
 }
 
-.banner_02 p b {
+.banner_2 p b {
     font-size: 16px;
     font-weight: 700;
 }
 
-.banner_02 p {
+.banner_2 p {
     font-size: 12px;
 }
 
@@ -359,7 +362,6 @@ footer {
     padding-left: 20px;
     padding-right: 20px;
     /* padding: 7.246vw; */
-    font-size: 2.7vw;
 }
 
 .f-top {
@@ -375,7 +377,6 @@ footer {
 
 .f-bottom span {
     display: block;
-    font-size: 3.2vw;
     margin-bottom: 7px;
     font-weight: bold;
     color: #ffdb00;
@@ -389,7 +390,6 @@ footer {
 }
 
 .inner-list ul>li>a {
-    font-size: 2.3vw;
     display: block;
     padding: 30px 12px;
 }
@@ -510,19 +510,19 @@ footer {
     }
     /* ---------- desk contents ------- */
     /* ---- banner setting --- */
-    #banner_name>p {
+    #contents .banner_title>p {
         width: 80px;
     }
     /* ----- desk slide ----- */
-    #banner.banner_0 {
+    .banner.banner_0 {
         width: 100%;
     }
     /* ----- desk recomend ------- */
-    #banner p {
-        font-size: 14px;
+    .banner p {
+        font-size: 14px !important;
     }
-    #banner h1 {
-        font-size: 24px;
+    .banner h1 {
+        font-size: 24px !important;
     }
     div.banner_1 ul li span {
         font-size: 30px;
@@ -548,16 +548,11 @@ footer {
     div.news_modul {
         display: none;
         width: 600px;
-        height: 420px;
+        height: 370px;
         border-radius: 14px;
         box-shadow: 0 5px 5px rgba(0, 0, 0, 0.45);
         left: 6vw;
         top: 8vw;
-    }
-    .news_modul label {
-        display: flex;
-        justify-content: flex-end;
-        color: #ffdb00;
     }
     .news_modul a {
         display: block;
@@ -573,25 +568,25 @@ footer {
         margin: auto;
     }
     /*------ news-------*/
-    #news {
-        font-size: 14px;
-        flex: 1;
+    .news {
+        font-size: 14px !important;
+        flex: 1 !important;
     }
-    .banner_02 #n-wrap {
+    .banner_2 #n-wrap {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
     }
-    .banner_02 h1 {
+    .banner_2 h1 {
         flex: none;
     }
-    .banner_02 img {
+    .banner_2 img {
         display: block;
         width: 80%;
         margin: auto;
         margin-bottom: 22px;
     }
-    .banner_02 p b {
+    .banner_2 p b {
         font-size: 17px;
         font-weight: 700;
     }
