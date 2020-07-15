@@ -1,5 +1,6 @@
 /* reset.css */
 
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Raleway:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Russo+One&display=swap");
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +9,7 @@
     font: inherit;
     vertical-align: baseline;
     box-sizing: border-box;
+    font-family: "Nanum Gothic", sans-serif;
 }
 
 article,
@@ -92,7 +94,6 @@ caption {
 textarea,
 input {
     background: url(none);
-    -webkit-border-radius: 1px;
     -webkit-apprearance: none;
     /* 아이폰에서 아이콘은 모서리가 둥글게 표현되기 때문에 기본적인 네모모양으로 바꾸기 */
 }

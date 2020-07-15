@@ -2,20 +2,20 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>To Do List</title>
-    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-
+    <meta charset="UTF-8" />
+    <title>지원이의 랜덤 팀원 매칭기 1.0v</title>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/clickevent.js" defer></script>
+    <script src="js/matchingAdd.js" defer></script>
 </head>
 
 <body>
     <div class="list-box">
-        <h1>이름을 입력하세요</h1>
         <div class="write-box">
-            <input type="text" class="text-basic">
-            <button type="button" id="btnAdd" class="btnAdd">추가</button>
+            <input type="text" class="text-basic" />
+            <button type="button" id="btnAdd" class="btnAdd">추가(enter)</button>
         </div>
         <div class="list-table">
             <div id="listBody" class="listBody">
@@ -23,123 +23,27 @@
                     <li>
                         <input type="checkbox" class="btn-chk">
                     </li>
-                    <li class="lists_sub">기본값1</li>
+                    <li class="lists_sub">이름</li>
                 </ul> -->
             </div>
         </div>
         <div class="btn-area">
-            <button type="button" id="DeleteSel">선택 삭제</button>
-            <button type="button" id="goMatching">시작</button>
+            <button type="button" id="DeleteAll">전체삭제</button>
+            <button type="button" id="DeleteSel">선택삭제</button>
+            <button type="button" id="goMatching">매칭</button>
         </div>
     </div>
     <div class="teamWrapper">
-        <div class="blue">
-            <h2 id="blueteam">Blue</h2>
-            <ul>
-                <li>1</li>
-            </ul>
-        </div>
-        <div class="red">
-            <h2 id="redteam">Red</h2>
-            <ul>
-                <li>2</li>
-            </ul>
-        </div>
-    </div>
-    <script>
-        //----------- btnAdd버튼을 누르면 addList가 실행
-        document.getElementById('btnAdd').addEventListener('click', addList);
-
-        function addList() {
-            var contents = document.querySelector('.text-basic');
-            if (!contents.value) {
-                alert('내용을 입력해주세요.');
-                contents.focus();
-                return false;
-            } else {
-                var ul = document.createElement('ul');
-                ul.setAttribute('class', 'lists');
-                var input = document.createElement('input');
-                input.setAttribute('type', 'checkbox');
-                input.setAttribute('class', 'btn-chk');
-                var li01 = document.createElement('li');
-                li01.appendChild(input);
-                ul.appendChild(li01);
-                var li02 = document.createElement('li');
-                li02.innerText = contents.value;
-                li02.setAttribute('class', 'lists_sub');
-                ul.appendChild(li02);
-                document.getElementById('listBody').appendChild(ul);
-                contents.value = '';
-                contents.focus();
-            }
-
-        }
-
-        //--------체크박스 선택시 삭제
-        document.getElementById('DeleteSel').addEventListener('click', delSelected);
-
-        function delSelected() {
-            var body = document.getElementById('listBody');
-            var chkbox = document.querySelectorAll('#listBody .btn-chk');
-            for (var i in chkbox) {
-                if (chkbox[i].checked == true) {
-                    body.removeChild(chkbox[i].parentNode.parentNode);
-                }
-            }
-        }
-        //------------------ 매칭
-
-
-        let 조원 = [];
-        let 레드팀 = [];
-        let 블루팀 = [];
-        let listBody = document.querySelector('.listBody'); //div
-        let lists = document.querySelectorAll('.lists'); // ul에 lists클래스 붙음
-        let listsSub = document.querySelectorAll('.lists_sub'); // li에 lists_sub클래스 붙음
-        let liCount = listBody.childElementCount
-
-
-        //질문: 전역변수인데 왜 함수안에서 실행이 안되는가 ?
-
-        document.addEventListener('click', matching);
-
-        function matching() {
-            if (event.target == document.getElementById('goMatching')) {
-                //----- 변수 다시 로드하기. 동적으로 추가되었으니까
-                조원 = [];
-                레드팀 = [];
-                블루팀 = [];
-                listBody = document.querySelector('.listBody'); //div
-                lists = document.querySelectorAll('.lists'); // ul에 lists클래스 붙음
-                listsSub = document.querySelectorAll('.lists_sub'); // li에 lists_sub클래스 붙음
-                liCount = listBody.childElementCount // li의 개수
-                liHalf = liCount / 2;
-
-                //----- 조원 넣기
-                if (event.target == document.getElementsByTagName('button')[2]) {
-                    for (var i = 0; i < liCount; i++) {
-                        조원.push(lists[i].innerText);
-                    }
-                }
-                //-------- 레드팀 넣기. 중복제거는 배열에 includes매소드로 확인
-                let j = 0;
-                while (j < liHalf) {
-                    let p = Math.floor(Math.random() * liCount);
-                    if (!레드팀.includes(조원[p])) {
-                        레드팀.push(조원[p]);
-                        j++
-                    }
-                }
-                //--------- 블루팀 넣기. 조원배열에서 레드팀과 중복되면 제거하기
-
-
-                console.log(레드팀);
-                console.log(블루팀);
-                //-------- 버튼눌렀을때 이벤트는 여기까지
-            }
-        }
-    </script>
+        <section>
+            <h2 id="redteam">Red Team</h2>
+            <div class="red">
+            </div>
+        </section>
+        <section>
+            <h2 id="blueteam">Blue Team</h2>
+            <div class="blue">
+            </div>
+        </section>
 </body>
 
 </html>
