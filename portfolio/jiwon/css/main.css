@@ -52,58 +52,58 @@ nav .nav_list ul li:hover {
   color: #ffa4b1;
 }
 
-section #introduce_top {
+#introduce_top {
   margin-bottom: 130px;
 }
-section #introduce_top p.minibold {
+#introduce_top p.minibold {
   font-family: Russo One !important;
   font-size: 18px;
   text-align: center;
   margin-top: 220px;
   text-decoration: underline;
 }
-section #introduce_top p.caption_l {
+#introduce_top p.caption_l {
   font-family: "Raleway", sans-serif !important;
   text-align: center;
   letter-spacing: 16px;
   font-size: 40px;
   margin-bottom: 8px;
 }
-section #introduce_top b {
+#introduce_top b {
   font-weight: bold;
 }
-section #introduce_top .myself {
+#introduce_top .myself {
   font-family: "Noto Sans KR", sans-serif !important;
   font-weight: 300;
   text-align: center;
   font-style: 12px;
   margin-bottom: 36px;
 }
-section #introduce_top .gols_img {
+#introduce_top .gols_img {
   margin: auto;
   width: 820px;
   height: 255px;
   background: #2c2929;
   margin-bottom: 17px;
 }
-section #introduce_top .gols_words {
+#introduce_top .gols_words {
   position: relative;
   width: 820px;
   display: flex;
   margin: 0 auto;
   justify-content: center;
 }
-section #introduce_top .gols_words .gols_words_in {
+#introduce_top .gols_words .gols_words_in {
   width: 33.3%;
 }
-section #introduce_top .gols_words .gols_words_in p:nth-of-type(1) {
+#introduce_top .gols_words .gols_words_in p:nth-of-type(1) {
   font-family: Russo One !important;
   font-size: 18px;
   text-align: center;
   margin-top: 220px;
   margin: 0px;
 }
-section #introduce_top .gols_words .gols_words_in p:nth-of-type(2) {
+#introduce_top .gols_words .gols_words_in p:nth-of-type(2) {
   font-family: "Noto Sans KR", sans-serif !important;
   font-weight: 300;
   text-align: center;
@@ -111,10 +111,11 @@ section #introduce_top .gols_words .gols_words_in p:nth-of-type(2) {
   margin: 0px;
   padding: 4px;
 }
-section #introduce_bottom {
+
+#introduce_bottom {
   margin-bottom: 130px;
 }
-section #introduce_bottom #profile {
+#introduce_bottom #profile {
   width: 820px;
   margin: 0 auto;
   text-align: center;
@@ -122,7 +123,7 @@ section #introduce_bottom #profile {
   justify-content: center;
   position: relative;
 }
-section #introduce_bottom #profile .profile-img {
+#introduce_bottom #profile .profile-img {
   width: 100%;
   height: 280px;
   background: url("/img/port1.jpg");
@@ -130,10 +131,10 @@ section #introduce_bottom #profile .profile-img {
   background-position: center;
   background-size: 130%;
 }
-section #introduce_bottom #profile .profile-img:hover ~ .profile-words {
+#introduce_bottom #profile .profile-img:hover ~ .profile-words {
   opacity: 0;
 }
-section #introduce_bottom #profile .profile-words {
+#introduce_bottom #profile .profile-words {
   position: absolute;
   left: 0vw;
   opacity: 1;
@@ -149,10 +150,10 @@ section #introduce_bottom #profile .profile-words {
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
 }
-section #introduce_bottom #profile .profile-words p:nth-of-type(1) {
+#introduce_bottom #profile .profile-words p:nth-of-type(1) {
   font-weight: 500;
 }
-section #introduce_bottom #profile .profile-words p:nth-of-type(2) {
+#introduce_bottom #profile .profile-words p:nth-of-type(2) {
   font-family: Russo One !important;
   font-size: 18px;
   text-align: center;
@@ -160,7 +161,7 @@ section #introduce_bottom #profile .profile-words p:nth-of-type(2) {
   margin: 0;
   text-align: justify;
 }
-section #introduce_bottom #profile .profile-words p:nth-of-type(3) {
+#introduce_bottom #profile .profile-words p:nth-of-type(3) {
   font-family: Russo One !important;
   font-size: 18px;
   text-align: center;
@@ -169,14 +170,14 @@ section #introduce_bottom #profile .profile-words p:nth-of-type(3) {
   text-align: justify;
   font-size: 14;
 }
-section #introduce_bottom #profile .profile-words p:nth-of-type(4) {
+#introduce_bottom #profile .profile-words p:nth-of-type(4) {
   margin-top: 12px;
 }
-section #introduce_bottom #profile .profile-words p:nth-of-type(5) {
+#introduce_bottom #profile .profile-words p:nth-of-type(5) {
   margin-top: 12px;
   font-weight: 500;
 }
-section #introduce_bottom .resume ul {
+#introduce_bottom .resume ul {
   display: flex;
   justify-content: center;
   width: 820px;
@@ -185,7 +186,7 @@ section #introduce_bottom .resume ul {
   flex-direction: column;
   background: #2c2929;
 }
-section #introduce_bottom .resume ul .resume-sub {
+#introduce_bottom .resume ul .resume-sub {
   color: white;
   flex: 1;
   font-family: Russo One !important;
@@ -195,10 +196,10 @@ section #introduce_bottom .resume ul .resume-sub {
   margin-top: 0px;
   text-align: justify;
 }
-section #introduce_bottom .resume ul .resume-sub ol {
+#introduce_bottom .resume ul .resume-sub ol {
   padding: 20px;
 }
-section #introduce_bottom .resume ul .resume-sub ol li {
+#introduce_bottom .resume ul .resume-sub ol li {
   color: #929292;
   font-family: "Noto Sans KR", sans-serif;
   cursor: default;
@@ -206,6 +207,11 @@ section #introduce_bottom .resume ul .resume-sub ol li {
   font-size: 14px;
   margin: 0 auto;
   text-indent: 5px;
+}
+
+#Project {
+  background: gray;
+  height: 100vh;
 }
 
 footer {

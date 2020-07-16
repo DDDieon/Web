@@ -4,20 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jiwon / 전지원의 웹 퍼블리싱 포트폴리오</title>
     <title>Welcome to Ikea</title>
     <meta name="description" content="전지원의 포트폴리오 사이트입니다">
+    <!-- plugin link -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script>
+        function hideDiv() {
+            document.getElementById("bording").style.display = "none";
+        }
+        self.setTimeout("hideDiv()", 2000); // 초 지정
+    </script>
+    <!--challenge 1: SCSS 로 스타일 설정하기 -->
+    <!--challenge 2: REM으로 글꼴 크기 조절하기 -->
+    <!--challenge 3: jquery 실습3 참고해서 리모콘 만들기 + dragable기능 넣기 -->
+    <!-- basic CSS -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/base.css">
-    <!-- SCSS목록 -->
+    <!-- SCSS compiled -->
     <link rel="stylesheet" href="css/bording.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/gallery.css">
-    <!-- SCSS목록 끝-->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-    <!--challenge 1:  SCSS 로 스타일 설정하기 -->
-    <!--challenge 2: REM으로 글꼴 크기 조절하기 -->
+    <!-- jsFiles -->
+    <script type="text/javascript" src="js/gallery.js" defer></script>
+    <script type="text/javascript" src="js/display.js" defer></script>
 </head>
 
 
@@ -121,7 +133,6 @@
         </div>
     </nav>
     <section>
-
         <div id="introduce">
             <div id="introduce_top">
                 <p class="minibold">ABOUT</p>
@@ -144,10 +155,9 @@
                         <p>Adobe사 프로그램들로</br>아트워크가 가능하며</br>Figma 등 UI툴도 좋아합니다!</p>
                     </div>
                 </div>
-            </div>
-            
+            </div>         
             <div id="introduce_bottom">
-               <div id="profile">
+            <div id="profile">
                     <div class="profile-img"></div>
                     <div class="profile-words">
                         <p>전지원 : 全智元</p>
@@ -159,22 +169,22 @@
                             언제든지 두들겨주세요.</p>
                         <p>E-mail : hocldy@naver.com</p>
                     </div>
-               </div>
-               <div id = "Introduce_bottom_detail">
+            </div>
+            <div id="Introduce_bottom_detail">
                     <div class="resume">
                         <ul> 
                             <li class="resume-sub">Carrer
                                 <ol>
                                     <li>포토샵 외주제작 | 19.01 | 스펙그라운드</li>
                                     <li>유튜브 영상편집 |  19.04 ~ 19.09 | 이스타아카데미</li>           
-                                   <li> 콘텐츠 에디터 | 19.06 ~ 19.09 | (주) 메이비원</li>
-                                   <li> * 활동 시에는 휴학 상태였음</li>
+                                    <li> 콘텐츠 에디터 | 19.06 ~ 19.09 | (주) 메이비원</li>
+                                    <li> * 활동 시에는 휴학 상태였음</li>
                                 </ol>
                             </li>
                             <li class="resume-sub">License
                                 <ol><li>GTQ 2급</li>
                                 <li>컴퓨터 활용능력 2급</li>
-                                <li>컴퓨터 그래픽스 운용기능사 필기 합격</li>
+                                <li>컴퓨터 그래픽스 운용기능사 필기 합격(실기 준비중)</li>
                                 <li>JLPT N2급</li></ol>
                             </li>
                             <li class="resume-sub">Award
@@ -187,13 +197,27 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-        </div>
-        <div id="Project"></div>
-        <div id="Gallery"></div>
-        <div id="Contact"></div>
+            </div>
+            </div>
     </section>
-    <footer id="footer">
+    <section>
+        <div id="Project">
+            
+        </div>
+    </section>
+    <section>
+        <div id="Gallery">
+
+
+        </div>
+    </section>
+    <section>
+        <div id="Contact">
+
+
+        </div>
+    </section>
+        <footer id="footer"></section>
         <div class="footer-assets-left">
             <div class="footer-icon"><i class="xi-tag"></i></div>
             <div class="footer-content"><p>I’m really looking forward to meeting you in person</p>
@@ -204,32 +228,5 @@
             <button type="button" class="footer-close" id="footerClose"><i class="xi-close-circle-o"></i></button>
         </div>
     </footer>
-    <script>
-        // 2초동안 보딩페이지
-        function hideDiv() {
-            document.getElementById("bording").style.display = "none";
-        }
-        self.setTimeout("hideDiv()", 2000); // 초 지정
-
-        // ------------ gallery open, close-------------
-        var galleryIsBody = document.getElementById('gallery-body');
-        function openGallery(){
-            galleryIsBody.classList.add('galleryIsBody');
-        }
-        function closeGallery(){
-            galleryIsBody.classList.remove('galleryIsBody');
-        }
- //gallery drag 
-
-        // footer close
-        var footerClose = document.getElementById('footerClose');
-        var footer = document.getElementById('footer');
-        footerClose.onclick = function() {
-            footer.style.display = 'none';
-        }
-
-       
-    </script>
 </body>
-
 </html>
