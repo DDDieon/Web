@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h2>키보드 이벤트</h2>
+    <div>
+        <p>구매후기 (20글자 이내) </p>
+        <h1> 20 </h1>
+        <textarea name="" id="" cols="20" rows="2"></textarea>
+        <button> 다시쓰기 </button>
+    </div>
+</body>
+<script>
+    $('textarea').keyup(function() {
+        var input = $(this).val().length;
+        var 남은글자 = 20 - input;
+        $('h1').html(남은글자);
+        if (남은글자 >= 0) {
+            $('h1').css('color', 'blue');
+        } else {
+            $('h1').html('남은글자 초과').css({
+                'background': 'red',
+                'color': 'white'
+            });
+            $(this).attr('disabled', true);
+        }
+    })
+    $('button').click(function() {
+        $('textarea').removeAttr('disabled');
+        $('textarea').val('');
+        $('textarea').focus();
+    })
+</script>
+
+</html>

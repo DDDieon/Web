@@ -94,7 +94,18 @@ nav {
     }
 }
 
+// Sections
+section {
+    &:nth-of-type(3) {
+        background: gray;
+    }
+}
+
 // introduce
+#Introduce-Wrap {
+    margin-bottom: 300px;
+}
+
 #introduce_top {
     margin-bottom: 130px;
     p.minibold {
@@ -172,7 +183,7 @@ nav {
             align-items: center;
             width: 280px;
             height: 280px;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.16);
             transition: 0.2s;
             backdrop-filter: blur(4px);
             p:nth-of-type(1) {
@@ -199,6 +210,21 @@ nav {
         }
     }
     .resume {
+        ul:hover .resume-boxes {
+            opacity: 0;
+        }
+        .resume-boxes {
+            position: absolute;
+            right: 0;
+            opacity: 1;
+            color: black;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 280px;
+            height: 100%;
+            transition: 0.2s;
+        }
         ul {
             display: flex;
             justify-content: center;
@@ -206,7 +232,9 @@ nav {
             padding: 30px;
             margin: auto;
             flex-direction: column;
-            background: $gray;
+            background: url('/img/5.jpg') center;
+            background-position: center;
+            position: relative;
             .resume-sub {
                 color: white;
                 flex: 1;
@@ -231,12 +259,18 @@ nav {
     }
 }
 
-// project
-#Project {
-    background: gray;
-    height: 100vh;
+// Project
+#Project-Wrap {
+    div.project-1 {
+        background: #1B50A0;
+        height: 100vh;
+        width: 100%;
+    }
 }
 
+// Ability
+// Contact
+//footer
 footer {
     position: fixed;
     display: flex;
