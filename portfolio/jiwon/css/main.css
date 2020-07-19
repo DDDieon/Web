@@ -1,5 +1,6 @@
 @charset "UTF-8";
-/*변수값*/
+/*SCSS 변수값 저장*/
+/*CSS 변경*/
 body {
   width: 100%;
   height: 100%;
@@ -50,10 +51,6 @@ nav .nav_list ul li .xi-ellipsis-h:before {
 }
 nav .nav_list ul li:hover {
   color: #ffa4b1;
-}
-
-section:nth-of-type(3) {
-  background: gray;
 }
 
 #Introduce-Wrap {
@@ -128,6 +125,10 @@ section:nth-of-type(3) {
   height: 280px;
   margin: 0 auto;
   background: pink;
+  z-index: 1;
+}
+#introduce_bottom .slick-items :before {
+  color: #ccc;
 }
 #introduce_bottom #profile {
   width: 820px;
@@ -235,10 +236,87 @@ section:nth-of-type(3) {
   text-indent: 5px;
 }
 
+section:nth-of-type(3) {
+  background: gray;
+}
+
+#Project-Wrap .minibold {
+  font-family: Russo One !important;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 220px;
+  text-decoration: underline;
+  margin-top: 0;
+  padding-top: 110px;
+}
 #Project-Wrap div.project-1 {
-  background: #1B50A0;
   height: 100vh;
   width: 100%;
+}
+#Project-Wrap .project p.koreanTitle {
+  font-size: 14px;
+  font-weight: 400;
+}
+#Project-Wrap .project h2.EnglishTitle {
+  font-family: Russo One;
+  font-size: 42px;
+  margin-bottom: 46px;
+}
+#Project-Wrap .project .project-assets {
+  display: flex;
+  justify-content: center;
+}
+#Project-Wrap .project .project-assets .tips {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+#Project-Wrap .project .project-assets .tips span {
+  float: left;
+  font-weight: 900;
+}
+#Project-Wrap .project .project-assets .tips p {
+  float: left;
+  margin-left: 30px;
+  font-weight: 300;
+  text-align: right;
+}
+#Project-Wrap .project .project-assets .tips i {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  border: 2px solid black;
+}
+#Project-Wrap .project .project-assets .tips i:first-of-type {
+  margin-left: 30px;
+}
+#Project-Wrap .project .project-assets .tips i:nth-of-type(1) {
+  background: #1B50A0;
+}
+#Project-Wrap .project .project-assets .tips i:nth-of-type(2) {
+  background: #FFDB00;
+}
+#Project-Wrap .project .project-assets .project-img {
+  background: pink;
+  width: 513px;
+  height: 327px;
+  margin-left: 14px;
+}
+#Project-Wrap .project .project-assets .articleBtns button {
+  font-family: Russo One !important;
+  font-size: 18px;
+  width: 96px;
+  height: 32px;
+  background: #000000;
+  border-radius: 12px;
+  padding: 5px 19px;
+  color: white;
+  text-align: center;
+}
+#Project-Wrap .assets-subtitle {
+  background: black;
+  color: white;
+  text-align: center;
 }
 
 footer {

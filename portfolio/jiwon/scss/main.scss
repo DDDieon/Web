@@ -1,7 +1,7 @@
 $red: #ffa4b1;
 $gray: rgb(44, 41, 41);
 
-/*변수값*/
+/*SCSS 변수값 저장*/
 
 @mixin hov_red {
     &:hover {
@@ -41,6 +41,8 @@ $gray: rgb(44, 41, 41);
     text-align: center;
     font-style: 12px;
 }
+
+/*CSS 변경*/
 
 body {
     width: 100%;
@@ -100,12 +102,6 @@ nav {
     }
 }
 
-// Sections
-section {
-    &:nth-of-type(3) {
-        background: gray;
-    }
-}
 
 // introduce
 #Introduce-Wrap {
@@ -175,6 +171,11 @@ section {
         height: 280px;
         margin: 0 auto;
         background: pink;
+        z-index: 1;
+
+        :before {
+            color: #ccc;
+        }
     }
 
     #profile {
@@ -292,11 +293,106 @@ section {
 }
 
 // Project
+
+section {
+    &:nth-of-type(3) {
+        background: gray;
+    }
+}
+
 #Project-Wrap {
+    .minibold {
+        @include minibold();
+        text-decoration: underline;
+        margin-top: 0;
+        padding-top: 110px;
+    }
+
     div.project-1 {
-        background: #1B50A0;
         height: 100vh;
         width: 100%;
+    }
+
+    .project {
+        p.koreanTitle {
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        h2.EnglishTitle {
+            font-family: Russo One;
+            font-size: 42px;
+            margin-bottom: 46px;
+        }
+
+        .project-assets {
+            display: flex;
+            justify-content: center;
+
+            .tips {
+                overflow: hidden;
+                margin-bottom: 10px;
+
+                span {
+                    float: left;
+                    font-weight: 900;
+                }
+
+                p {
+                    float: left;
+                    margin-left: 30px;
+                    font-weight: 300;
+                    text-align: right;
+                }
+
+                i {
+                    &:first-of-type {
+                        margin-left: 30px;
+                    }
+
+                    display: inline-block;
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 3px;
+                    border: 2px solid black;
+
+                    &:nth-of-type(1) {
+                        background: #1B50A0;
+                    }
+
+                    &:nth-of-type(2) {
+                        background: #FFDB00;
+                    }
+                }
+            }
+
+            .project-img {
+                background: pink;
+                width: 513px;
+                height: 327px;
+                margin-left: 14px;
+            }
+
+            .articleBtns {
+                button {
+                    font-family: Russo One !important;
+                    font-size: 18px;
+                    width: 96px;
+                    height: 32px;
+                    background: #000000;
+                    border-radius: 12px;
+                    padding: 5px 19px;
+                    color: white;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .assets-subtitle {
+        background: black;
+        color: white;
+        text-align: center;
     }
 }
 
