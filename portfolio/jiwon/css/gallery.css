@@ -78,6 +78,7 @@
 }
 #gallery-body #gallery-wrap .carousel_wrap .carousel_stage ul li .c-imgs {
   overflow: hidden;
+  height: 600px;
 }
 #gallery-body #gallery-wrap .carousel_wrap .carousel_stage ul li .c-imgs img {
   display: block;
@@ -85,7 +86,7 @@
 #gallery-body #gallery-wrap .carousel_wrap .carousel_stage ul li .c_words {
   background: #2c2929;
   position: absolute;
-  bottom: -120px;
+  bottom: -80px;
   right: 0;
   left: 0;
   padding: 18px;
@@ -110,7 +111,7 @@
   opacity: 0;
 }
 #gallery-body #gallery-wrap .carousel_wrap .carousel_stage ul li:hover .c_words {
-  bottom: 0px;
+  bottom: -30px;
 }
 #gallery-body #gallery-wrap .carousel_wrap .carousel_stage ul li:hover .c_words .c_words_sub2,
 #gallery-body #gallery-wrap .carousel_wrap .carousel_stage ul li:hover .c_words .c_words_sub3 {

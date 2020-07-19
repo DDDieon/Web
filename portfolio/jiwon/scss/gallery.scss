@@ -1,5 +1,6 @@
 $gray: rgb(44, 41, 41);
 $red: #ffa4b1;
+
 .galleryIsBody {
     display: block !important;
     position: fixed;
@@ -17,17 +18,20 @@ $red: #ffa4b1;
     display: none;
     background: $gray;
     transition: 1s;
+
     #gallery-wrap {
         @keyframes gallery_animation {
             from {
                 opacity: 0;
                 left: 100%;
             }
+
             to {
                 opacity: 1;
                 left: 0;
             }
         }
+
         animation: gallery_animation 0.5s ease-out;
         position: relative;
         margin: 0 auto;
@@ -35,60 +39,75 @@ $red: #ffa4b1;
         width: 93%;
         height: 100%;
         color: $red;
+
         .gallery_header {
             font-size: 35px;
+
             p {
                 position: absolute;
                 left: 0;
                 top: 60px;
             }
+
             button {
                 position: absolute;
                 right: 0;
                 top: 60px;
             }
+
             button {
                 cursor: pointer;
             }
         }
+
         .gallery_header-in {
             display: flex;
             justify-content: center;
             margin-bottom: 3vh;
+
             p {
                 &:nth-child(1) {
                     margin-left: 150px;
                     flex: 1;
                 }
+
                 &:nth-child(2) {
                     flex: 7;
                 }
             }
         }
+
         .carousel_wrap {
             .carousel_stage {
                 width: calc(630 * 5);
+
                 ul {
                     display: flex;
                     cursor: move;
+
                     li {
                         position: relative;
                         padding-left: 12px;
                         padding: 15px;
+
                         .c-imgs {
                             overflow: hidden;
+                            height: 600px;
+
                             img {
                                 display: block;
                             }
                         }
+
                         .c_words {
                             background: $gray;
                             position: absolute;
-                            bottom: -120px;
+                            bottom: -80px;
                             right: 0;
                             left: 0;
                             padding: 18px;
                             transition: 0.5s;
+
                             h5 {
                                 display: flex;
                                 justify-content: space-between;
@@ -96,17 +115,21 @@ $red: #ffa4b1;
                                 font-weight: bold;
                                 margin-bottom: 12px;
                             }
+
                             .c_words_sub1 {
                                 display: block;
                                 margin-bottom: 12px;
                             }
+
                             .c_words_sub3 {
                                 font-weight: bold;
                             }
+
                             .c_words_sub2,
                             .c_words_sub3 {
                                 opacity: 0;
                             }
+
                             // .c_words_sub2,
                             // .c_words_sub3 {
                             //     display: none;
@@ -115,15 +138,18 @@ $red: #ffa4b1;
                             // }
                         }
                     }
+
                     li:hover {
                         .c_words {
-                            bottom: 0px;
+                            bottom: -30px;
+
                             .c_words_sub2,
                             .c_words_sub3 {
                                 opacity: 1;
                             }
                         }
                     }
+
                     // li:hover .c_words_sub2,
                     // .c_words_sub3 {
                     //     display: block;

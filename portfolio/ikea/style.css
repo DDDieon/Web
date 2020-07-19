@@ -180,13 +180,15 @@ width: 100%;
 
 div.banner_0 {
     width: 100%;
+    margin: 0 auto;
+    margin-bottom: 70px !important;
 }
 
-div.banner_0 img {
+div.banner_0 div img{
+    display: block;
+    margin: 0 auto;
     width: 100%;
-    z-index: 999;
 }
-
 
 /*recomend items*/
 

@@ -51,6 +51,7 @@ body {
     background-size: cover;
     background-blend-mode: soft-light;
     font-family: 'Noto Sans KR', sans-serif;
+
     p {
         font-family: 'Noto Sans KR', sans-serif;
         cursor: default;
@@ -64,6 +65,7 @@ nav {
     display: flex;
     justify-content: center;
     margin-top: 175px;
+
     .logobox a {
         font-family: 'Russo One', sans-serif;
         font-style: normal;
@@ -73,9 +75,11 @@ nav {
         /* identical to box height */
         color: #000000;
     }
+
     .nav_list ul {
         margin-left: 346px;
         display: flex;
+
         li {
             button {
                 font-family: 'Noto Sans KR', sans-serif;
@@ -84,11 +88,13 @@ nav {
                 font-weight: 900;
                 cursor: pointer;
             }
+
             .xi-ellipsis-h:before {
                 content: "\e94a";
                 font-size: 30px;
                 line-height: 0.7;
             }
+
             @include hov_red;
         }
     }
@@ -108,20 +114,25 @@ section {
 
 #introduce_top {
     margin-bottom: 130px;
+
     p.minibold {
         @include minibold();
         text-decoration: underline;
     }
+
     p.caption_l {
         @include caption_l();
     }
+
     b {
         font-weight: bold;
     }
+
     .myself {
         @include text();
         margin-bottom: 36px;
     }
+
     .gols_img {
         margin: auto;
         width: 820px;
@@ -129,19 +140,23 @@ section {
         background: $gray;
         margin-bottom: 17px;
     }
+
     .gols_words {
         position: relative;
         width: 820px;
         display: flex;
         margin: 0 auto;
         justify-content: center;
+
         .gols_words_in {
             width: 33.3%;
+
             p {
                 &:nth-of-type(1) {
                     @include minibold();
                     margin: 0px;
                 }
+
                 &:nth-of-type(2) {
                     @include text();
                     margin: 0px;
@@ -154,27 +169,33 @@ section {
 
 #introduce_bottom {
     margin-bottom: 130px;
+
+    .slick-items {
+        width: 820px;
+        height: 280px;
+        margin: 0 auto;
+        background: pink;
+    }
+
     #profile {
         width: 820px;
+        height: 280px;
         margin: 0 auto;
         text-align: center;
-        display: flex;
-        justify-content: center;
         position: relative;
-        .profile-img {
-            width: 100%;
-            height: 280px;
-            background: url('/img/port1.jpg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 130%;
-        }
+
         .profile-img:hover~.profile-words {
             opacity: 0;
         }
+
+        #profile {
+            position: relative;
+        }
+
         .profile-words {
             position: absolute;
             left: 0vw;
+            bottom: 0;
             opacity: 1;
             color: black;
             display: flex;
@@ -186,33 +207,40 @@ section {
             background: rgba(255, 255, 255, 0.16);
             transition: 0.2s;
             backdrop-filter: blur(4px);
+
             p:nth-of-type(1) {
                 font-weight: 500;
             }
+
             p:nth-of-type(2) {
                 @include minibold();
                 margin: 0;
                 text-align: justify;
             }
+
             p:nth-of-type(3) {
                 @include minibold();
                 margin-top: 22px;
                 text-align: justify;
                 font-size: 14;
             }
+
             p:nth-of-type(4) {
                 margin-top: 12px;
             }
+
             p:nth-of-type(5) {
                 margin-top: 12px;
                 font-weight: 500;
             }
         }
     }
+
     .resume {
         ul:hover .resume-boxes {
             opacity: 0;
         }
+
         .resume-boxes {
             position: absolute;
             right: 0;
@@ -225,6 +253,7 @@ section {
             height: 100%;
             transition: 0.2s;
         }
+
         ul {
             display: flex;
             justify-content: center;
@@ -235,15 +264,18 @@ section {
             background: url('/img/5.jpg') center;
             background-position: center;
             position: relative;
+
             .resume-sub {
                 color: white;
                 flex: 1;
                 @include minibold();
                 margin-top: 0px;
                 text-align: justify;
+
                 ol {
                     padding: 20px;
                     ;
+
                     li {
                         color: rgb(146, 146, 146);
                         font-family: 'Noto Sans KR', sans-serif;
@@ -284,23 +316,28 @@ footer {
     height: 100px;
     z-index: 2;
     color: black;
+
     .footer-assets-left {
         display: flex;
         margin-left: 50px;
         align-items: center;
         cursor: default;
+
         .footer-content {
             margin-left: 16px;
             text-align: left;
+
             b {
                 font-weight: bold;
             }
         }
     }
+
     .footer-assets-right {
         display: flex;
         align-items: center;
         margin-right: 50px;
+
         .contect-me {
             display: block;
             height: 60%;
@@ -311,8 +348,10 @@ footer {
             cursor: pointer;
             font-weight: 700;
         }
+
         .footer-close {
             cursor: pointer;
+
             i {
                 font-size: 28px;
             }

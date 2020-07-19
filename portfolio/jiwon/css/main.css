@@ -123,28 +123,29 @@ section:nth-of-type(3) {
 #introduce_bottom {
   margin-bottom: 130px;
 }
+#introduce_bottom .slick-items {
+  width: 820px;
+  height: 280px;
+  margin: 0 auto;
+  background: pink;
+}
 #introduce_bottom #profile {
   width: 820px;
+  height: 280px;
   margin: 0 auto;
   text-align: center;
-  display: flex;
-  justify-content: center;
   position: relative;
-}
-#introduce_bottom #profile .profile-img {
-  width: 100%;
-  height: 280px;
-  background: url("/img/port1.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 130%;
 }
 #introduce_bottom #profile .profile-img:hover ~ .profile-words {
   opacity: 0;
 }
+#introduce_bottom #profile #profile {
+  position: relative;
+}
 #introduce_bottom #profile .profile-words {
   position: absolute;
   left: 0vw;
+  bottom: 0;
   opacity: 1;
   color: black;
   display: flex;
