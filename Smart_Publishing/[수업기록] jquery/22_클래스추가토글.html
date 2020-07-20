@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(function() {
+            $('button').eq(0).click(function() {
+                $('p').eq(0).addClass('red');
+            })
+            $('button').eq(1).click(function() {
+                $('p').removeClass('red');
+            })
+        })
+        $(function() {
+            $('button').eq(2).click(function() {
+                $('p').toggleClass('red');
+            })
+            $('button').eq(3).click(function() {
+                var isClass = $('p').hasClass('red');
+                $('p').eq(1).text(isClass);
+            })
+        })
+    </script>
+    <style>
+        .red {
+            background: red;
+        }
+        
+        .blue {
+            background: blue;
+        }
+        
+        .green {
+            background: green;
+        }
+        
+        .lime {
+            background: lime;
+        }
+        
+        .pink {
+            background: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <button>클래스추가</button>
+    <button>클래스제거</button>
+    <button>클래스토글</button>
+    <button>클래스존재여부</button> -->
+    <hr>
+    <button>addClass</button>
+    <button>removeClass</button>
+    <button>toggleClass</button>
+    <p>red</p>
+    <p>blue</p>
+    <p>green</p>
+    <p>lime</p>
+    <p>pink</p>
+    <script>
+        var i = 0;
+        $('button').each(function() {
+            $(this).click(function() {
+                var html = $(this).html();
+                var p = $('p').eq(i).html();
+                var exec = `$('p').${html}(p)`;
+                eval(exec);
+                i++;
+            })
+        })
+    </script>
+</body>
+
+</html>

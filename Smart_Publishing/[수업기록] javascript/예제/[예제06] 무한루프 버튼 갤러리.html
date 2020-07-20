@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background: rgba(14, 13, 13, 0.829);
+            font-family: '돋움';
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        #photo {
+            text-align: center;
+        }
+        
+        img {
+            border-radius: 20px;
+        }
+        
+        #photo_list ul {
+            width: 2000px;
+            overflow: hidden;
+            margin: auto;
+            transition: 0.5s;
+        }
+        
+        #photo_list {
+            width: 300px;
+            height: 100px;
+            margin: 10px auto;
+            overflow: hidden;
+        }
+        
+        #photo_list ul li {
+            width: 100px;
+            float: left;
+            height: 100px;
+        }
+        
+        #photo_list ul li img {
+            width: 100px;
+            height: 100%;
+        }
+        
+        #btns {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+        
+        .btn_wrap a {
+            width: 45px;
+            height: 45px;
+            display: block;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 30px;
+            color: rgba(36, 36, 36, 0.658);
+            margin: 0 30px;
+            border-radius: 50%;
+            background: rgb(255, 255, 255);
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="gallery">
+        <h1>사진 갤러리</h1>
+        <p id="photo"><img src="/img/1.jpg" alt="큰 사진" width="500"></p>
+    </div>
+    <div id="photo_list">
+        <ul id="inner_list">
+            <li>
+                <a href="/img/1.jpg"><img src="/img/1.jpg" alt="큰 사진"></a>
+            </li>
+            <li>
+                <a href="/img/2.jpg"><img src="/img/2.jpg" alt="큰 사진"></a>
+            </li>
+            <li>
+                <a href="/img/3.jpg"><img src="/img/3.jpg" alt="큰 사진"></a>
+            </li>
+            <li>
+                <a href="/img/4.jpg"><img src="/img/4.jpg" alt="큰 사진"></a>
+            </li>
+            <li>
+                <a href="/img/5.jpg"><img src="/img/5.jpg" alt="큰 사진"></a>
+            </li>
+            <li>
+                <a href="/img/6.jpg"><img src="/img/6.jpg" alt="큰 사진"></a>
+            </li>
+            <li>
+                <a href="/img/7.jpg"><img src="/img/7.jpg" alt="큰 사진"></a>
+            </li>
+            <li>
+                <a href="/img/8.jpg"><img src="/img/8.jpg" alt="큰 사진"></a>
+            </li>
+        </ul>
+    </div>
+    <div id="btns">
+        <p class="btn_wrap"><a href="#" id="before_btn"> &lt; </a></p>
+        <p class="btn_wrap"><a href="#" id="next_btn"> &gt; </a></p>
+    </div>
+    <script>
+        var list_zone = document.getElementById('inner_list'); //ul
+        var list_a = list_zone.getElementsByTagName('a') //a태그
+        var num = 0 // num은 올랐다 줄었다
+        for (var i = 0; i < list_a.length; i++) {
+            list_a[i].onclick = function() {
+                var ph = document.getElementById('photo').children[0];
+                ph.src = this.href;
+                return false;
+            }
+        }
+
+        // 오른쪽 버튼
+        var n_btn = document.getElementById('next_btn');
+        n_btn.onclick = function() {
+                if (num >= list_a.length - 3) {
+                    num--;
+                    list_zone.append(list_zone.children[0]); //첫번째 li태그를 뒤에다 이어서 붙인다
+
+                } else {
+                    num++;
+                    list_zone.style.marginLeft = -100 * num + 'px';
+                    return false;
+                }
+            }
+            //왼쪽 버튼
+        var b_btn = document.getElementById('before_btn');
+        b_btn.onclick = function() {
+            if (num <= 0) {
+                num++;
+                list_zone.prepend(list_zone.children[7]); //마지막 li태그를 앞에다 이어서 붙인다
+            } else {
+                num--;
+                list_zone.style.marginLeft = -100 * num + 'px';
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

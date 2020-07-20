@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    </script>
+    </head>
+
+    <body>
+        <form id="my-form">
+            <label for="name">이름</label><br/>
+            <input type="text" name="name" id="name" /><br/>
+            <label for="pass">비밀번호</label><br/>
+            <input type="password" name="pass" id="pass" /><br/>
+            <label for="pass-check">비밀번호 확인</label><br/>
+            <input type="password" id="pass-check" /><br/>
+            <input type="submit" value="제출" />
+        </form>
+        <script>
+            document.getElementById('my-form').onsubmit = function() {
+                var pass = document.getElementById('pass').value;
+                var passCheck = document.getElementById('pass-check').value;
+                // if (pass == passCheck) {
+                //     return true;
+                // } else {
+                //     alert('비밀번호 확인문자가 다릅니다');
+                //     return false;
+                // }
+                var name = document.querySelector('#name');
+                var value = name.value;
+
+                if (value.replace(/[가-힣]/g, "").length == 0) {
+                    //한글은 공백으로 처리. 길이가 0이면 한글만 있는 상태
+                    alert(value + '님 과정을 진행합니다');
+                } else {
+                    alert('한글을 입력하세요');
+                    event.preventDefault();
+                }
+            }
+        </script>
+    </body>
+
+</html>

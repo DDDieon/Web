@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #nav {
+            width: 800px
+        }
+        
+        #nav ul {
+            display: flex;
+        }
+        
+        #nav ul li {
+            flex: 1;
+            list-style: none;
+        }
+        
+        #nav ul li a {
+            display: block;
+            height: 30px;
+            width: 100%;
+            background: #ccc;
+            color: #000;
+            text-decoration: none;
+            text-align: center;
+        }
+        
+        #nav ul li.on>a {
+            font-weight: bold;
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>1depth 메뉴 구현하기</h1>
+    <div id="nav">
+        <ul>
+            <li class="on"><a href="#">menu1</a></li>
+            <li><a href="javascript:void(0)">menu2</a></li>
+            <li><a href="javascript:void(0)">menu3</a></li>
+            <li><a href="javascript:void(0)">menu4</a></li>
+        </ul>
+    </div>
+
+    <h1>index : <span></span></h1>
+</body>
+<script>
+    var uls = [
+        'http://www.daum.net',
+        'http://www.naver.com',
+        'http://www.nate.com',
+        'http://www.google.co.kr'
+    ]
+    var menu = $('#nav>ul>li');
+
+    menu.click(function() {
+        // var index = $(this).index(); 클릭한 객체의 인덱스 값. nth-child식으로 다른태그까지 순서에 포함안함
+        var index = menu.index(this); //li중에서 클릭한 인덱스의 값. nth-of-type으로 다른태그까지 순서에 포함한다
+        $('h1 span').html(index);
+    });
+
+    menu.mouseover(function() {
+        $(this).addClass("on");
+    })
+    menu.mouseout(function() {
+        $(this).removeClass("on");
+    })
+    menu.click(function() {
+        event.preventDefault;
+        var index = $(this).index();
+        location.href = uls[index];
+    })
+</script>
+
+</html>

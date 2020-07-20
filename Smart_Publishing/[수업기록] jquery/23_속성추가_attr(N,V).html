@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body>
+    <img src="/img/card1.jpg" alt="">
+    <img src="/img/card1.jpg" alt="">
+    <img src="/img/card1.jpg" alt="">
+    <input type="text">
+    <script>
+        $('img').attr('width', 200); //setAttribute 세터
+        var src = $('img').attr('src') // setAttribute 게터
+        var text = '<h4>' + src + '</h4>';
+        $(text).appendTo('body');
+
+        $('img').attr('width', function(index) { //attr에 들어갈 수 있는 매개변수는 종류가 정해져 있다
+            return (index + 1) * 100;
+        })
+    </script>
+    <script>
+        $('input').attr('value', '이름을 입력하시오');
+    </script>
+</body>
+
+</html>

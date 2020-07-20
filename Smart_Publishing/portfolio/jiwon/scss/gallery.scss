@@ -31,16 +31,29 @@ $red: #ffa4b1;
         animation: gallery_animation 0.5s ease-out;
         position: relative;
         margin: 0 auto;
-        padding: 60px 0;
+        padding: 16vh 0;
         width: 93%;
         height: 100%;
         color: $red;
         .gallery_header {
-            font-size: 35px;
+            i {
+                font-size: 35px;
+                color: $red;
+            }
             p {
                 position: absolute;
                 left: 0;
                 top: 60px;
+                &:nth-of-type(2) {
+                    margin-left: 80px;
+                    strong {
+                        display: inline-block;
+                        font-size: 20px;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                        line-height: 40px;
+                    }
+                }
             }
             button {
                 position: absolute;
@@ -51,32 +64,21 @@ $red: #ffa4b1;
                 cursor: pointer;
             }
         }
-        .gallery_header-in {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 50px;
-            p {
-                &:nth-child(1) {
-                    margin-left: 150px;
-                    flex: 1;
-                }
-                &:nth-child(2) {
-                    flex: 7;
-                }
-            }
-        }
         .carousel_wrap {
             .carousel_stage {
                 width: calc(630 * 5);
                 ul {
-                    display: flex;
+                    width: 5000px;
+                    overflow: hidden;
                     cursor: move;
                     li {
+                        float: left;
                         position: relative;
                         padding-left: 12px;
                         padding: 15px;
                         .c-imgs {
                             overflow: hidden;
+                            height: 600px;
                             img {
                                 display: block;
                             }
@@ -84,10 +86,10 @@ $red: #ffa4b1;
                         .c_words {
                             background: $gray;
                             position: absolute;
-                            bottom: -120px;
+                            bottom: -80px;
                             right: 0;
                             left: 0;
-                            padding: 18px;
+                            padding: 30px;
                             transition: 0.5s;
                             h5 {
                                 display: flex;
@@ -117,7 +119,7 @@ $red: #ffa4b1;
                     }
                     li:hover {
                         .c_words {
-                            bottom: 0px;
+                            bottom: -30px;
                             .c_words_sub2,
                             .c_words_sub3 {
                                 opacity: 1;

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body>
+    <h1>index에 대해서</h1>
+    <dl>
+        <dt>사과</dt>
+        <dt>영어로애플</dt>
+        <dt>딸기</dt>
+    </dl>
+    </dl>
+    </dl>
+    <p></p>
+</body>
+<script>
+    $('dl dt').click(function() {
+        var index = $(this).index(); //this에서 인덱스를 고르면 잡스러운게 딸릴지도
+        var index2 = $('dl dt').index(this); //정확히 태그명 지정해주고 이것의 인덱스를 찾으라면 쫄아서 잘찾아줌
+        var text = $(this).html();
+        var out = text + 'index = ' + index + 'index2=' + index2;
+        $('p').html(out);
+        $('<h2>' + out + '</h2>').appendTo('body');
+    })
+</script>
+
+</html>

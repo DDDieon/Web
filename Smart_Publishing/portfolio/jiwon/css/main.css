@@ -1,13 +1,13 @@
 @charset "UTF-8";
-/*변수값*/
+/*SCSS 변수값 저장*/
+/*CSS 변경*/
 body {
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.7) url("/img/marble.jpg") no-repeat center center fixed;
+  background: url("/img/marbling.jpg") no-repeat center center fixed;
   min-height: 100%;
   background-position: center;
   background-size: cover;
-  background-blend-mode: soft-light;
   font-family: "Noto Sans KR", sans-serif;
 }
 body p {
@@ -18,10 +18,21 @@ body p {
 }
 
 nav {
+  margin: 0 auto;
+  text-align: center;
   position: relative;
-  display: flex;
-  justify-content: center;
   margin-top: 175px;
+}
+nav::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+nav .logobox {
+  display: inline-block;
+}
+nav .nav_list {
+  display: inline-block;
 }
 nav .logobox a {
   font-family: "Russo One", sans-serif;
@@ -34,13 +45,19 @@ nav .logobox a {
 }
 nav .nav_list ul {
   margin-left: 346px;
-  display: flex;
+  background: transparent;
+  overflow: hidden;
+}
+nav .nav_list ul li {
+  float: left;
 }
 nav .nav_list ul li button {
   font-family: "Noto Sans KR", sans-serif;
   display: block;
+  outline: none;
   padding: 15px;
   font-weight: 900;
+  text-align: center;
   cursor: pointer;
 }
 nav .nav_list ul li .xi-ellipsis-h:before {
@@ -52,58 +69,62 @@ nav .nav_list ul li:hover {
   color: #ffa4b1;
 }
 
-section #introduce_top {
+#Introduce-Wrap {
+  margin-bottom: 300px;
+}
+
+#introduce_top {
   margin-bottom: 130px;
 }
-section #introduce_top p.minibold {
+#introduce_top p.minibold {
   font-family: Russo One !important;
   font-size: 18px;
   text-align: center;
   margin-top: 220px;
   text-decoration: underline;
 }
-section #introduce_top p.caption_l {
+#introduce_top p.caption_l {
   font-family: "Raleway", sans-serif !important;
   text-align: center;
   letter-spacing: 16px;
   font-size: 40px;
   margin-bottom: 8px;
 }
-section #introduce_top b {
+#introduce_top b {
   font-weight: bold;
 }
-section #introduce_top .myself {
+#introduce_top .myself {
   font-family: "Noto Sans KR", sans-serif !important;
   font-weight: 300;
   text-align: center;
   font-style: 12px;
   margin-bottom: 36px;
 }
-section #introduce_top .gols_img {
+#introduce_top .gols_img {
   margin: auto;
   width: 820px;
   height: 255px;
   background: #2c2929;
   margin-bottom: 17px;
 }
-section #introduce_top .gols_words {
+#introduce_top .gols_words {
   position: relative;
   width: 820px;
-  display: flex;
   margin: 0 auto;
-  justify-content: center;
+  text-align: center;
 }
-section #introduce_top .gols_words .gols_words_in {
-  width: 33.3%;
+#introduce_top .gols_words .gols_words_in {
+  width: 33%;
+  display: inline-block;
 }
-section #introduce_top .gols_words .gols_words_in p:nth-of-type(1) {
+#introduce_top .gols_words .gols_words_in p:nth-of-type(1) {
   font-family: Russo One !important;
   font-size: 18px;
   text-align: center;
   margin-top: 220px;
   margin: 0px;
 }
-section #introduce_top .gols_words .gols_words_in p:nth-of-type(2) {
+#introduce_top .gols_words .gols_words_in p:nth-of-type(2) {
   font-family: "Noto Sans KR", sans-serif !important;
   font-weight: 300;
   text-align: center;
@@ -111,81 +132,53 @@ section #introduce_top .gols_words .gols_words_in p:nth-of-type(2) {
   margin: 0px;
   padding: 4px;
 }
-section #introduce_bottom {
+
+#introduce_bottom {
   margin-bottom: 130px;
 }
-section #introduce_bottom #profile {
+#introduce_bottom .slick-items {
   width: 820px;
+  height: 280px;
+  margin: 0 auto;
+  background: pink;
+}
+#introduce_bottom .slick-items::before {
+  color: dimgray;
+}
+#introduce_bottom #profile {
+  width: 820px;
+  height: 280px;
   margin: 0 auto;
   text-align: center;
-  display: flex;
-  justify-content: center;
   position: relative;
 }
-section #introduce_bottom #profile .profile-img {
-  width: 100%;
-  height: 280px;
-  background: url("/img/port1.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 130%;
-}
-section #introduce_bottom #profile .profile-img:hover ~ .profile-words {
+#introduce_bottom #profile .profile-img:hover ~ .profile-words {
   opacity: 0;
 }
-section #introduce_bottom #profile .profile-words {
+#introduce_bottom #profile #profile {
+  position: relative;
+}
+#introduce_bottom .resume ul:hover .resume-boxes {
+  opacity: 0;
+}
+#introduce_bottom .resume .resume-boxes {
   position: absolute;
-  left: 0vw;
+  right: 0;
   opacity: 1;
   color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 280px;
-  height: 280px;
-  background: rgba(255, 255, 255, 0.8);
+  height: 100%;
   transition: 0.2s;
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
 }
-section #introduce_bottom #profile .profile-words p:nth-of-type(1) {
-  font-weight: 500;
-}
-section #introduce_bottom #profile .profile-words p:nth-of-type(2) {
-  font-family: Russo One !important;
-  font-size: 18px;
-  text-align: center;
-  margin-top: 220px;
-  margin: 0;
-  text-align: justify;
-}
-section #introduce_bottom #profile .profile-words p:nth-of-type(3) {
-  font-family: Russo One !important;
-  font-size: 18px;
-  text-align: center;
-  margin-top: 220px;
-  margin-top: 22px;
-  text-align: justify;
-  font-size: 14;
-}
-section #introduce_bottom #profile .profile-words p:nth-of-type(4) {
-  margin-top: 12px;
-}
-section #introduce_bottom #profile .profile-words p:nth-of-type(5) {
-  margin-top: 12px;
-  font-weight: 500;
-}
-section #introduce_bottom .resume ul {
-  display: flex;
-  justify-content: center;
+#introduce_bottom .resume ul {
   width: 820px;
   padding: 30px;
   margin: auto;
-  flex-direction: column;
-  background: #2c2929;
+  background: url("/img/5.jpg") center;
+  background-position: center;
+  position: relative;
 }
-section #introduce_bottom .resume ul .resume-sub {
+#introduce_bottom .resume ul .resume-sub {
   color: white;
   flex: 1;
   font-family: Russo One !important;
@@ -195,10 +188,10 @@ section #introduce_bottom .resume ul .resume-sub {
   margin-top: 0px;
   text-align: justify;
 }
-section #introduce_bottom .resume ul .resume-sub ol {
+#introduce_bottom .resume ul .resume-sub ol {
   padding: 20px;
 }
-section #introduce_bottom .resume ul .resume-sub ol li {
+#introduce_bottom .resume ul .resume-sub ol li {
   color: #929292;
   font-family: "Noto Sans KR", sans-serif;
   cursor: default;
@@ -208,10 +201,98 @@ section #introduce_bottom .resume ul .resume-sub ol li {
   text-indent: 5px;
 }
 
+section:nth-of-type(3) {
+  background: gray;
+}
+
+#Project-Wrap .minibold {
+  font-family: Russo One !important;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 220px;
+  text-decoration: underline;
+  margin-top: 0;
+  padding-top: 110px;
+}
+#Project-Wrap div.project-1 {
+  height: 100vh;
+  width: 100%;
+}
+#Project-Wrap .project p.koreanTitle {
+  font-size: 14px;
+  font-weight: 400;
+}
+#Project-Wrap .project h2.EnglishTitle {
+  font-family: Russo One;
+  font-size: 42px;
+  margin-bottom: 46px;
+}
+#Project-Wrap .project .project-assets {
+  display: table;
+  margin: 0 auto;
+  width: 820px;
+}
+#Project-Wrap .project .project-assets .project-title {
+  width: 320px;
+  height: 500px;
+  display: table-cell;
+}
+#Project-Wrap .project .project-assets .project-title .tips {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+#Project-Wrap .project .project-assets .project-title .tips span {
+  float: left;
+  font-weight: 900;
+}
+#Project-Wrap .project .project-assets .project-title .tips p {
+  float: left;
+  margin-left: 30px;
+  font-weight: 300;
+  text-align: right;
+}
+#Project-Wrap .project .project-assets .project-title .tips i {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  border: 2px solid black;
+}
+#Project-Wrap .project .project-assets .project-title .tips i:first-of-type {
+  margin-left: 30px;
+}
+#Project-Wrap .project .project-assets .project-title .tips i:nth-of-type(1) {
+  background: #1B50A0;
+}
+#Project-Wrap .project .project-assets .project-title .tips i:nth-of-type(2) {
+  background: #FFDB00;
+}
+#Project-Wrap .project .project-assets .project-title .articleBtns button {
+  font-family: Russo One !important;
+  font-size: 18px;
+  height: 32px;
+  background: #000000;
+  border-radius: 12px;
+  padding: 5px 19px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 2px 8px -1px rgba(21, 25, 36, 0.32);
+}
+#Project-Wrap .project .project-assets .project-img {
+  display: table-cell;
+  vertical-align: middle;
+  background: pink;
+  width: 500px;
+  margin-left: 13px;
+}
+#Project-Wrap .assets-subtitle {
+  background: black;
+  color: white;
+  text-align: center;
+}
+
 footer {
   position: fixed;
-  display: flex;
-  justify-content: space-between;
   bottom: 0;
   left: 0;
   right: 0;
@@ -222,9 +303,12 @@ footer {
   height: 100px;
   z-index: 2;
   color: black;
+  overflow: hidden;
 }
 footer .footer-assets-left {
+  float: left;
   display: flex;
+  margin-top: 22px;
   margin-left: 50px;
   align-items: center;
   cursor: default;
@@ -237,14 +321,16 @@ footer .footer-assets-left .footer-content b {
   font-weight: bold;
 }
 footer .footer-assets-right {
+  float: right;
   display: flex;
   align-items: center;
+  margin-top: 22px;
   margin-right: 50px;
 }
 footer .footer-assets-right .contect-me {
   display: block;
   height: 60%;
-  padding: 0 50px;
+  padding: 10px 50px;
   border: 2px #2c2929 solid;
   border-radius: 16px;
   margin-right: 16px;
