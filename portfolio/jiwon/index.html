@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- <script>
+        function hideDiv() {
+            document.getElementById("bording").style.display = "none";
+        }
+        self.setTimeout("hideDiv()", 2000); // 초 지정
+    </script> -->
 
 <head>
     <meta charset="UTF-8">
@@ -14,16 +20,15 @@
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
     <script src="js/slick/slick.js"></script>
-    <!-- <script>
-        function hideDiv() {
-            document.getElementById("bording").style.display = "none";
-        }
-        self.setTimeout("hideDiv()", 2000); // 초 지정
-    </script> -->
+    <script src="js/html5shiv/src/html5shiv.js"></script>
+
     <!--challenge 1: SCSS 로 스타일 설정하기 -->
     <!--challenge 2: REM으로 글꼴 크기 조절하기 -->
-    <!--challenge 3: jquery 실습3 참고해서 리모콘 만들기 + dragable기능 넣기 -->
-    <!-- basic CSS -->
+    <!--challenge 3: jquery 실습3 참고해서 리모콘 만들기-->
+    <!-- 코드펜 -->
+    <!-- 성장트리 -->
+
+    <!-- Based CSS -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/base.css">
     <!-- SCSS compiled -->
@@ -42,11 +47,8 @@
         <div id="gallery-wrap">
             <div class="gallery_header">
                 <p><i class="xi-bookmark"></i></p>
+                <p><strong>T.M.I 갤러리 / Too-Much-Information Gallery</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 전지원이라는 한 명의 사람에 대해 미처 밝히지 못한 이야기들!</p>
                 <button class="gallery__close" onclick="closeGallery()"><i class="xi-close-circle-o"></i></button>
-            </div>
-            <div class="gallery_header-in">
-                <p>(6) Internal Works<br>©2020 <small>c/o</small> BASIC®</p>
-                <p>A collection of internal project and initiatives under the BASIC® brand.</p>
             </div>
             <div class="carousel_wrap">
                 <div id="dragdiv" class="carousel_stage">
@@ -55,59 +57,47 @@
                             <div class="c-imgs"><img src="/img/gallery01.jpg" alt=""></div>
                             <div class="c_words">
                                 <h5>깃허브<span>Git hub</span></h5>
-                                <p class="c_words_sub1">2020년 07월 29일부터 꾸준하게 커밋중</p>
-                                <p class="c_words_sub2">To help strengthen our culture and attract world class talent,
-                                    we created the Culture Manual – an online guide for new hires that differentiates
-                                    the employee onboarding process and builds alignment for our collective future.
+                                <p class="c_words_sub1">2020년 07월 29일부터 꾸~준하게 커밋중!</p>
+                                <p class="c_words_sub2">꾸준함을 이기는 힘은 없다고 생각합니다.<br>1일 1커밋을 목표로 지금까지 달려오고 있습니다.
                                 </p>
                                 <p class="c_words_sub3">
-                                    <a href="https://culture.basicagency.com/" target="_blank"
-                                        rel="noreferrer noopener"><br>Visit the Site</a>
+                                    <a href="https://culture.basicagency.com/" target="_blank" rel="noreferrer noopener"><br>Visit the Site</a>
                                 </p>
                             </div>
                         </li>
                         <li id="c_item" class="carousel_item_2">
                             <div class="c-imgs"><img src="/img/gallery02.jpg" alt=""></div>
                             <div class="c_words">
-                                <h5>Culture Manual®<span>©2018</span></h5>
-                                <p class="c_words_sub1">Agency Culture &amp; Onboarding</p>
-                                <p class="c_words_sub2">To help strengthen our culture and attract world class talent,
-                                    we created the Culture Manual – an online guide for new hires that differentiates
-                                    the employee onboarding process and builds alignment for our collective future.
+                                <h5>비캔버스<span>BeeCanvas</span></h5>
+                                <p class="c_words_sub1">지금까지 어떻게 공부를 해왔을까요?</p>
+                                <p class="c_words_sub2">재사용성을 위해 코드들을 정리하듯, 지식의 재사용성을 위해서도 메모가 꼭 필요하지 않을까요?<br>비캔버스는 클라우드 서버방식의 협업툴에서 시작되었지만, 지금은 어디서나 읽고 쓰기가 편리한 공부용 메모툴로 자리매김했습니다.
                                 </p>
                                 <p class="c_words_sub3">
-                                    <a href="https://culture.basicagency.com/" target="_blank"
-                                        rel="noreferrer noopener"><br>Visit the Site</a>
+                                    <a href="https://culture.basicagency.com/" target="_blank" rel="noreferrer noopener"><br>Visit the Site</a>
                                 </p>
                             </div>
                         </li>
                         <li id="c_item " class="carousel_item_3 ">
                             <div class="c-imgs"><img src="/img/gallery03.jpg" alt=""></div>
                             <div class="c_words">
-                                <h5>Culture Manual®<span>©2018</span></h5>
-                                <p class="c_words_sub1">Agency Culture &amp; Onboarding</p>
-                                <p class="c_words_sub2">To help strengthen our culture and attract world class talent,
-                                    we created the Culture Manual – an online guide for new hires that differentiates
-                                    the employee onboarding process and builds alignment for our collective future.
+                                <h5>모션 그래픽<span>Motion graphic</span></h5>
+                                <p class="c_words_sub1">숱한 대외활동을 통해 습득한 영상제작 능력</p>
+                                <p class="c_words_sub2">To help strengthen our culture and attract world class talent, we created the Culture Manual – an online guide for new hires that differentiates the employee onboarding process and builds alignment for our collective future.
                                 </p>
                                 <p class="c_words_sub3">
-                                    <a href="https://culture.basicagency.com/" target="_blank"
-                                        rel="noreferrer noopener"><br>Visit the Site</a>
+                                    <a href="https://culture.basicagency.com/" target="_blank" rel="noreferrer noopener"><br>Visit the Site</a>
                                 </p>
                             </div>
                         </li>
                         <li id="c_item" class="carousel_item_4 ">
                             <div class="c-imgs"><img src="/img/gallery04.jpg" alt=""></div>
                             <div class="c_words">
-                                <h5>Culture Manual®<span>©2018</span></h5>
+                                <h5>이미지 아트워크들<span>©2018</span></h5>
                                 <p class="c_words_sub1">Agency Culture &amp; Onboarding</p>
-                                <p class="c_words_sub2">To help strengthen our culture and attract world class talent,
-                                    we created the Culture Manual – an online guide for new hires that differentiates
-                                    the employee onboarding process and builds alignment for our collective future.
+                                <p class="c_words_sub2">To help strengthen our culture and attract world class talent, we created the Culture Manual – an online guide for new hires that differentiates the employee onboarding process and builds alignment for our collective future.
                                 </p>
                                 <p class="c_words_sub3">
-                                    <a href="https://culture.basicagency.com/" target="_blank"
-                                        rel="noreferrer noopener"><br>Visit the Site</a>
+                                    <a href="https://culture.basicagency.com/" target="_blank" rel="noreferrer noopener"><br>Visit the Site</a>
                                 </p>
                             </div>
                         </li>
@@ -116,13 +106,10 @@
                             <div class="c_words">
                                 <h5>Culture Manual®<span>©2018</span></h5>
                                 <p class="c_words_sub1">Agency Culture &amp; Onboarding</p>
-                                <p class="c_words_sub2">To help strengthen our culture and attract world class talent,
-                                    we created the Culture Manual – an online guide for new hires that differentiates
-                                    the employee onboarding process and builds alignment for our collective future.
+                                <p class="c_words_sub2">To help strengthen our culture and attract world class talent, we created the Culture Manual – an online guide for new hires that differentiates the employee onboarding process and builds alignment for our collective future.
                                 </p>
                                 <p class="c_words_sub3">
-                                    <a href="https://culture.basicagency.com/" target="_blank"
-                                        rel="noreferrer noopener"><br>Visit the Site</a>
+                                    <a href="https://culture.basicagency.com/" target="_blank" rel="noreferrer noopener"><br>Visit the Site</a>
                                 </p>
                             </div>
                         </li>
@@ -155,8 +142,7 @@
             <div id="introduce_top">
                 <p class="minibold">ABOUT</p>
                 <p class="caption_l">JiWon's <b>3</b> goals</p>
-                <p class="myself">Opticians dedicated to bringing a thoughtful curation of the finest frames from around
-                    the world to Korea.<br> COLLECT는 전문적인 맞춤 서비스와 세계적으로 손꼽히는 <strong>고급 프레임</strong>만으로 갖춰진 큐레이션을 자랑합니다.
+                <p class="myself">Opticians dedicated to bringing a thoughtful curation of the finest frames from around the world to Korea.<br> COLLECT는 전문적인 맞춤 서비스와 세계적으로 손꼽히는 <strong>고급 프레임</strong>만으로 갖춰진 큐레이션을 자랑합니다.
                 </p>
                 <div class="gols_img">
 
@@ -168,11 +154,11 @@
                     </div>
                     <div class="gols_words_in">
                         <p>Skills</p>
-                        <p>HTML, CSS, JAVAScript 등<br>꾸준한 공부를 통해 성장하고 있습니다.<br>구글은 내 친구!</p>
+                        <p>HTML, CSS, JAVAScript 등<br>꾸준하게 공부하며 성장하고 있습니다.<br>BeeCanvas를 통해 확인할 수 있습니다.</p>
                     </div>
                     <div class="gols_words_in">
                         <p>Good Design</p>
-                        <p>Adobe사 프로그램들로<br>아트워크가 가능하며<br>Figma 등 UI툴도 좋아합니다!</p>
+                        <p>Adobe사 프로그램을 이용한<br>이미지제작 및 영상편집은 물론<br>Figma 등 UI툴까지 다룰 수 있습니다</p>
                     </div>
                 </div>
             </div>
@@ -198,10 +184,9 @@
                         <ul>
                             <li class="resume-sub">Carrer
                                 <ol>
-                                    <li>포토샵 외주제작 | 19.01 | 스펙그라운드</li>
-                                    <li>유튜브 영상편집 | 19.04 ~ 19.09 | 이스타아카데미</li>
-                                    <li> 콘텐츠 에디터 | 19.06 ~ 19.09 | (주) 메이비원</li>
-                                    <li> * 활동 시에는 휴학 상태였음</li>
+                                    <li> 경기대학교 졸업 | 2020.02 | 문예창작학과</li>
+                                    <li> 유튜브 영상편집 | 2019.04 ~ 2019.09 | 이스타아카데미 | 휴학 후 학업상의 이유로 중단</li>
+                                    <li> 콘텐츠 에디터 | 2019.06 ~ 2019.09 | (주) 메이비원 | 휴학 후 학업상의 이유로 중단</li>
                                 </ol>
                             </li>
                             <li class="resume-sub">License
@@ -215,8 +200,7 @@
                             <li class="resume-sub">Award
                                 <ol>
                                     <li>2012년 스크린도어 시 공모 (충무로, 불광역 개제)</li>
-                                    <li>
-                                        제 2회 한주소금 마케팅 공모전 UCC부문 장려상 (3위)</li>
+                                    <li>제 2회 한주소금 마케팅 공모전 UCC부문 장려상 (3위)</li>
                                     <li>경기대학교 Dream 공모전 UCC부문 최우수상 (1위)</li>
                                 </ol>
                             </li>
@@ -236,7 +220,7 @@
                     <h2 class="EnglishTitle">IKEA Renewal</h2>
                     <div class="tips">
                         <span>특징</span>
-                        <p>이케아 아이덴티티성을 살려 재구성</p>
+                        <p>모바일-데스크탑을 대응하는 모달창을 구현</p>
                     </div>
                     <div class="tips">
                         <span>뷰포트</span>
@@ -284,8 +268,8 @@
             <div class="footer-icon"><i class="xi-tag"></i></div>
             <div class="footer-content">
                 <p>I’m really looking forward to meeting you in person</p>
-                <b>저에게 관심을 가져주세요 엉엉</b>
-                <p>투명하되 군영과 같이, 노년에게서 이상은 이것이야말로 실현에 우리 피에 황금시대다. 뛰노는 실현에 심장의 것이다. 몸이 어디 실현에 그리하였는가?</p>
+                <b>저라는 사람에게 관심이 있나요?</b>
+                <p>지금 바로 연락주세요! 이메일은 언제든지 열려있습니다.</p>
             </div>
         </div>
         <div class="footer-assets-right">

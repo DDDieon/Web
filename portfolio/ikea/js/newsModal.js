@@ -1,16 +1,8 @@
+//-------- 바닐나JS로 모달창 구현 --------
+
+
 let newsBox1 = document.querySelector('.news_box01');
 let newsModul = document.querySelector('#news_modul');
-
-
-
-// window.onclick = function(event) {
-//  if (newsModul.classList.contains('newsShow')) {
-//     if (!event.target.matches('#news_modul')) {
-//         newsModul.classList.remove('newsShow');
-//         alert('돌');
-//     }
-//     }
-// }
 
 newsBox1.addEventListener('click', function() {
     newsModul.classList.add('newsShow');
@@ -18,7 +10,6 @@ newsBox1.addEventListener('click', function() {
 window.addEventListener('click', function(event) {
     if (!event.target.matches('img', 'div')) {
         newsModul.classList.remove('newsShow');
-        console.log(event.target);
     }
 })
 

@@ -1,9 +1,8 @@
 // scroll event
-$(function () {
+$(function() {
     var btn = $('.nav_list li button');
-    btn.click(function () {
-        event.preventDefault(); // 기본이벤트 x
-        event.stopPropagation(); // 상위전달x
+    btn.click(function() {
+        event.preventDefault ? event.preventDefault() : (event.returnValue = false);
         var i = $(this).parent().index(); // li의 i번째
         if (i == 4) {
             $(this).off;
@@ -20,7 +19,7 @@ $(function () {
 
 // slick slide
 
-$(document).ready(function () {
+$(document).ready(function() {
     $('.slick-items').slick({
         autoplay: true,
         dots: true,
@@ -28,8 +27,8 @@ $(document).ready(function () {
         infinite: true,
         autoplaySpeed: 3000 /* 이미지가 다른 이미지로 넘어 갈때의 텀 */ ,
         arrows: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToShow: 3,
+        slidesToScroll: 3,
         fade: false
     });
 });
@@ -38,6 +37,6 @@ $(document).ready(function () {
 // footer close
 var footerClose = document.getElementById('footerClose');
 var footer = document.getElementById('footer');
-footerClose.onclick = function () {
+footerClose.onclick = function() {
     footer.style.display = 'none';
 }

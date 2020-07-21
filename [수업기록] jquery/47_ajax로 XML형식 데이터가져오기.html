@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Colorbox</title>
+<link rel="stylesheet" href="/css/colorbox3.css">
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="js/colorbox-master/jquery.colorbox.js"></script>
+<style>
+    #images {
+        overflow: hidden;
+    }
+    
+    .flickr_image {
+        float: left;
+    }
+    
+    .flickr_image>img {
+        width: 200px;
+        height: 120px;
+        float: left;
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        $('#search_form').submit(function(event) {
+            // 사진 20개를 서버에서 가져오는 Ajax를 수행합니다.-------------------
+            var url = '';
+            url += 'http://api.flickr.com/services/feeds/photos_public.gne';
+            url += '?jsoncallback=?';
+
+            $.getJSON(url, $(this).serialize(), function(data) {
+                // #div태그를 리셋----------------------
+                $('#images').empty();
+
+                // #images에 image를 추가합니다. --------------------------
+                $.each(data.items, function(i, item) { //data.items는 데이터 속 하나의 객체
+                    // img 태그를 생성합니다.
+                    var $image = $('<img />').attr({
+                        'src': item.media.m
+                    });
+
+                    // a 태그를 생성합니다.
+                    $('<a></a>').attr({
+                        'class': 'flickr_image',
+                        'href': item.media.m,
+                        'rel': 'colorbox'
+                    }).html($image).appendTo('#images');
+                });
+
+                // Colorbox 플러그인을 사용합니다.
+                $('a.flickr_image').colorbox();
+            });
+            // 이벤트 전달과 기본 이벤트를 막습니다.
+            return false;
+        });
+    });
+</script>
+</head>
+
+<body>
+    <h1>Flickr Image Album jQuery Colorbox</h1>
+    <form id="search_form">
+        <input type="text" name="tags" />
+        <input type="hidden" name="format" value="json" />
+        <input type="submit" value="검색" />
+    </form>
+    <div id="images">
+
+    </div>
+</body>
+
+</html>

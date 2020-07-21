@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <style>
+        #box4 {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: rgb(235, 135, 168);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="box4">box4</div>
+    <button>stop(false,false)</button>
+    <!-- 해당 작업만 지움 -->
+    <button>stop(true,false)</button>
+    <!-- clear queue : 쌓여있는 메모리를 비운다 -->
+    <button>stop(false,true)</button>
+    <!-- finish : 빠르게 작업을 중단하고 마지막 상태로 변환 -->
+    <button>stop(true,true)</button>
+</body>
+<script>
+    function 왔다갔다() {
+        $('#box4').animate({
+            left: '500'
+        }, 1000).animate({
+            left: 0
+        }, 1000)
+    }
+    setInterval(왔다갔다, 2000);
+    $('button').click(function() {
+        var html = $(this).html();
+        var text = "$('#box4')." + html;
+        eval(text);
+    })
+</script>
+
+</html>

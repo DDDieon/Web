@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/colorbox3.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/colorbox-master/jquery.colorbox.js"></script>
+    <title>Document</title>
+    <script>
+        $(function() {
+            $('a.lightbox').colorbox();
+        })
+    </script>
+</head>
+
+<body>
+    <h1>라이트박스 color box 사용하기</h1>
+    <a href="/img/img1.jpg" rel="lightbox" class="lightbox" title="안녕하세용">그림1</a>
+    <a href="/img/img2.jpg" rel="lightbox" class="lightbox" title="안녕하세용">그림2</a>
+    <a href="/img/img3.jpg" rel="lightbox" class="lightbox" title="안녕하세용">그림3</a>
+    <a href="/img/img4.jpg" rel="lightbox" class="lightbox" title="안녕하세용">그림4</a>
+    <a href="/img/img5.jpg" rel="lightbox" class="lightbox" title="안녕하세용">그림5</a>
+    <a href="/img/card1.jpg" rel="lightbox" class="lightbox" title="안녕하세용">그림6</a>
+
+    <a id="colorbox" href="#dialog">다이어로그 열기</a>
+    <!-- 다이어로그 -->
+    <div id="dialogs" style="display:none">
+        <div id="dialog">
+            <h1>오픈 다이어로그</h1>
+            <p>welcome to my world!!!!!! welcome to my world!!!!!!welcome to my world!!!!!!welcome to my world!!!!!!welcome to my world!!!!!!welcome to my world!!!!!!welcome to my world!!!!!!v welcome to my world!!!!!!</p>
+        </div>
+    </div>
+    <script>
+        $('a').colorbox({
+            inline: true,
+            opacity: 0.1,
+            width: 500,
+            height: 400,
+            transition: 'fade',
+        })
+    </script>
+</body>
+
+</html>

@@ -21,7 +21,7 @@
   animation: gallery_animation 0.5s ease-out;
   position: relative;
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 16vh 0;
   width: 93%;
   height: 100%;
   color: #ffa4b1;
@@ -36,13 +36,24 @@
     left: 0;
   }
 }
-#gallery-body #gallery-wrap .gallery_header {
+#gallery-body #gallery-wrap .gallery_header i {
   font-size: 35px;
+  color: #ffa4b1;
 }
 #gallery-body #gallery-wrap .gallery_header p {
   position: absolute;
   left: 0;
   top: 60px;
+}
+#gallery-body #gallery-wrap .gallery_header p:nth-of-type(2) {
+  margin-left: 80px;
+}
+#gallery-body #gallery-wrap .gallery_header p:nth-of-type(2) strong {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 40px;
 }
 #gallery-body #gallery-wrap .gallery_header button {
   position: absolute;
@@ -52,26 +63,16 @@
 #gallery-body #gallery-wrap .gallery_header button {
   cursor: pointer;
 }
-#gallery-body #gallery-wrap .gallery_header-in {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 3vh;
-}
-#gallery-body #gallery-wrap .gallery_header-in p:nth-child(1) {
-  margin-left: 150px;
-  flex: 1;
-}
-#gallery-body #gallery-wrap .gallery_header-in p:nth-child(2) {
-  flex: 7;
-}
 #gallery-body #gallery-wrap .carousel_wrap .carousel_stage {
   width: calc(630 * 5);
 }
 #gallery-body #gallery-wrap .carousel_wrap .carousel_stage ul {
-  display: flex;
+  width: 5000px;
+  overflow: hidden;
   cursor: move;
 }
 #gallery-body #gallery-wrap .carousel_wrap .carousel_stage ul li {
+  float: left;
   position: relative;
   padding-left: 12px;
   padding: 15px;
@@ -89,7 +90,7 @@
   bottom: -80px;
   right: 0;
   left: 0;
-  padding: 18px;
+  padding: 30px;
   transition: 0.5s;
 }
 #gallery-body #gallery-wrap .carousel_wrap .carousel_stage ul li .c_words h5 {
