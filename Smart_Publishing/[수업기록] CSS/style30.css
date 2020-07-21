@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+
+/*동영상 전체화면 구성하기 */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    border: 1px solid white;
+    z-index: 1111;
+}
+
+#wrap_head {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+header:hover {
+    background-color: white;
+    color: black;
+}
+
+#wrap_head h1 {
+    position: absolute;
+    top: 30px;
+    lefT: 30px;
+}
+
+#wrap_head nav {
+    /* position: absolute;
+    left: 0px;
+    top: 20px; */
+    margin-left: 400px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#wrap_head nav>ul {
+    width: 100%;
+    overflow: hidden;
+}
+
+#wrap_head nav>ul:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/* 메인메뉴 */
+
+#wrap_head nav>ul>li {
+    float: left;
+    padding: 20px;
+    padding-bottom: 50px;
+    /* position: relative; */
+}
+
+
+/* 서브메뉴 */
+
+#wrap_head nav>ul>li ol {
+    width: 100%;
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    background: white;
+    color: black;
+    cursor: pointer;
+    top: 100px;
+    left: 0;
+}
+
+
+/* 서브메뉴 감췄다가 드러나기 */
+
+#wrap_head nav>ul>li:hover ol {
+    display: block;
+}
+
+#wrap_head nav>ul>li:hover ol li {
+    display: block;
+    padding: 10px 20px;
+    float: left;
+}
+
+#wrap_head nav>ul>li {}
+
+
+/*왼쪽에 몰려있는 ol의 li를 땡겨오기*/
+
+#wrap_head nav ul li:nth-child(1) ol {
+    padding-left: 200px;
+}
+
+#wrap_head nav ul li:nth-child(2) ol {
+    padding-left: 400px;
+}
+
+#wrap_head nav ul li:nth-child(3) ol {
+    padding-left: 600px;
+}
+
+#wrap_head nav ul li:nth-child(4) ol {
+    padding-left: 700px;
+}

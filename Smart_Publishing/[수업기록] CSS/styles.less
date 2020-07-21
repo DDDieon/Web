@@ -1,0 +1,102 @@
+
+@color1:#0009ff;
+@color2:red;
+@defaultFontsize: 20px;
+
+header{
+    width:800px;
+    margin: 0 auto;
+    hgroup{
+        h1{color:@color2;
+        background: black}
+        h2{color: @color1}
+    }
+    nav{
+        ul{
+            overflow:hidden;
+        }
+        li{
+            float:left;
+        }
+    }
+}
+body{
+    color:@color1;
+    font-size:@defaultFontsize;
+}
+
+@margin: 10px;
+@padding: 10px;
+@width: 200px;
+
+div{
+    width:@width - (@padding * 2);
+    padding: @padding;
+    margin: @margin;
+    border: 1px solid black;
+};
+
+@linkcolor: #ffffff;
+@color3:#494907;
+a{
+    background:@color3;
+    color:@linkcolor !important;
+    &:hover{background: blue;}
+    &:active{background: green;}
+}
+
+@color5:#ff0000;
+div{height: 10px}
+div:nth-of-type(1){
+    background: darken(@color5, 0%);
+}
+
+div:nth-of-type(2){
+    background: darken(@color5, 10%);
+}
+
+div:nth-of-type(3){
+    background: darken(@color5, 20%);
+}
+
+div:nth-of-type(4){
+    background: darken(@color5, 30%);
+}
+
+div:nth-of-type(5){
+    background: darken(@color5, 40%);
+}
+div:nth-of-type(6){
+    background: darken(@color5, 50%);
+}
+div:nth-of-type(7){
+    background: darken(@color5, 60%);
+}
+div:nth-of-type(8){
+    background: darken(@color5, 70%);
+}
+div:nth-of-type(9){
+    height: 100px;
+    background: hsl(@hue, @saturation, @lightness);
+    background: darken(@color5, 20%);
+}
+
+@hue: hue(@color2);
+@saturation: saturation(@color3);
+@lightness: lightness(@color3);
+
+// 믹스인(Mixins) : css 재사용성
+
+.block(){
+    width: 2000p;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+span{
+    background: gold;
+    .block();
+}

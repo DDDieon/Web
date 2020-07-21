@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select name="a" id="a">
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JavaScript">JavaScript</option>
+    </select>
+    <h4></h4>
+    <script>
+        var select = document.getElementById('a');
+        var h4 = document.querySelector('h4');
+        select.onchange = () => {
+            h4.innerHTML = select.selectedIndex + ' : ' + select.value;
+        }
+        select.options[2].selected = 'true';
+        select.onblur = () => {
+            select.options[2].value = 'j-query';
+            select.options[2].innerHTML = '제이쿼리';
+        }
+        h4.innerHTML = select.options[2].value + '부터 선택';
+    </script>
+</body>
+
+</html>

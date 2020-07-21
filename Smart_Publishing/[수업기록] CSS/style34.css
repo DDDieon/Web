@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: rgb(29, 36, 136);
+    font-weight: bold;
+}
+
+#nav1 {
+    overflow: hidden;
+}
+
+#nav1:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#nav1 div {
+    float: left;
+    width: 116px;
+    height: 38px;
+    background: url('css_sprites2.png');
+}
+
+
+/* 메뉴바 리스트의 a태그는 무조건 박스처리 */
+
+#nav1 div a {
+    display: block;
+    text-indent: -9999px;
+}
+
+#nav1 div:nth-child(1) {
+    background-position: 0 0;
+}
+
+#nav1 div:nth-child(2) {
+    background-position: -116px 0;
+}
+
+#nav1 div:nth-child(3) {
+    background-position: -232px 0;
+}
+
+#nav1 div:nth-child(4) {
+    background-position: -348px 0;
+}
+
+#nav1 div:nth-child(5) {
+    background-position: -464px 0;
+}
+
+#nav1 div:nth-child(1):hover {
+    background-position: 0 -38px;
+    transition: 0.3s ease-out;
+}
+
+#nav1 div:nth-child(2):hover {
+    background-position: -116px -38px;
+    transition: 0.3s ease-out;
+}
+
+#nav1 div:nth-child(3):hover {
+    background-position: -232px -38px;
+    transition: 0.3s ease-out;
+}
+
+#nav1 div:nth-child(4):hover {
+    background-position: -348px -38px;
+    transition: 0.3s ease-out;
+}
+
+#nav1 div:nth-child(5):hover {
+    background-position: -464px -38px;
+    transition: 0.3s ease-out;
+}
+
+#nav1 div:nth-child(1):active {
+    background-position: 0 -76px;
+}
+
+#nav1 div:nth-child(2):active {
+    background-position: -116px -76px;
+}
+
+#nav1 div:nth-child(3):active {
+    background-position: -232px -76px;
+}
+
+#nav1 div:nth-child(4):active {
+    background-position: -348px -76px;
+}
+
+#nav1 div:nth-child(5):active {
+    background-position: -464px -76px;
+}
+
+#nav2 {
+    color: black;
+}
+
+#nav2 ul {
+    overflow: hidden;
+}
+
+#nav2 ul li {
+    float: left;
+    width: 140px;
+    height: 50px;
+    background-image: url('top_gnb2.png');
+}
+
+#nav2 ul li a {
+    display: block;
+    text-indent: -9999px;
+    width: 100%;
+    height: 100%;
+}
+
+#nav2 ul li:nth-child(1) {
+    background-position: 0 0;
+}
+
+#nav2 ul li:nth-child(2) {
+    background-position: 0 -50px;
+}
+
+#nav2 ul li:nth-child(3) {
+    background-position: 0 -100px;
+}
+
+#nav2 ul li:nth-child(4) {
+    background-position: 0 -150px;
+}
+
+#nav2 ul li:nth-child(5) {
+    background-position: 0 -200px;
+}
+
+#nav2 ul li:nth-child(6) {
+    background-position: 0 -250px;
+}
+
+#nav2 ul li:nth-child(7) {
+    background-position: 0 -300px;
+}
+
+#nav2 ul li:nth-child(1):hover {
+    background-position: 0 -350px;
+}
+
+#nav2 ul li:nth-child(2):hover {
+    background-position: 0 -400px;
+}
+
+#nav2 ul li:nth-child(3):hover {
+    background-position: 0 -450px;
+}
+
+#nav2 ul li:nth-child(4):hover {
+    background-position: 0 -500px;
+}
+
+#nav2 ul li:nth-child(5):hover {
+    background-position: 0 -550px;
+}
+
+#nav2 ul li:nth-child(6):hover {
+    background-position: 0 -600px;
+}
+
+#nav2 ul li:nth-child(7):hover {
+    background-position: 0 -650px;
+}
+
+#nav2 ul li:nth-child(1):active {
+    background-position: 0 -700px;
+}
+
+#nav2 ul li:nth-child(2):active {
+    background-position: 0 -750px;
+}
+
+#nav2 ul li:nth-child(3):active {
+    background-position: 0 -800px;
+}
+
+#nav2 ul li:nth-child(4):active {
+    background-position: 0 -850px;
+}
+
+#nav2 ul li:nth-child(5):active {
+    background-position: 0 -900px;
+}
+
+#nav2 ul li:nth-child(6):active {
+    background-position: 0 -950px;
+}
+
+#nav2 ul li:nth-child(7):active {
+    background-position: 0 -1000px;
+}
+
+#icon_list {
+    background: rgb(234, 249, 255);
+}
+
+.bg-icon_1 {
+    width: 55px;
+    height: 56px;
+    background: url('blue_sprites.png') -0 -0;
+}
+
+.bg-icon_2 {
+    width: 55px;
+    height: 56px;
+    background: url('blue_sprites.png') -55px -0;
+}
+
+.bg-icon_3 {
+    width: 55px;
+    height: 56px;
+    background: url('blue_sprites.png') -110px -0;
+}
+
+.bg-icon_4 {
+    width: 55px;
+    height: 56px;
+    background: url('blue_sprites.png') -0 -56px;
+}
+
+.bg-icon_5 {
+    width: 55px;
+    height: 56px;
+    background: url('blue_sprites.png') calc(-55px * 1) -56px;
+}
+
+.bg-icon_6 {
+    width: 55px;
+    height: 56px;
+    background: url('blue_sprites.png') calc(-55px * 2) -56px;
+}
+
+.bg-icon_7 {
+    width: 55px;
+    height: 56px;
+    background: url('blue_sprites.png') calc(-55px * 3) -0;
+}
+
+.bg-icon_8 {
+    width: 55px;
+    height: 56px;
+    background: url('blue_sprites.png') calc(-55px * 4) -56px;
+}
+
+#icon_list span {
+    display: block;
+}
+
+#icon_list li {
+    float: left;
+    width: 25%;
+    cursor: pointer;
+}
+
+#icon_list::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#icon_list span:first-child:active {
+    position: relative;
+    top: 2px;
+}

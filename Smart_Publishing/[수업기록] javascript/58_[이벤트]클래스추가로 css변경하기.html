@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color {
+            color: red;
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="a">CSS동작</button>
+    <button id="b">동작취소</button>
+    <button id="c">표준이벤트</button>
+    <h1 id="h1">Welcome to my world</h1>
+    <h2 id="h2">자바스크립트 표준이벤트</h2>
+    <script>
+        var a = document.getElementById('a');
+        var h1 = document.getElementById('h1');
+        a.onclick = function() {
+            h1.classList.add('color');
+            //h1 태그에 color라는 클래스를 동적으로 추가하기
+        }
+        var b = document.getElementById('b');
+        b.onclick = function() {
+            h1.classList.remove('color');
+            //h1 태그에 color라는 클래스를 동적으로 삭제하기
+        }
+
+        //-------표준이벤트 : addEventListener----------
+        var c = document.getElementById('c');
+        c.addEventListener('click', givecolor);
+
+        function givecolor() {
+            var h2 = document.querySelector('h2');
+            h2.classList.add('color');
+        }
+    </script>
+</body>
+
+</html>

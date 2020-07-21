@@ -1,0 +1,323 @@
+#main {
+    width: 100%;
+    height: 280px;
+    position: relative;
+}
+
+ul.pr_list {
+    width: 100%;
+    position: absolute;
+    height: 200px;
+    top: 100px;
+    transition: 0.5s;
+}
+
+ul.pr_list li {
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+
+/* ul li strong,
+ul li span {
+    display: inline-block;
+} */
+
+div.page_nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+div.page_nav p,
+div.page_nav a,
+div.page_nav label {
+    display: inline-block;
+}
+
+ul li strong,
+ul li span {
+    display: block;
+}
+
+ul.pr_list li strong {
+    float: left;
+}
+
+ul.pr_list li span {
+    float: right;
+}
+
+
+/*동적인 구현*/
+
+input[type=radio]+ul.pr_list {
+    animation: toLeft100 1s;
+    animation-fill-mode: forwards;
+}
+
+input[type=radio]:checked+ul.pr_list {
+    animation: toLeft0 1s;
+    animation-fill-mode: forwards;
+    /* 앞프레임에서 정지 */
+}
+
+@keyframes toLeft0 {
+    from {
+        left: 150%;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        left: 0;
+        opacity: 1;
+    }
+    /* 체크되면 left:0. 해당되는 ul만 보이게 하기. 150%로 했으니 오는거는 빨리온다*/
+}
+
+@keyframes toLeft100 {
+    from {
+        left: 0;
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    to {
+        left: -100%;
+        opacity: 0;
+    }
+    /*체크 안되면 left를 -100%으로 해서 왼쪽으로 가기*/
+}
+
+
+/*-----------------디자인 시작----------------*/
+
+#main {
+    background: rgb(255, 211, 246);
+}
+
+li strong {
+    margin-left: 20px;
+}
+
+li span {
+    margin-right: 20px;
+}
+
+div.page_nav p label {
+    padding: 5px;
+    background: rgb(255, 255, 255);
+    color: rgb(255, 44, 160);
+    font-weight: bold;
+    margin: 5px;
+    border-radius: 50%;
+    box-shadow: 1px 1px rgb(255, 44, 160);
+    width: 20px;
+    height: 20px;
+}
+
+div.page_nav p label:hover {
+    box-shadow: inset 1px 1px rgb(92, 22, 63);
+}
+
+input[type=radio] {
+    /* display: none; */
+}
+
+.page_nav>a>em {
+    color: rgb(255, 44, 160);
+    font-weight: bold;
+}
+
+
+/*----------main 2--------------------*/
+
+#main {
+    width: 100%;
+    height: 280px;
+    position: relative;
+}
+
+ul.pr_list {
+    width: 100%;
+    position: absolute;
+    height: 200px;
+    top: 100px;
+    transition: 0.5s;
+}
+
+ul.pr_list li {
+    line-height: 1.5;
+    border-bottom: 1px solid rgb(197, 119, 169);
+    overflow: hidden;
+}
+
+
+/* ul li strong,
+ul li span {
+    display: inline-block;
+} */
+
+div.page_nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+div.page_nav p,
+div.page_nav a,
+div.page_nav label {
+    display: inline-block;
+}
+
+ul li strong,
+ul li span {
+    display: block;
+}
+
+ul.pr_list li strong {
+    float: left;
+}
+
+ul.pr_list li span {
+    float: right;
+}
+
+
+/*동적인 구현*/
+
+input[type=radio]+ul.pr_list {
+    animation: toLeft100 1s;
+    animation-fill-mode: forwards;
+}
+
+input[type=radio]:checked+ul.pr_list {
+    animation: toLeft0 1s;
+    animation-fill-mode: forwards;
+    /* 앞프레임에서 정지 */
+}
+
+@keyframes toLeft0 {
+    from {
+        left: 150%;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        left: 0;
+        opacity: 1;
+    }
+    /* 체크되면 left:0. 해당되는 ul만 보이게 하기. 150%로 했으니 오는거는 빨리온다*/
+}
+
+@keyframes toLeft100 {
+    from {
+        left: 0;
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    to {
+        left: -100%;
+        opacity: 0;
+    }
+    /*체크 안되면 left를 -100%으로 해서 왼쪽으로 가기*/
+}
+
+
+/*----------------이미지 슬라이드----------------*/
+
+#canvas {
+    width: 600px;
+    height: 500px;
+    position: relative;
+    border: 2px solid black;
+    background: url('img/card1.jpg');
+    background-size: cover;
+    overflow: visible;
+}
+
+#panel img {
+    position: absolute;
+    left: 500px;
+    top: 0;
+    width: 600px;
+    height: 400px;
+    border: 1px solid red;
+    transition: 1s;
+    z-index: 111;
+    opacity: 0;
+}
+
+div.control {
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    left: 40%;
+}
+
+
+/* div.control a {
+    display: inline-block;
+    padding: 5px;
+} */
+
+
+/* #panel>img:target a태그로
+{
+    left: 0 !important;
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+} */
+
+input[type=radio]#a:checked+#panel>#a {
+    left: 0;
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+input[type=radio]#b:checked~#panel>#b {
+    left: 0;
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+input[type=radio]#c:checked~#panel>#c {
+    left: 0;
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+input[type=radio]#d:checked~#panel>#d {
+    left: 0;
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+input[type=radio]#e:checked~#panel>#e {
+    left: 0;
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+#panel {
+    position: absolute;
+    width: 500px;
+    left: 0;
+    top: 0;
+    height: 450px;
+}

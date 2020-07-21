@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        div.btnBox {
+            position: fixed;
+            bottom: 100px;
+            right: 200px;
+            width: 80px;
+            height: 80px;
+        }
+        
+        div.btnBox button {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border-radius: 50%;
+            border: none;
+            background: rgb(255, 255, 255);
+            color: black;
+        }
+        
+        div.section {
+            height: 100vh;
+            border: 3px solid rgb(235, 235, 235);
+            box-sizing: border-box;
+            background: pink;
+        }
+        
+        p.control {
+            position: absolute;
+            right: 15px;
+            top: 80vh;
+            width: 50px;
+        }
+        
+        p {
+            width: 25px !important;
+            height: 150px;
+            background: black;
+            padding: 20px;
+            border-radius: 50px;
+            opacity: 80%;
+        }
+        
+        p.control a {
+            display: block;
+            text-decoration: none;
+            margin: 2px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+        }
+        
+        .section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <script>
+        //------------ 스크롤시에 컨트롤바 따라오기
+        $(function() {
+            var btn = $('p.control a');
+            btn.click(function() {
+                event.preventDefault(); // 기본이벤트 x
+                event.stopPropagation(); // 상위전달x
+                var i = $(this).index(); // a의 i번째
+                var sectionTT = $('div.section').eq(i).offset().top //div들의 y좌표
+                $('html, body').stop().animate({
+                    scrollTop: sectionTT //html, body의 y좌표는 i번째 div의 좌표가 된다
+                })
+            })
+            $(window).scroll(function() {
+                var sct = $(this).scrollTop(); // 윈도우의 화면상태
+                $('div.section').each(function(i) {
+                    if (sct >= $(this).offset().top - 300) {
+                        btn.html('○')
+                        btn.eq(i).html('●')
+                        console.log('ㄹ');
+                    }
+                })
+            })
+
+
+
+            //----------- absolute를 딜레이걸린 fixed처럼 따라오게 만들기
+
+            $(window).scroll(function() {
+                if ($(this).scrollTop <= 500) { //윈도우가 조금 내려가면
+                    $('#top').hide(); //가린다
+                    $('#bottom').show();
+                } else {
+                    $('#top').show();
+                    $('#bottom').hide();
+                }
+            })
+            $('#top').click(function() { //위로 가는 버튼 만들기
+                btn.first().click();
+                console.log('위로');
+            })
+            $('#bottom').click(function() { //아래로 가는 버튼 만들기
+                btn.last().click();
+                console.log('아래로');
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="btnBox">
+        <button id="top">UP</button>
+        <button id="bottom">DOWN</button>
+    </div>
+    <div class="section">
+        <h1>스크롤링 윈도우1</h1>
+    </div>
+    <div class="section">
+        <h1>스크롤링 윈도우2</h1>
+    </div>
+    <div class="section">
+        <h1>스크롤링 윈도우3</h1>
+    </div>
+    <div class="section">
+        <h1>스크롤링 윈도우4</h1>
+    </div>
+    <div class="section">
+        <h1>스크롤링 윈도우5</h1>
+    </div>
+    <p class="control">
+        <a href="#">●</a>
+        <a href="#">○</a>
+        <a href="#">○</a>
+        <a href="#">○</a>
+        <a href="#">○</a>
+    </p>
+</body>
+<script>
+    $(window).scroll(function() {
+        var psct = $('p.control').scrollTop();
+        var wsct = $(window).scrollTop() + 200;
+
+        $('p.control').stop().animate({
+            top: wsct
+        }, 500);
+
+    })
+</script>
+
+</html>

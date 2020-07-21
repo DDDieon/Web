@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        
+        h1 {
+            text-align: left;
+            ;
+        }
+        
+        thead,
+        tbody,
+        tfoot {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>테이블 태그</h1>
+    <table width="100%" border="3" background="./img/card5.jpg">
+        <caption>웹퍼블리싱과정</caption>
+        <thead bgcolor="black">
+            <tr>
+                <th colspan="4">한국직업학교</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>첫번째 tr</th>
+                <th>첫번째 tr</th>
+                <th>첫번째 tr</th>
+                <th>비고</th>
+            </tr>
+            <tr>
+                <td>두번째 행1</td>
+                <td>두번째 행2</td>
+                <td>두번째 행3</td>
+                <td rowspan="2">비고 데이터 영역</td>
+            </tr>
+            <tr>
+                <td>data1</td>
+                <td>data2</td>
+                <td>data3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <!-- foot이라고 적으면 무조건 표 맨밑으로 내려간다 -->
+            <td height="50px" colspan="4">스마트컨텐츠</td>
+        </tfoot>
+        <table cellpadding="30px" cellspacing="10px" width="100%" border="3" background="./img/card2.jpg">
+            <caption>웹퍼블리싱과정</caption>
+            <thead bgcolor="black">
+                <tr>
+                    <th colspan="4">한국직업학교</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>첫번째 tr</th>
+                    <th>첫번째 tr</th>
+                    <th>첫번째 tr</th>
+                    <th>비고</th>
+                </tr>
+                <tr>
+                    <td>두번째 행1</td>
+                    <td>두번째 행2</td>
+                    <td>두번째 행3</td>
+                    <td rowspan="2">비고 데이터 영역</td>
+                </tr>
+                <tr>
+                    <td>data1</td>
+                    <td>data2</td>
+                    <td>data3</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <!-- foot이라고 적으면 무조건 표 맨밑으로 내려간다 -->
+                <td height="50px" colspan="4">스마트컨텐츠</td>
+            </tfoot>
+            <div class="fromcafe">
+                <table border="1">
+                    <caption>Caption</caption>
+                    <colgroup>
+                        <col span="2" style="background: red" width="10%" />
+                        <col style="background: blue" width="40%" />
+                    </colgroup>
+
+                    <thead style="background: green">
+                        <colgroup>
+                        </colgroup>
+                        <tr>
+                            <th>Table Header</th>
+                            <th>Table Header</th>
+                            <th>Table Header</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Table Data</td>
+                            <td>Table Data</td>
+                            <td>Table Data</td>
+                        </tr>
+                        <tr>
+                            <td>Table Data</td>
+                            <td>Table Data</td>
+                            <td>Table Data</td>
+                        </tr>
+                        <tr>
+                            <td>Table Data</td>
+                            <td>Table Data</td>
+                            <td>Table Data</td>
+                        </tr>
+                    </tbody>
+                    <tfoot style="background: yellow">
+                        <tr>
+                            <td>Table Data</td>
+                            <td>Table Data</td>
+                            <td>Table Data</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </table>
+    </table>
+</body>
+
+</html>

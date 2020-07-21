@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#box {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+    background: linear-gradient(blue 0%, white 50%, navy 100%);
+    cursor: pointer;
+}
+
+#box h1 {
+    line-height: 200px;
+}
+
+
+/* 애니메이션 프레임 정의 */
+
+@keyframes myani {
+    from {
+        left: 0;
+        transform: rotate(0deg);
+    }
+    50% {
+        left: 500px;
+    }
+    to {
+        left: 500px;
+        transform: rotate(360deg);
+    }
+}
+
+#box {
+    animation-name: myani;
+    animation-duration: 2s;
+    /* 이름과 시간은 꼭 넣어야 한다 */
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /* 왔다갔다 하기 = alternate  무한반복 = alternate*/
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+#box:hover {
+    animation-play-state: paused;
+}
+
+
+/* 주석처리 */
+
+#box1,
+#box2 {
+    width: 100px;
+    height: 100px;
+    background: pink;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+    font-weight: bold;
+}
+
+#box1 {
+    position: relative;
+    left: 0;
+    top: 50px;
+}
+
+#box2 {
+    position: relative;
+    left: 200px;
+    top: 50px;
+}
+
+@keyframes aaa {
+    0% {
+        left: 0;
+    }
+    50% {
+        top: 100px;
+        left: 0;
+        background: rgb(66, 126, 255);
+        transform: rorate(180deg);
+    }
+    100% {
+        left: 200px;
+        background: orange;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bbb {
+    0% {
+        left: 200px;
+        top: 50px;
+    }
+    50% {
+        top: 100px;
+        left: 100px;
+        background: rgb(66, 126, 255);
+        transform: rorate(180deg);
+    }
+    100% {
+        left: 0px;
+        background: orange;
+        transform: rotate(360deg);
+    }
+}
+
+#box1 {
+    animation: aaa 3s linear 0.5s infinite alternate;
+}
+
+#box2 {
+    animation: bbb;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}

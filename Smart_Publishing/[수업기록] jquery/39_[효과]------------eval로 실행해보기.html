@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/jquery.innerfade.js"></script>
+    <script>
+        $(function() {
+            $('button').click(function() {
+                var html = $(this).html();
+                var effect = '$("#wrap").' + html;
+                eval(effect);
+            })
+        })
+    </script>
+    <style>
+        #wrap {
+            width: 200px;
+            height: 150px;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <button>show(500)</button>
+    <button>hide('slow')</button>
+    <button>toggle('fast')</button>
+    <button>slideDown()</button>
+    <button>slideUp()</button>
+    <button>slideToggle('500','swing')</button>
+    <button>fadeIn()</button>
+    <button>fadeOut()</button>
+    <button>fadeToggle()</button>
+    <button>fadeTo('show','0.5')</button>
+    <hr>
+    <div id="wrap">
+        welcome
+    </div>
+</body>
+
+</html>

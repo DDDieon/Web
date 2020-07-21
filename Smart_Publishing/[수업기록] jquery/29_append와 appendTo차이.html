@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(function() {
+            $('button').each(function(index) {
+                $(this).click(function() {
+                    var html = $(this).html();
+                    if (index <= 3) {
+                        // $('#zone').이너html과 상응하는 html메소드('<li>html</li>')
+                        var exec = "$('#zone')." + html + "('<li>'+html+'</li>')";
+                        eval(exec);
+                        console.log(exec);
+
+                    } else { // appendTo
+                        var html = $(this).html();
+                        // $("<li>html</li>").appendTo(#zone);
+                        var exec = "$('<li>'+html+'</li>')." + html + "('#zone')"
+                        eval(exec);
+                        console.log(exec);
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <button>append</button>
+    <button>prepend</button>
+    <button>after</button>
+    <button>before</button>
+    <button>appendTo</button>
+    <button>prependTo</button>
+    <button>insertBefore</button>
+    <button>insertAfter</button>
+    <hr>
+    <ul id="zone">
+        <li>Welcome - 0</li>
+    </ul>
+    <div></div>
+    <div></div>
+</body>
+<script>
+    var h1 = "<h1>welcome</h1>"
+    var h2 = "<h2>to my World</h2>"
+    $('body').append(h1, h2, h1, h2);
+    var 학생 = [{
+        name: '원빈',
+        region: '서울시 구로구'
+    }, {
+        name: '송혜교',
+        region: '서울시 강남구'
+    }];
+    $('div').append(function(index) { //여기서 index는 div의 개수만큼이다
+        var item = 학생[index];
+        var output = "";
+        output += '<h2>' + item.name + '</h2>';
+        output += '<h3>' + item.region + '</h3>';
+        return output;
+    })
+</script>
+
+</html>

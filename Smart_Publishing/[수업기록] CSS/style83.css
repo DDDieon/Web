@@ -1,0 +1,156 @@
+@import url('/new_css/reset.css');
+
+/* reset.css 링크걸기 태그와 동일 */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    margin-top: 50px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    /* height: 45px; */
+}
+
+header nav {
+    width: 960px;
+    border: 1px solid blue;
+    margin: auto;
+    /* font-size: 20px; */
+    /* font-size: 2.083vw; */
+    /* font-size: 1.250em; */
+}
+
+header ul {
+    display: flex;
+    position: relative;
+}
+
+header nav ul li {
+    flex: 1;
+    text-align: center;
+    /* background: orange;
+    margin: 5px; */
+}
+
+section {
+    border: 1px solid rgb(212, 212, 212);
+    width: 960px;
+    height: 400px;
+    margin: auto;
+}
+
+header {
+    border-bottom: 1px solid #555;
+    background: linear-gradient(rgb(49, 49, 49) 8%, rgb(27, 27, 27) 74%);
+    box-shadow: 0 1px 5px dimgray;
+}
+
+header nav ul li a {
+    display: block;
+    width: auto;
+    font: bold 1em/45px "Helvetica";
+    color: white !important;
+    text-shadow: 0 1px 1px rgb(141, 107, 165);
+    transition: 0.2s
+}
+
+nav>ul>li>a:hover {
+    text-decoration: none !important;
+}
+
+nav>ul>li:hover>a {
+    color: rgb(255, 59, 151) !important;
+    position: relative;
+    top: -1px;
+}
+
+nav>ul>li:hover>ol>a {
+    color: rgb(0, 132, 255) !important;
+    position: relative;
+    top: -1px;
+    background: white;
+}
+
+header nav ul li ol {
+    width: 100%;
+    box-shadow: 1px 1px 5px rgb(255, 45, 203);
+    top: 1px;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    display: flex;
+    height: 45px;
+}
+
+header nav ul li:hover ol {
+    visibility: visible;
+    opacity: 1;
+}
+
+ol>li {
+    background: rgb(255, 59, 151);
+    height: 0;
+    line-height: 0;
+}
+
+header nav ul li:hover ol li {
+    height: 45px;
+    line-height: 45px;
+    transition: 0.2s;
+}
+
+ol>li>a {
+    display: block;
+    text-align: center;
+    font: normal 0.9em/30px "Helvetica";
+    color: ivory !important;
+    text-decoration: none;
+}
+
+
+/* 고정바 만들기 */
+
+#top_bar {
+    color: rgb(37, 24, 153);
+    position: fixed;
+    height: 50px;
+    left: 50px;
+    top: 0;
+    right: 0;
+    background: rgb(255, 232, 28);
+    font-size: 2vw;
+}
+
+#bottom_bar {
+    position: fixed;
+    height: 50px;
+    left: 50px;
+    bottom: 0;
+    right: 0;
+    background: rgb(255, 232, 28);
+}
+
+#left_bar {
+    position: fixed;
+    width: 50px;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    background: rgb(255, 232, 28);
+}
+
+#right_bar {
+    position: fixed;
+    width: 50px;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgb(255, 232, 28);
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>http://cafe.daum.net/knyatom/Ob8k/63</title>
+</head>
+
+<body>
+    <h3>1번문제</h3>
+    <script>
+        var book = {
+                이름: 'Nature of Code',
+                가격: '30,000',
+                저자: '다니엘 쉬프만',
+                ISBN: '9788968481901',
+                페이지수: '620페이지'
+            }
+            //1번문제 출력하기
+
+        for (var i in book) {
+            document.write(book[i] + '<br>'); //배열은 아니고 연산속성 computed property
+        }
+    </script>
+    <h3>2번문제</h3>
+    <script>
+        function Product(이름, 무게, 가격) {
+            this.이름 = 이름;
+            this.무게 = 무게;
+            this.가격 = 가격
+        }
+        //--------------------------------------------------
+        Product.prototype.calculate = function(무게) {
+            return 무게 * this.가격 / this.무게;
+        }
+        var 고기 = new Product('돼지삼겹살', 100, 1690);
+        document.write(`${고기.이름}은 ${고기.무게}g에 ${고기.가격}원이다`);
+        document.write('<br> 200그람: ' + 고기.calculate(200) + '<hr>');
+
+        //-----------원시타입은 매소드 생성불가-------------------
+        var number = 200;
+        number.print = function() {
+            document.write(this)
+        };
+        //-----------생성자로 만든 객체는 메소드 생성가능----------
+        var num2 = new Number(400);
+        num2.print = function() {
+            document.write(this);
+        }
+        num2.print();
+    </script>
+    <h3>4번. 3-프로토타입</h3>
+    <h3>5번 - [속성접근법] = 연산속성과 프로퍼티의 차이.</h3>
+    <script>
+        //키값이 string이니까 .으로 접근이 아니라 []로 접근한다
+        var object = {
+            "+": 1,
+            "-": 2,
+            "*": 3,
+            "/": 4
+        }
+        document.write(object['+']);
+    </script>
+</body>
+
+</html>

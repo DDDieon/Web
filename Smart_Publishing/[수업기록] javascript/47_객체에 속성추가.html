@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //01. 객체문자방식 생성★
+        var 학생 = {};
+        학생.이름 = "김가나";
+        학생.취미 = "음악";
+        학생.특기 = "자바스크립트";
+        //-----속성들을 출력을 하기 위한 매소드------
+        학생.print = function() {
+            var out = '';
+            for (var key in this) {
+                if (key != 'print') {
+                    out += key + ' ' + this[key] + '<br>';
+                }
+            }
+            return out;
+        }
+        document.write(학생.print() + '<hr>');
+        학생.성별 = "여학생";
+        document.write(학생.print() + '<hr>');
+        delete 학생.취미;
+        document.write(학생.print() + '<hr>');
+
+        //02. 객체 생성자방식★
+        var 고양이 = new Object();
+        고양이.이름 = "나비";
+        고양이.나이 = 2;
+        고양이.품종 = "페르시안";
+        고양이.먹다 = function(음식) {
+            document.write(음식 + '을 먹었다<br>');
+        }
+        고양이.먹다('고기');
+        document.write('<hr>');
+
+        //03. 연습★
+        var book = {
+            name: 'nature of code',
+            price: '30,000won',
+            author: 'daniel',
+            ISBN: '92781118101',
+            pages: '620p',
+            bookPrint2: function() {
+                return this.name + '- ' + this.price + '- ' + this.author + '- ' + this.ISBN + '- ' + this.pages
+            }
+        }
+        for (var i in book) {
+            if (i != 'bookPrint2') { // 키값은 호출을 할 때 ' ~~ ' 꼭 따옴표 안에 넣어주자
+                document.write(book[i] + '<br>');
+            }
+        }
+    </script>
+</body>
+
+</html>

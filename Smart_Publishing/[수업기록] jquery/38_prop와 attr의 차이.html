@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body>
+    검색엔진? <input type="checkbox" id="all">
+    <label>All</label>
+    <div id="item">
+        <input type="checkbox"><label>다음</label>
+        <input type="checkbox"><label>네이버</label>
+        <input type="checkbox"><label>네이트</label>
+        <input type="checkbox"><label>구글</label>
+    </div>
+    <select>
+        <option value="daum">daum</option>
+        <option value="daum">naver</option>
+        <option value="daum">nate</option>
+        <option value="daum">google</option>
+    </select>
+</body>
+<script>
+    $('#all').change(function() {
+        if (this.checked) {
+            $('#item').children().prop('checked', true); //attr 비슷하지만 화면에만 변화를 주고 인라인코드에서 변동 없는 것이 prop
+            $('#item').children().attr('checked', true); //인라인속성까지 변해주는 attr
+        } else {
+            $('#item').children().prop('checked', false);
+            $('#item').children().attr('checked', false);
+        }
+    })
+
+    $('select').on('change', function() {
+        var val = $('select>option:selected').val();
+        var index = $('select>option:selected').index();
+        var html = $('select>option:selected').html();
+        var text = $('select>option:selected').text();
+        var out = index + ' ' + html + ' ' + text + ' ' + val;
+        $('<h2></h2>').html(out).appendTo('body');
+    })
+</script>
+
+</html>

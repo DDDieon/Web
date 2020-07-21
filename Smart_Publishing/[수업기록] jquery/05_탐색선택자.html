@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 탐색 선택자 </title>
+    <style type="text/css">
+        #menu li {
+            margin: 5px 0;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+</head>
+
+<body>
+    <h1>탐색 선택자</h1>
+    <div id="wrap">
+        <div id="inner_wrap">
+            <ul id="menu">
+                <li>내용1</li>
+                <li>
+                    <span>내용<strong>2</strong></span>
+                </li>
+                <li><a href="#">내용3</a></li>
+                <li>내용4</li>
+                <li>내용5</li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    $("#menu li:contains('내용3')").css('border', '2px dashed red'); //contains로 문자노드 탐색
+    $("#menu li:has('strong')").css('border', '2px dotted blue'); //has로 태그 탐색
+    $("#menu li").not(":first").css('background', 'yellow'); // 아닌것은 not
+    $("#menu li:eq(4)").css('font-size', '2em'); //eq는 순서
+    $("#menu li:eq(0)").css('font-style', 'italic');
+    $("a,span").css('text-decoration', 'line-through'); //복합선택자
+    $("#menu").closest('div').css('border', '5px solid red'); // 가장 가까운 부모태그 찾기
+
+    $("li").find('span').css('text-decoration', 'overline'); // 부모자손 선택자의 find매소드
+    $("li").click(function() {
+        $('a', this).css('font-size', '30px'); //부모자손 선택자의 , 사용법
+    })
+</script>
+
+</html>

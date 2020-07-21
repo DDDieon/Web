@@ -1,0 +1,31 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.wrap {
+    flex-direction: column;
+    padding: 20px;
+    width: 800px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.multy {
+    /* -webkit-column-width: 120px;
+    column-width: 120px; */
+    text-align: justify;
+    column-count: 3;
+    column-gap: 50px;
+    margin: 0 50px;
+    column-rule: 5px dotted red;
+}
+
+.multy h3 {
+    break-before: column;
+}
+
+.no-col {
+    column-span: all;
+}

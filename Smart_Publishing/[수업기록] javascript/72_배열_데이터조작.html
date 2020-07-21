@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var array = [];
+        for (var i = 0; i < 10; i++) {
+            array.push(i);
+        }
+        document.write(array + '<hr>');
+        var out = array.splice(4);
+        document.write(array + '<hr>');
+        document.write(out + '<hr>');
+    </script>
+    <h3>숫자가 100이상인 아이템만 삭제하기</h3>
+    <script>
+        var 배열 = [10, 4, 40, 50, 33, 66, 88, 100, 120, 300, 188];
+        Array.prototype.remove = function(index) {
+                this.splice(index, 1);
+            }
+            //100 이상인 숫자 제거하기
+        for (var i = 0; i < 배열.length - 1; i++) {
+            if (배열[i] >= 100) {
+                배열.remove(i);
+            }
+        }
+        document.write(배열);
+    </script>
+</body>
+
+</html>

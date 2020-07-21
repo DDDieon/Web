@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    border: 0;
+}
+
+body {
+    font-family: sans-serif, '맑은 고딕';
+    font-size: 14px;
+}

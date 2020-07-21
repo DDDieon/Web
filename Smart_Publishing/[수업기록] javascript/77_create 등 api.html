@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //-----객체에 속성 추가해주기
+        var object = {};
+        Object.defineProperty(object, 'name', {
+            value: '윤인성',
+            writable: false,
+            enumerable: false
+        });
+        // 확인합니다.
+        object.name = 'OTHER';
+        // 출력합니다.
+        document.write(object.name);
+
+
+        //-----객체에 생성
+        var object = Object.create({}, {
+            name: {
+                value: '윤인성',
+                enumerable: true
+            },
+            region: {
+                value: '서울특별시',
+                enumerable: true
+            }
+        });
+        document.write('<hr>' + Object.values(object));
+        document.write('<hr>' + Object.keys(object));
+
+        // create() 메서드를 사용하면 기존의 객체를 기반으로 새로운 속성을 지정할 수 있으므로 상속이라 볼 수 있다.
+        // 아래 코드는 name 속성과 region 속성을 갖는 object 객체를 만든다.
+        // 그 객체를 기반으로 gender 속성과 hobby 속성을 추가해서 person 객체를 만든다.
+
+        //--------------person은 object의 키값을 상속받았다----------------
+        var object = Object.create({}, {
+            name: {
+                value: '윤인성',
+                enumerable: true
+            },
+            region: {
+                value: '서울특별시',
+                enumerable: true
+            }
+        });
+        var person = Object.create(object, {
+            gender: {
+                value: '남자',
+                enumerable: true
+            },
+            hobby: {
+                value: '기타',
+                enumerable: true
+            }
+        })
+        document.write('<hr>추가된 키: ' + Object.getOwnPropertyNames(person) + '<br> 오리지날: ' + Object.keys(person));
+        alert(person.name + ' : ' + person.region);
+
+
+        // 출력합니다.
+    </script>
+</body>
+
+</html>
