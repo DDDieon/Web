@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body>
+    <h1>키보드 접근성을 배려하지 않은 예제</h1>
+    <button id="btn1">노출버튼</button>
+    <p style="display:none">welcome to my world</p>
+
+    <h1>키보드 접근성을 배려한 예제 -1</h1>
+    <button id="btn2">노출버튼</button>
+    <p style="display:none">welcome to my world</p>
+    <h1>f</h1>
+    <h1>키보드 접근성을 배려한 예제 -2</h1>
+    <button id="btn3">노출버튼</button>
+    <p style="display:none">welcome to my world</p>
+    <h2>ㄹㄹ </h2>
+</body>
+<script>
+    $('button').click(function () {
+        $(this)
+            .next()
+            .show();
+    })
+
+    $('button').focus(function () {
+        // $(this).next().show();
+        $(this).trigger('click');
+    })
+</script>
+
+</html>

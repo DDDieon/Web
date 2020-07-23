@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body>
+    <form id="mama">
+        <input type="text" id="papa">
+    </form>
+</body>
+<script>
+    $('#papa').focus(function(){
+        console.log('#papa 포커스');
+    });
+    $('#papa').blur(function(){
+        console.log('#papa 블러');
+    });
+    $('#papa').focusin(function(){
+        console.log('#papa focusin 발생');
+    });
+    $('#papa').focusout(function(){
+        console.log('#papa focusout 발생');
+    });
+
+    $('#mama').focus(function(){
+        console.log('#mama 포커스');
+    });
+    $('#mama').blur(function(){
+        console.log('#mama 블러');
+    });
+    $('#mama').focusin(function(){
+        console.log('#mama focusin 발생');
+    });
+    $('#mama').focusout(function(){
+        console.log('#mama focusout 발생');
+    });
+</script>
+
+</html>

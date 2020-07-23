@@ -3,6 +3,8 @@ body {
 }
 
 .top_layout {
+  display: -moz-flex;
+  display: -ms-flex;
   display: flex;
   justify-content: space-between;
   height: 73px;
@@ -13,8 +15,11 @@ body {
   background-size: 100%;
   width: 248px;
   box-shadow: none;
+  text-indent: -9999px;
 }
 .top_layout .assets {
+  display: -moz-flex;
+  display: -ms-flex;
   display: flex;
   align-items: center;
   font-size: 30px;
@@ -35,6 +40,8 @@ body {
 }
 .mobile_gnb .mobile_utile_menu {
   background: "#1c92eb";
+  display: -moz-flex;
+  display: -ms-flex;
   display: flex;
   justify-content: space-between;
   color: white;
@@ -43,6 +50,8 @@ body {
 }
 .mobile_gnb .mobile_utile_menu ul {
   height: 50px;
+  display: -moz-flex;
+  display: -ms-flex;
   display: flex;
   align-items: center;
 }
@@ -67,6 +76,8 @@ body {
   height: 50px;
   font-size: 22px;
   background: "#0b68af";
+  display: -moz-flex;
+  display: -ms-flex;
   display: flex;
   align-items: center;
 }
@@ -76,6 +87,8 @@ body {
   display: block;
 }
 .mobile_gnb .mobile_utile_menu dl i {
+  display: -moz-flex;
+  display: -ms-flex;
   display: flex;
   justify-content: center;
   width: 50px;
@@ -84,6 +97,8 @@ body {
   background: white;
 }
 .mobile_gnb .mobile_menu_accordion ul li a {
+  display: -moz-flex;
+  display: -ms-flex;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -1,4 +1,12 @@
 @charset 'utf-8';
+@mixin flexPrefix {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+}
+
 $blue: '#1c92eb';
 $darkblue: '#0b68af';
 // -- MOBILE FIRST at 375x667--//
@@ -7,7 +15,7 @@ body {
 }
 
 .top_layout {
-    display: flex;
+    @include flexPrefix;
     justify-content: space-between;
     height: 73px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
@@ -16,9 +24,10 @@ body {
         background-size: 100%;
         width: 248px;
         box-shadow: none;
+        text-indent: -9999px;
     }
     .assets {
-        display: flex;
+        @include flexPrefix;
         align-items: center;
         font-size: 30px;
         box-shadow: none;
@@ -38,14 +47,14 @@ body {
     height: 100vh;
     .mobile_utile_menu {
         background: $blue;
-        display: flex;
+        @include flexPrefix;
         justify-content: space-between;
         color: white;
         height: 50px;
         font-size: 14px;
         ul {
             height: 50px;
-            display: flex;
+            @include flexPrefix;
             align-items: center;
             li {
                 margin: 0 10px;
@@ -69,7 +78,7 @@ body {
             height: 50px;
             font-size: 22px;
             background: $darkblue;
-            display: flex;
+            @include flexPrefix;
             align-items: center;
             dt,
             a,
@@ -77,7 +86,7 @@ body {
                 display: block;
             }
             i {
-                display: flex;
+                @include flexPrefix;
                 justify-content: center;
                 width: 50px;
             }
@@ -87,7 +96,7 @@ body {
         ul {
             background: white;
             li a {
-                display: flex;
+                @include flexPrefix;
                 justify-content: space-between;
                 align-items: center;
                 height: 58px;

@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+<head>
+    <title>01_tab_menu</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8;" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        
+        body {
+            font-size: 12px;
+            font-family: Dotum, Arial;
+            color: #74767a;
+            line-height: 120%;
+        }
+        
+        a,
+        a:link,
+        a:visited {
+            color: #74767a;
+            text-decoration: none
+        }
+        
+        ul,
+        ol {
+            list-style: none
+        }
+        
+        table,
+        fieldset,
+        th,
+        td,
+        img {
+            border: none
+        }
+        
+        img,
+        input,
+        select {
+            vertical-align: middle
+        }
+        
+        #wrap {
+            width: 939px;
+            margin-left: 400px;
+        }
+        
+        #wrap ul {
+            margin-top: 140px;
+        }
+        
+        #wrap ul:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+        #wrap ul li {
+            float: left;
+            overflow: hidden;
+            height: 25px;
+            margin-right: 6px;
+        }
+        
+        #wrap ul li:last-child {
+            margin-right: 0px;
+        }
+        
+        #wrap ul li img {
+            margin-top: 0x
+        }
+        
+        #wrap ul li .on img {
+            margin-top: -25px;
+            transition: 0.5s;
+        }
+        
+        #content {
+            position: relative;
+            width: 487px;
+            height: 323px;
+        }
+        
+        #content div {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            display: none;
+            width: 455px;
+            height: 291px;
+            margin-top: 10px;
+            background: #55aaea;
+            padding: 16px;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script>
+        var current = -1;
+        $(document).ready(function() {
+            $('#tab li').click(function(e) {
+                e.preventDefault();
+                var i = $(this).index();
+                console.log(i);
+                if (current == i) { // 똑같은탭을 클릭했는지 물어봄
+                    console.log('ㄴㄴ');
+                    return false;
+                } else {
+                    $('#tab li').children('a').removeClass('on'); // li>a에서 on클래스 삭제
+                    $('a', this).addClass('on');
+                    $('#content div').css('display', 'none');
+                    $('#content div').eq(i).css('display', 'block')
+                    i = current; // 클릭할때마다 인덱스를 current에 저장
+                }
+            })
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrap">
+        <!-- tabmenu -->
+        <ul id="tab">
+            <li>
+                <a href="#gallery" class="on"><img src="img/tab01.png" alt="Gallery" />
+                </a>
+            </li>
+            <li>
+                <a href="#cafe"><img src="img/tab02.png" alt="Cafe" /></a>
+            </li>
+            <li>
+                <a href="#lounge"><img src="img/tab03.png" alt="Lounge" /></a>
+            </li>
+            <li>
+                <a href="#service"><img src="img/tab04.png" alt="Service" /></a>
+            </li>
+        </ul>
+        <!-- //tabmenu -->
+
+        <!-- tab content -->
+        <div id="content">
+            <div style="display:block;">
+                <img src='img/img01.png' alt="img1" />
+            </div>
+            <div>
+                <img src='img/img02.png' alt="img2" />
+            </div>
+            <div>
+                <img src='img/img03.png' alt="img3" />
+            </div>
+            <div>
+                <img src='img/img04.png' alt="img4" />
+            </div>
+        </div>
+        <!-- //tab content -->
+
+    </div>
+
+</body>
+
+</html>

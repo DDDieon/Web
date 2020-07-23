@@ -7,6 +7,7 @@
     /* 브라우저의 텍스트 크기조절 안 함 */
     font: inherit;
     vertical-align: baseline;
+    box-sizing: border-box;
 }
 
 article,
@@ -47,9 +48,7 @@ label {
     cursor: pointer;
 }
 
-
 /* ----------------------------------- 개인취향------------------------------------------*/
-
 
 /* 옛날 브라우저에는 그림에 테두리가 생겼음. 필드셋은 폼태그의 액자셋 */
 
@@ -77,9 +76,7 @@ address {
     font-weight: normal;
 }
 
-
 /* b,strong{font-weight: :normal;} = 나는 볼드로 쓸거니까 안할거다*/
-
 
 /* legend,
 caption {
@@ -104,7 +101,6 @@ table {
 textarea,
 input {
     background: url(none);
-    -webkit-border-radius: 1px;
     -webkit-apprearance: none;
     /* 아이폰에서 아이콘은 모서리가 둥글게 표현되기 때문에 기본적인 네모모양으로 바꾸기 */
 }

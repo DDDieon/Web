@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> 좌우로 순환하는 이미지 슬라이드 </title>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="/js/jquery.mobile-1.4.5.js">
     </script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
 
             // 변수를 선언합니다.
             var width = $('[data-role="slider"]').attr('data-width');
@@ -32,7 +31,7 @@
             });
             // 변수를 선언합니다.
             var currentPage = 0;
-            var changePage = function() {
+            var changePage = function () {
                 $('[data-role="slider"] > .container').animate({
                     left: -currentPage * width
                 }, 500);
@@ -41,7 +40,7 @@
             var i = 0;
 
             var count = [0, 1, 2, 3, 2, 1];
-            $('#left-button').click(function() {
+            $('#left-button').click(function () {
                 i--;
 
                 if (i < 0) {
@@ -52,7 +51,7 @@
                 changePage();
             });
 
-            $('#right-button').click(function() {
+            $('#right-button').click(function () {
                 i++;
                 i = i % count.length;
                 currentPage = count[i];
@@ -64,11 +63,11 @@
 
             // 터치 슬라이드 구현하기
 
-            $('[data-role="slider"]').on('swipeleft', function() {
+            $('[data-role="slider"]').on('swipeleft', function () {
                 $('#right-button').trigger('click');
             });
 
-            $('[data-role="slider"]').on('swiperight', function() {
+            $('[data-role="slider"]').on('swiperight', function () {
                 $('#left-button').trigger('click');
             });
 
@@ -90,23 +89,23 @@
             width: 100%;
             height: 100%;
         }
-        
+
         div.item:nth-child(1) {
             background: blueviolet;
         }
-        
+
         div.item:nth-child(2) {
             background: pink;
         }
-        
+
         div.item:nth-child(3) {
             background-color: burlywood;
         }
-        
+
         div.item:nth-child(4) {
             background-color: steelblue;
         }
-        
+
         .modalbg {
             width: 100%;
             height: 100%;
@@ -114,7 +113,7 @@
             display: block !important;
             background: lightblue;
         }
-        
+
         .modalbody {
             position: absolute;
             left: 30%;
@@ -154,11 +153,11 @@
     <button id="right-button">→</button>
     <script>
         // 버튼을 누르면 모달창 나오기
-        $('button').eq(0).click(function() {
+        $('button').eq(0).click(function () {
             $('#wrap').addClass('modalbg');
             $('["data-role"]').addClass('modalbody');
         })
-        $('button').eq(1).click(function() {
+        $('button').eq(1).click(function () {
             $('#wrap').removeClass('modalbg');
             $('["data-role"]').removeClass('modalbody');
         })

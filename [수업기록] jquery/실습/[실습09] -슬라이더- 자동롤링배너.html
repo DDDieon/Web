@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script>
+            $(function () {
+                var bannerLeft = 0
+                $("#panel li.img").each(function () {
+                    $(this).css("left", bannerLeft)
+                    bannerLeft += $(this).width() + 10
+                    $(this).css("top", "20px")
+                })
+
+                var i = 0
+                function move() {
+                    $("#panel li.img").each(function () {
+                        $(this).css("left", $(this).position().left - 1)
+                    })
+                    var $first = $("#panel li.img").eq(i)
+                    if ($first.position().left < -150) {
+                        //0번째 li가, 1번째 li가, 2번째 ...가 왼쪽으로 붙을 때
+                        $first.css("left", "600px")
+                        i++
+                        i = i % 5
+                    }
+                }
+                //----------- 재생하기
+                function RELOAD() {
+                    banner = setInterval(move, 20)
+                } // 0.02초마다 left값이 -1
+
+                //--------- 마우스올리면 일시정지
+                function STOP() {
+                    clearInterval(banner)
+                }
+                $("#wrap").hover(STOP, RELOAD)
+            })
+        </script>
+        <style>
+            * {
+                margin: 0 auto;
+                padding: 0;
+            }
+
+            ul,
+            li {
+                list-style: none;
+            }
+            #wrap {
+                width: 700px;
+                overflow: hidden;
+                border: 3px solid red;
+                position: relative;
+            }
+
+            #panel {
+                width: 1200px;
+                position: relative;
+                height: 100px;
+            }
+
+            #wrap li.img {
+                position: absolute;
+                width: 120px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>자동롤링배너슬라이더</h1>
+        <div id="wrap">
+            <ul id="panel">
+                <li class="img">
+                    <a href="#"><img src="/img/bbanner1.png" alt="" /></a>
+                </li>
+                <li class="img">
+                    <a href="#"><img src="/img/bbanner2.png" alt="" /></a>
+                </li>
+                <li class="img">
+                    <a href="#"><img src="/img/bbanner3.png" alt="" /></a>
+                </li>
+                <li class="img">
+                    <a href="#"><img src="/img/bbanner4.png" alt="" /></a>
+                </li>
+                <li class="img">
+                    <a href="#"><img src="/img/bbanner5.png" alt="" /></a>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

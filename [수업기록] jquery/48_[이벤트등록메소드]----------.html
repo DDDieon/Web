@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>http://cafe.daum.net/knyatom/OVmb/91</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <style>
+            #display h1{
+                display:none;
+                font-size: 14px !important;
+            }
+            #display{
+                border: 1px solid red;
+                padding: 50px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- <h1>로드와 레디의 차이점</h1>
+        <div id="wrap"></div>
+        <iframe src="http://www.nate.com" width="300" height="200" frameborder="0"></iframe>
+        <h3>mousemove와 mousedown과 mouseup 활용하기</h3> -->
+        <input type="range" min="0" max="10" value="10">
+        <div id="display">
+            <h1>안녕하세요1</h1>
+            <h1>안녕하세요2</h1>
+            <h1>안녕하세요3</h1>
+            <h1>안녕하세요4</h1>
+            <h1>안녕하세요5</h1>
+            <h1>안녕하세요6</h1>
+            <h1>안녕하세요7</h1>
+            <h1>안녕하세요8</h1>
+            <h1>안녕하세요9</h1>
+            <h1>안녕하세요10</h1>
+        </div>
+        <h2></h2>
+    </body>
+    <script>
+        // $('iframe').load(function () {
+        //     $('#wrap').append('<p>로딩완료</p>');
+        // });
+        // $(document).ready(function () {
+        //     $('#wrap').append('<p>레디완료</p>');
+        // });
+        // $(document).mousemove(function(e){
+        //     var x = e.pageX;
+        //     var y = e.pageY;
+        //     $('h2').text('x'+x+'y'+y);
+        // })
+    </script>
+    <script>
+        var i = 0;
+        setInterval(function(){
+            console.log('ff');
+            $('#display h1').hide();
+            $('#display h1').eq(i).show();
+            $('input[type="range"]').val(i);
+            i++;
+            i=i%11; // 무한반복
+        },1000)
+
+    </script>
+
+</html>

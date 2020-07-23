@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+    </head>
+    <body>
+        <h1><a>welcome</a></h1>
+        <h2>안녕</h2>
+        <h3>감사합니다</h3>
+    </body>
+    <script>
+        $("h1").on("mouseover", function () {
+            $(this).css("background", "red")
+        })
+
+        $("h2").html('<a href="#">a태그를 만들어야징~</a>')
+        $("h2").on("mouseover focus", function () {
+            $(this).css("background", "skyblue")
+        })
+        $("h3").html('<a href="#">이랏샤~</a>')
+
+        //---h3조작
+        $("h3").on("mouseover", "a", function () {
+            //h3의 a라는 태그에 on메소드 적용
+            $(this).css("background", "red")
+            $(this).html('<a href="#">어서오세용~</a>')
+        })
+    </script>
+</html>

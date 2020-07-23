@@ -1,4 +1,12 @@
 @charset 'utf-8';
+@mixin flexPrefix {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+}
+
 $headerColor: #2d3e46;
 $sectionHeaderColor: rgba(84, 100, 108, 0.7);
 .main {
@@ -11,7 +19,7 @@ $sectionHeaderColor: rgba(84, 100, 108, 0.7);
         width: 90%;
         margin: -60px auto;
         margin-bottom: 0;
-        @mixin headerWhite {
+        @include headerWhite {
             color: white !important;
             h2 {
                 color: white !important;
@@ -51,7 +59,7 @@ $sectionHeaderColor: rgba(84, 100, 108, 0.7);
         padding: 30px 20px;
         margin-bottom: 35px;
         .container_buttonBox {
-            display: flex;
+            @include flexPrefix();
             button {
                 border: 1px solid #ccc;
                 width: 50%;
@@ -74,7 +82,7 @@ $sectionHeaderColor: rgba(84, 100, 108, 0.7);
         }
     }
     .main_bottom_wrap {
-        display: flex;
+        @include flexPrefix();
         flex-wrap: wrap;
         padding: 30px 20px;
         background: #f6f6f6;
@@ -128,7 +136,7 @@ $sectionHeaderColor: rgba(84, 100, 108, 0.7);
 @media screen and (min-width: 400px) {
     .main {
         .main_top_wrap {
-            display: flex;
+            @include flexPrefix();
             flex-wrap: wrap;
         }
         .container_top {

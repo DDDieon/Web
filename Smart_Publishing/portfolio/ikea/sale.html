@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Welcome to Ikea / 이케아에 오신 것을 환영합니다</title>
+        <title>Welcome to Ikea / 세일정보</title>
         <meta
             name="description"
             content="IKEA 이달의 인기 제품 한눈에 보기 주문부터 배송까지, 온라인으로 쉽고 편리하게 구매하세요."
@@ -11,29 +11,15 @@
         <link type="text/css" rel="stylesheet" href="css/reset.css" />
         <link type="text/css" rel="stylesheet" href="css/base.css" />
         <link type="text/css" rel="stylesheet" href="style.css" />
-        <!-- slick 슬라이더 css -->
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="http://kenwheeler.github.io/slick/slick/slick.css"
-        />
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="http://kenwheeler.github.io/slick/slick/slick-theme.css"
-        />
-        <!-- slick 슬라이더 css -->
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
-        <!-- 필요: 파비콘링크, 스크롤바스타일, 커서스타일 -->
-        <!-- blue: #0058a3 / Yellow: #ffdb00-->
-
-        <!-- 제이쿼리관련 -->
+        <!-- JQuery plugin -->
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
         <script src="js/slick/slick.js"></script>
-        <!-- js파일 -->
-        <script src="js/newsModal.js" defer></script>
+        <!-- js Files -->
         <script src="js/display.js" defer></script>
+        <!-- Sass compiled CSS Lists -->
+        <link rel="stylesheet" href="sale.css" />
     </head>
 
     <body>
@@ -57,7 +43,7 @@
                     <nav class="bottom_gnb">
                         <ul>
                             <li>
-                                <a href="#">ikea</a>
+                                <a href="/">ikea</a>
                             </li>
                             <li><a href="/product.html">모든 제품</a></li>
                             <li><a href="/digitalshow.html">디지털 쇼룸</a></li>
@@ -87,137 +73,11 @@
                     </div>
                     <nav class="top_gnb">
                         <label for="panel_wrap"><i class="xi-bars"></i></label>
-                        <a href="#">logo</a>
+                        <a href="/">logo</a>
                         <a href="#"><i class="xi-profile"></i></a>
                     </nav>
                 </div>
             </header>
-            <section id="contents">
-                <div class="banner banner_0 slick-items">
-                    <div><img src="/img/for_slide/sl01.png" alt="" /></div>
-                    <div><img src="/img/for_slide/sl02.png" alt="" /></div>
-                    <div><img src="/img/for_slide/sl03.png" alt="" /></div>
-                    <div><img src="/img/for_slide/sl04.png" alt="" /></div>
-                </div>
-                <div class="banner banner_1">
-                    <div class="banner_title">
-                        <h1>이달의 인기 제품</h1>
-                        <p>
-                            <a href="#"><i class="xi-angle-right-min"></i>more</a>
-                        </p>
-                    </div>
-                    <div class="recomend_list">
-                        <ul>
-                            <li>
-                                <a href="#" class="thumnail">
-                                    <img
-                                        src="/img/monthly/monthly1.png"
-                                        alt="strongly recommend item no.1"
-                                    />
-                                    <p>제품이름1</p>
-                                    <p>option 제품의 옵션</p>
-                                    <span><i class="xi-won"></i>9,900</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="thumnail"
-                                    ><img
-                                        src="/img/monthly/monthly2.png"
-                                        alt="strongly recommend item no.2"
-                                    />
-                                    <p>제품이름2</p>
-                                    <p>option 제품의 옵션</p>
-                                    <span> <i class="xi-won"></i>19,900</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="#" class="thumnail"
-                                    ><img
-                                        src="/img/monthly/monthly3.png"
-                                        alt="strongly recommend item no.3"
-                                    />
-                                    <p>제품이름3</p>
-                                    <p>option 제품의 옵션</p>
-                                    <span> <i class="xi-won"></i>19,900</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="thumnail"
-                                    ><img
-                                        src="/img/monthly/monthly4.png"
-                                        alt="strongly recommend item no.4"
-                                    />
-                                    <p>제품이름4</p>
-                                    <p>option 제품의 옵션</p>
-                                    <span> <i class="xi-won"></i>99,000</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="banner banner_2">
-                    <div class="banner_title">
-                        <h1>Ikea 뉴스</h1>
-                        <p>
-                            <a href="#"><i class="xi-angle-right-min"></i>more</a>
-                        </p>
-                    </div>
-                    <div id="news_modul" class="news_modul">
-                        <p>
-                            <video
-                                muted=""
-                                loop=""
-                                controls=""
-                                autoplay
-                                poster="https://s3.newideas.kr/event/2019/08/catalogue/pc/top_bn-ko.jpg"
-                            >
-                                <source
-                                    src="https://s3.newideas.kr/event/2019/08/catalogue/ikea_60_4.mp4"
-                                    type="video/mp4"
-                                />
-                            </video>
-                            <a href="https://www.youtube.com/watch?v=APnGBfDLGMM" target="_blank"
-                                ><span>지금 보러가기</span></a
-                            >
-                        </p>
-                    </div>
-                    <div id="n-wrap">
-                        <div class="news news_box01">
-                            <img src="/img/news/news1.png" alt="" />
-                            <a href="#">
-                                <p class="n1">
-                                    <b>헬로우 모두들~</b><br />
-                                    한혜연이 추천하는 올해의 컬러 & 신상픽을 만나봐요.<br />
-                                    한혜연과 IKEA가 함께하는 홈 스타일링.<br />
-                                    궁금하다면 지금 바로 영상을 확인해봐요!
-                                </p>
-                            </a>
-                        </div>
-                        <div class="news news_box02">
-                            <img src="/img/news/news2.jpg" alt="" />
-                            <p class="n1">
-                                <b>모두를 위한 OMTÄNKSAM 옴텡크삼</b><br />
-                                누구에게나 편안한 휴식이 필요한 순간이 있습니다.<br />
-                                스웨덴어로 ‘배려’의 뜻을 지닌 이케아의 OMTÄNKSAM 옴텡크삼
-                                컬렉션은<br />
-                                다양한 체형과 신체 구조를 갖고 있는<br />
-                                모든 사람들의 일상을 보다 쉽고 편안하게 만들어줍니다.
-                            </p>
-                        </div>
-                        <div class="news news_box03">
-                            <img src="/img/news/news3.png" alt="" />
-                            <p class="n1">
-                                <b>야외활동을 즐기는 다양한 방법</b><br />
-                                다가오는 여름, 이케아와 함께 집안을 멋진 휴식 공간으로
-                                꾸며보세요.<br />더워지는 날씨에도 이케아만의 아이디어와 제품으로<br />
-                                더 상쾌하고 쾌적한 공간을 만들 수 있을 거예요.<br />
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <footer id="footer" class="ft">
                 <div class="f-top">
                     <div class="inner-list">

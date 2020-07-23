@@ -10,7 +10,7 @@ $gray: rgb(44, 41, 41);
 }
 
 @mixin red_box {
-    content: '';
+    content: "";
     position: absolute;
     display: block;
     width: 80px;
@@ -28,7 +28,7 @@ $gray: rgb(44, 41, 41);
 }
 
 @mixin caption_l {
-    font-family: 'Raleway', sans-serif !important;
+    font-family: "Raleway", sans-serif !important;
     text-align: center;
     letter-spacing: 16px;
     font-size: 40px;
@@ -36,25 +36,24 @@ $gray: rgb(44, 41, 41);
 }
 
 @mixin text {
-    font-family: 'Noto Sans KR', sans-serif !important;
+    font-family: "Noto Sans KR", sans-serif !important;
     font-weight: 300;
     text-align: center;
     font-style: 12px;
 }
-
 
 /*CSS 변경*/
 
 body {
     width: 100%;
     height: 100%;
-    background: url('/img/marbling.jpg') no-repeat center center fixed;
+    background: url("/img/marbling.jpg") no-repeat center center fixed;
     min-height: 100%;
     background-position: center;
     background-size: cover;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
     p {
-        font-family: 'Noto Sans KR', sans-serif;
+        font-family: "Noto Sans KR", sans-serif;
         cursor: default;
         font-weight: 300;
         line-height: 1.24;
@@ -78,7 +77,7 @@ nav {
         display: inline-block;
     }
     .logobox a {
-        font-family: 'Russo One', sans-serif;
+        font-family: "Russo One", sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 42px;
@@ -94,7 +93,7 @@ nav {
             li {
                 float: left;
                 button {
-                    font-family: 'Noto Sans KR', sans-serif;
+                    font-family: "Noto Sans KR", sans-serif;
                     display: block;
                     outline: none;
                     padding: 15px;
@@ -181,7 +180,7 @@ nav {
         margin: 0 auto;
         text-align: center;
         position: relative;
-        .profile-img:hover~.profile-words {
+        .profile-img:hover ~ .profile-words {
             opacity: 0;
         }
         #profile {
@@ -243,7 +242,7 @@ nav {
             width: 820px;
             padding: 30px;
             margin: auto;
-            background: url('/img/5.jpg') center;
+            background: url("/img/5.jpg") center;
             background-position: center;
             position: relative;
             .resume-sub {
@@ -254,10 +253,9 @@ nav {
                 text-align: justify;
                 ol {
                     padding: 20px;
-                    ;
                     li {
                         color: rgb(146, 146, 146);
-                        font-family: 'Noto Sans KR', sans-serif;
+                        font-family: "Noto Sans KR", sans-serif;
                         cursor: default;
                         font-weight: 300;
                         font-size: 14px;
@@ -329,10 +327,10 @@ section {
                         border-radius: 3px;
                         border: 2px solid black;
                         &:nth-of-type(1) {
-                            background: #1B50A0;
+                            background: #1b50a0;
                         }
                         &:nth-of-type(2) {
-                            background: #FFDB00;
+                            background: #ffdb00;
                         }
                     }
                 }
@@ -346,14 +344,14 @@ section {
                         padding: 5px 19px;
                         color: white;
                         text-align: center;
-                        box-shadow: 0 2px 8px -1px #{rgba(#151924, .32)};
+                        box-shadow: 0 2px 8px -1px #{rgba(#151924, 0.32)};
                     }
                 }
             }
             .project-img {
                 display: table-cell;
                 vertical-align: middle;
-                background: pink;
+                background: rgb(158, 49, 67);
                 width: 500px;
                 margin-left: 13px;
             }
@@ -362,7 +360,8 @@ section {
     .assets-subtitle {
         background: black;
         color: white;
-        text-align: center;
+        text-align: right;
+        width: 80%;
     }
 }
 
