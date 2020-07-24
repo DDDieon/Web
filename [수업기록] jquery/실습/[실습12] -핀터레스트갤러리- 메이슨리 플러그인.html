@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+        <style>
+            * {
+                margin: 0 auto;
+            }
+            #container {
+                width: 80%;
+                height: auto;
+                margin: 0 auto;
+            }
+            .box {
+                background: gray;
+                margin: 5px;
+                background: url("/img/card1.jpg");
+                background-size: 100% 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container"></div>
+    </body>
+    <script>
+        $(function () {
+            var widthRandom = Math.floor(Math.random() * 100) + 50
+            var heightRandom = Math.floor(Math.random() * 100) + 50
+            for (var i = 0; i < 100; i++) {
+                $("<div></div>") // 문서상에 존재하지 않는 태그도 제이쿼리 객체에 담을 수 있다
+                    .addClass("box")
+                    .css({
+                        width: Number(200 + widthRandom),
+                        height: 500,
+                    })
+                    .appendTo($("#container"))
+            }
+            $("#container").masonry({
+                itemSelector: ".box",
+                columnWidth: 110,
+            })
+        })
+    </script>
+</html>

@@ -17,12 +17,12 @@
         <link
             rel="stylesheet"
             type="text/css"
-            href="http://kenwheeler.github.io/slick/slick/slick.css"
+            href="/js/slick/slick.css"
         />
         <link
             rel="stylesheet"
             type="text/css"
-            href="http://kenwheeler.github.io/slick/slick/slick-theme.css"
+            href="/js/slick/slick-theme.css"
         />
         <!-- slick 슬라이더 css -->
         <!-- Sass compiled CSS Lists -->
@@ -96,34 +96,33 @@
             <section>
                 <div class="editorList">
                     <ul class="editorList__asset slick-items">
-                        <li class="editorList__asset--lists">이달의 인기 제품</li>
-                        <li class="editorList__asset--lists">신제품</li>
-                        <li class="editorList__asset--lists">특별가전 기획전</li>
-                        <li class="editorList__asset--lists">여름 필수품</li>
-                        <li class="editorList__asset--lists">키즈존</li>
-                        <li class="editorList__asset--lists">공간을 아끼는 수납</li>
-                        <li class="editorList__asset--lists">베이비 전용기획</li>
-                        <li class="editorList__asset--lists">아름다운 조명</li>
-                        <li class="editorList__asset--lists">실외를 꾸미자</li>
+                        <li class="editorList__asset--lists"><p>인기 제품</p></li>
+                        <li class="editorList__asset--lists"><p>신제품</p></li>
+                        <li class="editorList__asset--lists"><p>특별가전 기획전</p></li>
+                        <li class="editorList__asset--lists"><p>여름 필수품</p></li>
+                        <li class="editorList__asset--lists"><p>키즈존</p></li>
+                        <li class="editorList__asset--lists"><p>공간을 아끼는 수납</p></li>
+                        <li class="editorList__asset--lists"><p>베이비 전용기획</p></li>
+                        <li class="editorList__asset--lists"><p>아름다운 조명</p></li>
+                        <li class="editorList__asset--lists"><p>실외를 꾸미자</></li>
                     </ul>
                 </div>
                 <h2 class="headerTitle">모든 제품<span> | Products</spa></h2>
                 <ul class="productList">
-                    <li class="productList__items"><a href="#">가구</a></li>
+                    <li class="productList__items on"><a href="#">전체보기</a></li>
+                    <li class="productList__items "><a href="#">가구</a></li>
                     <li class="productList__items"><a href="#">소파&암체어</a></li>
                     <li class="productList__items"><a href="#">침대&매트리스</a></li>
                     <li class="productList__items"><a href="#">수납&정리</a></li>
                     <li class="productList__items"><a href="#">어린이 IKEA</a></li>
                     <li class="productList__items"><a href="#">텍스타일</a></li>
-                    <li class="productList__items"><a href="#">러그/매트/바닥재</a></li>
+                    <li class="productList__items"><a href="#">러그/매트</a></li>
                     <li class="productList__items"><a href="#">주방가구</a></li>
                     <li class="productList__items"><a href="#">주방용품</a></li>
                     <li class="productList__items"><a href="#">조명</a></li>
                     <li class="productList__items"><a href="#">가전제품</a></li>
-                    <li class="productList__items"><a href="#">여름용 소품</a></li>
                 </ul>
-                <div></div>
-                <script>
+                <script type= "text/javascript">
                     $(".editorList__asset").slick({
                         autoplay: true,
                         dots: false,
@@ -131,12 +130,128 @@
                         infinite: true,
                         autoplaySpeed: 3000,
                         arrows: true,
-                        slidesToScroll: 4,
+                        slidesToScroll: 3,
                         fade: false,
-                        slidesToShow: 4,
+                        slidesToShow: 3,
                         variableWidth: true,
+                        responsive : [
+                            {
+                                breakpoint: 530,
+                                settings: {slidesToScroll: 1}
+                        }
+                        ]
                     })
                 </script>
+                <div id="productMain">
+                    <div class="productMainItem">
+                        <a href="#">
+                            <div class="productMainItem__image-wrapper"><img src="/img/product/2.png" alt=""></div>
+                            <p>제품이름</p>
+                            <p>제품 부연설명</p>
+                            <p>￦19,800</p>
+                        </a>
+                    </div>
+                    <div class="productMainItem">
+                        <a href="#">
+                            <div class="productMainItem__image-wrapper"><img src="/img/product/3.png" alt=""></div>
+                            <p>제품이름</p>
+                            <p>제품 부연설명</p>
+                            <p>￦19,800</p>
+                        </a>
+                    </div>
+                    <div class="productMainItem">
+                        <a href="#">
+                            <div class="productMainItem__image-wrapper"><img src="/img/product/4.png" alt=""></div>
+                            <p>제품이름</p>
+                            <p>제품 부연설명</p>
+                            <p>￦19,800</p>
+                        </a>
+                    </div>
+                    <div class="productMainItem">
+                        <a href="#">
+                            <div class="productMainItem__image-wrapper"><img src="/img/product/5.png" alt=""></div>
+                            <p>제품이름</p>
+                            <p>제품 부연설명</p>
+                            <p>￦19,800</p>
+                        </a>
+                    </div>
+                    <div class="productMainItem">
+                        <a href="#">
+                            <div class="productMainItem__image-wrapper"><img src="/img/product/1.png" alt=""></div>
+                            <p>제품이름</p>
+                            <p>제품 부연설명</p>
+                            <p>￦19,800</p>
+                        </a>
+                    </div>
+                    <div class="productMainItem">
+                        <a href="#">
+                            <div class="productMainItem__image-wrapper"><img src="/img/product/2.png" alt=""></div>
+                            <p>제품이름</p>
+                            <p>제품 부연설명</p>
+                            <p>￦19,800</p>
+                        </a>
+                    </div>
+                    <div class="productMainItem">
+                        <a href="#">
+                            <div class="productMainItem__image-wrapper"><img src="/img/product/3.png" alt=""></div>
+                            <p>제품이름</p>
+                            <p>제품 부연설명</p>
+                            <p>￦19,800</p>
+                        </a>
+                    </div>
+                    <div class="productMainItem">
+                        <a href="#">
+                            <div class="productMainItem__image-wrapper"><img src="/img/product/4.png" alt=""></div>
+                            <p>제품이름</p>
+                            <p>제품 부연설명</p>
+                            <p>￦19,800</p>
+                        </a>
+                    </div>
+                    <div class="productMainItem">
+                        <a href="#">
+                            <div class="productMainItem__image-wrapper"><img src="/img/product/2.png" alt=""></div>
+                            <p>제품이름</p>
+                            <p>제품 부연설명</p>
+                            <p>￦19,800</p>
+                        </a>
+                    </div>
+                    <div class="productMainItem">
+                        <a href="#">
+                            <div class="productMainItem__image-wrapper"><img src="/img/product/5.png" alt=""></div>
+                            <p>제품이름</p>
+                            <p>제품 부연설명</p>
+                            <p>￦19,800</p>
+                        </a>
+                    </div>
+
+                </div>
+                <!-- <script>
+                    let productMain = document.querySelector('#productMain')
+                    $(window).scroll(function() {
+                        const scrollTop = $(window).scrollTop(); //스크롤의 맨 윗단
+                        const 윈도우높이 = $(window).height(); //내가 지금 보고있는 화면의 맨 밑단
+                        const 스크롤높이 = scrollTop + 윈도우높이; //내가 지금 보고있는 화면의 스크롤높이
+                        const 문서높이 = $(document).height();
+                        if (스크롤높이 >= 문서높이 - 2200) {
+                            무한스크롤();
+                        }
+
+                        function 무한스크롤() {
+                            for (var i = 0; i <= 8; i++) {
+                                $("<div></div").addClass('productMainItem').appendTo($('#productMain'))
+                                let productImg = $("<img>").attr("src","img/product/2.png")
+                                let productA = $("<a href='#'></a>").append(productImg)
+                                let productTitle = $("<p>").attr("class","productTitle").html("제품이름")
+                                let productSubTitle = $("<p>").attr("class","productSubTitle").html("제품에 대한 부연설명")
+                                let productPrice = $("<p>").attr("class","productTitle").html("￦10,900")
+                                productA.appendTo($(".productMainItem").eq(i))
+                                productTitle.appendTo($(".productMainItem").eq(i))
+                                productSubTitle.appendTo($(".productMainItem").eq(i))
+                                productPrice.appendTo($(".productMainItem").eq(i))
+                            }
+                        }
+                    })
+                </script> -->
             </section>
             <footer id="footer" class="ft">
                 <div class="f-top">

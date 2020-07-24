@@ -76,7 +76,7 @@ input[type="checkbox"] {
 }
 
 .panel_wrap {
-    z-index: 1 !important;
+    z-index: 2 !important;
     margin-top: 9.662vw;
     width: 80%;
     height: calc(100% - 9.662vw);
@@ -148,6 +148,7 @@ width: 100%;
 }
 
 #contents .banner_title > p {
+    box-sizing: content-box;
     font-size: 2.5vw;
     margin: 3px auto;
     width: 10vw;
@@ -443,7 +444,7 @@ footer {
         top: 0;
         right: 0;
         left: 0;
-        z-index: 1;
+        z-index: 2;
     }
     #desk_nav .top_gnb ul {
         height: 40px;
