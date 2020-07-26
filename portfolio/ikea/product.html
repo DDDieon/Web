@@ -94,7 +94,7 @@
                 </div>
             </header>
             <section>
-                <div class="editorList">
+                <!-- <div class="editorList">
                     <ul class="editorList__asset slick-items">
                         <li class="editorList__asset--lists"><p>인기 제품</p></li>
                         <li class="editorList__asset--lists"><p>신제품</p></li>
@@ -106,7 +106,7 @@
                         <li class="editorList__asset--lists"><p>아름다운 조명</p></li>
                         <li class="editorList__asset--lists"><p>실외를 꾸미자</></li>
                     </ul>
-                </div>
+                </div> -->
                 <h2 class="headerTitle">모든 제품<span> | Products</spa></h2>
                 <ul class="productList">
                     <li class="productList__items on"><a href="#">전체보기</a></li>
@@ -122,7 +122,13 @@
                     <li class="productList__items"><a href="#">조명</a></li>
                     <li class="productList__items"><a href="#">가전제품</a></li>
                 </ul>
-                <script type= "text/javascript">
+                <script>
+                    $('.productList__items').on('click', function(){
+                        $('.productList__items').removeClass("on")
+                        $(this).addClass('on')
+                    })
+                </script>
+                <!-- <script type= "text/javascript">
                     $(".editorList__asset").slick({
                         autoplay: true,
                         dots: false,
@@ -141,7 +147,7 @@
                         }
                         ]
                     })
-                </script>
+                </script> -->
                 <div id="productMain">
                     <div class="productMainItem">
                         <a href="#">
@@ -225,8 +231,7 @@
                     </div>
 
                 </div>
-                <!-- <script>
-                    let productMain = document.querySelector('#productMain')
+                <script>
                     $(window).scroll(function() {
                         const scrollTop = $(window).scrollTop(); //스크롤의 맨 윗단
                         const 윈도우높이 = $(window).height(); //내가 지금 보고있는 화면의 맨 밑단
@@ -237,21 +242,11 @@
                         }
 
                         function 무한스크롤() {
-                            for (var i = 0; i <= 8; i++) {
-                                $("<div></div").addClass('productMainItem').appendTo($('#productMain'))
-                                let productImg = $("<img>").attr("src","img/product/2.png")
-                                let productA = $("<a href='#'></a>").append(productImg)
-                                let productTitle = $("<p>").attr("class","productTitle").html("제품이름")
-                                let productSubTitle = $("<p>").attr("class","productSubTitle").html("제품에 대한 부연설명")
-                                let productPrice = $("<p>").attr("class","productTitle").html("￦10,900")
-                                productA.appendTo($(".productMainItem").eq(i))
-                                productTitle.appendTo($(".productMainItem").eq(i))
-                                productSubTitle.appendTo($(".productMainItem").eq(i))
-                                productPrice.appendTo($(".productMainItem").eq(i))
-                            }
+                            var copy = $('.productMainItem').clone();
+                            $('#productMain').append(copy)
                         }
                     })
-                </script> -->
+                </script>
             </section>
             <footer id="footer" class="ft">
                 <div class="f-top">
@@ -260,62 +255,45 @@
                             <li>
                                 <a href="#f-sub-1">고객문의<i class="xi-angle-down"></i></a>
                                 <ol id="f-sub-1">
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 고객지원</a>
+                                    <li><a href="#"><i class="xi-play"></i> 고객지원</a>
                                     </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 자주 묻는 질문</a>
+                                    <li><a href="#"><i class="xi-play"></i> 자주 묻는 질문</a>
                                     </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 문의하기</a>
+                                    <li><a href="#"><i class="xi-play"></i> 문의하기</a>
                                     </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 배송조회</a>
+                                    <li><a href="#"><i class="xi-play"></i> 배송조회</a>
                                     </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 교환환불</a>
+                                    <li><a href="#"><i class="xi-play"></i> 교환환불</a>
                                     </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 제품리콜</a>
+                                    <li><a href="#"><i class="xi-play"></i> 제품리콜</a>
                                     </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 제품 구매 안내</a>
+                                    <li><a href="#"><i class="xi-play"></i> 제품 구매 안내</a>
                                     </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 피드백</a>
+                                    <li><a href="#"><i class="xi-play"></i> 피드백</a>
                                     </li>
                                 </ol>
                             </li>
                             <li>
                                 <a href="#f-sub-2">쇼핑하기<i class="xi-angle-down"></i></a>
                                 <ol id="f-sub-2">
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 쇼핑하기</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 전화 주문</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> IKEA FAMILY</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> IKEA for Business</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> IKEA 모바일 웹</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 온라인 플래닝</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> IKEA 카탈로그</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 결제 옵션</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 제품 재고 확인</a>
-                                    </li>
+                                    <li><a href="#"><i class="xi-play"></i> 쇼핑하기</a>
+                                </li>
+                                    <li><a href="#"><i class="xi-play"></i> 전화 주문</a>
+                                </li>
+                                    <li><a href="#"><i class="xi-play"></i> IKEA FAMILY</a>
+                                </li>
+                                    <li><a href="#"><i class="xi-play"></i> IKEA for Business</a>
+                                </li>
+                                    <li><a href="#"><i class="xi-play"></i> IKEA 모바일 웹</a>
+                                </li>
+                                    <li><a href="#"><i class="xi-play"></i> 온라인 플래닝</a>
+                                </li>
+                                    <li><a href="#"><i class="xi-play"></i> IKEA 카탈로그</a>
+                                </li>
+                                    <li><a href="#"><i class="xi-play"></i> 결제 옵션</a>
+                                </li>
+                                    <li><a href="#"><i class="xi-play"></i> 제품 재고 확인</a>
+                                </li>
                                 </ol>
                             </li>
                             <li>
