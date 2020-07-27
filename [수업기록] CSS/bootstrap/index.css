@@ -1,0 +1,18 @@
+/* hamburger design */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #333;
+    width: 44px;
+    height: 34px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    height: 2px;
+    width: 24px;
+    background: white;
+    margin: 3px auto;
+}

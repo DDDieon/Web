@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+    <head>
+        <title>01_slide_banner</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8;" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.1.3.min.js"></script>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            #wrapper ul,
+            #wrapper2 ul {
+                width: 280px;
+                height: 390px;
+                border: 2px solid black;
+                position: relative;
+                overflow: hidden;
+                margin: 20px;
+            }
+            #wrapper ul li,
+            #wrapper2 ul li {
+                list-style: none;
+                width: 200px;
+                height: 250px;
+                position: absolute;
+                top: 100%;
+            }
+        </style>
+        <script>
+            $(document).ready(function () {
+                var current = 0
+                var banner = $("#wrapper li")
+                var banner2 = $("#wrapper2 li")
+                setInterval(function () {
+                    var prev = banner.eq(current)
+                    var prev2 = banner2.eq(current)
+                    move(prev, 0, "-100%")
+                    move2(prev2, 0, "-100%")
+                    current++
+                    if (current == banner.size()) current = 0
+                    var next = banner.eq(current)
+                    var next2 = banner2.eq(current)
+                    move(next, "100%", 0)
+                    move2(next2, "100%", 0)
+                }, 2000)
+                function move(box, start, end) {
+                    box.css("top", start).stop().animate(
+                        {
+                            top: end,
+                        },
+                        1000
+                    )
+                }
+                function move2(box2, start2, end2) {
+                    box2.css("left", start2).stop().animate(
+                        {
+                            left: end2,
+                        },
+                        1000
+                    )
+                }
+            })
+        </script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <ul>
+                <li class="image1" style="top: 0;"><img src="img/1.jpg" alt="1" /></li>
+                <li class="image2"><img src="img/2.jpg" alt="2" /></li>
+                <li class="image3"><img src="img/3.jpg" alt="3" /></li>
+            </ul>
+        </div>
+        <div id="wrapper2">
+            <ul>
+                <li class="image1" style="top: 0;"><img src="img/1.jpg" alt="1" /></li>
+                <li class="image2" style="top: 0;"><img src="img/2.jpg" alt="2" /></li>
+                <li class="image3" style="top: 0;"><img src="img/3.jpg" alt="3" /></li>
+            </ul>
+        </div>
+    </body>
+</html>

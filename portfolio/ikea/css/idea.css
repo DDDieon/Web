@@ -1,0 +1,60 @@
+.editorList__asset {
+  margin: 50px;
+}
+
+.editorList__asset .slick-prev,
+.editorList__asset .slick-next {
+  z-index: 1;
+}
+
+.editorList__asset--lists:nth-child(1) {
+  background: url("/img/3.png");
+}
+
+.editorList__asset--lists {
+  position: relative;
+  overflow: hidden;
+  line-height: 120px;
+  border: 1px solid #ccc;
+  text-align: center;
+  height: 100px;
+}
+
+.editorList__asset--lists p {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+}
+
+.editorList__asset--lists:hover p {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.699);
+  box-shadow: inset 4px 6px 15px black;
+  color: white;
+}
+
+@media screen and (min-width: 460px) {
+  .editorList__asset--lists {
+    height: 200px;
+    line-height: 200px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .editorList__asset {
+    font-size: 22px;
+    color: #e6e6e6;
+  }
+  .editorList__asset--lists {
+    height: 500px;
+    line-height: 500px;
+  }
+  .editorList__asset--lists p {
+    width: 100%;
+    height: 500px;
+  }
+}

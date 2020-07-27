@@ -1,0 +1,51 @@
+.editorList__asset {
+  margin: 50px;
+}
+
+.editorList__asset .slick-prev,
+.editorList__asset .slick-next {
+  z-index: 1;
+}
+
+.editorList__asset--lists {
+  background: url("/img/3.png");
+  position: relative;
+  overflow: hidden;
+  width: 60px;
+  height: 120px;
+  line-height: 120px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.editorList__asset--lists p {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.editorList__asset--lists:hover p {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.699);
+  box-shadow: inset 4px 6px 15px black;
+  color: white;
+}
+
+@media screen and (min-width: 460px) {
+  .editorList__asset--lists {
+    width: 120px !important;
+    height: 120px;
+    line-height: 120px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .editorList__asset {
+    font-size: 18px;
+  }
+  .editorList__asset--lists {
+    width: 370px !important;
+    height: 370px;
+    line-height: 370px;
+  }
+}
