@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>http://cafe.daum.net/knyatom/OXKi/95</title>
+        <style>
+            * {
+                margin: 0 auto;
+                padding: 0;
+            }
+
+            li {
+                list-style: none;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            #wrap {
+                width: 427px;
+            }
+
+            h1 {
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            .tab {
+                height: 100px;
+                position: relative;
+            }
+            .tab > li {
+                float: left;
+            }
+
+            .tab > li > div > ul {
+                position: absolute;
+                left: 0;
+                top: 47px;
+                width: 427px;
+            }
+
+            .tab > li > div > ul > li {
+                position: relative;
+                padding-left: 15px;
+            }
+
+            .tab > li > div > ul > li > span {
+                position: absolute;
+                right: 10px;
+                top: 0;
+            }
+
+            .tab > li > div.hover {
+                display: block;
+            }
+
+            .more {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            }
+        </style>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <h1>탭만들기</h1>
+            <ul class="tab" id="tab01">
+                <li>
+                    <h2>
+                        <a href="#"><img src="images/m1_out.gif" alt="공지사항" /></a>
+                    </h2>
+                    <div>
+                        <ul>
+                            <li><a href="#">공지내용</a><span>2015-01-04</span></li>
+                        </ul>
+                        <a href="#" class="more">더보기</a>
+                    </div>
+                </li>
+                <li>
+                    <h2>
+                        <a href="#"><img src="images/m2_out.gif" alt="뉴스" /></a>
+                    </h2>
+                    <div>
+                        <ul>
+                            <li><a href="#">뉴스내용</a><span>2015-01-04</span></li>
+                        </ul>
+                        <a href="#" class="more">더보기</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="tab" id="tab02">
+                <li>
+                    <h2>
+                        <a href="#"><img src="images/m3_out.gif" alt="자료실" /></a>
+                    </h2>
+                    <div>
+                        <ul>
+                            <li><a href="#">자료실</a><span>2015-01-04</span></li>
+                        </ul>
+                        <a href="#" class="more">더보기</a>
+                    </div>
+                </li>
+                <li>
+                    <h2>
+                        <a href="#"><img src="images/m4_out.gif" alt="보도자료" /></a>
+                    </h2>
+                    <div>
+                        <ul>
+                            <li><a href="#">보도자료</a><span>2015-01-04</span></li>
+                        </ul>
+                        <a href="#" class="more">더보기</a>
+                    </div>
+                </li>
+                <script>
+                    //----콜백 1
+                    function imgOver(overWhat) {
+                        var oldimg = $(overWhat).find("img").attr("src")
+                        var overimg = oldimg.replace("out", "over") //img/m2_out.gif에서 over.gif
+                        $(overWhat).find("img").attr("src", overimg)
+                    }
+                    //----콜백 2
+                    function imgOut(outWhat) {
+                        var oldimg = $(outWhat).find("img").attr("src")
+                        var overimg = oldimg.replace("over", "out")
+                        $(outWhat).find("img").attr("src", overimg)
+                    }
+                    //----콜백 3
+                    function tabs(tabName) {
+                        var tabA = $("#" + tabName + ">li>h2>a")
+                        var tabDiv = $("#" + tabName + ">li>div")
+                        tabDiv.hide()
+                        tabA.on("mouseenter focus", function () {
+                            if (tabA.target) {
+                                //tabA.target은 눌러지고 있는 탭. 이게 원래 존재했다면 ▼
+                                $(tabA.target).parent().next().hide()
+                                $(this).parent().next().show()
+                                imgOut(tabA.target) // 2
+                                imgOver(this) // 3
+                            } else {
+                                //최초 이벤트시 ▼
+                                imgOver(this) // 1
+                            }
+                            tabA.target = this //현재탭을 tab.target으로 저장 (저장하지 않은 처음은 else에서 시작)
+                        })
+                    }
+
+                    tabs("tab01")
+                    tabs("tab02")
+                    //----호출 완료
+                </script>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -168,8 +168,11 @@ width: 100%;
     display: block;
 }
 
-/*slide*/
+/*slide + innermenu*/
 
+div.index_banner_wrap {
+    position: relative;
+}
 div.banner_0 {
     width: 100%;
     margin: 0 auto;
@@ -180,6 +183,10 @@ div.banner_0 div img {
     display: block;
     margin: 0 auto;
     width: 100%;
+}
+
+div.innermenu {
+    display: none;
 }
 
 /*recomend items*/
@@ -506,6 +513,51 @@ footer {
     /* ----- desk slide ----- */
     .banner.banner_0 {
         width: 100%;
+    }
+    div.innermenu {
+        position: absolute;
+        background: #000000d0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        color: rgba(255, 255, 255, 0.767);
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        line-height: 1.2;
+        font-size: 16px;
+        box-shadow: inset 8px 4px 20px black;
+        border-radius: 40px 40px 0 0;
+    }
+
+    div.innermenu ol {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+    }
+    div.innermenu ol li {
+        border-left: 2px solid rgba(255, 255, 255, 0.096);
+    }
+    div.innermenu ol li:first-child {
+        border-left: none;
+    }
+    div.innermenu ol a {
+        display: block;
+        padding: 40px 60px;
+    }
+
+    div.innermenu ol li:hover a {
+        transition: 0.5s;
+        background: black;
+        box-shadow: inset 8px 4px 20px black;
+        border-radius: 12px;
+        color: #ffdb00;
+    }
+    div.innermenu i {
+        display: block;
+        font-size: 44px;
+        margin-bottom: 10px;
     }
     /* ----- desk recomend ------- */
     .banner p {

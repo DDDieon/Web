@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="js/jquery.cookie.js"></script>
+        <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+        <script></script>
+    </head>
+    <body>
+        <h1>쿠키 사용하기</h1>
+        <h1>쿠키 플러그 파일과 html파일을 닷홈서버에 업로드하고 테스트하자</h1>
+        <p id="pop_wrap">
+            <a href="#">[창닫기]</a>
+            <br />
+            <a href="#">[하루동안 창 열지 않기]</a>
+        </p>
+        <hr />
+        <a href="#" id="del">[쿠키 삭제하기]</a>
+        <style>
+            #pop_wrap {
+                width: 300px;
+                height: 300px;
+                border: 3px solid black;
+                position: absolute;
+                left: 200px;
+                top: 200px;
+                z-index: 5555;
+                box-shadow: 0 2px 10px gray;
+                text-align: center;
+                display: none;
+            }
+        </style>
+        <script>
+            $("#pop_wrap").css("cursor", "move").draggable()
+            if ($.cookie("pop") != "no") {
+                $("#pop_wrap").show()
+            }
+            $("#pop_wrap")
+                .find("a")
+                .eq(0)
+                .click(function () {
+                    $("#pop_wrap").hide()
+                })
+
+            $("#pop_wrap")
+                .find("a")
+                .eq(1)
+                .click(function () {
+                    $.cookie("pop", "no", {
+                        expires: 1,
+                    })
+                    $("#pop_wrap").hide()
+                    console.log($.cookie("pop"))
+                })
+
+            $("#del").click(function () {
+                $.cookie("pop", null)
+            })
+        </script>
+    </body>
+</html>

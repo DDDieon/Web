@@ -19,7 +19,7 @@
         <!-- js Files -->
         <script src="js/display.js" defer></script>
         <!-- Sass compiled CSS Lists -->
-        <link rel="stylesheet" href="digitalshow.css" />
+        <link rel="stylesheet" href="/css/digitalshow.css" />
     </head>
 
     <body>
@@ -28,8 +28,8 @@
                 <div id="desk_nav">
                     <nav class="top_gnb">
                         <ul>
-                            <li><a href="#">배송조회</a></li>
-                            <li><a href="#">장바구니</a></li>
+                            <li><a href="#">LOGIN</a></li>
+                            <li><a href="#">회원가입</a></li>
                             <li><a href="#">주문배송조회</a></li>
                             <li><a href="#">고객센터</a></li>
                             <li>
@@ -62,12 +62,11 @@
                         </p>
                         <div id="content_box">
                             <ul class="list01">
-                                <li><a href="/product.html">모든 제품</a></li>
-                                <li><a href="/digitalshow.html">디지털 쇼룸</a></li>
-                                <li><a href="/idea.html">아이디어</a></li>
-                                <li><a href="/store.html">매장안내</a></li>
-                                <li><a href="/monthly.html">이달의 혜택</a></li>
-                                <li><a href="/sale.html">세일정보</a></li>
+                                <li><a href="/product.html">침실</a></li>
+                                <li><a href="/digitalshow.html">거실</a></li>
+                                <li><a href="/idea.html">주방/다이닝</a></li>
+                                <li><a href="/store.html">욕실</a></li>
+                                <li><a href="/monthly.html">어린이</a></li>
                             </ul>
                         </div>
                     </div>
@@ -78,7 +77,54 @@
                     </nav>
                 </div>
             </header>
-
+            <div class="digital_show_wrap">
+                <section>
+                    <div class="page">
+                        <div class="content">
+                            <h2>침실</h2>
+                            <p>스르륵 잠이 오는 침실</p>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="content">
+                            <h2>EXPLOSIVES</h2>
+                            <p>과거와 현재, 미래의 경계를 허물고 뛰어난 기술력과....</p>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="content">
+                            <h2>DEFENSE</h2>
+                            <p>40년 이상 쌓아온 노하우와 기술력으로 대한민국 안보에 힘이 ...</p>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="content">
+                            <h2>TRADE</h2>
+                            <p>
+                                (주)한화/무역은 유화, 방산, 철강, 기계, 식량등 핵심사업군에서의 ...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="content">
+                            <h2>TRADE</h2>
+                            <p>
+                                (주)한화기계는 반세기가 넘게 축적한 노하우와 기술력을 바탕으로
+                                글로벌...
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <aside>
+                <ul>
+                    <li>●</li>
+                    <li>●</li>
+                    <li>●</li>
+                    <li>●</li>
+                    <li>●</li>
+                </ul>
+            </aside>
             <footer id="footer" class="ft">
                 <div class="f-top">
                     <div class="inner-list">
@@ -224,5 +270,74 @@
                 </div>
             </footer>
         </div>
+        <script>
+            $(document).ready(function () {
+                $("aside ul li").eq(0).click()
+            })
+            //페럴렉스 -------------------------------------------------------------
+            var asideBtn = $("aside ul li")
+            var now = 0
+            var setPage = $("section div.page")
+            asideBtn.on("click", function () {
+                asideBtn.removeClass("on")
+                $(this).addClass("on")
+                var i = $(this).index() //li가 몇번째인지 가져와서 div를 선택함
+                if (now == i) return
+                if (now < i) {
+                    setPage.eq(now).css("top", 0).stop().animate(
+                        //먼저 now페이지를 top0에 갖다박고
+                        {
+                            top: "-100%", //위로 올려
+                        },
+                        1000 //천천히
+                    )
+                    setPage
+                        .eq(i)
+                        .css({ top: "100%", "z-index": 1 })
+                        .stop()
+                        .animate(
+                            {
+                                //다가올 i페이지를 top100에 갖다박고
+                                top: "0", //현재페이지로 당겨
+                            },
+                            {
+                                duration: 500,
+                                easing: "swing",
+                                complete: contentSlide(i),
+                            }
+                        )
+                    now = i //i페이지는 now페이지가 되었다
+                }
+                if (now > i) {
+                    setPage.eq(now).css("top", 0).stop().animate(
+                        //먼저 now페이지가 보이는 top0에 갖다박고
+                        {
+                            top: "100%", //밑으로 내려
+                        },
+                        1000 //천천히
+                    )
+                    setPage
+                        .eq(i)
+                        .css({ top: "100%", "z-index": 1 })
+                        .stop()
+                        .animate(
+                            {
+                                //다가올 i페이지를 위에 갖다박고
+                                top: "0", //현재페이지로 당겨
+                            },
+                            {
+                                duration: 500,
+                                easing: "swing",
+                                complete: contentSlide(i),
+                            }
+                        )
+                    now = i //i페이지는 now페이지가 되었다
+                }
+                function contentSlide(i) {
+                    setPage.find(".content").show(500)
+                    setPage.eq(i).find(".content").show(1000)
+                }
+            })
+        </script>
     </body>
 </html>

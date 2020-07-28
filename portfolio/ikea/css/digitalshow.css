@@ -1,51 +1,172 @@
-.editorList__asset {
-  margin: 50px;
-}
-
-.editorList__asset .slick-prev,
-.editorList__asset .slick-next {
-  z-index: 1;
-}
-
-.editorList__asset--lists {
-  background: url("/img/3.png");
-  position: relative;
-  overflow: hidden;
-  width: 60px;
-  height: 120px;
-  line-height: 120px;
-  border: 1px solid #ccc;
-  text-align: center;
-}
-
-.editorList__asset--lists p {
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.editorList__asset--lists:hover p {
-  position: absolute;
+@charset "UTF-8";
+.digital_show_wrap {
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.699);
-  box-shadow: inset 4px 6px 15px black;
+  overflow: hidden;
+}
+
+.digital_show_wrap section,
+.digital_show_wrap div.page {
+  position: relative;
+  width: inherit;
+  height: calc(100vh - 30px);
+  overflow: hidden;
+  background: rgba(252, 251, 255, 0.87);
+  box-shadow: inset 4px 10px 100px rgba(177, 177, 177, 0.137);
+}
+
+.digital_show_wrap div.page {
+  position: absolute;
+}
+
+.digital_show_wrap div.page .content {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.363);
+  left: 0;
+  top: 0;
+  padding: 15px;
+  opacity: 1;
+  visibility: visible;
+  padding: 50px;
+  width: inherit;
+  height: inherit;
+}
+
+.digital_show_wrap div.page .content h2 {
+  font-size: 35px;
+  background: black;
+  font-weight: bold;
+  color: white;
+  top: 45%;
+  position: absolute;
+}
+
+.digital_show_wrap div.page .content p {
+  top: 55%;
+  position: absolute;
+  background: snow;
+}
+
+section div.page:nth-of-child(1) {
+  left: 0;
+  top: 0;
+}
+
+aside {
+  position: fixed;
+  width: 30px;
+  right: 20px;
+  top: 10%;
+  z-index: 4;
+}
+
+aside ul li {
+  position: relative;
+  cursor: pointer;
+}
+
+aside ul li:hover {
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+aside ul li:after {
+  display: block;
+  position: absolute;
+  left: -50px;
+  top: 0;
+  background: rgba(255, 255, 255, 0.877);
+  border-radius: 10px;
+  padding: 5px;
+  transition: 0.3s;
+  box-shadow: 2px 1px 10px rgba(177, 177, 177, 0.137);
+  visibility: hidden;
+  opacity: 0;
+  width: 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+aside ul li.on {
   color: white;
 }
 
-@media screen and (min-width: 460px) {
-  .editorList__asset--lists {
-    width: 120px !important;
-    height: 120px;
-    line-height: 120px;
-  }
+aside ul li.on:after {
+  visibility: visible;
+  color: black;
+  font-weight: bold;
+  left: -100px;
+  opacity: 1;
+  width: 80px;
+}
+
+aside ul li:nth-child(1):after {
+  content: "침실";
+}
+
+aside ul li:nth-child(2):after {
+  content: "거실";
+}
+
+aside ul li:nth-child(3):after {
+  content: "주방/다이닝";
+}
+
+aside ul li:nth-child(4):after {
+  content: "욕실";
+}
+
+aside ul li:nth-child(5):after {
+  content: "어린이";
+}
+
+/*페럴랙스 div박스 안*/
+div.page:nth-of-type(1) {
+  background: url("/img/showroom/1_bedroom.png") no-repeat;
+  background-size: auto 100%;
+  background-position: center center;
+  top: 0;
+  z-index: 1;
+}
+
+div.page:nth-of-type(2) {
+  background: url("/img/showroom/2_living.png") no-repeat;
+  background-size: 100% 100%;
+  background-size: auto 100%;
+  background-position: center center;
+  top: 0;
+}
+
+div.page:nth-of-type(3) {
+  background: url("/img/showroom/3_kitchin.png") no-repeat;
+  background-size: 100% 100%;
+  background-size: auto 100%;
+  background-position: center center;
+  top: 0;
+}
+
+div.page:nth-of-type(4) {
+  background: url("/img/showroom/1_bedroom.png") no-repeat;
+  background-size: 100% 100%;
+  background-size: auto 100%;
+  background-position: center center;
+  top: 0;
+}
+
+div.page:nth-of-type(5) {
+  background: url("/img/showroom/1_bedroom.png") no-repeat;
+  background-size: 100% 100%;
+  background-size: auto 100%;
+  background-position: center center;
+  top: 0;
 }
 
 @media screen and (min-width: 1260px) {
-  .editorList__asset {
-    font-size: 18px;
+  .digital_show_wrap {
+    padding-top: 96px;
   }
-  .editorList__asset--lists {
-    width: 370px !important;
-    height: 370px;
-    line-height: 370px;
+  .digital_show_wrap div.page {
+    height: calc(100vh - 96px);
   }
 }
