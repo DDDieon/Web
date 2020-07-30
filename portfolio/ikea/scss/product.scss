@@ -13,6 +13,10 @@ section {
     text-align: center;
     overflow: hidden;
     margin: 50px auto;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
     .on {
         background: rgb(43, 42, 44);
         box-shadow: inset 3px 4px 10px black;
@@ -90,7 +94,7 @@ section {
 @media screen and (min-width: 1260px) {
     .headerTitle {
         margin-top: 80px;
-        margin-left: 80px;
+        margin-left: 10vw;
         margin-bottom: 20px;
         font-size: 24px;
         span {
@@ -105,9 +109,9 @@ section {
 
     .productList {
         width: 1260px;
-        height: 100px;
         &__items {
-            width: 16%;
+            width: 8%;
+            font-size: 12px;
         }
     }
     #productMain {

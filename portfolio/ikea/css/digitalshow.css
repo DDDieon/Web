@@ -1,8 +1,20 @@
 @charset "UTF-8";
+@keyframes pointRound {
+  from {
+    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    transform: scale(1);
+    border: 5px solid rgba(255, 255, 255, 0.521);
+  }
+  to {
+    transform: scale(2);
+  }
+}
+
 .digital_show_wrap {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  box-shadow: 10px 10px 60px black;
 }
 
 .digital_show_wrap section,
@@ -11,8 +23,6 @@
   width: inherit;
   height: calc(100vh - 30px);
   overflow: hidden;
-  background: rgba(252, 251, 255, 0.87);
-  box-shadow: inset 4px 10px 100px rgba(177, 177, 177, 0.137);
 }
 
 .digital_show_wrap div.page {
@@ -21,7 +31,6 @@
 
 .digital_show_wrap div.page .content {
   position: absolute;
-  background: rgba(0, 0, 0, 0.363);
   left: 0;
   top: 0;
   padding: 15px;
@@ -32,19 +41,51 @@
   height: inherit;
 }
 
+.digital_show_wrap div.page .content ul {
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-decoration: underline;
+}
+
+.digital_show_wrap div.page .content ul li {
+  margin-right: 12px;
+}
+
 .digital_show_wrap div.page .content h2 {
   font-size: 35px;
   background: black;
   font-weight: bold;
   color: white;
-  top: 45%;
+  top: 62%;
   position: absolute;
+  padding: 8px 24px;
+  padding-right: 30px;
 }
 
 .digital_show_wrap div.page .content p {
-  top: 55%;
+  top: 75%;
   position: absolute;
   background: snow;
+  padding: 12px 24px;
+}
+
+.digital_show_wrap div.page .content .lookNow {
+  position: absolute;
+  top: 20%;
+  left: 80%;
+  display: block;
+  width: 120px;
+  height: 40px;
+  line-height: 2.8;
+  background: transparent;
+  text-align: center;
+  border-radius: 12px;
+  font-weight: bold;
+  border: 3px solid #000;
+  font-size: 12px;
+  color: #000;
+  background: white;
 }
 
 section div.page:nth-of-child(1) {
@@ -52,11 +93,28 @@ section div.page:nth-of-child(1) {
   top: 0;
 }
 
+.pointer {
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: rgba(75, 75, 75, 0.644);
+  opacity: 0.8;
+  border-radius: 50%;
+  z-index: 2;
+  top: 50%;
+  left: 20%;
+  padding: 20px;
+  text-indent: -999;
+  box-shadow: inset 2px 2px 5px black;
+  border: 5px solid rgba(0, 0, 0, 0.548);
+}
+
 aside {
   position: fixed;
   width: 30px;
   right: 20px;
-  top: 10%;
+  top: 20vh;
   z-index: 4;
 }
 
@@ -83,13 +141,20 @@ aside ul li:after {
   box-shadow: 2px 1px 10px rgba(177, 177, 177, 0.137);
   visibility: hidden;
   opacity: 0;
-  width: 0;
   text-align: center;
   overflow: hidden;
 }
 
 aside ul li.on {
-  color: white;
+  color: rgba(255, 255, 255, 0.726);
+  background: rgba(0, 0, 0, 0.644);
+  opacity: 0.8;
+  border-radius: 50%;
+  box-shadow: inset 2px 2px 5px black;
+  border: 3px solid rgba(0, 0, 0, 0.281);
+  text-indent: -999 !important;
+  padding-left: 5px;
+  right: 8px;
 }
 
 aside ul li.on:after {
@@ -99,6 +164,7 @@ aside ul li.on:after {
   left: -100px;
   opacity: 1;
   width: 80px;
+  box-shadow: 2px 2px 5px black;
 }
 
 aside ul li:nth-child(1):after {
@@ -123,7 +189,7 @@ aside ul li:nth-child(5):after {
 
 /*페럴랙스 div박스 안*/
 div.page:nth-of-type(1) {
-  background: url("/img/showroom/1_bedroom.png") no-repeat;
+  background: url("/img/showroom/bg/bg1.png") no-repeat;
   background-size: auto 100%;
   background-position: center center;
   top: 0;
@@ -131,7 +197,7 @@ div.page:nth-of-type(1) {
 }
 
 div.page:nth-of-type(2) {
-  background: url("/img/showroom/2_living.png") no-repeat;
+  background: url("/img/showroom/bg/bg2.png") no-repeat;
   background-size: 100% 100%;
   background-size: auto 100%;
   background-position: center center;
@@ -139,7 +205,7 @@ div.page:nth-of-type(2) {
 }
 
 div.page:nth-of-type(3) {
-  background: url("/img/showroom/3_kitchin.png") no-repeat;
+  background: url("/img/showroom/bg/bg1.png") no-repeat;
   background-size: 100% 100%;
   background-size: auto 100%;
   background-position: center center;
@@ -147,7 +213,7 @@ div.page:nth-of-type(3) {
 }
 
 div.page:nth-of-type(4) {
-  background: url("/img/showroom/1_bedroom.png") no-repeat;
+  background: url("/img/showroom/bg/bg2.png") no-repeat;
   background-size: 100% 100%;
   background-size: auto 100%;
   background-position: center center;
@@ -155,7 +221,7 @@ div.page:nth-of-type(4) {
 }
 
 div.page:nth-of-type(5) {
-  background: url("/img/showroom/1_bedroom.png") no-repeat;
+  background: url("/img/showroom/bg/bg1.png") no-repeat;
   background-size: 100% 100%;
   background-size: auto 100%;
   background-position: center center;
@@ -168,5 +234,8 @@ div.page:nth-of-type(5) {
   }
   .digital_show_wrap div.page {
     height: calc(100vh - 96px);
+  }
+  div.page {
+    background-position: left center !important;
   }
 }

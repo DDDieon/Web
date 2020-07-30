@@ -81,8 +81,21 @@
                 <section>
                     <div class="page">
                         <div class="content">
-                            <h2>침실</h2>
-                            <p>스르륵 잠이 오는 침실</p>
+                            <ul>
+                                <li><a href="">침대</a></li>
+                                <li><a href="">매트리스</a></li>
+                                <li><a href="">옷장</a></li>
+                                <li><a href="">침구</a></li>
+                                <li><a href="">서랍장</a></li>
+                                <li><a href="">거울</a></li>
+                            </ul>
+                            <h2>침실 <a href="#" class="lookNow">View More</a></h2>
+                            <p>
+                                더 낮은 새로운 가격 <br />
+                                SONGESAND 송에산드 침대프레임+수납상자2<br />
+                                <span>￦ 259,000￦</span>
+                                <e>299,000</e>
+                            </p>
                         </div>
                     </div>
                     <div class="page">
@@ -118,11 +131,11 @@
             </div>
             <aside>
                 <ul>
-                    <li>●</li>
-                    <li>●</li>
-                    <li>●</li>
-                    <li>●</li>
-                    <li>●</li>
+                    <li class="aside_tab">●</li>
+                    <li class="aside_tab">●</li>
+                    <li class="aside_tab">●</li>
+                    <li class="aside_tab">●</li>
+                    <li class="aside_tab">●</li>
                 </ul>
             </aside>
             <footer id="footer" class="ft">
@@ -314,11 +327,11 @@
                         {
                             top: "100%", //밑으로 내려
                         },
-                        1000 //천천히
+                        500 //천천히
                     )
                     setPage
                         .eq(i)
-                        .css({ top: "100%", "z-index": 1 })
+                        .css({ top: "-100%", "z-index": 1 })
                         .stop()
                         .animate(
                             {
@@ -326,7 +339,7 @@
                                 top: "0", //현재페이지로 당겨
                             },
                             {
-                                duration: 500,
+                                duration: 450,
                                 easing: "swing",
                                 complete: contentSlide(i),
                             }
