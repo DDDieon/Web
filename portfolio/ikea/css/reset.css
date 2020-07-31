@@ -104,3 +104,18 @@ input {
     -webkit-apprearance: none;
     /* 아이폰에서 아이콘은 모서리가 둥글게 표현되기 때문에 기본적인 네모모양으로 바꾸기 */
 }
+
+button {
+    background: none;
+    border: 0;
+    color: inherit;
+    /* cursor: default; */
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: button; /* for input */
+    -webkit-user-select: none; /* for button */
+    -moz-user-select: none;
+    -ms-user-select: none;
+}

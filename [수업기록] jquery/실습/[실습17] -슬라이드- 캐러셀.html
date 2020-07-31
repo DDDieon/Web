@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style></style>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script>
+            $(function () {
+                var current = 0
+                var gallery = $(".gallery-list li")
+                var num = 0
+                var ctrlA = $(".ctrl-box a")
+                var prevBtn = $(".btn-prev")
+                var nextBtn = $(".btn-next")
+                //----------함수지정--------------
+                function slide(El, start, end) {
+                    El.css("left", start).stop().animate({ left: end }, 500)
+                }
+                ctrlA.click(function () {
+                    var index = $(this).index()
+                    ctrlA.removeClass("active")
+                    $(this).addClass("active")
+
+                    if (current == index) return //똑같은 버튼 클릭시 false
+
+                    if (current < index) {
+                        var prev = gallery.eq(current)
+                        prev.css("left", 0).stop().animate({ left: "-100%" }, 500)
+                        var next = gallery.eq(index)
+                        next.css("left", "100%").stop().animate({ left: 0 }, 500)
+                        current = index //current에 저장 꼭!
+                    } else if (current > index) {
+                        var prev = gallery.eq(current)
+                        slide(prev, 0, "100%")
+                        var next = gallery.eq(index)
+                        slide(next, "-100%", 0)
+                        current = index //current에 저장 꼭!
+                    }
+                })
+                prevBtn.click(function () {
+                    let prev = gallery.eq(current) //현재배너
+                    slide(prev, 0, "100%")
+                    current--
+                    current = current % gallery.length
+                    let next = gallery.eq(current)
+                    slide(next, "-100%", 0)
+                    ctrlA.removeClass("active")
+                    ctrlA.eq(current).addClass("active")
+                })
+                nextBtn.click(function () {
+                    let prev = gallery.eq(current) //현재배너
+                    slide(prev, 0, "-100%")
+                    current++
+                    current = current % gallery.length
+                    let next = gallery.eq(current)
+                    slide(next, "100%", 0)
+                    ctrlA.removeClass("active")
+                    ctrlA.eq(current).addClass("active")
+                })
+                //---------자동슬라이드-----------
+                let SLIDER
+                function auto() {
+                    var i = 0
+                    var num = [1, 2, 3, 4, 3, 2, 1, 0] //배열을 인덱스로 주기
+                    SLIDER = setInterval(function () {
+                        ctrlA.eq(num[i]).click()
+                        i++
+                        if (i > num.length) i = i % num.length //인덱스 초기화
+                    }, 1000)
+                }
+
+                auto()
+
+                //--------마우스 엔터시에 멈추기---------
+                $("#slider01").mouseenter(function () {
+                    clearInterval(SLIDER)
+                })
+                $("#slider01").mouseleave(function () {
+                    auto()
+                })
+            })
+        </script>
+    </head>
+    <style>
+        /*//////////////////////css*/
+        /*img사이즈 600*350*/
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        h1 {
+            margin: 10px;
+            text-align: center;
+        }
+        .gallery-wrapper {
+            position: relative;
+            width: 600px;
+            top: 10px;
+            margin: 0 auto;
+            padding: 10px;
+            border: 5px solid #ccc;
+        }
+        .gallery-wrapper .gallery-list {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 350px;
+        }
+        .gallery-wrapper .gallery-list li:first-child {
+            position: absolute;
+            left: 0;
+            display: block;
+        }
+        .gallery-wrapper .gallery-list li {
+            position: absolute;
+            left: 100%;
+            display: block;
+        }
+        .gallery-wrapper .gallery-list li a {
+            display: block;
+            text-align: center;
+        }
+        .gallery-wrapper .gallery-list li a img {
+            display: block;
+        }
+        .gallery-wrapper .btn-prev,
+        .gallery-wrapper .btn-next {
+            position: absolute;
+            top: 160px;
+            color: #f4e9ed;
+            font-size: 26px;
+        }
+        .gallery-wrapper .btn-prev {
+            left: 20px;
+        }
+        .gallery-wrapper .btn-next {
+            right: 20px;
+        }
+        .ctrl-box {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .ctrl-box a .bullet {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border: 1px solid #cfd2d7;
+            border-radius: 100%;
+            background: #dfe2e7;
+            text-indent: -9999em;
+            font-size: 0;
+            vertical-align: middle;
+        }
+        .ctrl-box a.active .bullet {
+            border: 1px solid #d43a3a;
+            background: #fd4b4b;
+        }
+        .btn-ctrl {
+            margin-left: 10px;
+            padding: 0 4px;
+            border: 1px solid #b6b6b6;
+            border-radius: 4px;
+            background-color: #dadada;
+            line-height: 20px;
+        }
+    </style>
+    <body>
+        <h1>캐로셀 슬라이드 구현하기(시작)</h1>
+
+        <div id="slider01" class="gallery-wrapper">
+            <ul class="gallery-list">
+                <li>
+                    <a href="#none"><img src="http://lorempixel.com/600/350/city/1" alt="" /></a>
+                </li>
+                <li>
+                    <a href="#none"><img src="http://lorempixel.com/600/350/city/2" alt="" /></a>
+                </li>
+                <li>
+                    <a href="#none"><img src="http://lorempixel.com/600/350/city/3" alt="" /></a>
+                </li>
+                <li>
+                    <a href="#none"><img src="http://lorempixel.com/600/350/city/4" alt="" /></a>
+                </li>
+                <li>
+                    <a href="#none"><img src="http://lorempixel.com/600/350/city/5" alt="" /></a>
+                </li>
+            </ul>
+            <a class="btn-prev" href="#none">◀ </a>
+            <a class="btn-next" href="#none">▶</a>
+            <div class="ctrl-box">
+                <a href="#none" class="active"><i class="bullet">1</i></a>
+                <a href="#none"><i class="bullet">2</i></a>
+                <a href="#none"><i class="bullet">3</i></a>
+                <a href="#none"><i class="bullet">4</i></a>
+                <a href="#none"><i class="bullet">5</i></a>
+                <!--<button type="button" class="btn-ctrl auto">정지</button>-->
+            </div>
+            <!--ctrl-box end-->
+        </div>
+        <!--slider01 end-->
+
+        <h1>캐로셀 슬라이드 구현하기(끝)</h1>
+    </body>
+</html>

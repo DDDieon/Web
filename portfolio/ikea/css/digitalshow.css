@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @keyframes pointRound {
   from {
     transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
@@ -10,232 +9,103 @@
   }
 }
 
-.digital_show_wrap {
+.sliderWrap {
+  background: #2c2b2b;
+  color: #fff;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 100%;
+  height: 400px;
+}
+
+.sliderWrap .slider__page {
+  position: relative;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  box-shadow: 10px 10px 60px black;
 }
 
-.digital_show_wrap section,
-.digital_show_wrap div.page {
-  position: relative;
-  width: inherit;
-  height: calc(100vh - 30px);
-  overflow: hidden;
-}
-
-.digital_show_wrap div.page {
+.sliderWrap .slider__page--img {
   position: absolute;
+  left: 10%;
+  bottom: 0px;
 }
 
-.digital_show_wrap div.page .content {
-  position: absolute;
-  left: 0;
-  top: 0;
-  padding: 15px;
-  opacity: 1;
-  visibility: visible;
-  padding: 50px;
-  width: inherit;
-  height: inherit;
+.sliderWrap .slider__page--img img {
+  display: block;
+  width: 80%;
 }
 
-.digital_show_wrap div.page .content ul {
+.sliderWrap .slider__page--text .sliderTitle {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sliderWrap .slider__page--text .sliderDesc {
+  font-weight: 300;
+}
+
+.sliderWrap .sliderControl {
+  background: #ccc;
+}
+
+.sliderWrap .sliderControl span.thisPage {
+  color: white;
+  border-right: 1px solid white;
+}
+
+.sliderWrap .sliderControl span.everyPage {
+  color: white;
+}
+
+.page_welcome {
   display: flex;
-  justify-content: center;
-  color: white;
-  text-decoration: underline;
+  background: #f7f7f7;
+  margin-bottom: 12px;
+  padding: 8px;
 }
 
-.digital_show_wrap div.page .content ul li {
-  margin-right: 12px;
-}
-
-.digital_show_wrap div.page .content h2 {
-  font-size: 35px;
-  background: black;
+.page_welcome__pointBox {
+  background: #000;
+  color: #ccc;
+  padding: 2px 8px;
+  margin-left: 12px;
   font-weight: bold;
-  color: white;
-  top: 62%;
-  position: absolute;
-  padding: 8px 24px;
-  padding-right: 30px;
+  border-radius: 5px;
 }
 
-.digital_show_wrap div.page .content p {
-  top: 75%;
-  position: absolute;
-  background: snow;
-  padding: 12px 24px;
+.page_welcome__desc {
+  margin-left: 12px;
 }
 
-.digital_show_wrap div.page .content .lookNow {
-  position: absolute;
-  top: 20%;
-  left: 80%;
-  display: block;
-  width: 120px;
-  height: 40px;
-  line-height: 2.8;
-  background: transparent;
-  text-align: center;
-  border-radius: 12px;
-  font-weight: bold;
-  border: 3px solid #000;
-  font-size: 12px;
-  color: #000;
-  background: white;
-}
-
-section div.page:nth-of-child(1) {
-  left: 0;
-  top: 0;
-}
-
-.pointer {
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 50px;
-  background: rgba(75, 75, 75, 0.644);
-  opacity: 0.8;
-  border-radius: 50%;
-  z-index: 2;
-  top: 50%;
-  left: 20%;
+.page_info {
+  background: #f7f7f7;
   padding: 20px;
-  text-indent: -999;
-  box-shadow: inset 2px 2px 5px black;
-  border: 5px solid rgba(0, 0, 0, 0.548);
+  margin-bottom: 34px;
 }
 
-aside {
-  position: fixed;
-  width: 30px;
-  right: 20px;
-  top: 20vh;
-  z-index: 4;
+.page_info--Wrap {
+  background: url("/img/showroom/showroomImg/showAsset1.png") screen;
 }
 
-aside ul li {
-  position: relative;
-  cursor: pointer;
-}
-
-aside ul li:hover {
-  position: relative;
-  cursor: pointer;
+.page_info__title {
+  font-size: 22px;
   font-weight: bold;
 }
 
-aside ul li:after {
-  display: block;
-  position: absolute;
-  left: -50px;
-  top: 0;
-  background: rgba(255, 255, 255, 0.877);
-  border-radius: 10px;
-  padding: 5px;
-  transition: 0.3s;
-  box-shadow: 2px 1px 10px rgba(177, 177, 177, 0.137);
-  visibility: hidden;
-  opacity: 0;
+.banner_title {
   text-align: center;
-  overflow: hidden;
 }
 
-aside ul li.on {
-  color: rgba(255, 255, 255, 0.726);
-  background: rgba(0, 0, 0, 0.644);
-  opacity: 0.8;
-  border-radius: 50%;
-  box-shadow: inset 2px 2px 5px black;
-  border: 3px solid rgba(0, 0, 0, 0.281);
-  text-indent: -999 !important;
-  padding-left: 5px;
-  right: 8px;
+.showRoomThema {
+  width: 100%;
+  padding: 0 24px;
 }
 
-aside ul li.on:after {
-  visibility: visible;
-  color: black;
-  font-weight: bold;
-  left: -100px;
-  opacity: 1;
-  width: 80px;
-  box-shadow: 2px 2px 5px black;
+.showRoomThema__asset {
+  width: 100%;
 }
 
-aside ul li:nth-child(1):after {
-  content: "침실";
-}
-
-aside ul li:nth-child(2):after {
-  content: "거실";
-}
-
-aside ul li:nth-child(3):after {
-  content: "주방/다이닝";
-}
-
-aside ul li:nth-child(4):after {
-  content: "욕실";
-}
-
-aside ul li:nth-child(5):after {
-  content: "어린이";
-}
-
-/*페럴랙스 div박스 안*/
-div.page:nth-of-type(1) {
-  background: url("/img/showroom/bg/bg1.png") no-repeat;
-  background-size: auto 100%;
-  background-position: center center;
-  top: 0;
-  z-index: 1;
-}
-
-div.page:nth-of-type(2) {
-  background: url("/img/showroom/bg/bg2.png") no-repeat;
-  background-size: 100% 100%;
-  background-size: auto 100%;
-  background-position: center center;
-  top: 0;
-}
-
-div.page:nth-of-type(3) {
-  background: url("/img/showroom/bg/bg1.png") no-repeat;
-  background-size: 100% 100%;
-  background-size: auto 100%;
-  background-position: center center;
-  top: 0;
-}
-
-div.page:nth-of-type(4) {
-  background: url("/img/showroom/bg/bg2.png") no-repeat;
-  background-size: 100% 100%;
-  background-size: auto 100%;
-  background-position: center center;
-  top: 0;
-}
-
-div.page:nth-of-type(5) {
-  background: url("/img/showroom/bg/bg1.png") no-repeat;
-  background-size: 100% 100%;
-  background-size: auto 100%;
-  background-position: center center;
-  top: 0;
-}
-
-@media screen and (min-width: 1260px) {
-  .digital_show_wrap {
-    padding-top: 96px;
-  }
-  .digital_show_wrap div.page {
-    height: calc(100vh - 96px);
-  }
-  div.page {
-    background-position: left center !important;
-  }
+.showRoomThema__asset img {
+  display: block;
+  width: 100%;
 }
