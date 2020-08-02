@@ -10,29 +10,26 @@
 }
 
 .sliderWrap {
-  background: #2c2b2b;
-  color: #fff;
   margin-top: 40px;
-  margin-bottom: 40px;
-  width: 100%;
-  height: 400px;
-}
-
-.sliderWrap .slider__page {
-  position: relative;
+  margin-bottom: 6%;
   width: 100%;
   height: 100%;
 }
 
-.sliderWrap .slider__page--img {
-  position: absolute;
-  left: 10%;
-  bottom: 0px;
+.sliderWrap .slider__page {
+  position: relative;
+  border: 2px solid black;
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  min-width: 276px;
+  display: flex;
+  flex-direction: column;
 }
 
-.sliderWrap .slider__page--img img {
-  display: block;
-  width: 80%;
+.sliderWrap .slider__page--text {
+  top: 0px;
+  left: 10px;
 }
 
 .sliderWrap .slider__page--text .sliderTitle {
@@ -44,22 +41,61 @@
   font-weight: 300;
 }
 
-.sliderWrap .sliderControl {
-  background: #ccc;
+.sliderWrap .slider__page--img {
+  position: relative;
+  top: 0px;
+  left: 10px;
+  width: 100%;
+  background: pink;
 }
 
-.sliderWrap .sliderControl span.thisPage {
+.sliderWrap .slider__page--img img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sliderWrap .slider__page .sliderControl {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background: #ccc;
+  display: flex;
+}
+
+.sliderWrap .slider__page .sliderControl__text span.thisPage {
   color: white;
   border-right: 1px solid white;
 }
 
-.sliderWrap .sliderControl span.everyPage {
+.sliderWrap .slider__page .sliderControl__text span.everyPage {
   color: white;
+}
+
+.sliderWrap .slider__page .sliderControl__asset {
+  display: flex;
+}
+
+.sliderWrap .slider__page .sliderControl__asset .progress_navigator {
+  width: 200px;
+  height: 2px;
+  background: black;
+  margin-top: 10px;
+}
+
+.sliderWrap .slider__page .sliderControl__asset .progress_navigator--now {
+  width: 18px;
+  height: 2px;
+  background: white;
+}
+
+.sliderWrap .slider__page .sliderControl__asset .pageUpDown {
+  display: none;
 }
 
 .page_welcome {
   display: flex;
-  background: #f7f7f7;
+  background: #ebebeb;
   margin-bottom: 12px;
   padding: 8px;
 }
@@ -74,11 +110,12 @@
 }
 
 .page_welcome__desc {
+  font-size: 12px;
   margin-left: 12px;
 }
 
 .page_info {
-  background: #f7f7f7;
+  background: #ebebeb;
   padding: 20px;
   margin-bottom: 34px;
 }
@@ -88,8 +125,12 @@
 }
 
 .page_info__title {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
+}
+
+.page_info__desc {
+  font-size: 12px;
 }
 
 .banner_title {
