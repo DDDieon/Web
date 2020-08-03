@@ -99,6 +99,9 @@ section {
 }
 
 @media screen and (min-width: 1260px) {
+  body {
+    min-width: 1440px;
+  }
   .headerTitle {
     margin-top: 80px;
     margin-left: 10vw;
@@ -114,13 +117,15 @@ section {
     margin: 10px 10vw;
   }
   .productList {
-    width: 1260px;
+    margin-left: 10vw;
   }
   .productList__items {
     width: 8%;
-    font-size: 12px;
+    min-width: 90px;
+    font-size: 14px;
   }
   #productMain .productMainItem {
     width: 20%;
+    padding: 30px;
   }
 }

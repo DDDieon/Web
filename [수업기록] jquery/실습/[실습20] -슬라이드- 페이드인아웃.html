@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <style>
+            * {
+                margin: 0 auto;
+                padding: 0;
+            }
+            #wrap2 {
+                display: flex;
+            }
+            .slideshow {
+                position: relative;
+                width: 300px;
+                height: 300px;
+                border: 2px solid red;
+                overflow: hidden;
+            }
+            .slideshow img {
+                position: absolute;
+                display: none;
+            }
+            .slideshow img:active {
+                z-index: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>fade slide->opacity</h1>
+        <div id="wrap2">
+            <div class="slideshow">
+                <img src="/img/0.png" alt="" />
+                <img src="/img/1.png" alt="" />
+                <img src="/img/2.png" alt="" />
+            </div>
+            <div class="slideshow">
+                <img src="/img/img1.jpg" alt="" />
+                <img src="/img/img2.jpg" alt="" />
+                <img src="/img/img3.jpg" alt="" />
+            </div>
+            <div class="slideshow">
+                <img src="/img/keyVisual_0.jpg" alt="" />
+                <img src="/img/keyVisual_1.jpg" alt="" />
+                <img src="/img/keyVisual_2.jpg" alt="" />
+            </div>
+        </div>
+    </body>
+    <script>
+        const interval = 3000
+        $(".slideshow").each(function () {
+            var slider = $(this)
+
+            function fadeSlide() {
+                var imgs = slider.find("img")
+                var first = imgs.eq(0)
+                var second = imgs.eq(1)
+
+                first.fadeOut(2000).appendTo(slider)
+                second.fadeIn(2000)
+            }
+            fadeSlide()
+            setInterval(fadeSlide, interval)
+        })
+    </script>
+</html>

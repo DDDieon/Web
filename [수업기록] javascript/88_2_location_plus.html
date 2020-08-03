@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            var href = location.href
+            var protocol = location.protocol
+            var pathname = location.pathname
+            console.log("href=>" + href)
+            console.log("protocol=>" + protocol)
+            console.log("pathname=>" + pathname)
+            document.write("url=>" + protocol + pathname)
+
+            var queryString = location.search
+            document.write("<br>querystring=물음표다음 나오는 것들=location.search로" + queryString)
+        </script>
+    </head>
+    <body>
+        <a href="location.html?name=kim&age=20">클릭</a>
+    </body>
+</html>

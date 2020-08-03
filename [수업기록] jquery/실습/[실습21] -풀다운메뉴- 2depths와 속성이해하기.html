@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>http://cafe.daum.net/knyatom/OXKi/103</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <style>
+            @charset "utf-8";
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: "돋움", dotum, sans-serif;
+                font-size: 12px;
+                color: #000;
+                /* line-height: 100%; */
+            }
+
+            li {
+                list-style: none;
+            }
+
+            a {
+                color: #000;
+                text-decoration: none;
+            }
+
+            #header {
+                width: 620px;
+                margin: 0 auto;
+                padding-top: 20px;
+                border-bottom: 4px solid red;
+            }
+
+            #header > #gnb {
+                height: 54px;
+                position: relative;
+            }
+
+            #header > #gnb > li {
+                width: 120px;
+                float: left;
+                text-align: center;
+            }
+
+            #header > #gnb > li > a {
+                padding-bottom: 8px;
+                font-weight: bold;
+                display: block;
+            }
+
+            #header > #gnb > li > ul {
+                position: absolute;
+                left: 0;
+                top: 30px;
+                border: 1px solid #ccc;
+                background: #fff;
+                display: none;
+            }
+
+            #header #gnb li.m1 ul {
+                left: 0;
+            }
+
+            #header #gnb li.m2 ul {
+                left: 150px;
+            }
+
+            #header #gnb li.m3 ul {
+                left: 270px;
+            }
+
+            #header #gnb li.m4 ul {
+                left: 340px;
+            }
+
+            #header #gnb li.m5 ul {
+                left: 365px;
+            }
+
+            #header > #gnb > li > ul > li {
+                float: left;
+                padding: 5px 8px;
+            }
+
+            #header > #gnb > li > ul > li > a:hover,
+            #header > #gnb > li > ul > li > a:active,
+            #header > #gnb > li > ul > li > a:focus {
+                color: #ff0000;
+            }
+        </style>
+        <script>
+            $(function () {
+                var gnbA = $("#gnb>li>a")
+                var ul = $("#gnb>li>ul")
+                var fff = null
+
+                function imgOver(AAA) {
+                    // 롤오버 이미지 구현ㅡ AAA자리에 this가 올것
+                    var src = $(AAA).find("img").attr("src")
+                    var newSrc = src.replace("out", "over")
+                    $(AAA).find("img").attr("src", newSrc)
+                }
+
+                function imgOut(AAA) {
+                    $(AAA).next().hide()
+                    var src = $(AAA).find("img").attr("src")
+                    var newSrc = src.replace("over", "out")
+                    $(AAA).find("img").attr("src", newSrc)
+                }
+
+                gnbA.on("mouseover focus", function () {
+                    // 전역객체인 fff는 아무것도 안했을때 null이다
+                    // if (fff) {
+                    //     $(fff).next().hide()
+                    //     $(this).next().show()
+                    // } else {
+                    //     $(this).next().show()
+                    // }
+                    // fff = $(this)
+                    // -----------------방법 2-----------------------
+                    if (gnbA._lastHover) {
+                        $(gnbA._lastHover).next().hide()
+                        $(this).next().show()
+                        //롤오버
+                        imgOver($(this))
+                    } else {
+                        $(this).next().show()
+                        //롤오버
+                        imgOver($(this))
+                    }
+                    gnbA._lastHover = $(this)
+                    //-------- _lastHover는 gnbA의 속성으로 추가되었다
+                })
+
+                gnbA.on("mouseleave", function () {
+                    imgOut($(this))
+                    $(this).next().hide()
+                })
+
+                // 서브메뉴에 마우스 올려도 사라지지 않기
+                ul.hover(
+                    function () {
+                        $(this).show()
+                    },
+                    function () {
+                        $(this).hide()
+                    }
+                )
+            })
+        </script>
+    </head>
+    <body>
+        <h1>2depths 메뉴 만들기</h1>
+        <h2>ul밑에 li가 메인메뉴, a태그에 메인메뉴 타이틀, 또 ul밑에 li가 서브메뉴</h2>
+        <div id="header">
+            <ul id="gnb">
+                <li class="m1">
+                    <a href="#"><img src="images/2depths/m1_out.gif" /></a>
+                    <ul>
+                        <li><a href="#">메뉴1-1</a></li>
+                        <li><a href="#">메뉴1-2</a></li>
+                        <li><a href="#">메뉴1-3</a></li>
+                        <li><a href="#">메뉴1-4</a></li>
+                    </ul>
+                </li>
+                <li class="m2">
+                    <a href="#"><img src="images/2depths/m2_out.gif" /></a>
+                    <ul>
+                        <li><a href="#">메뉴2-1</a></li>
+                        <li><a href="#">메뉴2-2</a></li>
+                        <li><a href="#">메뉴2-3</a></li>
+                        <li><a href="#">메뉴2-4</a></li>
+                    </ul>
+                </li>
+                <li class="m3">
+                    <a href="#"><img src="images/2depths/m3_out.gif" /></a>
+                    <ul>
+                        <li><a href="#">메뉴3-1</a></li>
+                        <li><a href="#">메뉴3-2</a></li>
+                        <li><a href="#">메뉴3-3</a></li>
+                        <li><a href="#">메뉴3-4</a></li>
+                    </ul>
+                </li>
+                <li class="m4">
+                    <a href="#"><img src="images/2depths/m4_out.gif" /></a>
+                    <ul>
+                        <li><a href="#">메뉴4-1</a></li>
+                        <li><a href="#">메뉴4-2</a></li>
+                        <li><a href="#">메뉴4-3</a></li>
+                        <li><a href="#">메뉴4-4</a></li>
+                    </ul>
+                </li>
+                <li class="m5">
+                    <a href="#"><img src="images/2depths/m5_out.gif" /></a>
+                    <ul>
+                        <li><a href="#">메뉴5-1</a></li>
+                        <li><a href="#">메뉴5-2</a></li>
+                        <li><a href="#">메뉴5-3</a></li>
+                        <li><a href="#">메뉴5-4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

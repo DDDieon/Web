@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>http://cafe.daum.net/knyatom/OXKi/44</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            #vertical,
+            #horizontal {
+                margin: 50px auto;
+                width: 800px;
+            }
+            #vertical div,
+            #horizontal div {
+                float: left;
+                width: 300px;
+                height: 130px;
+                border: 1px solid gray;
+                position: relative;
+                overflow: hidden;
+                margin-right: 5px;
+            }
+            .clear {
+                overflow: hidden;
+            }
+            #vertical img,
+            #horizontal img {
+                position: absolute;
+            }
+        </style>
+        <script></script>
+    </head>
+    <body>
+        <div id="vertical" class="clear">
+            <h1>세로슬라이드</h1>
+            <div>
+                <a href="htmldrive.net">
+                    <img src="/실습/images/banner_img/image-1.jpg" alt="" />
+                </a>
+            </div>
+            <div>
+                <a href="htmldrive.net">
+                    <img src="/실습/images/banner_img/image-2.png" alt="" />
+                </a>
+            </div>
+        </div>
+        <div id="horizontal" class="clear">
+            <h1>가로슬라이드</h1>
+            <div>
+                <a href="htmldrive.net">
+                    <img src="/실습/images/banner_img/image-4.jpg" alt="" />
+                </a>
+            </div>
+            <div>
+                <a href="htmldrive.net">
+                    <img src="/실습/images/banner_img/image-5.png" alt="" />
+                </a>
+            </div>
+        </div>
+    </body>
+    <script>
+        var VA = $("#vertical div a")
+        var HA = $("#horizontal div a")
+        VA.hover(
+            function () {
+                $("img", this).animate(
+                    {
+                        top: "-130px",
+                    },
+                    {
+                        queue: false,
+                        duration: 400,
+                    }
+                )
+            },
+            function () {
+                $("img", this).animate(
+                    {
+                        top: "0",
+                    },
+                    {
+                        queue: false,
+                        duration: 400,
+                    }
+                )
+            }
+        )
+        HA.hover(
+            function () {
+                $("img", this).animate(
+                    {
+                        left: "-300px",
+                    },
+                    {
+                        queue: false,
+                        duration: 400,
+                    }
+                )
+            },
+            function () {
+                $("img", this).animate(
+                    {
+                        left: "0",
+                    },
+                    {
+                        queue: false,
+                        duration: 400,
+                    }
+                )
+            }
+        )
+        setInterval(function () {
+            HA.trigger("mouseenter")
+        }, 2000)
+        setInterval(function () {
+            VA.trigger("mouseenter")
+        }, 2000)
+        setInterval(function () {
+            HA.trigger("mouseleave")
+        }, 4000)
+        setInterval(function () {
+            VA.trigger("mouseleave")
+        }, 4000)
+    </script>
+</html>
