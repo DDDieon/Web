@@ -10,7 +10,7 @@ $gray: rgb(44, 41, 41);
 }
 
 @mixin red_box {
-    content: '';
+    content: "";
     position: absolute;
     display: block;
     width: 80px;
@@ -28,7 +28,7 @@ $gray: rgb(44, 41, 41);
 }
 
 @mixin caption_l {
-    font-family: 'Raleway', sans-serif !important;
+    font-family: "Raleway", sans-serif !important;
     text-align: center;
     letter-spacing: 16px;
     font-size: 40px;
@@ -36,25 +36,43 @@ $gray: rgb(44, 41, 41);
 }
 
 @mixin text {
-    font-family: 'Noto Sans KR', sans-serif !important;
+    font-family: "Noto Sans KR", sans-serif !important;
     font-weight: 300;
     text-align: center;
     font-style: 12px;
 }
 
+@keyframes upDownHover {
+    0% {
+        top: -4px;
+    }
+    30% {
+        top: 3px;
+    }
+    50% {
+        top: -6px;
+    }
+    70% {
+        top: 0px;
+    }
+    100% {
+        top: -4px;
+    }
+}
 
 /*CSS 변경*/
 
 body {
     width: 100%;
     height: 100%;
-    background: url('/img/marbling.jpg') no-repeat center center fixed;
+    background: url("/img/marbling.jpg") no-repeat center center fixed;
     min-height: 100%;
+    min-width: 1280px;
     background-position: center;
     background-size: cover;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
     p {
-        font-family: 'Noto Sans KR', sans-serif;
+        font-family: "Noto Sans KR", sans-serif;
         cursor: default;
         font-weight: 300;
         line-height: 1.24;
@@ -77,14 +95,18 @@ nav {
     .nav_list {
         display: inline-block;
     }
-    .logobox a {
-        font-family: 'Russo One', sans-serif;
+    .logobox h1 a {
+        position: relative;
+        font-family: "Russo One", sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 42px;
         line-height: 51px;
         /* identical to box height */
         color: #000000;
+        &:hover {
+            animation: upDownHover 1s ease-in infinite;
+        }
     }
     .nav_list {
         ul {
@@ -94,14 +116,19 @@ nav {
             li {
                 float: left;
                 button {
-                    font-family: 'Noto Sans KR', sans-serif;
+                    position: relative;
+                    font-family: "Noto Sans KR", sans-serif;
                     display: block;
                     outline: none;
                     padding: 15px;
                     font-weight: 900;
                     text-align: center;
                     cursor: pointer;
+                    &:hover {
+                        animation: upDownHover 1s ease-in infinite;
+                    }
                 }
+
                 .xi-ellipsis-h:before {
                     content: "\e94a";
                     font-size: 30px;
@@ -113,6 +140,30 @@ nav {
     }
 }
 
+// quick-menu
+
+#quick-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 60px;
+    bottom: 12vh;
+    color: #000;
+    opacity: 0.7;
+
+    i {
+        position: relative;
+        cursor: pointer;
+        font-size: 20px;
+        padding: 10px;
+        border: 2px solid #000;
+        margin: 4px;
+        border-radius: 50%;
+        &:hover {
+            animation: upDownHover 1s ease-in infinite;
+        }
+    }
+}
 // introduce
 #Introduce-Wrap {
     margin-bottom: 300px;
@@ -133,6 +184,9 @@ nav {
     .myself {
         @include text();
         margin-bottom: 36px;
+        strong {
+            font-weight: 700;
+        }
     }
     .gols_img {
         margin: auto;
@@ -181,7 +235,7 @@ nav {
         margin: 0 auto;
         text-align: center;
         position: relative;
-        .profile-img:hover~.profile-words {
+        .profile-img:hover ~ .profile-words {
             opacity: 0;
         }
         #profile {
@@ -192,7 +246,7 @@ nav {
         //     left: 0vw;
         //     bottom: 0;
         //     opacity: 1;
-        //     color: black;
+        //     color: #000;
         //     display: -webkit-flex;
         //     display: flex;
         //     flex-direction: column;
@@ -234,7 +288,7 @@ nav {
             position: absolute;
             right: 0;
             opacity: 1;
-            color: black;
+            color: #000;
             width: 280px;
             height: 100%;
             transition: 0.2s;
@@ -243,21 +297,20 @@ nav {
             width: 820px;
             padding: 30px;
             margin: auto;
-            background: url('/img/5.jpg') center;
+            background: url("/img/5.jpg") center;
             background-position: center;
             position: relative;
             .resume-sub {
-                color: white;
+                color: #fff;
                 flex: 1;
                 @include minibold();
                 margin-top: 0px;
                 text-align: justify;
                 ol {
                     padding: 20px;
-                    ;
                     li {
                         color: rgb(146, 146, 146);
-                        font-family: 'Noto Sans KR', sans-serif;
+                        font-family: "Noto Sans KR", sans-serif;
                         cursor: default;
                         font-weight: 300;
                         font-size: 14px;
@@ -327,12 +380,12 @@ section {
                         width: 18px;
                         height: 18px;
                         border-radius: 3px;
-                        border: 2px solid black;
+                        border: 2px solid #000;
                         &:nth-of-type(1) {
-                            background: #1B50A0;
+                            background: #1b50a0;
                         }
                         &:nth-of-type(2) {
-                            background: #FFDB00;
+                            background: #ffdb00;
                         }
                     }
                 }
@@ -344,9 +397,9 @@ section {
                         background: #000000;
                         border-radius: 12px;
                         padding: 5px 19px;
-                        color: white;
+                        color: #fff;
                         text-align: center;
-                        box-shadow: 0 2px 8px -1px #{rgba(#151924, .32)};
+                        box-shadow: 0 2px 8px -1px #{rgba(#151924, 0.32)};
                     }
                 }
             }
@@ -360,8 +413,8 @@ section {
         }
     }
     .assets-subtitle {
-        background: black;
-        color: white;
+        background: #000;
+        color: #fff;
         text-align: center;
     }
 }
@@ -376,12 +429,12 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    background: white;
+    background: #fff;
     backdrop-filter: blur(4px);
     opacity: 0.7;
     height: 100px;
     z-index: 2;
-    color: black;
+    color: #000;
     overflow: hidden;
     .footer-assets-left {
         float: left;

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<title>풀다운 메뉴 짜보기</title>
+<link href="style.css" type="text/css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<!-- <script src="gnb.js"></script> -->
+<style>
+    @charset "utf-8";
+    *{
+        margin:0;
+        padding:0;
+    }
+        #content {
+            background: #eee;
+            text-align: center;
+            height: 160px;
+            line-height: 160px;
+        }
+        
+        body {
+            font-family: "돋움", dotum, sans-serif;
+            font-size: 12px;
+            color: #000;
+            line-height: 100%;
+        }
+        
+        img {
+            border: 0;
+            vertical-align: top;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+        
+        #wrap {
+            width: 600px;
+            margin: 0 auto;
+        }
+        
+        #header {
+            padding-top: 20px;
+            z-index: 100;
+        }
+        
+        #header>#gnb {
+            position: relative;
+            height: 20px;
+        }
+        
+        #header>#gnb>li {
+            width: 120px;
+            float: left;
+            text-align: center;
+        }
+        
+        #header>#gnb>li>ul {
+            width: 108px;
+            position: absolute;
+            left: 0;
+            top: 30px;
+            border: 1px solid #ccc;
+            background: #fff;
+            padding: 5px;
+            display: none;
+        }
+        
+        #header #gnb li.m1 ul {
+            left: 0;
+        }
+        
+        #header #gnb li.m2 ul {
+            left: 120px;
+        }
+        
+        #header #gnb li.m3 ul {
+            left: 240px;
+        }
+        
+        #header #gnb li.m4 ul {
+            left: 360px;
+        }
+        
+        #header #gnb li.m5 ul {
+            left: 480px;
+        }
+        
+        #header>#gnb>li>ul>li>a {
+            display: block;
+            border-bottom: 1px solid #eee;
+            padding: 8px;
+        }
+        
+        #header>#gnb>li>ul>li>a:hover,
+        #header>#gnb>li>ul>li>a:active,
+        #header>#gnb>li>ul>li>a:focus {
+            color: #fff;
+            background: #ff0000;
+        }
+        
+        #content {
+            background: #eee;
+            text-align: center;
+            height: 160px;
+            line-height: 160px;
+        }
+</style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+                <ul id="gnb">
+                <li class="m1">
+                        <a href="#"><img src="images/2depths/m1_out.gif" alt="메뉴1"></a>
+                        <ul>
+                            <li><a href="#">메뉴1-1</a></li>
+                            <li><a href="#">메뉴1-2</a></li>
+                            <li><a href="#">메뉴1-3</a></li>
+                            <li><a href="#">메뉴1-4</a></li>
+                        </ul>
+                </li>
+                <li class="m2">
+                    <a href="#"><img src="images/2depths/m2_out.gif" alt="메뉴2"></a>
+                    <ul>
+                        <li><a href="#">메뉴2-1</a></li>
+                        <li><a href="#">메뉴2-2</a></li>
+                        <li><a href="#">메뉴2-3</a></li>
+                        <li><a href="#">메뉴2-4</a></li>
+                    </ul>
+                </li>
+                <li class="m3">
+                    <a href="#"><img src="images/2depths/m3_out.gif" alt="메뉴3"></a>
+                    <ul>
+                        <li><a href="#">메뉴3-1</a></li>
+                        <li><a href="#">메뉴3-2</a></li>
+                        <li><a href="#">메뉴3-3</a></li>
+                        <li><a href="#">메뉴3-4</a></li>
+                    </ul>
+                </li>
+                <li class="m4">
+                    <a href="#"><img src="images/2depths/m4_out.gif" alt="메뉴4"></a>
+                    <ul>
+                    <li><a href="#">메뉴4-1</a></li>
+                    <li><a href="#">메뉴4-2</a></li>
+                    <li><a href="#">메뉴4-3</a></li>
+                    <li><a href="#">메뉴4-4</a></li>
+                    </ul>
+                </li>
+                <li class="m5">
+                    <a href="#"><img src="images/2depths/m5_out.gif" alt="메뉴5"></a>
+                    <ul>
+                    <li><a href="#">메뉴5-1</a></li>
+                    <li><a href="#">메뉴5-2</a></li>
+                    <li><a href="#">메뉴5-3</a></li>
+                    <li><a href="#">메뉴5-4</a></li>
+                    </ul>
+                </li>
+                </ul>  
+        </div>
+        <div id="content">CONTENT</div>
+    </div>
+    </body>
+    <script type="text/javascript">
+        var gnbA = $("#gnb>li>a") // 메인메뉴
+        var ul =  $("#gnb>li>ul") //서브메뉴
+        gnbA.on('mouseenter focus', function(){ //탭키로 메뉴가 열려야 == mouseenter, focus
+            
+            if(gnbA.target){
+                $(gnbA.target).next().hide()
+                $(this).next().show()
+                // $(gnbA.target).next().stop().fadeOut(speed)
+                // $(this).next().stop().fadeIn(speed)
+                
+                imgOut(gnbA.target)
+                imgOver(this)
+            } else{
+                $(this).next().show()
+                // $(this).next().stop().fadeIn(speed)
+                imgOver(this)
+            }
+
+            gnbA.target = this //마우스이벤트 발생위치저장
+        })
+
+        // 상단에서 gnbA.target에 과거를 저장하는 방법을 썼으니 주석처리 == mouseleave, blur
+        gnbA.on('mouseleave blur', function(){
+            $(this).next().hide()
+            imgOut(this)
+        })
+
+
+        //서브메뉴 사라지지 않게 하기
+        ul.hover(function(){
+            $(this).show()
+            }, function(){
+                $(this).hide()
+        })
+
+        //이미지오버하면 하위태그인 img의 속성 src의 스트링일부분을 replace한다
+        function imgOver(AAA){
+            var oldSrc = $(AAA).find('img').attr('src')
+            var newSrc = oldSrc.replace('out','over')
+            $(AAA).find('img').attr('src', newSrc)
+        }
+        function imgOut(AAA){
+            var oldSrc = $(AAA).find('img').attr('src')
+            var newSrc = oldSrc.replace('over','out')
+            $(AAA).find('img').attr('src', newSrc)
+        }
+    </script>
+</html>
