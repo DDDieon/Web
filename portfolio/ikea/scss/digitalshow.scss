@@ -17,16 +17,33 @@ $BoxShadow: 3px 5px 10px #000;
     margin-bottom: 6%;
     width: 100%;
     height: 100%;
+    .page1 {
+        background: rgb(14, 10, 3);
+    }
+    .page2 {
+        background: rgb(2, 34, 70);
+    }
+    .page3 {
+        background: rgb(11, 27, 13);
+    }
+    .page4 {
+        background: rgb(9, 53, 104);
+    }
+    .page5 {
+        background: rgb(11, 27, 13);
+    }
     .slider__page {
         position: relative;
         width: 100%;
         height: 100%;
         padding: 30px;
-        margin-bottom: 70px;
         min-width: 276px;
-        background: rgb(17, 17, 17);
-        color: white;
+        margin-bottom: 40px;
 
+        color: white;
+        &__blur-bg {
+            display: none;
+        }
         &--content {
             position: relative;
             width: 100%;
@@ -36,16 +53,19 @@ $BoxShadow: 3px 5px 10px #000;
                 width: 100%;
                 margin: 0 auto;
                 border-radius: 10px;
-                box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.226);
             }
+
             &__text {
                 position: relative;
                 bottom: 25px;
                 .sliderTitle {
                     font-size: 22px;
                     font-weight: bold;
+                    margin-bottom: 4px;
                 }
                 .sliderDesc {
+                    color: #bec3d1;
+                    font-size: 14px;
                     font-weight: 300;
                 }
             }
@@ -71,7 +91,7 @@ $BoxShadow: 3px 5px 10px #000;
                     flex: 1;
                     color: #fff;
                     font-weight: 700;
-                    border-right: 1px solid white;
+                    border-right: 1px solid #fff;
                     padding-right: 3px;
                 }
                 span.everyPage {
@@ -90,7 +110,7 @@ $BoxShadow: 3px 5px 10px #000;
                     }
                 }
                 .pro-ani {
-                    animation: proBar 2s;
+                    animation: proBar 4s linear;
                 }
 
                 width: 100%;
@@ -104,7 +124,7 @@ $BoxShadow: 3px 5px 10px #000;
                     &--now {
                         width: 100%;
                         height: 2px;
-                        background: white;
+                        background: #fff;
                     }
                 }
                 .pageUpDown {
@@ -124,12 +144,12 @@ $BoxShadow: 3px 5px 10px #000;
 }
 .page_welcome {
     display: flex;
-    background: #ebebeb;
+    background: #f8f8f9;
     margin-bottom: 12px;
     padding: 8px;
     &__pointBox {
         background: #000;
-        color: #ccc;
+        color: #f8f8f9;
         padding: 2px 8px;
         margin-left: 12px;
         font-weight: bold;
@@ -141,7 +161,7 @@ $BoxShadow: 3px 5px 10px #000;
     }
 }
 .page_info {
-    background: #ebebeb;
+    background: #f8f8f9;
     padding: 20px;
     margin-bottom: 34px;
     &--Wrap {
@@ -182,18 +202,58 @@ $BoxShadow: 3px 5px 10px #000;
 }
 
 @media screen and (min-width: 1260px) {
+    #content {
+        max-width: 1960px;
+        margin: 0 auto;
+    }
     .sliderWrap {
+        margin-top: 96px;
+        .slider__page {
+            &__blur-bg {
+                display: block;
+                position: absolute;
+                top: 40px;
+                right: 40px;
+                filter: blur(20px);
+                opacity: 0.2;
+                width: 60%;
+                img {
+                    width: 800px;
+                    height: 400px;
+                }
+            }
+        }
         .slider__page--content {
             display: flex !important;
+            flex-wrap: wrap;
+            &__text {
+                padding-top: 30px;
+                padding-left: 50px;
+                flex: 1;
+                .sliderTitle {
+                    font-size: 33px;
+                    margin-bottom: 16px;
+                }
+            }
+            img {
+                width: 50%;
+            }
+            .sliderControl {
+                width: 50%;
+                bottom: 50px;
+            }
         }
     }
     .showRoomThema {
         display: flex;
-        justify-content: center;
+        margin: 0 auto;
         flex-wrap: wrap;
+        justify-content: center;
         .showRoomThema__anchor {
-            width: 450px;
-            margin: 20px;
+            width: 20%;
+            .showRoomThema__asset {
+                padding: 12px;
+            }
         }
     }
 }

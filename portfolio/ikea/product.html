@@ -135,7 +135,7 @@
                             <div class="productMainItem__image-wrapper">
                                 <img src="/img/product/2.png" alt="" />
                             </div>
-                            <p>제품이름</p>
+                            <p class="name_of_product">제품이름 1</p>
                             <p>제품 부연설명</p>
                             <p>￦19,800</p>
                         </a>
@@ -145,7 +145,7 @@
                             <div class="productMainItem__image-wrapper">
                                 <img src="/img/product/3.png" alt="" />
                             </div>
-                            <p>제품이름</p>
+                            <p class="name_of_product">제품이름 2</p>
                             <p>제품 부연설명</p>
                             <p>￦19,800</p>
                         </a>
@@ -155,7 +155,7 @@
                             <div class="productMainItem__image-wrapper">
                                 <img src="/img/product/4.png" alt="" />
                             </div>
-                            <p>제품이름</p>
+                            <p class="name_of_product">제품이름 3</p>
                             <p>제품 부연설명</p>
                             <p>￦19,800</p>
                         </a>
@@ -165,7 +165,7 @@
                             <div class="productMainItem__image-wrapper">
                                 <img src="/img/product/5.png" alt="" />
                             </div>
-                            <p>제품이름</p>
+                            <p class="name_of_product">제품이름 4</p>
                             <p>제품 부연설명</p>
                             <p>￦19,800</p>
                         </a>
@@ -175,7 +175,7 @@
                             <div class="productMainItem__image-wrapper">
                                 <img src="/img/product/1.png" alt="" />
                             </div>
-                            <p>제품이름</p>
+                            <p class="name_of_product">제품이름 5</p>
                             <p>제품 부연설명</p>
                             <p>￦19,800</p>
                         </a>
@@ -185,7 +185,7 @@
                             <div class="productMainItem__image-wrapper">
                                 <img src="/img/product/2.png" alt="" />
                             </div>
-                            <p>제품이름</p>
+                            <p class="name_of_product">제품이름 6</p>
                             <p>제품 부연설명</p>
                             <p>￦19,800</p>
                         </a>
@@ -195,7 +195,7 @@
                             <div class="productMainItem__image-wrapper">
                                 <img src="/img/product/3.png" alt="" />
                             </div>
-                            <p>제품이름</p>
+                            <p class="name_of_product">제품이름 7</p>
                             <p>제품 부연설명</p>
                             <p>￦19,800</p>
                         </a>
@@ -205,7 +205,7 @@
                             <div class="productMainItem__image-wrapper">
                                 <img src="/img/product/4.png" alt="" />
                             </div>
-                            <p>제품이름</p>
+                            <p class="name_of_product">제품이름 8</p>
                             <p>제품 부연설명</p>
                             <p>￦19,800</p>
                         </a>
@@ -215,7 +215,7 @@
                             <div class="productMainItem__image-wrapper">
                                 <img src="/img/product/2.png" alt="" />
                             </div>
-                            <p>제품이름</p>
+                            <p class="name_of_product">제품이름 9</p>
                             <p>제품 부연설명</p>
                             <p>￦19,800</p>
                         </a>
@@ -225,7 +225,7 @@
                             <div class="productMainItem__image-wrapper">
                                 <img src="/img/product/5.png" alt="" />
                             </div>
-                            <p>제품이름</p>
+                            <p class="name_of_product">제품이름 10</p>
                             <p>제품 부연설명</p>
                             <p>￦19,800</p>
                         </a>
@@ -379,18 +379,27 @@
         </div>
     </body>
     <script>
+        let current = 0
         $(window).scroll(function () {
             const scrollTop = $(window).scrollTop() //스크롤의 맨 윗단
             const WindowHeight = $(window).height() //내가 지금 보고있는 화면의 맨 밑단
             const nowTop = scrollTop + WindowHeight //내가 지금 보고있는 화면의 스크롤높이
             const documentHeight = $(document).height()
+
             if (nowTop >= documentHeight - 2200) {
                 infinityClone()
             }
 
             function infinityClone() {
-                var copy = $(".productMainItem").clone()
+                var copy = $(".productMainItem:lt(10)").clone()
+                copy.each(function (i) {
+                    $(this)
+                        .find(".name_of_product")
+                        .html("제품이름 " + Number(i + current + 10))
+                    console.log(current)
+                })
                 $("#productMain").append(copy)
+                current = current + 10
             }
         })
     </script>

@@ -31,7 +31,7 @@ section {
 
         a {
             display: block;
-            padding: 10px 0;
+            padding: 7px 0;
         }
     }
 }
@@ -71,9 +71,13 @@ section {
             display: flex;
             flex-direction: column;
             margin: 15px;
-            p:nth-of-type(1) {
-                font-size: 17px;
-                font-weight: bold;
+            .name_of_product {
+                font-size: 16px;
+                font-weight: 600;
+            }
+            p:nth-of-type(2) {
+                line-height: 0.8;
+                margin-bottom: 2px;
             }
             p:nth-of-type(3) {
                 font-size: 22px;
