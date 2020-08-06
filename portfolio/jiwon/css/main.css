@@ -366,12 +366,12 @@ section:nth-of-type(3) {
 #Project-Wrap .project .project-assets {
   display: table;
   margin: 0 auto;
+  margin-bottom: 30px;
   width: 820px;
 }
 
 #Project-Wrap .project .project-assets .project-title {
   width: 320px;
-  height: 500px;
   display: table-cell;
 }
 
@@ -432,10 +432,46 @@ section:nth-of-type(3) {
   margin-left: 13px;
 }
 
-#Project-Wrap .assets-subtitle {
-  background: #000;
-  color: #fff;
+#Project-Wrap .project-desc {
+  width: 820px;
+  background: #fff;
+  border: 1px solid #bebebe;
+  border-radius: 4px;
+  margin: 0 auto;
+  color: #2c2929;
+  text-align: justify;
+}
+
+#Project-Wrap .project-desc table {
+  width: 100%;
+}
+
+#Project-Wrap .project-desc table thead {
+  background: #e8e8eb;
+  color: #2c2929;
+}
+
+#Project-Wrap .project-desc table thead tr th {
+  padding: 20px 0;
   text-align: center;
+}
+
+#Project-Wrap .project-desc table tbody tr {
+  border-bottom: 1px solid #bebebe;
+  border-left: none;
+  border-right: none;
+}
+
+#Project-Wrap .project-desc table tbody tr:last-child {
+  border-bottom: 1px solid transparent;
+}
+
+#Project-Wrap .project-desc table tbody tr td:nth-child(1) {
+  text-align: center;
+}
+
+#Project-Wrap .project-desc table tbody tr td {
+  padding: 8px 0;
 }
 
 footer {

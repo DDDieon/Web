@@ -408,10 +408,10 @@ section {
         .project-assets {
             display: table;
             margin: 0 auto;
+            margin-bottom: 30px;
             width: 820px;
             .project-title {
                 width: 320px;
-                height: 500px;
                 display: table-cell;
                 .tips {
                     overflow: hidden;
@@ -466,10 +466,41 @@ section {
             }
         }
     }
-    .assets-subtitle {
-        background: #000;
-        color: #fff;
-        text-align: center;
+    .project-desc {
+        width: 820px;
+        background: #fff;
+        border: 1px solid #bebebe;
+        border-radius: 4px;
+        margin: 0 auto;
+        color: $gray;
+        text-align: justify;
+        table {
+            width: 100%;
+            thead {
+                background: rgb(232, 232, 235);
+                color: $gray;
+                tr th {
+                    padding: 20px 0;
+                    text-align: center;
+                }
+            }
+            tbody {
+                tr {
+                    border-bottom: 1px solid #bebebe;
+                    border-left: none;
+                    border-right: none;
+                }
+                tr:last-child {
+                    border-bottom: 1px solid transparent;
+                }
+                tr td:nth-child(1) {
+                    text-align: center;
+                }
+                tr td {
+                    padding: 8px 0;
+                }
+            }
+        }
     }
 }
 
