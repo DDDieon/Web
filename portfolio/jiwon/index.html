@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- <script>
-        function hideDiv() {
-            document.getElementById("bording").style.display = "none";
-        }
-        self.setTimeout("hideDiv()", 2000); // 초 지정
-    </script> -->
+
 
 <head>
     <meta charset="UTF-8">
@@ -21,12 +16,20 @@
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
     <script src="js/slick/slick.js"></script>
     <script src="js/html5shiv/src/html5shiv.js"></script>
+    <!-- <script>
+        function hideDiv() {
+            document.getElementById("bording").style.display = "none";
+        }
+        self.setTimeout("hideDiv()", 2000); // 초 지정
+    </script> -->
 
     <!-- secteion에 header태그로 변경하기 -->
     <!--challenge 3: jquery 실습3 참고해서 리모콘 만들기-->
     <!-- 코드펜으로 프로젝트 코드설명 -->
     <!-- 스킬에 성장트리 -->
 
+    <!-- web Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Raleway:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Russo+One&display=swap" rel="stylesheet" type="text/css">
     <!-- Based CSS -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/base.css">
@@ -70,34 +73,34 @@
                             <div class="c_words">
                                 <h5>비캔버스<span>BeeCanvas</span></h5>
                                 <p class="c_words_sub1">지금까지 어떻게 공부를 해왔을까요?</p>
-                                <p class="c_words_sub2">정리는 생명이라고 생각하고 배운 것은 최대한 알차게 차곡차곡 쌓아왔습니다
+                                <p class="c_words_sub2">귀신같이 정리하고 메모하는 하는 타입. 지식의 재사용성을 위해 배워온 것들은 모두 차곡차곡 쌓아왔습니다.
                                 </p>
                                 <p class="c_words_sub3">
-                                    <a href="https://culture.basicagency.com/" target="_blank" rel="noreferrer noopener"><br>Visit the Site</a>
+                                    <a href="https://beecanvas.com/s/7aEbbrJ3be6fLzSMKJ21QmjHkrEONNHRQ8ze5dMO25TvJ1orEyjSYJxy-ZzwFuDn" target="_blank" rel="noreferrer noopener"><br>Visit the Site</a>
                                 </p>
                             </div>
                         </li>
                         <li id="c_item " class="carousel_item_3 ">
                             <div class="c-imgs"><img src="/img/gallery03.jpg" alt=""></div>
                             <div class="c_words">
-                                <h5>영상제작물<span>Motion graphic</span></h5>
-                                <p class="c_words_sub1">애프터이펙트, 프리미어프로 중급자 수준</p>
-                                <p class="c_words_sub2">2D애니메이션이나 인포영상 등을 제작했던 경험이 있습니다. 컷편집은 물론 간단한 모션그래픽이 가능하고, 플러그인을 세팅하고 사용할 수 있습니다.
+                                <h5>이미지 아트워크들<span>©2018</span></h5>
+                                <p class="c_words_sub1">Agency Culture &amp; Onboarding</p>
+                                <p class="c_words_sub2">To help strengthen our culture and attract world class talent, we created the Culture Manual – an online guide for new hires that differentiates the employee onboarding process and builds alignment for our collective future.
                                 </p>
                                 <p class="c_words_sub3">
-                                    <a href="https://culture.basicagency.com/" target="_blank" rel="noreferrer noopener"><br>Visit the Site</a>
+                                    <a href="#" target="_blank" rel="noreferrer noopener"><br>Visit the Site</a>
                                 </p>
                             </div>
                         </li>
                         <li id="c_item" class="carousel_item_4 ">
                             <div class="c-imgs"><img src="/img/gallery04.jpg" alt=""></div>
                             <div class="c_words">
-                                <h5>이미지 아트워크들<span>©2018</span></h5>
-                                <p class="c_words_sub1">Agency Culture &amp; Onboarding</p>
-                                <p class="c_words_sub2">To help strengthen our culture and attract world class talent, we created the Culture Manual – an online guide for new hires that differentiates the employee onboarding process and builds alignment for our collective future.
-                                </p>
+                                
+                                <h5>영상제작물<span>Motion graphic</span></h5>
+                                <p class="c_words_sub1">애프터이펙트, 프리미어프로 중급자 수준</p>
+                                <p class="c_words_sub2">2D애니메이션이나 인포영상 등을 제작했던 경험이 있습니다. 컷편집은 물론 간단한 모션그래픽이 가능하고, 플러그인을 세팅하고 사용할 수 있습니다.
                                 <p class="c_words_sub3">
-                                    <a href="https://culture.basicagency.com/" target="_blank" rel="noreferrer noopener"><br>Visit the Site</a>
+                                    <a href="#" target="_blank" rel="noreferrer noopener"><br>Visit the Site</a>
                                 </p>
                             </div>
                         </li>
@@ -109,7 +112,7 @@
                                 <p class="c_words_sub2">To help strengthen our culture and attract world class talent, we created the Culture Manual – an online guide for new hires that differentiates the employee onboarding process and builds alignment for our collective future.
                                 </p>
                                 <p class="c_words_sub3">
-                                    <a href="https://culture.basicagency.com/" target="_blank" rel="noreferrer noopener"><br>Visit the Site</a>
+                                    <a href="#" target="_blank" rel="noreferrer noopener"><br>Visit the Site</a>
                                 </p>
                             </div>
                         </li>
@@ -118,17 +121,7 @@
             </div>
         </div>
     </div>
-    <script>
-        //------- gllaery page link
-        $(function () {
-            $(".carousel_item_1").click(function () {
-                $(this).wrap('<a href="https://github.com/DDDieon" class="menu1_link" target="_black"></a>')
-            })
-            $(".carousel_item_2").click(function () {
-                $(this).wrap('<a href="https://beecanvas.com/s/7aEbbrJ3be6fLzSMKJ21QmjHkrEONNHRQ8ze5dMO25TvJ1orEyjSYJxy-ZzwFuDn" class="menu2_link" target="_black"></a>')
-            })
-        })
-    </script>
+
     <nav>
         <div class="logobox">
             <h1><a href="#">PORTFOLIO</a></h1>
@@ -156,16 +149,21 @@
                 <p class="myself"><br>한국직업전문학교 스마트 UI/UX 퍼블리싱 과정 수료.<br>신입 퍼블리셔를 지망하는 <strong>전지원</strong>입니다! 👐
                 </p>
                 <div class="gols_img">
-
+                    <div class="gols_img__inner-wrapper">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="img-license"><strong>저작자</strong>:<a href="https://kr.365psd.com/day/5-167-icons-for-web-freebie/" title="Icons For Web (Freebie)" target="_blank">Icons For Web (Freebie)</a> from <a href="https://kr.365psd.com/" target="_blank">kr.365psd.com</a></div>
                 </div>
                 <div class="gols_words">
                     <div class="gols_words_in">
                         <p>Markup</p>
-                        <p>웹표준을 바탕으로<br>시맨틱 마크업을 지향하며<br>SCSS를 통한 재활용성을 중시합니다.</p>
+                        <p>웹표준을 바탕으로<br>시맨틱 마크업을 지향하며<br>SCSS 등 전처리기를 활용합니다.</p>
                     </div>
                     <div class="gols_words_in">
                         <p>Skills</p>
-                        <p>HTML, CSS, JAVAScript 등<br>꾸준하게 공부하며 성장하고 있습니다.<br>BeeCanvas를 통해 확인할 수 있습니다.</p>
+                        <p>HTML, CSS, JAVAScript 등<br>꾸준하게 공부하며 성장하고 있습니다.<br><button class="galleryOpen" onclick="openGallery()">Gallery</button>를 통해 확인할 수 있습니다.</p>
                     </div>
                     <div class="gols_words_in">
                         <p>Good Design</p>
@@ -192,6 +190,7 @@
                 </div> -->
                 <div id="Introduce_bottom_detail">
                     <div class="resume">
+                        <div class="Y-line"></div>
                         <ul>
                             <li class="resume-sub">Carrer
                                 <ol>
@@ -215,8 +214,6 @@
                                     <li>경기대학교 Dream 공모전 UCC부문 최우수상 (1위)</li>
                                 </ol>
                             </li>
-                            <div class="resume-boxes">
-                            </div>
                         </ul>
                     </div>
                 </div>

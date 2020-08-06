@@ -137,7 +137,7 @@ nav .nav_list ul li:hover {
 }
 
 #introduce_top {
-  margin-bottom: 130px;
+  margin-bottom: 180px;
 }
 
 #introduce_top p.minibold {
@@ -173,11 +173,52 @@ nav .nav_list ul li:hover {
 }
 
 #introduce_top .gols_img {
+  position: relative;
   margin: auto;
   width: 820px;
   height: 255px;
-  background: #2c2929;
+  background: transparent;
   margin-bottom: 17px;
+}
+
+#introduce_top .gols_img__inner-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#introduce_top .gols_img__inner-wrapper div:nth-child(1) {
+  position: absolute;
+  background: url("/asset/icons/icons_1.png");
+  width: 33%;
+  height: 100%;
+}
+
+#introduce_top .gols_img__inner-wrapper div:nth-child(2) {
+  position: absolute;
+  left: 33.3%;
+  background: url("/asset/icons/icons_2.png");
+  width: 33%;
+  height: 100%;
+}
+
+#introduce_top .gols_img__inner-wrapper div:nth-child(3) {
+  position: absolute;
+  left: 66.6%;
+  background: url("/asset/icons/icons_3.png");
+  width: 33%;
+  height: 100%;
+}
+
+#introduce_top .gols_img .img-license {
+  box-sizing: border-box;
+  border: 1px solid #000;
+  padding: 8px 10px;
+  position: absolute;
+  bottom: -160px;
+  left: 50%;
+  margin-left: calc(-255.88px / 2);
+  font-size: 8px;
 }
 
 #introduce_top .gols_words {
@@ -209,56 +250,61 @@ nav .nav_list ul li:hover {
   padding: 4px;
 }
 
+#introduce_top .gols_words .gols_words_in p button.galleryOpen {
+  font-weight: bold;
+  position: relative;
+}
+
+#introduce_top .gols_words .gols_words_in p button.galleryOpen::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: #ffa4b1;
+  left: 0;
+  bottom: 0;
+  z-index: -111;
+}
+
 #introduce_bottom {
+  width: 100%;
+  background: #eee;
   margin-bottom: 130px;
 }
 
 #introduce_bottom .slick-items {
   width: 820px;
-  height: 280px;
+  height: 360px;
   margin: 0 auto;
-  background: pink;
+  background: white;
 }
 
 #introduce_bottom .slick-items::before {
   color: dimgray;
 }
 
-#introduce_bottom #profile {
-  width: 820px;
-  height: 280px;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-}
-
-#introduce_bottom #profile .profile-img:hover ~ .profile-words {
-  opacity: 0;
-}
-
-#introduce_bottom #profile #profile {
-  position: relative;
+#introduce_bottom .resume {
+  background: #000;
 }
 
 #introduce_bottom .resume ul:hover .resume-boxes {
   opacity: 0;
 }
 
-#introduce_bottom .resume .resume-boxes {
+#introduce_bottom .resume .Y-line {
   position: absolute;
-  right: 0;
-  opacity: 1;
-  color: #000;
-  width: 280px;
-  height: 100%;
-  transition: 0.2s;
+  width: 1px;
+  height: 80px;
+  background: #fff;
+  left: 50%;
 }
 
 #introduce_bottom .resume ul {
   width: 820px;
-  padding: 30px;
+  text-align: center;
+  padding: 100px 0;
   margin: auto;
-  background: url("/img/5.jpg") center;
+  background: transparent;
   background-position: center;
   position: relative;
 }
@@ -271,7 +317,6 @@ nav .nav_list ul li:hover {
   text-align: center;
   margin-top: 220px;
   margin-top: 0px;
-  text-align: justify;
 }
 
 #introduce_bottom .resume ul .resume-sub ol {
@@ -382,7 +427,7 @@ section:nth-of-type(3) {
 #Project-Wrap .project .project-assets .project-img {
   display: table-cell;
   vertical-align: middle;
-  background: pink;
+  background: #2c2929;
   width: 500px;
   margin-left: 13px;
 }

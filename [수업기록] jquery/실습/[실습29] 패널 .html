@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script>
+            $(function () {
+                var panelW = $("#panel").width()
+                var main = $("#main")
+
+                $("#ham").click(function () {
+                    $("#panel").stop().animate(
+                        {
+                            "margin-left": 0,
+                        },
+                        300
+                    )
+                })
+            })
+        </script>
+        <style>
+            * {
+                margin: 0 auto;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+
+            #wrap {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                border: px solid red;
+            }
+
+            #panel {
+                float: left;
+                width: 400px;
+                margin-left: -400px;
+                position: absolute;
+                transition: 1s;
+                height: 100%;
+            }
+
+            #panel img {
+                width: 100%;
+                height: 100%;
+            }
+
+            #main {
+                float: left;
+                width: 100%;
+                position: relative;
+                height: 100%;
+                border: 1px solid blue;
+                background: url("/img/prugio01.png");
+            }
+
+            #button {
+                margin-left: 10px;
+                width: 150px;
+                height: 100px;
+                border: 3px solid blue;
+                z-index: 111;
+            }
+
+            #button img {
+                width: 100%;
+                height: 100%;
+            }
+
+            #content {
+                border: 1px solid blue;
+                width: 100%;
+                height: 100%;
+            }
+
+            #content img {
+                width: 100%;
+                height: 100%;
+            }
+
+            #panel img {
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="panel">
+                <button id="close">닫기</button>
+                <img src="/img/panel1.png" alt="" />
+            </div>
+            <div id="main">
+                <div id="ham">
+                    <img src="/img/threeline.png" alt="" />
+                </div>
+                <div id="content">
+                    <img src="/img/prugio01.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -13,3 +13,15 @@ function closeGallery() {
 $(function () {
     $("#dragdiv").draggable({ axis: "x" })
 })
+
+//------- gllaery page link--------------
+$(function () {
+    $(".carousel_item_1").click(function () {
+        $(this).wrap('<a href="https://github.com/DDDieon" class="menu1_link" target="_black"></a>')
+    })
+    $(".carousel_item_2").click(function () {
+        $(this).wrap(
+            '<a href="https://beecanvas.com/s/7aEbbrJ3be6fLzSMKJ21QmjHkrEONNHRQ8ze5dMO25TvJ1orEyjSYJxy-ZzwFuDn" class="menu2_link" target="_black"></a>'
+        )
+    })
+})

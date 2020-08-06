@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script>
+            $(function () {
+                $(window).scroll(function () {
+                    var sct = $(this).scrollTop()
+                    var a_ost = $("#a").offset().top
+                    var b_ost = $("#b").offset().top
+                    var c_ost = $("#c").offset().top
+                    var d_ost = $("#d").offset().top
+                    var e_ost = $("#e").offset().top
+                    var f_ost = $("#f").offset().top
+
+                    if (sct > b_ost) {
+                        $("#fixed").addClass("fixed")
+                    } else {
+                        $("#fixed").removeClass("fixed")
+                    }
+                    if (sct > b_ost - 550) {
+                        $("div>p").addClass("rotate")
+                    } else {
+                        $("div>p").removeClass("rotate")
+                    }
+                    if (sct > e_ost) {
+                        $("#e").addClass("attachment")
+                    } else {
+                        $("#e").removeClass("attachment")
+                    }
+                })
+            })
+        </script>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            html,
+            body {
+                width: 100%;
+                height: 100%;
+                font-family: 16px;
+            }
+            body {
+                background: pink;
+                background-size: 100% 100%;
+                background-attachment: scroll;
+            }
+            #f {
+                background: url("/img/keyVisual_1.jpg");
+            }
+            .attachment {
+                background: url("/img/keyVisual_0.jpg") !important;
+                background-attachment: fixed !important;
+                transition: 1s;
+            }
+            header {
+                width: 100%;
+                height: 50px;
+                background: gray;
+                position: relative;
+            }
+            #fixed {
+                position: absolute;
+                top: -100px;
+                transition: 1s;
+            }
+            header#fixed.fixed {
+                position: fixed;
+                left: 0;
+                right: 0;
+                background: black;
+                color: white;
+                top: 0 !important;
+            }
+            div {
+                width: 100%;
+                height: 100%;
+                font-size: calc(2rem + 3vw);
+            }
+            div > p {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background: red;
+                position: relative;
+                top: 500px;
+                left: -500px;
+                transition: 1s;
+
+                --widthA: 200px;
+                --widthB: calc(var(--widthA) / 2);
+                width: var(--widthB);
+            }
+            .rotate {
+                left: 200px !important;
+                transform: rotate(360deg);
+                z-index: 1111;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>메인메뉴(일반바)</header>
+        <header id="fixed">메인메뉴(고정바)</header>
+        <div id="a"><p>1</p></div>
+        <div id="b"><p>2</p></div>
+        <div id="c">배경3</div>
+        <div id="d">배경4</div>
+        <div id="e">배경5</div>
+        <div id="f">배경6-f</div>
+        <div id="g">
+            배경7
+            <div id="box">
+                Box
+            </div>
+        </div>
+        <div id="h">배경8</div>
+    </body>
+</html>
