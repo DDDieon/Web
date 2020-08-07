@@ -20,7 +20,6 @@
         <link rel="stylesheet" type="text/css" href="/js/slick/slick.css" />
         <link rel="stylesheet" type="text/css" href="/js/slick/slick-theme.css" />
         <!-- js Files -->
-        <script src="js/display.js" defer></script>
         <!-- Sass compiled CSS Lists -->
         <link rel="stylesheet" href="/css/idea.css" />
     </head>
@@ -83,12 +82,50 @@
             </header>
             <div id="content" class="content">
                 <div class="content__projects">
-                    <div class="ikea_idea fadeShow">
-                        <h2>이케아 아이디어</h2>
+                    <div class="content__projects--menu">
+                        <div class="ikea_idea fadeShow">
+                            <i class="xi-link"></i>
+                            <div class="content__projects--word">
+                                <p>Small Change Big Difference</p>
+                                <h2>이케아 아이디어</h2>
+                                <p>행복을 만드는 이케아에서 제안하는 우리집 인테리어</p>
+                            </div>
+                        </div>
+                        <div class="our_home fadeShow">
+                            <i class="xi-link"></i>
+                            <div class="content__projects--word">
+                                <p>Small Change Big Difference</p>
+                                <h2>우리집+이케아</h2>
+                                <p>행복을 만드는 이케아에서 제안하는 우리집 인테리어</p>
+                            </div>
+                        </div>
+                        <div class="social_ikea fadeShow">
+                            <i class="xi-link"></i>
+                            <div class="content__projects--word">
+                                <p>Small Change Big Difference</p>
+                                <h2>소셜미디어#이케아</h2>
+                                <p>행복을 만드는 이케아에서 제안하는 우리집 인테리어</p>
+                            </div>
+                        </div>
+                        <div class="content__projects--desc">
+                            <div class="--desc-wrap">
+                                <p class="--desc-title">내용입니다</p>
+                                <i class="xi-undo"></i>
+                            </div>
+                            <ul class="slide">
+                                <li class="slide-thumb"><a href="#"><img src="/img/for_slide/sl01.png" alt=""><p class="slide-thumb__desc">약간의 늦잠으로</a></li>
+                                <li class="slide-thumb"><a href="#"><img src="/img/for_slide/sl02.png" alt=""><p class="slide-thumb__desc">약간의 늦잠으로</p></a></li>
+                                <li class="slide-thumb"><a href="#"><img src="/img/for_slide/sl03.png" alt=""><p class="slide-thumb__desc">약간의 늦잠으로</p></a></li>
+                                <li class="slide-thumb"><a href="#"><img src="/img/for_slide/sl04.png" alt=""><p class="slide-thumb__desc">약간의 늦잠으로</p></a></li>
+                                <li class="slide-thumb"><a href="#"><img src="/img/for_slide/sl01.png" alt=""><p class="slide-thumb__desc">약간의 늦잠으로</p></a></li>
+                                <li class="slide-thumb"><a href="#"><img src="/img/for_slide/sl02.png" alt=""><p class="slide-thumb__desc">약간의 늦잠으로</p></a></li>
+                                <li class="slide-thumb"><a href="#"><img src="/img/for_slide/sl03.png" alt=""><p class="slide-thumb__desc">약간의 늦잠으로</p></a></li>
+                                <li class="slide-thumb"><a href="#"><img src="/img/for_slide/sl04.png" alt=""><p class="slide-thumb__desc">약간의 늦잠으로</p></a></li>
+
+                            </ul>
+                        </div>
                     </div>
-                    <div class="our_home fadeShow"><h2>우리집+이케아</h2></div>
-                    <div class="social_ikea fadeShow"><h2>소셜미디어#이케아</h2></div>
-                </div>
+                
             </div>
             <footer id="footer" class="ft">
                 <div class="f-top">
@@ -243,7 +280,13 @@
             })
             $(".fadeShow").click(function () {
                 $(".fadeShow").css("display", "none")
-                $(this).css({ display: "block", height: 100 + "vh" })
+                $(this).css({ display: "block" })
+                $(".content").addClass("desc-page")
+                $(".content__desc").css("display", "block")
+                //---desctop css----
+                $(".content__projects--menu").css("overflow","hidden")
+                $(".fadeShow").css("float","left")
+                $(".content__projects--desc").css("margin-top","180px")
             })
         })
     </script>

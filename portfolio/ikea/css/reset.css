@@ -60,7 +60,11 @@ h5,
 h6 {
     font-size: 100%;
     font-weight: normal;
+    cursor: default;
     /* h태그에 대한 모든 스타일을 없앤다 */
+}
+p {
+    cursor: default;
 }
 
 hr {

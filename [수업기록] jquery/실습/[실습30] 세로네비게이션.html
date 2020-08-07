@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0 auto;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            ul,
+            li {
+                list-style: none;
+            }
+
+            .on:after {
+                content: ">";
+                position: absolute;
+                right: 0;
+                top: 2px;
+            }
+
+            .bg {
+                background: lightgray;
+            }
+            .block {
+                display: block !important;
+            }
+        </style>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script>
+            $(function () {
+                $("#menu").css({
+                    width: "120px",
+                    position: "relative",
+                    border: "1px solid gray",
+                    "border-radius": "5px",
+                    //=borderRadius
+                    padding: "5px",
+                })
+                //서브메뉴
+                $("#menu ul").css({
+                    width: "100px",
+                })
+                //메인메뉴
+                $("#menu>li").css({
+                    position: "relative",
+                    margin: "5px 0",
+                    cursor: "pointer",
+                    lineHeight: 1.5,
+                })
+                //3depth menu
+                $("#menu>li>ul>li>ul").css({
+                    position: "absolute",
+                    left: "103%",
+                    top: "-1px",
+                    margin: 0,
+                    // marginLeft: "5px",
+                    border: "1px solid Dimgray",
+                    display: "none",
+                })
+                //2depth menu
+                $("#menu>li>ul").css({
+                    position: "absolute",
+                    left: "100%",
+                    padding: "5px",
+                    top: "0px",
+                    margin: 0,
+                    // marginLeft: "5px",
+                    border: "1px solid Dimgray",
+                    display: "none",
+                })
+            })
+
+            $(function () {
+                $("#menu li")
+                    .mouseover(function (e) {
+                        $(this).find(">ul").addClass("block")
+                        $(this).find(">div").addClass("bg on")
+                        //형제가 없으면 (div옆에 ul이 있은까)
+                        $("#menu li div:only-child").removeClass("on")
+                    })
+                    .mouseout(function (e) {
+                        $(this).find(">ul").removeClass("block")
+                        $(this).find("div").removeClass("bg on")
+                    })
+                //서브메뉴가 없는 메뉴 스타일 지정
+                $("#menu li").not(":has(ul)").css("color", "steelblue")
+            })
+        </script>
+    </head>
+    <body>
+        <ul id="menu">
+            <li class="ui-state-disabled">
+                <div>Toys (n/a)</div>
+            </li>
+            <li>
+                <div>Books</div>
+            </li>
+            <li>
+                <div>Clothing</div>
+            </li>
+            <li>
+                <div>Electronics</div>
+                <ul>
+                    <li class="ui-state-disabled">
+                        <div>Home Entertainment</div>
+                    </li>
+                    <li>
+                        <div>Car Hifi</div>
+                    </li>
+                    <li>
+                        <div>Utilities</div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div>Movies</div>
+            </li>
+            <li>
+                <div>Music</div>
+                <ul>
+                    <li>
+                        <div>Rock</div>
+                        <ul>
+                            <li>
+                                <div>Alternative</div>
+                            </li>
+                            <li>
+                                <div>Classic</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>Jazz</div>
+                        <ul>
+                            <li>
+                                <div>Freejazz</div>
+                            </li>
+                            <li>
+                                <div>Big Band</div>
+                            </li>
+                            <li>
+                                <div>Modern</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>Pop</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="ui-state-disabled">
+                <div>Specials (n/a)</div>
+            </li>
+        </ul>
+    </body>
+</html>

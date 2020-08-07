@@ -33,6 +33,7 @@
     <!-- Based CSS -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/firefly.css">
     <!-- SCSS compiled -->
     <link rel="stylesheet" href="css/bording.css">
     <link rel="stylesheet" href="css/main.css">
@@ -40,6 +41,7 @@
     <!-- jsFiles -->
     <script type="text/javascript" src="js/gallery.js" defer></script>
     <script type="text/javascript" src="js/display.js" defer></script>
+    <script type="text/javascript" src="js/mouse-event.js"></script>
     <script type="text/javascript" src="js/quick-menu.js" defer></script>
 </head>
 
@@ -173,24 +175,14 @@
             </div>
             <div id="introduce_bottom">
                 
-                <!-- <div id="profile">
-                    <div class="profile-words">
-                        <p>전지원 : 全智元</p>
-                        <p>JEON JIWON</p>
-                        <p>"Just Keep Going"</p>
-                        <p>내 자기소개는 여기서부터 시작합니다.<br> 아무말이나 멋있게<br> 그냥 지어내면 될 것 같은데! 어떤가요?<br> 언제든지 두들겨주세요.</p>
-                        <p>E-mail : hocldy@naver.com</p>
-                    </div>
-                </div> -->
                 <div id="Introduce_bottom_detail">
                     <div class="resume">
-                        <div class="Y-line"></div>
                         <ul>
                             <li class="resume-sub">Carrer
                                 <ol>
                                     <li> 경기대학교 수원캠퍼스 졸업 | 2020.02 | 문예창작학과</li>
                                     <li> 유튜브 영상편집 | 2019.04 ~ 2019.09 | 이스타아카데미 | 휴학 후 학업상의 이유로 중단</li>
-                                    <li> 콘텐츠 에디터 | 2019.06 ~ 2019.09 | (주) 메이비원 | 휴학 후 학업상의 이유로 중단</li>
+                                    <li> 비디오 콘텐츠 에디터 | 2019.06 ~ 2019.09 | (주) 메이비원 | 휴학 후 학업상의 이유로 중단</li>
                                 </ol>
                             </li>
                             <li class="resume-sub">License
@@ -210,13 +202,6 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-                <div class="slick-items">
-                    <div>111</div>
-                    <div>222</div>
-                    <div>333</div>
-                    <div>444</div>
-                    <div>555</div>
                 </div>
             </div>
     </section>
@@ -243,11 +228,11 @@
                     </div>
                     <div class="tips">
                         <span>브라우저 호환</span>
-                        <p>ie +11</p>
+                        <p>chrome, ie +10</p>
                     </div>
                     <div class="articleBtns">
-                        <button>Preview</button>
-                        <button>GitHub</button>
+                        <a class="demoLink" href="http://ddieon.dothome.co.kr" target="_blank">Preview</a>
+                        <a>GitHub</a>
                     </div>
                 </div>
                 <div class="project-img">imgs</div>
@@ -283,10 +268,121 @@
             </article>
         </div>
         <div class="project project-2">
-            2
+            <section class="project-assets">
+                <div class="project-title">
+                    <p class="koreanTitle">JS 토이프로젝트 - 랜덤팀매칭</p>
+                    <h2 class="EnglishTitle">Red or Blue</h2>
+                    <div class="tips">
+                        <span>특징</span>
+                        <p>바닐라자바스크립트로 알고리즘 구현</p>
+                    </div>
+                    <div class="tips">
+                        <span>뷰포트</span>
+                        <p>desktop</p>
+                    </div>
+                    <div class="tips">
+                        <span>브라우저 호환</span>
+                        <p>chrome</p>
+                    </div>
+                    <div class="articleBtns">
+                        <a class="demoLink">Preview</a>
+                        <a>GitHub</a>
+                    </div>
+                </div>
+                <div class="project-img">imgs</div>
+            </section>
+            <article class="project-desc">
+                <table class="project-desc-table">
+                    <thead>
+                        <tr>
+                            <th>Index</th>
+                            <th>Skills</th>
+                            <th>Link or Source</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span>single page</spa></td>
+                            <td>입력 폼에서 value값을 받아와 화면에서 출력, 삭제</td>
+                            <td>https://ddioen.dothcome.co.kr</td>
+                        </tr>
+                        <tr>
+                            <td>single page</td>
+                            <td>keydown 이벤트로 단축키 구현</td>
+                            <td>https://ddioen.dothcome.co.kr</td>
+                        </tr>
+                        <tr>
+                            <td>single page</td>
+                            <td>for문으로 중복입력값에 대한 경고문 발생</td>
+                            <td>https://ddioen.dothcome.co.kr</td>
+                        </tr>
+                        <tr>
+                            <td>single page</td>
+                            <td>push메소드에 난수를 적용하여 랜덤으로 배열 추가하기</td>
+                            <td>https://ddioen.dothcome.co.kr</td>
+                        </tr>
+                    </tbod>
+                </table>
         </div>
         <div class="project project-3">
-            3
+            <section class="project-assets">
+                <div class="project-title">
+                    <p class="koreanTitle">사이트 리뉴얼 - IKEA</p>
+                    <h2 class="EnglishTitle">IKEA Renewal</h2>
+                    <div class="tips">
+                        <span>특징</span>
+                        <p>글로벌 메뉴바 항목별로 알맞는 페이지 제작</p>
+                    </div>
+                    <div class="tips">
+                        <span>뷰포트</span>
+                        <p>반응형 웹</p>
+                    </div>
+                    <div class="tips">
+                        <span>Color</span>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </div>
+                    <div class="tips">
+                        <span>브라우저 호환</span>
+                        <p>chrome, ie +10</p>
+                    </div>
+                    <div class="articleBtns">
+                        <a class="demoLink" href="http://ddieon.dothome.co.kr" target="_blank">Preview</a>
+                        <a>GitHub</a>
+                    </div>
+                </div>
+                <div class="project-img">imgs</div>
+            </section>
+            <article class="project-desc">
+                <table class="project-desc-table">
+                    <thead>
+                        <tr>
+                            <th>Index</th>
+                            <th>Skills</th>
+                            <th>Link or Source</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>index.html</td>
+                            <td>바닐라자바스크립트로 구현한 모달창</td>
+                            <td>https://ddioen.dothcome.co.kr</td>
+                        </tr>
+                        <tr>
+                            <td>index.html</td>
+                            <td>hover와 active에 CSS를 넣어 디테일을 살린 UI</td>
+                            <td>https://ddioen.dothcome.co.kr</td>
+                        </tr>
+                        <tr>
+                            <td>product.html</td>
+                            <td>어떤거 또 말함</td>
+                            <td>https://ddioen.dothcome.co.kr</td>
+                        </tr>
+                    </tbod>
+                </table>
+                <!-- 구현: 바닐라자바스크립트로 구현한 모달창, hover와 active에 CSS를 넣어 디테일을 살린 UI, 미디어쿼리를 통해 화면너비를 계산해 반응하도록 한 Global Navigation과 아코디언 탭, slick슬라이더 CSS를 커스터마이징한 리디자인 슬라이더, -->
+            </article>
         </div>
         <div class="project project-4">
             4
@@ -294,11 +390,20 @@
     </section>
     <section id="Ability-Wrap">
         <div id="Ability">
-            ab
+            <p class="minibold">Ability</p>
         </div>
     </section>
     <section id="Contact-Wrap">
         <div id="Contact">
+            <p class="minibold">Contact</p>
+            <div id="profile">
+                <div class="profile-words">
+                    <p>전지원 : 全智元</p>
+                    <p>JEON JIWON</p>
+                    <p>내 자기소개는 여기서부터 시작합니다.<br> 아무말이나 멋있게<br> 그냥 지어내면 될 것 같은데! 어떤가요?<br> 언제든지 두들겨주세요.</p>
+                    <p>E-mail : hocldy@naver.com</p>
+                </div>
+            </div>
             <div id="disqus_thread" style="width:820px;margin:auto;padding-bottom:200px"></div>
             <script>
                 /**

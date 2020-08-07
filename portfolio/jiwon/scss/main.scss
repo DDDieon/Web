@@ -165,9 +165,6 @@ nav {
     }
 }
 // introduce
-#Introduce-Wrap {
-    margin-bottom: 300px;
-}
 
 #introduce_top {
     margin-bottom: 180px;
@@ -272,80 +269,22 @@ nav {
 
 #introduce_bottom {
     width: 100%;
-    background: #eee;
     margin-bottom: 130px;
-    .slick-items {
-        width: 820px;
-        height: 360px;
-        margin: 0 auto;
-        background: rgb(255, 255, 255);
-        &::before {
-            color: rgb(105, 105, 105);
-        }
-    }
-    // #profile {
-    // width:100%;
-    // height: 280px;
-    // margin: 0 auto;
-    // text-align: center;
-    // position: relative;
-    // .profile-img:hover ~ .profile-words {
-    //     opacity: 0;
-    // }
-    // #profile {
-    //     position: relative;
-    // }
-    // .profile-words {
-    //     position: absolute;
-    //     left: 0vw;
-    //     bottom: 0;
-    //     opacity: 1;
-    //     color: #000;
-    //     display: -webkit-flex;
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: center;
-    //     align-items: center;
-    //     width: 280px;
-    //     height: 280px;
-    //     background: rgba(255, 255, 255, 0.16);
-    //     transition: 0.2s;
-    //     backdrop-filter: blur(4px);
-    //     p:nth-of-type(1) {
-    //         font-weight: 500;
-    //     }
-    //     p:nth-of-type(2) {
-    //         @include minibold();
-    //         margin: 0;
-    //         text-align: justify;
-    //     }
-    //     p:nth-of-type(3) {
-    //         @include minibold();
-    //         margin-top: 22px;
-    //         text-align: justify;
-    //         font-size: 14;
-    //     }
-    //     p:nth-of-type(4) {
-    //         margin-top: 12px;
-    //     }
-    //     p:nth-of-type(5) {
-    //         margin-top: 12px;
-    //         font-weight: 500;
-    //     }
-    // }
-    // }
-    .resume {
-        background: #000;
-        ul:hover .resume-boxes {
-            opacity: 0;
-        }
 
+    .resume {
+        position: relative;
+        background: #000;
+        transition: 1s ease-out;
+        opacity: 0;
         .Y-line {
             position: absolute;
             width: 1px;
-            height: 80px;
+            height: 180px;
             background: #fff;
             left: 50%;
+        }
+        .upline {
+            top: 0;
         }
         ul {
             width: 820px;
@@ -377,25 +316,21 @@ nav {
     }
 }
 
-// Project
-section {
-    &:nth-of-type(3) {
-        background: gray;
-    }
-}
-
 #Project-Wrap {
     .minibold {
         @include minibold();
         text-decoration: underline;
         margin-top: 0;
         padding-top: 110px;
+        margin-bottom: 30px;
     }
-    div.project-1 {
-        height: 100vh;
-        width: 100%;
-    }
+
     .project {
+        width: 820px;
+        margin: 0 auto;
+        margin-bottom: 150px;
+        box-shadow: 13px 32px 36px -14px hsla(0, 0%, 70%, 0.3);
+        transition: 1s ease-out;
         p.koreanTitle {
             font-size: 14px;
             font-weight: 400;
@@ -444,16 +379,21 @@ section {
                     }
                 }
                 .articleBtns {
-                    button {
+                    a {
                         font-family: Russo One !important;
                         font-size: 18px;
                         height: 32px;
+                        position: relative;
                         background: #000000;
                         border-radius: 12px;
                         padding: 5px 19px;
                         color: #fff;
                         text-align: center;
+                        cursor: pointer;
                         box-shadow: 0 2px 8px -1px #{rgba(#151924, 0.32)};
+                        &:hover {
+                            top: 3px;
+                        }
                     }
                 }
             }
@@ -505,7 +445,62 @@ section {
 }
 
 // Ability
+#Ability-Wrap {
+    p.minibold {
+        @include minibold();
+    }
+}
 // Contact
+#Contact-Wrap {
+    p.minibold {
+        @include minibold();
+    }
+    #profile {
+        position: relative;
+        width: 100%;
+        height: 600px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        background: transparent;
+        .profile-img:hover ~ .profile-words {
+            opacity: 0;
+        }
+        .profile-words {
+            position: absolute;
+            top: 55px;
+            width: 280px;
+            height: 280px;
+            opacity: 1;
+            color: #000;
+            display: -webkit-flex;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgb(236, 236, 236);
+            transition: 0.2s;
+            backdrop-filter: blur(4px);
+            p:nth-of-type(1) {
+                font-weight: 500;
+            }
+            p:nth-of-type(2) {
+                @include minibold();
+                margin: 0;
+                text-align: justify;
+            }
+            p:nth-of-type(3) {
+                margin-top: 12px;
+            }
+            p:nth-of-type(4) {
+                margin-top: 12px;
+                font-weight: 500;
+            }
+        }
+    }
+}
 //footer
 footer {
     position: fixed;

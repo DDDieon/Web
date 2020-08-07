@@ -1,4 +1,4 @@
-// scroll event
+// nav----scroll event
 $(function () {
     var btn = $(".nav_list li button")
     btn.click(function () {
@@ -12,6 +12,27 @@ $(function () {
             $("html, body").stop().animate({
                 scrollTop: sectionTT, //html, body의 y좌표는 i번째 div의 좌표가 된다
             })
+        }
+    })
+})
+
+// project---scroll show
+$(function () {
+    $(".project").css("display", "none")
+    $(window).scroll(function () {
+        var wT = $(this).scrollTop()
+        var itT = $("#introduce_top").offset().top - 50
+        var itB = $("#introduce_top").offset().top + 800
+        if (itT < wT) {
+            $(".resume").css("opacity", "1")
+        }
+        if (itB < wT) {
+            $(".project").each(function (i) {
+                $(this)
+                    .delay(500 * i)
+                    .fadeIn(500)
+            })
+            console.log("3")
         }
     })
 })
