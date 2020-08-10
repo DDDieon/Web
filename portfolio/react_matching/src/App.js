@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import Header from "./components/Header"
 import Nav from "./components/Nav"
 import Content from "./components/Content"
+// import "./clickevent.js"
+// import "./matchingAdd.js"
 import "./App.css"
 
 class App extends Component {
@@ -9,6 +11,7 @@ class App extends Component {
         super(props)
         this.state = {}
     }
+
     render() {
         return (
             <div className="App">

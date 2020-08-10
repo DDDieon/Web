@@ -1,6 +1,14 @@
 import React, { Component } from "react"
 
 class Content extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            mode: "read",
+            value: "",
+        }
+    }
+
     render() {
         return (
             <div className="contents">
