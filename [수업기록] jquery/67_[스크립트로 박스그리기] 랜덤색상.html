@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                position: relative;
+            }
+        </style>
+    </head>
+    <body></body>
+    <script>
+        //----------- 박스 30개 그리기
+        var maxSize = 30
+        var body = $("body")
+        //body = document.querySelector('body')
+        var boxInfo = [] /// 좌표, 너비, 높이
+
+        for (var i = 0; i < maxSize; i++) {
+            var box = '<div class="box">' + i + "</div>"
+            body.append(box)
+        }
+
+        //----------- 박스, 브라우저 너비
+        var boxes = $(".box")
+        var ww = $(window).width() //브라우저의 가로 크기
+        var tlw
+        var th = 100
+        var tl
+
+        function 정렬() {
+            var tt = 0
+            var maxHeight = 0
+
+            $(boxes).each(function (i) {
+                var tl = 0
+
+                var 배경색 = "#" + Math.round(Math.random() * 0xffffff).toString(16) //0~16777215 중에 하나의 16진수 값
+                var 가로 = parseInt(Math.random() * 50 + 100)
+                var 세로 = parseInt(Math.random() * 60 + 200)
+
+                $(this).css({
+                    width: 가로,
+                    height: 세로,
+                    background: 배경색,
+                    border: "2px solid black",
+                    position: "absolute",
+                })
+                boxInfo.push([]) //2차원 배열로 저장
+
+                if (i > 0) {
+                    tl = boxInfo[i - 1][0] + boxInfo[i - 1][1]
+                    //left는 앞에 있는 박스의 left좌표와 앞에있는 박스의 width값을 더하면 좌표값
+                    tlw = tl + 100
+                    if (tlw > $(window).width()) {
+                        //가로폭이 브라우저크기를 넘어갈 때
+                        tl = 0 //left좌표를 0으로 (반응형)
+                        tt = maxHeight + boxInfo[i - 1][2] // 최대높이크기 + 앞박스의 높이
+                    }
+                    // th = boxInfo[i - 1][2]
+                    //top = 앞에 있는 박스의 높이
+                }
+
+                if ($(this).height() > maxHeight) maxHeight = $(this).height()
+
+                boxInfo[i][0] = tl
+                boxInfo[i][1] = $(this).width()
+                boxInfo[i][2] = tt
+
+                $(this).stop().animate({
+                    left: tl,
+                    top: tt,
+                })
+            })
+        }
+        정렬()
+
+        console.log(boxInfo)
+        $(window).resize(function () {
+            정렬()
+        }) //reseize
+    </script>
+</html>
