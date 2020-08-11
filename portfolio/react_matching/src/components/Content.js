@@ -1,49 +1,25 @@
 import React, { Component } from "react"
 
 class Content extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            mode: "read",
-            value: "",
-        }
-    }
-
     render() {
+        var imgLists = []
+        var imgs = this.props.img
+        var j = 0
+        while (j < imgs.length) {
+            imgLists.push(
+                <li key={"content" + j}>
+                    <img id={j} src={this.props.img[j].src} alt="이미지입니다"></img>
+                    {/* <img id={j} src={require("/asset/port1.jpg")} alt="이미지입니다"></img>
+                     */}
+                    {/* 이미지 엑박문제 해결해야 함 */}
+                </li>
+            )
+            j++
+        }
+
         return (
             <div className="contents">
-                <div className="list-box">
-                    <div className="write-box">
-                        <input type="text" className="text-basic" />
-                        <button type="button" id="btnAdd" className="btnAdd">
-                            추가(enter)
-                        </button>
-                    </div>
-                    <div className="list-table">
-                        <div id="listBody" className="listBody"></div>
-                    </div>
-                    <div className="btn-area">
-                        <button type="button" id="DeleteAll">
-                            전체삭제
-                        </button>
-                        <button type="button" id="DeleteSel">
-                            선택삭제
-                        </button>
-                        <button type="button" id="goMatching">
-                            매칭
-                        </button>
-                    </div>
-                </div>
-                <div className="teamWrapper">
-                    <section>
-                        <h2 id="redteam">Red Team</h2>
-                        <div className="red"></div>
-                    </section>
-                    <section>
-                        <h2 id="blueteam">Blue Team</h2>
-                        <div className="blue"></div>
-                    </section>
-                </div>
+                <ul className="list-box">{imgLists}</ul>
             </div>
         )
     }

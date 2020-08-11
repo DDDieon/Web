@@ -52,4 +52,12 @@
     display: block;
     color: rgb(48, 48, 48);
     text-decoration: none;
+    padding: 0 12px;
 }
+
+.nav_bar ul li a:hover {
+    background: rgb(236, 235, 235);
+    border-radius: 5px;
+}
+
+/* Content style*/

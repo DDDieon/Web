@@ -2,19 +2,28 @@ import React, { Component } from "react"
 
 class Nav extends Component {
     render() {
+        var lists = []
+        var data = this.props.data
+        var i = 0
+        while (i < data.length) {
+            lists.push(
+                <li key={"navList" + i}>
+                    <a
+                        href={"/" + data[i].id}
+                        onClick={(e) => {
+                            e.preventDefault()
+                        }}
+                    >
+                        {data[i].title}
+                    </a>
+                </li>
+            )
+            i++
+        }
+
         return (
             <div className="nav_bar">
-                <ul className="lists">
-                    <li>
-                        <a href="/">랜덤 매칭하기</a>
-                    </li>
-                    <li>
-                        <a href="/">사용법</a>
-                    </li>
-                    <li>
-                        <a href="/">만든 이</a>
-                    </li>
-                </ul>
+                <ul className="lists">{lists}</ul>
             </div>
         )
     }
