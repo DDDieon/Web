@@ -33,6 +33,7 @@
   margin-left: calc(-75px / 2);
   top: 20%;
   opacity: 0.8;
+  transition: 0.8s;
 }
 
 .content__projects--menu div.fadeShow.ikea_idea {
@@ -72,6 +73,10 @@
   filter: brightness(0.8);
 }
 
+.content__projects--menu div.fadeShow:hover i.xi-link {
+  transform: rotate(60deg);
+}
+
 .content__projects--menu div.fadeShow .content__projects--word {
   position: absolute;
   opacity: 0.9;
@@ -85,6 +90,13 @@
   background: #fff;
 }
 
+.content__projects--menu div.fadeShow .content__projects--word p:first-child {
+  display: inline;
+  padding: 0 12px;
+  background: #0058a3;
+  color: #fff;
+}
+
 .content__projects--menu div.fadeShow .content__projects--word h2 {
   text-decoration: underline;
   font-size: 22px;
@@ -92,30 +104,51 @@
 }
 
 .content__projects--desc {
-  color: black;
   text-align: center;
+  margin-top: 50px;
 }
 
 .content__projects--desc .--desc-wrap {
-  width: 820px;
+  margin: 0 auto;
+  width: 80%;
   display: flex;
   justify-content: space-between;
 }
 
+.content__projects--desc .--desc-wrap {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffdb00;
+  background: #ffdb00;
+}
+
+.content__projects--desc .--desc-wrap span {
+  background: #0058a3;
+  padding: 0 20px;
+}
+
 .content__projects--desc .slide {
-  width: 820px;
+  width: 80%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .content__projects--desc .slide-thumb {
   margin: 10px;
+  color: #000;
+}
+
+.content__projects--desc .slide-thumb a {
+  display: flex;
 }
 
 .content__projects--desc .slide-thumb a img {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
+  max-height: 100px;
 }
 
 @media screen and (min-width: 1260px) {
@@ -134,6 +167,7 @@
     float: left;
     height: 100vh;
     width: 33.3%;
+    float: left;
   }
   .content__projects div.fadeShow.ikea_idea {
     background: url("/img/idea/gate-visual1.jpg") center;
@@ -160,10 +194,13 @@
     background-size: auto 150%;
   }
   .content__projects div.fadeShow .content__projects--word {
-    padding: 80px 0;
+    padding-bottom: 120px;
   }
   .content__projects div.fadeShow:hover .content__projects--word {
     transition: 0.2s;
-    padding: 100px 0;
+    padding-bottom: 180px;
+  }
+  .content__projects--desc .slide {
+    flex-direction: row;
   }
 }

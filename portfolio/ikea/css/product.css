@@ -83,11 +83,12 @@ section {
 }
 
 #productMain .productMainItem a .name_of_product {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
 }
 
 #productMain .productMainItem a p:nth-of-type(2) {
+  font-size: 12px;
   line-height: 0.8;
   margin-bottom: 2px;
 }

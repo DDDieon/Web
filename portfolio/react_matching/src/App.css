@@ -19,7 +19,7 @@
 .btn_box {
     background: white;
     padding: 10px 30px;
-    border: 1px solid #ccc;
+    border: 2px solid #bbb;
     border-radius: 12px;
     height: 50px;
     font-weight: bold;
@@ -45,9 +45,6 @@
     padding-right: 10px;
 }
 
-.nav_bar ul li:nth-child(1) {
-    font-weight: bold;
-}
 .nav_bar ul li a {
     display: block;
     color: rgb(48, 48, 48);
@@ -61,3 +58,13 @@
 }
 
 /* Content style*/
+.contents ul {
+    display: flex;
+    justify-content: center;
+}
+.contents li {
+    margin: 0 auto;
+}
+.contents img {
+    width: 820px;
+}

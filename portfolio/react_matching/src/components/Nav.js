@@ -12,6 +12,7 @@ class Nav extends Component {
                         href={"/" + data[i].id}
                         onClick={(e) => {
                             e.preventDefault()
+                            this.setState({ page: "read" })
                         }}
                     >
                         {data[i].title}

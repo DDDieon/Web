@@ -10,7 +10,7 @@ class App extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            mode: "welcome",
+            page: "welcome",
             // welcome: { title: "전체타이틀", desc: "desc is me" },
             data: [
                 {
@@ -19,24 +19,32 @@ class App extends Component {
                 },
                 {
                     id: 2,
-                    title: "이미지 포트폴리오",
+                    title: "포트폴리오",
                 },
                 {
                     id: 3,
-                    title: "비디오 포트폴리오",
+                    title: "포트폴리오2",
                 },
             ],
             img: [
-                { id: 101, src: "/asset/port1.jpg" },
-                { id: 102, src: "/asset/port1.jpg" },
-                { id: 103, src: "/asset/port1.jpg" },
-                { id: 104, src: "/asset/port1.jpg" },
-                { id: 105, src: "/asset/port1.jpg" },
+                { id: 101, src: "asset/port2.png" },
+                { id: 102, src: "asset/port3.png" },
+                { id: 103, src: "asset/port4.png" },
+                { id: 104, src: "asset/port5.png" },
+                { id: 105, src: "asset/port6.png" },
+                { id: 105, src: "asset/port7.png" },
+                { id: 105, src: "asset/port8.png" },
             ],
         }
     }
 
     render() {
+        var _title = null
+        if (this.state.mode === "welcome") {
+            _title = this.state.page
+        } else if (this.state.mode === "read") {
+            _title = this.state.img
+        }
         // var _title = null
         // var _desc = null
         // if (this.state.mode === "welcome") {
@@ -50,7 +58,7 @@ class App extends Component {
         return (
             <div className="App">
                 <Header></Header>
-                <Nav data={this.state.data}></Nav>
+                <Nav data={this.state.data} page={this.state.page}></Nav>
                 <Content img={this.state.img}></Content>
             </div>
         )

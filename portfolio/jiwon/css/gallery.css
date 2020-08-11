@@ -71,10 +71,6 @@
   cursor: pointer;
 }
 
-#gallery-body #gallery-wrap .carousel_wrap {
-  cursor: pointer;
-}
-
 #gallery-body #gallery-wrap .carousel_wrap .carousel_stage {
   width: calc(630 * 5);
 }
@@ -82,6 +78,7 @@
 #gallery-body #gallery-wrap .carousel_wrap .carousel_stage ul {
   width: 5000px;
   overflow: hidden;
+  cursor: move;
 }
 
 #gallery-body #gallery-wrap .carousel_wrap .carousel_stage ul li {

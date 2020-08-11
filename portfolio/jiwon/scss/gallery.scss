@@ -65,12 +65,12 @@ $red: #ffa4b1;
             }
         }
         .carousel_wrap {
-            cursor: pointer;
             .carousel_stage {
                 width: calc(630 * 5);
                 ul {
                     width: 5000px;
                     overflow: hidden;
+                    cursor: move;
                     li {
                         float: left;
                         position: relative;

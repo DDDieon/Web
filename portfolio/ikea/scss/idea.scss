@@ -1,5 +1,9 @@
 $Yellow: #ffdb00;
 $Blue: #0058a3;
+$WrapMobileWidth: 80%;
+$ImgMobileWidth: 100px;
+$WrapDesktopWidth: 820px;
+$WrapDesktopWidth: 150px;
 
 .content {
     width: 100%;
@@ -28,6 +32,7 @@ $Blue: #0058a3;
                     margin-left: calc(-75px / 2);
                     top: 20%;
                     opacity: 0.8;
+                    transition: 0.8s;
                 }
                 &.ikea_idea {
                     background: url("/img/idea/gate-visual1.jpg") center;
@@ -58,6 +63,9 @@ $Blue: #0058a3;
                 }
                 &:hover {
                     filter: brightness(0.8);
+                    i.xi-link {
+                        transform: rotate(60deg);
+                    }
                 }
                 .content__projects--word {
                     position: absolute;
@@ -70,6 +78,12 @@ $Blue: #0058a3;
                     text-align: center;
                     color: $Blue;
                     background: #fff;
+                    p:first-child {
+                        display: inline;
+                        padding: 0 12px;
+                        background: $Blue;
+                        color: #fff;
+                    }
                     h2 {
                         text-decoration: underline;
                         font-size: 22px;
@@ -79,24 +93,42 @@ $Blue: #0058a3;
             }
         }
         &--desc {
-            color: black;
             text-align: center;
+            margin-top: 50px;
             .--desc-wrap {
-                width: 820px;
+                margin: 0 auto;
+                width: $WrapMobileWidth;
                 display: flex;
                 justify-content: space-between;
             }
+            .--desc-wrap {
+                font-size: 16px;
+                font-weight: bold;
+                color: $Yellow;
+                background: $Yellow;
+                span {
+                    background: $Blue;
+                    padding: 0 20px;
+                }
+            }
             .slide {
-                width: 820px;
+                width: $WrapMobileWidth;
                 display: flex;
                 justify-content: center;
+                flex-direction: column;
                 flex-wrap: wrap;
+                margin: 0 auto;
                 &-thumb {
                     margin: 10px;
+                    color: #000;
+                    a {
+                        display: flex;
+                    }
                 }
                 &-thumb a img {
-                    width: 150px;
-                    height: 150px;
+                    width: $ImgMobileWidth;
+                    height: $ImgMobileWidth;
+                    max-height: $ImgMobileWidth;
                 }
             }
         }
@@ -129,6 +161,7 @@ $Blue: #0058a3;
                 float: left;
                 height: 100vh;
                 width: 33.3%;
+                float: left;
                 &.ikea_idea {
                     background: url("/img/idea/gate-visual1.jpg") center;
                     background-repeat: no-repeat;
@@ -154,13 +187,16 @@ $Blue: #0058a3;
                     }
                 }
                 .content__projects--word {
-                    padding: 80px 0;
+                    padding-bottom: 120px;
                 }
                 &:hover .content__projects--word {
                     transition: 0.2s;
-                    padding: 100px 0;
+                    padding-bottom: 180px;
                 }
             }
         }
+    }
+    .content__projects--desc .slide {
+        flex-direction: row;
     }
 }
