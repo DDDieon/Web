@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>팝업 배너 만들기</title>
+        <link href="style.css" type="text/css" rel="stylesheet" />
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <!-- <script src="popupBanner.js"></script> -->
+    </head>
+    <body>
+        <div id="wrap">
+            <h1>아이콕스 신간소개</h1>
+            <div id="banner">
+                <div class="vis_frame">
+                    <ul>
+                        <li>
+                            <a href="#"
+                                ><img src="images/book1.jpg" alt="안드로이드로용돈벌기"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/book2.jpg" alt="아이폰으로용돈벌기" /></a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                ><img src="images/book3.jpg" alt="실전프로젝트반응형웹퍼블리싱"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                ><img src="images/book4.jpg" alt="웹표준퍼블리싱바이블"
+                            /></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="b_control">
+                <a href="#play" class="play"><img src="images/play.gif" alt="재생" /></a>
+                <a href="#stop" class="stop"><img src="images/stop.gif" alt="멈춤" /></a>
+            </div>
+            <div id="b_bt">
+                <a href="#left" class="left"><img src="images/left.gif" alt="이전 배너이미지" /></a>
+                <a href="#right" class="right"
+                    ><img src="images/right.gif" alt="다음 배너이미지"
+                /></a>
+            </div>
+            <div id="list_num">
+                <a href="#"><img src="images/1_off.gif" alt="1" /></a>
+                <a href="#"><img src="images/2_off.gif" alt="2" /></a>
+                <a href="#"><img src="images/3_off.gif" alt="3" /></a>
+                <a href="#"><img src="images/4_off.gif" alt="4" /></a>
+            </div>
+        </div>
+
+        <script>
+            var listA = $("#list_num>a")
+            var li = $("#banner").find("li")
+            var i = 0 // i는 현재 페이지의 인덱스이다
+            li.hide() //먼저 모든 사진 가리기
+
+            listA.click(function () {
+                var index = listA.index(this)
+
+                if (listA.state) {
+                    //과거가 있는가
+                    imgOff(listA.state)
+                    imgOn(this)
+                    $(li.state).hide() // 모든 사진 가리기
+                    $(li[index]).show() //원하는 사진 올리기
+                    i = index
+                    console.log(i)
+                } else {
+                    imgOn(this)
+                    $(li[index]).show()
+                }
+                listA.state = this // 과거의 a태그
+                li.state = li[index] //과거의 사진태그
+            })
+
+            //play와 stop 구현하기
+            function 강제클릭() {
+                $(".right").click()
+            }
+            $(".play").click(function () {
+                AAA = setInterval(강제클릭, 2000)
+            })
+            $(".stop").click(function () {
+                clearInterval(AAA) //clearInterval에는 콜백 "강제클릭"이 아니라, AAA라는 setInterval을 넣어야 한다
+            })
+
+            function imgOn(t) {
+                var img = $(t).find("img")
+                var newSrc = img.attr("src").replace("off", "on")
+                $(t).find("img").attr("src", newSrc)
+            }
+
+            function imgOff(t) {
+                var img = $(t).find("img")
+                var oldSrc = img.attr("src").replace("on", "off")
+                $(t).find("img").attr("src", oldSrc)
+            }
+
+            $(listA[0]).trigger("click") //trigger를 쓰기 위해서는 제이쿼리객체로 바꿔줘야
+            $(".left").click(function () {
+                i--
+                console.log(i)
+                if (i < 0) i = listA.length - 1
+                listA[i].click()
+            })
+
+            $(".right").click(function () {
+                i++
+                console.log(i)
+                if (i > listA.length - 1) i = 0
+                listA[i].click()
+            })
+        </script>
+        <script>
+            // -------- a태그의 아이콘을 초기화 시킬 때, 각각의 객체들을 하나씩 다 off시키는 방법
+            // listA.each(function (index) {
+            //     var list = listA.eq(index).find("img").attr("src")
+            //     listA.eq(index).find("img").attr("src", list.replace("on", "off"))
+            // }) state를 넣는건 나중에
+        </script>
+    </body>
+</html>
