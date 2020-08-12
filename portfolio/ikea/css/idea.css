@@ -104,8 +104,10 @@
 }
 
 .content__projects--desc {
+  display: none;
   text-align: center;
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .content__projects--desc .--desc-wrap {
@@ -138,16 +140,32 @@
 
 .content__projects--desc .slide-thumb {
   margin: 10px;
+  padding: 5px;
+  border: 1px solid #ddd;
   color: #000;
+}
+
+.content__projects--desc .slide-thumb__desc {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .content__projects--desc .slide-thumb a {
   display: flex;
 }
 
-.content__projects--desc .slide-thumb a img {
+.content__projects--desc .slide-thumb a p {
+  cursor: pointer;
+}
+
+.content__projects--desc .slide-thumb .imgBox {
+  overflow: hidden;
   width: 100px;
-  height: 100px;
+}
+
+.content__projects--desc .slide-thumb .imgBox img {
   max-height: 100px;
 }
 
@@ -155,6 +173,12 @@
   .content {
     width: 100%;
     height: 100vh;
+  }
+  .content .content__projects--desc {
+    margin-top: 160px !important;
+  }
+  .content .content__projects--menu {
+    overflow: hidden;
   }
   .content__projects {
     width: 100%;
@@ -164,7 +188,6 @@
   }
   .content__projects div.fadeShow {
     cursor: pointer;
-    float: left;
     height: 100vh;
     width: 33.3%;
     float: left;
@@ -200,7 +223,18 @@
     transition: 0.2s;
     padding-bottom: 180px;
   }
-  .content__projects--desc .slide {
+  .content .slide-thumb {
+    width: 250px;
+  }
+  .content .slide-thumb .imgBox img {
+    max-height: 100px;
+  }
+  .content .content__projects--desc {
+    width: 64%;
+    float: left;
+  }
+  .content .content__projects--desc div {
+    display: flex;
     flex-direction: row;
   }
 }
