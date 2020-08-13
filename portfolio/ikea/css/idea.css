@@ -1,6 +1,7 @@
 .content {
   width: 100%;
   height: 100%;
+  background: #eee;
 }
 
 .content__projects {
@@ -22,18 +23,21 @@
   transition: 0.5s;
 }
 
-.content__projects--menu div.fadeShow i.xi-link {
+.content__projects--menu div.fadeShow .content__project--icon {
   border-radius: 50%;
   border: 2px solid #fff;
-  padding: 20px;
   position: absolute;
   color: #fff;
-  font-size: 50px;
   left: 50%;
   margin-left: calc(-75px / 2);
   top: 20%;
   opacity: 0.8;
   transition: 0.8s;
+}
+
+.content__projects--menu div.fadeShow .content__project--icon .xi-touch {
+  font-size: 50px;
+  padding: 20px;
 }
 
 .content__projects--menu div.fadeShow.ikea_idea {
@@ -73,8 +77,8 @@
   filter: brightness(0.8);
 }
 
-.content__projects--menu div.fadeShow:hover i.xi-link {
-  transform: rotate(60deg);
+.content__projects--menu div.fadeShow:hover .content__project--icon {
+  transform: rotate(-20deg);
 }
 
 .content__projects--menu div.fadeShow .content__projects--word {
@@ -104,27 +108,27 @@
 }
 
 .content__projects--desc {
+  position: relative;
   display: none;
   text-align: center;
   margin-top: 50px;
   margin-bottom: 50px;
+  overflow: hidden;
 }
 
-.content__projects--desc .--desc-wrap {
+.content__projects--desc .slideTitle {
   margin: 0 auto;
+  margin-bottom: 10px;
   width: 80%;
   display: flex;
   justify-content: space-between;
-}
-
-.content__projects--desc .--desc-wrap {
   font-size: 16px;
   font-weight: bold;
   color: #ffdb00;
   background: #ffdb00;
 }
 
-.content__projects--desc .--desc-wrap span {
+.content__projects--desc .slideTitle span {
   background: #0058a3;
   padding: 0 20px;
 }
@@ -139,9 +143,10 @@
 }
 
 .content__projects--desc .slide-thumb {
-  margin: 10px;
+  margin: 5px;
   padding: 5px;
   border: 1px solid #ddd;
+  background: #fff;
   color: #000;
 }
 
@@ -161,6 +166,7 @@
 }
 
 .content__projects--desc .slide-thumb .imgBox {
+  margin: 0;
   overflow: hidden;
   width: 100px;
 }
@@ -169,13 +175,52 @@
   max-height: 100px;
 }
 
+.content__projects--desc .slideControler {
+  position: absolute;
+  left: 50%;
+  margin: 0 auto;
+  margin-left: -40%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.content__projects--desc .slideControler button {
+  background: #eee;
+  color: #666;
+  margin: 0 120px;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 25px;
+  cursor: pointer;
+  outline: none;
+}
+
+.content__projects--desc .PrevPageButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  color: #ffdb00;
+  margin: 0 auto;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 1260px) {
   .content {
     width: 100%;
     height: 100vh;
   }
   .content .content__projects--desc {
-    margin-top: 160px !important;
+    height: 100vh;
+    margin-left: 30px;
   }
   .content .content__projects--menu {
     overflow: hidden;
@@ -184,7 +229,6 @@
     width: 100%;
     height: 100%;
     position: relative;
-    overflow: hidden;
   }
   .content__projects div.fadeShow {
     cursor: pointer;
@@ -223,6 +267,12 @@
     transition: 0.2s;
     padding-bottom: 180px;
   }
+  .content .slideTitle {
+    margin-top: 250px !important;
+  }
+  .content .slide {
+    position: relative;
+  }
   .content .slide-thumb {
     width: 250px;
   }
@@ -236,5 +286,11 @@
   .content .content__projects--desc div {
     display: flex;
     flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1960px) {
+  .content .slideTitle {
+    margin-top: 400px !important;
   }
 }

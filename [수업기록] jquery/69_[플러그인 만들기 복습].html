@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+    </head>
+    <body></body>
+    <script>
+        $(document).ready(function (e) {
+            $("h2").color("red")
+            $("h3").color("blue")
+            $("h2").backGround("lime")
+            //없는 메소드인데 플러그인 설정
+        })
+        $.fn.color = function (AAA) {
+            $(this).css("color", AAA)
+        }
+        $.fn.backGround = function (BBB) {
+            $(this).css("background", BBB)
+        }
+    </script>
+    <body>
+        <h1>간단플러그인</h1>
+        <h2>예시 example 1</h2>
+        <h3>예시 example 2</h3>
+    </body>
+</html>

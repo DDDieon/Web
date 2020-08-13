@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .wrap {
+                position: relative;
+                margin: 20px;
+            }
+            input[type="radio"] {
+                display: none;
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                border: 0;
+            }
+            input[type="radio"] + label {
+                display: inline-block;
+                position: relative;
+                padding-left: 30px;
+                cursor: pointer;
+            }
+            input[type="radio"] + label::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 21px;
+                height: 21px;
+                text-align: center;
+                background: rgb(255, 214, 250);
+                border-radius: 50%;
+            }
+            input[type="radio"]:checked + label::before {
+                content: "●";
+                color: rgb(238, 102, 227);
+                font-size: 12px;
+                position: absolute;
+                left: 0;
+                width: 21px;
+                line-height: 18px;
+                height: 21px;
+                text-align: center;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <input type="radio" id="radioButton1" name="radioName" />
+            <label for="radioButton1">라디오 버튼입니다</label>
+        </div>
+        <div class="wrap">
+            <input type="radio" id="radioButton2" name="radioName" />
+            <label for="radioButton2">라디오 버튼입니다</label>
+        </div>
+    </body>
+</html>

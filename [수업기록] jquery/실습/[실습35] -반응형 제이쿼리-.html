@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                position: relative;
+            }
+            .box {
+                display: inline-block;
+            }
+        </style>
+        <script type="text/javascript">
+            $(function () {
+                const maxSize = 30
+                var body = $("body")
+
+                for (var i = 0; i < maxSize; i++) {
+                    var boxNodes = "<div class=box>" + i + "</div>"
+                    body.append(boxNodes)
+                }
+
+                var box = $(".box")
+                var boxInfo = []
+
+                box.each(function (i) {
+                    var boxColor = "#" + Math.round(Math.random() * 0xffffff).toString(16)
+                    var boxHeight = parseInt(Math.random() * 50 + 100)
+                    var boxWidth = parseInt(Math.random() * 50 + 100) //math.random()은 0~1사이의 숫자
+                    $(this).css({
+                        width: boxWidth,
+                        height: boxHeight,
+                        backgroundColor: boxColor,
+                    })
+                    boxInfo.push([]) //2차원 배열로
+                })
+                //박스정렬
+                function sort() {
+                    var maxHeight = 0
+                    var tt = 0
+                    box.each(function (i) {
+                        var tl = 0
+                        var tw = $(this).outerWidth(true) //마진패딩포함 가로폭
+                        var th = $(this).outerHeight(true) //마진패딩포함 높이
+                        var ww = $(window).width() // 윈도우 반응형용
+                        var tlw
+
+                        if (i > 0) {
+                            tl = boxInfo[i - 1][0] + boxInfo[i - 1][1] //현재박스의 left좌표는 앞박스의 left+width값
+                            var tlw = tl + $(this).outerWidth() //☆★☆★☆★브라우저에서 마지막 left 좌표 => 앞박스left + 다음박스width
+                            if (tlw > ww) {
+                                //브라우저를 줄이면
+                                tl = 0
+                                tt = maxHeight + boxInfo[i - 1][2]
+                                // 줄간격은 가장큰 박스의 높이 기준이다
+                            }
+                        }
+
+                        if ($(this).height() > maxHeight) maxHeight = $(this).height()
+
+                        boxInfo[i][0] = tl //box의 left값
+                        boxInfo[i][1] = tw //box의 width값
+                        boxInfo[i][2] = tt // box의 높이
+
+                        $(this).stop().animate({ left: tl, top: tt }, { duration: 1200 }) //animate가 안먹혀
+                    })
+                }
+                $(window).resize(function () {
+                    sort()
+                })
+            })
+        </script>
+    </head>
+    <body></body>
+</html>

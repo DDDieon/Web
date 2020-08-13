@@ -8,6 +8,7 @@ $ImgDesktopWidth: 250px;
 .content {
     width: 100%;
     height: 100%;
+    background: #eee;
     &__projects {
         width: 100%;
         height: 100%;
@@ -21,18 +22,20 @@ $ImgDesktopWidth: 250px;
                 height: 33vh;
                 width: 100%;
                 transition: 0.5s;
-                i.xi-link {
+                .content__project--icon {
                     border-radius: 50%;
                     border: 2px solid #fff;
-                    padding: 20px;
                     position: absolute;
                     color: #fff;
-                    font-size: 50px;
                     left: 50%;
                     margin-left: calc(-75px / 2);
                     top: 20%;
                     opacity: 0.8;
                     transition: 0.8s;
+                    .xi-touch {
+                        font-size: 50px;
+                        padding: 20px;
+                    }
                 }
                 &.ikea_idea {
                     background: url("/img/idea/gate-visual1.jpg") center;
@@ -63,8 +66,8 @@ $ImgDesktopWidth: 250px;
                 }
                 &:hover {
                     filter: brightness(0.8);
-                    i.xi-link {
-                        transform: rotate(60deg);
+                    .content__project--icon {
+                        transform: rotate(-20deg);
                     }
                 }
                 .content__projects--word {
@@ -93,17 +96,18 @@ $ImgDesktopWidth: 250px;
             }
         }
         &--desc {
+            position: relative;
             display: none;
             text-align: center;
             margin-top: 50px;
             margin-bottom: 50px;
-            .--desc-wrap {
+            overflow: hidden;
+            .slideTitle {
                 margin: 0 auto;
+                margin-bottom: 10px;
                 width: $WrapMobileWidth;
                 display: flex;
                 justify-content: space-between;
-            }
-            .--desc-wrap {
                 font-size: 16px;
                 font-weight: bold;
                 color: $Yellow;
@@ -121,9 +125,10 @@ $ImgDesktopWidth: 250px;
                 flex-wrap: wrap;
                 margin: 0 auto;
                 &-thumb {
-                    margin: 10px;
+                    margin: 5px;
                     padding: 5px;
                     border: 1px solid #ddd;
+                    background: #fff;
                     color: #000;
                     &__desc {
                         display: flex;
@@ -140,6 +145,7 @@ $ImgDesktopWidth: 250px;
                 }
                 &-thumb {
                     .imgBox {
+                        margin: 0;
                         overflow: hidden;
                         width: $ImgMobileWidth;
                     }
@@ -149,6 +155,42 @@ $ImgDesktopWidth: 250px;
                         max-height: $ImgMobileWidth;
                     }
                 }
+            }
+            .slideControler {
+                position: absolute;
+                left: 50%;
+                margin: 0 auto;
+                margin-left: -40%;
+                width: $WrapMobileWidth;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                font-weight: bold;
+                button {
+                    background: #eee;
+                    color: #666;
+                    margin: 0 120px;
+                    border-radius: 50%;
+                    padding: 5px 10px;
+                    font-weight: bold;
+                    font-size: 25px;
+                    cursor: pointer;
+                    outline: none;
+                }
+            }
+            .PrevPageButton {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #222;
+                color: $Yellow;
+                margin: 0 auto;
+                width: 120px;
+                height: 40px;
+                text-align: center;
+                border-radius: 10px;
+                cursor: pointer;
             }
         }
     }
@@ -160,7 +202,8 @@ $ImgDesktopWidth: 250px;
         width: 100%;
         height: 100vh;
         .content__projects--desc {
-            margin-top: 160px !important;
+            height: 100vh;
+            margin-left: 30px;
         }
         .content__projects--menu {
             overflow: hidden;
@@ -170,7 +213,7 @@ $ImgDesktopWidth: 250px;
             width: 100%;
             height: 100%;
             position: relative;
-            overflow: hidden;
+
             div.fadeShow {
                 cursor: pointer;
                 height: 100vh;
@@ -209,7 +252,37 @@ $ImgDesktopWidth: 250px;
                 }
             }
         }
+        .slideTitle {
+            margin-top: 250px !important;
+        }
         .slide {
+            // &::before {
+            //     content: "PREV";
+            //     display: block;
+            //     position: fixed;
+            //     right: 205px;
+            //     top: 140px;
+            //     width: 50px;
+            //     font-weight: bold;
+            //     line-height: 50px;
+            //     height: 50px;
+            //     border-radius: 50%;
+            //     background: rgb(34, 34, 34);
+            // }
+            // &::after {
+            //     content: "NEXT";
+            //     display: block;
+            //     position: fixed;
+            //     right: 150px;
+            //     top: 140px;
+            //     width: 50px;
+            //     font-weight: bold;
+            //     line-height: 50px;
+            //     height: 50px;
+            //     border-radius: 50%;
+            //     background: rgb(34, 34, 34);
+            // }
+            position: relative;
             &-thumb {
                 width: $ImgDesktopWidth;
                 .imgBox {
@@ -227,6 +300,14 @@ $ImgDesktopWidth: 250px;
         .content__projects--desc div {
             display: flex;
             flex-direction: row;
+        }
+    }
+}
+
+@media screen and (min-width: 1960px) {
+    .content {
+        .slideTitle {
+            margin-top: 400px !important;
         }
     }
 }

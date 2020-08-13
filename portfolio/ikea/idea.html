@@ -84,7 +84,9 @@
                 <div class="content__projects">
                     <div class="content__projects--menu">
                         <div class="ikea_idea fadeShow">
-                            <i class="xi-link"></i>
+                            <div class="content__project--icon">
+                                <i class="xi-touch"></i>
+                            </div>
                             <div class="content__projects--word">
                                 <p>Small Change Big Difference</p>
                                 <h2>이케아 아이디어</h2>
@@ -92,7 +94,9 @@
                             </div>
                         </div>
                         <div class="our_home fadeShow">
-                            <i class="xi-link"></i>
+                            <div class="content__project--icon">
+                                <i class="xi-touch"></i>
+                            </div>
                             <div class="content__projects--word">
                                 <p>Small Change Big Difference</p>
                                 <h2>우리집+이케아</h2>
@@ -100,7 +104,9 @@
                             </div>
                         </div>
                         <div class="social_ikea fadeShow">
-                            <i class="xi-link"></i>
+                            <div class="content__project--icon">
+                                <i class="xi-touch"></i>
+                            </div>
                             <div class="content__projects--word">
                                 <p>Small Change Big Difference</p>
                                 <h2>소셜미디어#이케아</h2>
@@ -108,20 +114,20 @@
                             </div>
                         </div>
                         <div class="content__projects--desc">
-                            <div class="--desc-wrap">
-                                <p class="--desc-title"><span>IKEA</span> IDEAS</p>
+                            <div class="slideTitle">
+                                <p class="--desc-title"><span>IKEA IDEAS</span></p>
                                 <p class="--desc-title"></p>
                                 <i class="xi-undo"></i>
                             </div>
                             <ul class="slide">
-                                <div>
+                                <div class="slide-wrapT">
                                     <li class="slide-thumb">
                                         <a href="#">
                                             <div class="imgBox">
                                                 <img src="/img/for_slide/sl01.png" alt="" />
                                             </div>
                                             <p class="slide-thumb__desc">
-                                                약간의 늦잠으로<br />에너지 충전하기
+                                                약간의 늦잠으로<br />에너지를 충전하기
                                             </p>
                                         </a>
                                     </li>
@@ -131,7 +137,7 @@
                                                 <img src="/img/for_slide/sl02.png" alt="" />
                                             </div>
                                             <p class="slide-thumb__desc">
-                                                약간의 늦잠으로<br />에너지 충전하기
+                                                해당 페이지는 참고용<br />이케아 idea 페이지
                                             </p>
                                         </a>
                                     </li>
@@ -151,17 +157,7 @@
                                                 <img src="/img/for_slide/sl04.png" alt="" />
                                             </div>
                                             <p class="slide-thumb__desc">
-                                                약간의 늦잠으로<br />에너지 충전하기
-                                            </p>
-                                        </a>
-                                    </li>
-                                    <li class="slide-thumb">
-                                        <a href="#">
-                                            <div class="imgBox">
-                                                <img src="/img/for_slide/sl01.png" alt="" />
-                                            </div>
-                                            <p class="slide-thumb__desc">
-                                                약간의 늦잠으로<br />에너지 충전하기
+                                                해당 페이지는 참고용<br />이케아 idea 페이지
                                             </p>
                                         </a>
                                     </li>
@@ -178,6 +174,16 @@
                                     <li class="slide-thumb">
                                         <a href="#">
                                             <div class="imgBox">
+                                                <img src="/img/for_slide/sl04.png" alt="" />
+                                            </div>
+                                            <p class="slide-thumb__desc">
+                                                해당 페이지는 참고용<br />이케아 idea 페이지
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li class="slide-thumb">
+                                        <a href="#">
+                                            <div class="imgBox">
                                                 <img src="/img/for_slide/sl03.png" alt="" />
                                             </div>
                                             <p class="slide-thumb__desc">
@@ -188,15 +194,15 @@
                                     <li class="slide-thumb">
                                         <a href="#">
                                             <div class="imgBox">
-                                                <img src="/img/for_slide/sl04.png" alt="" />
+                                                <img src="/img/for_slide/sl01.png" alt="" />
                                             </div>
                                             <p class="slide-thumb__desc">
-                                                약간의 늦잠으로<br />에너지 충전하기
+                                                해당 페이지는 참고용<br />이케아 idea 페이지
                                             </p>
                                         </a>
                                     </li>
                                 </div>
-                                <div>
+                                <div class="slide-wrapB">
                                     <li class="slide-thumb">
                                         <a href="#">
                                             <div class="imgBox">
@@ -279,6 +285,17 @@
                                     </li>
                                 </div>
                             </ul>
+                            <div class="slideControler">
+                                <button class="slideControler--prev">
+                                    <i class="xi-angle-left"></i>
+                                </button>
+                                <div class="PrevPageButton">
+                                    <p>BACK</p>
+                                </div>
+                                <button class="slideControler--next">
+                                    <i class="xi-angle-right"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -442,39 +459,76 @@
             $(".fadeShow").each(function (i) {
                 $(this).fadeIn(700 * i)
             })
+            if (windowWidth < 1260) {
+                $(".slideControler").hide()
+            }
+        })
+        var status = 0 //0=default, 1=desc, 2=main
+        var windowWidth = $(window).width()
+        var marginFull = 0
+        var pageNumber = 0
+
+        function comeBackToMain() {
+            $(".fadeShow").show()
+            $(".content__projects--desc").hide()
+            pageNumber = 0
+            status = 2
+            $("ul.slide").stop().animate({ "margin-left": pageNumber })
+        }
+        $(".PrevPageButton").click(function () {
+            comeBackToMain()
+        })
+        $(".fadeShow").click(function () {
+            status++
+            console.log(status)
+            if (status % 2 == 1) {
+                //상세페이지 보기
+                $(".fadeShow").hide()
+                $(".content__projects--desc").show()
+                $(this).show()
+            } else {
+                //메인으로 돌아가기
+                comeBackToMain()
+            }
         })
 
-        var status
-        $(".fadeShow").click(function () {
-            if (!status) {
-                $(".fadeShow").css({ display: "none" })
-                $(".content__projects--desc").toggle()
-                $(this).css({ display: "block" })
-            } else {
-                $(".fadeShow").css({ display: "block" })
-                console.log("이전페이지로 돌아가기")
-                return (status = false)
-                // 토글이 한번밖에 안됨
+        if (windowWidth > 1260) {
+            $(".slideControler--next").click(function (event) {
+                event.stopPropagation()
+                if (pageNumber % 3 == 0) {
+                    console.log("페이지를 로드합니다")
+                    $("ul.slide li:lt(4)").clone().appendTo($(".slide-wrapT"))
+                    $("ul.slide li:lt(4)").clone().appendTo($(".slide-wrapB"))
+                }
+                var thumbWidth = $("li.slide-thumb").outerWidth(true)
+                pageNumber++
+                marginFull = thumbWidth * pageNumber
+                $("ul.slide").stop().animate({ "margin-left": -marginFull })
+            })
+            $(".slideControler--prev").click(function (event) {
+                event.stopPropagation()
+                if (pageNumber == 0) {
+                    alert("첫 번째 페이지입니다")
+                    return false
+                } else {
+                    var thumbWidth = $("li.slide-thumb").outerWidth(true)
+                    pageNumber--
+                    marginFull = thumbWidth * pageNumber
+                    $("ul.slide").stop().animate({ "margin-left": -marginFull })
+                }
+            })
+        }
+        //--------- 반응형 : window 너비 변경시 css 초기화 값---------
+        $(window).resize(function () {
+            var windowWidth = $(window).width()
+            if (windowWidth < 1260) {
+                $(".slideControler").hide()
+                $("ul.slide").css({ "margin-left": "auto" })
+                pageNumber = 0
             }
-            status = this
-            // if (!status) {
-            //     $(".fadeShow").css({ display: "none" })
-            //     $(".content__projects--desc").css({ display: "block" })
-            //     $(this).css({ display: "block" })
-            //     $(".content").addClass("desc-page")
-            //     $(".content__desc").css("display", "block")
-            //     //---desctop css----
-            //     // status = $(this)
-            //     // console.log(status)
-            // } else {
-            //     {
-            //         $(".fadeShow").css({ display: "block" })
-            //         $(".content__projects--desc").css({ display: "none" })
-            //         // status = false
-            //         // console.log(status)
-            //     }
-            //     status = $(this)
-            // }
+            if (windowWidth > 1260) {
+                $(".slideControler").show()
+            }
         })
     </script>
 </html>
