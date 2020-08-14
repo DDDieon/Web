@@ -18,6 +18,7 @@
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script src="js/slick/slick.js"></script>
         <!-- js Files -->
+        <script src="/js/product.js"></script>
     </head>
 
     <!-- 모든제품 카테고리 https://www.se.com/kr/ko/all-products/ -->
@@ -80,21 +81,7 @@
                 </div>
             </header>
             <section>
-                <!-- <div class="editorList">
-                    <ul class="editorList__asset slick-items">
-                        <li class="editorList__asset--lists"><p>인기 제품</p></li>
-                        <li class="editorList__asset--lists"><p>신제품</p></li>
-                        <li class="editorList__asset--lists"><p>특별가전 기획전</p></li>
-                        <li class="editorList__asset--lists"><p>여름 필수품</p></li>
-                        <li class="editorList__asset--lists"><p>키즈존</p></li>
-                        <li class="editorList__asset--lists"><p>공간을 아끼는 수납</p></li>
-                        <li class="editorList__asset--lists"><p>베이비 전용기획</p></li>
-                        <li class="editorList__asset--lists"><p>아름다운 조명</p></li>
-                        <li class="editorList__asset--lists"><p>실외를 꾸미자</></li>
-                    </ul>
-                </div> -->
                 <h2 class="headerTitle">모든 제품<span> | Products</span></h2>
-                <!-- <hr /> -->
                 <ul class="productList">
                     <li class="productList__items on"><a href="#">전체보기</a></li>
                     <li class="productList__items"><a href="#">가구</a></li>
@@ -378,29 +365,5 @@
             </footer>
         </div>
     </body>
-    <script>
-        let current = 0
-        $(window).scroll(function () {
-            const scrollTop = $(window).scrollTop() //스크롤의 맨 윗단
-            const WindowHeight = $(window).height() //내가 지금 보고있는 화면의 맨 밑단
-            const nowTop = scrollTop + WindowHeight //내가 지금 보고있는 화면의 스크롤높이
-            const documentHeight = $(document).height()
-
-            if (nowTop >= documentHeight - 2200) {
-                infinityClone()
-            }
-
-            function infinityClone() {
-                var copy = $(".productMainItem:lt(10)").clone()
-                copy.each(function (i) {
-                    $(this)
-                        .find(".name_of_product")
-                        .html("제품이름 " + Number(i + current + 10))
-                    console.log(current)
-                })
-                $("#productMain").append(copy)
-                current = current + 10
-            }
-        })
-    </script>
+    
 </html>

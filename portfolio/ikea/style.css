@@ -134,7 +134,7 @@ input[type="checkbox"] {
 .banner_title > h2 {
     font-size: 20px;
 }
-.banner_title > .more_button {
+.banner_title .more_button {
     display: inline-block;
     background: #ffdb00;
     position: relative;
@@ -147,12 +147,8 @@ input[type="checkbox"] {
     bottom: 0;
 }
 
-.banner_title > .more_button:active {
+.banner_title .more_button:active {
     bottom: -3px;
-}
-
-.banner_title > .more_button > a {
-    display: block;
 }
 
 /*slide + innermenu*/

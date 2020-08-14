@@ -3,7 +3,8 @@ $Blue: #0058a3;
 $WrapMobileWidth: 80%;
 $ImgMobileWidth: 100px;
 $WrapDesktopWidth: 64%;
-$ImgDesktopWidth: 250px;
+$ImgDesktopWidth: 350px;
+$ImgDesktopHeight: 250px;
 
 .content {
     width: 100%;
@@ -100,7 +101,6 @@ $ImgDesktopWidth: 250px;
             display: none;
             text-align: center;
             margin-top: 50px;
-            margin-bottom: 50px;
             overflow: hidden;
             .slideTitle {
                 margin: 0 auto;
@@ -160,7 +160,9 @@ $ImgDesktopWidth: 250px;
                 position: absolute;
                 left: 50%;
                 margin: 0 auto;
+                padding: 10px;
                 margin-left: -40%;
+                margin-bottom: 14px;
                 width: $WrapMobileWidth;
                 display: flex;
                 justify-content: center;
@@ -186,13 +188,72 @@ $ImgDesktopWidth: 250px;
                 background: #222;
                 color: $Yellow;
                 margin: 0 auto;
-                width: 120px;
+                min-width: 120px;
                 height: 40px;
                 text-align: center;
                 border-radius: 10px;
                 cursor: pointer;
             }
         }
+    }
+    &__modals {
+        display: none;
+        &--wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10000;
+            background-color: rgba(5, 5, 5, 0.842);
+        }
+        &--main {
+            $modalWidth: 600px;
+            background: #ececec;
+            box-shadow: 5px 3px 20px rgba(0, 0, 0, 0.329);
+            width: $modalWidth;
+            height: 350px;
+            border-radius: 12px;
+            color: #222;
+            h3 {
+                font-size: 16px;
+                font-weight: 900;
+            }
+            img {
+                width: 100%;
+                border-radius: 12px;
+            }
+            &__sub {
+                display: flex;
+                justify-content: space-between;
+                padding: 5px 15px;
+                div:nth-of-type(1) {
+                    flex: 1;
+                }
+                div:nth-of-type(2) {
+                    flex: 4;
+                }
+            }
+        }
+    }
+}
+
+// tablet
+@media screen and (min-width: 760px) {
+    ul.slide-wrapT,
+    ul.slide-wrapB::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .content__projects--desc .slide-thumb {
+        float: left;
+        width: 50%;
+        padding: 5px;
+        margin: 0;
     }
 }
 
@@ -253,43 +314,17 @@ $ImgDesktopWidth: 250px;
             }
         }
         .slideTitle {
-            margin-top: 250px !important;
+            margin-top: 22vh !important;
         }
         .slide {
-            // &::before {
-            //     content: "PREV";
-            //     display: block;
-            //     position: fixed;
-            //     right: 205px;
-            //     top: 140px;
-            //     width: 50px;
-            //     font-weight: bold;
-            //     line-height: 50px;
-            //     height: 50px;
-            //     border-radius: 50%;
-            //     background: rgb(34, 34, 34);
-            // }
-            // &::after {
-            //     content: "NEXT";
-            //     display: block;
-            //     position: fixed;
-            //     right: 150px;
-            //     top: 140px;
-            //     width: 50px;
-            //     font-weight: bold;
-            //     line-height: 50px;
-            //     height: 50px;
-            //     border-radius: 50%;
-            //     background: rgb(34, 34, 34);
-            // }
             position: relative;
             &-thumb {
                 width: $ImgDesktopWidth;
                 .imgBox {
-                    // width: $ImgDesktopWidth - 100px;
+                    flex: 0.7;
                 }
                 .imgBox img {
-                    max-height: $ImgDesktopWidth - 150px;
+                    max-height: $ImgDesktopHeight;
                 }
             }
         }
@@ -297,17 +332,12 @@ $ImgDesktopWidth: 250px;
             width: $WrapDesktopWidth;
             float: left;
         }
-        .content__projects--desc div {
+        .content__projects--desc .slideTitle,
+        .content__projects--desc .slideControler,
+        .slide-wrapT,
+        .slide-wrapB {
             display: flex;
             flex-direction: row;
-        }
-    }
-}
-
-@media screen and (min-width: 1960px) {
-    .content {
-        .slideTitle {
-            margin-top: 400px !important;
         }
     }
 }

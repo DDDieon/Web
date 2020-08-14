@@ -112,7 +112,6 @@
   display: none;
   text-align: center;
   margin-top: 50px;
-  margin-bottom: 50px;
   overflow: hidden;
 }
 
@@ -179,7 +178,9 @@
   position: absolute;
   left: 50%;
   margin: 0 auto;
+  padding: 10px;
   margin-left: -40%;
+  margin-bottom: 14px;
   width: 80%;
   display: flex;
   justify-content: center;
@@ -206,11 +207,76 @@
   background: #222;
   color: #ffdb00;
   margin: 0 auto;
-  width: 120px;
+  min-width: 120px;
   height: 40px;
   text-align: center;
   border-radius: 10px;
   cursor: pointer;
+}
+
+.content__modals {
+  display: none;
+}
+
+.content__modals--wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  background-color: rgba(5, 5, 5, 0.842);
+}
+
+.content__modals--main {
+  background: #ececec;
+  box-shadow: 5px 3px 20px rgba(0, 0, 0, 0.329);
+  width: 600px;
+  height: 350px;
+  border-radius: 12px;
+  color: #222;
+}
+
+.content__modals--main h3 {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.content__modals--main img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.content__modals--main__sub {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 15px;
+}
+
+.content__modals--main__sub div:nth-of-type(1) {
+  flex: 1;
+}
+
+.content__modals--main__sub div:nth-of-type(2) {
+  flex: 4;
+}
+
+@media screen and (min-width: 760px) {
+  ul.slide-wrapT,
+  ul.slide-wrapB::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .content__projects--desc .slide-thumb {
+    float: left;
+    width: 50%;
+    padding: 5px;
+    margin: 0;
+  }
 }
 
 @media screen and (min-width: 1260px) {
@@ -268,29 +334,29 @@
     padding-bottom: 180px;
   }
   .content .slideTitle {
-    margin-top: 250px !important;
+    margin-top: 22vh !important;
   }
   .content .slide {
     position: relative;
   }
   .content .slide-thumb {
-    width: 250px;
+    width: 350px;
+  }
+  .content .slide-thumb .imgBox {
+    flex: 0.7;
   }
   .content .slide-thumb .imgBox img {
-    max-height: 100px;
+    max-height: 250px;
   }
   .content .content__projects--desc {
     width: 64%;
     float: left;
   }
-  .content .content__projects--desc div {
+  .content .content__projects--desc .slideTitle,
+  .content .content__projects--desc .slideControler,
+  .content .slide-wrapT,
+  .content .slide-wrapB {
     display: flex;
     flex-direction: row;
-  }
-}
-
-@media screen and (min-width: 1960px) {
-  .content .slideTitle {
-    margin-top: 400px !important;
   }
 }
