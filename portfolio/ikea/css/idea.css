@@ -334,7 +334,7 @@
     padding-bottom: 180px;
   }
   .content .slideTitle {
-    margin-top: 22vh !important;
+    margin-top: 18vh !important;
   }
   .content .slide {
     position: relative;
@@ -346,7 +346,7 @@
     flex: 0.7;
   }
   .content .slide-thumb .imgBox img {
-    max-height: 250px;
+    max-height: 170px;
   }
   .content .content__projects--desc {
     width: 64%;

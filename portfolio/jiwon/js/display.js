@@ -4,13 +4,24 @@ $(function () {
     btn.click(function () {
         event.preventDefault ? event.preventDefault() : (event.returnValue = false)
         var i = $(this).parent().index() // li의 i번째
+        console.log(i)
         if (i == 4) {
             $(this).off
-            console.log("click")
-        } else {
-            var sectionTT = $("section").eq(i).offset().top //div들의 y좌표
+        } else if (i == 3) {
+            // contact까지 스크롤
             $("html, body").stop().animate({
-                scrollTop: sectionTT, //html, body의 y좌표는 i번째 div의 좌표가 된다
+                scrollTop: 4800,
+            })
+        } else if (i == 2) {
+            // ablity까지 스크롤
+            $("html, body").stop().animate({
+                scrollTop: 3800,
+            })
+        } else {
+            var sectionTT = $("section").eq(i).offset().top //sectioin들의 y좌표
+            console.log(sectionTT)
+            $("html, body").stop().animate({
+                scrollTop: sectionTT, //html, body의 y좌표는 i번째 sectioin의 좌표가 된다
             })
         }
     })
@@ -18,7 +29,7 @@ $(function () {
 
 // project---scroll show
 $(function () {
-    $(".project").css("display", "none")
+    $(".project").css("opacity", "1")
     $(window).scroll(function () {
         var wT = $(this).scrollTop()
         var itT = $("#introduce_top").offset().top - 50
@@ -32,7 +43,6 @@ $(function () {
                     .delay(500 * i)
                     .fadeIn(500)
             })
-            console.log("3")
         }
     })
 })

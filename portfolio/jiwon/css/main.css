@@ -472,6 +472,7 @@ nav .nav_list ul li:hover {
   font-size: 18px;
   text-align: center;
   margin-top: 220px;
+  margin-top: 0;
 }
 
 #Contact-Wrap p.minibold {

@@ -448,6 +448,7 @@ nav {
 #Ability-Wrap {
     p.minibold {
         @include minibold();
+        margin-top: 0;
     }
 }
 // Contact

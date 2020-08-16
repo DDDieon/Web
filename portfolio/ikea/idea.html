@@ -553,6 +553,14 @@
             $(".content__modals").toggle()
         })
 
+        $(document).on("click", ".slide-thumb", function () {
+            var imgSrc = $(this).find("img").attr("src")
+            console.log(imgSrc)
+            var modalImg = $(".content__modals--main").find("img")
+            console.log(modalImg)
+            modalImg.attr("src", imgSrc)
+        })
+
         $(".slide-thumb")
             .find("a")
             .on("click", function (e) {
