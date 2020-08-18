@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Welcome to Ikea / 모든 제품</title>
+        <meta
+            name="description"
+            content="IKEA 이달의 인기 제품 한눈에 보기 주문부터 배송까지, 온라인으로 쉽고 편리하게 구매하세요."
+        />
+        <link type="text/css" rel="stylesheet" href="css/reset.css" />
+        <link type="text/css" rel="stylesheet" href="css/base.css" />
+        <link type="text/css" rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+        <!-- Sass compiled CSS Lists -->
+        <link rel="stylesheet" href="/css/product-detail.css" />
+        <link rel="stylesheet" href="/js/slick/slick-theme.css" />
+        <link rel="stylesheet" href="/js/slick/slick.css" />
+        <!-- JQuery plugin -->
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="js/slick/slick.js"></script>
+        <!-- js Files -->
+        <script src="/js/product_detail.js"></script>
+    </head>
+
+    <!-- 모든제품 카테고리 https://www.se.com/kr/ko/all-products/ -->
+    <!-- 제이쿼리로 어팬드 무한스크롤 -->
+
+    <body>
+        <div id="wrap">
+            <header id="header">
+                <div id="desk_nav">
+                    <nav class="top_gnb">
+                        <ul>
+                            <li><a href="#">LOGIN</a></li>
+                            <li><a href="#">회원가입</a></li>
+                            <li><a href="#">주문배송조회</a></li>
+                            <li><a href="#">고객센터</a></li>
+                            <li>
+                                <a href="#"><i class="xi-cart"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="xi-basket"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="bottom_gnb">
+                        <ul>
+                            <li>
+                                <h1><a href="/">ikea</a></h1>
+                            </li>
+                            <li><a href="/product.html">모든 제품</a></li>
+                            <li><a href="/digitalshow.html">디지털 쇼룸</a></li>
+                            <li><a href="/idea.html">아이디어</a></li>
+                            <li><a href="/store.html">매장안내(미구현)</a></li>
+                            <li><a href="/monthly.html">이달의 혜택(미구현)</a></li>
+                            <li><a href="/sale.html">세일정보(미구현)</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="mobile_nav">
+                    <input type="checkbox" id="panel_wrap" />
+                    <div class="panel_wrap">
+                        <p class="panel_top">
+                            <label for="panel_wrap"><i class="xi-close"></i></label>
+                        </p>
+                        <div id="content_box">
+                            <ul class="list01">
+                                <li><a href="/product.html">모든 제품</a></li>
+                                <li><a href="/digitalshow.html">디지털 쇼룸</a></li>
+                                <li><a href="/idea.html">아이디어</a></li>
+                                <li><a href="/store.html">매장안내(미구현)</a></li>
+                                <li><a href="/monthly.html">이달의 혜택(미구현)</a></li>
+                                <li><a href="/sale.html">세일정보(미구현)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <nav class="top_gnb">
+                        <label for="panel_wrap"><i class="xi-bars"></i></label>
+                        <a href="/">logo</a>
+                        <a href="#"><i class="xi-profile"></i></a>
+                    </nav>
+                </div>
+            </header>
+            <div class="product-detail-wrap">
+                <div class="location-bar">
+                    <dl>
+                        <dt>
+                            <a href="/product.html"><i class="xi-subdirectory-arrow"></i>BACK</a>
+                        </dt>
+                        <dd><a href="/product.html">HOME</a></dd>
+                        <dd><a href="/product.html">가구</a></dd>
+                        <dd><a href="/product.html">식탁/책상</a></dd>
+                        <dd><a href="/product.html">커피테이블/보조테이블</a></dd>
+                        <dd><a href="/product.html">보조테이블</a></dd>
+                        <dd><a href="/product.html">LACK 라크 보조테이블</a></dd>
+                    </dl>
+                </div>
+                <div class="product-information">
+                    <div class="info-main">
+                        <div class="info-thumb">
+                            <img src="/img/product/2.png" alt="" />
+                            <img src="/img/product/prodetails01.png" alt="" />
+                            <img src="/img/product/prodetails02.png" alt="" />
+                            <img src="/img/product/prodetails03.png" alt="" />
+                        </div>
+                        <div class="buy">
+                            <div class="buy-t">
+                                <div class="buy-t__title">
+                                    <div>
+                                        <h2>LACK 라크</h2>
+                                        <p>보조테이블, 화이트55x55</p>
+                                        <div class="star-wrap">
+                                            <span class="starRating onStar">별1</span>
+                                            <span class="starRating">별2</span>
+                                            <span class="starRating">별3</span>
+                                            <span class="starRating">별4</span>
+                                            <span class="starRating">별5</span>
+                                        </div>
+                                    </div>
+                                    <div class="buy-t__title--price"><p>￦19,800</p></div>
+                                </div>
+                                <div class="buy-t__btn">
+                                    <button type="button" class="btn_buyNow">구매하기</button>
+                                    <button type="button" class="btn_likeIt">
+                                        <i class="xi-heart-o"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="buy-b__delivery">
+                                <div class="buy-b__delivery--state">
+                                    <i class="xi-truck"></i>배송가능
+                                </div>
+                                <div class="buy-b__delivery--location">
+                                    <i class="xi-shop"></i>고양에 재고 있음
+                                </div>
+                                <div class="buy-b__delivery--sub">
+                                    <i class="xi-exchange"></i>마음이 바뀌어도 괜찮아요. 365일
+                                    이내에 영수증과 온전한 상태의 제품을 가져오시면 전액
+                                    환불해드립니다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-detail">
+                        <div class="info-detail--title"><h2>LACK 라크</h2></div>
+                        <p class="info-detail--desc">
+                            1979년 처음 선보인 후로 여전히 많은 사랑을 받고 있는 제품으로, 간단하게
+                            조립할 수 있고 어디로든 쉽게 옮길 수 있습니다. <br />지속적으로 개선되어
+                            뛰어난 품질을 자랑하지만, 가격은 예전 그대로랍니다.
+                        </p>
+                        <div class="product-spec">
+                            <table>
+                                <colgroup>
+                                    <col width="100" />
+                                    <col width="200" />
+                                    <col width="100" />
+                                    <col width="200" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>길이</th>
+                                        <td>55cm</td>
+                                        <th>폭</th>
+                                        <td>55cm</td>
+                                    </tr>
+                                    <tr>
+                                        <th>높이</th>
+                                        <td>45cm</td>
+                                        <th>최대 하중</th>
+                                        <td>25kg</td>
+                                    </tr>
+                                    <tr>
+                                        <th>다리</th>
+                                        <td colspan="3">파티클보드, 섬유판, 페이퍼 포일</td>
+                                    </tr>
+                                    <tr>
+                                        <th>윗면 소재</th>
+                                        <td colspan="3">
+                                            파티클보드, 벌집구조 종이 충전재(100% 재활용), 섬유판,
+                                            페이퍼 포일, 페이퍼 포일, 플라스틱 테두리
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>관리</th>
+                                        <td colspan="3">
+                                            젖은 천으로 닦아주세요. 깨끗한 천으로 물기를 닦아주세요.
+                                            조립 고정 부위를 정기적으로 확인하고 필요한 경우 다시
+                                            단단히 고정해야 합니다.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>조립 문서</th>
+                                        <td colspan="3">
+                                            <a
+                                                href="https://www.ikea.com/kr/ko/assembly_instructions/lack-side-table-white__AA-1898143-1_pub.pdf"
+                                                class="manualHyperLink"
+                                                target="_blank"
+                                                >LACK 라크 보조테이블 조립방법</a
+                                            >
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="product-reivew">
+                            <h3>상품평</h3>
+                            <div class="review">
+                                <div class="review-sum">
+                                    <div class="star-wrap">
+                                        <span class="starRating onStar">별1</span>
+                                        <span class="starRating">별2</span>
+                                        <span class="starRating">별3</span>
+                                        <span class="starRating">별4</span>
+                                        <span class="starRating">별5</span>
+                                        <span class="review-count">(151)</span>
+                                    </div>
+                                    <div class="rating-count">4.8</div>
+                                </div>
+                                <div class="review-contents">
+                                    <div class="review-contents--innerBox">
+                                        <div class="review-contents--innerBox--title">
+                                            <div class="star-wrap">
+                                                <span class="starRating onStar">별1</span>
+                                                <span class="starRating">별2</span>
+                                                <span class="starRating">별3</span>
+                                                <span class="starRating">별4</span>
+                                                <span class="starRating">별5</span>
+                                                <p>LACK 라크 - 보조테이블, 브라운 55x55</p>
+                                            </div>
+                                            <div class="desc-wrap">
+                                                <i>20.08.18</i>
+                                            </div>
+                                        </div>
+                                        <p>최근 이케아에서 산 물건 중 최고!</p>
+                                        <p>
+                                            깔끔한 디자인에 생각했던 그대로 화사한 컬러네요. 어느
+                                            가구에 매치해도 정말 잘 어울릴 것 같습니다. 잔 때가 금방
+                                            들 것 같아서 걱정이 되지만, 저렴하게 주고 샀으니까
+                                            걱정이 별로 없네요. ^^
+                                        </p>
+                                    </div>
+                                    <div class="review-contents--innerBox">
+                                        <div class="review-contents--innerBox--title">
+                                            <div class="star-wrap">
+                                                <span class="starRating onStar">별1</span>
+                                                <span class="starRating">별2</span>
+                                                <span class="starRating">별3</span>
+                                                <span class="starRating">별4</span>
+                                                <span
+                                                    class="starRating"
+                                                    style="background-position: 50px;"
+                                                    >별5</span
+                                                >
+                                                <p>LACK 라크 - 보조테이블, 브라운 55x55</p>
+                                            </div>
+                                            <div class="desc-wrap">
+                                                <i>20.08.18</i>
+                                            </div>
+                                        </div>
+                                        <p>은근 꿀템</p>
+                                        <p>
+                                            제가 딱 필요했던 사이즈예요.. 신랑이 너무 맘에 들어
+                                            합니다
+                                        </p>
+                                    </div>
+                                    <div class="review-contents--innerBox">
+                                        <div class="review-contents--innerBox--title">
+                                            <div class="star-wrap">
+                                                <span class="starRating onStar">별1</span>
+                                                <span class="starRating">별2</span>
+                                                <span
+                                                    class="starRating"
+                                                    style="background-position: 20px;"
+                                                    >별3</span
+                                                >
+                                                <span
+                                                    class="starRating"
+                                                    style="background-position: 20px;"
+                                                    >별4</span
+                                                >
+                                                <span class="starRating">별5</span>
+                                                <p>LACK 라크 - 보조테이블, 브라운 55x55</p>
+                                            </div>
+                                            <div class="desc-wrap">
+                                                <i>20.08.18</i>
+                                            </div>
+                                        </div>
+                                        <p>브라운컬러를 고민끝에 골랐는데 약간 아쉽네요</p>
+                                        <p>
+                                            생각보다 너무 색깔이 짙어서 어두운 느낌이 드네요~
+                                            아쉽지만 함께 배송했던 다른 제품들이 마음에 들어서
+                                            교환없이 그냥 쓰려고 합니다~
+                                        </p>
+                                    </div>
+                                    <div class="review-contents--innerBox">
+                                        <div class="review-contents--innerBox--title">
+                                            <div class="star-wrap">
+                                                <span class="starRating onStar">별1</span>
+                                                <span class="starRating">별2</span>
+                                                <span class="starRating">별3</span>
+                                                <span class="starRating">별4</span>
+                                                <span class="starRating">별5</span>
+                                                <p>LACK 라크 - 보조테이블, 브라운 55x55</p>
+                                            </div>
+                                            <div class="desc-wrap">
+                                                <i>20.08.18</i>
+                                            </div>
+                                        </div>
+                                        <p>최근 이케아에서 산 물건 중 최고!</p>
+                                        <p>
+                                            깔끔한 디자인에 생각했던 그대로 화사한 컬러네요. 어느
+                                            가구에 매치해도 정말 잘 어울릴 것 같습니다. 잔 때가 금방
+                                            들 것 같아서 걱정이 되지만, 저렴하게 주고 샀으니까
+                                            걱정이 별로 없네요. ^^
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="view-more"><i class="xi-angle-down"></i> 더 보기</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer id="footer" class="ft">
+                <div class="f-top">
+                    <div class="inner-list">
+                        <ul>
+                            <li>
+                                <a href="#f-sub-1">고객문의<i class="xi-angle-down"></i></a>
+                                <ol id="f-sub-1">
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> 고객지원</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> 자주 묻는 질문</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> 문의하기</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> 배송조회</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> 교환환불</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> 제품리콜</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> 제품 구매 안내</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> 피드백</a>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="#f-sub-2">쇼핑하기<i class="xi-angle-down"></i></a>
+                                <ol id="f-sub-2">
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> 쇼핑하기</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> 전화 주문</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> IKEA FAMILY</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> IKEA for Business</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> IKEA 모바일 웹</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> 온라인 플래닝</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> IKEA 카탈로그</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> 결제 옵션</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> 제품 재고 확인</a>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="#f-sub-3">IKEA 서비스<i class="xi-angle-down"></i></a>
+                                <ol id="f-sub-3">
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> IKEA 서비스</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> 배송 서비스</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> 조립 서비스</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            ><i class="xi-play"></i> 홈퍼니싱 컨설팅 서비스</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> 주방 플래닝 서비스</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> 전화 플래닝 서비스</a>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="#f-sub-4">IKEA 이야기<i class="xi-angle-down"></i></a>
+                                <ol id="f-sub-4">
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> 기업 소개</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> 데모크래틱 디자인</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> 지속가능한 생활</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> 뉴스</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="xi-play"></i> 제품 정보</a>
+                                    </li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="inner-icons">
+                        <div class="ft-icons-left">
+                            <a href="#"><i class="xi-facebook"></i></a>
+                            <a href="#"><i class="xi-instagram"></i></a>
+                            <a href="#"><i class="xi-youtube-play"></i></a>
+                        </div>
+                        <div class="ft-icons-right">
+                            <a href="#">국가변경</a>
+                            <select>
+                                <option value="#">한국어</option>
+                                <option value="#">English</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="f-bottom">
+                    <p>
+                        <span>IKEA 코리아</span> 주소 : (우) 14352 경기도 광명시 일직로 17
+                        IKEA광명점<br />
+                        사업자 등록번호 : 106-86-82871
+                        <a
+                            href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1068682871"
+                            target="_blank"
+                        >
+                            사업자정보확인 </a
+                        ><br />
+                        대표자 : 프레드리크 요한손 <br />
+                        통신판매업 신고 : 2018-경기광명-0209 <br />
+                        TEL : 1670-4532
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

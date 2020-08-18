@@ -12,19 +12,10 @@
         <link type="text/css" rel="stylesheet" href="css/base.css" />
         <link type="text/css" rel="stylesheet" href="style.css" />
         <!-- slick 슬라이더 css -->
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="http://kenwheeler.github.io/slick/slick/slick.css"
-        />
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="http://kenwheeler.github.io/slick/slick/slick-theme.css"
-        />
-        <!-- slick 슬라이더 css -->
+        <link rel="stylesheet" type="text/css" href="/js/slick/slick.css" />
+        <link rel="stylesheet" type="text/css" href="/js/slick/slick-theme.css" />
+        <!-- xeicon  -->
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
-        <!-- 필요: 파비콘링크, 스크롤바스타일, 커서스타일 -->
         <!-- blue: #0058a3 / Yellow: #ffdb00-->
 
         <!-- 제이쿼리관련 -->
@@ -57,14 +48,14 @@
                     <nav class="bottom_gnb">
                         <ul>
                             <li>
-                                <a href="#">ikea</a>
+                                <h1><a href="/">ikea</a></h1>
                             </li>
                             <li><a href="/product.html">모든 제품</a></li>
                             <li><a href="/digitalshow.html">디지털 쇼룸</a></li>
                             <li><a href="/idea.html">아이디어</a></li>
-                            <li><a href="/store.html">매장안내</a></li>
-                            <li><a href="/monthly.html">이달의 혜택</a></li>
-                            <li><a href="/sale.html">세일정보</a></li>
+                            <li><a href="/store.html">매장안내(미구현)</a></li>
+                            <li><a href="/monthly.html">이달의 혜택(미구현)</a></li>
+                            <li><a href="/sale.html">세일정보(미구현)</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -79,15 +70,15 @@
                                 <li><a href="/product.html">모든 제품</a></li>
                                 <li><a href="/digitalshow.html">디지털 쇼룸</a></li>
                                 <li><a href="/idea.html">아이디어</a></li>
-                                <li><a href="/store.html">매장안내</a></li>
-                                <li><a href="/monthly.html">이달의 혜택</a></li>
-                                <li><a href="/sale.html">세일정보</a></li>
+                                <li><a href="/store.html">매장안내(미구현)</a></li>
+                                <li><a href="/monthly.html">이달의 혜택(미구현)</a></li>
+                                <li><a href="/sale.html">세일정보(미구현)</a></li>
                             </ul>
                         </div>
                     </div>
                     <nav class="top_gnb">
                         <label for="panel_wrap"><i class="xi-bars"></i></label>
-                        <a href="#">logo</a>
+                        <a href="/">logo</a>
                         <a href="#"><i class="xi-profile"></i></a>
                     </nav>
                 </div>
@@ -126,12 +117,14 @@
                 <div class="banner banner_1">
                     <div class="banner_title">
                         <h2>이달의 인기 제품</h2>
-                        <a href="/product.html" class="more_button"><i class="xi-angle-right-min"></i>more</a>
+                        <a href="/product.html" class="more_button"
+                            ><i class="xi-angle-right-min"></i>more</a
+                        >
                     </div>
                     <div class="recomend_list">
                         <ul>
                             <li>
-                                <a href="#" class="thumnail">
+                                <a href="/product_detail.html" class="thumnail">
                                     <img
                                         src="/img/monthly/monthly1.png"
                                         alt="strongly recommend item no.1"
@@ -142,7 +135,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="thumnail"
+                                <a href="/product_detail.html" class="thumnail"
                                     ><img
                                         src="/img/monthly/monthly2.png"
                                         alt="strongly recommend item no.2"
@@ -155,7 +148,7 @@
                         </ul>
                         <ul>
                             <li>
-                                <a href="#" class="thumnail"
+                                <a href="/product_detail.html" class="thumnail"
                                     ><img
                                         src="/img/monthly/monthly3.png"
                                         alt="strongly recommend item no.3"
@@ -166,7 +159,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="thumnail"
+                                <a href="/product_detail.html" class="thumnail"
                                     ><img
                                         src="/img/monthly/monthly4.png"
                                         alt="strongly recommend item no.4"
@@ -182,7 +175,9 @@
                 <div class="banner banner_2">
                     <div class="banner_title">
                         <h2>Ikea 뉴스</h2>
-                        <a href="/product.html" class="more_button"><i class="xi-angle-right-min"></i>more</a>
+                        <a href="/product.html" class="more_button"
+                            ><i class="xi-angle-right-min"></i>more</a
+                        >
                     </div>
                     <div id="news_modul" class="news_modul">
                         <p>
