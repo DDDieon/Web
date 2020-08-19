@@ -287,6 +287,7 @@ div.news_modul a {
 
 .news_box01:hover {
     filter: brightness(40%);
+    cursor: pointer;
 }
 
 /*news*/

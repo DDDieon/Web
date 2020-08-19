@@ -328,7 +328,7 @@ nav {
         // project images url here-------
         &:nth-of-type(1) {
             .project-img {
-                background: url("/asset/project1_resize.png");
+                background: url("/asset/project1_resize.png") no-repeat;
             }
         }
     }

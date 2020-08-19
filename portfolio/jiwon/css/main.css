@@ -17,7 +17,6 @@
     top: -4px;
   }
 }
-
 /*CSS 변경*/
 body {
   width: 100%;
@@ -29,7 +28,6 @@ body {
   background-size: cover;
   font-family: "Noto Sans KR", sans-serif;
 }
-
 body p {
   font-family: "Noto Sans KR", sans-serif;
   cursor: default;
@@ -43,21 +41,17 @@ nav {
   position: relative;
   margin-top: 175px;
 }
-
 nav::after {
   content: "";
   display: block;
   clear: both;
 }
-
 nav .logobox {
   display: inline-block;
 }
-
 nav .nav_list {
   display: inline-block;
 }
-
 nav .logobox h1 a {
   position: relative;
   font-family: "Russo One", sans-serif;
@@ -68,21 +62,17 @@ nav .logobox h1 a {
   /* identical to box height */
   color: #000000;
 }
-
 nav .logobox h1 a:hover {
   animation: upDownHover 1s ease-in infinite;
 }
-
 nav .nav_list ul {
   margin-left: 346px;
   background: transparent;
   overflow: hidden;
 }
-
 nav .nav_list ul li {
   float: left;
 }
-
 nav .nav_list ul li button {
   position: relative;
   font-family: "Noto Sans KR", sans-serif;
@@ -93,17 +83,14 @@ nav .nav_list ul li button {
   text-align: center;
   cursor: pointer;
 }
-
 nav .nav_list ul li button:hover {
   animation: upDownHover 1s ease-in infinite;
 }
-
 nav .nav_list ul li .xi-ellipsis-h:before {
-  content: "\e94a";
+  content: "";
   font-size: 30px;
   line-height: 0.7;
 }
-
 nav .nav_list ul li:hover {
   color: #ffa4b1;
 }
@@ -117,7 +104,6 @@ nav .nav_list ul li:hover {
   color: #000;
   opacity: 0.7;
 }
-
 #quick-menu i {
   position: relative;
   cursor: pointer;
@@ -127,7 +113,6 @@ nav .nav_list ul li:hover {
   margin: 4px;
   border-radius: 50%;
 }
-
 #quick-menu i:hover {
   animation: upDownHover 1s ease-in infinite;
 }
@@ -135,7 +120,6 @@ nav .nav_list ul li:hover {
 #introduce_top {
   margin-bottom: 180px;
 }
-
 #introduce_top p.minibold {
   font-family: Russo One !important;
   font-size: 18px;
@@ -143,7 +127,6 @@ nav .nav_list ul li:hover {
   margin-top: 220px;
   text-decoration: underline;
 }
-
 #introduce_top p.caption_l {
   font-family: "Raleway", sans-serif !important;
   text-align: center;
@@ -151,11 +134,9 @@ nav .nav_list ul li:hover {
   font-size: 40px;
   margin-bottom: 8px;
 }
-
 #introduce_top b {
   font-weight: bold;
 }
-
 #introduce_top .myself {
   font-family: "Noto Sans KR", sans-serif !important;
   font-weight: 300;
@@ -163,11 +144,9 @@ nav .nav_list ul li:hover {
   font-style: 12px;
   margin-bottom: 36px;
 }
-
 #introduce_top .myself strong {
   font-weight: 700;
 }
-
 #introduce_top .gols_img {
   position: relative;
   margin: auto;
@@ -176,20 +155,17 @@ nav .nav_list ul li:hover {
   background: transparent;
   margin-bottom: 17px;
 }
-
 #introduce_top .gols_img__inner-wrapper {
   position: absolute;
   width: 100%;
   height: 100%;
 }
-
 #introduce_top .gols_img__inner-wrapper div:nth-child(1) {
   position: absolute;
   background: url("/asset/icons/icons_1.png");
   width: 33%;
   height: 100%;
 }
-
 #introduce_top .gols_img__inner-wrapper div:nth-child(2) {
   position: absolute;
   left: 33.3%;
@@ -197,7 +173,6 @@ nav .nav_list ul li:hover {
   width: 33%;
   height: 100%;
 }
-
 #introduce_top .gols_img__inner-wrapper div:nth-child(3) {
   position: absolute;
   left: 66.6%;
@@ -205,7 +180,6 @@ nav .nav_list ul li:hover {
   width: 33%;
   height: 100%;
 }
-
 #introduce_top .gols_img .img-license {
   box-sizing: border-box;
   border: 1px solid #000;
@@ -216,19 +190,16 @@ nav .nav_list ul li:hover {
   margin-left: calc(-255.88px / 2);
   font-size: 8px;
 }
-
 #introduce_top .gols_words {
   position: relative;
   width: 820px;
   margin: 0 auto;
   text-align: center;
 }
-
 #introduce_top .gols_words .gols_words_in {
   width: 33%;
   display: inline-block;
 }
-
 #introduce_top .gols_words .gols_words_in p:nth-of-type(1) {
   font-family: Russo One !important;
   font-size: 18px;
@@ -236,7 +207,6 @@ nav .nav_list ul li:hover {
   margin-top: 220px;
   margin: 0px;
 }
-
 #introduce_top .gols_words .gols_words_in p:nth-of-type(2) {
   font-family: "Noto Sans KR", sans-serif !important;
   font-weight: 300;
@@ -245,12 +215,10 @@ nav .nav_list ul li:hover {
   margin: 0px;
   padding: 4px;
 }
-
 #introduce_top .gols_words .gols_words_in p button.galleryOpen {
   font-weight: bold;
   position: relative;
 }
-
 #introduce_top .gols_words .gols_words_in p button.galleryOpen::after {
   content: "";
   position: absolute;
@@ -266,14 +234,12 @@ nav .nav_list ul li:hover {
   width: 100%;
   margin-bottom: 130px;
 }
-
 #introduce_bottom .resume {
   position: relative;
   background: #000;
   transition: 1s ease-out;
   opacity: 0;
 }
-
 #introduce_bottom .resume .Y-line {
   position: absolute;
   width: 1px;
@@ -281,11 +247,9 @@ nav .nav_list ul li:hover {
   background: #fff;
   left: 50%;
 }
-
 #introduce_bottom .resume .upline {
   top: 0;
 }
-
 #introduce_bottom .resume ul {
   width: 820px;
   text-align: center;
@@ -295,7 +259,6 @@ nav .nav_list ul li:hover {
   background-position: center;
   position: relative;
 }
-
 #introduce_bottom .resume ul .resume-sub {
   color: #fff;
   flex: 1;
@@ -305,11 +268,9 @@ nav .nav_list ul li:hover {
   margin-top: 220px;
   margin-top: 0px;
 }
-
 #introduce_bottom .resume ul .resume-sub ol {
   padding: 20px;
 }
-
 #introduce_bottom .resume ul .resume-sub ol li {
   color: #929292;
   font-family: "Noto Sans KR", sans-serif;
@@ -330,11 +291,9 @@ nav .nav_list ul li:hover {
   padding-top: 110px;
   margin-bottom: 30px;
 }
-
 #Project-Wrap div.project:nth-of-type(1) .project-img {
-  background: url("/asset/project1_resize.png");
+  background: url("/asset/project1_resize.png") no-repeat;
 }
-
 #Project-Wrap .project {
   width: 820px;
   margin: 0 auto;
@@ -342,47 +301,39 @@ nav .nav_list ul li:hover {
   box-shadow: 13px 32px 36px -14px rgba(179, 179, 179, 0.3);
   transition: 1s ease-out;
 }
-
 #Project-Wrap .project p.koreanTitle {
   font-size: 14px;
   font-weight: 400;
 }
-
 #Project-Wrap .project h2.EnglishTitle {
   font-family: Russo One;
   font-size: 42px;
   margin-bottom: 46px;
 }
-
 #Project-Wrap .project .project-assets {
   display: table;
   margin: 0 auto;
   margin-bottom: 30px;
   width: 820px;
 }
-
 #Project-Wrap .project .project-assets .project-title {
   width: 320px;
   display: table-cell;
 }
-
 #Project-Wrap .project .project-assets .project-title .tips {
   overflow: hidden;
   margin-bottom: 10px;
 }
-
 #Project-Wrap .project .project-assets .project-title .tips span {
   float: left;
   font-weight: 900;
 }
-
 #Project-Wrap .project .project-assets .project-title .tips p {
   float: left;
   margin-left: 30px;
   font-weight: 300;
   text-align: right;
 }
-
 #Project-Wrap .project .project-assets .project-title .tips i {
   display: inline-block;
   width: 18px;
@@ -390,19 +341,15 @@ nav .nav_list ul li:hover {
   border-radius: 3px;
   border: 2px solid #000;
 }
-
 #Project-Wrap .project .project-assets .project-title .tips i:first-of-type {
   margin-left: 30px;
 }
-
 #Project-Wrap .project .project-assets .project-title .tips i:nth-of-type(1) {
   background: #1b50a0;
 }
-
 #Project-Wrap .project .project-assets .project-title .tips i:nth-of-type(2) {
   background: #ffdb00;
 }
-
 #Project-Wrap .project .project-assets .project-title .articleBtns a {
   font-family: Russo One !important;
   font-size: 18px;
@@ -416,11 +363,9 @@ nav .nav_list ul li:hover {
   cursor: pointer;
   box-shadow: 0 2px 8px -1px rgba(21, 25, 36, 0.32);
 }
-
 #Project-Wrap .project .project-assets .project-title .articleBtns a:hover {
   top: 3px;
 }
-
 #Project-Wrap .project .project-assets .project-img {
   display: table-cell;
   vertical-align: middle;
@@ -428,7 +373,6 @@ nav .nav_list ul li:hover {
   width: 500px;
   margin-left: 13px;
 }
-
 #Project-Wrap .project-desc {
   width: 820px;
   background: #fff;
@@ -438,48 +382,39 @@ nav .nav_list ul li:hover {
   color: #2c2929;
   text-align: justify;
 }
-
 #Project-Wrap .project-desc table {
   width: 100%;
 }
-
 #Project-Wrap .project-desc table thead {
   background: #e8e8eb;
   color: #2c2929;
 }
-
 #Project-Wrap .project-desc table thead tr th {
   padding: 20px 0;
   text-align: center;
 }
-
 #Project-Wrap .project-desc table tbody tr {
   border-bottom: 1px solid #bebebe;
   border-left: none;
   border-right: none;
 }
-
 #Project-Wrap .project-desc table tbody tr:last-child {
   border-bottom: 1px solid transparent;
 }
-
 #Project-Wrap .project-desc table tbody tr td:nth-child(1) {
   text-align: center;
 }
-
 #Project-Wrap .project-desc table tbody tr td:nth-child(1) span {
   font-size: 8px;
   padding: 2px;
   border-radius: 2px;
   background: #f5f5f5;
 }
-
 #Project-Wrap .project-desc table tbody tr td:nth-child(3) {
   color: #ffa4b1;
   text-decoration: underline;
   font-size: 10px;
 }
-
 #Project-Wrap .project-desc table tbody tr td {
   padding: 8px 0;
 }
@@ -498,7 +433,6 @@ nav .nav_list ul li:hover {
   text-align: center;
   margin-top: 220px;
 }
-
 #Contact-Wrap #profile {
   position: relative;
   width: 100%;
@@ -510,11 +444,9 @@ nav .nav_list ul li:hover {
   justify-content: center;
   background: transparent;
 }
-
 #Contact-Wrap #profile .profile-img:hover ~ .profile-words {
   opacity: 0;
 }
-
 #Contact-Wrap #profile .profile-words {
   position: absolute;
   top: 55px;
@@ -531,11 +463,9 @@ nav .nav_list ul li:hover {
   transition: 0.2s;
   backdrop-filter: blur(4px);
 }
-
 #Contact-Wrap #profile .profile-words p:nth-of-type(1) {
   font-weight: 500;
 }
-
 #Contact-Wrap #profile .profile-words p:nth-of-type(2) {
   font-family: Russo One !important;
   font-size: 18px;
@@ -544,11 +474,9 @@ nav .nav_list ul li:hover {
   margin: 0;
   text-align: justify;
 }
-
 #Contact-Wrap #profile .profile-words p:nth-of-type(3) {
   margin-top: 12px;
 }
-
 #Contact-Wrap #profile .profile-words p:nth-of-type(4) {
   margin-top: 12px;
   font-weight: 500;
@@ -567,7 +495,6 @@ footer {
   color: #000;
   overflow: hidden;
 }
-
 footer .footer-assets-left {
   float: left;
   display: -webkit-flex;
@@ -577,16 +504,13 @@ footer .footer-assets-left {
   align-items: center;
   cursor: default;
 }
-
 footer .footer-assets-left .footer-content {
   margin-left: 16px;
   text-align: left;
 }
-
 footer .footer-assets-left .footer-content b {
   font-weight: bold;
 }
-
 footer .footer-assets-right {
   float: right;
   display: -webkit-flex;
@@ -595,7 +519,6 @@ footer .footer-assets-right {
   margin-top: 22px;
   margin-right: 50px;
 }
-
 footer .footer-assets-right .contect-me {
   display: block;
   height: 60%;
@@ -606,11 +529,9 @@ footer .footer-assets-right .contect-me {
   cursor: pointer;
   font-weight: 700;
 }
-
 footer .footer-assets-right .footer-close {
   cursor: pointer;
 }
-
 footer .footer-assets-right .footer-close i {
   font-size: 28px;
 }

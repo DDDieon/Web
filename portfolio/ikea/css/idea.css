@@ -1,28 +1,24 @@
 .content {
   width: 100%;
   height: 100%;
-  background: #eee;
+  background: #efefef;
 }
-
 .content__projects {
   width: 100%;
   height: 100%;
   position: relative;
   color: #fff;
 }
-
 .content__projects--menu {
   width: 100%;
   height: 100%;
 }
-
 .content__projects--menu div.fadeShow {
   position: relative;
   height: 33vh;
   width: 100%;
   transition: 0.5s;
 }
-
 .content__projects--menu div.fadeShow .content__project--icon {
   border-radius: 50%;
   border: 2px solid #fff;
@@ -34,53 +30,43 @@
   opacity: 0.8;
   transition: 0.8s;
 }
-
 .content__projects--menu div.fadeShow .content__project--icon .xi-touch {
   font-size: 50px;
   padding: 20px;
 }
-
 .content__projects--menu div.fadeShow.ikea_idea {
   background: url("/img/idea/gate-visual1.jpg") center;
   background-repeat: no-repeat;
   background-size: 100% auto;
   display: none;
 }
-
 .content__projects--menu div.fadeShow.ikea_idea:hover {
   background-size: 130% auto;
 }
-
 .content__projects--menu div.fadeShow.our_home {
   background: url("/img/idea/gate-visual2.jpg") center;
   background-repeat: no-repeat;
   background-size: 100% auto;
   display: none;
 }
-
 .content__projects--menu div.fadeShow.our_home:hover {
   background-size: 130% auto;
 }
-
 .content__projects--menu div.fadeShow.social_ikea {
   background: url("/img/idea/gate-visual3.jpg") center;
   background-repeat: no-repeat;
   background-size: 100% auto;
   display: none;
 }
-
 .content__projects--menu div.fadeShow.social_ikea:hover {
   background-size: 130% auto;
 }
-
 .content__projects--menu div.fadeShow:hover {
   filter: brightness(0.8);
 }
-
 .content__projects--menu div.fadeShow:hover .content__project--icon {
   transform: rotate(-20deg);
 }
-
 .content__projects--menu div.fadeShow .content__projects--word {
   position: absolute;
   opacity: 0.9;
@@ -93,20 +79,17 @@
   color: #0058a3;
   background: #fff;
 }
-
 .content__projects--menu div.fadeShow .content__projects--word p:first-child {
   display: inline;
   padding: 0 12px;
   background: #0058a3;
   color: #fff;
 }
-
 .content__projects--menu div.fadeShow .content__projects--word h2 {
   text-decoration: underline;
   font-size: 22px;
   font-weight: 900;
 }
-
 .content__projects--desc {
   position: relative;
   display: none;
@@ -114,7 +97,6 @@
   margin-top: 50px;
   overflow: hidden;
 }
-
 .content__projects--desc .slideTitle {
   margin: 0 auto;
   margin-bottom: 10px;
@@ -126,12 +108,10 @@
   color: #ffdb00;
   background: #ffdb00;
 }
-
 .content__projects--desc .slideTitle span {
   background: #0058a3;
   padding: 0 20px;
 }
-
 .content__projects--desc .slide {
   width: 80%;
   display: flex;
@@ -140,40 +120,49 @@
   flex-wrap: wrap;
   margin: 0 auto;
 }
-
 .content__projects--desc .slide-thumb {
   margin: 5px;
   padding: 5px;
-  border: 1px solid #ddd;
+  border: 1px solid #e9e9e9;
   background: #fff;
   color: #000;
 }
-
 .content__projects--desc .slide-thumb__desc {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
   margin: 0 auto;
 }
-
+.content__projects--desc .slide-thumb__desc span {
+  padding: 2px 4px;
+  margin: 2px;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+.content__projects--desc .slide-thumb__desc span:nth-of-type(1) {
+  background: #ffdb00;
+}
+.content__projects--desc .slide-thumb__desc span:nth-of-type(2) {
+  background: #ff3b3b;
+  color: #fff;
+}
 .content__projects--desc .slide-thumb a {
   display: flex;
 }
-
 .content__projects--desc .slide-thumb a p {
   cursor: pointer;
 }
-
 .content__projects--desc .slide-thumb .imgBox {
   margin: 0;
   overflow: hidden;
   width: 100px;
 }
-
 .content__projects--desc .slide-thumb .imgBox img {
   max-height: 100px;
 }
-
 .content__projects--desc .slideControler {
   position: absolute;
   left: 50%;
@@ -187,9 +176,9 @@
   align-items: center;
   font-weight: bold;
 }
-
 .content__projects--desc .slideControler button {
-  background: #eee;
+  background: #eeeeee;
+  box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.349);
   color: #666;
   margin: 0 120px;
   border-radius: 50%;
@@ -199,7 +188,6 @@
   cursor: pointer;
   outline: none;
 }
-
 .content__projects--desc .PrevPageButton {
   display: flex;
   justify-content: center;
@@ -213,11 +201,9 @@
   border-radius: 10px;
   cursor: pointer;
 }
-
 .content__modals {
   display: none;
 }
-
 .content__modals--wrap {
   display: flex;
   justify-content: center;
@@ -230,7 +216,6 @@
   z-index: 10000;
   background-color: rgba(5, 5, 5, 0.842);
 }
-
 .content__modals--main {
   background: #ececec;
   box-shadow: 5px 3px 20px rgba(0, 0, 0, 0.329);
@@ -239,38 +224,34 @@
   border-radius: 12px;
   color: #222;
 }
-
 .content__modals--main h3 {
   font-size: 16px;
   font-weight: 900;
 }
-
 .content__modals--main img {
   width: 100%;
   border-radius: 12px;
 }
-
 .content__modals--main__sub {
   display: flex;
   justify-content: space-between;
   padding: 5px 15px;
 }
-
 .content__modals--main__sub div:nth-of-type(1) {
   flex: 1;
 }
-
 .content__modals--main__sub div:nth-of-type(2) {
   flex: 4;
 }
 
 @media screen and (min-width: 760px) {
   ul.slide-wrapT,
-  ul.slide-wrapB::after {
+ul.slide-wrapB::after {
     content: "";
     display: block;
     clear: both;
   }
+
   .content__projects--desc .slide-thumb {
     float: left;
     width: 50%;
@@ -278,7 +259,6 @@
     margin: 0;
   }
 }
-
 @media screen and (min-width: 1260px) {
   .content {
     width: 100%;
@@ -353,9 +333,9 @@
     float: left;
   }
   .content .content__projects--desc .slideTitle,
-  .content .content__projects--desc .slideControler,
-  .content .slide-wrapT,
-  .content .slide-wrapB {
+.content .content__projects--desc .slideControler,
+.content .slide-wrapT,
+.content .slide-wrapB {
     display: flex;
     flex-direction: row;
   }
