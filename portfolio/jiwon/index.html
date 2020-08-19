@@ -1,455 +1,535 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jiwon / 전지원의 웹 퍼블리싱 포트폴리오</title>
-    <title>Welcome to Ikea</title>
-    <meta name="description" content="전지원의 포트폴리오 사이트입니다">
-    <!-- plugin link -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-    <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css" />
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-    <script src="js/slick/slick.js"></script>
-    <script src="js/html5shiv/src/html5shiv.js"></script>
-    <!-- <script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jiwon / 전지원의 웹 퍼블리싱 포트폴리오</title>
+        <meta name="description" content="전지원의 포트폴리오 사이트입니다" />
+        <!-- plugin link -->
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="http://kenwheeler.github.io/slick/slick/slick.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="http://kenwheeler.github.io/slick/slick/slick-theme.css"
+        />
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+        <script src="js/slick/slick.js"></script>
+        <script src="js/html5shiv/src/html5shiv.js"></script>
+        <!-- <script>
         function hideDiv() {
             document.getElementById("bording").style.display = "none";
         }
         self.setTimeout("hideDiv()", 2000); // 초 지정
     </script> -->
 
-    <!-- secteion에 header태그로 변경하기 -->
-    <!--challenge 3: jquery 실습3 참고해서 리모콘 만들기-->
-    <!-- 코드펜으로 프로젝트 코드설명 -->
-    <!-- 스킬에 성장트리 -->
+        <!-- secteion에 header태그로 변경하기 -->
+        <!--challenge 3: jquery 실습3 참고해서 리모콘 만들기-->
+        <!-- 코드펜으로 프로젝트 코드설명 -->
+        <!-- 스킬에 성장트리 -->
 
-    <!-- web Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Raleway:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Russo+One&display=swap" rel="stylesheet" type="text/css">
-    <!-- Based CSS -->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/base.css">
-    <!-- SCSS compiled -->
-    <link rel="stylesheet" href="css/bording.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/gallery.css">
-    <!-- jsFiles -->
-    <script type="text/javascript" src="js/gallery.js" defer></script>
-    <script type="text/javascript" src="js/display.js" defer></script>
-    <script type="text/javascript" src="js/mouse-event.js"></script>
-    <script type="text/javascript" src="js/quick-menu.js" defer></script>
-</head>
+        <!-- web Font -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Raleway:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Russo+One&display=swap"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <!-- Based CSS -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <!-- SCSS compiled -->
+        <link rel="stylesheet" href="css/bording.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/gallery.css" />
+        <!-- jsFiles -->
+        <script type="text/javascript" src="js/gallery.js" defer></script>
+        <script type="text/javascript" src="js/display.js" defer></script>
+        <script type="text/javascript" src="js/mouse-event.js"></script>
+        <script type="text/javascript" src="js/quick-menu.js" defer></script>
+    </head>
 
-
-
-<body>
-    <!-- <div id="bording" class="container">
+    <body>
+        <!-- <div id="bording" class="container">
         <div id="bording" class="container">
             <div class="title-container">
                 <h1>JEON JIWON</h1>
             </div>
         </div>
     </div>    -->
-    <div id="gallery-body">
-        <div id="gallery-wrap">
-            <div class="gallery_header">
-                <p><i class="xi-bookmark"></i></p>
-                <p><strong>Gallery</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 공부해온 과정들과 디자인 포트폴리오 까지</p>
-                <button class="gallery__close" onclick="closeGallery()"><i class="xi-close-circle-o"></i></button>
-            </div>
-            <div class="carousel_wrap">
-                <div id="dragdiv" class="carousel_stage">
-                    <ul>
-                        <li id="c_item" class="carousel_item_1">
-                            <div class="c-imgs"><img src="/img/gallery01.jpg" alt=""></div>
-                            <div class="c_words">
-                                <h5>깃허브<span>Git hub</span></h5>
-                                <p class="c_words_sub1">2020년 07월 29일부터 꾸~준하게 커밋중!</p>
-                                <p class="c_words_sub2">꾸준함을 이기는 힘은 없다고 생각합니다.<br>1일 1커밋을 목표로 지금까지 달려오고 있습니다.
-                                </p>
-                                <p class="c_words_sub3">
-                                    <a href="https://culture.basicagency.com/" target="_blank" rel="noreferrer noopener"><br>Visit the Site</a>
-                                </p>
-                            </div>
-                        </li>
-                        <li id="c_item" class="carousel_item_2">
-                            <div class="c-imgs"><img src="/img/gallery02.jpg" alt=""></div>
-                            <div class="c_words">
-                                <h5>비캔버스<span>BeeCanvas</span></h5>
-                                <p class="c_words_sub1">지금까지 어떻게 공부를 해왔을까요?</p>
-                                <p class="c_words_sub2">귀신같이 정리하고 메모하는 하는 타입. 지식의 재사용성을 위해 배워온 것들은 모두 차곡차곡 쌓아왔습니다.
-                                </p>
-                                <p class="c_words_sub3">
-                                    <a href="https://beecanvas.com/s/7aEbbrJ3be6fLzSMKJ21QmjHkrEONNHRQ8ze5dMO25TvJ1orEyjSYJxy-ZzwFuDn" target="_blank" rel="noreferrer noopener"><br>Visit the Site</a>
-                                </p>
-                            </div>
-                        </li>
-                        <li id="c_item " class="carousel_item_3 ">
-                            <div class="c-imgs"><img src="/img/gallery03.jpg" alt=""></div>
-                            <div class="c_words">
-                                <h5>이미지 아트워크들<span>©2018</span></h5>
-                                <p class="c_words_sub1">Agency Culture &amp; Onboarding</p>
-                                <p class="c_words_sub2">To help strengthen our culture and attract world class talent, we created the Culture Manual – an online guide for new hires that differentiates the employee onboarding process and builds alignment for our collective future.
-                                </p>
-                                <p class="c_words_sub3">
-                                    <a href="#" target="_blank" rel="noreferrer noopener"><br>Visit the Site</a>
-                                </p>
-                            </div>
-                        </li>
-                        <li id="c_item" class="carousel_item_4 ">
-                            <div class="c-imgs"><img src="/img/gallery04.jpg" alt=""></div>
-                            <div class="c_words">
-                                
-                                <h5>영상제작물<span>Motion graphic</span></h5>
-                                <p class="c_words_sub1">애프터이펙트, 프리미어프로 중급자 수준</p>
-                                <p class="c_words_sub2">2D애니메이션이나 인포영상 등을 제작했던 경험이 있습니다. 컷편집은 물론 간단한 모션그래픽이 가능하고, 플러그인을 세팅하고 사용할 수 있습니다.
-                                <p class="c_words_sub3">
-                                    <a href="#" target="_blank" rel="noreferrer noopener"><br>Visit the Site</a>
-                                </p>
-                            </div>
-                        </li>
-                        <li id="c_item " class="carousel_item_5 ">
-                            <div class="c-imgs"><img src="/img/gallery05.jpg" alt=""></div>
-                            <div class="c_words">
-                                <h5>Culture Manual®<span>©2018</span></h5>
-                                <p class="c_words_sub1">Agency Culture &amp; Onboarding</p>
-                                <p class="c_words_sub2">To help strengthen our culture and attract world class talent, we created the Culture Manual – an online guide for new hires that differentiates the employee onboarding process and builds alignment for our collective future.
-                                </p>
-                                <p class="c_words_sub3">
-                                    <a href="#" target="_blank" rel="noreferrer noopener"><br>Visit the Site</a>
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
+        <div id="gallery-body">
+            <div id="gallery-wrap">
+                <div class="gallery_header">
+                    <p><i class="xi-bookmark"></i></p>
+                    <p>
+                        <strong>Gallery</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 공부해온
+                        과정들과 디자인 포트폴리오 까지
+                    </p>
+                    <button class="gallery__close" onclick="closeGallery()">
+                        <i class="xi-close-circle-o"></i>
+                    </button>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <nav>
-        <div class="logobox">
-            <h1><a href="#">PORTFOLIO</a></h1>
-        </div>
-        <div class="nav_list">
-            <ul>
-                <li><button href="#">Introduce</button></li>
-                <li><button href="#">Project</button></li>
-                <li><button href="#">Ability</button></li>
-                <li><button href="#">Contact</button></li>
-                <li><button class="openGallery" onclick="openGallery()"><i class="xi-ellipsis-h"></i></button></li>
-            </ul>
-        </div>
-    </nav>
-    <div id="quick-menu">
-        <i class="xi-angle-up"></i>
-        <i class="xi-angle-down"></i>
-        
-    </div>
-    <section id="Introduce-Wrap">
-        <div id="introduce">
-            <div id="introduce_top">
-                <p class="minibold">ABOUT</p>
-                <p class="caption_l">JiWon's <b>3</b> goals</p>
-                <p class="myself"><br>한국직업전문학교 스마트 UI/UX 퍼블리싱 과정 수료 (출석80%↑ / 최종수료:20.09.04)<br>신입 퍼블리셔를 지망하는 <strong>전지원</strong>입니다! 👐
-                </p>
-                <div class="gols_img">
-                    <div class="gols_img__inner-wrapper">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="img-license"><strong>저작자</strong>:<a href="https://kr.365psd.com/day/5-167-icons-for-web-freebie/" title="Icons For Web (Freebie)" target="_blank">Icons For Web (Freebie)</a> from <a href="https://kr.365psd.com/" target="_blank">kr.365psd.com</a></div>
-                </div>
-                <div class="gols_words">
-                    <div class="gols_words_in">
-                        <p>Markup</p>
-                        <p>웹표준을 바탕으로<br>시맨틱 마크업을 지향하며<br>SCSS 등 전처리기를 활용합니다.</p>
-                    </div>
-                    <div class="gols_words_in">
-                        <p>Skills</p>
-                        <p>HTML, CSS, JAVAScript 등<br>꾸준하게 공부하며 성장하고 있습니다.<br><button class="galleryOpen" onclick="openGallery()">Gallery</button>를 통해 확인할 수 있습니다.</p>
-                    </div>
-                    <div class="gols_words_in">
-                        <p>Good Design</p>
-                        <p>Adobe사 프로그램을 이용한<br>이미지제작 및 영상편집,<br>Figma 등 UI제작 툴까지 다룹니다</p>
-                    </div>
-                </div>
-            </div>
-            <div id="introduce_bottom">
-                
-                <div id="Introduce_bottom_detail">
-                    <div class="resume">
+                <div class="carousel_wrap">
+                    <div id="dragdiv" class="carousel_stage">
                         <ul>
-                            <li class="resume-sub">Carrer
-                                <ol>
-                                    <li> 경기대학교 수원캠퍼스 졸업 | 2020.02 | 문예창작학과</li>
-                                    <li> 유튜브 영상편집 | 2019.04 ~ 2019.09 | 이스타아카데미 | 휴학 후 학업상의 이유로 중단</li>
-                                    <li> 비디오 콘텐츠 에디터 | 2019.06 ~ 2019.09 | (주) 메이비원 | 휴학 후 학업상의 이유로 중단</li>
-                                </ol>
+                            <li id="c_item" class="carousel_item_1">
+                                <div class="c-imgs"><img src="/img/gallery01.jpg" alt="" /></div>
+                                <div class="c_words">
+                                    <h5>깃허브<span>Git hub</span></h5>
+                                    <p class="c_words_sub1">
+                                        2020년 07월 29일부터 꾸~준하게 커밋중!
+                                    </p>
+                                    <p class="c_words_sub2">
+                                        꾸준함을 이기는 힘은 없다고 생각합니다.<br />1일 1커밋을
+                                        목표로 지금까지 달려오고 있습니다.
+                                    </p>
+                                    <p class="c_words_sub3">
+                                        <a
+                                            href="https://culture.basicagency.com/"
+                                            target="_blank"
+                                            rel="noreferrer noopener"
+                                            ><br />Visit the Site</a
+                                        >
+                                    </p>
+                                </div>
                             </li>
-                            <li class="resume-sub">License
-                                <ol>
-                                    <li>GTQ 2급</li>
-                                    <li>컴퓨터 활용능력 2급</li>
-                                    <li>컴퓨터 그래픽스 운용기능사 필기 합격(실기 준비중)</li>
-                                    <li>JLPT N2급</li>
-                                </ol>
+                            <li id="c_item" class="carousel_item_2">
+                                <div class="c-imgs"><img src="/img/gallery02.jpg" alt="" /></div>
+                                <div class="c_words">
+                                    <h5>비캔버스<span>BeeCanvas</span></h5>
+                                    <p class="c_words_sub1">지금까지 어떻게 공부를 해왔을까요?</p>
+                                    <p class="c_words_sub2">
+                                        귀신같이 정리하고 메모하는 하는 타입. 지식의 재사용성을 위해
+                                        배워온 것들은 모두 차곡차곡 쌓아왔습니다.
+                                    </p>
+                                    <p class="c_words_sub3">
+                                        <a
+                                            href="https://beecanvas.com/s/7aEbbrJ3be6fLzSMKJ21QmjHkrEONNHRQ8ze5dMO25TvJ1orEyjSYJxy-ZzwFuDn"
+                                            target="_blank"
+                                            rel="noreferrer noopener"
+                                            ><br />Visit the Site</a
+                                        >
+                                    </p>
+                                </div>
                             </li>
-                            <li class="resume-sub">Award
-                                <ol>
-                                    <li>2012년 스크린도어 시 공모 (충무로, 불광역 개제)</li>
-                                    <li>제 2회 한주소금 마케팅 공모전 UCC부문 장려상 (3위)</li>
-                                    <li>경기대학교 Dream 공모전 UCC부문 최우수상 (1위)</li>
-                                </ol>
+                            <li id="c_item " class="carousel_item_3">
+                                <div class="c-imgs"><img src="/img/gallery03.jpg" alt="" /></div>
+                                <div class="c_words">
+                                    <h5>이미지 아트워크들<span>©2018</span></h5>
+                                    <p class="c_words_sub1">Agency Culture &amp; Onboarding</p>
+                                    <p class="c_words_sub2">
+                                        To help strengthen our culture and attract world class
+                                        talent, we created the Culture Manual – an online guide for
+                                        new hires that differentiates the employee onboarding
+                                        process and builds alignment for our collective future.
+                                    </p>
+                                    <p class="c_words_sub3">
+                                        <a href="#" target="_blank" rel="noreferrer noopener"
+                                            ><br />Visit the Site</a
+                                        >
+                                    </p>
+                                </div>
+                            </li>
+                            <li id="c_item" class="carousel_item_4">
+                                <div class="c-imgs"><img src="/img/gallery04.jpg" alt="" /></div>
+                                <div class="c_words">
+                                    <h5>영상제작물<span>Motion graphic</span></h5>
+                                    <p class="c_words_sub1">
+                                        애프터이펙트, 프리미어프로 중급자 수준
+                                    </p>
+                                    <p class="c_words_sub2">
+                                        2D애니메이션이나 인포영상 등을 제작했던 경험이 있습니다.
+                                        컷편집은 물론 간단한 모션그래픽이 가능하고, 플러그인을
+                                        세팅하고 사용할 수 있습니다.
+                                    </p>
+                                    <p class="c_words_sub3">
+                                        <a href="#" target="_blank" rel="noreferrer noopener"
+                                            ><br />Visit the Site</a
+                                        >
+                                    </p>
+                                </div>
+                            </li>
+                            <li id="c_item " class="carousel_item_5">
+                                <div class="c-imgs"><img src="/img/gallery05.jpg" alt="" /></div>
+                                <div class="c_words">
+                                    <h5>Culture Manual®<span>©2018</span></h5>
+                                    <p class="c_words_sub1">Agency Culture &amp; Onboarding</p>
+                                    <p class="c_words_sub2">
+                                        To help strengthen our culture and attract world class
+                                        talent, we created the Culture Manual – an online guide for
+                                        new hires that differentiates the employee onboarding
+                                        process and builds alignment for our collective future.
+                                    </p>
+                                    <p class="c_words_sub3">
+                                        <a href="#" target="_blank" rel="noreferrer noopener"
+                                            ><br />Visit the Site</a
+                                        >
+                                    </p>
+                                </div>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-    </section>
-    <section id="Project-Wrap">
-        <p class="minibold">Project</p>
-        <div class="project project-1">
-            <section class="project-assets">
-                <div class="project-title">
-                    <p class="koreanTitle">사이트 리뉴얼 - IKEA</p>
-                    <h2 class="EnglishTitle">IKEA Renewal</h2>
-                    <div class="tips">
-                        <span>특징</span>
-                        <p>글로벌 메뉴바 항목별로 알맞는 페이지 제작</p>
+        </div>
+
+        <nav>
+            <div class="logobox">
+                <h1><a href="#">PORTFOLIO</a></h1>
+            </div>
+            <div class="nav_list">
+                <ul>
+                    <li><button href="#">Introduce</button></li>
+                    <li><button href="#">Project</button></li>
+                    <li><button href="#">Ability</button></li>
+                    <li><button href="#">Contact</button></li>
+                    <li>
+                        <button class="openGallery" onclick="openGallery()">
+                            <i class="xi-ellipsis-h"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="quick-menu">
+            <i class="xi-angle-up"></i>
+            <i class="xi-angle-down"></i>
+        </div>
+        <section id="Introduce-Wrap">
+            <div id="introduce">
+                <div id="introduce_top">
+                    <p class="minibold">ABOUT</p>
+                    <p class="caption_l">JiWon's <b>3</b> goals</p>
+                    <p class="myself">
+                        <br />한국직업전문학교 스마트 UI/UX 퍼블리싱 과정 수료 (출석80%↑ /
+                        최종수료:20.09.04)<br />신입 퍼블리셔를 지망하는
+                        <strong>전지원</strong>입니다! 👐
+                    </p>
+                    <div class="gols_img">
+                        <div class="gols_img__inner-wrapper">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="img-license">
+                            <strong>저작자</strong>:<a
+                                href="https://kr.365psd.com/day/5-167-icons-for-web-freebie/"
+                                title="Icons For Web (Freebie)"
+                                target="_blank"
+                                >Icons For Web (Freebie)</a
+                            >
+                            from <a href="https://kr.365psd.com/" target="_blank">kr.365psd.com</a>
+                        </div>
                     </div>
-                    <div class="tips">
-                        <span>뷰포트 및 브라우저지원</span>
-                        <p>반응형 웹 / only chrome</p>
-                    </div>
-                    <div class="tips">
-                        <span>Color</span>
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                    </div>
-                    <div class="tips">
-                        <span>W3C 검사기</span>
-                        <p> Nu Html Checker 통과</p>
-                    </div>
-                    <div class="articleBtns">
-                        <a class="demoLink" href="http://ddieon.dothome.co.kr" target="_blank">Preview</a>
-                        <a>GitHub</a>
+                    <div class="gols_words">
+                        <div class="gols_words_in">
+                            <p>Markup</p>
+                            <p>
+                                웹표준을 바탕으로<br />시맨틱 마크업을 지향하며<br />SCSS 등
+                                전처리기를 활용합니다.
+                            </p>
+                        </div>
+                        <div class="gols_words_in">
+                            <p>Skills</p>
+                            <p>
+                                HTML, CSS, JAVAScript 등<br />꾸준하게 공부하며 성장하고
+                                있습니다.<br /><button class="galleryOpen" onclick="openGallery()">
+                                    Gallery</button
+                                >를 통해 확인할 수 있습니다.
+                            </p>
+                        </div>
+                        <div class="gols_words_in">
+                            <p>Good Design</p>
+                            <p>
+                                Adobe사 프로그램을 이용한<br />이미지제작 및 영상편집,<br />Figma 등
+                                UI제작 툴까지 다룹니다
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="project-img"></div>
-            </section>
-            <article class="project-desc">
-                <table class="project-desc-table">
-                    <thead>
-                        <tr>
-                            <th>Index</th>
-                            <th>Skills</th>
-                            <th>Link or Source</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><span>index.html</spa></td>
-                            <td>바닐라자바스크립트로 구현한 모달창</td>
-                            <td><a href="http://ddieon.dothome.co.kr/" target="_black">http://ddieon.dothome.co.kr/</a></td>
-                        </tr>
-                        <tr>
-                            <td><span>product_detail.html</spa></td>
-                            <td>hover시 발생되는 가상요소에 애니메이션 넣기</td>
-                            <td><a href="http://ddieon.dothome.co.kr/product_detail.html">http://ddieon.dothome.co.kr/product_detail.html</a></td>
-                        </tr>
-                        <tr>
-                            <td><span>digitalshow.html</spa></td>
-                            <td>slick.js을 응용한 커스텀 슬라이더(프로그레스바 등 css)</td>
-                            <td><a href="http://ddieon.dothome.co.kr/digitalshow.html">http://ddieon.dothome.co.kr/digitalshow.html</a></td>
-                        </tr>
-                        <tr>
-                            <td><span>idea.html</spa></td>
-                            <td>토글기능을 넣은 div박스와 자체제작 슬라이더</td>
-                            <td><a href="http://ddieon.dothome.co.kr/idea.html">http://ddieon.dothome.co.kr/idea.html</a></td>
-                        </tr>
-                    </tbod>
-                </table>
-                <!-- 구현: 바닐라자바스크립트로 구현한 모달창, hover와 active에 CSS를 넣어 디테일을 살린 UI, 미디어쿼리를 통해 화면너비를 계산해 반응하도록 한 Global Navigation과 아코디언 탭, slick슬라이더 CSS를 커스터마이징한 리디자인 슬라이더, -->
-            </article>
-        </div>
-        <div class="project project-2">
-            <section class="project-assets">
-                <div class="project-title">
-                    <p class="koreanTitle">JS 토이프로젝트 - 랜덤팀매칭</p>
-                    <h2 class="EnglishTitle">Red or Blue</h2>
-                    <div class="tips">
-                        <span>특징</span>
-                        <p>바닐라자바스크립트로 알고리즘 구현</p>
+                <div id="introduce_bottom">
+                    <div id="Introduce_bottom_detail">
+                        <div class="resume">
+                            <ul>
+                                <li class="resume-sub">
+                                    Carrer
+                                    <ol>
+                                        <li>경기대학교 수원캠퍼스 졸업 | 2020.02 | 문예창작학과</li>
+                                        <li>
+                                            영상 콘텐츠 에디터 | 2019.05 ~ 2019.08 | (주) 메이비원 |
+                                            (단기계약직)
+                                        </li>
+                                        <li>
+                                            스마트 UI/UX 퍼블리싱 국비과정 수료 | 2020.04.28 ~
+                                            2020.09.04 | 한국직업전문학교
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li class="resume-sub">
+                                    License
+                                    <ol>
+                                        <li>GTQ 2급</li>
+                                        <li>컴퓨터 활용능력 2급</li>
+                                        <li>컴퓨터 그래픽스 운용기능사 필기 합격(실기 준비중)</li>
+                                        <li>JLPT N2급</li>
+                                    </ol>
+                                </li>
+                                <li class="resume-sub">
+                                    Award
+                                    <ol>
+                                        <li>2012년 스크린도어 시 공모 (충무로, 불광역 개제)</li>
+                                        <li>제 2회 한주소금 마케팅 공모전 UCC부문 장려상 (3위)</li>
+                                        <li>경기대학교 Dream 공모전 UCC부문 최우수상 (1위)</li>
+                                    </ol>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="tips">
-                        <span>뷰포트</span>
-                        <p>desktop</p>
-                    </div>
-                    <div class="tips">
-                        <span>브라우저 호환</span>
-                        <p>chrome</p>
-                    </div>
-                    <div class="articleBtns">
-                        <a class="demoLink">Preview</a>
-                        <a>GitHub</a>
-                    </div>
-                </div>
-                <div class="project-img">imgs</div>
-            </section>
-            <article class="project-desc">
-                <table class="project-desc-table">
-                    <thead>
-                        <tr>
-                            <th>Index</th>
-                            <th>Skills</th>
-                            <th>Link or Source</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><span>single page</spa></td>
-                            <td>입력 폼에서 value값을 받아와 화면에서 출력, 삭제</td>
-                            <td><a href="https://codepen.io/dddieon/pen/dyMXjxK">CODEPEN</a></td>
-                        </tr>
-                        <tr>
-                            <td><span>single page</span></td>
-                            <td>keydown 이벤트로 단축키 구현</td>
-                            <td><a href="https://codepen.io/dddieon/pen/dyMXjxK">CODEPEN</a></td>
-                        </tr>
-                        <tr>
-                            <td><span>single page</span></td>
-                            <td>for문으로 중복입력값에 대한 경고문 발생</td>
-                            <td><a href="https://codepen.io/dddieon/pen/dyMXjxK">CODEPEN</a></td>
-                        </tr>
-                        <tr>
-                            <td><span>single page</span></td>
-                            <td>push메소드에 난수를 적용하여 랜덤으로 배열 추가하기</td>
-                            <td><a href="https://codepen.io/dddieon/pen/dyMXjxK">CODEPEN</a></td>
-                        </tr>
-                    </tbod>
-                </table>
-        </div>
-        <div class="project project-3">
-            <section class="project-assets">
-                <div class="project-title">
-                    <p class="koreanTitle">사이트 리뉴얼 - IKEA</p>
-                    <h2 class="EnglishTitle">IKEA Renewal</h2>
-                    <div class="tips">
-                        <span>특징</span>
-                        <p>글로벌 메뉴바 항목별로 알맞는 페이지 제작</p>
-                    </div>
-                    <div class="tips">
-                        <span>뷰포트</span>
-                        <p>반응형 웹</p>
-                    </div>
-                    <div class="tips">
-                        <span>Color</span>
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                    </div>
-                    <div class="tips">
-                        <span>브라우저 호환</span>
-                        <p>chrome, ie +10</p>
-                    </div>
-                    <div class="articleBtns">
-                        <a class="demoLink" href="http://ddieon.dothome.co.kr" target="_blank">Preview</a>
-                        <a>GitHub</a>
-                    </div>
-                </div>
-                <div class="project-img">imgs</div>
-            </section>
-            <article class="project-desc">
-                <table class="project-desc-table">
-                    <thead>
-                        <tr>
-                            <th>Index</th>
-                            <th>Skills</th>
-                            <th>Link or Source</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>index.html</td>
-                            <td>바닐라자바스크립트로 구현한 모달창</td>
-                            <td>https://ddioen.dothcome.co.kr</td>
-                        </tr>
-                        <tr>
-                            <td>index.html</td>
-                            <td>hover와 active에 CSS를 넣어 디테일을 살린 UI</td>
-                            <td>https://ddioen.dothcome.co.kr</td>
-                        </tr>
-                        <tr>
-                            <td>product.html</td>
-                            <td>어떤거 또 말함</td>
-                            <td>https://ddioen.dothcome.co.kr</td>
-                        </tr>
-                    </tbod>
-                </table>
-                <!-- 구현: 바닐라자바스크립트로 구현한 모달창, hover와 active에 CSS를 넣어 디테일을 살린 UI, 미디어쿼리를 통해 화면너비를 계산해 반응하도록 한 Global Navigation과 아코디언 탭, slick슬라이더 CSS를 커스터마이징한 리디자인 슬라이더, -->
-            </article>
-        </div>
-    </section>
-    <section id="Ability-Wrap">
-        <div id="Ability">
-            <p class="minibold">Ability</p>
-            <h3>능력에 대해서</h3>
-        </div>
-    </section>
-    <section id="Contact-Wrap">
-        <div id="Contact">
-            <p class="minibold">Contact</p>
-            <div id="profile">
-                <div class="profile-words">
-                    <p>전지원 : 全智元</p>
-                    <p>JEON JIWON</p>
-                    <p>내 자기소개는 여기서부터 시작합니다.<br> 아무말이나 멋있게<br> 그냥 지어내면 될 것 같은데! 어떤가요?<br> 언제든지 두들겨주세요.</p>
-                    <p>E-mail : hocldy@naver.com</p>
                 </div>
             </div>
-            <div id="disqus_thread" style="width:820px;margin:auto;padding-bottom:200px"></div>
-            <script>
-                /**
-                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-                /*
+        </section>
+        <section id="Project-Wrap">
+            <p class="minibold">Project</p>
+            <div class="project project-1">
+                <section class="project-assets">
+                    <div class="project-title">
+                        <p class="koreanTitle">사이트 리뉴얼 - IKEA</p>
+                        <h2 class="EnglishTitle">IKEA Renewal</h2>
+                        <div class="tips">
+                            <span>특징</span>
+                            <p>반응형 웹</p>
+                        </div>
+                        <div class="tips">
+                            <span>브라우저</span>
+                            <p>edge+, chrome</p>
+                        </div>
+                        <div class="tips">
+                            <span>Color</span>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+                        <div class="tips">
+                            <span>W3C 검사기</span>
+                            <p>Nu Html Checker 통과</p>
+                        </div>
+                        <div class="articleBtns">
+                            <a class="demoLink" href="http://ddieon.dothome.co.kr" target="_blank"
+                                >Preview</a
+                            >
+                            <a>GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-img"></div>
+                </section>
+                <article class="project-desc">
+                    <table class="project-desc-table">
+                        <thead>
+                            <tr>
+                                <th>Index</th>
+                                <th>Skills</th>
+                                <th>Link or Source</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span>index.html</span></td>
+                                <td>바닐라자바스크립트로 구현한 모달창</td>
+                                <td>
+                                    <a href="http://ddieon.dothome.co.kr/" target="_black"
+                                        >http://ddieon.dothome.co.kr/</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>product_detail.html</span></td>
+                                <td>hover시 발생되는 가상요소에 애니메이션 넣기</td>
+                                <td>
+                                    <a href="http://ddieon.dothome.co.kr/product_detail.html"
+                                        >http://ddieon.dothome.co.kr/product_detail.html</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>digitalshow.html</span></td>
+                                <td>slick.js을 응용, 프로그레스바 CSS를 리디자인한 슬라이더</td>
+                                <td>
+                                    <a href="http://ddieon.dothome.co.kr/digitalshow.html"
+                                        >http://ddieon.dothome.co.kr/digitalshow.html</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>idea.html</span></td>
+                                <td>토글기능을 넣은 div박스와 자체제작 슬라이더</td>
+                                <td>
+                                    <a href="http://ddieon.dothome.co.kr/idea.html"
+                                        >http://ddieon.dothome.co.kr/idea.html</a
+                                    >
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+            </div>
+            <div class="project project-2">
+                <section class="project-assets">
+                    <div class="project-title">
+                        <p class="koreanTitle">JS 토이프로젝트 - 랜덤팀매칭</p>
+                        <h2 class="EnglishTitle">Red or Blue</h2>
+                        <div class="tips">
+                            <span>특징</span>
+                            <p>바닐라자바스크립트로 알고리즘 구현</p>
+                        </div>
+                        <div class="tips">
+                            <span>와이어프레임</span>
+                            <p>FIGMA 사용</p>
+                        </div>
+                        <div class="tips">
+                            <span>Color</span>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+                        <div class="tips">
+                            <span>브라우저 호환</span>
+                            <p>edge+, chrome</p>
+                        </div>
+                        <div class="articleBtns">
+                            <a class="demoLink">Preview</a>
+                            <a>GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-img">imgs</div>
+                </section>
+                <article class="project-desc">
+                    <table class="project-desc-table">
+                        <thead>
+                            <tr>
+                                <th>Index</th>
+                                <th>Skills</th>
+                                <th>Link or Source</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span>single page</span></td>
+                                <td>입력 폼에서 value값을 저장하고 화면에서 출력, 삭제</td>
+                                <td rowspan="4" class="codepen">
+                                    <a href="https://codepen.io/dddieon/pen/dyMXjxK" target="_blank"
+                                        >CODEPEN</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>single page</span></td>
+                                <td>keydown 이벤트로 단축키(enter, F12) 구현</td>
+                            </tr>
+                            <tr>
+                                <td><span>single page</span></td>
+                                <td>for문과 includes 메소드로 중복입력값에 대한 경고문 발생</td>
+                            </tr>
+                            <tr>
+                                <td><span>single page</span></td>
+                                <td>push 메소드에 난수를 적용하여 랜덤으로 배열 추가하기</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+            </div>
+        </section>
+        <section id="Ability-Wrap">
+            <div id="Ability">
+                <p class="minibold">Ability</p>
+                <div class="ability-container">
+                    <ul>
+                        <li class="html">HTML</li>
+                        <!-- 80% 웹표준 준수를 위해 w3c validator 검사기 사용-->
+                        <li class="css">CSS</li>
+                        <!-- 70% float, flex, gird, table의 기본 디스플레이 속성 이해 -->
+                        <li class="js">JavaScript</li>
+                        <!-- 50% 콜백, 비동기, 객체지향 등 개념에 대한 이해 -->
+                        <li class="jquery">Jquery</li>
+                        <!-- 65% 필요한 플러그인을 검색하고 학습할 수 있음-->
+                        <li class="react">React</li>
+                        <!-- 20% 리액트 컴포넌트에서 이벤트 핸들러 사용 가능 -->
+                    </ul>
+                    <ul>
+                        <li class="adobe-photoshop">Photoshop</li>
+                        <!--  -->
+                        <li class="adobe-ilustrator">Ilustrator</li>
+                        <li class="adobe-premeier">Premeier</li>
+                        <li class="adobe-aftereffect">aftereffect</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="Contact-Wrap">
+            <div id="Contact">
+                <p class="minibold">Contact</p>
+                <div id="profile">
+                    <div class="profile-words">
+                        <p>전지원 : 全智元</p>
+                        <p>JEON JIWON</p>
+                        <p>
+                            내 자기소개는 여기서부터 시작합니다.<br />
+                            아무말이나 멋있게<br />
+                            그냥 지어내면 될 것 같은데! 어떤가요?<br />
+                            언제든지 두들겨주세요.
+                        </p>
+                        <p>E-mail : hocldy@naver.com</p>
+                    </div>
+                </div>
+                <div
+                    id="disqus_thread"
+                    style="width: 820px; margin: auto; padding-bottom: 200px;"
+                ></div>
+                <script>
+                    /**
+                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                    /*
                 var disqus_config = function () {
                 this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
                 this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                 };
                 */
-                (function() { // DON'T EDIT BELOW THIS LINE
-                    var d = document,
-                        s = d.createElement('script');
-                    s.src = 'https://portfolio-yeve4do5ec.disqus.com/embed.js';
-                    s.setAttribute('data-timestamp', +new Date());
-                    (d.head || d.body).appendChild(s);
-                })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-        </div>
-    </section>
-    <footer id="footer">
-        <div class="footer-assets-left">
-            <div class="footer-icon"><i class="xi-tag"></i></div>
-            <div class="footer-content">
-                <p>I’m really looking forward to meeting you in person</p>
-                <b>관심이 생기셨나요?</b>
-                <p>언제든지 편하게 이메일로 연락주세요! 기다리고 있습니다 ✨</p>
+                    ;(function () {
+                        // DON'T EDIT BELOW THIS LINE
+                        var d = document,
+                            s = d.createElement("script")
+                        s.src = "https://portfolio-yeve4do5ec.disqus.com/embed.js"
+                        s.setAttribute("data-timestamp", +new Date())
+                        ;(d.head || d.body).appendChild(s)
+                    })()
+                </script>
+                <noscript
+                    >Please enable JavaScript to view the
+                    <a href="https://disqus.com/?ref_noscript"
+                        >comments powered by Disqus.</a
+                    ></noscript
+                >
             </div>
-        </div>
-        <div class="footer-assets-right">
-            <button type="button" class="contect-me">CONTACT</button>
-            <button type="button" class="footer-close" id="footerClose"><i class="xi-close-circle-o"></i></button>
-        </div>
-    </footer>
-</body>
-
+        </section>
+        <footer id="footer">
+            <div class="footer-assets-left">
+                <div class="footer-icon"><i class="xi-tag"></i></div>
+                <div class="footer-content">
+                    <p>I’m really looking forward to meeting you in person</p>
+                    <b>관심이 생기셨나요?</b>
+                    <p>언제든지 편하게 이메일로 연락주세요! 기다리고 있습니다 ✨</p>
+                </div>
+            </div>
+            <div class="footer-assets-right">
+                <button type="button" class="contect-me">CONTACT</button>
+                <button type="button" class="footer-close" id="footerClose">
+                    <i class="xi-close-circle-o"></i>
+                </button>
+            </div>
+        </footer>
+    </body>
 </html>

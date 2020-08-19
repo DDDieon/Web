@@ -451,12 +451,17 @@ nav {
                     }
                 }
                 tr td:nth-child(3) {
-                    color: $red;
+                    color: #1b50a0;
                     text-decoration: underline;
                     font-size: 10px;
                 }
                 tr td {
                     padding: 8px 0;
+                }
+                td.codepen {
+                    text-align: center;
+                    border-left: 1px solid #bebebe;
+                    border-bottom: 1px solid transparent;
                 }
             }
         }
