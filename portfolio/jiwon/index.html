@@ -313,8 +313,8 @@
                             <i></i>
                         </div>
                         <div class="tips">
-                            <span>W3C 검사기</span>
-                            <p>Nu Html Checker 통과</p>
+                            <span>웹표준</span>
+                            <p>[W3C] Nu Html Checker 통과</p>
                         </div>
                         <div class="articleBtns">
                             <a class="demoLink" href="http://ddieon.dothome.co.kr" target="_blank"
@@ -395,7 +395,7 @@
                             <i class="project2-color"></i>
                         </div>
                         <div class="tips">
-                            <span>브라우저 호환</span>
+                            <span>브라우저</span>
                             <p>edge+, chrome</p>
                         </div>
                         <div class="articleBtns">
@@ -446,17 +446,87 @@
                 <h2 class="minibold">Ability</h2>
                 <div class="ability-container">
                     <ul>
-                        <li class="html">HTML</li>
+                        <li class="html ability-spec">
+                            <svg class="ability-spec__graph">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="ability-spec__number">
+                                <p class="ability-spec__number--count">90<span>%</span></p>
+                            </div>
+                            <h3 class="ability-spec--header">HTML</h3>
+                        </li>
                         <!-- 80% 웹표준 준수를 위해 w3c validator 검사기 사용-->
-                        <li class="css">CSS</li>
+                        <li class="CSS ability-spec">
+                            <svg class="ability-spec__graph">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="ability-spec__number">
+                                <p class="ability-spec__number--count">70<span>%</span></p>
+                            </div>
+                            <h3 class="ability-spec__number--header">CSS</h3>
+                        </li>
                         <!-- 70% float, flex, gird, table의 기본 디스플레이 속성 이해有 -->
-                        <li class="js">JavaScript</li>
+                        <li class="JavaScript ability-spec">
+                            <svg class="ability-spec__graph">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="ability-spec__number">
+                                <p class="ability-spec__number--count">50<span>%</span></p>
+                            </div>
+                            <h3 class="ability-spec__number--header">JavaScript</h3>
+                        </li>
                         <!-- 50% 콜백, 비동기, 객체지향 등 개념에 대한 이해有 -->
-                        <li class="jquery">Jquery</li>
+                        <li class="JQuery ability-spec">
+                            <svg class="ability-spec__graph">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="ability-spec__number">
+                                <p class="ability-spec__number--count">65<span>%</span></p>
+                            </div>
+                            <h3 class="ability-spec__number--header">JQuery</h3>
+                        </li>
                         <!-- 65% 필요한 플러그인을 검색하고 학습할 수 있음-->
-                        <li class="react">React</li>
+                        <li class="React ability-spec">
+                            <svg class="ability-spec__graph">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="ability-spec__number">
+                                <p class="ability-spec__number--count">20<span>%</span></p>
+                            </div>
+                            <h3 class="ability-spec__number--header">React</h3>
+                        </li>
                         <!-- 20% 리액트 컴포넌트에서 이벤트 핸들러 사용 가능 -->
                     </ul>
+                    <script>
+                        $.fn.strokePercent = function(percent){
+                            $(this).stop().animate({
+                                "stroke-dashoffset": 440 - (440 * percent) / 100,
+                            },1000)
+                        }
+                        $(function () {
+                            // $(".ability-spec")
+                            //     .eq(0)
+                            //     .click(function () {
+                            //         alert("ff")
+                            //     })
+                            $(".ability-spec")
+                                .eq(0)
+                                .find("svg circle")
+                                .eq(1)
+                                .stop()
+                                .animate(
+                                    {
+                                        "stroke-dashoffset": 440 - (440 * 90) / 100,
+                                    },
+                                    1000
+                                )
+                        })
+                    </script>
                     <ul>
                         <li class="adobe-photoshop">Photoshop</li>
                         <!-- 70% 앨범아트 제작경험 -->

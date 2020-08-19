@@ -1,5 +1,6 @@
 $red: #ffa4b1;
 $gray: rgb(44, 41, 41);
+$wrapWidth: 820px;
 
 /*SCSS 변수값 저장*/
 
@@ -238,7 +239,7 @@ nav {
                     }
                 }
                 &:hover {
-                    animation: wiggleRotate 3s infinite ease-in;
+                    animation: wiggleRotate 2s infinite ease-in;
                 }
             }
         }
@@ -444,6 +445,7 @@ nav {
                     }
                 }
                 .articleBtns {
+                    margin-top: 16px;
                     a {
                         font-family: Russo One !important;
                         font-size: 18px;
@@ -531,6 +533,87 @@ nav {
     .minibold {
         @include minibold();
         margin-top: 0;
+    }
+    .ability-container {
+        width: $wrapWidth;
+        margin: 0 auto;
+        ul {
+            width: 100%;
+            display: flex;
+            .ability-spec {
+                width: 270px;
+                height: 270px;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                justify-content: center;
+                align-items: center;
+                &:nth-child(1) {
+                    > svg circle {
+                        &:nth-child(2) {
+                            // stroke-dashoffset: calc(440 - (440 * 90) / 100);
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    > svg circle {
+                        &:nth-child(2) {
+                            stroke-dashoffset: calc(440 - (440 * 70) / 100);
+                        }
+                    }
+                }
+                &:nth-child(3) {
+                    > svg circle {
+                        &:nth-child(2) {
+                            stroke-dashoffset: calc(440 - (440 * 50) / 100);
+                        }
+                    }
+                }
+                &:nth-child(4) {
+                    > svg circle {
+                        &:nth-child(2) {
+                            stroke-dashoffset: calc(440 - (440 * 65) / 100);
+                        }
+                    }
+                }
+                &:nth-child(5) {
+                    > svg circle {
+                        &:nth-child(2) {
+                            stroke-dashoffset: calc(440 - (440 * 20) / 100);
+                        }
+                    }
+                }
+                &__graph {
+                    position: absolute;
+                    width: 150px;
+                    height: 150px;
+                    z-index: 1000;
+                    circle {
+                        width: 100%;
+                        height: 100%;
+                        fill: none;
+                        stroke: #f3f3f3;
+                        stroke-width: 10;
+                        stroke-linecap: round;
+                        transform: translate(5px, 5px);
+                        // &:nth-child(1) {
+                        // }
+                        &:nth-child(2) {
+                            stroke: $red;
+                            stroke-dasharray: 440;
+                            stroke-dashoffset: 440;
+                            transition: 1s;
+                        }
+                    }
+                }
+                &__number {
+                    &--count {
+                        font-size: 22px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
     }
 }
 // Contact
