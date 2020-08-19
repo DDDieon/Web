@@ -1,6 +1,6 @@
 // nav----scroll event
 $(function () {
-    var btn = $(".nav_list li button")
+    var btn = $(".nav_list li a")
     btn.click(function () {
         event.preventDefault ? event.preventDefault() : (event.returnValue = false)
         var i = $(this).parent().index() // li의 i번째

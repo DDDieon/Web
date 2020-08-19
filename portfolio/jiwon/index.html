@@ -76,7 +76,7 @@
                 <div class="carousel_wrap">
                     <div id="dragdiv" class="carousel_stage">
                         <ul>
-                            <li id="c_item" class="carousel_item_1">
+                            <li class="carousel_item_1">
                                 <div class="c-imgs"><img src="/img/gallery01.jpg" alt="" /></div>
                                 <div class="c_words">
                                     <h5>깃허브<span>Git hub</span></h5>
@@ -97,7 +97,7 @@
                                     </p>
                                 </div>
                             </li>
-                            <li id="c_item" class="carousel_item_2">
+                            <li class="carousel_item_2">
                                 <div class="c-imgs"><img src="/img/gallery02.jpg" alt="" /></div>
                                 <div class="c_words">
                                     <h5>비캔버스<span>BeeCanvas</span></h5>
@@ -116,7 +116,7 @@
                                     </p>
                                 </div>
                             </li>
-                            <li id="c_item " class="carousel_item_3">
+                            <li class="carousel_item_3">
                                 <div class="c-imgs"><img src="/img/gallery03.jpg" alt="" /></div>
                                 <div class="c_words">
                                     <h5>이미지 아트워크들<span>©2018</span></h5>
@@ -134,7 +134,7 @@
                                     </p>
                                 </div>
                             </li>
-                            <li id="c_item" class="carousel_item_4">
+                            <li class="carousel_item_4">
                                 <div class="c-imgs"><img src="/img/gallery04.jpg" alt="" /></div>
                                 <div class="c_words">
                                     <h5>영상제작물<span>Motion graphic</span></h5>
@@ -153,7 +153,7 @@
                                     </p>
                                 </div>
                             </li>
-                            <li id="c_item " class="carousel_item_5">
+                            <li class="carousel_item_5">
                                 <div class="c-imgs"><img src="/img/gallery05.jpg" alt="" /></div>
                                 <div class="c_words">
                                     <h5>Culture Manual®<span>©2018</span></h5>
@@ -176,21 +176,20 @@
                 </div>
             </div>
         </div>
-
         <nav>
             <div class="logobox">
                 <h1><a href="#">PORTFOLIO</a></h1>
             </div>
             <div class="nav_list">
                 <ul>
-                    <li><button href="#">Introduce</button></li>
-                    <li><button href="#">Project</button></li>
-                    <li><button href="#">Ability</button></li>
-                    <li><button href="#">Contact</button></li>
+                    <li><a href="#">Introduce</a></li>
+                    <li><a href="#">Project</a></li>
+                    <li><a href="#">Ability</a></li>
+                    <li><a href="#">Contact</a></li>
                     <li>
-                        <button class="openGallery" onclick="openGallery()">
+                        <a class="openGallery" onclick="openGallery()">
                             <i class="xi-ellipsis-h"></i>
-                        </button>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -202,7 +201,7 @@
         <section id="Introduce-Wrap">
             <div id="introduce">
                 <div id="introduce_top">
-                    <p class="minibold">ABOUT</p>
+                    <h2 class="minibold">ABOUT</h2>
                     <p class="caption_l">JiWon's <b>3</b> goals</p>
                     <p class="myself">
                         <br />한국직업전문학교 스마트 UI/UX 퍼블리싱 과정 수료 (출석80%↑ /
@@ -211,9 +210,9 @@
                     </p>
                     <div class="gols_img">
                         <div class="gols_img__inner-wrapper">
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                            <div class="markup-img" title="마크업"></div>
+                            <div class="skills-img" title="스킬"></div>
+                            <div class="good-design-img" title="굿디자인"></div>
                         </div>
                         <div class="img-license">
                             <strong>저작자</strong>:<a
@@ -293,12 +292,12 @@
             </div>
         </section>
         <section id="Project-Wrap">
-            <p class="minibold">Project</p>
+            <h2 class="minibold">Project</h2>
             <div class="project project-1">
-                <section class="project-assets">
+                <div class="project-assets">
                     <div class="project-title">
                         <p class="koreanTitle">사이트 리뉴얼 - IKEA</p>
-                        <h2 class="EnglishTitle">IKEA Renewal</h2>
+                        <h3 class="EnglishTitle">IKEA Renewal</h3>
                         <div class="tips">
                             <span>특징</span>
                             <p>반응형 웹</p>
@@ -325,8 +324,8 @@
                         </div>
                     </div>
                     <div class="project-img"></div>
-                </section>
-                <article class="project-desc">
+                </div>
+                <div class="project-desc">
                     <table class="project-desc-table">
                         <thead>
                             <tr>
@@ -374,13 +373,13 @@
                             </tr>
                         </tbody>
                     </table>
-                </article>
+                </div>
             </div>
             <div class="project project-2">
-                <section class="project-assets">
+                <div class="project-assets">
                     <div class="project-title">
                         <p class="koreanTitle">JS 토이프로젝트 - 랜덤팀매칭</p>
-                        <h2 class="EnglishTitle">Red or Blue</h2>
+                        <h3 class="EnglishTitle">Red or Blue</h3>
                         <div class="tips">
                             <span>특징</span>
                             <p>바닐라자바스크립트로 알고리즘 구현</p>
@@ -391,9 +390,9 @@
                         </div>
                         <div class="tips">
                             <span>Color</span>
-                            <i></i>
-                            <i></i>
-                            <i></i>
+                            <i class="project2-color"></i>
+                            <i class="project2-color"></i>
+                            <i class="project2-color"></i>
                         </div>
                         <div class="tips">
                             <span>브라우저 호환</span>
@@ -405,8 +404,8 @@
                         </div>
                     </div>
                     <div class="project-img">imgs</div>
-                </section>
-                <article class="project-desc">
+                </div>
+                <div class="project-desc">
                     <table class="project-desc-table">
                         <thead>
                             <tr>
@@ -418,7 +417,7 @@
                         <tbody>
                             <tr>
                                 <td><span>single page</span></td>
-                                <td>입력 폼에서 value값을 저장하고 화면에서 출력, 삭제</td>
+                                <td>input 태그에서 value값을 저장하고 화면에서 출력, 삭제</td>
                                 <td rowspan="4" class="codepen">
                                     <a href="https://codepen.io/dddieon/pen/dyMXjxK" target="_blank"
                                         >CODEPEN</a
@@ -439,20 +438,20 @@
                             </tr>
                         </tbody>
                     </table>
-                </article>
+                </div>
             </div>
         </section>
         <section id="Ability-Wrap">
             <div id="Ability">
-                <p class="minibold">Ability</p>
+                <h2 class="minibold">Ability</h2>
                 <div class="ability-container">
                     <ul>
                         <li class="html">HTML</li>
                         <!-- 80% 웹표준 준수를 위해 w3c validator 검사기 사용-->
                         <li class="css">CSS</li>
-                        <!-- 70% float, flex, gird, table의 기본 디스플레이 속성 이해 -->
+                        <!-- 70% float, flex, gird, table의 기본 디스플레이 속성 이해有 -->
                         <li class="js">JavaScript</li>
-                        <!-- 50% 콜백, 비동기, 객체지향 등 개념에 대한 이해 -->
+                        <!-- 50% 콜백, 비동기, 객체지향 등 개념에 대한 이해有 -->
                         <li class="jquery">Jquery</li>
                         <!-- 65% 필요한 플러그인을 검색하고 학습할 수 있음-->
                         <li class="react">React</li>
@@ -460,17 +459,20 @@
                     </ul>
                     <ul>
                         <li class="adobe-photoshop">Photoshop</li>
-                        <!--  -->
+                        <!-- 70% 앨범아트 제작경험 -->
                         <li class="adobe-ilustrator">Ilustrator</li>
+                        <!-- 80% 원하는 벡터이미지 제작 가능 -->
                         <li class="adobe-premeier">Premeier</li>
+                        <!-- 80% 유튜브 영상편집 아르바이트 경험有 -->
                         <li class="adobe-aftereffect">aftereffect</li>
+                        <!-- 60% 2D 모션그래픽 및 간단한 3D영상 제작 경험有 -->
                     </ul>
                 </div>
             </div>
         </section>
         <section id="Contact-Wrap">
             <div id="Contact">
-                <p class="minibold">Contact</p>
+                <h2 class="minibold">Contact</h2>
                 <div id="profile">
                     <div class="profile-words">
                         <p>전지원 : 全智元</p>
@@ -519,7 +521,7 @@
             <div class="footer-assets-left">
                 <div class="footer-icon"><i class="xi-tag"></i></div>
                 <div class="footer-content">
-                    <p>I’m really looking forward to meeting you in person</p>
+                    <p>[해당 사이트는 ie 10버전 이상부터 지원중입니다]</p>
                     <b>관심이 생기셨나요?</b>
                     <p>언제든지 편하게 이메일로 연락주세요! 기다리고 있습니다 ✨</p>
                 </div>

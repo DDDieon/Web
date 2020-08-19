@@ -1,6 +1,6 @@
 $Yellow: #ffdb00;
 $Blue: #0058a3;
-$WrapMobileWidth: 80%;
+$WrapMobileWidth: 95%;
 $ImgMobileWidth: 100px;
 $WrapDesktopWidth: 64%;
 $ImgDesktopWidth: 350px;
@@ -99,9 +99,11 @@ $ImgDesktopHeight: 170px;
         &--desc {
             position: relative;
             display: none;
+            padding-bottom: 30px;
             text-align: center;
             margin-top: 50px;
             overflow: hidden;
+
             .slideTitle {
                 margin: 0 auto;
                 margin-bottom: 10px;
@@ -186,14 +188,14 @@ $ImgDesktopHeight: 170px;
 
                 font-weight: bold;
                 button {
-                    background: rgb(238, 238, 238);
+                    background: #f6f6f6;
                     box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.349);
                     color: #666;
                     margin: 0 120px;
                     border-radius: 50%;
                     padding: 5px 10px;
                     font-weight: bold;
-                    font-size: 25px;
+                    font-size: 18px;
                     cursor: pointer;
                     outline: none;
                 }
@@ -202,8 +204,9 @@ $ImgDesktopHeight: 170px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background: #222;
-                color: $Yellow;
+                background: #f6f6f6;
+                box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.349);
+                color: #222;
                 margin: 0 auto;
                 min-width: 120px;
                 height: 40px;
@@ -282,6 +285,7 @@ $ImgDesktopHeight: 170px;
         .content__projects--desc {
             height: 100vh;
             margin-left: 30px;
+            padding-bottom: 0 !important;
         }
         .content__projects--menu {
             overflow: hidden;

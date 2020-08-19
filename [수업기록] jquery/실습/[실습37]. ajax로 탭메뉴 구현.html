@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script>
+            $(function () {
+                $(".tabmenu").click(function () {
+                    var activeTab = $(this).attr("data-tab")
+                    $(".tabmenu").css("background", "yellow")
+                    $(this).css("background", "lime")
+                    $.ajax({
+                        type: "GET",
+                        url: activeTab + ".html",
+                        dataType: "html",
+                        success: function (data) {
+                            $("#tabcontent").html(data)
+                        },
+                    })
+                })
+                $("#default").click()
+            })
+        </script>
+        <style>
+            #container {
+                width: 960px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            .tab {
+                list-style: none;
+                overflow: hidden;
+            }
+
+            #tabcontent {
+                display: block;
+                background: gray;
+                padding: 6px 12px;
+                color: white;
+            }
+
+            .tab a {
+                display: inline-block;
+                color: black;
+                text-decoration: none;
+                text-align: center;
+                padding: 14px 16px;
+                font-size: 18px;
+                transition: 0.5s;
+            }
+            .tab li {
+                display: inline-block;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>ajax로 탭메뉴 구현하기</h1>
+        <div class="container">
+            <div class="tab">
+                <li data-tab="[실습37] tab1" class="tabmenu" id="default"><a href="#">TAB1</a></li>
+                <li data-tab="[실습37] tab2" class="tabmenu"><a href="#">TAB2</a></li>
+                <li data-tab="[실습37] tab3" class="tabmenu"><a href="#">TAB3</a></li>
+            </div>
+            <div id="tabcontent">
+                ajax로 불러오는 tabcontent
+            </div>
+        </div>
+    </body>
+</html>

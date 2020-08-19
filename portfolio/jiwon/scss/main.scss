@@ -115,7 +115,7 @@ nav {
             overflow: hidden;
             li {
                 float: left;
-                button {
+                a {
                     position: relative;
                     font-family: "Noto Sans KR", sans-serif;
                     display: block;
@@ -168,7 +168,7 @@ nav {
 
 #introduce_top {
     margin-bottom: 180px;
-    p.minibold {
+    .minibold {
         @include minibold();
         text-decoration: underline;
     }
@@ -217,6 +217,29 @@ nav {
                     width: 33%;
                     height: 100%;
                 }
+                @keyframes wiggleRotate {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+                    20% {
+                        transform: rotate(10deg);
+                    }
+                    50% {
+                        transform: rotate(-10deg);
+                    }
+                    70% {
+                        transform: rotate(5deg);
+                    }
+                    90% {
+                        transform: rotate(-10deg);
+                    }
+                    100% {
+                        transform: rotate(0deg);
+                    }
+                }
+                &:hover {
+                    animation: wiggleRotate 3s infinite ease-in;
+                }
             }
         }
         .img-license {
@@ -251,6 +274,7 @@ nav {
                 button.galleryOpen {
                     font-weight: bold;
                     position: relative;
+                    padding: 0 5px;
                     &::after {
                         content: "";
                         position: absolute;
@@ -342,7 +366,7 @@ nav {
             font-size: 14px;
             font-weight: 400;
         }
-        h2.EnglishTitle {
+        h3.EnglishTitle {
             font-family: Russo One;
             font-size: 42px;
             margin-bottom: 46px;
@@ -382,6 +406,40 @@ nav {
                         }
                         &:nth-of-type(2) {
                             background: #ffdb00;
+                        }
+                    }
+                    i.project2-color {
+                        &:first-of-type {
+                            margin-left: 30px;
+                        }
+                        display: inline-block;
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 3px;
+                        border: 2px solid #000;
+                        &:nth-of-type(1) {
+                            background: linear-gradient(
+                                    180deg,
+                                    #d4e572 0%,
+                                    rgba(255, 255, 255, 0) 100%
+                                ),
+                                #61c751;
+                        }
+                        &:nth-of-type(2) {
+                            background: linear-gradient(
+                                    180deg,
+                                    #fda797 0%,
+                                    rgba(255, 255, 255, 0) 100%
+                                ),
+                                #fd7b88;
+                        }
+                        &:nth-of-type(3) {
+                            background: linear-gradient(
+                                    180deg,
+                                    #2f82ec 42.97%,
+                                    rgba(255, 255, 255, 0) 142.97%
+                                ),
+                                #00d2ff;
                         }
                     }
                 }
@@ -470,14 +528,14 @@ nav {
 
 // Ability
 #Ability-Wrap {
-    p.minibold {
+    .minibold {
         @include minibold();
         margin-top: 0;
     }
 }
 // Contact
 #Contact-Wrap {
-    p.minibold {
+    .minibold {
         @include minibold();
     }
     #profile {

@@ -73,7 +73,7 @@ nav .nav_list ul {
 nav .nav_list ul li {
   float: left;
 }
-nav .nav_list ul li button {
+nav .nav_list ul li a {
   position: relative;
   font-family: "Noto Sans KR", sans-serif;
   display: block;
@@ -83,7 +83,7 @@ nav .nav_list ul li button {
   text-align: center;
   cursor: pointer;
 }
-nav .nav_list ul li button:hover {
+nav .nav_list ul li a:hover {
   animation: upDownHover 1s ease-in infinite;
 }
 nav .nav_list ul li .xi-ellipsis-h:before {
@@ -120,7 +120,7 @@ nav .nav_list ul li:hover {
 #introduce_top {
   margin-bottom: 180px;
 }
-#introduce_top p.minibold {
+#introduce_top .minibold {
   font-family: Russo One !important;
   font-size: 18px;
   text-align: center;
@@ -180,6 +180,29 @@ nav .nav_list ul li:hover {
   width: 33%;
   height: 100%;
 }
+@keyframes wiggleRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  70% {
+    transform: rotate(5deg);
+  }
+  90% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+#introduce_top .gols_img__inner-wrapper div:hover {
+  animation: wiggleRotate 3s infinite ease-in;
+}
 #introduce_top .gols_img .img-license {
   box-sizing: border-box;
   border: 1px solid #000;
@@ -218,6 +241,7 @@ nav .nav_list ul li:hover {
 #introduce_top .gols_words .gols_words_in p button.galleryOpen {
   font-weight: bold;
   position: relative;
+  padding: 0 5px;
 }
 #introduce_top .gols_words .gols_words_in p button.galleryOpen::after {
   content: "";
@@ -305,7 +329,7 @@ nav .nav_list ul li:hover {
   font-size: 14px;
   font-weight: 400;
 }
-#Project-Wrap .project h2.EnglishTitle {
+#Project-Wrap .project h3.EnglishTitle {
   font-family: Russo One;
   font-size: 42px;
   margin-bottom: 46px;
@@ -349,6 +373,25 @@ nav .nav_list ul li:hover {
 }
 #Project-Wrap .project .project-assets .project-title .tips i:nth-of-type(2) {
   background: #ffdb00;
+}
+#Project-Wrap .project .project-assets .project-title .tips i.project2-color {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  border: 2px solid #000;
+}
+#Project-Wrap .project .project-assets .project-title .tips i.project2-color:first-of-type {
+  margin-left: 30px;
+}
+#Project-Wrap .project .project-assets .project-title .tips i.project2-color:nth-of-type(1) {
+  background: linear-gradient(180deg, #d4e572 0%, rgba(255, 255, 255, 0) 100%), #61c751;
+}
+#Project-Wrap .project .project-assets .project-title .tips i.project2-color:nth-of-type(2) {
+  background: linear-gradient(180deg, #fda797 0%, rgba(255, 255, 255, 0) 100%), #fd7b88;
+}
+#Project-Wrap .project .project-assets .project-title .tips i.project2-color:nth-of-type(3) {
+  background: linear-gradient(180deg, #2f82ec 42.97%, rgba(255, 255, 255, 0) 142.97%), #00d2ff;
 }
 #Project-Wrap .project .project-assets .project-title .articleBtns a {
   font-family: Russo One !important;
@@ -424,7 +467,7 @@ nav .nav_list ul li:hover {
   border-bottom: 1px solid transparent;
 }
 
-#Ability-Wrap p.minibold {
+#Ability-Wrap .minibold {
   font-family: Russo One !important;
   font-size: 18px;
   text-align: center;
@@ -432,7 +475,7 @@ nav .nav_list ul li:hover {
   margin-top: 0;
 }
 
-#Contact-Wrap p.minibold {
+#Contact-Wrap .minibold {
   font-family: Russo One !important;
   font-size: 18px;
   text-align: center;

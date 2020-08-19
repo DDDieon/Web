@@ -93,6 +93,7 @@
 .content__projects--desc {
   position: relative;
   display: none;
+  padding-bottom: 30px;
   text-align: center;
   margin-top: 50px;
   overflow: hidden;
@@ -100,7 +101,7 @@
 .content__projects--desc .slideTitle {
   margin: 0 auto;
   margin-bottom: 10px;
-  width: 80%;
+  width: 95%;
   display: flex;
   justify-content: space-between;
   font-size: 16px;
@@ -113,7 +114,7 @@
   padding: 0 20px;
 }
 .content__projects--desc .slide {
-  width: 80%;
+  width: 95%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -170,21 +171,21 @@
   padding: 10px;
   margin-left: -40%;
   margin-bottom: 14px;
-  width: 80%;
+  width: 95%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
 }
 .content__projects--desc .slideControler button {
-  background: #eeeeee;
+  background: #f6f6f6;
   box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.349);
   color: #666;
   margin: 0 120px;
   border-radius: 50%;
   padding: 5px 10px;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 18px;
   cursor: pointer;
   outline: none;
 }
@@ -192,8 +193,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #222;
-  color: #ffdb00;
+  background: #f6f6f6;
+  box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.349);
+  color: #222;
   margin: 0 auto;
   min-width: 120px;
   height: 40px;
@@ -267,6 +269,7 @@ ul.slide-wrapB::after {
   .content .content__projects--desc {
     height: 100vh;
     margin-left: 30px;
+    padding-bottom: 0 !important;
   }
   .content .content__projects--menu {
     overflow: hidden;
