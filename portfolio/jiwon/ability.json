@@ -1,0 +1,7 @@
+{
+    "ability": [
+        { "html": "웹표준 준수를 위해 w3c validator 검사기를 사용합니다" },
+        { "css": "float, flex, gird, table의 기본 디스플레이 속성 이해有" },
+        { "jquery": "필요한 플러그인을 학습하여 CSS를 변경하며, ajax의 기초까지 이해하였음" }
+    ]
+}

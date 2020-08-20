@@ -572,7 +572,6 @@ nav {
         ul {
             width: 100%;
             display: flex;
-
             .ability-spec {
                 circle {
                     &:nth-child(2) {
@@ -596,6 +595,12 @@ nav {
                 position: relative;
                 justify-content: center;
                 align-items: center;
+                &:hover {
+                    .ability-spec__number--count,
+                    .ability-design__number--count {
+                        font-size: 35px !important;
+                    }
+                }
                 &__graph {
                     position: absolute;
                     width: 150px;
@@ -624,10 +629,9 @@ nav {
             }
         }
         .ability-detail {
-            background: #dfdfdfdf;
+            background: #ecececa1;
             position: relative;
-            padding: 50px;
-            padding-bottom: 70px;
+            padding: 20px;
             margin-top: 44px;
             text-align: center;
             h4 {
@@ -648,6 +652,11 @@ nav {
                 left: 50%;
                 margin-left: -20px;
                 border-radius: 10px;
+            }
+            &__whitepaper {
+                background: #ffffff;
+                padding-top: 20px;
+                padding-bottom: 40px;
             }
             &__desc {
                 color: #222;

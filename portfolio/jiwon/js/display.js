@@ -27,6 +27,12 @@ $(function () {
             })
         }
     })
+    var contactMe = $(".contect-me")
+    contactMe.click(function () {
+        $("html, body").stop().animate({
+            scrollTop: 4800,
+        })
+    })
 })
 
 // project---scroll show

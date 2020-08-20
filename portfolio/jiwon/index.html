@@ -468,8 +468,8 @@
                         <h3><span class="wait">잠깐!</span> 왜 상대적인가요?</h3>
                         <b>HTML 100%라니, 마크업 자신있나 뫄?! 라 생각하지 말아주세요💦</b>
                         <p>
-                            관련지식의 끝이 어디인지 감히 단정지을 수가 없어 HTML 태그를 작성하는
-                            능력을 하나의 척도로 잡았습니다.<br />
+                            관련지식의 끝을 감히 단정지을 수가 없어 HTML 태그를 작성하는 능력을
+                            하나의 척도로 잡았습니다.<br />
                             자신있고 잘 활용할 수 있는 기술을 순서대로 나열해보았습니다.
                         </p>
                     </div>
@@ -484,7 +484,7 @@
                             </div>
                             <h3 class="ability-spec--header">HTML</h3>
                         </li>
-                        <!-- 기본값 100% 웹표준 준수를 위해 w3c validator 검사기 사용하는 정도?-->
+                        <!-- 기본값 100% 웹표준 준수를 위해 w3c validator 검사기를 사용합니다-->
                         <li class="CSS ability-spec">
                             <svg class="ability-spec__graph">
                                 <circle cx="70" cy="70" r="70"></circle>
@@ -496,7 +496,7 @@
                             <h3 class="ability-spec__number--header">CSS</h3>
                         </li>
                         <!-- 70% float, flex, gird, table의 기본 디스플레이 속성 이해有 -->
-                        <li class="JQuery ability-spec">
+                        <li class="jquery ability-spec">
                             <svg class="ability-spec__graph">
                                 <circle cx="70" cy="70" r="70"></circle>
                                 <circle cx="70" cy="70" r="70"></circle>
@@ -506,7 +506,7 @@
                             </div>
                             <h3 class="ability-spec__number--header">JQuery</h3>
                         </li>
-                        <!-- 65% 필요한 플러그인을 검색하고 학습할 수 있음-->
+                        <!-- 65% 필요한 플러그인을 학습할 수 있음-->
                         <li class="JavaScript ability-spec">
                             <svg class="ability-spec__graph">
                                 <circle cx="70" cy="70" r="70"></circle>
@@ -589,6 +589,7 @@
                         <!-- 30% autolayout을 알고 활용하는 정도 -->
                     </ul>
                     <script>
+                        // 스크롤시 circle의 퍼센트가 올라갑니다
                         $.fn.percent = function (much) {
                             $(this)
                                 .stop()
@@ -617,13 +618,29 @@
                                 return false
                             })
                         })
+                        // ajax로 내용을 변경합니다
+                        $(function(){
+                            $(".ability-spec").click(function(){
+                                $.ajax{
+                                    // 여기서부터 변경해야 ★
+                                }
+                            })
+                        })
                     </script>
                     <div class="ability-detail">
-                        <img src="/asset/icons/icons_quotes.png" class="quotesImg" alt="따옴표" />
-                        <h4>상단을 클릭해 보세요!</h4>
-                        <hr />
-                        <span class="ability-detail__desc">세부 SKILL 사항들을 볼 수 있습니다</span>
-                        <b class="ability-detail__point"></b>
+                        <div class="ability-detail__whitepaper">
+                            <img
+                                src="/asset/icons/icons_quotes.png"
+                                class="quotesImg"
+                                alt="따옴표"
+                            />
+                            <h4>상단의 원을 클릭해 보세요!</h4>
+                            <hr />
+                            <span class="ability-detail__desc"
+                                >세부 SKILL 사항들을 볼 수 있습니다</span
+                            >
+                            <b class="ability-detail__point"></b>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -642,6 +659,7 @@
                             언제든지 두들겨주세요.
                         </p>
                         <p>E-mail : hocldy@naver.com</p>
+                        <p>MOBILE : 010-9490-5033</p>
                     </div>
                 </div>
                 <div
@@ -681,7 +699,7 @@ this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your pag
                 <div class="footer-content">
                     <p>[해당 사이트는 ie 10버전 이상부터 지원중입니다]</p>
                     <b>관심이 생기셨나요?</b>
-                    <p>언제든지 편하게 이메일로 연락주세요! 기다리고 있습니다 ✨</p>
+                    <p>언제든지 편하게 연락주세요! 기다리고 있습니다 ✨</p>
                 </div>
             </div>
             <div class="footer-assets-right">

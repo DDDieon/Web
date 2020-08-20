@@ -531,6 +531,12 @@ nav .nav_list ul li:hover {
   justify-content: center;
   align-items: center;
 }
+#Ability-Wrap .ability-container ul .ability-spec:hover .ability-spec__number--count,
+#Ability-Wrap .ability-container ul .ability-spec:hover .ability-design__number--count,
+#Ability-Wrap .ability-container ul .ability-design:hover .ability-spec__number--count,
+#Ability-Wrap .ability-container ul .ability-design:hover .ability-design__number--count {
+  font-size: 35px !important;
+}
 #Ability-Wrap .ability-container ul .ability-spec__graph,
 #Ability-Wrap .ability-container ul .ability-design__graph {
   position: absolute;
@@ -559,10 +565,9 @@ nav .nav_list ul li:hover {
   font-weight: bold;
 }
 #Ability-Wrap .ability-container .ability-detail {
-  background: #dfdfdfdf;
+  background: #ecececa1;
   position: relative;
-  padding: 50px;
-  padding-bottom: 70px;
+  padding: 20px;
   margin-top: 44px;
   text-align: center;
 }
@@ -584,6 +589,11 @@ nav .nav_list ul li:hover {
   left: 50%;
   margin-left: -20px;
   border-radius: 10px;
+}
+#Ability-Wrap .ability-container .ability-detail__whitepaper {
+  background: #ffffff;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 #Ability-Wrap .ability-container .ability-detail__desc {
   color: #222;
