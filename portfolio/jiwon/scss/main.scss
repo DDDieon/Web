@@ -572,6 +572,7 @@ nav {
         ul {
             width: 100%;
             display: flex;
+            justify-content: center;
             .ability-spec {
                 circle {
                     &:nth-child(2) {
@@ -588,8 +589,9 @@ nav {
             }
             .ability-spec,
             .ability-design {
-                width: 270px;
-                height: 170px;
+                width: 150px;
+                height: 150px;
+                margin: 8px;
                 display: flex;
                 flex-direction: column;
                 position: relative;
@@ -603,6 +605,8 @@ nav {
                 }
                 &__graph {
                     position: absolute;
+                    top: 0;
+                    left: 0;
                     width: 150px;
                     height: 150px;
                     z-index: 1000;
@@ -675,6 +679,7 @@ nav {
 #Contact-Wrap {
     .minibold {
         @include minibold();
+        text-decoration: underline;
     }
     #profile {
         position: relative;

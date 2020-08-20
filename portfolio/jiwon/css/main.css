@@ -514,6 +514,7 @@ nav .nav_list ul li:hover {
 #Ability-Wrap .ability-container ul {
   width: 100%;
   display: flex;
+  justify-content: center;
 }
 #Ability-Wrap .ability-container ul .ability-spec circle:nth-child(2) {
   stroke: #ffa4b1;
@@ -523,8 +524,9 @@ nav .nav_list ul li:hover {
 }
 #Ability-Wrap .ability-container ul .ability-spec,
 #Ability-Wrap .ability-container ul .ability-design {
-  width: 270px;
-  height: 170px;
+  width: 150px;
+  height: 150px;
+  margin: 8px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -540,6 +542,8 @@ nav .nav_list ul li:hover {
 #Ability-Wrap .ability-container ul .ability-spec__graph,
 #Ability-Wrap .ability-container ul .ability-design__graph {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 150px;
   height: 150px;
   z-index: 1000;
@@ -611,6 +615,7 @@ nav .nav_list ul li:hover {
   font-size: 18px;
   text-align: center;
   margin-top: 220px;
+  text-decoration: underline;
 }
 #Contact-Wrap #profile {
   position: relative;
