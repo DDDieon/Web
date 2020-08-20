@@ -452,7 +452,7 @@
                                 <circle cx="70" cy="70" r="70"></circle>
                             </svg>
                             <div class="ability-spec__number">
-                                <p class="ability-spec__number--count">90<span>%</span></p>
+                                <p class="ability-spec__number--count">100<span>%</span></p>
                             </div>
                             <h3 class="ability-spec--header">HTML</h3>
                         </li>
@@ -503,10 +503,15 @@
                         <!-- 20% 리액트 컴포넌트에서 이벤트 핸들러 사용 가능 -->
                     </ul>
                     <script>
-                        $.fn.strokePercent = function(percent){
-                            $(this).stop().animate({
-                                "stroke-dashoffset": 440 - (440 * percent) / 100,
-                            },1000)
+                        $.fn.strokePercent = function (percent) {
+                            $(this)
+                                .stop()
+                                .animate(
+                                    {
+                                        "stroke-dashoffset": 440 - (440 * percent) / 100,
+                                    },
+                                    1000
+                                )
                         }
                         $(function () {
                             // $(".ability-spec")
@@ -521,7 +526,7 @@
                                 .stop()
                                 .animate(
                                     {
-                                        "stroke-dashoffset": 440 - (440 * 90) / 100,
+                                        "stroke-dashoffset": 440 - (440 * 100) / 100,
                                     },
                                     1000
                                 )

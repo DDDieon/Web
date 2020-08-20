@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="/js/jquery-ui-1.10.4.custom.min.js"></script>
+        <script src="/js/jquery.cookie.js"></script>
+        <script>
+            $(document).ready(function (e) {
+                if ($.cookie("pop") != "no") {
+                    $("#pop_wrap").show()
+                }
+                $("#pop_wrap").css("cursor", "move").draggable()
+                //   닫기버튼
+                $("#pop_wrap a:eq(0)").click(function (e) {
+                    $("#pop_wrap").fadeOut("slow")
+                    return false
+                })
+                // 쿠키설정
+                $("#pop_wrap a:eq(1)").click(function (e) {
+                    $.cookie("pop", "no", {
+                        expires: 1,
+                    }) // 하루동안 pop쿠키이름으로 no가 저장된다.
+                    $("#pop_wrap").fadeOut("slow")
+                    return false
+                })
+                // 쿠키삭제
+                $("#del").click(function (e) {
+                    $.cookie("pop", null)
+                    // $.removeCookie('pop');
+                })
+            })
+        </script>
+        <style type="text/css">
+            #pop_wrap {
+                width: 300px;
+                height: 300px;
+                border: 3px solid black;
+                position: absolute;
+                top: 200px;
+                left: 100px;
+                z-index: 30;
+                display: none;
+                box-shadow: 0 2px 10px #000;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>-쿠키 테스트하기-</h1>
+        <h1>쿠키 플러그파일과 html 파일을 서버에 업로드하고 테스트하자</h1>
+        <p id="pop_wrap" style="text-align: center;">
+            <br /><br /><br />
+            <a href="#"> [창닫기]</a>
+            <br /><br /><br />
+            <a href="#"> [하루동안 창 열지않기]</a>
+        </p>
+        <hr />
+        <a href="#" id="del"> 쿠키삭제하기</a>
+    </body>
+</html>
