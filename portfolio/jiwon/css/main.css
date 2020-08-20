@@ -103,6 +103,7 @@ nav .nav_list ul li:hover {
   bottom: 12vh;
   color: #000;
   opacity: 0.7;
+  z-index: 1111;
 }
 #quick-menu i {
   position: relative;
@@ -330,7 +331,7 @@ nav .nav_list ul li:hover {
   font-size: 14px;
   font-weight: 400;
 }
-#Project-Wrap .project h3.EnglishTitle {
+#Project-Wrap .project h3.englishTitle {
   font-family: Russo One;
   font-size: 42px;
   margin-bottom: 46px;
@@ -491,15 +492,16 @@ nav .nav_list ul li:hover {
   background: #ffd900;
   padding: 0 8px;
 }
-#Ability-Wrap .ability-container .ability-caption strong i {
-  background: #ffa4b1;
+#Ability-Wrap .ability-container .ability-caption strong .relative-percent {
+  font-weight: bold;
 }
 #Ability-Wrap .ability-container .ability-caption h3 {
   font-size: 22px;
   font-weight: bold;
+  margin: 10px;
 }
 #Ability-Wrap .ability-container .ability-caption h3 .wait {
-  background: #222;
+  background: #fc3636;
   padding: 0 5px;
   color: #f8f8f8;
   border-radius: 5px;
@@ -532,12 +534,24 @@ nav .nav_list ul li:hover {
   position: relative;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: 1s;
 }
-#Ability-Wrap .ability-container ul .ability-spec:hover .ability-spec__number--count,
-#Ability-Wrap .ability-container ul .ability-spec:hover .ability-design__number--count,
-#Ability-Wrap .ability-container ul .ability-design:hover .ability-spec__number--count,
-#Ability-Wrap .ability-container ul .ability-design:hover .ability-design__number--count {
-  font-size: 35px !important;
+#Ability-Wrap .ability-container ul .ability-spec:hover,
+#Ability-Wrap .ability-container ul .ability-design:hover {
+  animation: upDownHover 1s ease-in infinite;
+}
+#Ability-Wrap .ability-container ul .ability-spec.onDetail .ability-spec__number--count,
+#Ability-Wrap .ability-container ul .ability-spec.onDetail .ability-design__number--count,
+#Ability-Wrap .ability-container ul .ability-design.onDetail .ability-spec__number--count,
+#Ability-Wrap .ability-container ul .ability-design.onDetail .ability-design__number--count {
+  font-size: 24px !important;
+}
+#Ability-Wrap .ability-container ul .ability-spec.onDetail .ability-spec__graph,
+#Ability-Wrap .ability-container ul .ability-spec.onDetail .ability-design__graph,
+#Ability-Wrap .ability-container ul .ability-design.onDetail .ability-spec__graph,
+#Ability-Wrap .ability-container ul .ability-design.onDetail .ability-design__graph {
+  background: #dfdfdf;
 }
 #Ability-Wrap .ability-container ul .ability-spec__graph,
 #Ability-Wrap .ability-container ul .ability-design__graph {
@@ -546,7 +560,10 @@ nav .nav_list ul li:hover {
   left: 0;
   width: 150px;
   height: 150px;
-  z-index: 1000;
+  z-index: -9999;
+  background: transparent;
+  border-radius: 50%;
+  background: #fff;
 }
 #Ability-Wrap .ability-container ul .ability-spec__graph circle,
 #Ability-Wrap .ability-container ul .ability-design__graph circle {
@@ -565,8 +582,11 @@ nav .nav_list ul li:hover {
 }
 #Ability-Wrap .ability-container ul .ability-spec__number--count,
 #Ability-Wrap .ability-container ul .ability-design__number--count {
-  font-size: 22px;
-  font-weight: bold;
+  font-family: Russo One !important;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 220px;
+  margin-top: 0;
 }
 #Ability-Wrap .ability-container .ability-detail {
   background: #ecececa1;
@@ -576,7 +596,7 @@ nav .nav_list ul li:hover {
   text-align: center;
 }
 #Ability-Wrap .ability-container .ability-detail h4 {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   color: #292929;
 }
@@ -598,6 +618,7 @@ nav .nav_list ul li:hover {
   background: #ffffff;
   padding-top: 20px;
   padding-bottom: 40px;
+  border-radius: 15px;
 }
 #Ability-Wrap .ability-container .ability-detail__desc {
   color: #222;

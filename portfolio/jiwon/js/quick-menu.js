@@ -10,11 +10,13 @@ $(function () {
     })
     quick.find(".xi-angle-down").click(function () {
         var innerHeight = $("html,body").innerHeight()
-        $("html,body").stop().animate(
-            {
-                scrollTop: innerHeight,
-            },
-            300
-        )
+        $("html,body")
+            .stop()
+            .animate(
+                {
+                    scrollTop: $(document).height() - $(window).height(),
+                },
+                300
+            )
     })
 })

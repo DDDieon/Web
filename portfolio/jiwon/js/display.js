@@ -3,35 +3,38 @@ $(function () {
     var btn = $(".nav_list li a")
     btn.click(function () {
         event.preventDefault ? event.preventDefault() : (event.returnValue = false)
-        var i = $(this).parent().index() // li의 i번째
-        console.log(i)
+        var i = $(this).parent().index() // li의 i번째를 클릭
+        var sectionTT = $("section").eq(i).offset().top - 50 //sectioin들의 y좌표
         if (i == 4) {
+            // gallery 이벤트 막기
             $(this).off
+            return false
         } else if (i == 3) {
-            // contact까지 스크롤
-            $("html, body").stop().animate({
-                scrollTop: 4800,
-            })
-        } else if (i == 2) {
-            // ablity까지 스크롤
             $("html, body")
                 .stop()
                 .animate({
-                    scrollTop: $("#Ability").offset().top - 50,
+                    scrollTop: $(document).height() - $(window).height(),
                 })
-        } else {
-            var sectionTT = $("section").eq(i).offset().top //sectioin들의 y좌표
-            console.log(sectionTT)
-            $("html, body").stop().animate({
-                scrollTop: sectionTT, //html, body의 y좌표는 i번째 sectioin의 좌표가 된다
-            })
+            return false
         }
+        $("html, body")
+            .stop()
+            .animate(
+                {
+                    scrollTop: sectionTT,
+                },
+                function () {
+                    console.log("이동")
+                }
+            )
     })
     var contactMe = $(".contect-me")
     contactMe.click(function () {
-        $("html, body").stop().animate({
-            scrollTop: 4800,
-        })
+        $("html, body")
+            .stop()
+            .animate({
+                scrollTop: $("#Contact").offset().top - 50,
+            })
     })
 })
 
