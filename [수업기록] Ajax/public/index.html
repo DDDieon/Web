@@ -3,9 +3,121 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <title>웹서버 초입</title>
+        <script>
+            $(function () {
+                $("button").click(function () {
+                    $("<p></p>").load("test1.txt").insertAfter("div")
+                })
+
+                //form#member 에서 제출했을때의 이벤트를 건다
+                $("#member").on("submit", function (result) {
+                    var d = $(this).serialize() //폼요소에 전송할 데이터를 가공
+                    $.ajax({
+                        url: "/user",
+                        type: "post",
+                        data: d,
+                        success: function (result) {
+                            //result는 person을 받은 것
+                            $("#txt1").text(result.name + "님 환영합니다")
+                            $("#txt2").text(result.age + "살이고 " + result.gender + "이군요")
+                        },
+                    })
+                    return false //action의 페이지로 넘어가는 것을 차단
+                })
+            })
+        </script>
     </head>
     <body>
-        여기는 강사용 컴퓨터의 index.html이 아닙니다
+        <h1>index.html입니다</h1>
+        <h2>express 서버로 웹페이지 실행하자</h2>
+        <button>외부파일 불러오기</button>
+        <div id="box" style="background: chartreuse;">test1.txt의 삽입내용이 여기 뒤로 온다</div>
+
+        <form action="member.php" method="post" name="member" id="member">
+            <fieldset>
+                <legend>회원가입</legend>
+                <p>
+                    <label for="user_name">이름</label>
+                    <!-- name은 서버와 통신하기 위한 것이라고 생각 -->
+                    <input type="text" name="user_name" id="user_name" />
+                    <label for="user_age">나이</label>
+                    <input type="text" name="user_age" id="user_age" /></br>
+                    <input type="radio" name="gender" value="man" /> 남성
+                    <input type="radio" name="gender" value="girl" /> 여성
+                </p>
+                <p><input type="submit" value="확인" /></p>
+            </fieldset>
+        </form>
+        <h1 id="txt1"></h1>
+        <h2 id="txt2"></h2>
+        <h3>인기검색어</h3>
+        <div id="wrap">
+            <ol> </ol>
+        </div>
+        <h4>인기검색어-json</h4>
+        <div id="wrap2">
+            <ol> </ol>
+        </div>
     </body>
+    <script>
+        $('h3').on('click',function(){
+            $.ajax({
+                url : 'rank.xml',
+                dataType:'xml',
+                success:function(data){
+                    $(data).find('rank').each(function(){
+                        var name = $(this).find('k').text()
+                        var list = '<li>'+name+'</li>'
+                        $('#wrap ol').append(list)
+                    })
+                }
+            })
+        })
+        $('h4').on('click',function(){
+            $.ajax({
+                url : 'rank.json',
+                dataType:'json',
+                success:function(data){
+                    console.log(data.rank[0]["k"]) // 김연아
+                    console.log(data.rank[1]["k"]) // 이상화
+                    console.log(data.rank[2]["k"]) // 모태범
+                    // k는 키고 김연아는 밸류
+                    // 1차원 배열이지만 2차원처럼 보이는 것은 배열 안에 객체(키+값)이 있기 때문
+                    $(data.rank).each(function(i,객체){
+                        //var list = '<li>'+d['k']+'</li>'
+                        var list = '<li>'+객체.k+'</li>'
+                        $('#wrap2 ol').append(list)
+                    })
+                }
+            })
+        })
+
+
+
+        // 기상청 날씨 가져오기 : 크로스도메인 에러 => CORS policy: No 'Access-Control-Allow-Origin' => 다른 도메인에서 가져올 때 생김
+        // 오류 해결하기 : Moesif Origin & CORS Changer 설치하기
+        $(function() {
+            $.ajax({
+                crossOrigin: false, // 크로스도메인 해결 플러그인
+                url: 'http://www.kma.go.kr/weather/forecast/mid-term-rss3.jsp?stnId=108',
+                //   url: '/data.redirect',
+                dataType: 'xml',
+                success: function(response) {
+                    console.log(response);
+                    $(response).find('location').each(function() {
+                        var city = $(this).find('city').text();
+                        if (city == '서울') {
+                            $('body').append(city + '<br>');
+                            $(this).find('data').each(function() {
+                                var output = $(this).find('tmEf').text() + " " + $(this).find('wf').text();
+                                $('body').append(output + '<br>');
+                            })
+                        }
+                    })
+                }
+            });
+        });
+    </script>
 </html>

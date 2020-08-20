@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <title>웹서버 초입</title>
+    </head>
+    <body>
+        <script>
+        // 기상청 날씨 가져오기 : 크로스도메인 에러 => CORS policy: No 'Access-Control-Allow-Origin' => 다른 도메인에서 가져올 때 생김
+        // 오류 해결하기 : Moesif Origin & CORS Changer 설치하기
+        $(function() {
+            $.ajax({
+                crossOrigin: false, // 크로스도메인 해결 플러그인
+                url: 'http://www.kma.go.kr/weather/forecast/mid-term-rss3.jsp?stnId=108',
+                //   url: '/data.redirect',
+                dataType: 'xml',
+                success: function(response) {
+                    console.log(response);
+                    $(response).find('location').each(function() {
+                        var city = $(this).find('city').text();
+                        if (city == '서울') {
+                            $('body').append(city + '<br>');
+                            $(this).find('data').each(function() {
+                                var output = $(this).find('tmEf').text() + " " + $(this).find('wf').text();
+                                $('body').append(output + '<br>');
+                            })
+                        }
+                    })
+                }
+            });
+        });
+    </script>
+</html>

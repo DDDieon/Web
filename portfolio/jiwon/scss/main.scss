@@ -1,6 +1,8 @@
 $red: #ffa4b1;
 $gray: rgb(44, 41, 41);
+$point: rgb(255, 217, 0);
 $wrapWidth: 820px;
+$detailBoxWith: 40px;
 
 /*SCSS 변수값 저장*/
 
@@ -184,6 +186,7 @@ nav {
         margin-bottom: 36px;
         strong {
             font-weight: 700;
+            font-size: 16px;
         }
     }
     .gols_img {
@@ -513,7 +516,7 @@ nav {
                 tr td:nth-child(3) {
                     color: #1b50a0;
                     text-decoration: underline;
-                    font-size: 10px;
+                    font-size: 13px;
                 }
                 tr td {
                     padding: 8px 0;
@@ -533,56 +536,66 @@ nav {
     .minibold {
         @include minibold();
         margin-top: 0;
+        text-decoration: underline;
     }
     .ability-container {
         width: $wrapWidth;
         margin: 0 auto;
+        .ability-caption {
+            padding: 35px 0;
+            text-align: center;
+            strong {
+                background: $point;
+                padding: 0 8px;
+                i {
+                    background: $red;
+                }
+            }
+            h3 {
+                font-size: 22px;
+                font-weight: bold;
+                .wait {
+                    background: #222;
+                    padding: 0 5px;
+                    color: #f8f8f8;
+                    border-radius: 5px;
+                    font-size: 12px;
+                }
+            }
+            b {
+                display: block;
+                color: #777;
+                text-decoration: line-through;
+                margin-bottom: 24px;
+            }
+        }
         ul {
             width: 100%;
             display: flex;
+
             .ability-spec {
+                circle {
+                    &:nth-child(2) {
+                        stroke: $red;
+                    }
+                }
+            }
+            .ability-design {
+                circle {
+                    &:nth-child(2) {
+                        stroke: #ccc;
+                    }
+                }
+            }
+            .ability-spec,
+            .ability-design {
                 width: 270px;
-                height: 270px;
+                height: 170px;
                 display: flex;
                 flex-direction: column;
                 position: relative;
                 justify-content: center;
                 align-items: center;
-                &:nth-child(1) {
-                    > svg circle {
-                        &:nth-child(2) {
-                            // stroke-dashoffset: calc(440 - (440 * 90) / 100);
-                        }
-                    }
-                }
-                &:nth-child(2) {
-                    > svg circle {
-                        &:nth-child(2) {
-                            stroke-dashoffset: calc(440 - (440 * 70) / 100);
-                        }
-                    }
-                }
-                &:nth-child(3) {
-                    > svg circle {
-                        &:nth-child(2) {
-                            stroke-dashoffset: calc(440 - (440 * 50) / 100);
-                        }
-                    }
-                }
-                &:nth-child(4) {
-                    > svg circle {
-                        &:nth-child(2) {
-                            stroke-dashoffset: calc(440 - (440 * 65) / 100);
-                        }
-                    }
-                }
-                &:nth-child(5) {
-                    > svg circle {
-                        &:nth-child(2) {
-                            stroke-dashoffset: calc(440 - (440 * 20) / 100);
-                        }
-                    }
-                }
                 &__graph {
                     position: absolute;
                     width: 150px;
@@ -596,13 +609,9 @@ nav {
                         stroke-width: 10;
                         stroke-linecap: round;
                         transform: translate(5px, 5px);
-                        // &:nth-child(1) {
-                        // }
                         &:nth-child(2) {
-                            stroke: $red;
                             stroke-dasharray: 440;
                             stroke-dashoffset: 440;
-                            transition: 1s;
                         }
                     }
                 }
@@ -612,6 +621,43 @@ nav {
                         font-weight: bold;
                     }
                 }
+            }
+        }
+        .ability-detail {
+            background: #dfdfdfdf;
+            position: relative;
+            padding: 50px;
+            padding-bottom: 70px;
+            margin-top: 44px;
+            text-align: center;
+            h4 {
+                font-size: 20px;
+                font-weight: bold;
+                color: #292929;
+            }
+            hr {
+                display: block;
+                border: 1px solid #efefef;
+                margin-top: 10px;
+                margin-bottom: 30px;
+            }
+            .quotesImg {
+                position: absolute;
+                width: $detailBoxWith;
+                top: -20px;
+                left: 50%;
+                margin-left: -20px;
+                border-radius: 10px;
+            }
+            &__desc {
+                color: #222;
+                font-size: 14px;
+            }
+            &__point {
+                background: $point;
+                font-weight: bold;
+                border-radius: 5px;
+                margin-left: 5px;
             }
         }
     }

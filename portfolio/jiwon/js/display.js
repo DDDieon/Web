@@ -14,9 +14,11 @@ $(function () {
             })
         } else if (i == 2) {
             // ablity까지 스크롤
-            $("html, body").stop().animate({
-                scrollTop: 3800,
-            })
+            $("html, body")
+                .stop()
+                .animate({
+                    scrollTop: $("#Ability").offset().top - 50,
+                })
         } else {
             var sectionTT = $("section").eq(i).offset().top //sectioin들의 y좌표
             console.log(sectionTT)
