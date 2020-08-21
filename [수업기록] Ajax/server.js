@@ -33,6 +33,6 @@ app.use(function (request, response) {
     response.send("<h1>잠시 점검중</h1>")
 })
 // 웹 서버를 실행합니다.
-http.createServer(app).listen(52273, function () {
-    console.log("server Running at http://127.0.0.1:52273")
+http.createServer(app).listen(52270, function () {
+    console.log("server Running at http://127.0.0.1:52270")
 })
