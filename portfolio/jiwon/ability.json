@@ -1,17 +1,16 @@
 {
-    "ability": [
-        {
-            "key": "웹표준 준수를 위해 w3c validator 검사기를 사용합니다.<br /> 시맨틱 마크업을 위해 노력하고자 합니다.",
+    "ability": [{
+            "key": "웹표준 준수를 위해 w3c validator 검사기를 사용합니다.<br /> 시맨틱 마크업을 위해 노력하고 있습니다.",
             "title": "HTML",
             "link": "https://beecanvas.com/s/djbPTmh5S12gPI-a_PqD"
         },
         {
-            "key": "float, flex, gird, table 등의 기본 디스플레이 속성 등을 이해하였고,<br /> 전처리기는 scss를 사용하고 있습니다.",
+            "key": "Sass 전처리기를 사용할 수 있으며, 사용자설정 애니메이션과 반응형 디자인을 제작할 수 있습니다",
             "title": "CSS",
             "link": "https://beecanvas.com/s/NaTIW9i9BN0eLt09oK4r"
         },
         {
-            "key": "필요한 플러그인을 검색하고 학습하여 CSS를 변경할 수 있습니다.<br /> Ajax의 기초를 이해하여, 현재 메뉴를 생성하였습니다.",
+            "key": "필요한 플러그인을 검색하고 학습하여 CSS를 변경할 수 있습니다.<br /> 비동기식 처리방식을 사용할 수 있습니다.",
             "title": "JQuery",
             "link": "https://beecanvas.com/s/7aEbbrJ3be6fLzSMKJ21QmjHkrEONNHRQ8ze5dMO25TvJ1orEyjSYJxy-ZzwFuDn"
         },

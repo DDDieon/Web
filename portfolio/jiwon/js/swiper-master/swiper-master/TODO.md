@@ -1,9 +1,0 @@
-- Setup lintstaged + husky
-- Lite version
-  - Remove:
-    - Loop
-    - Free mode
-    - Manipulation
-    - Autoheight
-    - Images
-    - Lazy loading

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax로 이미지 src 불러오기</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        $(function () {
+            $.ajax({
+                type: "GET",
+                url: 'book.json',
+                dataType: 'json',
+                success: function (result) {
+                    // object를 문자로 변환
+                    console.log(result)
+                    create(result)
+                }
+            });
+
+            function create(result) {
+                $.each(result.book, function (i, d) {
+                    $(".wrap ol").append('<li>' + d['path'] + d['tit'] + '</li>')
+                })
+                var t = '<ul>'
+                $.each(result.book, function (i, d) {
+                    t += '<li><img src="' + d.path + '"title=' + d.tit + '"></li>'
+                })
+                t += '</ul>'
+                $('body').append(t)
+            }
+        });
+        //]]>
+    </script>
+</head>
+
+<body>
+    <h1>book.js으로 데이터 읽어오기</h1>
+    <div id="wrap">
+        <ol></ol>
+    </div>
+</body>
+
+</html>

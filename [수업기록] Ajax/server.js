@@ -10,7 +10,7 @@ app.use(express.bodyParser())
 app.use(app.router)
 
 //request 가 오면 reponse 응답을 보낸다
-app.post("/user", function (request, response) {
+app.post("/data.html", function (request, response) {
     var name = request.param("user_name")
     var age = request.param("user_age")
     var gender = request.param("gender")

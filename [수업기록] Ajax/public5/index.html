@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(function () {
+            $('input[type=checkbox]').on('click', function () {
+                var input_val = $(this).val()
+                var input_key = $(this).attr('id')
+                console.log(input_key + ' - ' + input_val)
+                if (this.checked) {
+                    localStorage.setItem(input_key, input_val)
+                } else {
+                    localStorage.setItem(input_key, "")
+                }
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+    <h1>로컬 스트리지 사용해보기</h1>
+    <form action="local_test.html">
+        <input type="checkbox" value="주민등록번호" id="jumin">주민등록번호 <br>
+        <input type="checkbox" value="이메일" id="email">이메일 <br>
+        <input type="checkbox" value="전화번호" id="tel">전화번호 <br>
+        <input type="checkbox" value="카드번호" id="card">카드번호 <br>
+        <input type="checkbox" value="주소" id="address">주소 <br>
+        <input type="submit" value="전송">
+    </form>
+</body>
+
+</html>
