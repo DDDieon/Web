@@ -264,11 +264,12 @@ nav .nav_list ul li:hover {
   width: 100%;
   margin-bottom: 130px;
 }
+#introduce_bottom .Introduce_bottom_detail {
+  height: 586px;
+}
 #introduce_bottom .resume {
   position: relative;
-  background: #000;
   transition: 1s ease-out;
-  opacity: 0;
 }
 #introduce_bottom .resume .Y-line {
   position: absolute;
@@ -281,6 +282,8 @@ nav .nav_list ul li:hover {
   top: 0;
 }
 #introduce_bottom .resume ul {
+  display: none;
+  background: #000;
   width: 820px;
   text-align: center;
   padding: 100px 0;
@@ -683,6 +686,29 @@ nav .nav_list ul li:hover {
   cursor: pointer;
   transition: 0.2s;
 }
+#Contact-Wrap #profile .profile-words:hover {
+  filter: brightness(0.8);
+}
+#Contact-Wrap #profile .profile-words:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(204, 204, 204, 0.178);
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  animation: bigger 1s;
+}
+@keyframes bigger {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+  }
+}
 #Contact-Wrap #profile .profile-words > p {
   cursor: pointer;
 }
@@ -708,18 +734,31 @@ nav .nav_list ul li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   text-align: center;
-  width: 450px;
-  height: 50px;
   margin: 0 auto;
   margin-top: 100px;
   color: #222;
   border-radius: 10px;
+  width: 665px;
 }
 #Contact-Wrap .contactDetails > p {
+  margin: 10px;
+  margin-top: 30px;
+  flex: 1;
   font-family: Russo One, sans-serif !important;
-  font-size: 20px;
+  font-size: 14px;
+}
+#Contact-Wrap .contactDetails > p i {
+  display: block;
+  font-size: 33px;
+  margin-bottom: 5px;
+}
+#Contact-Wrap .contactDetails > p i::before {
+  background: #ffd900;
+  padding: 5px;
+  border-radius: 50%;
 }
 
 footer {

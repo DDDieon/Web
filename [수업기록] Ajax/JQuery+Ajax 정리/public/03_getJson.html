@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라우트한 데이터 가져오기</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+    </script>
+    <style>
+        div {
+            border: 1px solid red;
+        }
+    </style>
+    <script>
+        $(function () {
+            $.getJSON('/data.json', function (data) {
+                console.log(data)
+                $.each(data, function (key, value) { //key가 인덱스라 생각한다
+                    $('div').eq(key).append('<h1>' + value.name + value.price + '</h1>')
+                })
+            })
+            $.getJSON('/books.json', function (data) {
+                console.log(data)
+                $.each(data.books.book, function (key, value) {
+                    $("ul").html(
+                        "<li>" + key + ": " + value.name + "(저작자: " + value.author + ")" +
+                        "</li>")
+                })
+                console.log(data.books.book[2].author)
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <h1>getJSON으로 특정위치에 있는 제이슨객체를 가져왔다</h1>
+    <div></div>
+    <div></div>
+    <div></div>
+    <ul>
+    </ul>
+</body>
+
+</html>

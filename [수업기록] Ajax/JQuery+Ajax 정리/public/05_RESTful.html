@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESTful</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+    </script>
+    <style>
+    </style>
+    <script>
+        $(function () {
+            //01. get으로 데이터 가져오기
+            $('#get').click(function () {
+                $.ajax({
+                    url: '/products',
+                    type: 'get',
+                    dataType: 'text',
+                    success: function (data) {
+                        $('#output').val(data) //textarea에 뿌리기
+                    }
+                })
+            })
+            //02. post으로 데이터 보내기
+            $('#post').click(function () {
+                $.ajax({
+                    url: '/products',
+                    type: 'post',
+                    dataType: 'text',
+                    data: { //보내고 싶은 데이터
+                        name: $("#name").val(),
+                        price: $("#price").val()
+                    },
+                    // 보내고 싶은 데이터를 배열추가
+                    success: function (data) {
+                        $('#output').val(data) //textarea에 뿌리기
+                    }
+                })
+            })
+            //03. put으로 데이터 수정하기
+            $('#put').click(function () {
+                var id = $('#num').val();
+                $.ajax({
+                    url: '/products/' + id,
+                    type: 'put',
+                    data: {
+                        name: $('#name').val(),
+                        price: $('#price').val()
+                    },
+                    dataType: 'text',
+                    success: function (data) {
+                        $('#output').val(data);
+                    }
+                });
+            });
+            $('#delete').click(function () {
+                var id = $('#num').val();
+                $.ajax({
+                    url: '/products/' + id,
+                    type: 'delete',
+                    dataType: 'text',
+                    success: function (data) {
+                        $('#output').val(data);
+                    }
+                })
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+    <h1>RESTful</h1>
+    <button id="get">GET 가져오기</button>
+    <button id="post">POST 전송</button>
+    <button id="put">PUT 수정</button>
+    <button id="delete">DELETE 삭제하기</button>
+    <h1>input</h1>
+    인덱스 <input type="number" id="num"><br>
+    <input type="text" id="name"><input type="text" id="price">
+    <h1>output</h1>
+    <textarea id="output" cols="100" rows="50"></textarea>
+</body>
+
+</html>

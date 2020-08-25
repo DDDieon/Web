@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Document</title>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
     <script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -12,13 +12,8 @@
     <script src="/js/swiper/swiper.js"></script>
 
     <style>
-        html,
         body {
-            position: relative;
-            height: 100%;
-        }
-
-        body {
+            background: #fff;
             font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
             font-size: 14px;
             color: #000;
@@ -28,27 +23,16 @@
 
         .swiper-container {
             width: 100%;
-            height: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
         }
 
         .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
+            background-position: center;
+            background-size: cover;
+            width: 480px;
+            height: 680px;
 
-            /* Center slide text vertically */
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
         }
     </style>
 </head>
@@ -64,7 +48,17 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
             <div class="swiper-wrapper">
-                <div class="swiper-slide" data-history="1"><img src="img/zone/zone1.png" alt="포트폴리오 슬라이드1"></div>
+                <div class="swiper-slide" style="background-image:url('img/zone/zone1.png')"></div>
+                <div class="swiper-slide" style="background-image:url('img/zone/zone2.png')"></div>
+                <div class="swiper-slide" style="background-image:url('img/zone/zone3.png')"></div>
+                <div class="swiper-slide" style="background-image:url('img/zone/zone4.png')"></div>
+                <div class="swiper-slide" style="background-image:url('img/zone/zone5.png')"></div>
+                <div class="swiper-slide" style="background-image:url('img/zone/zone6.png')"></div>
+                <div class="swiper-slide" style="background-image:url('img/zone/zone7.png')"></div>
+                <div class="swiper-slide" style="background-image:url('img/zone/zone8.png')"></div>
+                <div class="swiper-slide" style="background-image:url('img/zone/zone9.png')"></div>
+                <div class="swiper-slide" style="background-image:url('img/zone/zone10.png')"></div>
+                <!-- <div class="swiper-slide" data-history="1"><img src="img/zone/zone1.png" alt="포트폴리오 슬라이드1"></div>
                 <div class="swiper-slide" data-history="Slide 2"><img src="img/zone/zone2.png" alt="포트폴리오 슬라이드2"></div>
                 <div class="swiper-slide" data-history="3"><img src="img/zone/zone3.png" alt="포트폴리오 슬라이드3"></div>
                 <div class="swiper-slide" data-history="Slide 4"><img src="img/zone/zone4.png" alt="포트폴리오 슬라이드4"></div>
@@ -74,24 +68,26 @@
                 <div class="swiper-slide" data-history="Slide 8"><img src="img/zone/zone8.png" alt="포트폴리오 슬라이드8"></div>
                 <div class="swiper-slide" data-history="9"><img src="img/zone/zone9.png" alt="포트폴리오 슬라이드9"></div>
                 <div class="swiper-slide" data-history="Slide 10"><img src="img/zone/zone10.png" alt="포트폴리오 슬라이드10">
-                </div>
+                </div> -->
             </div>
             <div class="swiper-pagination"></div>
         </div>
     </section>
     <script>
         var swiper = new Swiper('.swiper-container', {
-            spaceBetween: 50,
-            slidesPerView: 1,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
             },
             pagination: {
                 el: '.swiper-pagination',
-            },
-            history: {
-                key: 'slide',
             },
         });
     </script>

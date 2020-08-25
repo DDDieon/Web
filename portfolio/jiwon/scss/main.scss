@@ -348,11 +348,13 @@ nav {
     width: 100%;
     margin-bottom: 130px;
 
+    .Introduce_bottom_detail {
+        height: 586px;
+    }
+
     .resume {
         position: relative;
-        background: #000;
         transition: 1s ease-out;
-        opacity: 0;
 
         .Y-line {
             position: absolute;
@@ -367,6 +369,8 @@ nav {
         }
 
         ul {
+            display: none;
+            background: #000;
             width: 820px;
             text-align: center;
             padding: 100px 0;
@@ -830,6 +834,34 @@ nav {
         }
 
         .profile-words {
+
+            &:hover {
+                filter: brightness(0.8);
+
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    background: rgba(204, 204, 204, 0.178);
+                    border-radius: 50%;
+                    width: 300px;
+                    height: 300px;
+                    animation: bigger 1s;
+
+                    @keyframes bigger {
+                        0% {
+                            width: 0;
+                            height: 0;
+                        }
+
+                        100% {
+                            width: 300px;
+                            height: 300px;
+                        }
+                    }
+                }
+            }
+
             position: absolute;
             top: 0;
             background: url("/img/monitor.png");
@@ -875,18 +907,35 @@ nav {
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         text-align: center;
-        width: 450px;
-        height: 50px;
         margin: 0 auto;
         margin-top: 100px;
         color: #222;
         border-radius: 10px;
+        width: 665px;
 
         >p {
+            margin: 10px;
+            margin-top: 30px;
+            flex: 1;
             font-family: Russo One, sans-serif !important;
-            font-size: 20px;
+            font-size: 14px;
+
+            i {
+                display: block;
+                font-size: 33px;
+                margin-bottom: 5px;
+
+                &::before {
+                    background: $point;
+                    padding: 5px;
+                    border-radius: 50%;
+                }
+
+            }
+
         }
     }
 }

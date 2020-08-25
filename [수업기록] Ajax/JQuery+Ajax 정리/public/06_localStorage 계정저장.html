@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>로컬스토리지로 아이디 저장하기</h1>
+    <form action="" id="login">
+        아이디: <input type="text" name="id" size="20" id="id" required><br>
+        비밀번호: <input type="password" name="pw" size="20" required><br>
+        <input type="checkbox" value="true" id="idsave"> id저장
+        <input type="submit" value="로그인">
+    </form>
+    <script>
+        var ids = document.getElementById("id")
+        var idsave = document.getElementById("idsave")
+        if (localStorage.id == undefined) { // 로컬스토리지에 id없을 때는 value가 빈칸이도록
+            ids.value = "";
+            idsave.checked = false;
+        } else {
+            ids.value = localStorage.id //로컬스토리지에서 id의 밸류값을 가져오기
+            idsave.checked = true;
+        }
+
+
+        document.getElementById("login").onsubmit = function () {
+            if (idsave.checked == true) {
+                localStorage.id = ids.value //로컬스토리지에 저장하기
+            } else {
+                delete localStorage.id
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -53,20 +53,13 @@ $(function () {
 
 // project---scroll show
 $(function () {
-    $(".project").css("opacity", "1")
     $(window).scroll(function () {
         var wT = $(this).scrollTop()
         var itT = $("#introduce_top").offset().top - 50
         var itB = $("#introduce_top").offset().top + 800
         if (itT < wT) {
-            $(".resume").css("opacity", "1")
-        }
-        if (itB < wT) {
-            $(".project").each(function (i) {
-                $(this)
-                    .delay(500 * i)
-                    .fadeIn(500)
-            })
+            $(".resume>ul").slideDown()
+            $(".resume").css("background", "#000")
         }
     })
 })
