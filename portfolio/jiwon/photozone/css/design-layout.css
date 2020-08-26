@@ -1,0 +1,137 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+header .mobile-header {
+  position: relative;
+  border: 1px solid #ccc;
+  height: 105px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+header .mobile-header .logo {
+  width: 70px;
+  height: 35px;
+}
+header .mobile-header .logo img {
+  width: 100%;
+  height: 100%;
+}
+header .mobile-header .hamburger img {
+  display: block;
+  width: 35px;
+  height: 35px;
+}
+header .mobile-drawer {
+  position: absolute;
+  right: 120%;
+  top: 0;
+  width: 80%;
+  height: 100vh;
+  padding: 7.5px;
+  background: #fff;
+  box-shadow: -4px 4px 20px rgba(0, 0, 0, 0.25);
+}
+header .mobile-drawer .closeIcon {
+  position: absolute;
+  right: 30px;
+  top: 35px;
+}
+header .mobile-drawer .mobile-gnb {
+  position: absolute;
+  right: 30px;
+  top: 170px;
+  text-align: right;
+}
+
+.main-headline {
+  height: 130px;
+  border: 1px solid #ccc;
+}
+
+.contents .images {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  margin: 0 auto;
+}
+.contents .images-list div.full {
+  height: 300px;
+}
+.contents .images-list div.half {
+  height: 145px;
+}
+.contents .images-list a.marginLeft10 {
+  margin-left: 10px;
+}
+.contents .images-list a {
+  margin-bottom: 10px;
+}
+.contents .images-list a.items {
+  display: block;
+  width: 145px;
+  height: 145px;
+  border-radius: 12px;
+}
+.contents .images-list.imgW1 a.item1 {
+  width: 300px !important;
+  height: 300px !important;
+  background: url("/photozone/assets/image/de-1.png") no-repeat center center;
+  background-size: 180%;
+}
+.contents .images-list.imgW2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contents .images-list.imgW2 a.item2 {
+  background: url("/photozone/assets/image/de-2.png") no-repeat center center;
+  background-size: 180%;
+}
+.contents .images-list.imgW2 a.item3 {
+  background: url("/photozone/assets/image/de-3.png") no-repeat center center;
+  background-size: 180%;
+}
+.contents .images-list.imgW2 a.item4 {
+  width: 300px;
+  height: 145px;
+  background: url("/photozone/assets/image/de-4.png") no-repeat center center;
+  background-size: 180%;
+}
+.contents .images-list.imgW3 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contents .images-list.imgW3 a.item5 {
+  background: url("/photozone/assets/image/de-5.png") no-repeat center center;
+  background-size: 180%;
+}
+.contents .images-list.imgW3 a.item6 {
+  background: url("/photozone/assets/image/de-6.png") no-repeat center center;
+  background-size: 180%;
+}
+.contents .images-list.imgW4 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contents .images-list.imgW4 a.item7 {
+  width: 300px;
+  height: 145px;
+  background: url("/photozone/assets/image/ability.png") no-repeat center center;
+  background-size: 100%;
+}
+.contents .images-list.imgW5 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contents .images-list.imgW5 a.item8 {
+  background: #dddddd;
+}
+.contents .images-list.imgW5 a.item9 {
+  background: #222;
+}

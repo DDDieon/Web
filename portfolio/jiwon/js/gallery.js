@@ -26,6 +26,21 @@ $(function () {
             '<a href="https://beecanvas.com/s/7aEbbrJ3be6fLzSMKJ21QmjHkrEONNHRQ8ze5dMO25TvJ1orEyjSYJxy-ZzwFuDn" class="menu2_link" target="_black"></a>'
         )
     })
+    $(".carousel_item_2").click(function () {
+        $(this).wrap(
+            '<a href="https://beecanvas.com/s/7aEbbrJ3be6fLzSMKJ21QmjHkrEONNHRQ8ze5dMO25TvJ1orEyjSYJxy-ZzwFuDn" class="menu2_link" target="_black"></a>'
+        )
+    })
+    $(".carousel_item_3").click(function () {
+        $(this).wrap(
+            '<a href="/photozone/design.html" class="menu2_link" target="_black"></a>'
+        )
+    })
+    $(".carousel_item_4").click(function () {
+        $(this).wrap(
+            '<a href="/photozone/video.html" class="menu2_link" target="_black"></a>'
+        )
+    })
 })
 
 
