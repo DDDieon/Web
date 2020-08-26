@@ -3,8 +3,8 @@
 $pontColor: #ff3939;
 
 @mixin h2Title {
-    font-size: 22px;
-    font-family: 'Russo One', sans-serif;
+    font-size: 27px;
+    font-family: "Russo One", sans-serif;
 }
 
 body {
@@ -25,7 +25,9 @@ body {
             h2 {
                 @include h2Title;
             }
-
+            p {
+                margin-bottom: 5px;
+            }
             a.goProject {
                 margin: 0 auto;
                 font-size: 10px;
@@ -36,16 +38,16 @@ body {
 
         &--back {
             position: absolute;
-            background: url("/photozone/assets/image/title/Design.png");
+            // background: url("/photozone/assets/image/title/Design.png");
             background-size: 100% auto;
             z-index: -9999;
             width: 100%;
             height: 96px;
             top: 17px;
             font-size: 80px;
-            font-family: 'Russo One', sans-serif;
-            color: rgba(88, 88, 88, 0.05);
-            text-indent: -9999px;
+            font-family: "Russo One", sans-serif;
+            color: rgba(75, 75, 75, 0.096);
+            // text-indent: -9999px;
         }
     }
 }

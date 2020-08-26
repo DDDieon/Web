@@ -13,8 +13,11 @@ body {
   align-items: center;
 }
 .main-headline--title h2 {
-  font-size: 22px;
+  font-size: 27px;
   font-family: "Russo One", sans-serif;
+}
+.main-headline--title p {
+  margin-bottom: 5px;
 }
 .main-headline--title a.goProject {
   margin: 0 auto;
@@ -24,7 +27,6 @@ body {
 }
 .main-headline--back {
   position: absolute;
-  background: url("/photozone/assets/image/title/Design.png");
   background-size: 100% auto;
   z-index: -9999;
   width: 100%;
@@ -32,6 +34,5 @@ body {
   top: 17px;
   font-size: 80px;
   font-family: "Russo One", sans-serif;
-  color: rgba(88, 88, 88, 0.05);
-  text-indent: -9999px;
+  color: rgba(75, 75, 75, 0.096);
 }

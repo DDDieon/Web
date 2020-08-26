@@ -4,10 +4,15 @@ body {
   height: 100%;
 }
 
+header {
+  height: 105px;
+}
+header .mwrap {
+  padding-top: 35px;
+}
 header .mobile-header {
   position: relative;
   border: 1px solid #ccc;
-  height: 105px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,15 +31,21 @@ header .mobile-header .hamburger img {
   width: 35px;
   height: 35px;
 }
+header .over {
+  width: 100%;
+  height: 100vh;
+}
 header .mobile-drawer {
+  display: none;
   position: absolute;
-  right: 120%;
+  right: -100%;
   top: 0;
   width: 80%;
-  height: 100vh;
+  height: 100%;
   padding: 7.5px;
   background: #fff;
   box-shadow: -4px 4px 20px rgba(0, 0, 0, 0.25);
+  z-index: 11111;
 }
 header .mobile-drawer .closeIcon {
   position: absolute;
@@ -51,6 +62,7 @@ header .mobile-drawer .mobile-gnb {
 .main-headline {
   height: 130px;
   border: 1px solid #ccc;
+  margin-bottom: 20px;
 }
 
 .contents .images {
@@ -60,6 +72,7 @@ header .mobile-drawer .mobile-gnb {
   align-items: center;
   width: 300px;
   margin: 0 auto;
+  padding-bottom: 40px;
 }
 .contents .images-list div.full {
   height: 300px;
@@ -100,7 +113,7 @@ header .mobile-drawer .mobile-gnb {
 .contents .images-list.imgW2 a.item4 {
   width: 300px;
   height: 145px;
-  background: url("/photozone/assets/image/de-4.png") no-repeat center center;
+  background: #272727;
   background-size: 180%;
 }
 .contents .images-list.imgW3 {
@@ -134,4 +147,24 @@ header .mobile-drawer .mobile-gnb {
 }
 .contents .images-list.imgW5 a.item9 {
   background: #222;
+}
+
+.footer {
+  background: #eee;
+  padding: 40px 0;
+  color: #666;
+}
+.footer address {
+  display: flex;
+  justify-content: space-around;
+}
+.footer address .publisher {
+  font-weight: bold;
+}
+.footer .address-github i {
+  display: block;
+}
+.footer .address-github i::before {
+  display: block;
+  font-size: 24px;
 }
