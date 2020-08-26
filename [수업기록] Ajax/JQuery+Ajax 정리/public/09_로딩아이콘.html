@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Ajax 이벤트 연결  21-27
+            $(document).ajaxComplete(function () {
+                $('#ajax-event').append('<h1>AjaxComplete<h1>');
+                setTimeout(function () {
+                    $('img').hide()
+                }, 500)
+            }).ajaxError(function () {
+                $('#ajax-event').append('<h1>AjaxError<h1>')
+            }).ajaxSend(function () {
+                $('#ajax-event').append('<h1>AjaxSend<h1>');
+                $('#ajax-event').append('<img src="loading.gif" width="200" height="200">');
+            }).ajaxSuccess(function () {
+                $('#ajax-event').append('<h1>AjaxSuccess<h1>')
+            }).ajaxStart(function () {
+                $('#ajax-event').append('<h1>AjaxStart<h1>')
+            });
+
+            // Ajax 수행
+            $('#wrap').load('/data.json');
+        });
+    </script>
+</head>
+
+<body>
+    <div id="ajax-event"></div>
+    <div id="wrap"></div>
+</body>
+
+</html>

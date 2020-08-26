@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(function () {
+            var data = {
+                name: "강호동",
+                region: "서울"
+            }
+            var data1 = {
+                name: "kimyuna",
+                region: "seoul"
+            }
+            var param = $.param(data) //요청매개변수 문자열로 변환
+            var param1 = $.param(data1)
+            console.log(param1)
+            $('<p></p>').text(param).appendTo('body');
+            $('<p></p>').text(param1).appendTo('body');
+        })
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

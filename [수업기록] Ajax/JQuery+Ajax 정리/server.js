@@ -17,7 +17,7 @@ var app = express();
 app.use(express.static('public'));
 app.use(express.bodyParser());
 app.use(app.router);
-// 라우트합니다. 03_getJson과 04_xml읽기에서 사용-----------------------------
+// 라우트합니다. *** 03_getJson과 04_xml읽기에서 사용-----------------------------
 app.all('/data.html', function (request, response) {
     var output = '';
     output += '<!DOCTYPE html>';
@@ -53,42 +53,6 @@ app.all('/data.xml', function (request, response) {
     response.type('text/xml');
     response.send(output);
 });
-app.all('/parameter', function (request, response) {
-    // 변수를 선언합니다.
-    var name = request.param('name');
-    var region = request.param('region');
-    // 응답합니다.
-    response.send('<h1>' + name + ':' + region + '</h1>');
-});
-app.all('/parameter/:id', function (request, response) {
-    // 변수를 선언합니다.
-    var id = request.param('id');
-    // 응답합니다.
-    response.send('<h1>' + id + '</h1>');
-});
-app.get('/products', function (request, response) {
-    response.send(items);
-});
-app.get('/products/:id', function (request, response) {
-    // 변수를 선언합니다.
-    var id = Number(request.param('id'));
-    if (isNaN(id)) {
-        // 오류: 잘못된 경로
-        response.send({
-            error: '숫자를 입력하세요!'
-        });
-    } else if (items[id]) {
-        // 정상
-        response.send(items[id]);
-    } else {
-        // 오류: 요소가 없을 경우
-        response.send({
-            error: '존재하지 않는 데이터입니다!'
-        });
-    }
-});
-
-
 //-------------------------*** 05_RESTful.html에서 사용-------------------------------
 app.post('/products', function (request, response) {
     // 변수를 선언합니다.
@@ -152,6 +116,43 @@ app.del('/products/:id', function (request, response) {
         });
     }
 });
+//-------------- ** * 08_매개변수 전달부터 시작-----------------------
+app.all('/parameter', function (request, response) {
+    // 변수를 선언합니다.
+    var name = request.param('name');
+    var region = request.param('region');
+    // 응답합니다.
+    response.send('<h1>' + name + ':' + region + '</h1>');
+});
+app.all('/parameter/:id', function (request, response) {
+    // 변수를 선언합니다.
+    var id = request.param('id');
+    // 응답합니다.
+    response.send('<h1>' + id + '</h1>');
+});
+app.get('/products', function (request, response) {
+    response.send(items);
+});
+app.get('/products/:id', function (request, response) {
+    // 변수를 선언합니다.
+    var id = Number(request.param('id'));
+    if (isNaN(id)) {
+        // 오류: 잘못된 경로
+        response.send({
+            error: '숫자를 입력하세요!'
+        });
+    } else if (items[id]) {
+        // 정상
+        response.send(items[id]);
+    } else {
+        // 오류: 요소가 없을 경우
+        response.send({
+            error: '존재하지 않는 데이터입니다!'
+        });
+    }
+});
+
+
 // 웹 서버를 실행합니다.
 http.createServer(app).listen(51000, function () {
     console.log('Server Running at http://127.0.0.1:51000');

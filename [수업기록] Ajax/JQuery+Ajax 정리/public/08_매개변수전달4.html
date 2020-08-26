@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        // serialize() 메서드를 사용하면 입력 양식에 적힌 값을 쿼리 문자열로 바꿉니다. (추천)
+
+        // 방문자가 입력요소에 값을 입력하고 전송하였을때, 데이터 전송 방식인 'name1=value1 & name2=value2...'쿼리 스트링 형식의 데이터로 변환야여 액션 페이지에 전송합니다.
+
+
+        $(document).ready(function () {
+            $('#my-form').submit(function (event) {
+                // Ajax 요청을 수행합니다.
+
+                var serial = $(this).serialize()
+                var serialArray = $(this).serializeArray()
+                console.log(serial)
+                console.log(serialArray)
+                $("<h2></h2>").text(serial).appendTo("#wrap2")
+                $("<h2></h2>").text(serialArray).appendTo("#wrap2")
+                $('#wrap').load('/parameter', $(this).serialize());
+                // 기본 이벤트를 제거합니다.
+                event.preventDefault();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <form id="my-form">
+        <table>
+            <tr>
+                <td><label for="name">Name</label></td>
+                <td><input id="name" name="name" type="text" /></td>
+            </tr>
+            <tr>
+                <td><label for="region">Region</label></td>
+                <td><input id="region" name="region" type="text" /></td>
+            </tr>
+        </table>
+        <input type="submit" value="Get Ajax String" />
+    </form>
+    <div id="wrap">
+
+    </div>
+    <div id="wrap2"></div>
+</body>
+
+</html>

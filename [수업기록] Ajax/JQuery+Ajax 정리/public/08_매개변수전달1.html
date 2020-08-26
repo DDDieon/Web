@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        // 각각의 입력 양식에서 value 속성을 직접 가져온 뒤 URL을 생성합니다. 가장 단순하고 무식한 방법입니다. 이러한 방법은 submit 이벤트가 발생할 때보다는 버튼의 click 이벤트가 실행될 때 사용합니다.
+        $(document).ready(function () {
+            $('#my-form').submit(function (event) {
+                // 입력 양식의 value 속성을 가져옵니다.
+                var name = $('#name').val();
+                var region = $('#region').val();
+
+                // Ajax 요청을 수행합니다.
+                var url = '/parameter?name=' + name + '&region=' + region;
+                $('#wrap').load(url); //데이터전송 (서버에서 param)
+
+                // 기본 이벤트를 제거합니다.
+                event.preventDefault();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <form id="my-form">
+        <table>
+            <tr>
+                <td><label for="name">Name</label></td>
+                <td><input id="name" name="name" type="text" /></td>
+            </tr>
+            <tr>
+                <td><label for="region">Region</label></td>
+                <td><input id="region" name="region" type="text" /></td>
+            </tr>
+        </table>
+        <input type="submit" value="Get Ajax String" />
+    </form>
+    <div id="wrap">
+
+    </div>
+</body>
+
+</html>
