@@ -4,6 +4,19 @@ body {
   font-size: 12px;
 }
 
+.desktop-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+.desktop-header .desktop-gnb {
+  display: flex;
+}
+.desktop-header .desktop-gnb .desktop-nav--list {
+  font-family: "Russo One", sans-serif;
+}
+
 .main {
   text-align: center;
 }
@@ -43,4 +56,24 @@ body {
   font-family: "Russo One", sans-serif;
   color: rgba(75, 75, 75, 0.096);
   text-indent: -9999px;
+}
+
+.footer {
+  background: rgba(238, 238, 238, 0.199);
+  padding: 40px 0;
+  color: #222;
+}
+.footer address {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer address .publisher {
+  font-family: "Russo One", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+.footer address-github i {
+  display: block;
+  font-size: 30px;
 }

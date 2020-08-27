@@ -14,11 +14,20 @@ body,
     height: 100%;
 }
 
-.wrap {
-    letter-spacing: -0.05em;
-}
+
 
 // mobile first
+
+.wrap {
+    letter-spacing: -0.05em;
+
+    // 모바일에서 데스크탑의 header를를 감춥니다.
+    .desktop-header {
+        display: none;
+    }
+
+}
+
 header {
     height: 105px;
 
@@ -108,7 +117,7 @@ header {
                 margin-left: 10px;
             }
 
-            // background images
+            // background 이미지를 배치합니다
             a {
                 margin-bottom: 10px;
 
@@ -200,32 +209,6 @@ header {
                         background: #222;
                     }
                 }
-            }
-        }
-    }
-}
-
-.footer {
-    background: #eee;
-    padding: 40px 0;
-    color: #666;
-
-    address {
-        display: flex;
-        justify-content: space-around;
-
-        .publisher {
-            font-weight: bold;
-        }
-    }
-
-    .address-github {
-        i {
-            display: block;
-
-            &::before {
-                display: block;
-                font-size: 24px;
             }
         }
     }

@@ -22,7 +22,7 @@
                 <div class="mobile-header">
                     <h1 class="logo">
                         <a href="/photozone/design.html"><img src="/photozone/assets/image/jwlogo.png"
-                                alt="로고입니다" /></a>
+                                alt="모바일 로고입니다" /></a>
                     </h1>
                     <button type="button" class="hamburger">
                         <img src="/photozone/assets/image/hamburger.png" alt="모바일 메뉴 열기" />
@@ -62,20 +62,32 @@
                         </ul>
                     </nav>
                 </div>
-            </div>
-            <!-- <div class="desktop-header">
-                    <ul class="gnb">
+                <div class="desktop-header">
+                    <p class="logo">
+                        <a href="/photozone/design.html"><img src="/photozone/assets/image/jwlogo.png"
+                                alt="데스크탑 로고입니다" /></a>
+                    </p>
+                    <ul class="desktop-nav">
                         <li class="desktop-nav--list">Design</li>
                         <li class="desktop-nav--list">Video</li>
                         <li class="desktop-nav--list">Info</li>
                     </ul>
-                </div> -->
+                </div>
+                <script>
+                    $(function () {
+                        $(window).resize(function () {
+                            $(".mobile-header").
+                        })
+
+                    })
+                </script>
+            </div>
         </header>
         <div class="main">
             <div class="main-headline">
                 <div class="main-headline--title">
                     <h2>Design</h2>
-                    <p class="headlineDesc">기본기에 충실하면서도 발전을 거듭합니다</p>
+                    <p class="headlineDesc">것은 이 아름답고 따뜻한 하는 이상은 운다.</p>
                     <a class="goProject" href="/"><img src="/photozone/assets/image/goProject.png" alt="
                         프로젝트 사이트로 이동합니다" /></a>
                 </div>
@@ -104,21 +116,12 @@
                     <a href="javascript:void(0)" class="item9 items marginLeft"></a>
                 </div>
             </div>
+            <div class="contents__bgColor"></div>
         </div>
-        <script>
-            // $(function () {
-            //     $(window).resize(function () {
-            //         var windowWidth = $(window).width();
-            //         if (windoWidth > 1024) {
-            //             $(".contents .marginLeft10").removeClass("marginLeft10")
-            //         }
-            //     })
-            // })
-        </script>
         <footer class="footer">
             <address>
                 <div class="address-text">
-                    <p class="publisher">퍼블리셔 전지원</p>
+                    <p class="publisher">JEON JIWON</p>
                     <p>https://github.com/DDDieon</p>
                 </div>
                 <div class="address-github">

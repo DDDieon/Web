@@ -8,6 +8,9 @@ body,
 .wrap {
   letter-spacing: -0.05em;
 }
+.wrap .desktop-header {
+  display: none;
+}
 
 header {
   height: 105px;
@@ -150,24 +153,4 @@ header .mobile-drawer .mobile-gnb {
 }
 .contents .images-list.imgW5 a.item9 {
   background: #222;
-}
-
-.footer {
-  background: #eee;
-  padding: 40px 0;
-  color: #666;
-}
-.footer address {
-  display: flex;
-  justify-content: space-around;
-}
-.footer address .publisher {
-  font-weight: bold;
-}
-.footer .address-github i {
-  display: block;
-}
-.footer .address-github i::before {
-  display: block;
-  font-size: 24px;
 }

@@ -13,7 +13,7 @@ $tabletHeadline: 193px !important;
 $DeskHeadline: 485px !important;
 
 /* Tablet Device */
-@media all and (min-width:768px) and (max-width:1023px) {
+@media all and (min-width:768px) and (max-width:1259px) {
     .main {
         &-headline {
             height: $tabletHeadline;
@@ -53,7 +53,36 @@ $DeskHeadline: 485px !important;
     }
 }
 
-@media all and (min-width:1024px) {
+@media all and (min-width:1260px) {
+
+    html,
+    body {
+        font-size: 16px;
+        overflow: auto !important;
+    }
+
+    // mobiler버전의 header와 교체합니다
+    .wrap {
+        .mobile-header {
+            display: none;
+        }
+
+        .over {
+            display: none;
+        }
+
+        .desktop-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 100px;
+
+            .desktop-gnb {
+                display: flex;
+            }
+        }
+    }
+
     .main {
         &-headline {
             height: $DeskHeadline;
@@ -79,6 +108,8 @@ $DeskHeadline: 485px !important;
     }
 
     .contents {
+        position: relative;
+
         .images {
             flex-direction: row;
             flex-wrap: wrap;
@@ -123,6 +154,40 @@ $DeskHeadline: 485px !important;
 
                     a.item7 {
                         width: $desk-detail-Big;
+                    }
+                }
+            }
+        }
+
+        &__bgColor {
+            position: absolute;
+            width: 100%;
+            height: 1235px;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: #efefef;
+            z-index: -999;
+        }
+    }
+
+    .footer {
+        background: #fff;
+        padding: 45px 0;
+        color: #000;
+
+        address {
+            .publisher {
+                font-size: 27px;
+            }
+
+            &-github {
+                i {
+                    display: block;
+
+                    &::before {
+                        display: block;
+                        font-size: 40px !important;
                     }
                 }
             }
