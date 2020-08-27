@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    </script>
+    <style>
+        #calendar {
+            display: flex;
+            width: 90%;
+            flex-wrap: wrap;
+            background: #fff;
+        }
+
+        div.date {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            position: relative;
+        }
+
+        div.date span {
+            display: block;
+            width: 50px;
+            height: 50px;
+            bordeR: 1px solid #ddd;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        div.date span p {
+            white-space: nowrap;
+        }
+
+        #pop {
+            width: 200px;
+            height: 150px;
+            border: 3px solid blue;
+            box-sizing: border-box;
+            padding: 10px;
+            background: yellow;
+            z-index: 1;
+            position: absolute;
+            display: none;
+        }
+
+        #sch {
+            width: 200px;
+            height: 150px;
+            border: 3px solid red;
+            box-sizing: border-box;
+            padding: 10px;
+            background: yellow;
+            z-index: 1;
+            position: absolute;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- mouseover시 보여짐 -->
+    <div class="calender-wrap">
+        <div id="pop">
+            <h2>스케쥴</h2>
+        </div>
+        <!-- click시 보여짐 보여짐 -->
+        <div id="sch">
+            <textarea></textarea>
+            <input type="button" value="수정">
+        </div>
+        <!-- 달력 -->
+        <h1>달력 만들고 스케쥴 넣어보자</h1>
+        <div id="calendar"></div>
+    </div>
+</body>
+<script>
+    $(function () {
+
+        // 박스 그리기
+        var out = '';
+        for (var i = 1; i <= 31; i++) {
+            if (localStorage.getItem(i) == undefined) {
+                out += '<div class="date"><span>' + i + '</span></div>';
+            } else {
+                out += '<div class="date"><span data-sch="' + localStorage.getItem(i) + '">' + i + '<p>' +
+                    localStorage.getItem(i) + '</p></span></div>';
+            }
+        }
+        $('#calendar').html(out);
+
+        $('#calendar .date').on('mouseenter', 'span', function () {
+            var text1 = $(this).attr('data-sch');
+            var left = $(this).offset().left + 50;
+            var top = $(this).offset().top + 50;
+            console.log(text1)
+            if (text1 == undefined) return;
+            $('#pop').show();
+            $('#pop').find('h2').html(text1);
+            $('#pop').css({
+                left: left,
+                top: top
+            });
+        });
+
+        $('#calendar').on('mouseleave', 'span', function () {
+            $('#pop').hide();
+        });
+
+        var AAA;
+        var BBB;
+        $('#calendar').on('click', 'span', function () {
+            var i = $('#calendar .date span').index(this);
+            console.log(i);
+            var left = $(this).offset().left + 50;
+            var top = $(this).offset().top + 50;
+
+            $('#sch').show();
+            $('#pop').hide();
+            $('#sch').css({
+                left: left,
+                top: top
+            });
+
+            AAA = i;
+            BBB = $(this).attr('data-sch');
+            $('#sch').find('textarea').val(BBB);
+        });
+
+        $('body,html').on("click", function () {
+
+        })
+
+        $('#sch input').on('click', function () {
+            var textval = $('#sch').find('textarea').val();
+            $('#calendar .date').eq(AAA).find('span').attr('data-sch', textval);
+            $('#sch').hide();
+            $('#calendar .date').eq(AAA).find('span p').remove();
+            $('#calendar .date').eq(AAA).find('span').append('<p>' + textval + '</p>');
+            // 로컬에 저장
+            localStorage.setItem(Number(AAA + 1), textval)
+        });
+        $('#pop button').on('click', function () {
+            $('#pop').hide();
+        })
+
+    }); //
+</script>
+
+</html>

@@ -1,17 +1,31 @@
 @charset "UTF-8";
 
+
+$pontColor: #ff3939;
+$mobile-WidthFull: 300px;
+$desk-WidthFull: 580px;
+$mobileHeadline : 96px;
+$tabletHeadline: 193px !important;
+
 html,
-body {
+body,
+.wrap {
     width: 100%;
     height: 100%;
+}
+
+.wrap {
+    letter-spacing: -0.05em;
 }
 
 // mobile first
 header {
     height: 105px;
+
     .mwrap {
         padding-top: 35px;
     }
+
     .mobile-header {
         position: relative;
         border: 1px solid #ccc;
@@ -43,6 +57,7 @@ header {
         width: 100%;
         height: 100vh;
     }
+
     .mobile-drawer {
         display: none;
         position: absolute;
@@ -54,6 +69,7 @@ header {
         background: #fff;
         box-shadow: -4px 4px 20px rgba(0, 0, 0, 0.25);
         z-index: 11111;
+
         .closeIcon {
             position: absolute;
             right: 30px;
@@ -76,26 +92,19 @@ header {
 }
 
 .contents {
+    width: 100%;
+
     .images {
+        width: $mobile-WidthFull;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 300px;
         margin: 0 auto;
         padding-bottom: 40px;
+
         &-list {
-            // height class setting
-            div.full {
-                height: 300px;
-            }
-
-            div.half {
-                height: 145px;
-            }
-
-            // margin class setting
-            a.marginLeft10 {
+            a.marginLeft {
                 margin-left: 10px;
             }
 
@@ -114,8 +123,8 @@ header {
             &.imgW1 {
                 a {
                     &.item1 {
-                        width: 300px !important;
-                        height: 300px !important;
+                        width: $mobile-WidthFull;
+                        height: $mobile-WidthFull;
                         background: url("/photozone/assets/image/de-1.png") no-repeat center center;
                         background-size: 180%;
                     }
@@ -128,6 +137,7 @@ header {
 
                 a {
                     &.item2 {
+                        width: $mobile-WidthFull !important;
                         background: url("/photozone/assets/image/de-2.png") no-repeat center center;
                         background-size: 180%;
                     }
@@ -138,7 +148,7 @@ header {
                     }
 
                     &.item4 {
-                        width: 300px;
+                        width: 145px;
                         height: 145px;
                         background: rgb(39, 39, 39);
                         background-size: 180%;
@@ -169,10 +179,9 @@ header {
 
                 a {
                     &.item7 {
-                        width: 300px;
+                        width: $mobile-WidthFull;
                         height: 145px;
-                        background: url("/photozone/assets/image/ability.png") no-repeat center
-                            center;
+                        background: url("/photozone/assets/image/ability.png") no-repeat center center;
                         background-size: 100%;
                     }
                 }
@@ -200,16 +209,20 @@ header {
     background: #eee;
     padding: 40px 0;
     color: #666;
+
     address {
         display: flex;
         justify-content: space-around;
+
         .publisher {
             font-weight: bold;
         }
     }
+
     .address-github {
         i {
             display: block;
+
             &::before {
                 display: block;
                 font-size: 24px;

@@ -1,5 +1,6 @@
 body {
   font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
   font-size: 12px;
 }
 
@@ -13,20 +14,26 @@ body {
   align-items: center;
 }
 .main-headline--title h2 {
-  font-size: 27px;
   font-family: "Russo One", sans-serif;
+  font-size: 27px;
 }
 .main-headline--title p {
   margin-bottom: 5px;
 }
 .main-headline--title a.goProject {
+  display: block;
   margin: 0 auto;
   font-size: 10px;
   width: 94.5px;
   height: 22px;
 }
+.main-headline--title a.goProject img {
+  width: 100%;
+  height: 100%;
+}
 .main-headline--back {
   position: absolute;
+  background: url("/photozone/assets/image/title/Design.png") no-repeat;
   background-size: 100% auto;
   z-index: -9999;
   width: 100%;
@@ -35,4 +42,5 @@ body {
   font-size: 80px;
   font-family: "Russo One", sans-serif;
   color: rgba(75, 75, 75, 0.096);
+  text-indent: -9999px;
 }

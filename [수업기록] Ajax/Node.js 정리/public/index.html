@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body>
+    <form action="/products" method="get">
+        <fieldset>
+            <legend>조회(GET)</legend>
+            <input type="submit" value="조회" id="get">
+        </fieldset>
+    </form>
+    <form action="/products" method="post">
+        <fieldset>
+            <legend>추가(POST)</legend>
+            <input type="text" name="name">
+            <input type="text" name="price">
+            <input type="submit" value="추가" id="post">
+        </fieldset>
+    </form>
+    <hr>
+    <form id="my-form">
+        <fieldset>
+            <legend>serialize</legend>
+            Name: <input type="text" name="name">
+            Price: <input type="text" name="price">
+            <input type="submit" value="전송">
+        </fieldset>
+    </form>
+    <div id="wrap">
+
+
+    </div>
+</body>
+<script>
+    $("#get").click(function (e) {
+        $("#wrap").load('/products')
+        e.preventDefault()
+    })
+    $("#my-form").submit(function (e) {
+        var serialize = $(this).serialize()
+        var serializeArray = $(this).serializeArray()
+        console.log(serializeArray)
+        $("<h2></h2>").text(serialize).appendTo("#wrap")
+        $("<h2></h2>").text(serializeArray).appendTo("#wrap")
+        e.preventDefault()
+    })
+</script>
+
+</html>
