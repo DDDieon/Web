@@ -61,8 +61,19 @@ $DeskHeadline: 485px !important;
         overflow: auto !important;
     }
 
+
+
+    header {
+        height: 180px !important;
+
+        div.header-wrap {
+            padding-top: 65px;
+            padding-bottom: 65px;
+        }
+    }
+
     // mobiler버전의 header와 교체합니다
-    .wrap {
+    div.wrap {
         .mobile-header {
             display: none;
         }
@@ -72,14 +83,8 @@ $DeskHeadline: 485px !important;
         }
 
         .desktop-header {
+            // none에서 show로 변경합니다
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 100px;
-
-            .desktop-gnb {
-                display: flex;
-            }
         }
     }
 

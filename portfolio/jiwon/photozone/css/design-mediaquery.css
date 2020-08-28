@@ -35,19 +35,21 @@ body {
     overflow: auto !important;
   }
 
-  .wrap .mobile-header {
+  header {
+    height: 180px !important;
+  }
+  header div.header-wrap {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  div.wrap .mobile-header {
     display: none;
   }
-  .wrap .over {
+  div.wrap .over {
     display: none;
   }
-  .wrap .desktop-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 100px;
-  }
-  .wrap .desktop-header .desktop-gnb {
+  div.wrap .desktop-header {
     display: flex;
   }
 

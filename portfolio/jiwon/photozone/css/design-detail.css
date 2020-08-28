@@ -1,22 +1,3 @@
-body {
-  font-family: "Noto Sans KR", sans-serif;
-  font-weight: 300;
-  font-size: 12px;
-}
-
-.desktop-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 100px;
-}
-.desktop-header .desktop-gnb {
-  display: flex;
-}
-.desktop-header .desktop-gnb .desktop-nav--list {
-  font-family: "Russo One", sans-serif;
-}
-
 .main {
   text-align: center;
 }

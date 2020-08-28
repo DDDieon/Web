@@ -8,29 +8,6 @@ $tabletHeadline: 193px !important;
     font-family: "Russo One", sans-serif;
 }
 
-body {
-    font-family: "Noto Sans KR", sans-serif;
-    font-weight: 300;
-    font-size: 12px;
-}
-
-
-.desktop-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 100px;
-
-    .desktop-gnb {
-        display: flex;
-
-        .desktop-nav {
-            &--list {
-                font-size:
-            }
-        }
-    }
-}
 
 .main {
     text-align: center;
