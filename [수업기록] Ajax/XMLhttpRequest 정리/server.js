@@ -128,6 +128,7 @@ app.put('/products/:id', function (request, response) {
         });
     }
 });
+// express5에서는 지원하지 않는다 (del은 delete로 가자)
 app.del('/products/:id', function (request, response) {
     // 변수를 선언합니다.
     var id = Number(request.param('id'));
