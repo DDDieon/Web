@@ -18,54 +18,6 @@ app.use(express.static('public'));
 app.use(express.bodyParser());
 app.use(app.router);
 // 라우트합니다.
-app.all('/data.html', function (request, response) {
-    var output = '';
-    output += '<!DOCTYPE html>';
-    output += '<html>';
-    output += '<head>';
-    output += '    <title>Data HTML</title>';
-    output += '</head>';
-    output += '<body>';
-    items.forEach(function (item) {
-        output += '<div>';
-        output += '    <h1>' + item.name + '</h1>';
-        output += '    <h2>' + item.price + '</h2>';
-        output += '</div>';
-    });
-    output += '</body>';
-    output += '</html>';
-    response.send(output);
-});
-app.all('/data.json', function (request, response) {
-    response.send(items);
-});
-app.all('/data.xml', function (request, response) {
-    var output = '';
-    output += '<?xml version="1.0" encoding="UTF-8" ?>';
-    output += '<products>';
-    items.forEach(function (item) {
-        output += '<product>';
-        output += '    <name>' + item.name + '</name>';
-        output += '    <price>' + item.price + '</price>';
-        output += '</product>';
-    });
-    output += '</products>';
-    response.type('text/xml');
-    response.send(output);
-});
-app.all('/parameter', function (request, response) {
-    // 변수를 선언합니다.
-    var name = request.param('name');
-    var region = request.param('region');
-    // 응답합니다.
-    response.send('<h1>' + name + ':' + region + '</h1>');
-});
-app.all('/parameter/:id', function (request, response) {
-    // 변수를 선언합니다.
-    var id = request.param('id');
-    // 응답합니다.
-    response.send('<h1>' + id + '</h1>');
-});
 app.get('/products', function (request, response) {
     response.send(items);
 });
