@@ -75,13 +75,12 @@ $tabletHeadline: 193px !important;
             font-weight: bold;
         }
 
-        &-github {
-            i {
-                display: block;
-                font-size: 30px;
+        .address-github {
+            display: block;
+
+            .fa-github-alt:before {
+                font-size: 22px;
             }
         }
     }
-
-
 }

@@ -128,11 +128,10 @@ body {
   .footer address .publisher {
     font-size: 27px;
   }
-  .footer address-github i {
+  .footer address .address-github {
     display: block;
   }
-  .footer address-github i::before {
-    display: block;
-    font-size: 40px !important;
+  .footer address .address-github .fa-github-alt:before {
+    font-size: 50px !important;
   }
 }
