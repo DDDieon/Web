@@ -1,52 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Welcome to Ikea / 디지털 쇼룸</title>
-        <meta
-            name="description"
-            content="IKEA 이달의 인기 제품 한눈에 보기 주문부터 배송까지, 온라인으로 쉽고 편리하게 구매하세요."
-        />
-        <link type="text/css" rel="stylesheet" href="css/reset.css" />
-        <link type="text/css" rel="stylesheet" href="css/base.css" />
-        <link type="text/css" rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
-        <!-- JQuery plugin -->
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-        <script src="js/slick/slick.js"></script>
-        <link rel="stylesheet" type="text/css" href="/js/slick/slick.css" />
+<html lang="ko">
 
-        <!-- js Files -->
-        <script src="js/display.js" defer></script>
-        <!-- Sass compiled CSS Lists -->
-        <link rel="stylesheet" href="/css/digitalshow.css" />
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Ikea / 디지털 쇼룸</title>
+    <meta name="description" content="IKEA 이달의 인기 제품 한눈에 보기 주문부터 배송까지, 온라인으로 쉽고 편리하게 구매하세요." />
+    <link type="text/css" rel="stylesheet" href="css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="css/base.css" />
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+    <!-- JQuery plugin -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script src="js/slick/slick.js"></script>
+    <link rel="stylesheet" type="text/css" href="/js/slick/slick.css" />
 
-    <body>
-        <div id="wrap">
-            <header id="header">
-                <div id="desk_nav">
-                    <nav class="top_gnb">
-                        <ul>
-                            <li><a href="javascript:void(0);">LOGIN</a></li>
-                            <li><a href="javascript:void(0);">회원가입</a></li>
-                            <li><a href="javascript:void(0);">주문배송조회</a></li>
-                            <li><a href="javascript:void(0);">고객센터</a></li>
-                            <li>
-                                <a href="javascript:void(0);"><i class="xi-cart"></i></a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0);"><i class="xi-basket"></i></a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <nav class="bottom_gnb">
-                        <ul>
-                            <li>
-                                <h1><a href="/">ikea</a></h1>
-                            </li>
+    <!-- js Files -->
+    <script src="js/display.js" defer></script>
+    <!-- Sass compiled CSS Lists -->
+    <link rel="stylesheet" href="/css/digitalshow.css" />
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div id="desk_nav">
+                <nav class="top_gnb">
+                    <ul>
+                        <li><a href="javascript:void(0);">LOGIN</a></li>
+                        <li><a href="javascript:void(0);">회원가입</a></li>
+                        <li><a href="javascript:void(0);">주문배송조회</a></li>
+                        <li><a href="javascript:void(0);">고객센터</a></li>
+                        <li>
+                            <a href="javascript:void(0);"><i class="xi-cart"></i></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);"><i class="xi-basket"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="bottom_gnb">
+                    <ul>
+                        <li>
+                            <h1><a href="/">ikea</a></h1>
+                        </li>
+                        <li><a href="/product.html">모든 제품</a></li>
+                        <li><a href="/digitalshow.html">디지털 쇼룸</a></li>
+                        <li><a href="/idea.html">아이디어</a></li>
+                        <li><a href="/store.html">매장안내(미구현)</a></li>
+                        <li><a href="/monthly.html">이달의 혜택(미구현)</a></li>
+                        <li><a href="/sale.html">세일정보(미구현)</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="mobile_nav">
+                <input type="checkbox" id="panel_wrap" />
+                <div class="panel_wrap">
+                    <p class="panel_top">
+                        <label for="panel_wrap"><i class="xi-close"></i></label>
+                    </p>
+                    <div id="content_box">
+                        <ul class="list01">
                             <li><a href="/product.html">모든 제품</a></li>
                             <li><a href="/digitalshow.html">디지털 쇼룸</a></li>
                             <li><a href="/idea.html">아이디어</a></li>
@@ -54,572 +69,480 @@
                             <li><a href="/monthly.html">이달의 혜택(미구현)</a></li>
                             <li><a href="/sale.html">세일정보(미구현)</a></li>
                         </ul>
-                    </nav>
+                    </div>
                 </div>
-                <div id="mobile_nav">
-                    <input type="checkbox" id="panel_wrap" />
-                    <div class="panel_wrap">
-                        <p class="panel_top">
-                            <label for="panel_wrap"><i class="xi-close"></i></label>
-                        </p>
-                        <div id="content_box">
-                            <ul class="list01">
-                                <li><a href="/product.html">모든 제품</a></li>
-                                <li><a href="/digitalshow.html">디지털 쇼룸</a></li>
-                                <li><a href="/idea.html">아이디어</a></li>
-                                <li><a href="/store.html">매장안내(미구현)</a></li>
-                                <li><a href="/monthly.html">이달의 혜택(미구현)</a></li>
-                                <li><a href="/sale.html">세일정보(미구현)</a></li>
-                            </ul>
-                        </div>
+                <nav class="top_gnb">
+                    <label for="panel_wrap"><i class="xi-bars"></i></label>
+                    <a href="/">logo</a>
+                    <a href="javascript:void(0);"><i class="xi-profile"></i></a>
+                </nav>
+            </div>
+        </header>
+        <div id="content">
+            <div class="sliderWrap">
+                <div class="slider__page page1">
+                    <div class="slider__page__blur-bg">
+                        <img src="/img/showroom/1_bedroom.png" alt="이케아의 쇼룸 1번째, 침실" />
                     </div>
-                    <nav class="top_gnb">
-                        <label for="panel_wrap"><i class="xi-bars"></i></label>
-                        <a href="/">logo</a>
-                        <a href="javascript:void(0);"><i class="xi-profile"></i></a>
-                    </nav>
-                </div>
-            </header>
-            <div id="content">
-                <div class="sliderWrap">
-                    <div class="slider__page page1">
-                        <div class="slider__page__blur-bg">
-                            <img
-                                src="/img/showroom/1_bedroom.png"
-                                alt="이케아의 쇼룸 1번째, 침실"
-                            />
+                    <div class="slider__page--content">
+                        <div class="slider__page--content__text">
+                            <p class="sliderTitle">송에산드 침대</p>
+                            <p class="sliderDesc">
+                                단단하고 높은 침대프레임입니다.<br />
+                                모서리 옆선이 부드럽죠. 유행을 타지 않는 클래식한 디자인입니다.
+                                <br />침대 밑에 여분의 침구나 옷을 보관할 수 있는 넉넉한
+                                수납상자가 있습니다.
+                            </p>
                         </div>
-                        <div class="slider__page--content">
-                            <div class="slider__page--content__text">
-                                <p class="sliderTitle">송에산드 침대</p>
-                                <p class="sliderDesc">
-                                    단단하고 높은 침대프레임입니다.<br />
-                                    모서리 옆선이 부드럽죠. 유행을 타지 않는 클래식한 디자인입니다.
-                                    <br />침대 밑에 여분의 침구나 옷을 보관할 수 있는 넉넉한
-                                    수납상자가 있습니다.
-                                </p>
+                        <img src="/img/showroom/1_bedroom.png" alt="이케아의 쇼룸 1번째, 침실" />
+                        <div class="sliderControl">
+                            <div class="sliderControl__text">
+                                <span class="thisPage">01</span>
+                                <span class="everyPage">05</span>
                             </div>
-                            <img
-                                src="/img/showroom/1_bedroom.png"
-                                alt="이케아의 쇼룸 1번째, 침실"
-                            />
-                            <div class="sliderControl">
-                                <div class="sliderControl__text">
-                                    <span class="thisPage">01</span>
-                                    <span class="everyPage">05</span>
+                            <div class="sliderControl__asset">
+                                <div class="progress_navigator">
+                                    <div class="progress_navigator--now pro-ani"></div>
                                 </div>
-                                <div class="sliderControl__asset">
-                                    <div class="progress_navigator">
-                                        <div class="progress_navigator--now pro-ani"></div>
-                                    </div>
-                                    <div class="pageUpDown">
-                                        <a href="javascript:void(0);">◀</a>
-                                        <a href="javascript:void(0);">▶</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider__page page2">
-                        <div class="slider__page__blur-bg">
-                            <img src="/img/showroom/2_living.png" alt="이케아의 쇼룸 2번째, 거실" />
-                        </div>
-                        <div class="slider__page--content">
-                            <div class="slider__page--content__text">
-                                <p class="sliderTitle">BESTÅ 베스토</p>
-                                <p class="sliderDesc">
-                                    좋은 이들과 함께하고 휴식까지 즐길 수 있는 넓은 거실을
-                                    만나보세요.<br />
-                                    편안한 STOCKSUND 스톡순드 의자와 소파, BESTÅ 베스토 수납 및 진열
-                                    콤비네이션은<br />
-                                    인테리어에 근사한 스타일과 실용성을 더해줍니다.
-                                </p>
-                            </div>
-                            <img src="/img/showroom/2_living.png" alt="이케아의 쇼룸 1번째, 침실" />
-                            <div class="sliderControl">
-                                <div class="sliderControl__text">
-                                    <span class="thisPage">02</span>
-                                    <span class="everyPage">05</span>
-                                </div>
-                                <div class="sliderControl__asset">
-                                    <div class="progress_navigator">
-                                        <div class="progress_navigator--now"></div>
-                                    </div>
-                                    <div class="pageUpDown">
-                                        <a href="javascript:void(0);">◀</a>
-                                        <a href="javascript:void(0);">▶</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider__page page3">
-                        <div class="slider__page__blur-bg">
-                            <img
-                                src="/img/showroom/9_outdoor.png"
-                                alt="이케아의 쇼룸 1번째, 침실"
-                            />
-                        </div>
-                        <div class="slider__page--content">
-                            <div class="slider__page--content__text">
-                                <p class="sliderTitle">BODBYN 보드뷘도어</p>
-                                <p class="sliderDesc">
-                                    산뜻하게 하루를 시작할 수 있는 주방을 만나보세요.<br />
-                                    채소를 직접 기르고, 신선한 재료로 건강한 식사를 준비하고,
-                                    <br />바쁜 도시의 일상을 잠시 잊고 여유를 누릴 수 있습니다.
-                                </p>
-                            </div>
-                            <img
-                                src="/img/showroom/9_outdoor.png"
-                                alt="이케아의 쇼룸 1번째, 침실"
-                            />
-                            <div class="sliderControl">
-                                <div class="sliderControl__text">
-                                    <span class="thisPage">03</span>
-                                    <span class="everyPage">05</span>
-                                </div>
-                                <div class="sliderControl__asset">
-                                    <div class="progress_navigator">
-                                        <div class="progress_navigator--now"></div>
-                                    </div>
-                                    <div class="pageUpDown">
-                                        <a href="javascript:void(0);">◀</a>
-                                        <a href="javascript:void(0);">▶</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider__page page4">
-                        <div class="slider__page__blur-bg">
-                            <img src="/img/showroom/2_living.png" alt="이케아의 쇼룸 2번째, 거실" />
-                        </div>
-                        <div class="slider__page--content">
-                            <div class="slider__page--content__text">
-                                <p class="sliderTitle">송에산드 침대4</p>
-                                <p class="sliderDesc">
-                                    단단하고 높은 침대프레임입니다.<br />
-                                    모서리 옆선이 부드럽죠. 유행을 타지 않는 클래식한 디자인입니다.
-                                    <br />침대 밑에 여분의 침구나 옷을 보관할 수 있는 넉넉한
-                                    수납상자가 있습니다.
-                                </p>
-                            </div>
-                            <img src="/img/showroom/2_living.png" alt="이케아의 쇼룸 1번째, 침실" />
-                            <div class="sliderControl">
-                                <div class="sliderControl__text">
-                                    <span class="thisPage">04</span>
-                                    <span class="everyPage">05</span>
-                                </div>
-                                <div class="sliderControl__asset">
-                                    <div class="progress_navigator">
-                                        <div class="progress_navigator--now"></div>
-                                    </div>
-                                    <div class="pageUpDown">
-                                        <a href="javascript:void(0);">◀</a>
-                                        <a href="javascript:void(0);">▶</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider__page page5">
-                        <div class="slider__page__blur-bg">
-                            <img
-                                src="/img/showroom/1_bedroom.png"
-                                alt="이케아의 쇼룸 1번째, 침실"
-                            />
-                        </div>
-                        <div class="slider__page--content">
-                            <div class="slider__page--content__text">
-                                <p class="sliderTitle">BODBYN 보드뷘도어</p>
-                                <p class="sliderDesc">
-                                    산뜻하게 하루를 시작할 수 있는 주방을 만나보세요.<br />
-                                    채소를 직접 기르고, 신선한 재료로 건강한 식사를 준비하고,
-                                    <br />바쁜 도시의 일상을 잠시 잊고 여유를 누릴 수 있습니다.
-                                </p>
-                            </div>
-                            <img
-                                src="/img/showroom/9_outdoor.png"
-                                alt="이케아의 쇼룸 1번째, 침실"
-                            />
-                            <div class="sliderControl">
-                                <div class="sliderControl__text">
-                                    <span class="thisPage">05</span>
-                                    <span class="everyPage">05</span>
-                                </div>
-                                <div class="sliderControl__asset">
-                                    <div class="progress_navigator">
-                                        <div class="progress_navigator--now"></div>
-                                    </div>
-                                    <div class="pageUpDown">
-                                        <a href="javascript:void(0);">◀</a>
-                                        <a href="javascript:void(0);">▶</a>
-                                    </div>
+                                <div class="pageUpDown">
+                                    <a href="javascript:void(0);">◀</a>
+                                    <a href="javascript:void(0);">▶</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="page_welcome">
-                    <p class="page_welcome__pointBox">Welcome</p>
-                    <p class="page_welcome__desc">디지털 쇼룸에 어서 오세요!</p>
-                </div>
-                <div class="page_info">
-                    <div class="page_info--Wrap">
-                        <p class="page_info__title">이케아의 쇼룸을 온라인에서 만나보세요</p>
-                        <p class="page_info__desc">
-                            둘러보며 쇼핑하는 즐거움을 집에서도 함께 느껴보아요
-                        </p>
+                <div class="slider__page page2">
+                    <div class="slider__page__blur-bg">
+                        <img src="/img/showroom/2_living.png" alt="이케아의 쇼룸 2번째, 거실" />
+                    </div>
+                    <div class="slider__page--content">
+                        <div class="slider__page--content__text">
+                            <p class="sliderTitle">BESTÅ 베스토</p>
+                            <p class="sliderDesc">
+                                좋은 이들과 함께하고 휴식까지 즐길 수 있는 넓은 거실을
+                                만나보세요.<br />
+                                편안한 STOCKSUND 스톡순드 의자와 소파, BESTÅ 베스토 수납 및 진열
+                                콤비네이션은<br />
+                                인테리어에 근사한 스타일과 실용성을 더해줍니다.
+                            </p>
+                        </div>
+                        <img src="/img/showroom/2_living.png" alt="이케아의 쇼룸 1번째, 침실" />
+                        <div class="sliderControl">
+                            <div class="sliderControl__text">
+                                <span class="thisPage">02</span>
+                                <span class="everyPage">05</span>
+                            </div>
+                            <div class="sliderControl__asset">
+                                <div class="progress_navigator">
+                                    <div class="progress_navigator--now"></div>
+                                </div>
+                                <div class="pageUpDown">
+                                    <a href="javascript:void(0);">◀</a>
+                                    <a href="javascript:void(0);">▶</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="banner_title"><h2>테마별 쇼룸 둘러보기</h2></div>
-                <div class="showRoomThema">
-                    <a href="javascript:void(0);" class="showRoomThema__anchor">
-                        <div class="showRoomThema__asset">
-                            <img src="/img/showroom/1_bedroom.png" alt="디지털쇼룸1-침실" />
-                            <p class="showRoomThema__asset--title">침실</p>
-                            <p class="showRoomThema__asset--desc">
-                                침대가 편안해야 숙면을 취할 수 있습니다. 침실가구에 물건을 수납하고
-                                언제든지 꺼내서 사용할 수도 있습니다. 조명으로 멋진 분위기를
-                                연출하고 부드러운 이불로 몸을 감싸보세요. 세상에서 가장 행복한 꿈을
-                                꾸게 될 거예요.
+                <div class="slider__page page3">
+                    <div class="slider__page__blur-bg">
+                        <img src="/img/showroom/9_outdoor.png" alt="이케아의 쇼룸 1번째, 침실" />
+                    </div>
+                    <div class="slider__page--content">
+                        <div class="slider__page--content__text">
+                            <p class="sliderTitle">BODBYN 보드뷘도어</p>
+                            <p class="sliderDesc">
+                                산뜻하게 하루를 시작할 수 있는 주방을 만나보세요.<br />
+                                채소를 직접 기르고, 신선한 재료로 건강한 식사를 준비하고,
+                                <br />바쁜 도시의 일상을 잠시 잊고 여유를 누릴 수 있습니다.
                             </p>
                         </div>
-                    </a>
-                    <a href="javascript:void(0);" class="showRoomThema__anchor">
-                        <div class="showRoomThema__asset">
-                            <img src="/img/showroom/2_living.png" alt="디지털쇼룸2-거실" />
-                            <p class="showRoomThema__asset--title">거실</p>
-                            <p class="showRoomThema__asset--desc">
-                                거실은 우리의 이야기를 함께 나누는 공간입니다. IKEA의 거실가구는
-                                나만의 기념품이나 여행의 추억 등으로 다양하게 꾸밀 수 있어서
-                                자연스럽게 이야기를 끌어낼 수 있답니다. 좋아하는 사람들과 그 순간을
-                                공유하고 싶다면 의자를 더 많이 놓아보세요.
+                        <img src="/img/showroom/9_outdoor.png" alt="이케아의 쇼룸 1번째, 침실" />
+                        <div class="sliderControl">
+                            <div class="sliderControl__text">
+                                <span class="thisPage">03</span>
+                                <span class="everyPage">05</span>
+                            </div>
+                            <div class="sliderControl__asset">
+                                <div class="progress_navigator">
+                                    <div class="progress_navigator--now"></div>
+                                </div>
+                                <div class="pageUpDown">
+                                    <a href="javascript:void(0);">◀</a>
+                                    <a href="javascript:void(0);">▶</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__page page4">
+                    <div class="slider__page__blur-bg">
+                        <img src="/img/showroom/2_living.png" alt="이케아의 쇼룸 2번째, 거실" />
+                    </div>
+                    <div class="slider__page--content">
+                        <div class="slider__page--content__text">
+                            <p class="sliderTitle">송에산드 침대4</p>
+                            <p class="sliderDesc">
+                                단단하고 높은 침대프레임입니다.<br />
+                                모서리 옆선이 부드럽죠. 유행을 타지 않는 클래식한 디자인입니다.
+                                <br />침대 밑에 여분의 침구나 옷을 보관할 수 있는 넉넉한
+                                수납상자가 있습니다.
                             </p>
                         </div>
-                    </a>
-                    <a href="javascript:void(0);" class="showRoomThema__anchor">
-                        <div class="showRoomThema__asset">
-                            <img src="/img/showroom/3_kitchin.png" alt="디지털쇼룸3-주방" />
-                            <p class="showRoomThema__asset--title">주방</p>
-                            <p class="showRoomThema__asset--desc">
-                                주방은 당신이 원하는 것을 이룰 수 있도록 기능적인 도움을 주는 무한한
-                                가능성을 지닌 공간입니다. 당신이 그 공간을새롭게 개조하든, 네가
-                                개조하든, 새로운 부엌을 장만하든, 단지 여러가지 옵션의 비용을
-                                확인하고 있든, 우리는 당신을 도와줄 수 있습니다.
+                        <img src="/img/showroom/2_living.png" alt="이케아의 쇼룸 1번째, 침실" />
+                        <div class="sliderControl">
+                            <div class="sliderControl__text">
+                                <span class="thisPage">04</span>
+                                <span class="everyPage">05</span>
+                            </div>
+                            <div class="sliderControl__asset">
+                                <div class="progress_navigator">
+                                    <div class="progress_navigator--now"></div>
+                                </div>
+                                <div class="pageUpDown">
+                                    <a href="javascript:void(0);">◀</a>
+                                    <a href="javascript:void(0);">▶</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__page page5">
+                    <div class="slider__page__blur-bg">
+                        <img src="/img/showroom/1_bedroom.png" alt="이케아의 쇼룸 1번째, 침실" />
+                    </div>
+                    <div class="slider__page--content">
+                        <div class="slider__page--content__text">
+                            <p class="sliderTitle">BODBYN 보드뷘도어</p>
+                            <p class="sliderDesc">
+                                산뜻하게 하루를 시작할 수 있는 주방을 만나보세요.<br />
+                                채소를 직접 기르고, 신선한 재료로 건강한 식사를 준비하고,
+                                <br />바쁜 도시의 일상을 잠시 잊고 여유를 누릴 수 있습니다.
                             </p>
                         </div>
-                    </a>
-                    <a href="javascript:void(0);" class="showRoomThema__anchor">
-                        <div class="showRoomThema__asset">
-                            <img src="/img/showroom/4_dining.png" alt="디지털쇼룸4-다이닝" />
-                            <p class="showRoomThema__asset--title">다이닝</p>
-                            <p class="showRoomThema__asset--desc">
-                                침대가 편안해야 숙면을 취할 수 있습니다. 침실가구에 물건을 수납하고
-                                언제든지 꺼내서 사용할 수도 있습니다. 조명으로 멋진 분위기를
-                                연출하고 부드러운 이불로 몸을 감싸보세요. 세상에서 가장 행복한 꿈을
-                                꾸게 될 거예요.
-                            </p>
+                        <img src="/img/showroom/9_outdoor.png" alt="이케아의 쇼룸 1번째, 침실" />
+                        <div class="sliderControl">
+                            <div class="sliderControl__text">
+                                <span class="thisPage">05</span>
+                                <span class="everyPage">05</span>
+                            </div>
+                            <div class="sliderControl__asset">
+                                <div class="progress_navigator">
+                                    <div class="progress_navigator--now"></div>
+                                </div>
+                                <div class="pageUpDown">
+                                    <a href="javascript:void(0);">◀</a>
+                                    <a href="javascript:void(0);">▶</a>
+                                </div>
+                            </div>
                         </div>
-                    </a>
-                    <a href="javascript:void(0);" class="showRoomThema__anchor">
-                        <div class="showRoomThema__asset">
-                            <img src="/img/showroom/5_baby.png" alt="디지털쇼룸5-어린이 IKEA" />
-                            <p class="showRoomThema__asset--title">어린이 IKEA</p>
-                            <p class="showRoomThema__asset--desc">
-                                침대가 편안해야 숙면을 취할 수 있습니다. 침실가구에 물건을 수납하고
-                                언제든지 꺼내서 사용할 수도 있습니다. 조명으로 멋진 분위기를
-                                연출하고 부드러운 이불로 몸을 감싸보세요. 세상에서 가장 행복한 꿈을
-                                꾸게 될 거예요.
-                            </p>
-                        </div>
-                    </a>
-                    <a href="javascript:void(0);" class="showRoomThema__anchor">
-                        <div class="showRoomThema__asset">
-                            <img src="/img/showroom/6_bathroom.png" alt="디지털쇼룸6-욕실" />
-                            <p class="showRoomThema__asset--title">욕실</p>
-                            <p class="showRoomThema__asset--desc">
-                                침대가 편안해야 숙면을 취할 수 있습니다. 침실가구에 물건을 수납하고
-                                언제든지 꺼내서 사용할 수도 있습니다. 조명으로 멋진 분위기를
-                                연출하고 부드러운 이불로 몸을 감싸보세요. 세상에서 가장 행복한 꿈을
-                                꾸게 될 거예요.
-                            </p>
-                        </div>
-                    </a>
-                    <a href="javascript:void(0);" class="showRoomThema__anchor">
-                        <div class="showRoomThema__asset">
-                            <img src="/img/showroom/7_office.png" alt="디지털쇼룸7-홈오피스" />
-                            <p class="showRoomThema__asset--title">홈오피스</p>
-                            <p class="showRoomThema__asset--desc">
-                                침대가 편안해야 숙면을 취할 수 있습니다. 침실가구에 물건을 수납하고
-                                언제든지 꺼내서 사용할 수도 있습니다. 조명으로 멋진 분위기를
-                                연출하고 부드러운 이불로 몸을 감싸보세요. 세상에서 가장 행복한 꿈을
-                                꾸게 될 거예요.
-                            </p>
-                        </div>
-                    </a>
-                    <a href="javascript:void(0);" class="showRoomThema__anchor">
-                        <div class="showRoomThema__asset">
-                            <img src="/img/showroom/8_hallway.png" alt="디지털쇼룸8-현관" />
-                            <p class="showRoomThema__asset--title">현관</p>
-                            <p class="showRoomThema__asset--desc">
-                                침대가 편안해야 숙면을 취할 수 있습니다. 침실가구에 물건을 수납하고
-                                언제든지 꺼내서 사용할 수도 있습니다. 조명으로 멋진 분위기를
-                                연출하고 부드러운 이불로 몸을 감싸보세요. 세상에서 가장 행복한 꿈을
-                                꾸게 될 거예요.
-                            </p>
-                        </div>
-                    </a>
-                    <a href="javascript:void(0);" class="showRoomThema__anchor">
-                        <div class="showRoomThema__asset">
-                            <img src="/img/showroom/9_outdoor.png" alt="디지털쇼룸9-아웃도어" />
-                            <p class="showRoomThema__asset--title">아웃도어</p>
-                            <p class="showRoomThema__asset--desc">
-                                침대가 편안해야 숙면을 취할 수 있습니다. 침실가구에 물건을 수납하고
-                                언제든지 꺼내서 사용할 수도 있습니다. 조명으로 멋진 분위기를
-                                연출하고 부드러운 이불로 몸을 감싸보세요. 세상에서 가장 행복한 꿈을
-                                꾸게 될 거예요.
-                            </p>
-                        </div>
-                    </a>
-                    <a href="javascript:void(0);" class="showRoomThema__anchor">
-                        <div class="showRoomThema__asset">
-                            <img src="/img/showroom/10_business.png" alt="디지털쇼룸10-비지니스" />
-                            <p class="showRoomThema__asset--title">IKEA for Business</p>
-                            <p class="showRoomThema__asset--desc">
-                                침대가 편안해야 숙면을 취할 수 있습니다. 침실가구에 물건을 수납하고
-                                언제든지 꺼내서 사용할 수도 있습니다. 조명으로 멋진 분위기를
-                                연출하고 부드러운 이불로 몸을 감싸보세요. 세상에서 가장 행복한 꿈을
-                                꾸게 될 거예요.
-                            </p>
-                        </div>
-                    </a>
+                    </div>
                 </div>
             </div>
-
-            <footer id="footer" class="ft">
-                <div class="f-top">
-                    <div class="inner-list">
-                        <ul>
-                            <li>
-                                <a href="#f-sub-1">고객문의<i class="xi-angle-down"></i></a>
-                                <ol id="f-sub-1">
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> 고객지원</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> 자주 묻는 질문</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> 문의하기</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> 배송조회</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> 교환환불</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> 제품리콜</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> 제품 구매 안내</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> 피드백</a
-                                        >
-                                    </li>
-                                </ol>
-                            </li>
-                            <li>
-                                <a href="#f-sub-2">쇼핑하기<i class="xi-angle-down"></i></a>
-                                <ol id="f-sub-2">
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> 쇼핑하기</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> 전화 주문</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> IKEA FAMILY</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> IKEA for Business</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> IKEA 모바일 웹</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> 온라인 플래닝</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> IKEA 카탈로그</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> 결제 옵션</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> 제품 재고 확인</a
-                                        >
-                                    </li>
-                                </ol>
-                            </li>
-                            <li>
-                                <a href="#f-sub-3">IKEA 서비스<i class="xi-angle-down"></i></a>
-                                <ol id="f-sub-3">
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> IKEA 서비스</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> 배송 서비스</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> 조립 서비스</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> 홈퍼니싱 컨설팅 서비스</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> 주방 플래닝 서비스</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> 전화 플래닝 서비스</a
-                                        >
-                                    </li>
-                                </ol>
-                            </li>
-                            <li>
-                                <a href="#f-sub-4">IKEA 이야기<i class="xi-angle-down"></i></a>
-                                <ol id="f-sub-4">
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> 기업 소개</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> 데모크래틱 디자인</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> 지속가능한 생활</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> 뉴스</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);"
-                                            ><i class="xi-play"></i> 제품 정보</a
-                                        >
-                                    </li>
-                                </ol>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="inner-icons">
-                        <div class="ft-icons-left">
-                            <a href="javascript:void(0);"><i class="xi-facebook"></i></a>
-                            <a href="javascript:void(0);"><i class="xi-instagram"></i></a>
-                            <a href="javascript:void(0);"><i class="xi-youtube-play"></i></a>
-                        </div>
-                        <div class="ft-icons-right">
-                            <a href="javascript:void(0);">국가변경</a>
-                            <select>
-                                <option value="javascript:void(0);">한국어</option>
-                                <option value="javascript:void(0);">English</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="f-bottom">
-                    <p>
-                        <span>IKEA 코리아</span> 주소 : (우) 14352 경기도 광명시 일직로 17
-                        IKEA광명점<br />
-                        사업자 등록번호 : 106-86-82871
-                        <a
-                            href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1068682871"
-                            target="_blank"
-                        >
-                            사업자정보확인 </a
-                        ><br />
-                        대표자 : 프레드리크 요한손 <br />
-                        통신판매업 신고 : 2018-경기광명-0209 <br />
-                        TEL : 1670-4532
+            <div class="page_welcome">
+                <p class="page_welcome__pointBox">Welcome</p>
+                <p class="page_welcome__desc">디지털 쇼룸에 어서 오세요!</p>
+            </div>
+            <div class="page_info">
+                <div class="page_info--Wrap">
+                    <p class="page_info__title">이케아의 쇼룸을 온라인에서 만나보세요</p>
+                    <p class="page_info__desc">
+                        둘러보며 쇼핑하는 즐거움을 집에서도 함께 느껴보아요
                     </p>
                 </div>
-            </footer>
+            </div>
+            <div class="banner_title">
+                <h2>테마별 쇼룸 둘러보기</h2>
+            </div>
+            <div class="showRoomThema">
+                <a href="javascript:void(0);" class="showRoomThema__anchor">
+                    <div class="showRoomThema__asset">
+                        <img src="/img/showroom/1_bedroom.png" alt="디지털쇼룸1-침실" />
+                        <p class="showRoomThema__asset--title">침실</p>
+                        <p class="showRoomThema__asset--desc">
+                            침대가 편안해야 숙면을 취할 수 있습니다. 침실가구에 물건을 수납하고
+                            언제든지 꺼내서 사용할 수도 있습니다. 조명으로 멋진 분위기를
+                            연출하고 부드러운 이불로 몸을 감싸보세요. 세상에서 가장 행복한 꿈을
+                            꾸게 될 거예요.
+                        </p>
+                    </div>
+                </a>
+                <a href="javascript:void(0);" class="showRoomThema__anchor">
+                    <div class="showRoomThema__asset">
+                        <img src="/img/showroom/2_living.png" alt="디지털쇼룸2-거실" />
+                        <p class="showRoomThema__asset--title">거실</p>
+                        <p class="showRoomThema__asset--desc">
+                            거실은 우리의 이야기를 함께 나누는 공간입니다. IKEA의 거실가구는
+                            나만의 기념품이나 여행의 추억 등으로 다양하게 꾸밀 수 있어서
+                            자연스럽게 이야기를 끌어낼 수 있답니다. 좋아하는 사람들과 그 순간을
+                            공유하고 싶다면 의자를 더 많이 놓아보세요.
+                        </p>
+                    </div>
+                </a>
+                <a href="javascript:void(0);" class="showRoomThema__anchor">
+                    <div class="showRoomThema__asset">
+                        <img src="/img/showroom/3_kitchin.png" alt="디지털쇼룸3-주방" />
+                        <p class="showRoomThema__asset--title">주방</p>
+                        <p class="showRoomThema__asset--desc">
+                            주방은 당신이 원하는 것을 이룰 수 있도록 기능적인 도움을 주는 무한한
+                            가능성을 지닌 공간입니다. 당신이 그 공간을새롭게 개조하든, 네가
+                            개조하든, 새로운 부엌을 장만하든, 단지 여러가지 옵션의 비용을
+                            확인하고 있든, 우리는 당신을 도와줄 수 있습니다.
+                        </p>
+                    </div>
+                </a>
+                <a href="javascript:void(0);" class="showRoomThema__anchor">
+                    <div class="showRoomThema__asset">
+                        <img src="/img/showroom/4_dining.png" alt="디지털쇼룸4-다이닝" />
+                        <p class="showRoomThema__asset--title">다이닝</p>
+                        <p class="showRoomThema__asset--desc">
+                            침대가 편안해야 숙면을 취할 수 있습니다. 침실가구에 물건을 수납하고
+                            언제든지 꺼내서 사용할 수도 있습니다. 조명으로 멋진 분위기를
+                            연출하고 부드러운 이불로 몸을 감싸보세요. 세상에서 가장 행복한 꿈을
+                            꾸게 될 거예요.
+                        </p>
+                    </div>
+                </a>
+                <a href="javascript:void(0);" class="showRoomThema__anchor">
+                    <div class="showRoomThema__asset">
+                        <img src="/img/showroom/5_baby.png" alt="디지털쇼룸5-어린이 IKEA" />
+                        <p class="showRoomThema__asset--title">어린이 IKEA</p>
+                        <p class="showRoomThema__asset--desc">
+                            침대가 편안해야 숙면을 취할 수 있습니다. 침실가구에 물건을 수납하고
+                            언제든지 꺼내서 사용할 수도 있습니다. 조명으로 멋진 분위기를
+                            연출하고 부드러운 이불로 몸을 감싸보세요. 세상에서 가장 행복한 꿈을
+                            꾸게 될 거예요.
+                        </p>
+                    </div>
+                </a>
+                <a href="javascript:void(0);" class="showRoomThema__anchor">
+                    <div class="showRoomThema__asset">
+                        <img src="/img/showroom/6_bathroom.png" alt="디지털쇼룸6-욕실" />
+                        <p class="showRoomThema__asset--title">욕실</p>
+                        <p class="showRoomThema__asset--desc">
+                            침대가 편안해야 숙면을 취할 수 있습니다. 침실가구에 물건을 수납하고
+                            언제든지 꺼내서 사용할 수도 있습니다. 조명으로 멋진 분위기를
+                            연출하고 부드러운 이불로 몸을 감싸보세요. 세상에서 가장 행복한 꿈을
+                            꾸게 될 거예요.
+                        </p>
+                    </div>
+                </a>
+                <a href="javascript:void(0);" class="showRoomThema__anchor">
+                    <div class="showRoomThema__asset">
+                        <img src="/img/showroom/7_office.png" alt="디지털쇼룸7-홈오피스" />
+                        <p class="showRoomThema__asset--title">홈오피스</p>
+                        <p class="showRoomThema__asset--desc">
+                            침대가 편안해야 숙면을 취할 수 있습니다. 침실가구에 물건을 수납하고
+                            언제든지 꺼내서 사용할 수도 있습니다. 조명으로 멋진 분위기를
+                            연출하고 부드러운 이불로 몸을 감싸보세요. 세상에서 가장 행복한 꿈을
+                            꾸게 될 거예요.
+                        </p>
+                    </div>
+                </a>
+                <a href="javascript:void(0);" class="showRoomThema__anchor">
+                    <div class="showRoomThema__asset">
+                        <img src="/img/showroom/8_hallway.png" alt="디지털쇼룸8-현관" />
+                        <p class="showRoomThema__asset--title">현관</p>
+                        <p class="showRoomThema__asset--desc">
+                            침대가 편안해야 숙면을 취할 수 있습니다. 침실가구에 물건을 수납하고
+                            언제든지 꺼내서 사용할 수도 있습니다. 조명으로 멋진 분위기를
+                            연출하고 부드러운 이불로 몸을 감싸보세요. 세상에서 가장 행복한 꿈을
+                            꾸게 될 거예요.
+                        </p>
+                    </div>
+                </a>
+                <a href="javascript:void(0);" class="showRoomThema__anchor">
+                    <div class="showRoomThema__asset">
+                        <img src="/img/showroom/9_outdoor.png" alt="디지털쇼룸9-아웃도어" />
+                        <p class="showRoomThema__asset--title">아웃도어</p>
+                        <p class="showRoomThema__asset--desc">
+                            침대가 편안해야 숙면을 취할 수 있습니다. 침실가구에 물건을 수납하고
+                            언제든지 꺼내서 사용할 수도 있습니다. 조명으로 멋진 분위기를
+                            연출하고 부드러운 이불로 몸을 감싸보세요. 세상에서 가장 행복한 꿈을
+                            꾸게 될 거예요.
+                        </p>
+                    </div>
+                </a>
+                <a href="javascript:void(0);" class="showRoomThema__anchor">
+                    <div class="showRoomThema__asset">
+                        <img src="/img/showroom/10_business.png" alt="디지털쇼룸10-비지니스" />
+                        <p class="showRoomThema__asset--title">IKEA for Business</p>
+                        <p class="showRoomThema__asset--desc">
+                            침대가 편안해야 숙면을 취할 수 있습니다. 침실가구에 물건을 수납하고
+                            언제든지 꺼내서 사용할 수도 있습니다. 조명으로 멋진 분위기를
+                            연출하고 부드러운 이불로 몸을 감싸보세요. 세상에서 가장 행복한 꿈을
+                            꾸게 될 거예요.
+                        </p>
+                    </div>
+                </a>
+            </div>
         </div>
 
-        <script>
-            const autoplayTime = 4000
-            $(document).ready(function () {
-                $(".sliderWrap").slick({
-                    autoplay: true,
-                    dots: false,
-                    speed: 600 /* 이미지가 슬라이딩시 걸리는 시간 */,
-                    infinite: true,
-                    autoplaySpeed: autoplayTime /* 다른 이미지로 넘어 갈때의 텀 */,
-                    arrows: false,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    fade: false,
-                    pauseOnHover: true,
-                })
+        <footer id="footer" class="ft">
+            <div class="f-top">
+                <div class="inner-list">
+                    <ul>
+                        <li>
+                            <a href="#f-sub-1">고객문의<i class="xi-angle-down"></i></a>
+                            <ol id="f-sub-1">
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> 고객지원</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> 자주 묻는 질문</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> 문의하기</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> 배송조회</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> 교환환불</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> 제품리콜</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> 제품 구매 안내</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> 피드백</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="#f-sub-2">쇼핑하기<i class="xi-angle-down"></i></a>
+                            <ol id="f-sub-2">
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> 쇼핑하기</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> 전화 주문</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> IKEA FAMILY</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> IKEA for Business</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> IKEA 모바일 웹</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> 온라인 플래닝</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> IKEA 카탈로그</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> 결제 옵션</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> 제품 재고 확인</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="#f-sub-3">IKEA 서비스<i class="xi-angle-down"></i></a>
+                            <ol id="f-sub-3">
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> IKEA 서비스</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> 배송 서비스</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> 조립 서비스</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> 홈퍼니싱 컨설팅 서비스</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> 주방 플래닝 서비스</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> 전화 플래닝 서비스</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="#f-sub-4">IKEA 이야기<i class="xi-angle-down"></i></a>
+                            <ol id="f-sub-4">
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> 기업 소개</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> 데모크래틱 디자인</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> 지속가능한 생활</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> 뉴스</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="xi-play"></i> 제품 정보</a>
+                                </li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+                <div class="inner-icons">
+                    <div class="ft-icons-left">
+                        <a href="javascript:void(0);"><i class="xi-facebook"></i></a>
+                        <a href="javascript:void(0);"><i class="xi-instagram"></i></a>
+                        <a href="javascript:void(0);"><i class="xi-youtube-play"></i></a>
+                    </div>
+                    <div class="ft-icons-right">
+                        <a href="javascript:void(0);">국가변경</a>
+                        <select>
+                            <option value="javascript:void(0);">한국어</option>
+                            <option value="javascript:void(0);">English</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="f-bottom">
+                <p>
+                    <span>IKEA 코리아</span> 주소 : (우) 14352 경기도 광명시 일직로 17
+                    IKEA광명점<br />
+                    사업자 등록번호 : 106-86-82871
+                    <a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1068682871" target="_blank">
+                        사업자정보확인 </a><br />
+                    대표자 : 프레드리크 요한손 <br />
+                    통신판매업 신고 : 2018-경기광명-0209 <br />
+                    TEL : 1670-4532
+                </p>
+            </div>
+        </footer>
+    </div>
 
-                $(".sliderWrap").on("afterChange", function () {
-                    $(".progress_navigator--now").addClass("pro-ani")
-                })
-                $(".sliderWrap").on("beforeChange", function () {
-                    $(".progress_navigator--now").removeClass("pro-ani")
-                })
+    <script>
+        const autoplayTime = 4000
+        $(document).ready(function () {
+            $(".sliderWrap").slick({
+                autoplay: true,
+                dots: false,
+                speed: 600 /* 이미지가 슬라이딩시 걸리는 시간 */ ,
+                infinite: true,
+                autoplaySpeed: autoplayTime /* 다른 이미지로 넘어 갈때의 텀 */ ,
+                arrows: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                fade: false,
+                pauseOnHover: true,
             })
-        </script>
-    </body>
+
+            $(".sliderWrap").on("afterChange", function () {
+                $(".progress_navigator--now").addClass("pro-ani")
+            })
+            $(".sliderWrap").on("beforeChange", function () {
+                $(".progress_navigator--now").removeClass("pro-ani")
+            })
+        })
+    </script>
+</body>
+
 </html>
