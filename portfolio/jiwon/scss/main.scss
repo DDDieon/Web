@@ -327,6 +327,21 @@ nav {
                     font-weight: bold;
                     position: relative;
                     padding: 0 5px;
+                    outline: none;
+
+                    &::before {
+                        content: '\f245';
+                        font-size: 36px;
+                        position: absolute;
+                        display: block;
+                        padding: 2px;
+                        color: #0f0f0fd7;
+                        white-space: nowrap;
+                        right: -10px;
+                        animation: upDownHover 2s ease-in infinite;
+                        border-radius: 5px;
+
+                    }
 
                     &::after {
                         content: "";
