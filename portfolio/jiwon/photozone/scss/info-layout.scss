@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+$pontColor: #ff3939;
+$mobile-WidthFull: 300px;
+$desk-WidthFull: 580px;
+$mobileHeadline: 96px;
+$tabletHeadline: 193px !important;
+
+html,
+body,
+.wrap {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+// mobile first
+
+.wrap {
+    letter-spacing: -0.05em;
+
+    // 모바일에서 데스크탑의 header를를 감춥니다.
+    .desktop-header {
+        display: none;
+    }
+}
+
+header {
+    height: 105px;
+
+    .header-wrap {
+        padding-top: 35px;
+    }
+
+    .mobile-header {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+
+        .logo {
+            width: 70px;
+            height: 35px;
+
+            img {
+                display: block;
+                margin: 0 auto;
+                width: 75%;
+            }
+        }
+
+        .hamburger {
+            img {
+                display: block;
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+
+    .over {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .mobile-drawer {
+        display: none;
+        position: absolute;
+        right: -100%;
+        top: 0;
+        width: 80%;
+        height: 100%;
+        padding: 7.5px;
+        background: #fff;
+        box-shadow: -4px 4px 20px rgba(0, 0, 0, 0.25);
+        z-index: 11111;
+
+        .closeIcon {
+            position: absolute;
+            right: 30px;
+            top: 35px;
+        }
+
+        .mobile-gnb {
+            position: absolute;
+            right: 30px;
+            top: 170px;
+            text-align: right;
+        }
+    }
+
+    .desktop-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 100px;
+
+        .logo {
+            width: 100px;
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .desktop-nav {
+            display: flex;
+
+            &--list {
+                font-family: "Russo One", sans-serif;
+                font-size: 27px;
+                margin-left: 118px;
+            }
+
+            // 호버시에 애니메이션을 줍니다
+            .pointerLine {
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    display: block;
+                    content: "";
+                    background: #ff3939;
+                    width: 100%;
+                    height: 3px;
+                }
+            }
+        }
+    }
+}
+
+.main-headline {
+    height: 130px;
+    margin-bottom: 20px;
+}
+
+.contents {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .figma-wrap {
+        display: block;
+        width: 50%;
+        max-width: 360px;
+        .figmaIcon {
+            width: 100%;
+        }
+    }
+
+    .iconsQuotes {
+        display: block;
+        margin: 0 auto;
+        width: 34px;
+        height: 34px;
+        margin-bottom: 20px;
+    }
+    &__desc {
+        table-layout: fixed;
+        width: 249px;
+        margin-bottom: 80px;
+        caption {
+            display: none;
+            text-indent: -999px;
+        }
+        thead tr {
+            th {
+                color: #999;
+                font-weight: bold;
+                font-size: 12px;
+            }
+        }
+        tbody tr td {
+            font-weight: bold;
+            text-align: center;
+            font-size: 16px;
+        }
+        td,
+        th {
+            border-left: 1px solid #ddd;
+            &:nth-child(1) {
+                border-left: 1px solid transparent;
+            }
+        }
+        tfoot {
+            display: none;
+        }
+    }
+    &__bgColor {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 340px;
+        background: #eee;
+        z-index: -999;
+    }
+}

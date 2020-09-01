@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+// 박스
+$mobile-WidthFull: 300px;
+$tablet-WidthFull: 610px;
+$desk-WidthFull: 1180px !important;
+// 데탑박스 세부
+$desk-detail-Big: 580px !important;
+$desk-detail-Small: 280px !important;
+// 글자
+$mobileHeadline: 96px;
+$tabletHeadline: 193px !important;
+$DeskHeadline: 485px !important;
+
+/* Tablet Device */
+@media all and (min-width: 768px) and (max-width: 1259px) {
+    .main {
+        &-headline {
+            height: $tabletHeadline;
+
+            h2 {
+                font-size: 60px;
+            }
+
+            .headlineDesc {
+                font-size: 16px;
+            }
+        }
+    }
+
+    a.goProject {
+        width: 145px !important;
+        height: auto !important;
+    }
+
+    .contents {
+        .images {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 610px;
+
+            &-list {
+                &.imgW2 {
+                    width: $mobile-WidthFull;
+                }
+            }
+        }
+
+        &__bgColor {
+            height: 500px !important;
+        }
+    }
+}
+
+@media all and (min-width: 1260px) {
+    html,
+    body {
+        font-size: 16px;
+        overflow: auto !important;
+    }
+
+    header {
+        height: 180px !important;
+
+        div.header-wrap {
+            padding-top: 65px;
+            padding-bottom: 65px;
+        }
+    }
+
+    // mobiler버전의 header와 교체합니다
+    div.wrap {
+        .mobile-header {
+            display: none;
+        }
+
+        .over {
+            display: none;
+        }
+
+        .desktop-header {
+            // none에서 show로 변경합니다
+            display: flex;
+        }
+    }
+
+    .main {
+        &-headline {
+            height: $DeskHeadline;
+
+            h2 {
+                font-size: 120px;
+            }
+
+            .headlineDesc {
+                font-size: 24px;
+                font-weight: 400;
+            }
+
+            &--back {
+                height: $DeskHeadline;
+            }
+        }
+
+        a.goProject {
+            width: 211px !important;
+            height: auto !important;
+        }
+    }
+
+    .contents {
+        margin-bottom: 120px;
+        &__bgColor {
+            display: none;
+        }
+        &__desc {
+            width: 550px;
+            th {
+                font-size: 16px !important;
+            }
+            td {
+                font-size: 22px !important;
+            }
+        }
+    }
+
+    .footer {
+        background: #fff;
+        padding: 45px 0;
+        color: #000;
+
+        address {
+            .publisher {
+                font-size: 27px;
+            }
+
+            .address-github {
+                display: block;
+
+                .fa-github-alt:before {
+                    font-size: 50px !important;
+                }
+            }
+        }
+    }
+}

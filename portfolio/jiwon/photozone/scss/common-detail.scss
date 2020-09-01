@@ -1,13 +1,12 @@
 @charset "UTF-8";
 
 $pontColor: #ff3939;
-$mobileHeadline : 96px;
+$mobileHeadline: 96px;
 $tabletHeadline: 193px !important;
 
 @mixin h2Title {
     font-family: "Russo One", sans-serif;
 }
-
 
 .main {
     text-align: center;
@@ -44,8 +43,6 @@ $tabletHeadline: 193px !important;
 
         &--back {
             position: absolute;
-            background: url("/photozone/assets/image/title/Design.png") no-repeat;
-            background-size: 100% auto;
             z-index: -9999;
             width: 100%;
             height: $mobileHeadline;
@@ -57,7 +54,6 @@ $tabletHeadline: 193px !important;
         }
     }
 }
-
 
 .footer {
     background: rgba(238, 238, 238, 0.199);
@@ -83,4 +79,9 @@ $tabletHeadline: 193px !important;
             }
         }
     }
+}
+
+.mobile-gnb {
+    font-size: 20px;
+    font-family: "Russo One", sans-serif;
 }

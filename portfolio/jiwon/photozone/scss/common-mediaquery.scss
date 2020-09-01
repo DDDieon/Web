@@ -2,18 +2,18 @@
 
 // 박스
 $mobile-WidthFull: 300px;
-$tablet-WidthFull : 610px;
+$tablet-WidthFull: 610px;
 $desk-WidthFull: 1180px !important;
 // 데탑박스 세부
-$desk-detail-Big:580px !important;
-$desk-detail-Small:280px !important;
+$desk-detail-Big: 580px !important;
+$desk-detail-Small: 280px !important;
 // 글자
-$mobileHeadline : 96px;
+$mobileHeadline: 96px;
 $tabletHeadline: 193px !important;
 $DeskHeadline: 485px !important;
 
 /* Tablet Device */
-@media all and (min-width:768px) and (max-width:1259px) {
+@media all and (min-width: 768px) and (max-width: 1259px) {
     .main {
         &-headline {
             height: $tabletHeadline;
@@ -53,15 +53,12 @@ $DeskHeadline: 485px !important;
     }
 }
 
-@media all and (min-width:1260px) {
-
+@media all and (min-width: 1260px) {
     html,
     body {
         font-size: 16px;
         overflow: auto !important;
     }
-
-
 
     header {
         height: 180px !important;
@@ -120,7 +117,6 @@ $DeskHeadline: 485px !important;
             flex-wrap: wrap;
             justify-content: space-between;
             width: $desk-WidthFull;
-
 
             &-list {
                 width: $desk-detail-Big;
