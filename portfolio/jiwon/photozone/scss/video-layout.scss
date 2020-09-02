@@ -1,10 +1,9 @@
 @charset "UTF-8";
 
-
 $pontColor: #ff3939;
 $mobile-WidthFull: 300px;
 $desk-WidthFull: 580px;
-$mobileHeadline : 96px;
+$mobileHeadline: 96px;
 $tabletHeadline: 193px !important;
 
 html,
@@ -29,7 +28,6 @@ body {
     .desktop-header {
         display: none;
     }
-
 }
 
 header {
@@ -129,14 +127,13 @@ header {
                 &::after {
                     position: absolute;
                     display: block;
-                    content: '';
+                    content: "";
                     background: #ff3939;
                     width: 100%;
                     height: 3px;
                 }
             }
         }
-
     }
 }
 
@@ -235,7 +232,8 @@ header {
                     &.item7 {
                         width: $mobile-WidthFull;
                         height: 145px;
-                        background: url("/photozone/assets/image/ability.png") no-repeat center center;
+                        background: url("/photozone/assets/image/ability.png") no-repeat center
+                            center;
                         background-size: 100%;
                     }
                 }

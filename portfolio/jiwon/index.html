@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
     <head>
-        <meta charset="UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Jiwon / 전지원의 웹 퍼블리싱 포트폴리오</title>
-        <meta http-equiv="Last-Modified" content="Fri,24 Aug 2020 14:35:24" />
         <meta name="description" content="전지원의 포트폴리오 사이트입니다" />
         <!-- plugin link -->
         <link
@@ -12,17 +11,15 @@
             type="text/css"
             href="http://kenwheeler.github.io/slick/slick/slick.css"
         />
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="http://kenwheeler.github.io/slick/slick/slick-theme.css"
-        />
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-        <script src="js/slick/slick.js"></script>
         <script src="js/html5shiv/src/html5shiv.js"></script>
         <!-- web Font -->
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+            rel="stylesheet"
+        />
         <link
             href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Raleway:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Russo+One&display=swap"
             rel="stylesheet"
@@ -43,104 +40,6 @@
     </head>
 
     <body>
-        <div id="gallery-body">
-            <div id="gallery-wrap">
-                <div class="gallery_header">
-                    <p><i class="xi-bookmark"></i></p>
-                    <p>
-                        <strong>Gallery</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 공부해온
-                        과정들과 디자인 포트폴리오 까지
-                    </p>
-                    <button class="gallery__close" onclick="closeGallery()">
-                        <i class="xi-close-circle-o"></i>
-                    </button>
-                </div>
-                <div class="carousel_wrap">
-                    <div id="dragdiv" class="carousel_stage">
-                        <ul>
-                            <li class="carousel_item_1">
-                                <div class="c-imgs"><img src="/img/gallery01.jpg" alt="" /></div>
-                                <div class="c_words">
-                                    <h5>깃허브<span>Git hub</span></h5>
-                                    <p class="c_words_sub1">
-                                        2020년 07월 29일부터 커밋잔디를 심는 중!
-                                    </p>
-                                    <p class="c_words_sub2">
-                                        꾸준함을 이기는 힘은 없다고 생각합니다.<br />깃허브에는 1일
-                                        1커밋을 목표로 커밋하고 있습니다.
-                                    </p>
-                                    <p class="c_words_sub3">
-                                        <a
-                                            href="javascript:void(0)"
-                                            target="_blank"
-                                            rel="noreferrer noopener"
-                                            ><br />Visit the Site</a
-                                        >
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="carousel_item_2">
-                                <div class="c-imgs"><img src="/img/gallery02.jpg" alt="" /></div>
-                                <div class="c_words">
-                                    <h5>비캔버스<span>BeeCanvas</span></h5>
-                                    <p class="c_words_sub1">지금까지 어떻게 공부를 해왔을까요?</p>
-                                    <p class="c_words_sub2">
-                                        지식의 재사용성을 위해 국비학원에서 배운 것,<br />
-                                        혼자서 독학한 것들을 모두 차곡차곡 쌓아왔습니다.
-                                    </p>
-                                    <p class="c_words_sub3">
-                                        <a
-                                            href="https://beecanvas.com/s/7aEbbrJ3be6fLzSMKJ21QmjHkrEONNHRQ8ze5dMO25TvJ1orEyjSYJxy-ZzwFuDn"
-                                            target="_blank"
-                                            rel="noreferrer noopener"
-                                            ><br />Visit the Site</a
-                                        >
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="carousel_item_3">
-                                <div class="c-imgs"><img src="/img/gallery03.jpg" alt="" /></div>
-                                <div class="c_words">
-                                    <h5>이미지 아트워크들<span>@준비중</span></h5>
-                                    <p class="c_words_sub1">Agency Culture &amp; Onboarding</p>
-                                    <p class="c_words_sub2">준비할 예정</p>
-                                    <p class="c_words_sub3">
-                                        <a
-                                            href="/photozone/design.html"
-                                            target="_blank"
-                                            rel="noreferrer noopener"
-                                            ><br />Visit the Site</a
-                                        >
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="carousel_item_4">
-                                <div class="c-imgs"><img src="/img/gallery04.jpg" alt="" /></div>
-                                <div class="c_words">
-                                    <h5>영상제작물<span>Motion graphic</span></h5>
-                                    <p class="c_words_sub1">
-                                        애프터이펙트, 프리미어프로 중급자 수준
-                                    </p>
-                                    <p class="c_words_sub2">
-                                        2D애니메이션이나 인포영상 등을 제작했던 경험이 있습니다.
-                                        컷편집은 물론 간단한 모션그래픽이 가능합니다. 또한 원하는
-                                        이미지소스는 직접 제작하여 사용하였습니다.
-                                    </p>
-                                    <p class="c_words_sub3">
-                                        <a
-                                            href="/photozone/video.html"
-                                            target="_blank"
-                                            rel="noreferrer noopener"
-                                            ><br />Visit the Site</a
-                                        >
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
         <nav>
             <div class="logobox">
                 <h1><a href="javascript:void(0)">PORTFOLIO</a></h1>
@@ -157,6 +56,114 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+            <div id="gallery-body">
+                <div id="gallery-wrap">
+                    <div class="gallery_header">
+                        <p><i class="xi-bookmark"></i></p>
+                        <p>
+                            <strong>Gallery</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 공부해온
+                            과정들과 디자인 포트폴리오 까지
+                        </p>
+                        <button class="gallery__close" onclick="closeGallery()">
+                            <i class="xi-close-circle-o"></i>
+                        </button>
+                    </div>
+                    <div class="carousel_wrap">
+                        <div id="dragdiv" class="carousel_stage">
+                            <ul>
+                                <li class="carousel_item_1">
+                                    <div class="c-imgs">
+                                        <img src="/img/gallery01.jpg" alt="" />
+                                    </div>
+                                    <div class="c_words">
+                                        <h5>깃허브<span>Git hub</span></h5>
+                                        <p class="c_words_sub1">
+                                            2020년 07월 29일부터 커밋잔디를 심는 중!
+                                        </p>
+                                        <p class="c_words_sub2">
+                                            꾸준함을 이기는 힘은 없다고 생각합니다.<br />깃허브에는
+                                            1일 1커밋을 목표로 커밋하고 있습니다.
+                                        </p>
+                                        <p class="c_words_sub3">
+                                            <a
+                                                href="javascript:void(0)"
+                                                target="_blank"
+                                                rel="noreferrer noopener"
+                                                ><br />Visit the Site</a
+                                            >
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="carousel_item_2">
+                                    <div class="c-imgs">
+                                        <img src="/img/gallery02.jpg" alt="" />
+                                    </div>
+                                    <div class="c_words">
+                                        <h5>비캔버스<span>BeeCanvas</span></h5>
+                                        <p class="c_words_sub1">
+                                            지금까지 어떻게 공부를 해왔을까요?
+                                        </p>
+                                        <p class="c_words_sub2">
+                                            지식의 재사용성을 위해 국비학원에서 배운 것,<br />
+                                            혼자서 독학한 것들을 모두 차곡차곡 쌓아왔습니다.
+                                        </p>
+                                        <p class="c_words_sub3">
+                                            <a
+                                                href="https://beecanvas.com/s/7aEbbrJ3be6fLzSMKJ21QmjHkrEONNHRQ8ze5dMO25TvJ1orEyjSYJxy-ZzwFuDn"
+                                                target="_blank"
+                                                rel="noreferrer noopener"
+                                                ><br />Visit the Site</a
+                                            >
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="carousel_item_3">
+                                    <div class="c-imgs">
+                                        <img src="/img/gallery03.jpg" alt="" />
+                                    </div>
+                                    <div class="c_words">
+                                        <h5>이미지 아트워크들<span>@준비중</span></h5>
+                                        <p class="c_words_sub1">Agency Culture &amp; Onboarding</p>
+                                        <p class="c_words_sub2">준비할 예정</p>
+                                        <p class="c_words_sub3">
+                                            <a
+                                                href="/photozone/design.html"
+                                                target="_blank"
+                                                rel="noreferrer noopener"
+                                                ><br />Visit the Site</a
+                                            >
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="carousel_item_4">
+                                    <div class="c-imgs">
+                                        <img src="/img/gallery04.jpg" alt="" />
+                                    </div>
+                                    <div class="c_words">
+                                        <h5>영상제작물<span>Motion graphic</span></h5>
+                                        <p class="c_words_sub1">
+                                            애프터이펙트, 프리미어프로 중급자 수준
+                                        </p>
+                                        <p class="c_words_sub2">
+                                            2D애니메이션이나 인포영상 등을 제작했던 경험이 있습니다.
+                                            컷편집은 물론 간단한 모션그래픽이 가능합니다. 또한
+                                            원하는 이미지소스는 직접 제작하여 사용하였습니다.
+                                        </p>
+                                        <p class="c_words_sub3">
+                                            <a
+                                                href="/photozone/video.html"
+                                                target="_blank"
+                                                rel="noreferrer noopener"
+                                                ><br />Visit the Site</a
+                                            >
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </nav>
         <div id="quick-menu">
@@ -203,9 +210,9 @@
                             <div class="gols_words_in">
                                 <p>Skills</p>
                                 <p>
-                                    HTML, CSS, JAVAScript 등<br />꾸준하게 공부하며 성장하고
+                                    HTML, CSS, JavaScript 등<br />꾸준하게 공부하며 성장하고
                                     있습니다.<br /><button
-                                        class="galleryOpen"
+                                        class="galleryOpen fas fa-mouse"
                                         onclick="openGallery()"
                                     >
                                         Gallery</button

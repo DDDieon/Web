@@ -2,18 +2,18 @@
 
 // 박스
 $mobile-WidthFull: 300px;
-$tablet-WidthFull : 610px;
+$tablet-WidthFull: 610px;
 $desk-WidthFull: 1180px !important;
 // 데탑박스 세부
-$desk-detail-Big:580px !important;
-$desk-detail-Small:280px !important;
+$desk-detail-Big: 580px !important;
+$desk-detail-Small: 280px !important;
 // 글자
-$mobileHeadline : 96px;
+$mobileHeadline: 96px;
 $tabletHeadline: 193px !important;
 $DeskHeadline: 485px !important;
 
 /* Tablet Device */
-@media all and (min-width:768px) and (max-width:1259px) {
+@media all and (min-width: 768px) and (max-width: 1259px) {
     .main {
         &-headline {
             height: $tabletHeadline;
@@ -53,16 +53,24 @@ $DeskHeadline: 485px !important;
     }
 }
 
-@media all and (min-width:1260px) {
-
+@media all and (min-width: 1260px) {
     html,
     body {
         font-size: 16px;
         overflow: auto !important;
     }
 
+    header {
+        height: 180px !important;
+
+        div.header-wrap {
+            padding-top: 65px;
+            padding-bottom: 65px;
+        }
+    }
+
     // mobiler버전의 header와 교체합니다
-    .wrap {
+    div.wrap {
         .mobile-header {
             display: none;
         }
@@ -72,14 +80,8 @@ $DeskHeadline: 485px !important;
         }
 
         .desktop-header {
+            // none에서 show로 변경합니다
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 100px;
-
-            .desktop-gnb {
-                display: flex;
-            }
         }
     }
 
@@ -115,7 +117,6 @@ $DeskHeadline: 485px !important;
             flex-wrap: wrap;
             justify-content: space-between;
             width: $desk-WidthFull;
-
 
             &-list {
                 width: $desk-detail-Big;
@@ -181,14 +182,11 @@ $DeskHeadline: 485px !important;
                 font-size: 27px;
             }
 
-            &-github {
-                i {
-                    display: block;
+            .address-github {
+                display: block;
 
-                    &::before {
-                        display: block;
-                        font-size: 40px !important;
-                    }
+                .fa-github-alt:before {
+                    font-size: 50px !important;
                 }
             }
         }

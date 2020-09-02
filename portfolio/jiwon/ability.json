@@ -53,7 +53,8 @@
         {
             "id": "10",
             "key": "auto layout을 알고, 와이어프레임 제작 및 <br />코드작성에 활용하고 있습니다.",
-            "title": "Figma"
+            "title": "Figma",
+            "link": "/photozone/info.html"
         }
     ]
 }

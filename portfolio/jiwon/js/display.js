@@ -4,7 +4,6 @@ $(function () {
     btn.click(function () {
         event.preventDefault ? event.preventDefault() : (event.returnValue = false)
         var i = $(this).parent().index() // li의 i번째를 클릭
-        var sectionTT = $("section").eq(i).offset().top - 50 //sectioin들의 y좌표
         if (i == 4) {
             // gallery 이벤트 막기
             $(this).off
@@ -17,10 +16,10 @@ $(function () {
                 })
             return false
         }
+        var sectionTT = $("section").eq(i).offset().top - 50 //sectioin들의 y좌표
         $("html, body")
             .stop()
-            .animate(
-                {
+            .animate({
                     scrollTop: sectionTT,
                 },
                 function () {
@@ -75,14 +74,11 @@ $(function () {
 $.fn.drawRound = function (much) {
     $(this)
         .stop()
-        .animate(
-            {
-                "stroke-dashoffset": 440 - (440 * much) / 100,
-            },
-            {
-                duration: 1000,
-            }
-        )
+        .animate({
+            "stroke-dashoffset": 440 - (440 * much) / 100,
+        }, {
+            duration: 1000,
+        })
 }
 $(function () {
     $(window).scroll(function () {

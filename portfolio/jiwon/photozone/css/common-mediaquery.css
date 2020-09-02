@@ -12,12 +12,10 @@
   .main-headline--back {
     height: 193px !important;
   }
-
   a.goProject {
     width: 145px !important;
     height: auto !important;
   }
-
   .contents .images {
     flex-direction: row;
     flex-wrap: wrap;
@@ -28,29 +26,29 @@
     width: 300px;
   }
 }
+
 @media all and (min-width: 1260px) {
   html,
-body {
+  body {
     font-size: 16px;
     overflow: auto !important;
   }
-
-  .wrap .mobile-header {
+  header {
+    height: 180px !important;
+  }
+  header div.header-wrap {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+  div.wrap .mobile-header {
     display: none;
   }
-  .wrap .over {
+  div.wrap .over {
     display: none;
   }
-  .wrap .desktop-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 100px;
-  }
-  .wrap .desktop-header .desktop-gnb {
+  div.wrap .desktop-header {
     display: flex;
   }
-
   .main-headline {
     height: 485px !important;
   }
@@ -68,7 +66,6 @@ body {
     width: 211px !important;
     height: auto !important;
   }
-
   .contents {
     position: relative;
   }
@@ -117,7 +114,6 @@ body {
     background: #efefef;
     z-index: -999;
   }
-
   .footer {
     background: #fff;
     padding: 45px 0;
@@ -126,11 +122,10 @@ body {
   .footer address .publisher {
     font-size: 27px;
   }
-  .footer address-github i {
+  .footer address .address-github {
     display: block;
   }
-  .footer address-github i::before {
-    display: block;
-    font-size: 40px !important;
+  .footer address .address-github .fa-github-alt:before {
+    font-size: 50px !important;
   }
 }

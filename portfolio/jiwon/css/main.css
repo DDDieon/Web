@@ -248,6 +248,19 @@ nav .nav_list ul li:hover {
   font-weight: bold;
   position: relative;
   padding: 0 5px;
+  outline: none;
+}
+#introduce_top .gols_words .gols_words_in p button.galleryOpen::before {
+  content: "";
+  font-size: 36px;
+  position: absolute;
+  display: block;
+  padding: 2px;
+  color: #0f0f0fd7;
+  white-space: nowrap;
+  right: -10px;
+  animation: upDownHover 2s ease-in infinite;
+  border-radius: 5px;
 }
 #introduce_top .gols_words .gols_words_in p button.galleryOpen::after {
   content: "";

@@ -1,35 +1,11 @@
 @charset "UTF-8";
 
 $pontColor: #ff3939;
-$mobileHeadline : 96px;
+$mobileHeadline: 96px;
 $tabletHeadline: 193px !important;
 
 @mixin h2Title {
     font-family: "Russo One", sans-serif;
-}
-
-body {
-    font-family: "Noto Sans KR", sans-serif;
-    font-weight: 300;
-    font-size: 12px;
-}
-
-
-.desktop-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 100px;
-
-    .desktop-gnb {
-        display: flex;
-
-        .desktop-nav {
-            &--list {
-                font-size:
-            }
-        }
-    }
 }
 
 .main {
@@ -67,8 +43,6 @@ body {
 
         &--back {
             position: absolute;
-            background: url("/photozone/assets/image/title/Design.png") no-repeat;
-            background-size: 100% auto;
             z-index: -9999;
             width: 100%;
             height: $mobileHeadline;
@@ -80,7 +54,6 @@ body {
         }
     }
 }
-
 
 .footer {
     background: rgba(238, 238, 238, 0.199);
@@ -98,13 +71,17 @@ body {
             font-weight: bold;
         }
 
-        &-github {
-            i {
-                display: block;
-                font-size: 30px;
+        .address-github {
+            display: block;
+
+            .fa-github-alt:before {
+                font-size: 22px;
             }
         }
     }
+}
 
-
+.mobile-gnb {
+    font-size: 20px;
+    font-family: "Russo One", sans-serif;
 }

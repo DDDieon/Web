@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>전지원의 포토존입니다</title>
+        <link rel="stylesheet" href="/photozone/css/reset.css" />
+        <link rel="stylesheet" href="/photozone/css/info-layout.css" />
+        <link rel="stylesheet" href="/photozone/css/common-detail.css" />
+        <link rel="stylesheet" href="/photozone/css/common-mediaquery2-gotop.css" />
+        <link rel="stylesheet" href="/photozone/css/common-panel-menu.css" />
+        <!-- font awesome svg -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        />
+        <!-- script tag -->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="/photozone/js/photozone-display.js"></script>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <header>
+                <div class="header-wrap">
+                    <div class="mobile-header">
+                        <h1 class="logo">
+                            <a href="/photozone/design.html"
+                                ><img
+                                    src="/photozone/assets/image/jwIcon.png"
+                                    alt="모바일 로고입니다"
+                            /></a>
+                        </h1>
+                        <button type="button" class="hamburger">
+                            <img
+                                src="/photozone/assets/image/hamburger.png"
+                                alt="모바일 메뉴 열기"
+                            />
+                        </button>
+                    </div>
+                    <div class="over">
+                        <nav class="mobile-drawer">
+                            <!-- right = 0 일때 gnb show -->
+                            <button type="button" class="closeIcon">
+                                <img
+                                    src="/photozone/assets/image/close.png"
+                                    alt="모바일 메뉴 닫기"
+                                />
+                            </button>
+                            <ul class="mobile-gnb">
+                                <li class="mobile-drawer--list">
+                                    <a href="/photozone/design.html">Design</a>
+                                </li>
+                                <li class="mobile-drawer--list">
+                                    <a href="/photozone/video.html">Video</a>
+                                </li>
+                                <li class="mobile-drawer--list">
+                                    <a href="/photozone/info.html">Info</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="desktop-header">
+                        <p class="logo">
+                            <a href="/photozone/design.html"
+                                ><img
+                                    src="/photozone/assets/image/jwIcon.png"
+                                    alt="데스크탑 로고입니다"
+                            /></a>
+                        </p>
+                        <ul class="desktop-nav">
+                            <li class="desktop-nav--list designDeskMenu">
+                                <a href="/photozone/design.html">Design</a>
+                            </li>
+                            <li class="desktop-nav--list videoDeskMenu">
+                                <a href="/photozone/video.html">Video</a>
+                            </li>
+                            <li class="desktop-nav--list infoDeskMenu">
+                                <a href="/photozone/info.html">Info</a>
+                            </li>
+                            <!-- url 주소를 받아와서 css로 pointcolor 변경할 예정 -->
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <div class="main">
+                <div class="main-headline">
+                    <div class="main-headline--title">
+                        <h2>Info</h2>
+                        <p class="headlineDesc">해당 프로젝트는 Figma로 제작되었습니다.</p>
+                        <a class="goProject" href="/"
+                            ><img
+                                src="/photozone/assets/image/goProject.png"
+                                alt="
+                        프로젝트 사이트로 이동합니다"
+                        /></a>
+                    </div>
+                    <div class="main-headline--back">Info</div>
+                </div>
+            </div>
+            <div class="contents">
+                <a
+                    class="figma-wrap"
+                    href="https://www.figma.com/file/qvIfT1fHdYoXzB8Lgte91y/portfolio-photozone-videozone?node-id=0%3A1"
+                >
+                    <img
+                        class="figmaIcon"
+                        src="/photozone/assets/image/figma.png"
+                        alt="피그마 아이콘을 클릭해서 시안을 보세요"
+                    />
+                </a>
+                <div>
+                    <img
+                        class="iconsQuotes"
+                        src="/photozone/assets/image/icons_quotes.png"
+                        alt="따옴표"
+                    />
+                    <table class="contents__desc">
+                        <caption>
+                            info 관련 세부내용
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">제작일</th>
+                                <th scope="col">인원</th>
+                                <th scope="col">뷰포트</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>20.08.31</td>
+                                <td>1인 제작</td>
+                                <td>반응형</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3">by 전지원</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="contents__bgColor"></div>
+            </div>
+            <footer class="footer">
+                <address>
+                    <div class="address-text">
+                        <p class="publisher">JEON JIWON</p>
+                        <p>https://github.com/DDDieon</p>
+                    </div>
+                    <div class="address-github">
+                        <a href="https://github.com/DDDieon" target="_blank"
+                            ><i class="fab fa-github-alt"></i
+                        ></a>
+                    </div>
+                </address>
+            </footer>
+        </div>
+    </body>
+</html>

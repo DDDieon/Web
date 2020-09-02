@@ -1,52 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Welcome to Ikea / 아이디어</title>
-        <meta
-            name="description"
-            content="IKEA 이달의 인기 제품 한눈에 보기 주문부터 배송까지, 온라인으로 쉽고 편리하게 구매하세요."
-        />
-        <link type="text/css" rel="stylesheet" href="css/reset.css" />
-        <link type="text/css" rel="stylesheet" href="css/base.css" />
-        <link type="text/css" rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
-        <!-- JQuery plugin -->
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-        <script src="js/slick/slick.js"></script>
-        <!-- slick 슬라이더 css -->
-        <link rel="stylesheet" type="text/css" href="/js/slick/slick.css" />
-        <link rel="stylesheet" type="text/css" href="/js/slick/slick-theme.css" />
-        <!-- js Files -->
-        <!-- Sass compiled CSS Lists -->
-        <link rel="stylesheet" href="/css/idea.css" />
-    </head>
+<html lang="ko">
 
-    <body>
-        <div id="wrap">
-            <header id="header">
-                <div id="desk_nav">
-                    <nav class="top_gnb">
-                        <ul>
-                            <li><a href="#">LOGIN</a></li>
-                            <li><a href="#">회원가입</a></li>
-                            <li><a href="#">주문배송조회</a></li>
-                            <li><a href="#">고객센터</a></li>
-                            <li>
-                                <a href="#"><i class="xi-cart"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="xi-basket"></i></a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <nav class="bottom_gnb">
-                        <ul>
-                            <li>
-                                <h1><a href="/">ikea</a></h1>
-                            </li>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Ikea / 아이디어</title>
+    <meta name="description" content="IKEA 이달의 인기 제품 한눈에 보기 주문부터 배송까지, 온라인으로 쉽고 편리하게 구매하세요." />
+    <link type="text/css" rel="stylesheet" href="css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="css/base.css" />
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+    <!-- JQuery plugin -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script src="js/slick/slick.js"></script>
+    <!-- slick 슬라이더 css -->
+    <link rel="stylesheet" type="text/css" href="/js/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="/js/slick/slick-theme.css" />
+    <!-- js Files -->
+    <!-- Sass compiled CSS Lists -->
+    <link rel="stylesheet" href="/css/idea.css" />
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div id="desk_nav">
+                <nav class="top_gnb">
+                    <ul>
+                        <li><a href="#">LOGIN</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">주문배송조회</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li>
+                            <a href="#"><i class="xi-cart"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="xi-basket"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="bottom_gnb">
+                    <ul>
+                        <li>
+                            <h1><a href="/">ikea</a></h1>
+                        </li>
+                        <li><a href="/product.html">모든 제품</a></li>
+                        <li><a href="/digitalshow.html">디지털 쇼룸</a></li>
+                        <li><a href="/idea.html">아이디어</a></li>
+                        <li><a href="/store.html">매장안내(미구현)</a></li>
+                        <li><a href="/monthly.html">이달의 혜택(미구현)</a></li>
+                        <li><a href="/sale.html">세일정보(미구현)</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="mobile_nav">
+                <input type="checkbox" id="panel_wrap" />
+                <div class="panel_wrap">
+                    <p class="panel_top">
+                        <label for="panel_wrap"><i class="xi-close"></i></label>
+                    </p>
+                    <div id="content_box">
+                        <ul class="list01">
                             <li><a href="/product.html">모든 제품</a></li>
                             <li><a href="/digitalshow.html">디지털 쇼룸</a></li>
                             <li><a href="/idea.html">아이디어</a></li>
@@ -54,549 +69,537 @@
                             <li><a href="/monthly.html">이달의 혜택(미구현)</a></li>
                             <li><a href="/sale.html">세일정보(미구현)</a></li>
                         </ul>
-                    </nav>
+                    </div>
                 </div>
-                <div id="mobile_nav">
-                    <input type="checkbox" id="panel_wrap" />
-                    <div class="panel_wrap">
-                        <p class="panel_top">
-                            <label for="panel_wrap"><i class="xi-close"></i></label>
-                        </p>
-                        <div id="content_box">
-                            <ul class="list01">
-                                <li><a href="/product.html">모든 제품</a></li>
-                                <li><a href="/digitalshow.html">디지털 쇼룸</a></li>
-                                <li><a href="/idea.html">아이디어</a></li>
-                                <li><a href="/store.html">매장안내(미구현)</a></li>
-                                <li><a href="/monthly.html">이달의 혜택(미구현)</a></li>
-                                <li><a href="/sale.html">세일정보(미구현)</a></li>
+                <nav class="top_gnb">
+                    <label for="panel_wrap"><i class="xi-bars"></i></label>
+                    <a href="/">logo</a>
+                    <a href="#"><i class="xi-profile"></i></a>
+                </nav>
+            </div>
+        </header>
+        <div id="content" class="content">
+            <div class="content__projects">
+                <div class="content__projects--menu">
+                    <div class="ikea_idea fadeShow">
+                        <!-- <div class="content__project--icon">
+                                <i class="xi-touch"></i>
+                            </div> -->
+                        <div class="content__projects--word">
+                            <p>Small Change Big Difference</p>
+                            <h2>이케아 아이디어</h2>
+                            <p>행복을 만드는 이케아에서 제안하는 우리집 인테리어</p>
+                        </div>
+                    </div>
+                    <div class="our_home fadeShow">
+                        <!-- <div class="content__project--icon">
+                                <i class="xi-touch"></i>
+                            </div> -->
+                        <div class="content__projects--word">
+                            <p>Small Change Big Difference</p>
+                            <h2>우리집+이케아</h2>
+                            <p>행복을 만드는 이케아에서 제안하는 우리집 인테리어</p>
+                        </div>
+                    </div>
+                    <div class="social_ikea fadeShow">
+                        <!-- <div class="content__project--icon">
+                                <i class="xi-touch"></i>
+                            </div> -->
+                        <div class="content__projects--word">
+                            <p>Small Change Big Difference</p>
+                            <h2>소셜미디어#이케아</h2>
+                            <p>행복을 만드는 이케아에서 제안하는 우리집 인테리어</p>
+                        </div>
+                    </div>
+                    <div class="content__projects--desc">
+                        <div class="slideTitle">
+                            <p class="--desc-title"><span>IKEA IDEAS</span></p>
+                        </div>
+                        <div class="slide">
+                            <ul class="slide-wrapT">
+                                <li class="slide-thumb">
+                                    <a href="#">
+                                        <div class="imgBox">
+                                            <img src="/img/for_slide/sl01.png" alt="" />
+                                        </div>
+                                        <div class="slide-thumb__desc">
+                                            <p>약간의 늦잠으로<br />에너지를 충전하기</p>
+                                            <br />
+                                            <p><span>NEW</span><span>SALE</span></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slide-thumb">
+                                    <a href="#">
+                                        <div class="imgBox">
+                                            <img src="/img/for_slide/sl02.png" alt="" />
+                                        </div>
+                                        <div class="slide-thumb__desc">
+                                            <p>약간의 늦잠으로<br />에너지를 충전하기</p>
+                                            <br />
+                                            <p><span>NEW</span><span>SALE</span></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slide-thumb">
+                                    <a href="#">
+                                        <div class="imgBox">
+                                            <img src="/img/for_slide/sl03.png" alt="" />
+                                        </div>
+                                        <div class="slide-thumb__desc">
+                                            <p>약간의 늦잠으로<br />에너지를 충전하기</p>
+                                            <br />
+                                            <p><span>NEW</span><span>SALE</span></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slide-thumb">
+                                    <a href="#">
+                                        <div class="imgBox">
+                                            <img src="/img/for_slide/sl04.png" alt="" />
+                                        </div>
+                                        <div class="slide-thumb__desc">
+                                            <p>약간의 늦잠으로<br />에너지를 충전하기</p>
+                                            <br />
+                                            <p><span>NEW</span><span>SALE</span></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slide-thumb">
+                                    <a href="#">
+                                        <div class="imgBox">
+                                            <img src="/img/for_slide/sl02.png" alt="" />
+                                        </div>
+                                        <div class="slide-thumb__desc">
+                                            <p>약간의 늦잠으로<br />에너지를 충전하기</p>
+                                            <br />
+                                            <p><span>NEW</span><span>SALE</span></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slide-thumb">
+                                    <a href="#">
+                                        <div class="imgBox">
+                                            <img src="/img/for_slide/sl04.png" alt="" />
+                                        </div>
+                                        <div class="slide-thumb__desc">
+                                            <p>약간의 늦잠으로<br />에너지를 충전하기</p>
+                                            <br />
+                                            <p><span>NEW</span><span>SALE</span></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slide-thumb">
+                                    <a href="#">
+                                        <div class="imgBox">
+                                            <img src="/img/for_slide/sl03.png" alt="" />
+                                        </div>
+                                        <div class="slide-thumb__desc">
+                                            <p>약간의 늦잠으로<br />에너지를 충전하기</p>
+                                            <br />
+                                            <p><span>NEW</span><span>SALE</span></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slide-thumb">
+                                    <a href="#">
+                                        <div class="imgBox">
+                                            <img src="/img/for_slide/sl01.png" alt="" />
+                                        </div>
+                                        <div class="slide-thumb__desc">
+                                            <p>약간의 늦잠으로<br />에너지를 충전하기</p>
+                                            <br />
+                                            <p><span>NEW</span><span>SALE</span></p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="slide-wrapB">
+                                <li class="slide-thumb">
+                                    <a href="#">
+                                        <div class="imgBox">
+                                            <img src="/img/for_slide/sl01.png" alt="" />
+                                        </div>
+                                        <div class="slide-thumb__desc">
+                                            <p>약간의 늦잠으로<br />에너지를 충전하기</p>
+                                            <br />
+                                            <p><span>NEW</span><span>SALE</span></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slide-thumb">
+                                    <a href="#">
+                                        <div class="imgBox">
+                                            <img src="/img/for_slide/sl02.png" alt="" />
+                                        </div>
+                                        <div class="slide-thumb__desc">
+                                            <p>약간의 늦잠으로<br />에너지를 충전하기</p>
+                                            <br />
+                                            <p><span>NEW</span><span>SALE</span></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slide-thumb">
+                                    <a href="#">
+                                        <div class="imgBox">
+                                            <img src="/img/for_slide/sl03.png" alt="" />
+                                        </div>
+                                        <div class="slide-thumb__desc">
+                                            <p>약간의 늦잠으로<br />에너지를 충전하기</p>
+                                            <br />
+                                            <p><span>NEW</span><span>SALE</span></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slide-thumb">
+                                    <a href="#">
+                                        <div class="imgBox">
+                                            <img src="/img/for_slide/sl04.png" alt="" />
+                                        </div>
+                                        <div class="slide-thumb__desc">
+                                            <p>약간의 늦잠으로<br />에너지를 충전하기</p>
+                                            <br />
+                                            <p><span>NEW</span><span>SALE</span></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slide-thumb">
+                                    <a href="#">
+                                        <div class="imgBox">
+                                            <img src="/img/for_slide/sl01.png" alt="" />
+                                        </div>
+                                        <div class="slide-thumb__desc">
+                                            <p>약간의 늦잠으로<br />에너지를 충전하기</p>
+                                            <br />
+                                            <p><span>NEW</span><span>SALE</span></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slide-thumb">
+                                    <a href="#">
+                                        <div class="imgBox">
+                                            <img src="/img/for_slide/sl02.png" alt="" />
+                                        </div>
+                                        <div class="slide-thumb__desc">
+                                            <p>약간의 늦잠으로<br />에너지를 충전하기</p>
+                                            <br />
+                                            <p><span>NEW</span><span>SALE</span></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slide-thumb">
+                                    <a href="#">
+                                        <div class="imgBox">
+                                            <img src="/img/for_slide/sl03.png" alt="" />
+                                        </div>
+                                        <div class="slide-thumb__desc">
+                                            <p>약간의 늦잠으로<br />에너지를 충전하기</p>
+                                            <br />
+                                            <p><span>NEW</span><span>SALE</span></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="slide-thumb">
+                                    <a href="#">
+                                        <div class="imgBox">
+                                            <img src="/img/for_slide/sl04.png" alt="" />
+                                        </div>
+                                        <div class="slide-thumb__desc">
+                                            <p>약간의 늦잠으로<br />에너지를 충전하기</p>
+                                            <br />
+                                            <p><span>NEW</span><span>SALE</span></p>
+                                        </div>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
-                    </div>
-                    <nav class="top_gnb">
-                        <label for="panel_wrap"><i class="xi-bars"></i></label>
-                        <a href="/">logo</a>
-                        <a href="#"><i class="xi-profile"></i></a>
-                    </nav>
-                </div>
-            </header>
-            <div id="content" class="content">
-                <div class="content__projects">
-                    <div class="content__projects--menu">
-                        <div class="ikea_idea fadeShow">
-                            <!-- <div class="content__project--icon">
-                                <i class="xi-touch"></i>
-                            </div> -->
-                            <div class="content__projects--word">
-                                <p>Small Change Big Difference</p>
-                                <h2>이케아 아이디어</h2>
-                                <p>행복을 만드는 이케아에서 제안하는 우리집 인테리어</p>
+                        <div class="slideControler">
+                            <button class="slideControler--prev">
+                                <i class="xi-angle-left"></i>
+                            </button>
+                            <div class="PrevPageButton">
+                                <p>BACK</p>
                             </div>
-                        </div>
-                        <div class="our_home fadeShow">
-                            <!-- <div class="content__project--icon">
-                                <i class="xi-touch"></i>
-                            </div> -->
-                            <div class="content__projects--word">
-                                <p>Small Change Big Difference</p>
-                                <h2>우리집+이케아</h2>
-                                <p>행복을 만드는 이케아에서 제안하는 우리집 인테리어</p>
-                            </div>
-                        </div>
-                        <div class="social_ikea fadeShow">
-                            <!-- <div class="content__project--icon">
-                                <i class="xi-touch"></i>
-                            </div> -->
-                            <div class="content__projects--word">
-                                <p>Small Change Big Difference</p>
-                                <h2>소셜미디어#이케아</h2>
-                                <p>행복을 만드는 이케아에서 제안하는 우리집 인테리어</p>
-                            </div>
-                        </div>
-                        <div class="content__projects--desc">
-                            <div class="slideTitle">
-                                <p class="--desc-title"><span>IKEA IDEAS</span></p>
-                            </div>
-                            <div class="slide">
-                                <ul class="slide-wrapT">
-                                    <li class="slide-thumb">
-                                        <a href="#">
-                                            <div class="imgBox">
-                                                <img src="/img/for_slide/sl01.png" alt="" />
-                                            </div>
-                                            <div class="slide-thumb__desc">
-                                                <p>약간의 늦잠으로<br />에너지를 충전하기</p>
-                                                <br />
-                                                <p><span>NEW</span><span>SALE</span></p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="slide-thumb">
-                                        <a href="#">
-                                            <div class="imgBox">
-                                                <img src="/img/for_slide/sl02.png" alt="" />
-                                            </div>
-                                            <div class="slide-thumb__desc">
-                                                <p>약간의 늦잠으로<br />에너지를 충전하기</p>
-                                                <br />
-                                                <p><span>NEW</span><span>SALE</span></p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="slide-thumb">
-                                        <a href="#">
-                                            <div class="imgBox">
-                                                <img src="/img/for_slide/sl03.png" alt="" />
-                                            </div>
-                                            <div class="slide-thumb__desc">
-                                                <p>약간의 늦잠으로<br />에너지를 충전하기</p>
-                                                <br />
-                                                <p><span>NEW</span><span>SALE</span></p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="slide-thumb">
-                                        <a href="#">
-                                            <div class="imgBox">
-                                                <img src="/img/for_slide/sl04.png" alt="" />
-                                            </div>
-                                            <div class="slide-thumb__desc">
-                                                <p>약간의 늦잠으로<br />에너지를 충전하기</p>
-                                                <br />
-                                                <p><span>NEW</span><span>SALE</span></p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="slide-thumb">
-                                        <a href="#">
-                                            <div class="imgBox">
-                                                <img src="/img/for_slide/sl02.png" alt="" />
-                                            </div>
-                                            <div class="slide-thumb__desc">
-                                                <p>약간의 늦잠으로<br />에너지를 충전하기</p>
-                                                <br />
-                                                <p><span>NEW</span><span>SALE</span></p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="slide-thumb">
-                                        <a href="#">
-                                            <div class="imgBox">
-                                                <img src="/img/for_slide/sl04.png" alt="" />
-                                            </div>
-                                            <div class="slide-thumb__desc">
-                                                <p>약간의 늦잠으로<br />에너지를 충전하기</p>
-                                                <br />
-                                                <p><span>NEW</span><span>SALE</span></p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="slide-thumb">
-                                        <a href="#">
-                                            <div class="imgBox">
-                                                <img src="/img/for_slide/sl03.png" alt="" />
-                                            </div>
-                                            <div class="slide-thumb__desc">
-                                                <p>약간의 늦잠으로<br />에너지를 충전하기</p>
-                                                <br />
-                                                <p><span>NEW</span><span>SALE</span></p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="slide-thumb">
-                                        <a href="#">
-                                            <div class="imgBox">
-                                                <img src="/img/for_slide/sl01.png" alt="" />
-                                            </div>
-                                            <div class="slide-thumb__desc">
-                                                <p>약간의 늦잠으로<br />에너지를 충전하기</p>
-                                                <br />
-                                                <p><span>NEW</span><span>SALE</span></p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <ul class="slide-wrapB">
-                                    <li class="slide-thumb">
-                                        <a href="#">
-                                            <div class="imgBox">
-                                                <img src="/img/for_slide/sl01.png" alt="" />
-                                            </div>
-                                            <div class="slide-thumb__desc">
-                                                <p>약간의 늦잠으로<br />에너지를 충전하기</p>
-                                                <br />
-                                                <p><span>NEW</span><span>SALE</span></p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="slide-thumb">
-                                        <a href="#">
-                                            <div class="imgBox">
-                                                <img src="/img/for_slide/sl02.png" alt="" />
-                                            </div>
-                                            <div class="slide-thumb__desc">
-                                                <p>약간의 늦잠으로<br />에너지를 충전하기</p>
-                                                <br />
-                                                <p><span>NEW</span><span>SALE</span></p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="slide-thumb">
-                                        <a href="#">
-                                            <div class="imgBox">
-                                                <img src="/img/for_slide/sl03.png" alt="" />
-                                            </div>
-                                            <div class="slide-thumb__desc">
-                                                <p>약간의 늦잠으로<br />에너지를 충전하기</p>
-                                                <br />
-                                                <p><span>NEW</span><span>SALE</span></p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="slide-thumb">
-                                        <a href="#">
-                                            <div class="imgBox">
-                                                <img src="/img/for_slide/sl04.png" alt="" />
-                                            </div>
-                                            <div class="slide-thumb__desc">
-                                                <p>약간의 늦잠으로<br />에너지를 충전하기</p>
-                                                <br />
-                                                <p><span>NEW</span><span>SALE</span></p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="slide-thumb">
-                                        <a href="#">
-                                            <div class="imgBox">
-                                                <img src="/img/for_slide/sl01.png" alt="" />
-                                            </div>
-                                            <div class="slide-thumb__desc">
-                                                <p>약간의 늦잠으로<br />에너지를 충전하기</p>
-                                                <br />
-                                                <p><span>NEW</span><span>SALE</span></p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="slide-thumb">
-                                        <a href="#">
-                                            <div class="imgBox">
-                                                <img src="/img/for_slide/sl02.png" alt="" />
-                                            </div>
-                                            <div class="slide-thumb__desc">
-                                                <p>약간의 늦잠으로<br />에너지를 충전하기</p>
-                                                <br />
-                                                <p><span>NEW</span><span>SALE</span></p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="slide-thumb">
-                                        <a href="#">
-                                            <div class="imgBox">
-                                                <img src="/img/for_slide/sl03.png" alt="" />
-                                            </div>
-                                            <div class="slide-thumb__desc">
-                                                <p>약간의 늦잠으로<br />에너지를 충전하기</p>
-                                                <br />
-                                                <p><span>NEW</span><span>SALE</span></p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="slide-thumb">
-                                        <a href="#">
-                                            <div class="imgBox">
-                                                <img src="/img/for_slide/sl04.png" alt="" />
-                                            </div>
-                                            <div class="slide-thumb__desc">
-                                                <p>약간의 늦잠으로<br />에너지를 충전하기</p>
-                                                <br />
-                                                <p><span>NEW</span><span>SALE</span></p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="slideControler">
-                                <button class="slideControler--prev">
-                                    <i class="xi-angle-left"></i>
-                                </button>
-                                <div class="PrevPageButton">
-                                    <p>BACK</p>
-                                </div>
-                                <button class="slideControler--next">
-                                    <i class="xi-angle-right"></i>
-                                </button>
-                            </div>
+                            <button class="slideControler--next">
+                                <i class="xi-angle-right"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="content__modals">
-                    <div class="content__modals--wrap">
-                        <div class="content__modals--main">
-                            <img src="/img/for_slide/sl01.png" alt="모달창 이미지" />
-                            <div class="content__modals--main__sub">
-                                <div>
-                                    <h3>IKEA IDEA</h3>
-                                    <p>example</p>
-                                </div>
-                                <div>
-                                    <p>
-                                        해당 화면은 참고용 모달창입니다.<br />새로운 아이디어를
-                                        표시해줍니다. 화면을 한 번 더 클릭하면 원래화면으로
-                                        돌아갑니다. 메인화면으로 클릭하는 버튼은 back 또는
-                                        슬라이드의 페이지입니다.
-                                    </p>
-                                </div>
+            </div>
+            <div class="content__modals">
+                <div class="content__modals--wrap">
+                    <div class="content__modals--main">
+                        <img src="/img/for_slide/sl01.png" alt="모달창 이미지" />
+                        <div class="content__modals--main__sub">
+                            <div>
+                                <h3>IKEA IDEA</h3>
+                                <p>example</p>
+                            </div>
+                            <div>
+                                <p>
+                                    해당 화면은 참고용 모달창입니다.<br />새로운 아이디어를
+                                    표시해줍니다. 화면을 한 번 더 클릭하면 원래화면으로
+                                    돌아갑니다. 메인화면으로 클릭하는 버튼은 back 또는
+                                    슬라이드의 페이지입니다.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <footer id="footer" class="ft">
-                <div class="f-top">
-                    <div class="inner-list">
-                        <ul>
-                            <li>
-                                <a href="#f-sub-1">고객문의<i class="xi-angle-down"></i></a>
-                                <ol id="f-sub-1">
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 고객지원</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 자주 묻는 질문</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 문의하기</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 배송조회</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 교환환불</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 제품리콜</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 제품 구매 안내</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 피드백</a>
-                                    </li>
-                                </ol>
-                            </li>
-                            <li>
-                                <a href="#f-sub-2">쇼핑하기<i class="xi-angle-down"></i></a>
-                                <ol id="f-sub-2">
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 쇼핑하기</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 전화 주문</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> IKEA FAMILY</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> IKEA for Business</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> IKEA 모바일 웹</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 온라인 플래닝</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> IKEA 카탈로그</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 결제 옵션</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 제품 재고 확인</a>
-                                    </li>
-                                </ol>
-                            </li>
-                            <li>
-                                <a href="#f-sub-3">IKEA 서비스<i class="xi-angle-down"></i></a>
-                                <ol id="f-sub-3">
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> IKEA 서비스</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 배송 서비스</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 조립 서비스</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            ><i class="xi-play"></i> 홈퍼니싱 컨설팅 서비스</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 주방 플래닝 서비스</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 전화 플래닝 서비스</a>
-                                    </li>
-                                </ol>
-                            </li>
-                            <li>
-                                <a href="#f-sub-4">IKEA 이야기<i class="xi-angle-down"></i></a>
-                                <ol id="f-sub-4">
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 기업 소개</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 데모크래틱 디자인</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 지속가능한 생활</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 뉴스</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="xi-play"></i> 제품 정보</a>
-                                    </li>
-                                </ol>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="inner-icons">
-                        <div class="ft-icons-left">
-                            <a href="#"><i class="xi-facebook"></i></a>
-                            <a href="#"><i class="xi-instagram"></i></a>
-                            <a href="#"><i class="xi-youtube-play"></i></a>
-                        </div>
-                        <div class="ft-icons-right">
-                            <a href="#">국가변경</a>
-                            <select>
-                                <option value="#">한국어</option>
-                                <option value="#">English</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="f-bottom">
-                    <p>
-                        <span>IKEA 코리아</span> 주소 : (우) 14352 경기도 광명시 일직로 17
-                        IKEA광명점<br />
-                        사업자 등록번호 : 106-86-82871
-                        <a
-                            href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1068682871"
-                            target="_blank"
-                        >
-                            사업자정보확인 </a
-                        ><br />
-                        대표자 : 프레드리크 요한손 <br />
-                        통신판매업 신고 : 2018-경기광명-0209 <br />
-                        TEL : 1670-4532
-                    </p>
-                </div>
-            </footer>
         </div>
-    </body>
-    <script>
-        //------------ 화면 전환효과 ------------
-        $(document).ready(function () {
-            $(".fadeShow").each(function (i) {
-                $(this).fadeIn(700 * i)
-            })
-            if (windowWidth < 1260) {
-                $(".slideControler").hide()
-            }
+        <footer id="footer" class="ft">
+            <div class="f-top">
+                <div class="inner-list">
+                    <ul>
+                        <li>
+                            <a href="#f-sub-1">고객문의<i class="xi-angle-down"></i></a>
+                            <ol id="f-sub-1">
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> 고객지원</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> 자주 묻는 질문</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> 문의하기</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> 배송조회</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> 교환환불</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> 제품리콜</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> 제품 구매 안내</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> 피드백</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="#f-sub-2">쇼핑하기<i class="xi-angle-down"></i></a>
+                            <ol id="f-sub-2">
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> 쇼핑하기</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> 전화 주문</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> IKEA FAMILY</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> IKEA for Business</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> IKEA 모바일 웹</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> 온라인 플래닝</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> IKEA 카탈로그</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> 결제 옵션</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> 제품 재고 확인</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="#f-sub-3">IKEA 서비스<i class="xi-angle-down"></i></a>
+                            <ol id="f-sub-3">
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> IKEA 서비스</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> 배송 서비스</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> 조립 서비스</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> 홈퍼니싱 컨설팅 서비스</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> 주방 플래닝 서비스</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> 전화 플래닝 서비스</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="#f-sub-4">IKEA 이야기<i class="xi-angle-down"></i></a>
+                            <ol id="f-sub-4">
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> 기업 소개</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> 데모크래틱 디자인</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> 지속가능한 생활</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> 뉴스</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="xi-play"></i> 제품 정보</a>
+                                </li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+                <div class="inner-icons">
+                    <div class="ft-icons-left">
+                        <a href="#"><i class="xi-facebook"></i></a>
+                        <a href="#"><i class="xi-instagram"></i></a>
+                        <a href="#"><i class="xi-youtube-play"></i></a>
+                    </div>
+                    <div class="ft-icons-right">
+                        <a href="#">국가변경</a>
+                        <select>
+                            <option value="#">한국어</option>
+                            <option value="#">English</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="f-bottom">
+                <p>
+                    <span>IKEA 코리아</span> 주소 : (우) 14352 경기도 광명시 일직로 17
+                    IKEA광명점<br />
+                    사업자 등록번호 : 106-86-82871
+                    <a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1068682871" target="_blank">
+                        사업자정보확인 </a><br />
+                    대표자 : 프레드리크 요한손 <br />
+                    통신판매업 신고 : 2018-경기광명-0209 <br />
+                    TEL : 1670-4532
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+<script>
+    //------------ 화면 전환효과 ------------
+    $(document).ready(function () {
+        $(".fadeShow").each(function (i) {
+            $(this).fadeIn(700 * i)
         })
-
-        //------------- 메인화면 토글기능-------------
-        var status = 0 //0=default, 1=desc, 2=main
-        var windowWidth = $(window).width()
-        var marginFull = 0
-        var pageNumber = 0
-
-        function comeBackToMain() {
-            var windowWidthNow = $(window).width()
-            $(".fadeShow").show()
-            $(".content__projects--desc").hide()
-            pageNumber = 0
-            status = 2
-            if (windowWidthNow > 1260) {
-                $("div.slide").stop().animate({ "margin-left": pageNumber })
-            } else {
-                $("div.slide").stop().animate({ "margin-left": "auto" })
-            }
+        if (windowWidth < 1260) {
+            $(".slideControler").hide()
         }
-        $(".PrevPageButton").click(function () {
+    })
+
+    //------------- 메인화면 토글기능-------------
+    var status = 0 //0=default, 1=desc, 2=main
+    var windowWidth = $(window).width()
+    var marginFull = 0
+    var pageNumber = 0
+
+    function comeBackToMain() {
+        var windowWidthNow = $(window).width()
+        $(".fadeShow").show()
+        $(".content__projects--desc").hide()
+        pageNumber = 0
+        status = 2
+        if (windowWidthNow > 1260) {
+            $("div.slide").stop().animate({
+                "margin-left": pageNumber
+            })
+        } else {
+            $("div.slide").stop().animate({
+                "margin-left": "auto"
+            })
+        }
+    }
+    $(".PrevPageButton").click(function () {
+        comeBackToMain()
+    })
+    //버튼 3개중에 하나 선택할 때
+    $(".fadeShow").click(function () {
+        status++
+        if (status % 2 == 1) {
+            //상세페이지 보기
+            $(".fadeShow").hide()
+            $(".content__projects--desc").show()
+            $(this).show()
+        } else {
+            //메인으로 돌아가기
             comeBackToMain()
-        })
-        //버튼 3개중에 하나 선택할 때
-        $(".fadeShow").click(function () {
-            status++
-            if (status % 2 == 1) {
-                //상세페이지 보기
-                $(".fadeShow").hide()
-                $(".content__projects--desc").show()
-                $(this).show()
-            } else {
-                //메인으로 돌아가기
-                comeBackToMain()
-            }
-        })
-
-        if (windowWidth > 1260) {
-            $(".slideControler--next").click(function (event) {
-                event.stopPropagation()
-                if (pageNumber % 3 == 0) {
-                    $("div.slide li:lt(4)").clone().appendTo($(".slide-wrapT"))
-                    $("div.slide li:lt(4)").clone().appendTo($(".slide-wrapB"))
-                }
-                var thumbWidth = $("li.slide-thumb").outerWidth(true)
-                pageNumber++
-                marginFull = thumbWidth * pageNumber
-                $("div.slide").stop().animate({ "margin-left": -marginFull })
-            })
-            $(".slideControler--prev").click(function (event) {
-                event.stopPropagation()
-                if (pageNumber == 0) {
-                    alert("첫 번째 페이지입니다")
-                    return false
-                } else {
-                    var thumbWidth = $("li.slide-thumb").outerWidth(true)
-                    pageNumber--
-                    marginFull = thumbWidth * pageNumber
-                    $("div.slide").stop().animate({ "margin-left": -marginFull })
-                }
-            })
         }
-        //--------- 반응형 : window 너비 변경시 css 초기화 ---------
-        $(window).resize(function () {
-            var windowWidth = $(window).width()
-            if (windowWidth < 1260) {
-                $(".slideControler").hide()
-                $("div.slide").css({ "margin-left": "auto" })
-                pageNumber = 0
-            }
-            if (windowWidth > 1260) {
-                $(".slideControler").show()
-            }
-        })
-        //---------- 아이디어 슬라이더 클릭시 모달창 발생 -------------
-        $(document).on("click", ".slide-thumb,.content__modals", function () {
-            $(".content__modals").toggle()
-        })
+    })
 
-        $(document).on("click", ".slide-thumb", function () {
-            var imgSrc = $(this).find("img").attr("src")
-            console.log(imgSrc)
-            var modalImg = $(".content__modals--main").find("img")
-            console.log(modalImg)
-            modalImg.attr("src", imgSrc)
-        })
-
-        $(".slide-thumb")
-            .find("a")
-            .on("click", function (e) {
-                e.preventDefault()
+    if (windowWidth > 1260) {
+        $(".slideControler--next").click(function (event) {
+            event.stopPropagation()
+            if (pageNumber % 3 == 0) {
+                $("div.slide li:lt(4)").clone().appendTo($(".slide-wrapT"))
+                $("div.slide li:lt(4)").clone().appendTo($(".slide-wrapB"))
+            }
+            var thumbWidth = $("li.slide-thumb").outerWidth(true)
+            pageNumber++
+            marginFull = thumbWidth * pageNumber
+            $("div.slide").stop().animate({
+                "margin-left": -marginFull
             })
-    </script>
+        })
+        $(".slideControler--prev").click(function (event) {
+            event.stopPropagation()
+            if (pageNumber == 0) {
+                alert("첫 번째 페이지입니다")
+                return false
+            } else {
+                var thumbWidth = $("li.slide-thumb").outerWidth(true)
+                pageNumber--
+                marginFull = thumbWidth * pageNumber
+                $("div.slide").stop().animate({
+                    "margin-left": -marginFull
+                })
+            }
+        })
+    }
+    //--------- 반응형 : window 너비 변경시 css 초기화 ---------
+    $(window).resize(function () {
+        var windowWidth = $(window).width()
+        if (windowWidth < 1260) {
+            $(".slideControler").hide()
+            $("div.slide").css({
+                "margin-left": "auto"
+            })
+            pageNumber = 0
+        }
+        if (windowWidth > 1260) {
+            $(".slideControler").show()
+        }
+    })
+    //---------- 아이디어 슬라이더 클릭시 모달창 발생 -------------
+    $(document).on("click", ".slide-thumb,.content__modals", function () {
+        $(".content__modals").toggle()
+    })
+
+    $(document).on("click", ".slide-thumb", function () {
+        var imgSrc = $(this).find("img").attr("src")
+        console.log(imgSrc)
+        var modalImg = $(".content__modals--main").find("img")
+        console.log(modalImg)
+        modalImg.attr("src", imgSrc)
+    })
+
+    $(".slide-thumb")
+        .find("a")
+        .on("click", function (e) {
+            e.preventDefault()
+        })
+</script>
+
 </html>

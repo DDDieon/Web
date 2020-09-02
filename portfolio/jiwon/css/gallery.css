@@ -15,6 +15,7 @@
   display: none;
   background: #2c2929;
   transition: 1s;
+  text-align: justify;
 }
 
 #gallery-body #gallery-wrap {
@@ -32,6 +33,7 @@
     opacity: 0;
     left: 100%;
   }
+
   to {
     opacity: 1;
     left: 0;
