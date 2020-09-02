@@ -197,6 +197,14 @@
 .product-detail-wrap .product-information .info-detail .product-reivew .review-contents--innerBox--title .star-wrap {
   margin-bottom: 4px;
 }
+.product-detail-wrap .product-information .info-detail .product-reivew .review-contents--innerBox--title .star-wrap--comment {
+  display: flex;
+  width: 100px;
+  height: 18px;
+}
+.product-detail-wrap .product-information .info-detail .product-reivew .review-contents--innerBox--title .desc-wrap {
+  margin-left: 12px;
+}
 .product-detail-wrap .product-information .info-detail .product-reivew .view-more {
   background: #222;
   color: #fff;

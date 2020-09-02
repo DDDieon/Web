@@ -39,6 +39,7 @@
         <script src="js/display.js" defer></script>
         <script src="js/mouse-event.js"></script>
         <script src="js/quick-menu.js" defer></script>
+        <script src="js/roundPercent."></script>
     </head>
 
     <body>
@@ -593,126 +594,7 @@
                                 <h3 class="ability-design__number--header">Figma</h3>
                             </li>
                         </ul>
-                        <script>
-                            // 스크롤시 circle의 퍼센트가 올라갑니다
-                            $.fn.drawRound = function (much) {
-                                $(this)
-                                    .stop()
-                                    .animate(
-                                        {
-                                            "stroke-dashoffset": 440 - (440 * much) / 100,
-                                        },
-                                        {
-                                            duration: 1000,
-                                        }
-                                    )
-                            }
-                            $(function () {
-                                $(window).scroll(function () {
-                                    if ($(window).scrollTop() > $("#Ability").offset().top - 550) {
-                                        $(".ability-spec")
-                                            .eq(0)
-                                            .find("svg circle")
-                                            .eq(1)
-                                            .drawRound(100)
-                                        $(".ability-spec")
-                                            .eq(1)
-                                            .find("svg circle")
-                                            .eq(1)
-                                            .drawRound(70)
-                                        $(".ability-spec")
-                                            .eq(2)
-                                            .find("svg circle")
-                                            .eq(1)
-                                            .drawRound(65)
-                                        $(".ability-spec")
-                                            .eq(3)
-                                            .find("svg circle")
-                                            .eq(1)
-                                            .drawRound(40)
-                                        $(".ability-spec")
-                                            .eq(4)
-                                            .find("svg circle")
-                                            .eq(1)
-                                            .drawRound(10)
-                                        $(".ability-design")
-                                            .eq(0)
-                                            .find("svg circle")
-                                            .eq(1)
-                                            .drawRound(100)
-                                        $(".ability-design")
-                                            .eq(1)
-                                            .find("svg circle")
-                                            .eq(1)
-                                            .drawRound(80)
-                                        $(".ability-design")
-                                            .eq(2)
-                                            .find("svg circle")
-                                            .eq(1)
-                                            .drawRound(70)
-                                        $(".ability-design")
-                                            .eq(3)
-                                            .find("svg circle")
-                                            .eq(1)
-                                            .drawRound(60)
-                                        $(".ability-design")
-                                            .eq(4)
-                                            .find("svg circle")
-                                            .eq(1)
-                                            .drawRound(50)
-                                    } else if (
-                                        $(window).scrollTop() <
-                                        $("#Ability").offset().top - 250
-                                    ) {
-                                        $(".ability-spec").each(function () {
-                                            $(this).find("svg circle").eq(1).drawRound(0)
-                                        })
-                                        $(".ability-design").each(function () {
-                                            $(this).find("svg circle").eq(1).drawRound(0)
-                                        })
-                                    }
-                                })
-                            })
-                            //ajax로 내용을 변경합니다
-                            $(function () {
-                                $(".ability-detail__point").empty().hide()
-                                $(".ability-spec").on("click", function () {
-                                    INDEX = 0
-                                })
-                                $(".ability-design").on("click", function () {
-                                    INDEX = 5
-                                })
-                                $(".ability-spec, .ability-design").on("click", function () {
-                                    INDEX += $(this).index()
-                                    $(".ability-spec").removeClass("onDetail")
-                                    $(".ability-design").removeClass("onDetail")
-                                    $(this).addClass("onDetail")
-                                    $.ajax({
-                                        url: "ability.json",
-                                        dataType: "json",
-                                        success: function (data) {
-                                            createData(data)
-                                        },
-                                    })
 
-                                    function createData(data) {
-                                        $(".ability-detail__point").empty().hide()
-                                        var skillData = data.ability
-                                        var Title = skillData[INDEX]["title"]
-                                        var Desc = skillData[INDEX]["key"]
-                                        var Link = skillData[INDEX]["link"]
-                                        $(".ability-detail__title").html(Title)
-                                        $(".ability-detail__desc").html(Desc)
-                                        if (Link) {
-                                            $(".ability-detail__point")
-                                                .html("비캔버스 구경하기")
-                                                .show()
-                                                .attr("href", Link)
-                                        }
-                                    }
-                                })
-                            })
-                        </script>
                         <div class="ability-detail">
                             <div class="ability-detail__whitepaper">
                                 <img

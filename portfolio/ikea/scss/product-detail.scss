@@ -216,6 +216,14 @@ $Blue: #0058a3;
                             }
                             .star-wrap {
                                 margin-bottom: 4px;
+                                &--comment {
+                                    display: flex;
+                                    width: 100px;
+                                    height: 18px;
+                                }
+                            }
+                            .desc-wrap {
+                                margin-left: 12px;
                             }
                         }
                     }
