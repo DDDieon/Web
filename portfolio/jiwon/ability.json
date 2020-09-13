@@ -20,15 +20,15 @@
         },
         {
             "id": "4",
-            "key": "기초문법부터 익혔고 지금은 개념을 다시 학습하고 있습니다.",
+            "key": "바닐라 자바스크립트로 캔버스를 만들거나, 디스코드 봇을 제작해보았으며 <br /> 타입스크립트를 사용할 수 있습니다",
             "title": "Javascript",
             "link": "https://beecanvas.com/s/7aEbbrJ3be6fLzSMKJ21QmjHkrEONNHRQ8ze5dMO25TvJ1orEyjSYJxy-ZzwFuDn"
         },
         {
             "id": "5",
-            "key": "리액트 컴포넌트에서 이벤트 핸들러 사용해본 정도로, <br /> 모험을 떠난지 얼마 되지 않았습니다.",
+            "key": "리액트 state, pros를 사용해 작은 프로젝트를 제작할 수 있으며 <br /> 리액트 네이티브로는 날씨앱을 클론코딩 하였습니다.",
             "title": "React",
-            "link": "https://beecanvas.com/s/QYGWxhGAxOmAzJhJV7xjBsQ7Gx1_c11XjMsyHP7YCMMJkaWQvZBVg654q7UvfBGl"
+            "link": "https://www.notion.so/1615d00fc7394bcdb3359cd1550737eb"
         },
         {
             "id": "6",

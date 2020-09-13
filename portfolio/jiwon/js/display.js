@@ -19,7 +19,8 @@ $(function () {
         var sectionTT = $("section").eq(i).offset().top - 50 //sectioin들의 y좌표
         $("html, body")
             .stop()
-            .animate({
+            .animate(
+                {
                     scrollTop: sectionTT,
                 },
                 function () {
@@ -74,11 +75,14 @@ $(function () {
 $.fn.drawRound = function (much) {
     $(this)
         .stop()
-        .animate({
-            "stroke-dashoffset": 440 - (440 * much) / 100,
-        }, {
-            duration: 1000,
-        })
+        .animate(
+            {
+                "stroke-dashoffset": 440 - (440 * much) / 100,
+            },
+            {
+                duration: 1000,
+            }
+        )
 }
 $(function () {
     $(window).scroll(function () {
@@ -135,7 +139,7 @@ $(function () {
             $(".ability-detail__title").html(Title)
             $(".ability-detail__desc").html(Desc)
             if (Link) {
-                $(".ability-detail__point").html("비캔버스 구경하기").show().attr("href", Link)
+                $(".ability-detail__point").html("개발노트 구경하기").show().attr("href", Link)
             }
         }
     })
