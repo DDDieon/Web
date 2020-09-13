@@ -1,0 +1,52 @@
+{
+    "ikeaLocation": {
+        "sindorim": {
+            "x": 37.508696,
+            "y": 126.889424,
+            "koName": "IKEA 플래닝 스튜디오 신도림",
+            "subtitle": "신도림 현대백화점 디큐브시티 지하 1층",
+            "subdesc": "서울시 구로구 경인로 662",
+            "link": "http://kko.to/MNkDtaZYH"
+        },
+        "cheonho": {
+            "x": 37.544164,
+            "y": 127.125688,
+            "koName": "IKEA 플래닝 스튜디오 천호",
+            "subtitle": "현대백화점 천호점 9층",
+            "subdesc": "서울시 강동구 천호대로 1005",
+            "link": "http://kko.to/x5pDaaZYo"
+        },
+        "giheung": {
+            "x": 37.22289,
+            "y": 127.116119,
+            "koName": "IKEA 기흥점",
+            "subtitle": "현대백화점 천호점 9층",
+            "subdesc": "10 : 00 AM - 10 : 00 PM",
+            "link": "http://kko.to/x5pDaaZYo"
+        },
+        "gwangmyong": {
+            "x": 37.424324,
+            "y": 126.882956,
+            "koName": "IKEA 광명점",
+            "subtitle": "경기도 광명시 일직로 17",
+            "subdesc": "10 : 00 AM - 10 : 00 PM",
+            "link": "http://kko.to/RIDTs-ZDj"
+        },
+        "goyang": {
+            "x": 37.658462,
+            "y": 126.83202,
+            "koName": "IKEA 고양점",
+            "subtitle": "경기도 고양시 덕양구 권율대로 420",
+            "subdesc": "10 : 00 AM - 10 : 00 PM",
+            "link": "http://kko.to/cFsHbzZD0"
+        },
+        "dongbusan": {
+            "x": 35.191244,
+            "y": 129.210549,
+            "koName": "IKEA 동부산점",
+            "subtitle": "부산광역시 기장군 기장읍 동부산관광3로 17",
+            "subdesc": "10 : 00 AM - 10 : 00 PM",
+            "link": "http://kko.to/3H_Hb-SDH"
+        }
+    }
+}

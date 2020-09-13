@@ -449,7 +449,6 @@ footer {
     #desk_nav .bottom_gnb ul {
         height: 56px;
         background: #ffdb00;
-        box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.473);
         display: flex;
         justify-content: center;
         align-items: center;
