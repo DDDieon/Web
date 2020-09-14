@@ -81,6 +81,8 @@
         <div class="store-wrap">
             <div class="store-title">
                 <h2>이케아 매장 안내</h2>
+                <p>어려워 보이는 시스템 가구, 우리집에 필요한 맞춤형 홈퍼니싱 솔루션까지!</p>
+                <p>혼자 하기 어려운 선택은 플래닝 스튜디오의 전문가와 함께하세요!</p>
             </div>
             <div class="select-type">
                 <div class="select-type__list">
@@ -90,35 +92,6 @@
                     <img src="/img/store/location.png" />
                 </div>
             </div>
-            <script>
-                // select-type event
-                $(function () {
-                    $(".select-type__map").click(function () {
-                        $(".select-type__list").removeClass("clicked")
-                        $(this).addClass("clicked")
-                        $(".list-type").hide()
-                        $(".map-type").show()
-                    })
-                    $(".select-type__list").click(function () {
-                        $(".select-type__map").removeClass("clicked")
-                        $(this).addClass("clicked")
-                        $(".map-type").hide()
-                        $(".list-type").show()
-                    })
-                    // media query
-                    $(window).resize(function () {
-                        var windowWidth = $(window).width()
-                        if (windowWidth >= 1260) {
-                            $(".list-type").show()
-                            $(".select-type").hide()
-                        } else if (windowWidth < 1259) {
-                            $(".list-type").hide()
-                            $(".select-type").show()
-                            $(".select-type__map").trigger("click")
-                        }
-                    })
-                })
-            </script>
             <div class="content">
                 <div class="list-type"></div>
                 <script>

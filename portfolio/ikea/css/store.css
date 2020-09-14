@@ -1,13 +1,17 @@
+.store-title {
+  padding: 22px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  word-break: keep-all;
+}
 .store-title h2 {
-  padding: 20px;
-  background: #efefef;
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
   font-weight: bold;
   color: #000;
   margin: 0 auto;
-  border-radius: 4px;
-  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
 }
 
 .select-type {
@@ -89,6 +93,13 @@
 }
 
 @media screen and (min-width: 1260px) {
+  .store-title {
+    padding: 60px;
+  }
+  .store-title h2 {
+    font-size: 34px;
+  }
+
   .select-type {
     display: none;
   }

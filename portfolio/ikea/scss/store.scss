@@ -2,26 +2,31 @@ $Yellow: #ffdb00;
 $Blue: #0058a3;
 
 .store-title {
+    padding: 22px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    word-break: keep-all;
+
     h2 {
-        padding: 20px;
-        background: #efefef;
-        font-size: 18px;
+        font-size: 20px;
         text-align: center;
         font-weight: bold;
         color: #000;
         margin: 0 auto;
-        border-radius: 4px;
-        border-bottom: 1px solid #ddd;
+        margin-bottom: 10px;
     }
 }
 
 .select-type {
     display: flex;
     justify-content: center;
-    > * {
+
+    >* {
         width: 50%;
         padding: 10px;
         cursor: pointer;
+
         img {
             display: block;
             margin: 0 auto;
@@ -29,6 +34,7 @@ $Blue: #0058a3;
             height: 30px;
         }
     }
+
     .clicked {
         background: #ddd;
         color: white;
@@ -37,28 +43,34 @@ $Blue: #0058a3;
 
 .content {
     display: flex;
+
     .list-type {
         display: none;
         padding: 10px;
+
         a {
             display: block;
             padding: 16px;
+
             &:hover {
                 background: #eee;
             }
         }
+
         &-box {
             &--title {
                 font-weight: bold;
                 margin-bottom: 6px;
                 color: #0058a3;
             }
+
             &--subtitle {
                 color: #555;
                 white-space: nowrap;
             }
         }
     }
+
     .map-type {
         display: block;
         width: 100%;
@@ -70,6 +82,7 @@ $Blue: #0058a3;
         border-radius: 10px;
         padding: 15px;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+
         &--info {
             &__title {
                 display: flex;
@@ -78,37 +91,54 @@ $Blue: #0058a3;
                 font-weight: bold;
                 margin-bottom: 12px;
             }
+
             &__jibun {
                 margin-bottom: 10px;
             }
+
             &__body {
                 display: flex;
+
                 .img {
                     width: 73px;
                     height: 73px;
                 }
             }
+
             &__homepage {
                 a {
                     color: $Blue;
                 }
             }
+
             .detail {
                 margin-left: 10px;
             }
         }
     }
 }
+
 @media screen and (min-width: 1260px) {
+    .store-title {
+        padding: 60px;
+
+        h2 {
+            font-size: 34px;
+        }
+    }
+
     .select-type {
         display: none;
     }
+
     .store-wrap {
         padding-top: 96px;
     }
+
     .map-type {
         height: 668px !important;
     }
+
     .content {
         .list-type {
             display: block !important;
