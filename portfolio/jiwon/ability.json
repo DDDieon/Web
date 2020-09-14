@@ -1,6 +1,5 @@
 {
-    "ability": [
-        {
+    "ability": [{
             "id": "1",
             "key": "웹표준 준수를 위해 w3c validator 검사기를 사용합니다.<br /> 시맨틱 마크업을 위해 노력하고 있습니다.",
             "title": "HTML",
@@ -14,7 +13,7 @@
         },
         {
             "id": "3",
-            "key": "필요한 플러그인을 검색하고 학습하여 CSS를 변경할 수 있습니다.<br /> 비동기식 처리방식을 사용할 수 있습니다.",
+            "key": "API를 가져와 화면에 출력할 수 있으며, 사용자 지정 플러그인을 만들 수 있습니다.",
             "title": "JQuery",
             "link": "https://beecanvas.com/s/7aEbbrJ3be6fLzSMKJ21QmjHkrEONNHRQ8ze5dMO25TvJ1orEyjSYJxy-ZzwFuDn"
         },
@@ -26,7 +25,7 @@
         },
         {
             "id": "5",
-            "key": "리액트 state, pros를 사용해 작은 프로젝트를 제작할 수 있으며 <br /> 리액트 네이티브로는 날씨앱을 클론코딩 하였습니다.",
+            "key": "리액트 state, pros를 사용해 작은 프로젝트를 제작할 수 있으며 <br /> 리액트 네이티브로는 간단한 모바일앱을 클론 해 보았습니다`.",
             "title": "React",
             "link": "https://www.notion.so/1615d00fc7394bcdb3359cd1550737eb"
         },

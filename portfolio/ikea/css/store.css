@@ -13,6 +13,13 @@
   margin: 0 auto;
   margin-bottom: 10px;
 }
+.store-title a {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background: #ffdb00;
+}
 
 .select-type {
   display: flex;
