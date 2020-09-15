@@ -252,18 +252,6 @@ nav .nav_list ul li:hover {
   padding: 0 5px;
   outline: none;
 }
-#introduce_top .gols_words .gols_words_in p button.galleryOpen::before {
-  content: "";
-  font-size: 36px;
-  position: absolute;
-  display: block;
-  padding: 2px;
-  color: #0f0f0f17;
-  white-space: nowrap;
-  right: -10px;
-  animation: upDownHover 2s ease-in infinite;
-  border-radius: 5px;
-}
 #introduce_top .gols_words .gols_words_in p button.galleryOpen::after {
   content: "";
   position: absolute;
@@ -529,8 +517,9 @@ nav .nav_list ul li:hover {
   text-align: center;
 }
 #Ability-Wrap .ability-container .ability-caption strong {
+  display: block;
   background: #ffd900;
-  padding: 0 8px;
+  padding: 10px;
 }
 #Ability-Wrap .ability-container .ability-caption strong .relative-percent {
   font-weight: bold;
