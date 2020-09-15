@@ -1,0 +1,125 @@
+/* reset.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* -webkit-text-size-adjust: none; */
+    /* 브라우저의 텍스트 크기조절 안 함 */
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+textarea {
+    resize: none;
+    /* 크기조절을 안하겠다. 배치가 깨지니까 꼭 들어가야 함. */
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img,
+fieldset {
+    border: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+/* ----------------------------------- 개인취향------------------------------------------*/
+
+/* 옛날 브라우저에는 그림에 테두리가 생겼음. 필드셋은 폼태그의 액자셋 */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+    cursor: default;
+    /* h태그에 대한 모든 스타일을 없앤다 */
+}
+p {
+    cursor: default;
+}
+
+hr {
+    display: none;
+    /* 화면상에 수평선은 주지 않고 헤더와 본문태그끼리 선을 주는 용도로만 쓸 것 */
+}
+
+em,
+i,
+address {
+    font-style: normal;
+    /* em은 강조하는 이탤릭, i는 강조없는 이탤릭. 하지만 글자를 감싸는 별도의 태그로 쓰기 위해서는 기울임꼴을 쓰지 않겠다 */
+    font-weight: normal;
+}
+
+/* b,strong{font-weight: :normal;} = 나는 볼드로 쓸거니까 안할거다*/
+
+/* legend,
+caption {
+    display: none;
+    clear: both;
+    태이블태그의 캡션 등은 안내용으로만 쓸 것인지 여부
+} */
+
+ul,
+li,
+a,
+input,
+textarea,
+select,
+button,
+table {
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+}
+
+textarea,
+input {
+    background: url(none);
+    -webkit-apprearance: none;
+    /* 아이폰에서 아이콘은 모서리가 둥글게 표현되기 때문에 기본적인 네모모양으로 바꾸기 */
+}
+
+button {
+    background: none;
+    border: 0;
+    color: inherit;
+    /* cursor: default; */
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: button; /* for input */
+    -webkit-user-select: none; /* for button */
+    -moz-user-select: none;
+    -ms-user-select: none;
+}

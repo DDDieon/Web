@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>키보드로 배경색 변경하기</h3>
+    <script>
+        var body = document.getElementsByTagName('body')[0];
+        body.onkeydown = function() {
+            // A를 입력한 경우 (A의 아스키코드는 65)
+            if (event.keyCode == 65) {
+                body.style.background = 'red';
+            }
+            //B를 입력한 경우
+            if (event.keyCode == 66) {
+                body.style.background = 'blue';
+            }
+            // C를 입력한 경우
+            if (event.keyCode == 67) {
+                body.style.background = 'pink';
+            }
+            if (evet.keyCode == 68) {
+                body.style.background = 'gold';
+            }
+            if (evet.keyCode == 61) {
+                body.style.background = 'black';
+            }
+        }
+    </script>
+</body>
+
+</html>

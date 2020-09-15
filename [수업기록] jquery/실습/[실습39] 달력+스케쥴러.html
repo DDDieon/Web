@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    </script>
+    <style>
+        #calendar {
+            display: flex;
+            width: 90%;
+            flex-wrap: wrap;
+            background: #fff;
+        }
+
+        div.date {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            position: relative;
+        }
+
+        div.date span {
+            display: block;
+            width: 50px;
+            height: 50px;
+            bordeR: 1px solid #ddd;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        div.date span p {
+            white-space: nowrap;
+        }
+
+        #pop {
+            width: 200px;
+            height: 150px;
+            border: 3px solid blue;
+            box-sizing: border-box;
+            padding: 10px;
+            background: yellow;
+            z-index: 1;
+            position: absolute;
+        }
+
+        #sch {
+            width: 200px;
+            height: 150px;
+            border: 3px solid red;
+            box-sizing: border-box;
+            padding: 10px;
+            background: yellow;
+            z-index: 1;
+            position: absolute;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- mouseover시 보여짐 -->
+    <div id="pop">
+        <h2>스케쥴</h2>
+    </div>
+    <!-- click시 보여짐 보여짐 -->
+    <div id="sch">
+        <textarea></textarea>
+        <input type="button" value="수정">
+    </div>
+    <!-- 달력 -->
+    <h1>달력 만들고 스케쥴 넣어보자</h1>
+    <div id="calendar"></div>
+</body>
+<script>
+    $(function () {
+        //팝업창 - 스케쥴 보이기
+        $("#calendar .date").on("mouseenter", "span", function () {
+            var text1 = $(this).attr('data-sch') // text1 = 현재스케쥴
+            if (text1 == undefined) return;
+            var left = $(this).offset().left + 50; // 마우스오버한 span의 위치값을 기준으로 x좌표
+            var top = $(this).offset().top + 50 // 마우스오버한 span의 위치값을 기준으로 y좌표
+            $('#pop').css({
+                left: left,
+                top: top
+            }).show().html(text1)
+        })
+    })
+
+    var out = "";
+    for (var i = 1; i < 31; i++) {
+        out += '<div class="date"><span>' + i + '</span></div>'
+    }
+    $('#calendar').html(out)
+
+    //span 클릭시 sch가 나온다 
+    $("#calendar").on("click", "span", function () {
+        var i = $("#calendar .date span").index(this) //마우스오버한 span의 인덱스 = 날짜에서 1빠진 값
+        AAA = i
+        BBB = $(this).attr("data-sch")
+        var left = $(this).offset().left + 50;
+        var top = $(this).offset().top + 50;
+        $("#pop").hide()
+        $("#sch").css({
+            left: left,
+            top: top
+        }).show()
+    })
+
+    $("#calendar").on("mouseleave", "span", function () {
+        $("#pop").hide()
+    })
+    //데이터 저장하기
+    $("#sch input").on("click", function () {
+        var textval = $("#sch").find("textarea").val()
+        $("#calendar .date").eq(AAA).find("span").attr("data-sch", textval) //현재 클릭한 div의 span에 사용자속성으로 밸류값 넣는다
+        $("#sch").hide()
+        $("#calendar .date").eq(AAA).find("span p").remove()
+        $("#calendar .date").eq(AAA).find("span").append("<p>" + textval + "</p>")
+    })
+</script>
+
+</html>

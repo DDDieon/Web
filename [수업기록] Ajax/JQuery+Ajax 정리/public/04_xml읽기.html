@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라우트한 데이터 가져오기</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+    </script>
+    <style>
+        div {
+            border: 1px solid red;
+        }
+    </style>
+    <script>
+        // $.ajax({
+        //     url: 'data.xml',
+        //     success: function (data) {
+        //         console.log(data)
+        //         $(data).find('product').each(function (i) {
+        //             var name = $(this).find('name').text()
+        //             var price = $(this).find('price').text()
+        //             $('<h2></h2>').text(name + ': ' + price).appendTo('div')
+        //         })
+        //     }
+        // })
+        $.ajax({
+            url: 'books.xml',
+            success: function (data) {
+                console.log(data)
+                $(data).find('book').each(function (i) {
+                    var name = $(this).find('name').text()
+                    var author = $(this).find('author').text()
+                    $('<h2></h2>').text(name + ': ' + author).appendTo('div')
+                })
+            }
+        })
+    </script>
+
+</head>
+
+<body>
+    <h1>xml읽기 예제</h1>
+    <div></div>
+</body>
+
+</html>

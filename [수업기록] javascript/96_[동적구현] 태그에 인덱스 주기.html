@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            var button = document.getElementsByTagName('button');
+            var span = document.getElementsByTagName('span');
+            for (var i = 0; i < button.length; i++) {
+                span[i].setAttribute('index', i);
+                button[i].setAttribute('index', i);
+                button[i].onclick = function() {
+                    var k = this.getAttribute('index');
+                    span[k].style.background = this.value;
+                }
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <button value='red'>RED</button><span>배경색</span>
+    <button value='blue'>blue</button><span>배경색</span>
+    <button value='green'>green</button><span>배경색</span>
+    <button value='silver'>silver</button><span>배경색</span>
+    <button value='pink'>pink</button><span>배경색</span>
+</body>
+
+</html>

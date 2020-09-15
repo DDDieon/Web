@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+// 박스
+$mobile-WidthFull: 300px;
+$tablet-WidthFull: 610px;
+$desk-WidthFull: 1180px !important;
+// 데탑박스 세부
+$desk-detail-Big: 580px !important;
+$desk-detail-Small: 280px !important;
+// 글자
+$mobileHeadline: 96px;
+$tabletHeadline: 193px !important;
+$DeskHeadline: 485px !important;
+
+/* Tablet Device */
+@media all and (min-width: 768px) and (max-width: 1259px) {
+    .main {
+        &-headline {
+            height: $tabletHeadline;
+
+            h2 {
+                font-size: 60px;
+            }
+
+            .headlineDesc {
+                font-size: 16px;
+            }
+
+            &--back {
+                height: $tabletHeadline;
+            }
+        }
+    }
+
+    a.goProject {
+        width: 145px !important;
+        height: auto !important;
+    }
+
+    .contents {
+        .images {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 610px;
+
+            &-list {
+                &.imgW2 {
+                    width: $mobile-WidthFull;
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: 1260px) {
+    html,
+    body {
+        font-size: 16px;
+        overflow: auto !important;
+    }
+
+    header {
+        height: 180px !important;
+
+        div.header-wrap {
+            padding-top: 65px;
+            padding-bottom: 65px;
+        }
+    }
+
+    // mobiler버전의 header와 교체합니다
+    div.wrap {
+        .mobile-header {
+            display: none;
+        }
+
+        .over {
+            display: none;
+        }
+
+        .desktop-header {
+            // none에서 show로 변경합니다
+            display: flex;
+        }
+    }
+
+    .main {
+        &-headline {
+            height: $DeskHeadline;
+
+            h2 {
+                font-size: 120px;
+            }
+
+            .headlineDesc {
+                font-size: 24px;
+                font-weight: 400;
+            }
+
+            &--back {
+                height: $DeskHeadline;
+            }
+        }
+
+        a.goProject {
+            width: 211px !important;
+            height: auto !important;
+        }
+    }
+
+    .contents {
+        position: relative;
+
+        .images {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: $desk-WidthFull;
+
+            &-list {
+                width: $desk-detail-Big;
+                height: $desk-detail-Big;
+                margin-bottom: 20px;
+
+                a {
+                    width: $desk-detail-Small;
+                    height: $desk-detail-Small;
+                    margin-bottom: 20px !important;
+                }
+
+                a.marginLeft {
+                    margin-left: 20px;
+                }
+
+                &.imgW1 {
+                    a.item1 {
+                        width: $desk-detail-Big;
+                        height: $desk-detail-Big;
+                    }
+                }
+
+                &.imgW2 {
+                    a.item2 {
+                        width: $desk-detail-Big;
+                    }
+                }
+
+                &.imgW3 {
+                    height: $desk-detail-Small;
+                }
+
+                &.imgW4 {
+                    height: $desk-detail-Small;
+
+                    a.item7 {
+                        width: $desk-detail-Big;
+                    }
+                }
+            }
+        }
+
+        &__bgColor {
+            position: absolute;
+            width: 100%;
+            height: 1235px;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: #efefef;
+            z-index: -999;
+        }
+    }
+
+    .footer {
+        background: #fff;
+        padding: 45px 0;
+        color: #000;
+
+        address {
+            .publisher {
+                font-size: 27px;
+            }
+
+            .address-github {
+                display: block;
+
+                .fa-github-alt:before {
+                    font-size: 50px !important;
+                }
+            }
+        }
+    }
+}

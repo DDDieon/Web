@@ -1,0 +1,198 @@
+/* layout.css */
+
+.main_header {
+    position: relative;
+    color: #333333;
+    background: black;
+}
+
+.main_title {
+    height: 50px;
+}
+
+/*nav 내부*/
+
+.navbar {
+    width: 100%;
+    padding: 10px;
+}
+
+/* 메뉴글자 */
+
+.display_box {
+    background: rgba(50, 50, 50, 1);
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+}
+
+.display_box li {
+    line-height: 2;
+}
+.display_box li a.menu_text {
+    display: block;
+    color: white;
+}
+
+.display_box li:hover {
+    background: rgba(100, 100, 100, 0.5);
+    font-weight: bold;
+}
+.hamburger {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+/* form */
+.hr {
+    box-shadow: 1px 1px 1px gray;
+    clear: both;
+    width: 95%;
+}
+.form-control {
+    margin: 5px auto;
+}
+.form-control input {
+    display: block;
+    font-size: 14px;
+    height: 34px;
+    color: #555;
+    background: #fff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    width: 95%;
+    margin-bottom: 5px;
+}
+
+.form-control button:nth-of-type(1) {
+    padding: 6px 12px;
+    color: white;
+    background: rgb(82, 145, 82);
+    border-color: green;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 5px;
+    border: transparent;
+    outline: 0;
+    margin: 10px auto;
+    margin-left: 2.5vw;
+}
+.form-control button:nth-of-type(2) {
+    padding: 6px 12px;
+    color: white;
+    background: rgb(238, 175, 59);
+    border-color: green;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 5px;
+    border: transparent;
+    outline: 0;
+    margin: 10px auto;
+}
+/* placeholder 변경 */
+input::-webkit-input-placeholder {
+    font-style: italic;
+    color: rgb(100, 139, 88);
+}
+
+/*contentbox------------------------*/
+
+.content_box {
+    padding: 20px;
+    background: #eee;
+}
+.content {
+    padding: 5px;
+}
+.content h2 {
+    font-size: 32px;
+}
+.btn {
+    background: steelblue;
+    padding: 15px;
+    color: white;
+    display: block;
+    width: 155px;
+    border-radius: 8px;
+    margin-left: 15px;
+    cursor: pointer;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.content p {
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.MA10 {
+    margin: 10px;
+}
+
+.PA10 {
+    padding: 10px;
+}
+
+.WBTN {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+.ML10 {
+    margin-left: 10px;
+}
+
+[class*="btn"] {
+    font-size: 20px;
+}
+/* -----tablet----- */
+@media screen and (min-width: 768px) {
+    .main_header {
+        display: flex !important;
+        justify-content: space-between;
+    }
+    .hr {
+        display: none;
+    }
+
+    .main_title {
+        white-space: nowrap;
+    }
+    .display_box {
+        display: flex !important;
+        background: transparent;
+        display: none;
+        position: relative;
+        left: 0;
+        top: 0px;
+        width: 100%;
+        justify-content: flex-end;
+    }
+    .form-control {
+        display: flex !important;
+        justify-content: flex-end;
+        margin: 0;
+    }
+    .form-control input {
+        display: block;
+    }
+
+    .hamburger {
+        display: none !important;
+    }
+
+    .navbar .display_box ul {
+        width: 300px;
+        display: flex;
+        margin: 0;
+    }
+}
+
+/* -----desktop----- */

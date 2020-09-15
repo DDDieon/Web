@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+/* 추후 리셋 css영역 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* 추후 베이스 css영역 */
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+/* html {
+    font-size: 16px;
+} */
+
+
+/* 모바일페이지 만들기 */
+
+
+/* 모바일 - 767px 이하 */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    height: 18.75rem;
+    background: url(images/header.jpg) center no-repeat;
+    background-size: cover;
+}
+
+header nav ul {
+    display: flex;
+    background: black;
+}
+
+header nav ul li a {
+    background: black;
+    color: white;
+    display: block;
+    padding: 1rem;
+}
+
+.photo {
+    display: none;
+}
+
+header,
+#intro,
+#map,
+.page-title,
+#choice {
+    margin-bottom: 1.875rem;
+}
+
+section {
+    padding: 1.875rem;
+}
+
+section#intro,
+section#choice {
+    background: #ebebeb;
+}
+
+footer {
+    padding: 1rem;
+    background: black;
+    color: white;
+    text-align: center;
+    color: #FFFFFF;
+    background: #333333;
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+}
+
+
+/* 태블릿 - 768px 이상 */
+
+@media screen and (min-width:760px) {
+    /* #container {
+        font-size: 1.1rem;
+    } */
+    #choice {
+        clear: both;
+    }
+    .me {
+        height: 12.5rem;
+    }
+    section#intro,
+    section#map {
+        float: left;
+        width: 50%;
+        height: 100%;
+    }
+    section#intro,
+    section#map,
+    section#choice {
+        background: rgb(240, 240, 240);
+    }
+}
+
+
+/* PC - 992px 이상 */
+
+@media screen and (min-width:992px) {
+    #container {
+        font-size: 1.2rem;
+    }
+    section#intro,
+    section#map {
+        float: none;
+        width: auto;
+    }
+    .content {
+        position: relative;
+    }
+    .content::after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+    div.text,
+    div.photo {
+        float: left;
+    }
+    .photo {
+        display: block;
+    }
+    .photo>img {
+        display: block;
+    }
+    .text {
+        position: absolute;
+        left: 25rem;
+        top: 1rem;
+    }
+    .text p {
+        display: block;
+        white-space: nowrap;
+    }
+    .text h2 {
+        margin-bottom: 1.25rem;
+    }
+    .me {
+        height: auto;
+    }
+}

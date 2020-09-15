@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(function () {
+            for (var i = 0; i < localStorage.length; i++) {
+                var key = localStorage.key(i) //키는 배열이다
+                if (localStorage.getItem(key) == "") {
+                    var output = key + ": 선택안함"
+                } else {
+                    var output = key + ":" + localStorage.getItem(key) //키에서 값을 가져온다
+                }
+                $('div').append(output + '<br>')
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <h1>앞에서 체크했던 항목들의 값 불러옵니다</h1>
+    <div>
+
+
+    </div>
+</body>
+
+</html>

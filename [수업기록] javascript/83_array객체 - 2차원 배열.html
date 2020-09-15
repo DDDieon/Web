@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 객체가 있는 배열을 선언합니다. 인덱스가 2개입니다. 
+        let 과일 = [{
+            name: '고구마',
+            price: 1000
+        }, {
+            name: '감자',
+            price: 500
+        }, {
+            name: '바나나',
+            price: 1500
+
+        }];
+        document.write(과일 + '<br>');
+        var pop = 과일.pop(); //과일의 마지막 아이템 반환
+        for (var i in pop) {
+            document.write(pop[i] + '<br>'); //마지막 아이템의 키+값들은 배열임
+        }
+        document.write(Object.keys(pop) + '<br>'); // 아이템의 키 출력
+        document.write(Object.values(pop) + '<hr>'); // 아이템의 값 출력
+
+        과일.push({
+            name: '바나나',
+            price: 3000
+        });
+
+        function print() {
+            for (var i in 과일) {
+                for (var j in 과일[i]) {
+                    document.write(과일[i][j] + '<br>');
+                }
+            }
+        }
+        print();
+    </script>
+</body>
+
+</html>

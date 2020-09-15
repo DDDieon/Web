@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>현재 위치를 표시하는 메뉴 짜보기</title>
+        <link href="style.css" type="text/css" rel="stylesheet" />
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="gnb.js"></script>
+    </head>
+    <body>
+        <div id="header">
+            <ul id="gnb">
+                <li class="m1">
+                    <a href="ex3_2_5_sub1.html?main=0&sub=0"
+                        ><img src="images/m1_out.gif" width="120" height="30" alt="메뉴1"
+                    /></a>
+                    <ul>
+                        <li><a href="ex3_2_5_sub1.html?main=0&sub=0">메뉴1-1</a></li>
+                        <li><a href="ex3_2_5_sub1.html?main=0&sub=1">메뉴1-2</a></li>
+                        <li><a href="ex3_2_5_sub1.html?main=0&sub=2">메뉴1-3</a></li>
+                        <li><a href="ex3_2_5_sub1.html?main=0&sub=3">메뉴1-4</a></li>
+                    </ul>
+                </li>
+                <li class="m2">
+                    <a href="ex3_2_5_sub1.html?main=1&sub=0"
+                        ><img src="images/m2_out.gif" width="120" height="30" alt="메뉴2"
+                    /></a>
+                    <ul>
+                        <li><a href="ex3_2_5_sub2.html?main=1&sub=0">메뉴2-1</a></li>
+                        <li><a href="ex3_2_5_sub2.html?main=1&sub=1">메뉴2-2</a></li>
+                        <li><a href="ex3_2_5_sub2.html?main=1&sub=2">메뉴2-3</a></li>
+                        <li><a href="ex3_2_5_sub2.html?main=1&sub=3">메뉴2-4</a></li>
+                    </ul>
+                </li>
+                <li class="m3">
+                    <a href="#"
+                        ><img src="images/m3_out.gif" width="120" height="30" alt="메뉴3"
+                    /></a>
+                    <ul>
+                        <li><a href="#">메뉴3-1</a></li>
+                        <li><a href="#">메뉴3-2</a></li>
+                        <li><a href="#">메뉴3-3</a></li>
+                        <li><a href="#">메뉴3-4</a></li>
+                    </ul>
+                </li>
+                <li class="m4">
+                    <a href="#"
+                        ><img src="images/m4_out.gif" width="120" height="30" alt="메뉴4"
+                    /></a>
+                    <ul>
+                        <li><a href="#">메뉴4-1</a></li>
+                        <li><a href="#">메뉴4-2</a></li>
+                        <li><a href="#">메뉴4-3</a></li>
+                        <li><a href="#">메뉴4-4</a></li>
+                    </ul>
+                </li>
+                <li class="m5">
+                    <a href="#"
+                        ><img src="images/m5_out.gif" width="120" height="30" alt="메뉴5"
+                    /></a>
+                    <ul>
+                        <li><a href="#">메뉴5-1</a></li>
+                        <li><a href="#">메뉴5-2</a></li>
+                        <li><a href="#">메뉴5-3</a></li>
+                        <li><a href="#">메뉴5-4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </body>
+    <!-- <script>
+        $(function () {
+            var gnbLi = $("#gnb>li")
+            var ul = $("#gnb>li>ul")
+            var headerMin = $("#headerWrap").height()
+            var headerMax = ul.innerHeight() + headerMin
+            var state = false
+            var speed = 150
+
+            var getValue = location.search.substring(1) //main=0&&sub=0
+            if (getValue) {
+                getValue = getValue.split("&")
+                for (var i = 0; i < getValue.length; i++) {
+                    eval(getValue[i]) //main=0, sub=0...
+                }
+            } else {
+                main = sub = null
+            }
+            var subA = $("#gnb>li>ul").find("a")
+            var mainCurrent = $("#gnb>li:eq(" + main + ")>a") //li의 a
+            var subCurrent = mainCurrent.siblings("ul").find("a").eq(sub) //li>ul>a
+
+            subA.on("mouseenter focus", function () {
+                subCurrent.removeClass("hover")
+                $(this).addClass("hover")
+            })
+            //  --------------------------------------- CSS관련
+            var gnbA = $("#gnb>li>a")
+            var ul = $("#gnb>li>ul")
+            var fff = null
+
+            function imgOver(AAA) {
+                // 롤오버 이미지 구현ㅡ AAA자리에 this가 올것
+                var src = $(AAA).find("img").attr("src")
+                var newSrc = src.replace("out", "over")
+                $(AAA).find("img").attr("src", newSrc)
+            }
+
+            function imgOut(AAA) {
+                $(AAA).next().hide()
+                var src = $(AAA).find("img").attr("src")
+                var newSrc = src.replace("over", "out")
+                $(AAA).find("img").attr("src", newSrc)
+            }
+
+            gnbA.on("mouseover focus", function () {
+                // 전역객체인 fff는 아무것도 안했을때 null이다
+                // if (fff) {
+                //     $(fff).next().hide()
+                //     $(this).next().show()
+                // } else {
+                //     $(this).next().show()
+                // }
+                // fff = $(this)
+                // -----------------방법 2-----------------------
+                if (gnbA._lastHover) {
+                    $(gnbA._lastHover).next().hide()
+                    $(this).next().show()
+                    //롤오버
+                    imgOver($(this))
+                } else {
+                    $(this).next().show()
+                    //롤오버
+                    imgOver($(this))
+                }
+                gnbA._lastHover = $(this)
+                //-------- _lastHover는 gnbA의 속성으로 추가되었다
+            })
+
+            gnbA.on("mouseleave", function () {
+                imgOut($(this))
+                $(this).next().hide()
+            })
+
+            // 서브메뉴에 마우스 올려도 사라지지 않기
+            ul.hover(
+                function () {
+                    $(this).show()
+                },
+                function () {
+                    $(this).hide()
+                }
+            )
+        })
+    </script> -->
+</html>

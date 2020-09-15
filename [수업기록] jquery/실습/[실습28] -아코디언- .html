@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <style type="text/css">
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            div.accordion-panel {
+                background: lightgray;
+                text-align: justify;
+                padding: 10px;
+                display: none;
+            }
+            .accordion-control {
+                display: block;
+                width: 100%;
+                padding: 10px;
+            }
+            .active {
+                background: red;
+            }
+        </style>
+        <script>
+            $(function () {
+                var btn = $(".accordion-control")
+                var panel = $(".accordion-panel")
+                btn.click(function () {
+                    panel.slideUp()
+                    $(this).find("+div").stop().slideDown()
+                    btn.removeClass("active")
+                    $(this).addClass("active")
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1><p>Monsieur Pigeon</p></h1>
+        </header>
+        <section class="page">
+            <ul class="accordion">
+                <li>
+                    <button class="accordion-control">Classics</button>
+                    <div class="accordion-panel">
+                        <p>
+                            If you like your flavors traditional, Monsieur Pigeon's classic
+                            marshmallows won't disappoint. With luxuriously
+                            <strong>Velvety Vanilla</strong>, <strong>Charming Chocolate</strong>,
+                            and <strong>Sumptuous Strawberry</strong>, the favorites you love are
+                            treated with the respect and dignity they deserve!
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <button class="accordion-control">The Flower Series</button>
+                    <div class="accordion-panel">
+                        <p>
+                            Take your tastebuds for a gentle stroll through an English garden filled
+                            with Monsieur Pigeon's beautifully fragrant Flower Series marshmallows.
+                            With three sweetly floral options: <strong>Elderberry</strong>,
+                            <strong>Rose Petal</strong>, and <strong>Chrysanthemum</strong> - all
+                            edible and all naturally flavored - they will have you dreaming of
+                            butterflies and birdsong in no time.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <button class="accordion-control">Salt o' The Sea</button>
+                    <div class="accordion-panel">
+                        <p>
+                            Ahoy! If you long for a taste of organic sea salt mixed in with your
+                            sweet Monsieur Pigeon marshmallows, look no further than our Salt o' the
+                            Sea range. Featuring two delicious flavors:
+                            <strong>Salted Caramel</strong> and <strong>Cashew Butter</strong>, this
+                            sweetly salty duo will expand your taste horizons.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <footer>
+            <h1>Monsieur Pigeon</h1>
+        </footer>
+    </body>
+</html>

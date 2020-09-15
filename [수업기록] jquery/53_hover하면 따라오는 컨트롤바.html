@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <style>
+            #menu_wrap {
+                position: relative;
+            }
+            .hover {
+                top: 0;
+                left: 100px;
+                position: absolute;
+                color: white;
+            }
+            li {
+                list-style: none;
+            }
+            #menu {
+                overflow: hidden;
+            }
+            #menu li {
+                float: left;
+                background: rgb(32, 32, 32);
+            }
+            #menu li a {
+                display: block;
+                padding: 10px 30px;
+                text-decoration: none;
+                color: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <hr />
+        <div id="menu_wrap">
+            <ul id="menu">
+                <li><a href="#">내용1</a></li>
+                <li><a href="#">내용2</a></li>
+                <li><a href="#">내용3</a></li>
+                <li><a href="#">내용4</a></li>
+                <li><a href="#">내용5</a></li>
+            </ul>
+            <div class="hover">▼</div>
+        </div>
+        <p class="txt1"></p>
+        <p class="txt2"></p>
+        <!-- 인덱스에서 nth:child와 nth-of-type가 갈리는 현상 -->
+        <script>
+            $("#menu a").click(function () {
+                var index1 = $(this).index()
+                var index2 = $("#menu a").index(this)
+                $(".txt1").text(index1)
+                $(".txt2").text(index2)
+            })
+            $(".hover").hide()
+            $("#menu a").mouseover(function () {
+                var x = $(this).position().left
+                var y = $(this).position().top
+                $(".txt1").text(x + " ")
+                $(".txt2").text(y)
+                $(".hover")
+                    .show()
+                    .stop()
+                    .animate({
+                        left: x + 50,
+                        top: y,
+                    })
+            })
+            $("#menu a").mouseout(function () {
+                $(".hover").hide()
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>http://cafe.daum.net/knyatom/OXKi/95</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: "돋움", dotum, sans-serif;
+                font-size: 12px;
+                color: #000;
+            }
+
+            img {
+                border: 0;
+            }
+
+            li {
+                list-style: none;
+            }
+
+            a {
+                font-family: "돋움";
+                font-size: 12px;
+                color: #666;
+                text-decoration: none;
+            }
+
+            a:hover,
+            a:active,
+            a:focus {
+                color: #5c9c00;
+            }
+
+            #wrap {
+                width: 427px;
+                margin: 0 auto;
+            }
+
+            h1 {
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            .tab {
+                height: 100px;
+                background: url(images/tab_line.gif) 0 0 repeat-x;
+                position: relative;
+                display: flex;
+            }
+
+            .tab li h2 a {
+                width: 97px;
+                height: 35px;
+                display: block;
+                text-indent: -99999px;
+            }
+
+            #tab01 li:first-of-type h2 a {
+                background-image: url("./images/m1_out.gif");
+                background-size: 100% 100%;
+            }
+
+            #tab01 li:last-of-type h2 a {
+                background-image: url("./images/m2_out.gif");
+                background-size: 100% 100%;
+            }
+
+            #tab02 li:first-of-type h2 a {
+                background-image: url("./images/m1_out.gif");
+                background-size: 100% 100%;
+            }
+
+            #tab02 li:last-of-type h2 a {
+                background-image: url("./images/m2_out.gif");
+                background-size: 100% 100%;
+            }
+
+            .tab > li > div > ul {
+                position: absolute;
+                left: 0;
+                top: 47px;
+                width: 427px;
+            }
+
+            .tab > li > div > ul > li {
+                position: relative;
+                padding-left: 15px;
+                background: url(images/dot.gif) 5px 50% no-repeat;
+            }
+
+            .tab > li > div > ul > li > span {
+                position: absolute;
+                right: 10px;
+                top: 0;
+            }
+
+            .tab > li > div.hover {
+                display: block;
+            }
+
+            .more {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            }
+
+            #tab01 li:first-of-type h2 a.over {
+                background-image: url("./images/m1_over.gif");
+            }
+
+            #tab01 li:last-of-type h2 a.over {
+                background-image: url("./images/m2_over.gif");
+            }
+
+            #tab02 li:first-of-type h2 a.over {
+                background-image: url("./images/m3_over.gif");
+            }
+
+            #tab02 li:last-of-type h2 a.over {
+                background-image: url("./images/m4_over.gif");
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <h1>탭만들기</h1>
+            <ul class="tab" id="tab01">
+                <li>
+                    <h2>
+                        <a href="#"><img src="images/m1_out.gif" alt="공지사항" /></a>
+                    </h2>
+                    <div>
+                        <ul>
+                            <li><a href="#">공지내용</a><span>2015-01-04</span></li>
+                        </ul>
+                        <a href="#" class="more">더보기</a>
+                    </div>
+                </li>
+                <li>
+                    <h2>
+                        <a href="#"><img src="images/m2_out.gif" alt="뉴스" /></a>
+                    </h2>
+                    <div>
+                        <ul>
+                            <li><a href="#">뉴스내용</a><span>2015-01-04</span></li>
+                        </ul>
+                        <a href="#" class="more">더보기</a>
+                    </div>
+                </li>
+                <script>
+                    // tabs("tab01")
+                </script>
+            </ul>
+            <ul class="tab" id="tab02">
+                <li>
+                    <h2>
+                        <a href="#"><img src="images/m3_out.gif" alt="자료실" /></a>
+                    </h2>
+                    <div>
+                        <ul>
+                            <li><a href="#">자료실</a><span>2015-01-04</span></li>
+                        </ul>
+                        <a href="#" class="more">더보기</a>
+                    </div>
+                </li>
+                <li>
+                    <h2>
+                        <a href="#"><img src="images/m4_out.gif" alt="보도자료" /></a>
+                    </h2>
+                    <div>
+                        <ul>
+                            <li><a href="#">보도자료</a><span>2015-01-04</span></li>
+                        </ul>
+                        <a href="#" class="more">더보기</a>
+                    </div>
+                </li>
+                <script>
+                    // tabs("tab02")
+                </script>
+            </ul>
+        </div>
+    </body>
+    <script>
+        var AAA = null
+        $("#tab01>li>h2>a").on("mouseenter", function () {
+            if (AAA) {
+                $(AAA).parent().next().hide()
+                $(AAA).removeClass("over")
+                $(this).parent().next().show()
+                $(this).addClass("over")
+            } else {
+                $(this).parent().next().show()
+                $(this).addClass("over")
+            }
+            AAA = this
+        })
+    </script>
+</html>

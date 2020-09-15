@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,
+        p,
+        a {
+            border: 2px solid blue;
+            margin: 20px;
+            padding: 20px;
+        }
+        
+        p {
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">
+        one
+        <div class="two">two
+            <div class="three">three</div>
+        </div>
+    </div>
+    <script>
+        var divs = document.querySelectorAll('div');
+        divs.forEach(function(div) {
+            div.addEventListener('click', logEvent, {
+                capture: true
+            })
+        })
+
+        function logEvent(event) {
+            console.log(event.currentTarget.className);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <style>
+            body {
+                margin-bottom: 2000px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>윈도우이벤트 - 무한스크롤</h1>
+        <h1>무한스크롤 방법 - [문서높이=스크롤높이] 일때 appendTo를 함</h1>
+    </body>
+    <script>
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() //스크롤의 맨 윗단
+            var 윈도우높이 = $(window).height() //내가 지금 보고있는 화면의 맨 밑단
+            var 스크롤높이 = scrollTop + 윈도우높이 //내가 지금 보고있는 화면의 스크롤높이
+            var 문서높이 = $(document).height()
+            if (스크롤높이 >= 문서높이 - 2200) {
+                쿠팡()
+            }
+
+            function 쿠팡() {
+                for (var i = 0; i <= 20; i++) {
+                    $("<h1>무한스크롤</h1>").appendTo("body")
+                    $('<img src="img/card1.jpg">').appendTo("body")
+                }
+            }
+        })
+    </script>
+</html>

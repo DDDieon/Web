@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라우트한 데이터 가져오기</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+    </script>
+    <style>
+        div {
+            border: 1px solid red;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('div:eq(0)').load('/data.json');
+            $('div:eq(1)').load('/data.html');
+            $('div:eq(2)').load('/data.xml');
+            $('div:eq(3)').load('/parameter?name=홍길동&region=서울');
+            $('div:eq(4)').load('/products');
+            $('div:eq(5)').load('/products/0');
+        })
+    </script>
+</head>
+
+<body>
+    <h1>div마다 ajax로 가져왔다</h1>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>

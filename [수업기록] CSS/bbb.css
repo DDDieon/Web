@@ -1,0 +1,46 @@
+html {
+    color: blue;
+    border: 1px solid black !important;
+}
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+    color: blue;
+}
+
+
+/* 반응형웹 */
+
+@media screen and (max-width: 480px) {
+    html {
+        background: red;
+        color: white;
+    }
+    p {
+        background: lightyellow;
+    }
+}
+
+@media screen and (min-width:481) and (max-width:767px) {
+    html {
+        background: blue;
+        color: black;
+    }
+    p {
+        background: silver;
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width:768px) {
+    html {
+        background: green;
+        color: black;
+    }
+    p {
+        background: fuchsia;
+        font-weight: bold;
+    }
+}

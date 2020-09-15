@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+
+    <body>
+        <title>정규표현 객체</title>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            var userName = prompt("당신의 이름은?")
+            reg1 = /^[가-힣]{2,5}$/
+            while (true) {
+                if (reg1.test(userName)) break
+                alert("이름x")
+                userName = prompt("당신의 이름은?")
+            }
+            var userCell = prompt("당신의 핸드폰 번호는?")
+            reg2 = /^(010|016|011)\d{3,4}\d{4}$/
+            while (true) {
+                if (reg2.test(userCell)) break
+                alert("폰x")
+                userCell = prompt("당신의 핸드폰 번호는?")
+            }
+            var userEmail = prompt("당신의 이메일은?")
+            reg3 = /^\w{5,12}@[a-z]{2,10}[\.][a-z]{2,3}[\.]?[a-z]{0,2}$/
+            while (true) {
+                if (reg3.test(userEmail)) break
+                alert("이메일x")
+                userEmail = prompt("당신의 이메일은?")
+            }
+            document.write(userName, "<br />")
+            document.write(userCell, "<br />")
+            document.write(userEmail, "<br />")
+            //]]>
+        </script>
+    </body>
+</html>

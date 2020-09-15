@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h4 id="me">배경색 바꾸기 예제</h4>
+    <button onclick="changecolor()">배경</button>
+    <script>
+        var color = ['red', 'blue', 'green', 'gold', 'lime'];
+        var i = 0;
+
+        function changecolor() {
+            var f = document.getElementsByTagName('h4')[0];
+            // var f = document.getElementById('me');
+            f.style.background = color[i];
+            i++;
+            // i == 4 또는 i % color.lenght == 0 일시에 i = 0이 되어야 뺑뺑돈다.
+            if (i == color.length) {
+                i = 0;
+            }
+        };
+    </script>
+</body>
+
+</html>

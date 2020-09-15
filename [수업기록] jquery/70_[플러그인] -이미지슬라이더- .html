@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="[70_플러그인].js"></script>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            /* .img {
+                min-width: 460px;
+            } */
+        </style>
+    </head>
+    <body>
+        <div class="slider-wrap">
+            <div class="images">
+                <img src="/img/img1.jpg" alt="" class="img" />
+                <img src="/img/img2.jpg" alt="" class="img" />
+                <img src="/img/img3.jpg" alt="" class="img" />
+                <img src="/img/img4.jpg" alt="" class="img" />
+                <img src="/img/img5.jpg" alt="" class="img" />
+            </div>
+            <div class="image">
+                <h2>그림제목</h2>
+                <p>welcome to my world</p>
+            </div>
+        </div>
+    </body>
+    <script>
+        $(".slider-wrap").imageSlider() //imageSlider라는 플러그인은 내가 만든 것이다! ★ $.fn.imageSlider
+    </script>
+</html>

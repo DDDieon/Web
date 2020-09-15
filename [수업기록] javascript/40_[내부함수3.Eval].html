@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="change(this.innerHTML)">red</button>
+    <button onclick="change(this.innerHTML)">blue</button>
+    <button onclick="change(this.innerHTML)">green</button>
+    <button onclick="change(this.innerHTML)">pink</button>
+    <button onclick="change(this.innerHTML)">gold</button>
+    <p id="box">welcome to my world eval 실행하기</p>
+    <h2 onmouseover="chColor(this,'over')" onmouseout="chColor(this,'out')">마우스오버하면 색바꾸기</h2>
+
+    <script>
+        function chColor(obj, state) {
+            var myColor;
+            if (state == 'over') {
+                myColor = 'red';
+                bgColor = 'orange';
+            } else {
+                myColor = 'blue';
+                bgColor = 'pink';
+            };
+            obj.style.color = myColor;
+            obj.style.backgroundColor = bgColor;
+        }
+
+
+
+
+        //----------------------------------------------------------------------------------------------버튼으로 색바꾸기-----
+        var btn = document.getElementsByTagName('button');
+
+        //---------------- 이발 안쓰고 바꾸기 (기본)-------------
+        // function change(text) {
+        //     var box = document.getElementById('box');
+        //     box.style.background = text;
+        // }
+        // change('pink');
+        // var i = 0;
+
+        //------------- 버튼숨기기--------------------------
+        // for (var i = 0; i < btn.length; i++) {
+        //     btn[i].style.display = 'none';
+        // }
+
+        //---------- eval로 배경바뀌기 ------------
+        for (var bbb of btn) {
+            bbb.onclick = function() {
+                //---------- bbb는 배열의 요소라고 생각. 각각의 요소가 클릭되면 실행하자 -----------
+                var box = document.getElementById('box');
+                var 실행 = 'box.style.background=this.innerHTML'; // 변수 안의 string을 자바스크립트 코드로 인식
+                eval(실행);
+            }
+        }
+        //----------------------- 인터발로 깜빡이기----------------
+        // setInterval(function() {
+        //     btn[i].onclick();
+        //     i++;
+        //     if (i % btn.length == 0) i = 0;
+        // }, 500);
+    </script>
+</body>
+
+</html>

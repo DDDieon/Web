@@ -1,0 +1,4 @@
+npm install request 
+npm install express@3.4.7
+
+해당 명령어를 실행하면 웹서버를 위한 기본적인 모듈이 설치된다

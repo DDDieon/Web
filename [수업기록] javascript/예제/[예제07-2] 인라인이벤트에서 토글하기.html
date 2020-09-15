@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p a {
+            display: block;
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+        
+        .over {
+            transition: 1s;
+            margin-top: -100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>마우스를 오버와 아웃 응용하기</h1>
+    <p>
+        <a href="#" id="btn4"><img src="/img/sample.jpg" alt="사진" width="200" onmouseover="changeimg(this,'over')" onmouseout="changeimg(this,'out')"></a>
+    </p>
+    <script>
+        let img = document.getElementsByTagName('img')[0];
+        img.style.transition = '1s';
+
+        function changeimg(obj, state) {
+            if (state == 'over') {
+                obj.classList.add('over');
+            } else {
+                obj.classList.remove('over');
+            }
+        }
+    </script>
+</body>
+
+</html>

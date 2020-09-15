@@ -1,0 +1,59 @@
+{
+    "ability": [{
+            "id": "1",
+            "key": "웹표준 준수를 위해 w3c validator 검사기를 사용합니다.<br /> 시맨틱 마크업을 위해 노력하고 있습니다.",
+            "title": "HTML",
+            "link": "https://beecanvas.com/s/djbPTmh5S12gPI-a_PqD"
+        },
+        {
+            "id": "2",
+            "key": "Sass 전처리기를 사용할 수 있으며, 사용자설정 애니메이션과 반응형 디자인을 제작할 수 있습니다",
+            "title": "CSS",
+            "link": "https://beecanvas.com/s/NaTIW9i9BN0eLt09oK4r"
+        },
+        {
+            "id": "3",
+            "key": "API를 가져와 화면에 출력할 수 있으며, 사용자 지정 플러그인을 만들 수 있습니다.",
+            "title": "JQuery",
+            "link": "https://beecanvas.com/s/7aEbbrJ3be6fLzSMKJ21QmjHkrEONNHRQ8ze5dMO25TvJ1orEyjSYJxy-ZzwFuDn"
+        },
+        {
+            "id": "4",
+            "key": "바닐라 자바스크립트로 캔버스를 만들거나, 디스코드 봇을 제작해보았으며 <br /> 타입스크립트를 사용할 수 있습니다",
+            "title": "Javascript",
+            "link": "https://beecanvas.com/s/7aEbbrJ3be6fLzSMKJ21QmjHkrEONNHRQ8ze5dMO25TvJ1orEyjSYJxy-ZzwFuDn"
+        },
+        {
+            "id": "5",
+            "key": "리액트 state, pros, 라이프사이클 등을 이해하며<br /> 리액트 네이티브 + EXPO 활용한 날씨어플을 클론해서 제작해보았습니다.",
+            "title": "React",
+            "link": "https://www.notion.so/1615d00fc7394bcdb3359cd1550737eb"
+        },
+        {
+            "id": "6",
+            "key": "원하는 벡터이미지 제작이 가능하고 편집디자인을 해본 경험이 있습니다.",
+            "title": "Illustrator"
+        },
+        {
+            "id": "7",
+            "key": "유튜브 영상편집 아르바이트 경험이 있습니다.",
+            "title": "Premier"
+        },
+        {
+            "id": "8",
+            "key": "디지털싱글 앨범아트(for 멜론, 지니 등) 제작 경험이 있습니다.",
+            "title": "PhotoShop"
+        },
+        {
+            "id": "9",
+            "key": "2D 모션그래픽 및 간단한 3D영상 제작 경험이 있습니다.",
+            "title": "After Effect"
+        },
+        {
+            "id": "10",
+            "key": "auto layout을 알고, 와이어프레임 제작 및 <br />코드작성에 활용하고 있습니다.",
+            "title": "Figma",
+            "link": "/photozone/info.html"
+        }
+    ]
+}

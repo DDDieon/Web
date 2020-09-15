@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="js/jquery.masonry.min.js"></script>
+        <script src="/js/colorbox-master/jquery.colorbox.js"></script>
+        <link rel="stylesheet" href="/js/colorbox-master/example1/colorbox.css" />
+        <script>
+            $(function () {
+                $("#wrap").masonry()
+                $("a").colorbox()
+            })
+        </script>
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="box">
+                <a href="/img/0.png"> <img src="/img/keyVisual_0.jpg" alt="" /></a>
+            </div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </body>
+</html>

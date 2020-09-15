@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+            counter-reset: list-number;
+        }
+
+        ul li {
+            counter-increment: list-number;
+        }
+
+        ul li::before {
+            content: counter(title) "-"counter(list-number);
+            display: inline-block;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 50%;
+            color: #fff;
+            background: brown;
+            margin-right: 10px;
+        }
+
+        body {
+            counter-reset: title;
+        }
+
+        h1 {
+            counter-increment: title;
+        }
+
+        h1::before {
+            content: counter(title) ".";
+            padding-right: 5px;
+            color: orange;
+        }
+
+        ol li::before {
+            content: attr(data-index);
+            display: inline-block;
+            padding: 3px 6px;
+            border-radius: 10px;
+            background: orange;
+            color: wheat;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>커피</h1>
+    <ul>
+        <li>아메리카노</li>
+        <li>카페라데</li>
+        <li>카푸치노</li>
+    </ul>
+    <h1>주스♥</h1>
+    <ul>
+        <li>딸기주스</li>
+        <li>오렌지</li>
+        <li>포도쥬뜌</li>
+    </ul>
+    <h1>나라</h1>
+    <ol>
+        <li data-index="A">딸기주스</li>
+        <li data-index="B">오렌지</li>
+        <li data-index="C">포도쥬뜌</li>
+    </ol>
+</body>
+
+</html>

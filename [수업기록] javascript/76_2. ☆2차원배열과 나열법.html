@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var 과일 = [
+            ['사과', '바나나', '딸기', '오렌지'], //과일[0]
+            ['오이', '양파', '라임', '수박'],
+            ['참외', '귤', '밤', '마늘'],
+            ['어묵', '고추장', '된장', '소시지']
+        ]
+
+        document.write(과일[0]);
+        document.write('<hr>');
+        document.write(과일[0][3]);
+        document.write('<hr>');
+        // 배열 전체 출력하는 법
+        for (var i = 0; i < 과일.length; i++) {
+            for (var j = 0; j < 과일[i].length; j++) {
+                document.write(과일[i][j]);
+            }
+        }
+        document.write('<hr>');
+        for (var i in 과일) {
+            for (var j in 과일[i]) {
+                document.write('<br>in으로 나열 -' + 과일[i][j])
+            }
+        }
+        document.write('<hr>');
+        for (var i of 과일) {
+            document.write(i);
+        }
+        document.write('<hr>');
+        과일.forEach(function(item, index) {
+            document.write(item + '(for each로 아이템 뿌리기)+')
+        })
+    </script>
+</body>
+
+</html>

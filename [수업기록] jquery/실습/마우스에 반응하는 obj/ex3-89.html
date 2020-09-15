@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<head><title>jquery</title>
+<meta charset="utf-8">
+<style type="text/css">
+*{margin:0; padding:0;}
+body{margin:50px;}
+ul,ol{list-style:none;}
+#container{position:relative; margin:0 auto; overflow:hidden; width:800px; height:250px; background:#fff;}
+#container img{position:absolute;}
+#container img.draw1{margin-left:-350px;}
+#container img.draw2{margin-left:-120px; margin-top:30px;}
+#container img.draw3{margin-left:-100px;}
+#container img.draw4{margin-left:300px; margin-top:60px;}
+#container img.draw5{margin-left:-200px;}
+
+#container1{position:relative; margin:0 auto; overflow:hidden; width:800px; height:400px; background:pink;}
+#container1 img{position:absolute;width:300px; height:200px;}
+#container1 img.draw11{margin-left:50px;margin-top:10px;}
+#container1 img.draw22{margin-left:100px; margin-top:20px;}
+#container1 img.draw33{margin-left:150px;margin-top:30px;}
+#container1 img.draw44{margin-left:200px; margin-top:40px;}
+#container1 img.draw55{margin-left:250px;margin-top:50px;}
+
+</style>
+<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+<!--[if lt IE 7]>
+<script type="text/javascript" src="js/jquery.ifixpng.js"></script>
+<script type="text/javascript">jQuery(document).ready(function(){ jQuery('img[@src$=.png]').ifixpng(); });</script>
+<![endif]-->
+<script type="text/javascript" src="js/jquery.zlayer.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+$('.draw1').zlayer({mass:8,confine:'y', canvas:'#container'});
+$('.draw2').zlayer({mass:5,force:'push',canvas:'#container'});
+$('.draw3').zlayer({mass:5,force:'push',canvas:'#container'});
+$('.draw4').zlayer({mass:5,force:'push',canvas:'#container'});
+$('.draw5').zlayer({mass:2,confine:'y',force:'push',canvas:'#container'});
+$('.draw6').zlayer({mass:5,confine:'y',force:'push',canvas:'#container'});
+
+$('.draw11').zlayer({mass:3,confine:'', canvas:'#container1'});
+$('.draw22').zlayer({mass:4,force:'push',canvas:'#container1'});
+$('.draw33').zlayer({mass:5,force:'push',canvas:'#container1'});
+$('.draw44').zlayer({mass:6,force:'push',canvas:'#container1'});
+$('.draw55').zlayer({mass:7,confine:'',force:'pull',canvas:'#container1'});
+$('.draw66').zlayer({mass:8,confine:'',force:'pull',canvas:'#container1'});
+});
+//]]>
+</script>
+</head>
+<body>
+<div  id="container">
+<img src="images/1.png" alt="배경"  class="draw1"/>
+<img src="images/2.png" alt="좌측 산" class="draw2"/>
+<img src="images/3.png" alt="구름1" class="draw3" />
+<img src="images/6.png" alt="비행기" class="draw4"/>
+<img src="images/4.png" alt="우측 산" class="draw5"/>
+<img src="images/5.png" alt="구름2" class="draw6"/>
+</div>
+<div  id="container1">
+<img src="../../img/keyVisual_1.jpg"  class="draw11"/>
+<img src="images/2.png" class="draw22"/>
+<img src="images/3.png" class="draw33" />
+<img src="images/6.png" class="draw44"/>
+<img src="images/4.png" class="draw55"/>
+</div>
+
+
+</body>
+
+</html>

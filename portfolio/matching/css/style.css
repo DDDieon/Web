@@ -1,0 +1,141 @@
+html {
+    background: linear-gradient(167.28deg, #4f4f4f 7.71%, rgba(255, 255, 255, 0) 90.15%),
+        rgba(0, 0, 0, 0.8);
+    font-size: 16px;
+    letter-spacing: -0.05em;
+}
+
+body {
+    background: rgba(36, 36, 36, 0.8);
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.write-box {
+    /* display: flex; */
+    position: relative;
+    width: 340px;
+}
+
+.text-basic {
+    border-radius: 12px;
+    border-color: #d4e572;
+    padding: 9px 25px;
+    outline: none;
+    background: white;
+}
+
+#btnAdd {
+    all: unset;
+    position: absolute;
+    color: white;
+    font-weight: 900;
+    background: linear-gradient(180deg, #d4e572 0%, rgba(255, 255, 255, 0) 100%), #61c751;
+    border-radius: 8px;
+    padding: 11px 33px;
+    right: 0px;
+    box-shadow: 0px 3px 2px #d4e572;
+}
+
+/* 리스트 */
+
+.list-box {
+    margin-bottom: 30px;
+}
+
+.list-table {
+    border: 1px solid #d4e572;
+    background: white;
+    width: 340px;
+    height: auto;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.34);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0px 3px 2px #d4e572;
+}
+
+#listBody ul {
+    display: flex;
+}
+
+#listBody ul li:first-of-type {
+    margin-right: 14px;
+}
+
+/* 버튼 3개. 전체삭제~매칭까지 */
+
+.btn-area {
+    display: flex;
+}
+
+.btn-area button {
+    all: unset;
+    color: white;
+    font-weight: 900;
+    background: linear-gradient(180deg, #d4e572 0%, rgba(255, 255, 255, 0) 100%), #61c751;
+    border-radius: 8px;
+    padding: 11px 31px;
+    margin-right: 2px;
+    box-shadow: 0px 3px 2px #d4e572;
+    position: relative;
+}
+
+.btn-area button:first-child {
+    margin-right: 50px 0;
+}
+
+button:hover {
+    transition: 0.2s;
+    background: linear-gradient(180deg, #c1d83c 0%, rgba(255, 255, 255, 0) 100%), #37ac25 !important;
+}
+
+button:active {
+    bottom: 3px;
+}
+
+/* 팀 래퍼 스타일 */
+
+.teamWrapper {
+    width: 340px;
+    text-align: center;
+    color: white;
+}
+
+#teamWrapper ul {
+    display: flex;
+}
+
+.teamWrapper h2 {
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: 15px;
+}
+
+section {
+    flex: 1;
+    background: linear-gradient(180deg, #d4e572 0%, rgba(255, 255, 255, 0) 100%), #61c751;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.teamWrapper section:nth-of-type(1) {
+    background: linear-gradient(180deg, #fda797 0%, rgba(255, 255, 255, 0) 100%), #fd7b88;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.teamWrapper section:nth-of-type(2) {
+    background: linear-gradient(180deg, #2f82ec 42.97%, rgba(255, 255, 255, 0) 142.97%), #00d2ff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.red,
+.blue {
+    height: 50%;
+    padding: 20px;
+    margin: 12px;
+}

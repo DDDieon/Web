@@ -1,0 +1,140 @@
+section {
+  padding: 5vw 30px;
+  width: 100%;
+  height: auto;
+}
+
+.productList {
+  width: 80%;
+  font-size: 12px;
+  text-align: center;
+  overflow: hidden;
+  margin: 50px auto;
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.productList .on {
+  background: #2b2a2c;
+  box-shadow: inset 3px 4px 10px black;
+  color: #ffdb00;
+  font-weight: bold;
+}
+
+.productList__items {
+  width: 48%;
+  border: 1px solid #dfdfdf;
+  float: left;
+  background: #fcfbff;
+}
+
+.productList__items a {
+  display: block;
+  padding: 7px 0;
+}
+
+.headerTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 30px;
+}
+
+.headerTitle span {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+#productResult {
+  display: flex;
+  justify-content: flex-end;
+  width: 75vw;
+  margin: 0 auto;
+  font-size: 12px;
+  color: #333333;
+}
+
+#productResult .result_title {
+  margin: 0 10px;
+}
+
+#productMain {
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#productMain .productMainItem {
+  width: 50%;
+}
+
+#productMain .productMainItem img {
+  display: block;
+  max-width: 100% !important;
+  margin-bottom: 20px;
+}
+
+#productMain .productMainItem a {
+  cursor: pointer !important;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
+#productMain .productMainItem a > * {
+  cursor: pointer;
+}
+
+#productMain .productMainItem a .name_of_product {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#productMain .productMainItem a p:nth-of-type(2) {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+#productMain .productMainItem a p:nth-of-type(3) {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 460px) {
+  .productList__items {
+    width: 32%;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .headerTitle {
+    margin-top: 80px;
+    margin-left: 10vw;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  .headerTitle span {
+    font-size: 16px;
+  }
+  hr {
+    display: block;
+    border: 1px solid #ececec;
+    margin: 10px 10vw;
+  }
+  .productList {
+    margin-left: 10vw;
+  }
+  .productList__items {
+    width: 8%;
+    min-width: 105px;
+    font-size: 14px;
+  }
+  #productMain .productMainItem {
+    width: 20%;
+    padding: 10px;
+  }
+}

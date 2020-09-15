@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body>
+    <h2> welcome - 1 </h2>
+    <h2> welcome - 2 </h2>
+    <h2> welcome - 3 </h2>
+
+    <h1> my world - 1</h1>
+    <h1> my world - 2</h1>
+    <h1> my world - 3</h1>
+</body>
+<script>
+    $(function() {
+        $('h2').first().html("<a href='#'> HTML 메서드 </a>"); //innerHTML
+        $('h2').last().text("<a href='#'> text 메서드 </a>"); //textContent
+
+        $('h1').html(function(index, html) {
+            return index + '번째 ★' + html + '데수웅';
+        })
+    })
+</script>
+
+</html>

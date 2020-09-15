@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>노드 실습1 http://cafe.daum.net/knyatom/OVmb/103</title>
+    </head>
+    <body>
+        <script>
+            var input = ""
+            input += "모던 웹 디자인 HTML5, 홍길동,20000원\n"
+            input += "모던 웹 디자인 JavaScript + jQuery, 홍길순,3000원\n"
+            input += "모던 웹 디자인 node.js 프로그래밍,가나다, 22000원 \n"
+            input += "모던 웹 디자인 HTML5 프로그래밍,윤인성, 33000원 \n"
+
+            input = input.split("\n")
+            for (var i = 0; i < input.length; i++) {
+                input[i] = input[i].split(",")
+                //,를 지점으로 나누어서 배열로 저장
+
+                for (var j = 0; j < input[i].length; j++) {
+                    console.log(input[i][j])
+                    input[i][j] = input[i][j].trim()
+                    //공백제거
+                }
+            }
+
+            for (var i in input) {
+                document.write(input[i] + "<br>")
+            }
+        </script>
+    </body>
+</html>

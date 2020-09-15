@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>슬라이딩 배너 만들기</title>
+        <link href="style.css" type="text/css" rel="stylesheet" />
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <!-- <script src="rollingBanner.js"></script> -->
+    </head>
+    <body>
+        <div id="wrap">
+            <h1>아이콕스 신간소개</h1>
+            <div id="banner">
+                <div class="vis_frame">
+                    <ul>
+                        <li>
+                            <a href="#"
+                                ><img src="images/book1.jpg" alt="안드로이드로용돈벌기"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/book2.jpg" alt="아이폰으로용돈벌기" /></a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                ><img src="images/book3.jpg" alt="실전프로젝트반응형웹퍼블리싱"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                ><img src="images/book4.jpg" alt="웹표준퍼블리싱바이블"
+                            /></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="b_control">
+                <a href="#play" class="play"
+                    ><img src="images/play.gif" width="11" height="11" alt="재생"
+                /></a>
+                <a href="#stop" class="stop"
+                    ><img src="images/stop.gif" width="11" height="11" alt="멈춤"
+                /></a>
+            </div>
+            <div id="b_bt">
+                <a href="#left" class="left"><img src="images/left.gif" alt="이전 배너이미지" /></a>
+                <a href="#right" class="right"
+                    ><img src="images/right.gif" alt="다음 배너이미지"
+                /></a>
+            </div>
+        </div>
+    </body>
+    <script>
+        var direction = "left"
+        var time = 100
+        var auto
+        var state = false
+        var playOn = false
+
+        var eleWidth = $(".vis_frame ul li").innerWidth()
+        $(".left").click(function () {
+            $(".vis_frame>ul").animate(
+                {
+                    left: eleWidth * -1,
+                    // 왼쪽으로 가게 한다
+                },
+                500,
+                function () {
+                    $(this).children("li:first").insertAfter($(this).children("li:last"))
+                    // 왼쪽으로 도착하면 맨 앞의 것을 맨뒤로 보낸다
+                    $(this).css("left", 0)
+                    // 콜백으로 css left:0이 없으면 0.5초동안의 애니메이션/왼쪽가는 것의 모션이 무시당한다
+                    state = false
+                }
+            )
+        })
+        $(".right").click(function () {
+            $(".vis_frame>ul>li:last").insertBefore($(".vis_frame>ul>li:first"))
+            $(".vis_frame>ul").css("left", eleWidth * -1) // 왼쪽에서 오게 한다
+            $(".vis_frame>ul").stop().animate(
+                {
+                    left: 0, // 음수에서 0으로 가니까 오른쪽으로 가는 효과
+                },
+                500
+            ),
+                (state = false)
+        })
+
+        $(".play").click(function () {
+            auto = setInterval(function () {
+                if (direction == "left") {
+                    playOn = true
+                    $(".left").click()
+                } else {
+                    $(".right").click()
+                }
+            }, time)
+            console.log(auto)
+        })
+        $(".stop").click(function () {
+            clearInterval(auto)
+        })
+    </script>
+</html>

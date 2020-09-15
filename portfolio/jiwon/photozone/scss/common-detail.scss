@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+$pontColor: #ff3939;
+$mobileHeadline: 96px;
+$tabletHeadline: 193px !important;
+
+@mixin h2Title {
+    font-family: "Russo One", sans-serif;
+}
+
+.main {
+    text-align: center;
+
+    &-headline {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--title {
+            h2 {
+                @include h2Title;
+                font-size: 27px;
+            }
+
+            p {
+                margin-bottom: 5px;
+            }
+
+            a.goProject {
+                display: block;
+                margin: 0 auto;
+                font-size: 10px;
+                width: 94.5px;
+                height: 22px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        &--back {
+            position: absolute;
+            z-index: -9999;
+            width: 100%;
+            height: $mobileHeadline;
+            top: 17px;
+            font-size: 80px;
+            font-family: "Russo One", sans-serif;
+            color: rgba(75, 75, 75, 0.096);
+            text-indent: -9999px;
+        }
+    }
+}
+
+.footer {
+    background: rgba(238, 238, 238, 0.199);
+    padding: 40px 0;
+    color: #222;
+
+    address {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .publisher {
+            font-family: "Russo One", sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .address-github {
+            display: block;
+
+            .fa-github-alt:before {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+.mobile-gnb {
+    font-size: 20px;
+    font-family: "Russo One", sans-serif;
+}

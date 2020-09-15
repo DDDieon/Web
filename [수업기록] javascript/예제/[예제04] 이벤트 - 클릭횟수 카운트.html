@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="A">button A</button>
+    <button id="B">button B</button>
+    <h1>Button A- <span id="ca">0</span></h1>
+    <h1>Button B- <span id="cb">0</span></h1>
+    <script>
+        let A = document.getElementById('A');
+        let B = document.getElementById('B');
+        let ca = document.getElementById('ca');
+        let cb = document.getElementById('cb');
+
+        A.onclick = function() {
+            ca.innerHTML = Number(ca.innerHTML) + 1;
+        }
+
+
+        B.addEventListener('click', function() {
+            cb.innerHTML = Number(cb.innerHTML) + 1;
+            A.onclick(); // B를 클릭했는데 A를 강제클릭을 '실행'
+        })
+
+        setInterval(function() {
+            B.click(); // B가 클릭된다
+        }, 1000)
+    </script>
+</body>
+
+</html>

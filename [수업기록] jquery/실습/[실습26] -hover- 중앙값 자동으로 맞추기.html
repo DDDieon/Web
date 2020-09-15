@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>http://cafe.daum.net/knyatom/OXKi/91</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <style>
+            * {
+                margin: 0 auto;
+                padding: 0;
+            }
+
+            div.control {
+                overflow: hidden;
+                border: 1px solid red;
+                width: 500px;
+                position: relative;
+                left: 0;
+                bottom: 0;
+                z-index: 10;
+            }
+
+            .button {
+                width: 30px;
+                height: 30px;
+                float: left;
+                cursor: pointer;
+                background: black;
+                position: relative;
+                margin-left: 25px;
+                border-radius: 50%;
+            }
+
+            .button:hover {
+                background: red;
+            }
+
+            section {
+                position: relative;
+                width: 600px;
+                height: 100px;
+            }
+
+            div.hover_panel {
+                position: absolute;
+                width: 600px;
+                height: 100px;
+            }
+
+            div.hover {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background-size: cover;
+                display: none;
+                border: 3px solid blue;
+                border-radius: 10px;
+                box-shadow: 3px 3px black;
+            }
+
+            div.hover:nth-of-type(1) {
+                background-color: red;
+                background-image: url("/img/card1.jpg");
+                background-size: 100% 100%;
+            }
+
+            div.hover:nth-of-type(2) {
+                background-color: blue;
+                background-image: url("/img/card1.jpg");
+                background-size: 100% 100%;
+            }
+
+            div.hover:nth-of-type(3) {
+                background-color: green;
+                background-image: url("/img/card1.jpg");
+                background-size: 100% 100%;
+            }
+
+            div.hover:nth-of-type(4) {
+                background-color: pink;
+                background-image: url("/img/card1.jpg");
+                background-size: 100% 100%;
+            }
+
+            div.hover:nth-of-type(5) {
+                background-color: steelblue;
+                background-image: url("/img/card1.jpg");
+                background-size: 100% 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center;">hover<br />응용하기<br /></h1>
+        <h1 style="text-align: center;">hover<br />응용하기<br /></h1>
+        <h1 style="text-align: center;">hover<br />응용하기<br /></h1>
+        <section>
+            <div class="control">
+                <div class="button"></div>
+                <div class="button"></div>
+                <div class="button"></div>
+                <div class="button"></div>
+                <div class="button"></div>
+            </div>
+            <div class="hover_panel">
+                <div class="hover"></div>
+                <div class="hover"></div>
+                <div class="hover"></div>
+                <div class="hover"></div>
+                <div class="hover"></div>
+            </div>
+        </section>
+    </body>
+    <script>
+        $(".button").hover(
+            function () {
+                //호버시에 display block
+                var i = $(this).index()
+                $(".hover").css("display", "none")
+                $(".hover").eq(i).css("display", "block")
+
+                //css로 left값을 계산하지 않아도 된다. 버튼의 position값을 그대로 가져온다
+                var hoverW = $(".hover").width() / 2
+                var hoverH = $(".hover").height()
+                var buttonW = $(".button").width() / 2
+                var buttonH = $(".button").height()
+                //위치값이 안맞아서 hover라는 버튼의 가로세로너비를 구한다
+                var calX = hoverW - buttonW //중앙값
+                var calY = hoverH + buttonH + 20
+                var x = $(".button").eq(i).position().left + calX
+                var y = $(".button").eq(i).position().top - calY
+                console.log(x, y)
+                $(".hover").eq(i).css({
+                    left: x,
+                    top: y,
+                })
+                $(".hover").eq(i).animate({
+                    'left':
+                })
+            },
+            function () {
+                $(".hover").stop().fadeOut("500")
+            }
+        )
+    </script>
+</html>

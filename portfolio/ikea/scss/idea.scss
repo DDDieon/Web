@@ -1,0 +1,419 @@
+$Yellow: #ffdb00;
+$Blue: #0058a3;
+$WrapMobileWidth: 95%;
+$ImgMobileWidth: 100px;
+$WrapDesktopWidth: 64%;
+$ImgDesktopWidth: 350px;
+$ImgDesktopHeight: 170px;
+
+.content {
+    width: 100%;
+    height: 100%;
+    background: #efefef;
+
+    &__projects {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        color: #fff;
+
+        &--menu {
+            width: 100%;
+            height: 100%;
+
+            div.fadeShow {
+                position: relative;
+                height: 33vh;
+                width: 100%;
+                transition: 0.5s;
+
+                .content__project--icon {
+                    border-radius: 50%;
+                    border: 2px solid #fff;
+                    position: absolute;
+                    color: #fff;
+                    left: 50%;
+                    margin-left: calc(-75px / 2);
+                    top: 20%;
+                    opacity: 0.8;
+                    transition: 0.8s;
+
+                    .xi-touch {
+                        font-size: 50px;
+                        padding: 20px;
+                    }
+                }
+
+                &.ikea_idea {
+                    background: url("/img/idea/gate-visual1.jpg") center;
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    display: none;
+
+                    &:hover {
+                        background-size: 130% auto;
+                    }
+                }
+
+                &.our_home {
+                    background: url("/img/idea/gate-visual2.jpg") center;
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    display: none;
+
+                    &:hover {
+                        background-size: 130% auto;
+                    }
+                }
+
+                &.social_ikea {
+                    background: url("/img/idea/gate-visual3.jpg") center;
+                    background-repeat: no-repeat;
+                    background-size: 100% auto;
+                    display: none;
+
+                    &:hover {
+                        background-size: 130% auto;
+                    }
+                }
+
+                &:hover {
+                    filter: brightness(0.8);
+
+                    .content__project--icon {
+                        transform: rotate(-20deg);
+                    }
+                }
+
+                .content__projects--word {
+                    position: absolute;
+                    opacity: 0.9;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    bottom: 0;
+                    padding: 30px;
+                    text-align: center;
+                    color: $Blue;
+                    background: #fff;
+
+                    p:first-child {
+                        display: inline;
+                        padding: 0 12px;
+                        background: $Blue;
+                        color: #fff;
+                    }
+
+                    h2 {
+                        text-decoration: underline;
+                        font-size: 22px;
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+
+        &--desc {
+            position: relative;
+            display: none;
+            padding-bottom: 30px;
+            text-align: center;
+            margin-top: 50px;
+            overflow: hidden;
+
+            .slideTitle {
+                margin: 0 auto;
+                margin-bottom: 10px;
+                width: $WrapMobileWidth;
+                display: flex;
+                justify-content: space-between;
+                font-size: 16px;
+                font-weight: bold;
+                color: $Yellow;
+                background: $Yellow;
+
+                span {
+                    background: $Blue;
+                    padding: 0 20px;
+                }
+            }
+
+            .slide {
+                width: $WrapMobileWidth;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                flex-wrap: wrap;
+                margin: 0 auto;
+
+                &-thumb {
+                    margin: 5px;
+                    padding: 5px;
+                    border: 1px solid #e9e9e9;
+                    background: #fff;
+                    color: #000;
+
+                    &__desc {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        margin: 0 auto;
+
+                        span {
+                            padding: 2px 4px;
+                            margin: 2px;
+                            font-size: 10px;
+                            font-weight: bold;
+                            border-radius: 4px;
+
+                            &:nth-of-type(1) {
+                                background: $Yellow;
+                            }
+
+                            &:nth-of-type(2) {
+                                background: rgb(255, 59, 59);
+                                color: #fff;
+                            }
+                        }
+                    }
+
+                    a {
+                        display: flex;
+
+                        p {
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                &-thumb {
+                    .imgBox {
+                        margin: 0;
+                        overflow: hidden;
+                        width: $ImgMobileWidth;
+                    }
+
+                    .imgBox img {
+                        // width: $ImgMobileWidth;
+                        // height: $ImgMobileWidth;
+                        max-height: $ImgMobileWidth;
+                    }
+                }
+            }
+
+            .slideControler {
+                position: absolute;
+                left: 50%;
+                padding: 10px;
+                margin-left: calc(-686px / 2);
+                margin-bottom: 14px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: bold;
+
+                button {
+                    background: #f6f6f6;
+                    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.349);
+                    color: #666;
+                    margin: 0 120px;
+                    border-radius: 50%;
+                    padding: 5px 10px;
+                    font-weight: bold;
+                    font-size: 18px;
+                    cursor: pointer;
+                    outline: none;
+                }
+            }
+
+            .PrevPageButton {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #f6f6f6;
+                box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.349);
+                color: #222;
+                margin: 0 auto;
+                min-width: 120px;
+                height: 40px;
+                text-align: center;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__modals {
+        display: none;
+
+        &--wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10000;
+            background-color: rgba(5, 5, 5, 0.842);
+        }
+
+        &--main {
+            $modalWidth: 600px;
+            background: #ececec;
+            box-shadow: 5px 3px 20px rgba(0, 0, 0, 0.329);
+            width: $modalWidth;
+            height: 350px;
+            border-radius: 12px;
+            color: #222;
+
+            h3 {
+                font-size: 16px;
+                font-weight: 900;
+            }
+
+            img {
+                width: 100%;
+                border-radius: 12px;
+            }
+
+            &__sub {
+                display: flex;
+                justify-content: space-between;
+                padding: 5px 15px;
+
+                div:nth-of-type(1) {
+                    flex: 1;
+                }
+
+                div:nth-of-type(2) {
+                    flex: 4;
+                }
+            }
+        }
+    }
+}
+
+// tablet
+@media screen and (min-width: 760px) {
+
+    ul.slide-wrapT,
+    ul.slide-wrapB::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .content__projects--desc .slide-thumb {
+        float: left;
+        width: 50%;
+        padding: 5px;
+        margin: 0;
+    }
+}
+
+// desktop
+@media screen and (min-width: 1260px) {
+    .content {
+        width: 100%;
+        height: 100vh;
+
+        .content__projects--desc {
+            height: 100vh;
+            margin-left: 30px;
+            padding-bottom: 0 !important;
+        }
+
+        .content__projects--menu {
+            overflow: hidden;
+        }
+
+        &__projects {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            div.fadeShow {
+                cursor: pointer;
+                height: 100vh;
+                width: 33.3%;
+                float: left;
+
+                &.ikea_idea {
+                    background: url("/img/idea/gate-visual1.jpg") center;
+                    background-repeat: no-repeat;
+                    background-size: auto 100%;
+
+                    &:hover {
+                        background-size: auto 150%;
+                    }
+                }
+
+                &.our_home {
+                    background: url("/img/idea/gate-visual2.jpg") center;
+                    background-repeat: no-repeat;
+                    background-size: auto 100%;
+
+                    &:hover {
+                        background-size: auto 150%;
+                    }
+                }
+
+                &.social_ikea {
+                    background: url("/img/idea/gate-visual3.jpg") center;
+                    background-repeat: no-repeat;
+                    background-size: auto 100%;
+
+                    &:hover {
+                        background-size: auto 150%;
+                    }
+                }
+
+                .content__projects--word {
+                    padding-bottom: 120px;
+                }
+
+                &:hover .content__projects--word {
+                    transition: 0.2s;
+                    padding-bottom: 180px;
+                }
+            }
+        }
+
+        .slideTitle {
+            margin-top: 18vh !important;
+        }
+
+        .slide {
+            position: relative;
+
+            &-thumb {
+                width: $ImgDesktopWidth;
+
+                .imgBox {
+                    flex: 0.7;
+                }
+
+                .imgBox img {
+                    max-height: $ImgDesktopHeight;
+                }
+            }
+        }
+
+        .content__projects--desc {
+            width: $WrapDesktopWidth;
+            float: left;
+        }
+
+        .content__projects--desc .slideTitle,
+        .content__projects--desc .slideControler,
+        .slide-wrapT,
+        .slide-wrapB {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <style type="text/css">
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            img {
+                border: none;
+                vertical-align: top;
+            }
+            li {
+                list-style: none;
+                float: left;
+                width: 80px;
+            }
+            h1 {
+                text-align: center;
+            }
+            #banner_wrap {
+                width: 260px;
+                padding: 10px 20px;
+                margin: 0 auto;
+                border: 1px solid #aaa;
+            }
+            #banner {
+                width: 5000px; /*넉넉히 많이 주세요*/
+            }
+            #frame {
+                width: 232px;
+                height: 54px;
+                overflow: hidden;
+                position: relative;
+                margin: 10px auto;
+            }
+            #frame li img {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        <script>
+            $(function () {
+                var list = $("#banner")
+                var show = 3
+                var num = 0
+                var total = list.find(">li").size() //li의 개수
+                var li_width = list.find("li:first").width()
+                console.log(li_width)
+
+                //이미지 3장 해제해서 뒤에 추가하기
+                var copyObj = list.find("li:lt(" + show + ")").clone()
+                list.append(copyObj)
+                $(".next").on("click", function () {
+                    if (num == total) {
+                        num = 0
+                        list.css("margin-left", num)
+                    }
+                    num++
+                    var move = -li_width * num + "px"
+                    list.stop().animate({ marginLeft: move }, 500)
+                    return false
+                })
+                $(".prev").on("click", function () {
+                    if (num == 0) {
+                        num = total
+                        list.css("margin-left", -num * li_width + "px")
+                    }
+                    num--
+                    var move = -li_width * num + "px"
+                    list.stop().animate({ marginLeft: move }, 500)
+                    return false
+                })
+            })
+        </script>
+    </head>
+
+    <body>
+        <h1>롤링 슬라이드 배너 만들기</h1>
+        <div id="banner_wrap">
+            <div id="frame">
+                <ul id="banner">
+                    <li>
+                        <a href="#"><img src="images/rolling/pic_1.jpg" alt="사진1" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/rolling/pic_2.jpg" alt="사진2" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/rolling/pic_3.jpg" alt="사진3" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/rolling/pic_4.jpg" alt="사진4" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/rolling/pic_5.jpg" alt="사진5" /></a>
+                    </li>
+                </ul>
+            </div>
+            <p>
+                <a href="#" class="prev">
+                    <img src="images/rolling/prev_btn.png" alt="이전 버튼" />
+                </a>
+                <a href="#" class="next">
+                    <img src="images/rolling/next_btn.png" alt="다음 버튼" />
+                </a>
+            </p>
+        </div>
+    </body>
+</html>

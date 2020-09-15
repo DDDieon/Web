@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="gnb.js"></script>
+        <style>
+            @charset "utf-8";
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: "돋움", dotum, sans-serif;
+                font-size: 12px;
+                color: #000;
+            }
+
+            li {
+                list-style: none;
+            }
+
+            img {
+                border: 0;
+                vertical-align: top;
+            }
+
+            a {
+                color: #000;
+                text-decoration: none;
+            }
+
+            #realHeader {
+                height: 30px;
+                position: relative;
+            }
+
+            #headerWrap {
+                width: 100%;
+                height: 30px;
+                border-bottom: 2px solid #ccc;
+                background: #fff;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            #header {
+                width: 600px;
+                margin: 0 auto;
+            }
+
+            #header > #gnb {
+                position: relative;
+            }
+
+            #header > #gnb > li {
+                width: 120px;
+                float: left;
+                text-align: center;
+            }
+
+            #header > #gnb > li > ul {
+                width: 110px;
+                position: absolute;
+                left: 0;
+                top: 30px;
+                background: #fff;
+                padding: 5px;
+                display: none;
+            }
+
+            #header > #gnb > li > ul.on {
+                background: #dfdfdf;
+            }
+
+            #header #gnb li.m1 ul {
+                left: 0;
+            }
+
+            #header #gnb li.m2 ul {
+                left: 120px;
+            }
+
+            #header #gnb li.m3 ul {
+                left: 240px;
+            }
+
+            #header #gnb li.m4 ul {
+                left: 360px;
+            }
+
+            #header #gnb li.m5 ul {
+                left: 480px;
+            }
+
+            #header > #gnb > li > ul > li {
+                padding: 0 10px;
+            }
+
+            #header > #gnb > li > ul > li > a {
+                display: block;
+                border-bottom: 1px solid #eee;
+                padding: 8px 0;
+            }
+
+            #header > #gnb > li > ul > li > a:hover,
+            #header > #gnb > li > ul > li > a:active,
+            #header > #gnb > li > ul > li > a:focus {
+                color: #ff0000;
+            }
+
+            #content {
+                font-size: 35px;
+                color: #666;
+                background: #eee;
+                text-align: center;
+                padding: 100px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="realHeader">
+            <div id="headerWrap">
+                <div id="header">
+                    <ul id="gnb">
+                        <li class="m1">
+                            <a href="#"><img src="images/2depths/m1_over.gif" alt="메뉴1" /></a>
+                            <ul>
+                                <li><a href="#">메뉴1-1</a></li>
+                                <li><a href="#">메뉴1-2</a></li>
+                                <li><a href="#">메뉴1-3</a></li>
+                                <li><a href="#">메뉴1-4</a></li>
+                            </ul>
+                        </li>
+                        <li class="m2">
+                            <a href="#"><img src="images/2depths/m2_over.gif" alt="메뉴2" /></a>
+                            <ul>
+                                <li><a href="#">메뉴2-1</a></li>
+                                <li><a href="#">메뉴2-2</a></li>
+                                <li><a href="#">메뉴2-3</a></li>
+                                <li><a href="#">메뉴2-4</a></li>
+                            </ul>
+                        </li>
+                        <li class="m3">
+                            <a href="#"><img src="images/2depths/m3_over.gif" alt="메뉴3" /></a>
+                            <ul>
+                                <li><a href="#">메뉴3-1</a></li>
+                                <li><a href="#">메뉴3-2</a></li>
+                                <li><a href="#">메뉴3-3</a></li>
+                                <li><a href="#">메뉴3-4</a></li>
+                            </ul>
+                        </li>
+                        <li class="m4">
+                            <a href="#"><img src="images/2depths/m4_over.gif" alt="메뉴4" /></a>
+                            <ul>
+                                <li><a href="#">메뉴4-1</a></li>
+                                <li><a href="#">메뉴4-2</a></li>
+                                <li><a href="#">메뉴4-3</a></li>
+                                <li><a href="#">메뉴4-4</a></li>
+                            </ul>
+                        </li>
+                        <li class="m5">
+                            <a href="#"><img src="images/2depths/m5_over.gif" alt="메뉴5" /></a>
+                            <ul>
+                                <li><a href="#">메뉴5-1</a></li>
+                                <li><a href="#">메뉴5-2</a></li>
+                                <li><a href="#">메뉴5-3</a></li>
+                                <li><a href="#abc">메뉴5-4</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="content">CONTENT</div>
+    </body>
+    <script>
+        $(function () {
+            var gnbLi = $("#gnb>li")
+            var ul = $("#gnb>li>ul")
+            var headerMin = $("#headerWrap").height()
+            var headerMax = ul.innerHeight() + headerMin
+            var state = false
+            var speed = 150
+
+            var getValue = location.search.substring(1) //main=0&&sub=0
+            if (getValue) {
+                getValue = getValue.split("&")
+                for (var i = 0; i < getValue.length; i++) {
+                    eval(getValue[i]) //main=0, sub=0...
+                }
+            } else {
+                main = sub = null
+            }
+            var subA = $("#gnb>li>ul").find("a")
+            var mainCurrent = $("#gnb>li:eq(" + main + ")>a") //li의 a
+            var subCurrent = mainCurrent.siblings("ul").find("a").eq(sub) //li>ul>a
+
+            gnbLi.mouseenter(function () {
+                if (!state) {
+                    $("#headerWrap")
+                        .stop()
+                        .animate({ height: headerMax }, speed, function () {
+                            ul.stop().fadeIn(speed)
+                        })
+                    state = true //마우스가 들어갔었다면 true상태
+                }
+                $(this).find("ul").addClass("on")
+            })
+
+            gnbLi.mouseleave(function () {
+                $(this).find("ul").removeClass("on")
+            })
+
+            $("#header").mouseleave(function () {
+                ul.stop().fadeOut(speed, function () {
+                    $("#headerWrap").stop().animate({ height: headerMin }, speed)
+                })
+                state = false
+            })
+
+            $("#gnb li a")
+                .focus(function () {
+                    $("#headerWrap").stop().animate({ height: headerMax }, speed)
+                    ul.stop().fadeIn(speed)
+                })
+                .blur(function () {
+                    $("#headerWrap").stop().animate({ height: headerMin }, speed)
+                    ul.stop().fadeOut(speed)
+                })
+        })
+    </script>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <script
+            type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bdb5bdca08038c05cd011ffb4e751b2a"
+        ></script>
+        <style>
+            #map,
+            #map2 {
+                width: 400px;
+                height: 500px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>구글 지도 작성하기</h2>
+        <div id="map"></div>
+        <!-- <h2>다음 지도</h2>
+        <div id="map2"></div> -->
+    </body>
+    <script>
+        // ------------ 구글지도
+        // 실제지도를 생성합니다.
+        var element = document.getElementById("map")
+        var map = new google.maps.Map(element, {
+            zoom: 17,
+            center: new google.maps.LatLng(37.484707, 126.8965429),
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+        })
+
+        // 위치 탐색을 시작합니다.
+        navigator.geolocation.getCurrentPosition(
+            function (position) {
+                // 위치값 가져오기
+                var latitude = position.coords.latitude
+                var longitude = position.coords.longitude
+                // 위치값 출력하기
+                console.log(latitude, longitude)
+                // 마커를 변수로
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(37.484707, 126.8965429),
+                    map: map,
+                    title: "한국직업전문학교",
+                    zoom: 17,
+                    mapTypeId: google.maps.MapTypeId.TERRAIN,
+                })
+                var infoWindow = new google.maps.infoWindow({
+                    content: "서울시 구로구 구로 디지털단지",
+                })
+                // 지도 오픈
+                infoWindow.open(map, marker)
+            },
+            function (error) {
+                // 위치를 가져오는데 실패할 경우
+                alert(error)
+            }
+        )
+    </script>
+    <!-- <script>
+        //------------ 카카오지도
+        var container = document.getElementById("map2") //지도를 담을 영역의 DOM 레퍼런스
+
+        var options = {
+            //지도를 생성할 때 필요한 기본 옵션
+            center: new kakao.maps.LatLng(37.424300913131425, 126.88287249524848), //지도의 중심좌표.
+            level: 3, //지도의 레벨(확대, 축소 정도)
+        }
+
+        var map2 = new kakao.maps.Map(container, options) //지도 생성 및 객체 리턴
+
+        var marker = new kakao.maps.Marker({
+            // 지도 중심좌표에 마커를 생성합니다
+            position: map2.getCenter(),
+        })
+
+        // ------------지도에 마커를 표시합니다----------
+        marker.setMap(map2)
+    </script> -->
+</html>

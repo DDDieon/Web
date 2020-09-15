@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WINDOW객체의 종류들 http://cafe.daum.net/knyatom/Ob8k/13</title>
+</head>
+
+<body>
+    <script>
+        // var out = "";
+        // for (var key in window) {
+        //     out += key + " : " + window[key] + "<br>";
+        // }
+        // document.write(out);
+        //  open, close, print 객체
+        //  child객체  == 팝업
+        // var child = window.open('', 'aaa', 'width=300,height=300');
+        // if (child) {
+        //     child.document.write('<h2>지금은 공사중</h2>');
+        // } else {
+        //     alert('팝업차단 해제하라');
+        // }
+    </script>
+    <h1 onclick="window.open('http://naver.com')">open</h1>
+    <h1 onclick="window.close()">close</h1>
+    <h1 onclick="window.print()">print</h1>
+    <script>
+        // 팝업창 움직이기----------------------------------------------
+        var child = window.open('', '', 'width=300, height=200');
+        // child.moveTo‎(0, 0);
+        // 1초마다 함수를 실행합니다.
+        setInterval(function() {
+            child.moveBy(10, 10);
+        }, 1000);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            #sky {
+                background: url("/실습/images/bg1.png") 0 0;
+                position: relative;
+                width: 100%;
+                height: 5500px;
+                /* background-size: 100% 100%; */
+            }
+            #sky article {
+                position: absolute;
+                top: 750px;
+                left: 40%;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="sky" data-type="background" data-speed="0.5">
+            <article><img src="/실습/images/balloon.png" alt="" /></article>
+        </section>
+    </body>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                var sct = $(this).scrollTop()
+                var speed = $("#sky").attr("data-speed") //0.5
+                var yPos = -(sct / speed) //화면의 높이에 0.5를 나누기
+                var coords = "0" + yPos + "px" //y좌표가 점점 올라가게
+                $("#sky").css({
+                    backgroundPosition: coords,
+                })
+                console.log("sct = " + sct)
+                console.log("speed = " + speed)
+                console.log(coords)
+            })
+        })
+    </script>
+</html>

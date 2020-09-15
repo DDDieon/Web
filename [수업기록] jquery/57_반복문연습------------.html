@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script>
+            $(() => {
+                //a는 인덱스이다
+                $("#m li").each((a, b) => {
+                    $(b).text("안녕하세요" + a)
+                })
+                $("#btn").on("click", () => {
+                    $.each($("#m li"), (a, b) => {
+                        $(b).text("감사합니다" + a)
+                    })
+                })
+            })
+
+            // $(function () {
+            //     $("#m li").each(function (a, b) {
+            //         $(b).text("안녕하세요" + a)
+            //     })
+            //     $("#btn").on("click", function () {
+            //         $.each($("#m li"), function (a, b) {
+            //             $(b).text("감사합니다" + a)
+            //         })
+            //     })
+            // })
+        </script>
+    </head>
+    <body>
+        <button id="btn">냠</button>
+        <ul id="m">
+            <li>내용1</li>
+            <li>내용2</li>
+            <li>내용3</li>
+            <li>내용4</li>
+            <li>내용5</li>
+            <li>내용6</li>
+            <li>내용7</li>
+        </ul>
+    </body>
+</html>

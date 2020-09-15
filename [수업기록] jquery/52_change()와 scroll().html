@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script>
+            $(function () {
+                $("#sel").change(function () {
+                    $("#txt").text($(this).val())
+                    $("#txt2").text(location.href)
+                })
+            })
+            $(window).scroll(function () {
+                $("#txt3")
+                    .css({
+                        position: "fixed",
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        background: "black",
+                        color: "white",
+                    })
+                    .html($(this).scrollTop())
+            })
+        </script>
+        <style>
+            body {
+                padding-bottom: 2000px;
+            }
+            #txt3 {
+                position: absolute;
+                bottom: 50px;
+                left: 0;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>change()</h1>
+        <select id="sel">
+            <option>사이트 선택</option>
+            <option value="www.naver.com">네이버</option>
+            <option value="www.nate.com">네이트</option>
+        </select>
+        <p id="txt"></p>
+        <p id="txt2"></p>
+        <h1>스크롤 scroll()이벤트</h1>
+        <p id="txt3"></p>
+    </script>
+    </body>
+</html>

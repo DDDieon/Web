@@ -1,0 +1,34 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Raleway:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Russo+One&display=swap'); */
+
+/*title : font-family: 'Russo One', sans-serif;
+ 소제목용 : font-family: 'Raleway', sans-serif;
+ 본문용 : font-family: 'Nanum Gothic', sans-serif; */
+
+body {
+    font-size: 14px;
+    position: relative;
+    width: 100%;
+    font-weight: 400;
+    height: auto;
+    line-height: 1.4;
+}
+
+a {
+    color: inherit;
+}
+
+a,
+a:link {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:hover,
+a:active {
+    color: inherit;
+    text-decoration: none;
+}

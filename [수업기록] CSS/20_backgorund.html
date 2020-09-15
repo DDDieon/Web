@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+        
+        ul,
+        li {
+            list-style: none;
+        }
+        
+        div {
+            width: 200px;
+            height: 200px;
+            border: 10px double red;
+            background-image: url("card4.jpeg");
+            background-size: 100% 100%;
+        }
+        
+        div {
+            background-origin: border-box;
+            background-clip: border-box;
+            padding: 10px;
+        }
+        
+        div:hover {
+            background-origin: padding-box;
+            background-clip: padding-box;
+        }
+        
+        div:active {
+            background-origin: content-box;
+            background-clip: content-box;
+            background-position: left top;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>배경 속성</h1>
+    <div>
+
+    </div>
+</body>
+
+</html>

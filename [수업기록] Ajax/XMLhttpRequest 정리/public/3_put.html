@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="get">GET</button>
+    <button id="post">POST</button>
+    <button id="put">PUT</button>
+    <button id="delete">DELETE</button>
+    <h1>input</h1>
+    <input id="name" />
+    <input id="price" />
+    <h1>output</h1>
+    <textarea id="output" disabled="disabled" cols="70" rows="25"></textarea>
+</body>
+<script>
+    window.onload = function () {
+        // XMLHttpRequest 객체를 생성하는 함수  20-24
+        function createRequest() {
+            return new XMLHttpRequest();
+        }
+        document.getElementById('get').onclick = function () {
+            // Ajax를 수행합니다.
+            var request = createRequest();
+            request.open('GET', '/products', false);
+            request.send();
+            // 출력합니다.
+            document.getElementById('output').value = request.responseText;
+        };
+        document.getElementById('post').onclick = function () {
+            // 변수를 선언합니다.
+            var name = document.getElementById('name').value;
+            var price = document.getElementById('price').value;
+            // Ajax를 수행합니다.
+            var request = createRequest();
+            request.open('POST', '/products', false);
+            request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            request.send('name=' + name + '&price=' + price);
+            // 출력합니다.
+            document.getElementById('output').value = request.responseText;
+        };
+        document.getElementById('put').onclick = function () {
+            // 변수를 선언합니다.
+            var name = document.getElementById('name').value;
+            var price = document.getElementById('price').value;
+            // Ajax를 수행합니다.
+            var request = createRequest();
+            // products의 토큰에 따라서 n번째 데이터를 수정합니다
+            request.open('PUT', '/products/0', false);
+            request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            request.send('name=' + name + '&price=' + price);
+            // 출력합니다.
+            document.getElementById('output').value = request.responseText;
+        };
+    };
+</script>
+
+
+</html>

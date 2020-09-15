@@ -1,0 +1,252 @@
+#section_article {
+    padding-bottom: 100px !important;
+}
+
+#main_header {
+    height: 45px;
+    background: url(icon/for_repeat.png);
+    position: relative;
+    text-align: center;
+    line-height: 45px;
+}
+
+#main_header>h1 {
+    color: white;
+}
+
+a.left,
+label.right {
+    display: block;
+    height: 32px;
+    position: absolute;
+}
+
+a.left {
+    width: 62px;
+    left: 5px;
+    top: 7px;
+    background: url(icon/icon_button.png);
+    background-position: 0 0;
+    text-indent: -9999px;
+}
+
+label.right {
+    width: 32px;
+    right: 5px;
+    top: 7px;
+    background: url(icon/icon_sprite.png);
+    background-position: 0 0;
+    text-indent: -9999px;
+}
+
+#toggle {
+    display: none;
+}
+
+#toggle+#wrap>#toggle_gnb_wrap {
+    display: none;
+}
+
+#toggle:checked+#wrap>#toggle_gnb_wrap {
+    display: block;
+}
+
+
+/* 토글 디자인
+플렉스가 편해서 ul을 두개 만들어서 배치했음 */
+
+#toggle_gnb_wrap {
+    background: ivory;
+}
+
+#toggle_gnb {
+    background: ivory;
+}
+
+#toggle_gnb>ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+#toggle_gnb>ul>li>a {
+    display: block;
+    padding: 15px;
+}
+
+
+/*top_gnb 배치*/
+
+#top_gnb {
+    border-bottom: 1px solid black;
+    background-color: darkred;
+    display: flex;
+}
+
+#top_gnb>div {
+    flex: 1;
+    /* width를 주지 않아도 너비를 알아서 정해주는 flex:1 */
+}
+
+#top_gnb>div>a {
+    display: block;
+    margin: auto;
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+}
+
+#bottom_gnb {
+    display: flex;
+    justify-content: space-around;
+}
+
+#bottom_gnb>div {
+    position: relative;
+    flex: 1;
+}
+
+#bottom_gnb>div>a {
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding: 8px 0;
+    border-bottom: 1px solid black;
+    /* border-right: 2px solid darkred; */
+}
+
+
+/* 버튼에 외곽선 "가상요소"로 만들기 */
+
+#bottom_gnb>div>a::after {
+    position: absolute;
+    left: -5px;
+    content: '';
+    height: 15px;
+    width: 3px;
+    border-right: 2px solid darkred;
+    z-index: 1;
+}
+
+#section_header {
+    padding: 20px;
+}
+
+#section_article {
+    padding: 20px;
+    text-align: justify;
+}
+
+#main_footer {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    text-align: center;
+    border-top: 3px solid black;
+    color: white;
+    background: black;
+}
+
+#section_article p::first-letter {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+@media screen and (orientation:portrait) {
+    html {
+        background: cyan;
+    }
+}
+
+@media screen and (orientation:landscape) {
+    html {
+        background: orange;
+    }
+}
+
+
+/* Button누르면 나오는 Panel 디자인 1. 오버레이*/
+
+
+/* 
+#panel {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+z-index: 1;
+color: white;
+position: absolute;
+lefT: 0;
+top: 50px;
+background: darkred;
+border: 5px solid darkred;
+box-shadow: 3px 3px black;
+border-radius: 0 0 20px 20px;
+transition: 0.5s;
+height: 400px;
+width: 0;
+overflow: hidden;
+}
+
+#panel>h1 {
+margin-bottom: 16px;
+}
+
+#panel>a {
+display: block;
+font-weight: bold;
+color: black;
+background: white;
+border-radius: 15px;
+padding: 5px 16px;
+}
+
+#panel:target {
+width: 600px;
+} */
+
+#body {
+    overflow: hidden;
+}
+
+#wrap {
+    width: 100%;
+    float: left;
+}
+
+#panel {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    color: white;
+    background: darkred;
+    border: 5px solid darkred;
+    box-shadow: 3px 3px black;
+    border-radius: 0 0 20px 20px;
+    transition: 0.5s;
+    height: 400px;
+    margin-left: -400px;
+    padding: 20px;
+}
+
+#panel>h1 {
+    margin-bottom: 16px;
+}
+
+#panel>a {
+    display: block;
+    font-weight: bold;
+    color: black;
+    background: white;
+    border-radius: 15px;
+    padding: 5px 16px;
+}
+
+#panel:target {
+    margin-left: 0;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="이미지변경" onclick="changeImage()">
+    <input type="button" value="이미지변경2" id="a">
+    <input type="button" value="이미지숨김" onclick="hide()">
+    <input type="button" value="이미지숨김/표시 토글" id="b">
+    <input type="button" value="이미지표시" onclick="show()">
+    <input type="button" value="글자내용변경" onclick="set('환영합니다')">
+    <input type="button" value="글자스타일변경" onclick="changeStyle()"><br>
+    <img src="/img/img1.jpg" alt="image" id="image">
+    <h1 id="h1">welcome to my world</h1>
+    <script>
+        function hide() {
+            document.getElementById('image').style.visibility = "hidden";
+        }
+
+        function show() {
+            document.getElementById('image').style.visibility = "visible";
+        }
+
+        function set(text) {
+            document.getElementById('h1').innerHTML = text
+        }
+
+        function changeStyle() {
+            document.getElementById('h1').style.background = 'yellow';
+        }
+
+        //토글기능 1. 변수를 0->1->0으로 초기화하기
+
+        var i = 0;
+
+        function changeImage() {
+            if (i == 0) {
+                var img = document.getElementById('image');
+                img.src = "/img/img2.jpg"
+                img.style.width = "350px"
+                img.border = "3";
+                img.style.border = "3px solid red";
+                i++;
+            } else {
+                image.src = "/img/img1.jpg";
+                i = 0;
+            }
+        }
+
+        // 토글기능 2. 변수(클릭된 횟수)가 계속 늘어난다
+
+        var a = document.getElementById("a");
+        var img = document.getElementById("image");
+        var j = 0;
+        a.onclick = function() {
+            if (j % 2 == 0) {
+                img.src = "/img/img2.jpg";
+            } else {
+                img.src = "/img/img1.jpg";
+            }
+            j++;
+        }
+
+        // ------------------이미지 숨김/표시 토글-----------------
+        var b = document.getElementById('b');
+        var q = 0;
+        b.onclick = function() {
+            if (q == 0) {
+                document.getElementById('image').style.visibility = "hidden";
+                q++;
+            } else {
+                document.getElementById('image').style.visibility = "visible";
+                q = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>

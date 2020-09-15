@@ -1,0 +1,70 @@
+/* Header style*/
+
+.header {
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+}
+
+.title_box h1 {
+    font-size: 80px;
+    font-family: "Anton";
+}
+.title_box p {
+    color: rgb(126, 126, 126);
+}
+.btn_box {
+    background: white;
+    padding: 10px 30px;
+    border: 2px solid #bbb;
+    border-radius: 12px;
+    height: 50px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    margin-left: 50px;
+}
+
+/* NAV style*/
+
+.nav_bar {
+    background: white;
+    font-size: 18px;
+    color: rgb(34, 36, 43);
+}
+.nav_bar ul {
+    overflow: hidden;
+}
+.nav_bar ul li {
+    float: left;
+    border-right: 1px solid #ccc;
+    margin: 10px 5px;
+    padding-right: 10px;
+}
+
+.nav_bar ul li a {
+    display: block;
+    color: rgb(48, 48, 48);
+    text-decoration: none;
+    padding: 0 12px;
+}
+
+.nav_bar ul li a:hover {
+    background: rgb(236, 235, 235);
+    border-radius: 5px;
+}
+
+/* Content style*/
+.contents ul {
+    display: flex;
+    justify-content: center;
+}
+.contents li {
+    margin: 0 auto;
+}
+.contents img {
+    width: 820px;
+}

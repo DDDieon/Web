@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Navigator</title>
+    <script>
+        // navigator 객체의 속성을 출력합니다.
+        var output = '';
+        output += 'appCodeName: ' + navigator.appCodeName + '<br>';
+        output += 'appName: ' + navigator.appName + '<br>';
+        output += 'appVersion: ' + navigator.appVersion + '<br>';
+        output += 'platform: ' + navigator.platform + '<br>';
+        output += 'userAgent: ' + navigator.userAgent;
+        document.write(output);
+        // iOS와 안드로이드의 웹 브라우저를 구분합니다.
+        if (navigator.userAgent.toLowerCase().indexOf('iphone') >= 0 ||
+            navigator.userAgent.toLowerCase().indexOf('ipad') >= 0 ||
+            navigator.userAgent.toLowerCase().indexOf('ipod') >= 0 ||
+            navigator.userAgent.toLowerCase().indexOf('android') >= 0) {
+            console.log('모바일 웹 브라우저입니다.');
+        } else {
+            console.log('데스크톱 웹 브라우저입니다.');
+            location.href = "http://m.daum.net"; // 기기에 맞게 리다이렉션
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+</html>

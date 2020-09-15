@@ -1,0 +1,89 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>03_get_json</title>
+	<style>
+		* {
+			margin: 20px;
+		}
+
+		h2 {
+			color: red;
+		}
+
+		#fruits_data tbody .head {
+			font-size: 20px;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script>
+		$.get('data/data.json', function (data) {
+			console.log(data);
+			var fruits = data.fruits; //data에서 fruits의 속성을 쓸거임
+			var table = $('#fruits_data');
+			for (var i in fruits) { // fruits는 총 4개라서 뺑뱅이
+				var cnt = 0;
+				var row_cnt = table.find('tr').eq(parseInt(i) + 1) //tr에서 2번째부터 카운트 셀거임
+				row_cnt.find('td').text(parseInt(i) + 1) //첫번째 td는 순번칸이니까 text 채운다
+
+				for (var prop in fruits[i]) { // fruits의 속성들을 뺑뺑이
+					var text = fruits[i][prop];
+					var tr = table.find('tr').eq(parseInt(i) + 1); // tr은 2행부터 넣을 것임 (첫행은 이미 .head에 써있음)
+					var td = tr.find('> td').eq(cnt + 1); //td은 2행부터 넣기
+					td.text(text);
+					cnt++;
+				}
+			}
+		}, 'json');
+	</script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<h2>각 영역에 맞는 값을 추가시켜 주세요.</h2>
+		<table id="fruits_data" border="1" cellpadding="10" cellspacing="0">
+			<tbody>
+				<tr class="head">
+					<td>순번</td>
+					<td>과일이름</td>
+					<td>가격</td>
+					<td>유통기한</td>
+					<td>원산지</td>
+				</tr>
+				<tr>
+					<td>순번</td>
+					<td>사과</td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td>순번</td>
+					<td>딸기</td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td>순번</td>
+					<td>귤</td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td>순번</td>
+					<td>파인애플</td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+
+</html>

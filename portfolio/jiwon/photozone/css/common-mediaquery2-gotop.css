@@ -1,0 +1,98 @@
+/* Tablet Device */
+@media all and (min-width: 768px) and (max-width: 1259px) {
+  .main-headline {
+    height: 193px !important;
+  }
+  .main-headline h2 {
+    font-size: 60px;
+  }
+  .main-headline .headlineDesc {
+    font-size: 16px;
+  }
+  a.goProject {
+    width: 145px !important;
+    height: auto !important;
+  }
+  .contents .images {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 610px;
+  }
+  .contents .images-list.imgW2 {
+    width: 300px;
+  }
+  .contents__bgColor {
+    height: 500px !important;
+  }
+}
+
+@media all and (min-width: 1260px) {
+  html,
+  body {
+    font-size: 16px;
+    overflow: auto !important;
+  }
+  header {
+    height: 180px !important;
+  }
+  header div.header-wrap {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+  div.wrap .mobile-header {
+    display: none;
+  }
+  div.wrap .over {
+    display: none;
+  }
+  div.wrap .desktop-header {
+    display: flex;
+  }
+  .main-headline {
+    height: 485px !important;
+  }
+  .main-headline h2 {
+    font-size: 120px;
+  }
+  .main-headline .headlineDesc {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .main-headline--back {
+    height: 485px !important;
+  }
+  .main a.goProject {
+    width: 211px !important;
+    height: auto !important;
+  }
+  .contents {
+    margin-bottom: 120px;
+  }
+  .contents__bgColor {
+    display: none;
+  }
+  .contents__desc {
+    width: 550px;
+  }
+  .contents__desc th {
+    font-size: 16px !important;
+  }
+  .contents__desc td {
+    font-size: 22px !important;
+  }
+  .footer {
+    background: #fff;
+    padding: 45px 0;
+    color: #000;
+  }
+  .footer address .publisher {
+    font-size: 27px;
+  }
+  .footer address .address-github {
+    display: block;
+  }
+  .footer address .address-github .fa-github-alt:before {
+    font-size: 50px !important;
+  }
+}

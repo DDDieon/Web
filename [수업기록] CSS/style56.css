@@ -1,0 +1,57 @@
+/* 원형메뉴 만들기 */
+
+ul.menu {
+    width: 500px;
+    height: 400px;
+    padding: 50px 0;
+    position: relative;
+    border-radius: 250px;
+    background: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+}
+
+ul.menu li {
+    font-size: 40px;
+    line-height: 66px;
+    text-align: center;
+}
+
+ul.menu li a {
+    display: block;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    transform: scale(0.8);
+}
+
+ul.menu {
+    transition: 0.5s;
+}
+
+ul.menu:hover {
+    background: lightgray;
+}
+
+ul.menu li:hover a {
+    transform: scale(1);
+    color: white;
+    background: orange;
+}
+
+@media screen and (max-width:500px) {
+    body {
+        zoom: 1
+    }
+}
+
+@media screen and (min-width:501) {
+    body {
+        zoom: 2
+    }
+}
+
+@media screen and (min-width:800px) {
+    body {
+        zoom: 3
+    }
+}

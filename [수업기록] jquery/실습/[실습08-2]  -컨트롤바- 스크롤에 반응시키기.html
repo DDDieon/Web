@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <style>
+            section {
+                width: 50px;
+                position: absolute;
+                right: 20px;
+                top: 300px;
+            }
+            section div {
+                position: relative;
+            }
+            a {
+                text-decoration: none;
+                color: coral;
+            }
+            .hover2 {
+                display: none;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            .control {
+                position: fixed;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="height: 800px; border: 1px solid red;">hover 응용</h1>
+        <h1 style="height: 800px; border: 1px solid red;">hover 응용</h1>
+        <h1 style="height: 800px; border: 1px solid red;">hover 응용</h1>
+        <h1 style="height: 800px; border: 1px solid red;">hover 응용</h1>
+        <h1 style="height: 800px; border: 1px solid red;">hover 응용</h1>
+        <section>
+            <div class="control">
+                <div class="btn"><a href="#">○</a></div>
+                <!-- 나중에 하나하나의 좌표를 가져와서 검은공을 이동시킨다 -->
+                <div class="btn"><a href="#">○</a></div>
+                <div class="btn"><a href="#">○</a></div>
+                <div class="btn"><a href="#">○</a></div>
+                <div class="btn"><a href="#">○</a></div>
+                <div class="hover2"><a href="#">●</a></div>
+            </div>
+        </section>
+    </body>
+    <script>
+        $(".btn").click(function () {
+            event.preventDefault()
+            var x = $(this).position().left
+            var y = $(this).position().top
+            var i = $(this).index()
+            console.log("f")
+            $(".hover2").show().stop().animate({
+                left: x,
+                top: y,
+            }) // 따라다니는 검은공----------------------
+            var HT = $("h1").eq(i).offset().top
+            $("html, body").stop().animate({
+                scrollTop: HT,
+            }) // 클릭한 li의 index대로 움직이는 화면
+        })
+
+        $(window).scroll(function () {
+            var sct = $(this).scrollTop()
+            $("h1").each(function () {
+                var i = $(this).index() //i는 h1의 인덱스들
+                var h1a = $(this).offset().top //h1a는 h1의 위치값들
+                console.log(h1a)
+                console.log("여기 밑으로 sct")
+                console.log(sct)
+                if (sct + 800 >= h1a) {
+                    //화면이 일정한 위치일 때
+                    var x2 = $(".btn").eq(i).position().left
+                    var y2 = $(".btn").eq(i).position().top
+                    $(".hover2").show().stop().animate({
+                        left: x2,
+                        top: y2,
+                    })
+                }
+            })
+            // if (sct > h1.eq(0).offset().top) {
+            //         //화면이 일정한 위치일 때
+            //         var x2 = $(".btn").eq(0).position().left
+            //         var y2 = $(".btn").eq(0).position().top
+            //         $(".hover2").show().stop().animate({
+            //             left: x2,
+            //             top: y2,
+            //         })
+            //     }
+            // 해당 작업을 each에 돌린 것이다
+        })
+    </script>
+</html>

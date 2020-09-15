@@ -1,0 +1,111 @@
+body {
+  position: relative;
+}
+
+.top_layout {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  height: 73px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+.top_layout .logobox {
+  background: url("/assets/img/cnuh_logo.png") no-repeat center center;
+  background-size: 100%;
+  width: 248px;
+  box-shadow: none;
+  text-indent: -9999px;
+}
+.top_layout .assets {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  box-shadow: none;
+}
+.top_layout .assets i {
+  display: block;
+  margin: 0 12px;
+}
+
+.mobile_gnb {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  z-index: 1;
+  width: 320px;
+  height: 100vh;
+}
+.mobile_gnb .mobile_utile_menu {
+  background: "#1c92eb";
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  height: 50px;
+  font-size: 14px;
+}
+.mobile_gnb .mobile_utile_menu ul {
+  height: 50px;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+.mobile_gnb .mobile_utile_menu ul li {
+  margin: 0 10px;
+  position: relative;
+}
+.mobile_gnb .mobile_utile_menu ul li:after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 1px;
+  height: 20px;
+  width: 1px;
+  background: #72bef8;
+}
+.mobile_gnb .mobile_utile_menu ul li a {
+  box-sizing: border-box;
+  display: block;
+}
+.mobile_gnb .mobile_utile_menu dl {
+  height: 50px;
+  font-size: 22px;
+  background: "#0b68af";
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+.mobile_gnb .mobile_utile_menu dl dt,
+.mobile_gnb .mobile_utile_menu dl a,
+.mobile_gnb .mobile_utile_menu dl i {
+  display: block;
+}
+.mobile_gnb .mobile_utile_menu dl i {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  width: 50px;
+}
+.mobile_gnb .mobile_menu_accordion ul {
+  background: white;
+}
+.mobile_gnb .mobile_menu_accordion ul li a {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 58px;
+}
+
+#top_wraper .top_popup img {
+  display: block;
+  width: 100%;
+}
