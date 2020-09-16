@@ -518,7 +518,7 @@ nav .nav_list ul li:hover {
 }
 #Ability-Wrap .ability-container .ability-caption strong {
   display: block;
-  background: #ffd900;
+  background: #f3f3f3c5;
   padding: 10px;
 }
 #Ability-Wrap .ability-container .ability-caption strong .relative-percent {
