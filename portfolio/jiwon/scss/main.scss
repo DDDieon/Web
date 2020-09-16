@@ -328,6 +328,7 @@ nav {
                     position: relative;
                     padding: 0 5px;
                     outline: none;
+
                     &::after {
                         content: "";
                         position: absolute;
@@ -413,6 +414,7 @@ nav {
     }
 
     div.project {
+
         // project images url here-------
         &:nth-of-type(1) {
             .project-img {
@@ -496,29 +498,23 @@ nav {
                         border: 2px solid #000;
 
                         &:nth-of-type(1) {
-                            background: linear-gradient(
-                                    180deg,
+                            background: linear-gradient(180deg,
                                     #d4e572 0%,
-                                    rgba(255, 255, 255, 0) 100%
-                                ),
+                                    rgba(255, 255, 255, 0) 100%),
                                 #61c751;
                         }
 
                         &:nth-of-type(2) {
-                            background: linear-gradient(
-                                    180deg,
+                            background: linear-gradient(180deg,
                                     #fda797 0%,
-                                    rgba(255, 255, 255, 0) 100%
-                                ),
+                                    rgba(255, 255, 255, 0) 100%),
                                 #fd7b88;
                         }
 
                         &:nth-of-type(3) {
-                            background: linear-gradient(
-                                    180deg,
+                            background: linear-gradient(180deg,
                                     rgba(255, 255, 255, 0) 0%,
-                                    #2f82ec 100%
-                                ),
+                                    #2f82ec 100%),
                                 #00d2ff;
                         }
                     }
@@ -732,6 +728,7 @@ nav {
                 }
 
                 &.onDetail {
+
                     .ability-spec__number--count,
                     .ability-design__number--count {
                         font-size: 24px !important;
@@ -859,7 +856,7 @@ nav {
         justify-content: center;
         background: transparent;
 
-        .profile-img:hover ~ .profile-words {
+        .profile-img:hover~.profile-words {
             opacity: 0;
         }
 
@@ -905,7 +902,7 @@ nav {
             cursor: pointer;
             transition: 0.2s;
 
-            > p {
+            >p {
                 cursor: pointer;
                 line-height: 1.25;
             }
@@ -943,7 +940,7 @@ nav {
         border-radius: 10px;
         width: 665px;
 
-        > p {
+        >p {
             margin: 10px;
             margin-top: 30px;
             flex: 1;

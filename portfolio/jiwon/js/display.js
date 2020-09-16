@@ -19,8 +19,7 @@ $(function () {
         var sectionTT = $("section").eq(i).offset().top - 50 //sectioin들의 y좌표
         $("html, body")
             .stop()
-            .animate(
-                {
+            .animate({
                     scrollTop: sectionTT,
                 },
                 function () {
@@ -75,23 +74,20 @@ $(function () {
 $.fn.drawRound = function (much) {
     $(this)
         .stop()
-        .animate(
-            {
-                "stroke-dashoffset": 440 - (440 * much) / 100,
-            },
-            {
-                duration: 1000,
-            }
-        )
+        .animate({
+            "stroke-dashoffset": 440 - (440 * much) / 100,
+        }, {
+            duration: 1000,
+        })
 }
 $(function () {
     $(window).scroll(function () {
         if ($(window).scrollTop() > $("#Ability").offset().top - 550) {
             $(".ability-spec").eq(0).find("svg circle").eq(1).drawRound(100)
-            $(".ability-spec").eq(1).find("svg circle").eq(1).drawRound(70)
-            $(".ability-spec").eq(2).find("svg circle").eq(1).drawRound(65)
-            $(".ability-spec").eq(3).find("svg circle").eq(1).drawRound(40)
-            $(".ability-spec").eq(4).find("svg circle").eq(1).drawRound(10)
+            $(".ability-spec").eq(1).find("svg circle").eq(1).drawRound(80)
+            $(".ability-spec").eq(2).find("svg circle").eq(1).drawRound(70)
+            $(".ability-spec").eq(3).find("svg circle").eq(1).drawRound(55)
+            $(".ability-spec").eq(4).find("svg circle").eq(1).drawRound(40)
             $(".ability-design").eq(0).find("svg circle").eq(1).drawRound(100)
             $(".ability-design").eq(1).find("svg circle").eq(1).drawRound(80)
             $(".ability-design").eq(2).find("svg circle").eq(1).drawRound(70)
