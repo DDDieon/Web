@@ -176,8 +176,7 @@ header {
                     &.item1 {
                         width: $mobile-WidthFull;
                         height: $mobile-WidthFull;
-                        background: url("/photozone/assets/image/de-1.png") no-repeat center center;
-                        background-size: 180%;
+                        background: #bbb;
                     }
                 }
             }
@@ -189,19 +188,17 @@ header {
                 a {
                     &.item2 {
                         width: $mobile-WidthFull !important;
-                        background: url("/photozone/assets/image/de-2.png") no-repeat center center;
-                        background-size: 180%;
+                        background: #222;
                     }
 
                     &.item3 {
-                        background: url("/photozone/assets/image/de-3.png") no-repeat center center;
-                        background-size: 180%;
+                        background: #222;
                     }
 
                     &.item4 {
                         width: 145px;
                         height: 145px;
-                        background: rgb(39, 39, 39);
+                        background: #ccc;
                         background-size: 180%;
                     }
                 }
@@ -213,13 +210,11 @@ header {
 
                 a {
                     &.item5 {
-                        background: url("/photozone/assets/image/de-5.png") no-repeat center center;
-                        background-size: 180%;
+                        background: #222;
                     }
 
                     &.item6 {
-                        background: url("/photozone/assets/image/de-6.png") no-repeat center center;
-                        background-size: 180%;
+                        background: rgb(221, 221, 221);
                     }
                 }
             }
@@ -232,9 +227,7 @@ header {
                     &.item7 {
                         width: $mobile-WidthFull;
                         height: 145px;
-                        background: url("/photozone/assets/image/ability.png") no-repeat center
-                            center;
-                        background-size: 100%;
+                        background: #222;
                     }
                 }
             }

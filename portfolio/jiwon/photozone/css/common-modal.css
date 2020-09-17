@@ -1,0 +1,68 @@
+.images {
+  position: relative;
+}
+
+.images-list--modal {
+  display: none;
+}
+.images-list--modal.clicked {
+  display: block;
+  position: absolute;
+  z-index: 223;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  background: #ffffffef;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  cursor: default;
+  animation: modalOn 0.5s ease-in-out;
+}
+.images-list--modal.clicked h3 {
+  width: 100%;
+  font-size: 22px;
+  letter-spacing: -2px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+.images-list--modal.clicked p {
+  padding: 0 20px;
+  word-break: keep-all;
+  padding-bottom: 20px;
+}
+.images-list--modal.clicked img {
+  width: 100%;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+}
+@keyframes modalOn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.images-list--overlay {
+  display: none;
+}
+.images-list--overlay.overlayed {
+  display: block;
+  position: fixed;
+  background: rgba(41, 41, 41, 0.671);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 222;
+}
+
+@media all and (min-width: 768px) {
+  .images-list--modal.clicked h3 {
+    font-size: 35px;
+    padding-top: 40px;
+  }
+}

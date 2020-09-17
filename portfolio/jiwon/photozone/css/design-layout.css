@@ -14,6 +14,7 @@ body {
 .wrap {
   letter-spacing: -0.05em;
 }
+
 .wrap .desktop-header {
   display: none;
 }
@@ -21,9 +22,11 @@ body {
 header {
   height: 105px;
 }
+
 header .header-wrap {
   padding-top: 35px;
 }
+
 header .mobile-header {
   position: relative;
   display: flex;
@@ -31,24 +34,29 @@ header .mobile-header {
   align-items: center;
   padding: 0 30px;
 }
+
 header .mobile-header .logo {
   width: 70px;
   height: 35px;
 }
+
 header .mobile-header .logo img {
   display: block;
   margin: 0 auto;
   width: 75%;
 }
+
 header .mobile-header .hamburger img {
   display: block;
   width: 35px;
   height: 35px;
 }
+
 header .over {
   width: 100%;
   height: 100vh;
 }
+
 header .mobile-drawer {
   display: none;
   position: absolute;
@@ -61,42 +69,51 @@ header .mobile-drawer {
   box-shadow: -4px 4px 20px rgba(0, 0, 0, 0.25);
   z-index: 11111;
 }
+
 header .mobile-drawer .closeIcon {
   position: absolute;
   right: 30px;
   top: 35px;
 }
+
 header .mobile-drawer .mobile-gnb {
   position: absolute;
   right: 30px;
   top: 170px;
   text-align: right;
 }
+
 header .desktop-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 100px;
 }
+
 header .desktop-header .logo {
   width: 100px;
 }
+
 header .desktop-header .logo img {
   display: block;
   width: 100%;
   height: 100%;
 }
+
 header .desktop-header .desktop-nav {
   display: flex;
 }
+
 header .desktop-header .desktop-nav--list {
   font-family: "Russo One", sans-serif;
   font-size: 27px;
   margin-left: 118px;
 }
+
 header .desktop-header .desktop-nav .pointerLine {
   position: relative;
 }
+
 header .desktop-header .desktop-nav .pointerLine::after {
   position: absolute;
   display: block;
@@ -114,6 +131,7 @@ header .desktop-header .desktop-nav .pointerLine::after {
 .contents {
   width: 100%;
 }
+
 .contents .images {
   width: 300px;
   display: flex;
@@ -123,72 +141,88 @@ header .desktop-header .desktop-nav .pointerLine::after {
   margin: 0 auto;
   padding-bottom: 40px;
 }
+
 .contents .images-list a.marginLeft {
   margin-left: 10px;
 }
+
 .contents .images-list a {
   margin-bottom: 10px;
 }
+
 .contents .images-list a.items {
   display: block;
   width: 145px;
   height: 145px;
   border-radius: 12px;
 }
+
 .contents .images-list.imgW1 a.item1 {
   width: 300px;
   height: 300px;
   background: url("/photozone/assets/image/de-1.png") no-repeat center center;
   background-size: 180%;
 }
+
 .contents .images-list.imgW2 {
   display: flex;
   flex-wrap: wrap;
 }
+
 .contents .images-list.imgW2 a.item2 {
   width: 300px !important;
   background: url("/photozone/assets/image/de-2.png") no-repeat center center;
   background-size: 180%;
 }
+
 .contents .images-list.imgW2 a.item3 {
   background: url("/photozone/assets/image/de-3.png") no-repeat center center;
   background-size: 180%;
 }
+
 .contents .images-list.imgW2 a.item4 {
   width: 145px;
   height: 145px;
-  background: #272727;
+  background: url("/photozone/assets/image/de-4.png") no-repeat center center;
   background-size: 180%;
 }
+
 .contents .images-list.imgW3 {
   display: flex;
   flex-wrap: wrap;
 }
+
 .contents .images-list.imgW3 a.item5 {
   background: url("/photozone/assets/image/de-5.png") no-repeat center center;
   background-size: 180%;
 }
+
 .contents .images-list.imgW3 a.item6 {
   background: url("/photozone/assets/image/de-6.png") no-repeat center center;
   background-size: 180%;
 }
+
 .contents .images-list.imgW4 {
   display: flex;
   flex-wrap: wrap;
 }
+
 .contents .images-list.imgW4 a.item7 {
   width: 300px;
   height: 145px;
   background: url("/photozone/assets/image/ability.png") no-repeat center center;
   background-size: 100%;
 }
+
 .contents .images-list.imgW5 {
   display: flex;
   flex-wrap: wrap;
 }
+
 .contents .images-list.imgW5 a.item8 {
   background: #dddddd;
 }
+
 .contents .images-list.imgW5 a.item9 {
   background: #222;
 }

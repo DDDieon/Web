@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>배경색 변경</h2>
+    <button onclick="내부함수에서순서를올리기위한변수()">click1</button>
+    <button>click2</button>
+    <button>click3</button>
+    <h1>welcome to my world</h1>
+    <h1>welcome to my world</h1>
+    <h1>welcome to my world</h1>
+</body>
+<script>
+    const btn1 = document.getElementsByTagName('button')[0]
+    const btn2 = document.getElementsByTagName('button')[1]
+    const btn3 = document.getElementsByTagName('button')[2]
+    const h1a = document.getElementsByTagName('h1')[0]
+    const h1b = document.getElementsByTagName('h1')[1]
+    const h1c = document.getElementsByTagName('h1')[2]
+
+    // 클로저는 내부함수를 리턴한다
+    const changeBg = (obj) => {
+        const color = ['red', 'blue', 'green']
+        let 순서 = 0
+        function inner(obj){
+        obj.style.background= color[순서]
+        순서++
+        console.log(순서)
+        }
+        // i가 증가하는 함수를 리턴하였더니 호출할때마다 i가 늘어남
+        return inner
+    }
+    
+    var 색상바꾸기 = changeBg(h1a)
+    
+    색상바꾸기(h1a)
+    // 처음에는 color[i]=0
+    색상바꾸기(h1b)
+    // 처음에는 color[i]=1
+    색상바꾸기(h1c)
+    // 처음에는 color[i]=2
+    
+    // ------------------------ 응용으로 버튼토글 해보자. 전역변수를 사용하지 않고 내부함수만으로 토글하기 --------------------------
+    
+    const changeBg2 = function(){
+        let 순서2 = 0
+        function inner2(){
+            var h1 = document.querySelector('h1')
+            // changeBg2()()로 실행되면 순서2가 초기화가 안됨
+            순서2++
+            if(순서2 % 2 == 0){
+            h1.style.background = 'gold'
+            } else {
+                h1.style.background = 'blue'
+            }
+        }
+        return inner2
+    }
+    const 내부함수에서순서를올리기위한변수 = changeBg2()
+    
+</script>
+</html>

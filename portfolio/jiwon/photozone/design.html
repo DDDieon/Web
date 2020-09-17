@@ -1,143 +1,167 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>전지원의 포토존입니다</title>
-        <link rel="stylesheet" href="/photozone/css/reset.css" />
-        <link rel="stylesheet" href="/photozone/css/design-layout.css" />
-        <link rel="stylesheet" href="/photozone/css/common-detail.css" />
-        <link rel="stylesheet" href="/photozone/css/common-mediaquery.css" />
-        <link rel="stylesheet" href="/photozone/css/common-panel-menu.css" />
-        <!-- font awesome svg -->
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-        />
-        <!-- script tag -->
-        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="/photozone/js/photozone-display.js"></script>
-    </head>
 
-    <body>
-        <div class="wrap">
-            <header>
-                <div class="header-wrap">
-                    <div class="mobile-header">
-                        <h1 class="logo">
-                            <a href="/photozone/design.html"
-                                ><img
-                                    src="/photozone/assets/image/jwlogo.png"
-                                    src="/photozone/assets/image/jwIcon.png"
-                                    alt="모바일 로고입니다"
-                            /></a>
-                        </h1>
-                        <button type="button" class="hamburger">
-                            <img
-                                src="/photozone/assets/image/hamburger.png"
-                                alt="모바일 메뉴 열기"
-                            />
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>전지원의 포토존입니다</title>
+    <link rel="stylesheet" href="/photozone/css/reset.css" />
+    <link rel="stylesheet" href="/photozone/css/design-layout.css" />
+    <link rel="stylesheet" href="/photozone/css/common-detail.css" />
+    <link rel="stylesheet" href="/photozone/css/common-mediaquery.css" />
+    <link rel="stylesheet" href="/photozone/css/common-panel-menu.css" />
+    <link rel="stylesheet" href="/photozone/css/common-modal.css">
+    <!-- font awesome svg -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <!-- script tag -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/photozone/js/photozone-display.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="header-wrap">
+                <div class="mobile-header">
+                    <h1 class="logo">
+                        <a href="/photozone/design.html"><img src="/photozone/assets/image/jwlogo.png"
+                                src="/photozone/assets/image/jwIcon.png" alt="모바일 로고입니다" /></a>
+                    </h1>
+                    <button type="button" class="hamburger">
+                        <img src="/photozone/assets/image/hamburger.png" alt="모바일 메뉴 열기" />
+                    </button>
+                </div>
+                <div class="over">
+                    <nav class="mobile-drawer">
+                        <!-- right = 0 일때 gnb show -->
+                        <button type="button" class="closeIcon">
+                            <img src="/photozone/assets/image/close.png" alt="모바일 메뉴 닫기" />
                         </button>
-                    </div>
-                    <div class="over">
-                        <nav class="mobile-drawer">
-                            <!-- right = 0 일때 gnb show -->
-                            <button type="button" class="closeIcon">
-                                <img
-                                    src="/photozone/assets/image/close.png"
-                                    alt="모바일 메뉴 닫기"
-                                />
-                            </button>
-                            <ul class="mobile-gnb">
-                                <li class="mobile-drawer--list">
-                                    <a href="/photozone/design.html">Design</a>
-                                </li>
-                                <li class="mobile-drawer--list">
-                                    <a href="/photozone/video.html">Video</a>
-                                </li>
-                                <li class="mobile-drawer--list">
-                                    <a href="/photozone/info.html">Info</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="desktop-header">
-                        <p class="logo">
-                            <a href="/photozone/design.html"
-                                ><img
-                                    src="/photozone/assets/image/jwIcon.png"
-                                    alt="데스크탑 로고입니다"
-                            /></a>
-                        </p>
-                        <ul class="desktop-nav">
-                            <li class="desktop-nav--list designDeskMenu">
+                        <ul class="mobile-gnb">
+                            <li class="mobile-drawer--list">
                                 <a href="/photozone/design.html">Design</a>
                             </li>
-                            <li class="desktop-nav--list videoDeskMenu">
+                            <li class="mobile-drawer--list">
                                 <a href="/photozone/video.html">Video</a>
                             </li>
-                            <li class="desktop-nav--list infoDeskMenu">
+                            <li class="mobile-drawer--list">
                                 <a href="/photozone/info.html">Info</a>
                             </li>
-                            <!-- url 주소를 받아와서 css로 pointcolor 변경할 예정 -->
                         </ul>
-                    </div>
+                    </nav>
                 </div>
-            </header>
-            <div class="main">
-                <div class="main-headline">
-                    <div class="main-headline--title">
-                        <h2>Design</h2>
-                        <p class="headlineDesc">
-                            안녕하세요! 전지원입니다. 저의 디자인 작업물들입니다.
-                        </p>
-                        <a class="goProject" href="/"
-                            ><img
-                                src="/photozone/assets/image/goProject.png"
-                                alt="
-                        프로젝트 사이트로 이동합니다"
-                        /></a>
-                    </div>
-                    <div class="main-headline--back">Design</div>
+                <div class="desktop-header">
+                    <p class="logo">
+                        <a href="/photozone/design.html"><img src="/photozone/assets/image/jwIcon.png"
+                                alt="데스크탑 로고입니다" /></a>
+                    </p>
+                    <ul class="desktop-nav">
+                        <li class="desktop-nav--list designDeskMenu">
+                            <a href="/photozone/design.html">Design</a>
+                        </li>
+                        <li class="desktop-nav--list videoDeskMenu">
+                            <a href="/photozone/video.html">Video</a>
+                        </li>
+                        <li class="desktop-nav--list infoDeskMenu">
+                            <a href="/photozone/info.html">Info</a>
+                        </li>
+                        <!-- url 주소를 받아와서 css로 pointcolor 변경할 예정 -->
+                    </ul>
                 </div>
             </div>
-            <div class="contents">
-                <div class="images">
-                    <div class="images-list full imgW1">
-                        <a href="javascript:void(0)" class="item1 items"></a>
-                    </div>
-                    <div class="images-list half imgW2">
-                        <a href="javascript:void(0)" class="item2 items"></a>
-                        <a href="javascript:void(0)" class="item3 items"></a>
-                        <a href="javascript:void(0)" class="item4 items marginLeft"></a>
-                    </div>
-                    <div class="images-list half imgW3">
-                        <a href="javascript:void(0)" class="item5 items"></a>
-                        <a href="javascript:void(0)" class="item6 items marginLeft"></a>
-                    </div>
-                    <div class="images-list half imgW4">
-                        <a href="javascript:void(0)" class="item7 items"></a>
-                    </div>
-                    <div class="images-list half imgW5">
-                        <a href="javascript:void(0)" class="item8 items"></a>
-                        <a href="javascript:void(0)" class="item9 items marginLeft"></a>
-                    </div>
+        </header>
+        <div class="main">
+            <div class="main-headline">
+                <div class="main-headline--title">
+                    <h2>Design</h2>
+                    <p class="headlineDesc">
+                        안녕하세요! 전지원입니다. 저의 디자인 작업물들입니다.
+                    </p>
+                    <a class="goProject" href="/"><img src="/photozone/assets/image/goProject.png" alt="
+                        프로젝트 사이트로 이동합니다" /></a>
                 </div>
-                <div class="contents__bgColor"></div>
+                <div class="main-headline--back">Design</div>
             </div>
-            <footer class="footer">
-                <address>
-                    <div class="address-text">
-                        <p class="publisher">JEON JIWON</p>
-                        <p>https://github.com/DDDieon</p>
-                    </div>
-                    <div class="address-github">
-                        <a href="https://github.com/DDDieon" target="_blank"
-                            ><i class="fab fa-github-alt"></i
-                        ></a>
-                    </div>
-                </address>
-            </footer>
         </div>
-    </body>
+        <div class="contents">
+            <div class="images">
+                <div class="images-list full imgW1">
+                    <a href="javascript:void(0)" class="item1 items" title="표지디자인">
+                        <div class="images-list--modal" title="외부를 클릭하여 닫기">
+                            <h3>표지 디자인 - 1</h3>
+                            <p>표지디자인으로 포토샵과 일러스트레이터를 사용하여 합성했습니다.</p>
+                            <img src="/photozone/assets/image/de-1.png" title="designed by Jiwon">
+                        </div>
+                        <div class="images-list--overlay"></div>
+                    </a>
+                </div>
+                <div class="images-list half imgW2">
+                    <a href="javascript:void(0)" class="item2 items">
+                        <div class="images-list--modal" title="외부를 클릭하여 닫기">
+                            <h3>표지 디자인 - 2</h3>
+                            <p>표지디자인으로 포토샵과 일러스트레이터를 사용하여 합성했습니다.</p>
+                            <img src="/photozone/assets/image/de-2.png" title="designed by Jiwon">
+                        </div>
+                        <div class="images-list--overlay"></div>
+                    </a>
+                    <a href="javascript:void(0)" class="item3 items">
+                        <div class="images-list--modal" title="외부를 클릭하여 닫기">
+                            <h3>상세페이지 디자인</h3>
+                            <p>포토샵으로 상세페이지를 만들어 보았습니다.</p>
+                            <img src="/photozone/assets/image/de-3.png" title="designed by Jiwon">
+                        </div>
+                        <div class="images-list--overlay"></div>
+                    </a>
+                    <a href="javascript:void(0)" class="item4 items marginLeft">
+                        <div class="images-list--modal" title="외부를 클릭하여 닫기">
+                            <h3>디지털 싱글 앨범 아트워크</h3>
+                            <p>마우스 드로잉(...)과 실제 수박사진을 합성해서 만들었습니다. 멜론과 지니 등에 게재되었습니다.</p>
+                            <img src="/photozone/assets/image/de-4.png" title="designed by Jiwon">
+                        </div>
+                        <div class="images-list--overlay"></div>
+                    </a>
+                </div>
+                <div class="images-list half imgW3">
+                    <a href="javascript:void(0)" class="item5 items">
+                        <div class="images-list--modal" title="외부를 클릭하여 닫기">
+                            <h3>벡터 이미지 아트워크</h3>
+                            <p>일러스트레이터의 패스를 사용해서 벡터이미지 아트워크를 만들었습니다.</p>
+                            <img src="/photozone/assets/image/de-5.png" title="designed by Jiwon">
+                        </div>
+                        <div class="images-list--overlay"></div>
+                    </a>
+                    <a href="javascript:void(0)" class="item6 items marginLeft">
+                        <div class="images-list--modal" title="외부를 클릭하여 닫기">
+                            <h3>표지 디자인 - 3</h3>
+                            <p>표지디자인으로 포토샵과 일러스트레이터를 사용하여 합성했습니다.</p>
+                            <img src="/photozone/assets/image/de-6.png" title="designed by Jiwon">
+                        </div>
+                        <div class="images-list--overlay"></div>
+                    </a>
+                </div>
+                <div class="images-list half imgW4">
+                    <a href="javascript:void(0)" class="item7 items">
+                    </a>
+                </div>
+                <div class="images-list half imgW5">
+                    <a href="javascript:void(0)" class="item8 items"></a>
+                    <a href="javascript:void(0)" class="item9 items marginLeft"></a>
+                </div>
+            </div>
+            <div class="contents__bgColor"></div>
+        </div>
+        <footer class="footer">
+            <address>
+                <div class="address-text">
+                    <p class="publisher">JEON JIWON</p>
+                    <p>https://github.com/DDDieon</p>
+                </div>
+                <div class="address-github">
+                    <a href="https://github.com/DDDieon" target="_blank"><i class="fab fa-github-alt"></i></a>
+                </div>
+            </address>
+        </footer>
+    </div>
+</body>
+
 </html>
