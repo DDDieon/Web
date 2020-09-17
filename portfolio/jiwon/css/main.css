@@ -653,6 +653,7 @@ nav .nav_list ul li:hover {
 #Ability-Wrap .ability-container .ability-detail__desc {
   color: #222;
   font-size: 14px;
+  line-height: 1.5;
 }
 #Ability-Wrap .ability-container .ability-detail__point {
   display: block;
@@ -803,6 +804,17 @@ nav .nav_list ul li:hover {
   padding: 60px 0px;
   margin-top: 50px;
   text-align: center;
+}
+#Contact-Wrap .contactDescriptions h3 {
+  font-family: "Raleway", sans-serif !important;
+  text-align: center;
+  letter-spacing: 16px;
+  font-size: 40px;
+  margin-bottom: 8px;
+  margin-bottom: 30px;
+}
+#Contact-Wrap .contactDescriptions h3 span {
+  font-weight: 700;
 }
 #Contact-Wrap .contactDescriptions .quotesImg {
   position: absolute;
