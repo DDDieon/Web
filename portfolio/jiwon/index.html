@@ -1,758 +1,923 @@
 <!DOCTYPE html>
 <html lang="ko">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jiwon / 전지원의 웹 포트폴리오</title>
+        <meta name="description" content="전지원의 포트폴리오 사이트입니다" />
+        <meta
+            name="google-site-verification"
+            content="d3WJovbOZl0e2cVAmYcpcNnwAnxAfvvCnMEMWtN5NgY"
+        />
+        <meta
+            name="google-site-verification"
+            content="d3WJovbOZl0e2cVAmYcpcNnwAnxAfvvCnMEMWtN5NgY"
+        />
+        <!-- plugin link -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="http://kenwheeler.github.io/slick/slick/slick.css"
+        />
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+        <script src="js/html5shiv/src/html5shiv.js"></script>
+        <!-- web Font -->
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Raleway:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Russo+One&display=swap"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <!-- Based CSS -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <!-- SCSS compiled -->
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/gallery.css" />
+        <!-- jsFiles -->
+        <script src="js/gallery.js" defer></script>
+        <script src="js/display.js" defer></script>
+        <script src="js/quick-menu.js" defer></script>
+        <!-- favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    </head>
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jiwon / 전지원의 웹 포트폴리오</title>
-    <meta name="description" content="전지원의 포트폴리오 사이트입니다" />
-
-    <!-- plugin link -->
-    <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick.css" />
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-    <script src="js/html5shiv/src/html5shiv.js"></script>
-    <!-- web Font -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Raleway:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Russo+One&display=swap"
-        rel="stylesheet" type="text/css" />
-    <!-- Based CSS -->
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/base.css" />
-    <!-- SCSS compiled -->
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/gallery.css" />
-    <!-- jsFiles -->
-    <script src="js/gallery.js" defer></script>
-    <script src="js/display.js" defer></script>
-    <script src="js/quick-menu.js" defer></script>
-    <!-- favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-</head>
-
-<body>
-    <nav>
-        <div class="logobox">
-            <h1><a href="javascript:void(0)">PORTFOLIO</a></h1>
-        </div>
-        <div class="nav_list">
-            <ul>
-                <li><a href="javascript:void(0)">Introduce</a></li>
-                <li><a href="javascript:void(0)">Project</a></li>
-                <li><a href="javascript:void(0)">Ability</a></li>
-                <li><a href="javascript:void(0)">Contact</a></li>
-                <li>
-                    <a class="openGallery" onclick="openGallery()">
-                        <i class="xi-ellipsis-h"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div id="gallery-body">
-            <div id="gallery-wrap">
-                <div class="gallery_header">
-                    <p><i class="xi-bookmark"></i></p>
-                    <p>
-                        <strong>Gallery</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 공부해온
-                        과정들과 디자인 포트폴리오 까지
-                    </p>
-                    <button class="gallery__close" onclick="closeGallery()">
-                        <i class="xi-close-circle-o"></i>
-                    </button>
-                </div>
-                <div class="carousel_wrap">
-                    <div id="dragdiv" class="carousel_stage">
-                        <ul>
-                            <li class="carousel_item_1">
-                                <div class="c-imgs">
-                                    <img src="/img/gallery01.jpg" alt="" />
-                                </div>
-                                <div class="c_words">
-                                    <h5>깃허브<span>Git hub</span></h5>
-                                    <p class="c_words_sub1">
-                                        2020년 07월 29일부터 커밋잔디를 심는 중!
-                                    </p>
-                                    <p class="c_words_sub2">
-                                        꾸준함을 이기는 힘은 없다고 생각합니다.<br />깃허브에는
-                                        1일 1커밋을 목표로 커밋하고 있습니다.
-                                    </p>
-                                    <p class="c_words_sub3">
-                                        <a href="javascript:void(0)" target="_blank"
-                                            rel="noreferrer noopener"><br />Visit the Site</a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="carousel_item_2">
-                                <div class="c-imgs">
-                                    <img src="/img/gallery02.jpg" alt="" />
-                                </div>
-                                <div class="c_words">
-                                    <h5>비캔버스<span>BeeCanvas</span></h5>
-                                    <p class="c_words_sub1">
-                                        지금까지 어떻게 공부를 해왔을까요?
-                                    </p>
-                                    <p class="c_words_sub2">
-                                        지식의 재사용성을 위해 국비학원에서 배운 것,<br />
-                                        혼자서 독학한 것들을 모두 차곡차곡 쌓아왔습니다.
-                                    </p>
-                                    <p class="c_words_sub3">
-                                        <a href="https://beecanvas.com/s/7aEbbrJ3be6fLzSMKJ21QmjHkrEONNHRQ8ze5dMO25TvJ1orEyjSYJxy-ZzwFuDn"
-                                            target="_blank" rel="noreferrer noopener"><br />Visit the Site</a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="carousel_item_3">
-                                <div class="c-imgs">
-                                    <img src="/img/gallery03.jpg" alt="" />
-                                </div>
-                                <div class="c_words">
-                                    <h5>이미지 아트워크들<span>Image</span></h5>
-                                    <p class="c_words_sub1">이미지 갤러리</p>
-                                    <p class="c_words_sub2">"포토샵과 일러스트레이터도 사용할 수 있습니다"를 어필하기 위한 페이지</p>
-                                    <p class="c_words_sub3">
-                                        <a href="/photozone/design.html" target="_blank"
-                                            rel="noreferrer noopener"><br />Visit the Site</a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="carousel_item_4">
-                                <div class="c-imgs">
-                                    <img src="/img/gallery04.jpg" alt="" />
-                                </div>
-                                <div class="c_words">
-                                    <h5>영상제작물<span>Video</span></h5>
-                                    <p class="c_words_sub1">
-                                        애프터이펙트, 프리미어프로 중급자 수준
-                                    </p>
-                                    <p class="c_words_sub2">
-                                        2D애니메이션이나 인포영상 등을 제작했던 경험이 있습니다.
-                                        컷편집은 물론 간단한 모션그래픽이 가능합니다. 또한
-                                        원하는 이미지소스는 직접 제작하여 사용하였습니다.
-                                    </p>
-                                    <p class="c_words_sub3">
-                                        <a href="/photozone/video.html" target="_blank"
-                                            rel="noreferrer noopener"><br />Visit the Site</a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="carousel_item_5">
-                                <div class="c-imgs">
-                                    <img src="/img/gallery05.png" alt="" />
-                                </div>
-                                <div class="c_words">
-                                    <h5>노션<span>notion</span></h5>
-                                    <p class="c_words_sub1">
-                                        비캔버스 다음 갈아탄 메모 어플리케이션
-                                    </p>
-                                    <p class="c_words_sub2">
-                                        이미지 중심의 비캔버스에서 텍스트기반의 노션으로 옮겨왔습니다. 코드블록의 작성이 편리하고 가독성 높은 게시글을 올리기에 좋아 최근들어
-                                        애용중입니다!
-                                    </p>
-                                    <p class="c_words_sub3">
-                                        <a href="https://www.notion.so/a51be3e0c8d045f9ba3fa49157f368f0" target="_blank"
-                                            rel="noreferrer noopener"><br />Visit the Site</a>
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+    <body>
+        <nav>
+            <div class="logobox">
+                <h1><a href="javascript:void(0)">PORTFOLIO</a></h1>
             </div>
-        </div>
-    </nav>
-    <div id="quick-menu">
-        <i class="xi-angle-up"></i>
-        <i class="xi-angle-down"></i>
-    </div>
-
-    <div class="sectionWrapperFull">
-        <section id="Introduce-Wrap">
-            <div id="introduce">
-                <div id="introduce_top">
-                    <h2 class="minibold">ABOUT</h2>
-                    <p class="caption_l">JiWon's <b>3</b> goals</p>
-                    <p class="myself">
-                        <br />한국직업전문학교 스마트 UI/UX 퍼블리싱 과정 수료 (출석80%↑ /
-                        최종수료:20.09.18)<br />서울 거주 25살의 취업준비생 <strong>전지원</strong>입니다! 👐
-                    </p>
-                    <div class="gols_img">
-                        <div class="gols_img__inner-wrapper">
-                            <div class="markup-img" title="마크업"></div>
-                            <div class="skills-img" title="스킬"></div>
-                            <div class="good-design-img" title="굿디자인"></div>
-                        </div>
-                        <div class="img-license">
-                            <strong>저작자</strong>:<a href="https://kr.365psd.com/day/5-167-icons-for-web-freebie/"
-                                title="Icons For Web (Freebie)" target="_blank">Icons For Web (Freebie)</a>
-                            from
-                            <a href="https://kr.365psd.com/" target="_blank">kr.365psd.com</a>
-                        </div>
+            <div class="nav_list">
+                <ul>
+                    <li><a href="javascript:void(0)">Introduce</a></li>
+                    <li><a href="javascript:void(0)">Project</a></li>
+                    <li><a href="javascript:void(0)">Ability</a></li>
+                    <li><a href="javascript:void(0)">Contact</a></li>
+                    <li>
+                        <a class="openGallery" onclick="openGallery()">
+                            <i class="xi-ellipsis-h"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="gallery-body">
+                <div id="gallery-wrap">
+                    <div class="gallery_header">
+                        <p><i class="xi-bookmark"></i></p>
+                        <p>
+                            <strong>Gallery</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 공부해온
+                            과정들과 디자인 포트폴리오 까지
+                        </p>
+                        <button class="gallery__close" onclick="closeGallery()">
+                            <i class="xi-close-circle-o"></i>
+                        </button>
                     </div>
-                    <div class="gols_words">
-                        <div class="gols_words_in">
-                            <p>Markup</p>
-                            <p>
-                                웹표준을 바탕으로<br />시맨틱 마크업을 지향하며<br />SCSS 등
-                                전처리기를 활용합니다.
-                            </p>
-                        </div>
-                        <div class="gols_words_in">
-                            <p>Skills</p>
-                            <p>
-                                HTML, CSS, JavaScript 등<br />꾸준하게 공부하며 성장하고
-                                있습니다.<br /><button class="galleryOpen" onclick="openGallery()">
-                                    Gallery</button>를 통해 확인할 수 있습니다.
-                            </p>
-                        </div>
-                        <div class="gols_words_in">
-                            <p>Good Design</p>
-                            <p>
-                                Adobe사 프로그램을 이용한<br />이미지제작 및 영상편집,<br />Figma
-                                등 UI제작 툴까지 다룹니다
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div id="introduce_bottom">
-                    <div id="Introduce_bottom_detail">
-                        <div class="resume">
+                    <div class="carousel_wrap">
+                        <div id="dragdiv" class="carousel_stage">
                             <ul>
-                                <li class="resume-sub">
-                                    Carrer
-                                    <ol>
-                                        <li>
-                                            경기대학교 수원캠퍼스 졸업 | 2020.02 | 문예창작학과
-                                        </li>
-                                        <li>
-                                            영상 콘텐츠 에디터 | 2019.05 ~ 2019.08 (단기계약직)
-                                            | (주) 메이비원
-                                        </li>
-                                        <li>
-                                            스마트 UI/UX 퍼블리싱 국비과정 수료 | 2020.04.28 ~
-                                            2020.09.04 | 한국직업전문학교
-                                        </li>
-                                    </ol>
+                                <li class="carousel_item_1">
+                                    <div class="c-imgs">
+                                        <img src="/img/gallery01.jpg" alt="" />
+                                    </div>
+                                    <div class="c_words">
+                                        <h5>깃허브<span>Git hub</span></h5>
+                                        <p class="c_words_sub1">
+                                            2020년 07월 29일부터 커밋잔디를 심는 중!
+                                        </p>
+                                        <p class="c_words_sub2">
+                                            꾸준함을 이기는 힘은 없다고 생각합니다.<br />깃허브에는
+                                            1일 1커밋을 목표로 커밋하고 있습니다.
+                                        </p>
+                                        <p class="c_words_sub3">
+                                            <a
+                                                href="javascript:void(0)"
+                                                target="_blank"
+                                                rel="noreferrer noopener"
+                                                ><br />Visit the Site</a
+                                            >
+                                        </p>
+                                    </div>
                                 </li>
-                                <li class="resume-sub">
-                                    License
-                                    <ol>
-                                        <li>GTQ 2급</li>
-                                        <li>컴퓨터 활용능력 2급</li>
-                                        <li>
-                                            컴퓨터 그래픽스 운용기능사 필기 합격(실기 준비중)
-                                        </li>
-                                        <li>JLPT N2급</li>
-                                    </ol>
+                                <li class="carousel_item_2">
+                                    <div class="c-imgs">
+                                        <img src="/img/gallery02.jpg" alt="" />
+                                    </div>
+                                    <div class="c_words">
+                                        <h5>비캔버스<span>BeeCanvas</span></h5>
+                                        <p class="c_words_sub1">
+                                            지금까지 어떻게 공부를 해왔을까요?
+                                        </p>
+                                        <p class="c_words_sub2">
+                                            지식의 재사용성을 위해 국비학원에서 배운 것,<br />
+                                            혼자서 독학한 것들을 모두 차곡차곡 쌓아왔습니다.
+                                        </p>
+                                        <p class="c_words_sub3">
+                                            <a
+                                                href="https://beecanvas.com/s/7aEbbrJ3be6fLzSMKJ21QmjHkrEONNHRQ8ze5dMO25TvJ1orEyjSYJxy-ZzwFuDn"
+                                                target="_blank"
+                                                rel="noreferrer noopener"
+                                                ><br />Visit the Site</a
+                                            >
+                                        </p>
+                                    </div>
                                 </li>
-                                <li class="resume-sub">
-                                    Award
-                                    <ol>
-                                        <li>
-                                            2012년 스크린도어 시 공모 (충무로역, 불광역 개제)
-                                        </li>
-                                        <li>
-                                            제 2회 한주소금 마케팅 공모전 UCC부문 장려상 (3위)
-                                        </li>
-                                        <li>경기대학교 Dream 공모전 UCC부문 최우수상 (1위)</li>
-                                    </ol>
+                                <li class="carousel_item_3">
+                                    <div class="c-imgs">
+                                        <img src="/img/gallery03.jpg" alt="" />
+                                    </div>
+                                    <div class="c_words">
+                                        <h5>이미지 아트워크들<span>Image</span></h5>
+                                        <p class="c_words_sub1">이미지 갤러리</p>
+                                        <p class="c_words_sub2">
+                                            "포토샵과 일러스트레이터도 사용할 수 있습니다"를
+                                            어필하기 위한 페이지
+                                        </p>
+                                        <p class="c_words_sub3">
+                                            <a
+                                                href="/photozone/design.html"
+                                                target="_blank"
+                                                rel="noreferrer noopener"
+                                                ><br />Visit the Site</a
+                                            >
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="carousel_item_4">
+                                    <div class="c-imgs">
+                                        <img src="/img/gallery04.jpg" alt="" />
+                                    </div>
+                                    <div class="c_words">
+                                        <h5>영상제작물<span>Video</span></h5>
+                                        <p class="c_words_sub1">
+                                            애프터이펙트, 프리미어프로 중급자 수준
+                                        </p>
+                                        <p class="c_words_sub2">
+                                            2D애니메이션이나 인포영상 등을 제작했던 경험이 있습니다.
+                                            컷편집은 물론 간단한 모션그래픽이 가능합니다. 또한
+                                            원하는 이미지소스는 직접 제작하여 사용하였습니다.
+                                        </p>
+                                        <p class="c_words_sub3">
+                                            <a
+                                                href="/photozone/video.html"
+                                                target="_blank"
+                                                rel="noreferrer noopener"
+                                                ><br />Visit the Site</a
+                                            >
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="carousel_item_5">
+                                    <div class="c-imgs">
+                                        <img src="/img/gallery05.png" alt="" />
+                                    </div>
+                                    <div class="c_words">
+                                        <h5>노션<span>notion</span></h5>
+                                        <p class="c_words_sub1">
+                                            비캔버스 다음 갈아탄 메모 어플리케이션
+                                        </p>
+                                        <p class="c_words_sub2">
+                                            이미지 중심의 비캔버스에서 텍스트기반의 노션으로
+                                            옮겨왔습니다. 코드블록의 작성이 편리하고 가독성 높은
+                                            게시글을 올리기에 좋아 최근들어 애용중입니다!
+                                        </p>
+                                        <p class="c_words_sub3">
+                                            <a
+                                                href="https://www.notion.so/a51be3e0c8d045f9ba3fa49157f368f0"
+                                                target="_blank"
+                                                rel="noreferrer noopener"
+                                                ><br />Visit the Site</a
+                                            >
+                                        </p>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
+        </nav>
+        <div id="quick-menu">
+            <i class="xi-angle-up"></i>
+            <i class="xi-angle-down"></i>
+        </div>
+
+        <div class="sectionWrapperFull">
+            <section id="Introduce-Wrap">
+                <div id="introduce">
+                    <div id="introduce_top">
+                        <h2 class="minibold">ABOUT</h2>
+                        <p class="caption_l">JiWon's <b>3</b> goals</p>
+                        <p class="myself">
+                            <br />한국직업전문학교 스마트 UI/UX 퍼블리싱 과정 수료 (출석80%↑ /
+                            최종수료:20.09.18)<br />서울 거주 25살의 취업준비생
+                            <strong>전지원</strong>입니다! 👐
+                        </p>
+                        <div class="gols_img">
+                            <div class="gols_img__inner-wrapper">
+                                <div class="markup-img" title="마크업"></div>
+                                <div class="skills-img" title="스킬"></div>
+                                <div class="good-design-img" title="굿디자인"></div>
+                            </div>
+                            <div class="img-license">
+                                <strong>저작자</strong>:<a
+                                    href="https://kr.365psd.com/day/5-167-icons-for-web-freebie/"
+                                    title="Icons For Web (Freebie)"
+                                    target="_blank"
+                                    >Icons For Web (Freebie)</a
+                                >
+                                from
+                                <a href="https://kr.365psd.com/" target="_blank">kr.365psd.com</a>
+                            </div>
+                        </div>
+                        <div class="gols_words">
+                            <div class="gols_words_in">
+                                <p>Markup</p>
+                                <p>
+                                    웹표준을 바탕으로<br />시맨틱 마크업을 지향하며<br />SCSS 등
+                                    전처리기를 활용합니다.
+                                </p>
+                            </div>
+                            <div class="gols_words_in">
+                                <p>Skills</p>
+                                <p>
+                                    HTML, CSS, JavaScript 등<br />꾸준하게 공부하며 성장하고
+                                    있습니다.<br /><button
+                                        class="galleryOpen"
+                                        onclick="openGallery()"
+                                    >
+                                        Gallery</button
+                                    >를 통해 확인할 수 있습니다.
+                                </p>
+                            </div>
+                            <div class="gols_words_in">
+                                <p>Good Design</p>
+                                <p>
+                                    Adobe사 프로그램을 이용한<br />이미지제작 및 영상편집,<br />Figma
+                                    등 UI제작 툴까지 다룹니다
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="introduce_bottom">
+                        <div id="Introduce_bottom_detail">
+                            <div class="resume">
+                                <ul>
+                                    <li class="resume-sub">
+                                        Carrer
+                                        <ol>
+                                            <li>
+                                                경기대학교 수원캠퍼스 졸업 | 2020.02 | 문예창작학과
+                                            </li>
+                                            <li>
+                                                영상 콘텐츠 에디터 | 2019.05 ~ 2019.08 (단기계약직)
+                                                | (주) 메이비원
+                                            </li>
+                                            <li>
+                                                스마트 UI/UX 퍼블리싱 국비과정 수료 | 2020.04.28 ~
+                                                2020.09.04 | 한국직업전문학교
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    <li class="resume-sub">
+                                        License
+                                        <ol>
+                                            <li>GTQ 2급</li>
+                                            <li>컴퓨터 활용능력 2급</li>
+                                            <li>
+                                                컴퓨터 그래픽스 운용기능사 필기 합격(실기 준비중)
+                                            </li>
+                                            <li>JLPT N2급</li>
+                                        </ol>
+                                    </li>
+                                    <li class="resume-sub">
+                                        Award
+                                        <ol>
+                                            <li>
+                                                2012년 스크린도어 시 공모 (충무로역, 불광역 개제)
+                                            </li>
+                                            <li>
+                                                제 2회 한주소금 마케팅 공모전 UCC부문 장려상 (3위)
+                                            </li>
+                                            <li>경기대학교 Dream 공모전 UCC부문 최우수상 (1위)</li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="sectionWrapperNormal"></div>
+        <section id="Project-Wrap">
+            <h2 class="minibold">Project</h2>
+            <div class="project project-1">
+                <div class="project-assets">
+                    <div class="project-title">
+                        <p class="koreanTitle">사이트 리뉴얼 - IKEA</p>
+                        <h3 class="englishTitle">IKEA Renewal</h3>
+                        <div class="tips">
+                            <span>뷰포트</span>
+                            <p>반응형 / 모바일-데스크탑</p>
+                        </div>
+                        <div class="tips">
+                            <span>브라우저</span>
+                            <p>edge+, chrome</p>
+                        </div>
+                        <div class="tips">
+                            <span>Color</span>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+                        <div class="tips">
+                            <span>웹표준</span>
+                            <p>[W3C] Nu Html Checker 통과</p>
+                        </div>
+                        <div class="articleBtns">
+                            <a
+                                class="demoLink"
+                                href="http://ddieon.dothome.co.kr"
+                                target="_blank"
+                                rel="noreferrer noopener"
+                                >Preview</a
+                            >
+                            <a
+                                class="demoLink"
+                                href="https://github.com/ddieon/IKEA-renewal"
+                                target="_blank"
+                                rel="noreferrer noopener"
+                                >GitHub</a
+                            >
+                        </div>
+                    </div>
+                    <div class="project-img"></div>
+                </div>
+                <div class="project-desc">
+                    <table class="project-desc-table">
+                        <thead>
+                            <tr>
+                                <th>Page</th>
+                                <th>Skills</th>
+                                <th>Link or Source</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span>index.html</span></td>
+                                <td>자바스크립트로 구현한 모달창 + 자동으로 영상재생 기능</td>
+                                <td>
+                                    <a
+                                        href="http://ddieon.dothome.co.kr/"
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                        >http://ddieon.dothome.co.kr/</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>product.html</span></td>
+                                <td>clone메소드를 통해 무한스크롤 + index도 함께 증가</td>
+                                <td>
+                                    <a
+                                        href="http://ddieon.dothome.co.kr/product.html"
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                        >http://ddieon.dothome.co.kr/product.html</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>product_detail.html</span></td>
+                                <td>hover시 발생되는 가상요소에 애니메이션 넣기</td>
+                                <td>
+                                    <a
+                                        href="http://ddieon.dothome.co.kr/product_detail.html"
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                        >http://ddieon.dothome.co.kr/product_detail.html</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>digitalshow.html</span></td>
+                                <td>slick.js을 응용, 프로그레스바 CSS를 리디자인한 슬라이더</td>
+                                <td>
+                                    <a
+                                        href="http://ddieon.dothome.co.kr/digitalshow.html"
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                        >http://ddieon.dothome.co.kr/digitalshow.html</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>idea.html</span></td>
+                                <td>토글기능을 넣은 div박스와 자체제작 슬라이더 (+모달창)</td>
+                                <td>
+                                    <a
+                                        href="http://ddieon.dothome.co.kr/idea.html"
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                        >http://ddieon.dothome.co.kr/idea.html</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>store.html</span></td>
+                                <td>카카오맵 API를 이용한 전국매장 찾기 페이지</td>
+                                <td>
+                                    <a
+                                        href="http://ddieon.dothome.co.kr/store.html"
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                        >http://ddieon.dothome.co.kr/store.html</a
+                                    >
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="project project-2">
+                <div class="project-assets">
+                    <div class="project-title">
+                        <p class="koreanTitle">JS 토이프로젝트 - 랜덤팀매칭</p>
+                        <h3 class="englishTitle">Red or Blue</h3>
+                        <div class="tips">
+                            <span>특징</span>
+                            <p>바닐라자바스크립트로 알고리즘 구현</p>
+                        </div>
+                        <div class="tips">
+                            <span>사용법</span>
+                            <p>팀원명을 폼에 입력하고 매칭버튼 클릭</p>
+                        </div>
+                        <div class="tips">
+                            <span>Color</span>
+                            <i class="project2-color"></i>
+                            <i class="project2-color"></i>
+                            <i class="project2-color"></i>
+                        </div>
+                        <div class="articleBtns">
+                            <a
+                                class="demoLink"
+                                href="https://codepen.io/DDDieon/pen/dyMXjxK"
+                                target="_blank"
+                                rel="noreferrer noopener"
+                                >Preview</a
+                            >
+                            <a
+                                class="demoLink"
+                                href="https://github.com/dddieon/RandomTeam"
+                                target="_blank"
+                                rel="noreferrer noopener"
+                                >GitHub</a
+                            >
+                        </div>
+                    </div>
+                    <div class="project-img"><img src="/asset/project2.png" alt="" /></div>
+                </div>
+                <div class="project-desc">
+                    <table class="project-desc-table">
+                        <thead>
+                            <tr>
+                                <th>Page</th>
+                                <th>Skills</th>
+                                <th>Link or Source</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span>single page</span></td>
+                                <td>input 태그에서 value값을 저장하고 화면에서 출력, 삭제</td>
+                                <td rowspan="4" class="codepen">
+                                    <a
+                                        href="https://codepen.io/dddieon/pen/dyMXjxK"
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                        >CODEPEN</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>single page</span></td>
+                                <td>keydown 이벤트로 단축키(enter, F12) 구현</td>
+                            </tr>
+                            <tr>
+                                <td><span>single page</span></td>
+                                <td>for문과 includes 메소드로 중복입력값에 대한 경고문 발생</td>
+                            </tr>
+                            <tr>
+                                <td><span>single page</span></td>
+                                <td>push 메소드에 난수를 적용하여 랜덤으로 배열 추가하기</td>
+                            </tr>
+                        </tbody>
+                        <tfoot></tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="project project-3">
+                <div class="project-assets">
+                    <div class="project-title">
+                        <p class="koreanTitle">반응형을 기획부터 시안, 코딩까지</p>
+                        <h3 class="englishTitle">Photozone</h3>
+                        <div class="tips">
+                            <span>목표</span>
+                            <p>기획, 시안작업, 코딩까지 해보자!</p>
+                        </div>
+                        <div class="tips">
+                            <span>시안 작업</span>
+                            <p>Figma</p>
+                        </div>
+                        <div class="tips">
+                            <span>Color</span>
+                            <i class="project3-color"></i>
+                            <i class="project3-color"></i>
+                            <i class="project3-color"></i>
+                        </div>
+                        <div class="articleBtns">
+                            <a
+                                class="demoLink"
+                                href="/photozone/info.html"
+                                target="_blank"
+                                rel="noreferrer noopener"
+                                >Preview</a
+                            >
+                            <a
+                                class="demoLink"
+                                href="https://www.figma.com/file/qvIfT1fHdYoXzB8Lgte91y/portfolio-photozone-videozone?node-id=0%3A1"
+                                target="_blank"
+                                rel="noreferrer noopener"
+                                >Figma</a
+                            >
+                        </div>
+                    </div>
+                    <div class="project-img"><img src="/asset/project3.png" alt="" /></div>
+                </div>
+                <div class="project-desc">
+                    <table class="project-desc-table">
+                        <thead>
+                            <tr>
+                                <th>Page</th>
+                                <th>Skills</th>
+                                <th>Link or Source</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span>photozone/design.html</span></td>
+                                <td>토글기능의 모달창 - jQuery로 offsetTop값을 구함</td>
+                                <td>
+                                    <a
+                                        href="/photozone/design.html"
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                        >/photozone/design.html</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>photozone/info.html</span></td>
+                                <td>location.href로 url정보를 가져와 유동적으로 CSS를 변경</td>
+                                <td>
+                                    <a
+                                        href="/photozone/info.html"
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                        >/photozone/info.html</a
+                                    >
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot></tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="project project-4">
+                <div class="project-assets">
+                    <div class="project-title">
+                        <p class="koreanTitle">기타 프로젝트들</p>
+                        <h3 class="englishTitle">ETC.</h3>
+                        <div class="tips">
+                            <span>설명</span>
+                            <p>코딩 연습 이후의 산출물</p>
+                        </div>
+                        <div class="tips">
+                            <span>스킬</span>
+                            <p>리액트, JS 위주</p>
+                        </div>
+                        <div class="tips">
+                            <span>소스 출처</span>
+                            <p>대부분 클론 / 디스코드봇은 자체개발</p>
+                        </div>
+                        <div class="articleBtns">
+                            <a
+                                class="demoLink"
+                                href="https://github.com/DDDieon"
+                                target="_blank"
+                                rel="noreferrer noopener"
+                                >Github</a
+                            >
+                            <a
+                                class="demoLink"
+                                href="https://www.notion.so/1615d00fc7394bcdb3359cd1550737eb"
+                                target="_blank"
+                                rel="noreferrer noopener"
+                                >Memo</a
+                            >
+                        </div>
+                    </div>
+                    <div class="project-img"><img src="/asset/project4.png" alt="" /></div>
+                </div>
+                <div class="project-desc">
+                    <table class="project-desc-table">
+                        <thead>
+                            <tr>
+                                <th>Page</th>
+                                <th>Skills</th>
+                                <th>Link or Source</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span>index.js</span></td>
+                                <td>
+                                    실시간 날씨안내, 간단한 놀이가 가능한 디스코드 봇 (파파고
+                                    번역기능 연구 중💦)
+                                </td>
+                                <td>
+                                    <a
+                                        href="https://github.com/dddieon/discord-bot-ichigomilk"
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                        >깃허브에서 소스보기</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>/src/index.js</span></td>
+                                <td>[클론] 영화추천 API를 이용한 리액트 싱글페이지</td>
+                                <td>
+                                    <a
+                                        href="https://dddieon.github.io/movie_app_2019/"
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                        >/src/index.js</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>photozone/info.html</span></td>
+                                <td>[클론] react-native와 EXPO로 구현한 모바일어플리케이션</td>
+                                <td>
+                                    <a
+                                        href="https://github.com/dddieon/react-weather"
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                        >깃허브에서 소스보기</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>photozone/info.html</span></td>
+                                <td>
+                                    [클론] HTML5 캔버스와 자바스크립트를 이용한 그림판 (in 웹페이지)
+                                </td>
+                                <td>
+                                    <a
+                                        href="https://github.com/dddieon/paintjs"
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                        >깃허브에서 소스보기</a
+                                    >
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot></tfoot>
+                    </table>
+                </div>
+            </div>
         </section>
-    </div>
-    <div class="sectionWrapperNormal"></div>
-    <section id="Project-Wrap">
-        <h2 class="minibold">Project</h2>
-        <div class="project project-1">
-            <div class="project-assets">
-                <div class="project-title">
-                    <p class="koreanTitle">사이트 리뉴얼 - IKEA</p>
-                    <h3 class="englishTitle">IKEA Renewal</h3>
-                    <div class="tips">
-                        <span>뷰포트</span>
-                        <p>반응형 / 모바일-데스크탑</p>
-                    </div>
-                    <div class="tips">
-                        <span>브라우저</span>
-                        <p>edge+, chrome</p>
-                    </div>
-                    <div class="tips">
-                        <span>Color</span>
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                    </div>
-                    <div class="tips">
-                        <span>웹표준</span>
-                        <p>[W3C] Nu Html Checker 통과</p>
-                    </div>
-                    <div class="articleBtns">
-                        <a class="demoLink" href="http://ddieon.dothome.co.kr" target="_blank"
-                            rel="noreferrer noopener">Preview</a>
-                        <a class="demoLink" href="https://github.com/ddieon/IKEA-renewal" target="_blank"
-                            rel="noreferrer noopener">GitHub</a>
-                    </div>
-                </div>
-                <div class="project-img"></div>
-            </div>
-            <div class="project-desc">
-                <table class="project-desc-table">
-                    <thead>
-                        <tr>
-                            <th>Page</th>
-                            <th>Skills</th>
-                            <th>Link or Source</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><span>index.html</span></td>
-                            <td>자바스크립트로 구현한 모달창 + 자동으로 영상재생 기능</td>
-                            <td>
-                                <a href="http://ddieon.dothome.co.kr/" target="_blank"
-                                    rel="noreferrer noopener">http://ddieon.dothome.co.kr/</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><span>product.html</span></td>
-                            <td>clone메소드를 통해 무한스크롤 + index도 함께 증가</td>
-                            <td>
-                                <a href="http://ddieon.dothome.co.kr/product.html" target="_blank"
-                                    rel="noreferrer noopener">http://ddieon.dothome.co.kr/product.html</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><span>product_detail.html</span></td>
-                            <td>hover시 발생되는 가상요소에 애니메이션 넣기</td>
-                            <td>
-                                <a href="http://ddieon.dothome.co.kr/product_detail.html" target="_blank"
-                                    rel="noreferrer noopener">http://ddieon.dothome.co.kr/product_detail.html</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><span>digitalshow.html</span></td>
-                            <td>slick.js을 응용, 프로그레스바 CSS를 리디자인한 슬라이더</td>
-                            <td>
-                                <a href="http://ddieon.dothome.co.kr/digitalshow.html" target="_blank"
-                                    rel="noreferrer noopener">http://ddieon.dothome.co.kr/digitalshow.html</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><span>idea.html</span></td>
-                            <td>토글기능을 넣은 div박스와 자체제작 슬라이더 (+모달창)</td>
-                            <td>
-                                <a href="http://ddieon.dothome.co.kr/idea.html" target="_blank"
-                                    rel="noreferrer noopener">http://ddieon.dothome.co.kr/idea.html</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><span>store.html</span></td>
-                            <td>카카오맵 API를 이용한 전국매장 찾기 페이지</td>
-                            <td>
-                                <a href="http://ddieon.dothome.co.kr/store.html" target="_blank"
-                                    rel="noreferrer noopener">http://ddieon.dothome.co.kr/store.html</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="project project-2">
-            <div class="project-assets">
-                <div class="project-title">
-                    <p class="koreanTitle">JS 토이프로젝트 - 랜덤팀매칭</p>
-                    <h3 class="englishTitle">Red or Blue</h3>
-                    <div class="tips">
-                        <span>특징</span>
-                        <p>바닐라자바스크립트로 알고리즘 구현</p>
-                    </div>
-                    <div class="tips">
-                        <span>사용법</span>
-                        <p>팀원명을 폼에 입력하고 매칭버튼 클릭</p>
-                    </div>
-                    <div class="tips">
-                        <span>Color</span>
-                        <i class="project2-color"></i>
-                        <i class="project2-color"></i>
-                        <i class="project2-color"></i>
-                    </div>
-                    <div class="articleBtns">
-                        <a class="demoLink" href="https://codepen.io/DDDieon/pen/dyMXjxK" target="_blank"
-                            rel="noreferrer noopener">Preview</a>
-                        <a class="demoLink" href="https://github.com/dddieon/RandomTeam" target="_blank"
-                            rel="noreferrer noopener">GitHub</a>
-                    </div>
-                </div>
-                <div class="project-img"><img src="/asset/project2.png" alt="" /></div>
-            </div>
-            <div class="project-desc">
-                <table class="project-desc-table">
-                    <thead>
-                        <tr>
-                            <th>Page</th>
-                            <th>Skills</th>
-                            <th>Link or Source</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><span>single page</span></td>
-                            <td>input 태그에서 value값을 저장하고 화면에서 출력, 삭제</td>
-                            <td rowspan="4" class="codepen">
-                                <a href="https://codepen.io/dddieon/pen/dyMXjxK" target="_blank"
-                                    rel="noreferrer noopener">CODEPEN</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><span>single page</span></td>
-                            <td>keydown 이벤트로 단축키(enter, F12) 구현</td>
-                        </tr>
-                        <tr>
-                            <td><span>single page</span></td>
-                            <td>for문과 includes 메소드로 중복입력값에 대한 경고문 발생</td>
-                        </tr>
-                        <tr>
-                            <td><span>single page</span></td>
-                            <td>push 메소드에 난수를 적용하여 랜덤으로 배열 추가하기</td>
-                        </tr>
-                    </tbody>
-                    <tfoot></tfoot>
-                </table>
-            </div>
-        </div>
-        <div class="project project-3">
-            <div class="project-assets">
-                <div class="project-title">
-                    <p class="koreanTitle">반응형을 기획부터 시안, 코딩까지</p>
-                    <h3 class="englishTitle">Photozone</h3>
-                    <div class="tips">
-                        <span>목표</span>
-                        <p>기획, 시안작업, 코딩까지 해보자!</p>
-                    </div>
-                    <div class="tips">
-                        <span>시안 작업</span>
-                        <p>Figma</p>
-                    </div>
-                    <div class="tips">
-                        <span>Color</span>
-                        <i class="project3-color"></i>
-                        <i class="project3-color"></i>
-                        <i class="project3-color"></i>
-                    </div>
-                    <div class="articleBtns">
-                        <a class="demoLink" href="/photozone/info.html" target="_blank"
-                            rel="noreferrer noopener">Preview</a>
-                        <a class="demoLink"
-                            href="https://www.figma.com/file/qvIfT1fHdYoXzB8Lgte91y/portfolio-photozone-videozone?node-id=0%3A1"
-                            target="_blank" rel="noreferrer noopener">Figma</a>
-                    </div>
-                </div>
-                <div class="project-img"><img src="/asset/project3.png" alt="" /></div>
-            </div>
-            <div class="project-desc">
-                <table class="project-desc-table">
-                    <thead>
-                        <tr>
-                            <th>Page</th>
-                            <th>Skills</th>
-                            <th>Link or Source</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><span>photozone/design.html</span></td>
-                            <td>토글기능의 모달창 - jQuery로 offsetTop값을 구함</td>
-                            <td>
-                                <a href="/photozone/design.html" target="_blank"
-                                    rel="noreferrer noopener">/photozone/design.html</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><span>photozone/info.html</span></td>
-                            <td>location.href로 url정보를 가져와 유동적으로 CSS를 변경</td>
-                            <td>
-                                <a href="/photozone/info.html" target="_blank"
-                                    rel="noreferrer noopener">/photozone/info.html</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tfoot></tfoot>
-                </table>
-            </div>
-        </div>
-        <div class="project project-4">
-            <div class="project-assets">
-                <div class="project-title">
-                    <p class="koreanTitle">기타 프로젝트들</p>
-                    <h3 class="englishTitle">ETC.</h3>
-                    <div class="tips">
-                        <span>설명</span>
-                        <p>코딩 연습 이후의 산출물</p>
-                    </div>
-                    <div class="tips">
-                        <span>스킬</span>
-                        <p>리액트, JS 위주</p>
-                    </div>
-                    <div class="tips">
-                        <span>소스 출처</span>
-                        <p>대부분 클론 / 디스코드봇은 자체개발</p>
-                    </div>
-                    <div class="articleBtns">
-                        <a class="demoLink" href="https://github.com/DDDieon" target="_blank"
-                            rel="noreferrer noopener">Github</a>
-                        <a class="demoLink" href="https://www.notion.so/1615d00fc7394bcdb3359cd1550737eb"
-                            target="_blank" rel="noreferrer noopener">Memo</a>
-                    </div>
-
-                </div>
-                <div class="project-img"><img src="/asset/project4.png" alt="" /></div>
-            </div>
-            <div class="project-desc">
-                <table class="project-desc-table">
-                    <thead>
-                        <tr>
-                            <th>Page</th>
-                            <th>Skills</th>
-                            <th>Link or Source</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><span>index.js</span></td>
-                            <td>실시간 날씨안내, 간단한 놀이가 가능한 디스코드 봇 (파파고 번역기능 연구 중💦)</td>
-                            <td>
-                                <a href="https://github.com/dddieon/discord-bot-ichigomilk" target="_blank"
-                                    rel="noreferrer noopener">깃허브에서 소스보기</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><span>/src/index.js</span></td>
-                            <td>[클론] 영화추천 API를 이용한 리액트 싱글페이지</td>
-                            <td>
-                                <a href="https://dddieon.github.io/movie_app_2019/" target="_blank"
-                                    rel="noreferrer noopener">/src/index.js</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><span>photozone/info.html</span></td>
-                            <td>[클론] react-native와 EXPO로 구현한 모바일어플리케이션</td>
-                            <td>
-                                <a href="https://github.com/dddieon/react-weather" target="_blank"
-                                    rel="noreferrer noopener">깃허브에서 소스보기</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><span>photozone/info.html</span></td>
-                            <td>[클론] HTML5 캔버스와 자바스크립트를 이용한 그림판 (in 웹페이지)</td>
-                            <td>
-                                <a href="https://github.com/dddieon/paintjs" target="_blank"
-                                    rel="noreferrer noopener">깃허브에서 소스보기</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tfoot></tfoot>
-                </table>
-            </div>
-        </div>
-    </section>
-    <section id="Ability-Wrap">
-        <div id="Ability">
-            <h2 class="minibold">Ability</h2>
-            <div class="ability-container">
-                <div class="ability-caption">
-                    <strong>모든 능력치는 가장 첫 스킬을 100%로 둔
-                        <span class="relative-percent">상대적인 수치</span>입니다</strong>
-                    <h3><span class="wait">잠깐!</span> 왜 상대적인가요?</h3>
-                    <b>HTML 100%이 말이 돼?! 라 생각하지 말아주세요💦</b>
-                    <p>
-                        100%라는 수치를 감히 단정할 수가 없어 HTML 태그를 작성하는 능력을
-                        하나의 기준으로 잡았습니다.<br />
-                        자신있고 잘 활용할 수 있는 기술을 순서대로 나열해보았습니다.
-                    </p>
-                </div>
-                <ul>
-                    <li class="html ability-spec">
-                        <svg class="ability-spec__graph">
-                            <circle cx="70" cy="70" r="70"></circle>
-                            <circle cx="70" cy="70" r="70"></circle>
-                        </svg>
-                        <div class="ability-spec__number">
-                            <p class="ability-spec__number--count">100<span>%</span></p>
-                        </div>
-                        <h3 class="ability-spec--header">HTML</h3>
-                    </li>
-                    <li class="CSS ability-spec">
-                        <svg class="ability-spec__graph">
-                            <circle cx="70" cy="70" r="70"></circle>
-                            <circle cx="70" cy="70" r="70"></circle>
-                        </svg>
-                        <div class="ability-spec__number">
-                            <p class="ability-spec__number--count">80<span>%</span></p>
-                        </div>
-                        <h3 class="ability-spec__number--header">CSS</h3>
-                    </li>
-                    <li class="jquery ability-spec">
-                        <svg class="ability-spec__graph">
-                            <circle cx="70" cy="70" r="70"></circle>
-                            <circle cx="70" cy="70" r="70"></circle>
-                        </svg>
-                        <div class="ability-spec__number">
-                            <p class="ability-spec__number--count">70<span>%</span></p>
-                        </div>
-                        <h3 class="ability-spec__number--header">JQuery</h3>
-                    </li>
-                    <li class="JavaScript ability-spec">
-                        <svg class="ability-spec__graph">
-                            <circle cx="70" cy="70" r="70"></circle>
-                            <circle cx="70" cy="70" r="70"></circle>
-                        </svg>
-                        <div class="ability-spec__number">
-                            <p class="ability-spec__number--count">55<span>%</span></p>
-                        </div>
-                        <h3 class="ability-spec__number--header">JavaScript</h3>
-                    </li>
-
-                    <li class="React ability-spec">
-                        <svg class="ability-spec__graph">
-                            <circle cx="70" cy="70" r="70"></circle>
-                            <circle cx="70" cy="70" r="70"></circle>
-                        </svg>
-                        <div class="ability-spec__number">
-                            <p class="ability-spec__number--count">40<span>%</span></p>
-                        </div>
-                        <h3 class="ability-spec__number--header">React</h3>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="adobe-illustrator ability-design">
-                        <svg class="ability-design__graph">
-                            <circle cx="70" cy="70" r="70"></circle>
-                            <circle cx="70" cy="70" r="70"></circle>
-                        </svg>
-                        <div class="ability-design__number">
-                            <p class="ability-design__number--count">100<span>%</span></p>
-                        </div>
-                        <h3 class="ability-design__number--header">Illustrator</h3>
-                    </li>
-                    <li class="adobe-premeier ability-design">
-                        <svg class="ability-design__graph">
-                            <circle cx="70" cy="70" r="70"></circle>
-                            <circle cx="70" cy="70" r="70"></circle>
-                        </svg>
-                        <div class="ability-design__number">
-                            <p class="ability-design__number--count">80<span>%</span></p>
-                        </div>
-                        <h3 class="ability-design__number--header">Premeir</h3>
-                    </li>
-                    <li class="adobe-aftereffect ability-design">
-                        <svg class="ability-design__graph">
-                            <circle cx="70" cy="70" r="70"></circle>
-                            <circle cx="70" cy="70" r="70"></circle>
-                        </svg>
-                        <div class="ability-design__number">
-                            <p class="ability-design__number--count">70<span>%</span></p>
-                        </div>
-                        <h3 class="ability-design__number--header">PhotoShop</h3>
-                    </li>
-                    <li class="adobe-photoshop ability-design">
-                        <svg class="ability-design__graph">
-                            <circle cx="70" cy="70" r="70"></circle>
-                            <circle cx="70" cy="70" r="70"></circle>
-                        </svg>
-                        <div class="ability-design__number">
-                            <p class="ability-design__number--count">60<span>%</span></p>
-                        </div>
-                        <h3 class="ability-design__number--header">After Effect</h3>
-                    </li>
-                    <li class="figma ability-design">
-                        <svg class="ability-design__graph">
-                            <circle cx="70" cy="70" r="70"></circle>
-                            <circle cx="70" cy="70" r="70"></circle>
-                        </svg>
-                        <div class="ability-design__number">
-                            <p class="ability-design__number--count">50<span>%</span></p>
-                        </div>
-                        <h3 class="ability-design__number--header">Figma</h3>
-                    </li>
-                </ul>
-
-                <div class="ability-detail">
-                    <div class="ability-detail__whitepaper">
-                        <img src="/asset/icons/icons_quotes.png" class="quotesImg" alt="따옴표" />
-                        <h4 class="ability-detail__title">
-                            해당하는 스킬들의 이름을 눌러보세요!
-                        </h4>
-                        <hr />
-                        <p class="ability-detail__desc">세부사항들을 볼 수 있습니다</p>
-                        <a href="" id="ability-detail__point" class="ability-detail__point" target="_blank"
-                            rel="noreferrer noopener"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="sectionWrapperFull">
-        <section id="Contact-Wrap">
-            <div id="Contact">
-                <h2 class="minibold">Contact</h2>
-                <div id="profile">
-                    <div class="profile-words">
-                        <p>전지원 : 全智元</p>
-                        <p>JEON JIWON</p>
+        <section id="Ability-Wrap">
+            <div id="Ability">
+                <h2 class="minibold">Ability</h2>
+                <div class="ability-container">
+                    <div class="ability-caption">
+                        <strong
+                            >모든 능력치는 가장 첫 스킬을 100%로 둔
+                            <span class="relative-percent">상대적인 수치</span>입니다</strong
+                        >
+                        <h3><span class="wait">잠깐!</span> 왜 상대적인가요?</h3>
+                        <b>HTML 100%이 말이 돼?! 라 생각하지 말아주세요💦</b>
                         <p>
-                            해당 이미지를 클릭하면<br />
-                            저를 더 잘 알수 있는 페이지들이 나옵니다.
+                            100%라는 수치를 감히 단정할 수가 없어 HTML 태그를 작성하는 능력을 하나의
+                            기준으로 잡았습니다.<br />
+                            자신있고 잘 활용할 수 있는 기술을 순서대로 나열해보았습니다.
+                        </p>
+                    </div>
+                    <ul>
+                        <li class="html ability-spec">
+                            <svg class="ability-spec__graph">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="ability-spec__number">
+                                <p class="ability-spec__number--count">100<span>%</span></p>
+                            </div>
+                            <h3 class="ability-spec--header">HTML</h3>
+                        </li>
+                        <li class="CSS ability-spec">
+                            <svg class="ability-spec__graph">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="ability-spec__number">
+                                <p class="ability-spec__number--count">80<span>%</span></p>
+                            </div>
+                            <h3 class="ability-spec__number--header">CSS</h3>
+                        </li>
+                        <li class="jquery ability-spec">
+                            <svg class="ability-spec__graph">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="ability-spec__number">
+                                <p class="ability-spec__number--count">70<span>%</span></p>
+                            </div>
+                            <h3 class="ability-spec__number--header">JQuery</h3>
+                        </li>
+                        <li class="JavaScript ability-spec">
+                            <svg class="ability-spec__graph">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="ability-spec__number">
+                                <p class="ability-spec__number--count">55<span>%</span></p>
+                            </div>
+                            <h3 class="ability-spec__number--header">JavaScript</h3>
+                        </li>
+
+                        <li class="React ability-spec">
+                            <svg class="ability-spec__graph">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="ability-spec__number">
+                                <p class="ability-spec__number--count">40<span>%</span></p>
+                            </div>
+                            <h3 class="ability-spec__number--header">React</h3>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="adobe-illustrator ability-design">
+                            <svg class="ability-design__graph">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="ability-design__number">
+                                <p class="ability-design__number--count">100<span>%</span></p>
+                            </div>
+                            <h3 class="ability-design__number--header">Illustrator</h3>
+                        </li>
+                        <li class="adobe-premeier ability-design">
+                            <svg class="ability-design__graph">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="ability-design__number">
+                                <p class="ability-design__number--count">80<span>%</span></p>
+                            </div>
+                            <h3 class="ability-design__number--header">Premeir</h3>
+                        </li>
+                        <li class="adobe-aftereffect ability-design">
+                            <svg class="ability-design__graph">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="ability-design__number">
+                                <p class="ability-design__number--count">70<span>%</span></p>
+                            </div>
+                            <h3 class="ability-design__number--header">PhotoShop</h3>
+                        </li>
+                        <li class="adobe-photoshop ability-design">
+                            <svg class="ability-design__graph">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="ability-design__number">
+                                <p class="ability-design__number--count">60<span>%</span></p>
+                            </div>
+                            <h3 class="ability-design__number--header">After Effect</h3>
+                        </li>
+                        <li class="figma ability-design">
+                            <svg class="ability-design__graph">
+                                <circle cx="70" cy="70" r="70"></circle>
+                                <circle cx="70" cy="70" r="70"></circle>
+                            </svg>
+                            <div class="ability-design__number">
+                                <p class="ability-design__number--count">50<span>%</span></p>
+                            </div>
+                            <h3 class="ability-design__number--header">Figma</h3>
+                        </li>
+                    </ul>
+
+                    <div class="ability-detail">
+                        <div class="ability-detail__whitepaper">
+                            <img
+                                src="/asset/icons/icons_quotes.png"
+                                class="quotesImg"
+                                alt="따옴표"
+                            />
+                            <h4 class="ability-detail__title">
+                                해당하는 스킬들의 이름을 눌러보세요!
+                            </h4>
+                            <hr />
+                            <p class="ability-detail__desc">세부사항들을 볼 수 있습니다</p>
+                            <a
+                                href=""
+                                id="ability-detail__point"
+                                class="ability-detail__point"
+                                target="_blank"
+                                rel="noreferrer noopener"
+                            ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="sectionWrapperFull">
+            <section id="Contact-Wrap">
+                <div id="Contact">
+                    <h2 class="minibold">Contact</h2>
+                    <div id="profile">
+                        <div class="profile-words">
+                            <p>전지원 : 全智元</p>
+                            <p>JEON JIWON</p>
+                            <p>
+                                해당 이미지를 클릭하면<br />
+                                저를 더 잘 알수 있는 페이지들이 나옵니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contactDetails">
+                        <p><i class="xi-mail"></i><span>hocldy@naver.com</span></p>
+                        <p><i class="xi-kakaotalk"></i><span>Kakao-ID : ajiop</span></p>
+                        <p>
+                            <i class="xi-github-alt"></i
+                            ><span
+                                ><a
+                                    href="http://github.com/dddieon"
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                    >github.com/dddieon</a
+                                ></span
+                            >
+                        </p>
+                    </div>
+                    <div class="contactDescriptions">
+                        <img src="/asset/icons/icons_quotes.png" class="quotesImg" alt="따옴표" />
+                        <h3>H<span>e</span>llo</h3>
+                        <p>
+                            코딩 공부를 시작한 지는 오래되지 않았습니다.<br />
+                            반년 전 까지만 해도 단지 컴퓨터를 좋아하고, 디자인과 영상공부를 좋아하던
+                            평범한 대학생이었습니다.<br />
+                            뒤늦게 코딩에 재미를 붙이게 되었지만 이쪽 세상에는 이미 수많은
+                            고인물들이 존재했죠.<br />
+                            <br />
+                            <span class="contactDescriptions--ellipse">...</span>
+                            <br />
+                            다행히 IT쪽은 무료수업도 많고, 현직자들이 활발하게 소통하며 오픈하는
+                            분위기인 덕분에<br />
+                            앞선 선배들이 마련해준 지름길 위를 빠르게 걸어올 수 있었습니다.<br />
+                            <br />
+                            저 또한 누군가에게 기술적으로 도움을 주면서, <br />
+                            동시에 끊임없이 질문하며 발전하는 사람이 되고 싶습니다. <br />
                         </p>
                     </div>
                 </div>
-                <div class="contactDetails">
-                    <p><i class="xi-mail"></i><span>hocldy@naver.com</span></p>
-                    <p><i class="xi-kakaotalk"></i><span>Kakao-ID : ajiop</span></p>
-                    <p><i class="xi-github-alt"></i><span><a href="http://github.com/dddieon" target="_blank"
-                                rel="noreferrer noopener">github.com/dddieon</a></span></p>
-                </div>
-                <div class="contactDescriptions">
-                    <img src="/asset/icons/icons_quotes.png" class="quotesImg" alt="따옴표" />
-                    <h3>H<span>e</span>llo</h3>
-                    <p>
-                        코딩 공부를 시작한 지는 오래되지 않았습니다.<br />
-                        반년 전 까지만 해도 단지 컴퓨터를 좋아하고, 디자인과 영상공부를 좋아하던 평범한 대학생이었습니다.<br />
-                        뒤늦게 코딩에 재미를 붙이게 되었지만 이쪽 세상에는 이미 수많은 고인물들이 존재했죠.<br />
-                        <br />
-                        <span class="contactDescriptions--ellipse">...</span>
-                        <br />
-                        다행히 IT쪽은 무료수업도 많고, 현직자들이 활발하게 소통하며 오픈하는 분위기인 덕분에<br />
-                        앞선 선배들이 마련해준 지름길 위를 빠르게 걸어올 수 있었습니다.<br />
-                        <br />
-                        저 또한 누군가에게 기술적으로 도움을 주면서, <br />
-                        동시에 끊임없이 질문하며 발전하는 사람이 되고 싶습니다. <br />
-                    </p>
+            </section>
+        </div>
+
+        <footer id="footer">
+            <div class="footer-assets-left">
+                <div class="footer-icon"><i class="xi-tag"></i></div>
+                <div class="footer-content">
+                    <p>해당 사이트는 일부 ie 10버전 이상부터 지원중입니다 (flex사용)</p>
+                    <b>관심이 생기셨나요?</b>
+                    <p>언제든지 편하게 연락주세요! 오매불망 기다리고 있습니다 ✨</p>
                 </div>
             </div>
-        </section>
-    </div>
-
-    <footer id="footer">
-        <div class="footer-assets-left">
-            <div class="footer-icon"><i class="xi-tag"></i></div>
-            <div class="footer-content">
-                <p>해당 사이트는 일부 ie 10버전 이상부터 지원중입니다 (flex사용)</p>
-                <b>관심이 생기셨나요?</b>
-                <p>언제든지 편하게 연락주세요! 오매불망 기다리고 있습니다 ✨</p>
+            <div class="footer-assets-right">
+                <button type="button" class="contect-me">CONTACT</button>
+                <button type="button" class="footer-close" id="footerClose">
+                    <i class="xi-close-circle-o"></i>
+                </button>
             </div>
-        </div>
-        <div class="footer-assets-right">
-            <button type="button" class="contect-me">CONTACT</button>
-            <button type="button" class="footer-close" id="footerClose">
-                <i class="xi-close-circle-o"></i>
-            </button>
-        </div>
-    </footer>
-</body>
-
+        </footer>
+    </body>
 </html>
